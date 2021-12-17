@@ -159,7 +159,7 @@
 					<task class="AttackTargetEntitySDX, SCore" action_index="0"/>
 					<consideration class="TargetType" type="EntityPlayer,EntityZombie,EntityNPC,EntityEnemyAnimal"/>
 					<consideration class="TargetIsEnemy, SCore"/>
-					<consideration class="TargetDistance" flip_y="true" min= "0" max="1.5"/>
+					<consideration class="TargetDistance" flip_y="true" min= "0" max="2.0"/>
 					<consideration class="CanSeeTarget, SCore"/> 
 				</action>
 			</ai_package>
