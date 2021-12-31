@@ -1,28 +1,27 @@
 <configs>
 
-<!-- These were needed for class based targeting, but likely not needed now since we are all in on factions, but left in for legacy compatibility  
+		<!-- These were needed for class based targeting, but likely not needed now since we are all in on factions, but left in for legacy compatibility  
 
-	<append xpath="//entity_class[@name='zombieTemplateMale']/property[@value='ApproachAndAttackTarget']/@data">,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0</append>
-	<append xpath="//entity_class[@name='zombieTemplateMale']/property[@value='SetAsTargetIfHurt']/@data">,EntityAnimalStag,EntityBandit,EntitySurvivor</append>
-	<append xpath="//entity_class[@name='zombieTemplateMale']/property[@value='SetNearestEntityAsTarget']/@data">,EntityEnemyAnimal,0,0,EntityAnimalStag,0,0,EntityBandit,0,0,EntitySurvivor,0,0</append>
-	<append xpath="//entity_class[@name='zombieSpider']/property[@value='ApproachAndAttackTarget']/@data">,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0</append>
-	<append xpath="//entity_class[@name='zombieFatCop']/property[@value='ApproachAndAttackTarget']/@data">,0,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0</append>
-	<append xpath="//entity_class[@name='zombieDemolition']/property[@value='ApproachAndAttackTarget']/@data">,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0</append> -->
+		<append xpath="//entity_class[@name='zombieTemplateMale']/property[@value='ApproachAndAttackTarget']/@data">,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0</append>
+		<append xpath="//entity_class[@name='zombieTemplateMale']/property[@value='SetAsTargetIfHurt']/@data">,EntityAnimalStag,EntityBandit,EntitySurvivor</append>
+		<append xpath="//entity_class[@name='zombieTemplateMale']/property[@value='SetNearestEntityAsTarget']/@data">,EntityEnemyAnimal,0,0,EntityAnimalStag,0,0,EntityBandit,0,0,EntitySurvivor,0,0</append>
+		<append xpath="//entity_class[@name='zombieSpider']/property[@value='ApproachAndAttackTarget']/@data">,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0</append>
+		<append xpath="//entity_class[@name='zombieFatCop']/property[@value='ApproachAndAttackTarget']/@data">,0,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0</append>
+		<append xpath="//entity_class[@name='zombieDemolition']/property[@value='ApproachAndAttackTarget']/@data">,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0</append> -->
 
-	<!-- Adds a buff to the traders in POIs so they kill bandits and survivors before the NRE when entering the trader protected zone, likely not needed in A20+  
+		<!-- Adds a buff to the traders in POIs so they kill bandits and survivors before the NRE when entering the trader protected zone, likely not needed in A20+  
 
-	<append xpath="/entity_classes/entity_class[@name='npcTraderTemplate']">
-		<effect_group name="Backaway or Die bandit">
-			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffTraderTrigger"/>
-		</effect_group>
-	</append> -->
+		<append xpath="/entity_classes/entity_class[@name='npcTraderTemplate']">
+			<effect_group name="Backaway or Die bandit">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffTraderTrigger"/>
+			</effect_group>
+		</append> -->
 
-<!--  Edits to convert zombies to Faction based targeting for whisperers -->
+		<!--  Edits to convert zombies to Faction based targeting for whisperers -->
 
 		<set xpath="//entity_class[starts-with(@name, 'zombieTemplate')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,0,0,EntityAlive,0,0</set> 
 		
-<!--  Edits to add NPCs to targeting  -->	
-
+		<!--  Edits to add NPCs to targeting  -->	
 
 		<set xpath="//entity_class[starts-with(@name, 'zombieMutated')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityEnemyAnimal,0,EntityPlayer,0,EntityAlive,0</set> 
 	
@@ -54,29 +53,15 @@
 		<set xpath="//entity_class[starts-with(@name, 'animalBossGrace')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityPlayer,30,EntityZombie,10,EntityNPC,30</set> 
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalBossGrace')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,0,0,EntityZombie,0,3,EntityNPC,0,0</set> 				
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	
-<!--  Weapons are spawned onto the joint specified in the RightHandJoint property.  
+		<!--  Weapons are spawned onto the joint specified in the RightHandJoint property.  
 		For spawned Melee weapons and pistol type weapons, the standard child object is located under RightWeapon (or LeftWeapon for melee but not both)
 		For spawned Ranged Rifle type weapons, including xbows, the standard child object name is under Gunjoint	
 		For spawned longbows and 2H weaapons, the standard child object name is under LeftWeapon -->
 		
-<!-- Human Walktypes: Depreciated (All use walktype 7 now)  1. Unarmed/Melee BruteWalk, 2. PistolWalk, 3. BowWalk, 4. Not Used/crawler, 5. Not Used/Crippled, 6. RifleWalk, 7. NormalWalk 8. Not Used/Spider, 9. Not Used/Behemoth -->
+		<!-- Human Walktypes: Depreciated (All use walktype 7 now)  1. Unarmed/Melee BruteWalk, 2. PistolWalk, 3. BowWalk, 4. Not Used/crawler, 5. Not Used/Crippled, 6. RifleWalk, 7. NormalWalk 8. Not Used/Spider, 9. Not Used/Behemoth -->
 
-<!--  Various player effects, including Snufkins Knockdown code bits  -->
+		<!--  Various player effects, including Snufkins Knockdown code bits  -->
 
 	<append xpath="/entity_classes/entity_class[@name='playerMale']">
 		<effect_group>
@@ -94,8 +79,7 @@
 
 	<append xpath="/entity_classes">
 	
-<!-- Human Melee and Ranged Base Templates -->
-
+	<!-- Human Melee and Ranged Base Templates -->
 
 		<entity_class name="npcMeleeTemplate"> 
 			<property name="Class" value="EntityAliveSDX, SCore" /> 
@@ -104,7 +88,7 @@
 			<property name="Tags" value="entity,cp,male,npc,melee"/> <!-- entity/sex/type/role/attacktype/name: Entity is required for code filtering, sex for sound filtering, type/role and Atype for buff filtering.  These DO NOT Extend! -->
 			<property name="Faction" value="whiteriver"/>
 			<property name="IsEnemyEntity" value="false"/> 
-			<property name="LootListAlive" value="traderNPC"/> 
+			<property name="LootListAlive" value="traderNPC"/> <!-- removing this removes the E on death but disables NPC inventory  -->
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="HideInSpawnMenu" value="true"/> <!-- A19  -->
@@ -113,14 +97,14 @@
 			<property name="Prefab" value="NPC"/>
 			<property name="Parent" value="Enemies"/>
 			<property name="Mass" value="120"/>
-			<property name="Weight" value="70"/>			
+			<property name="Weight" value="80"/>			
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="MapIcon" value="ui_game_symbol_enemy_dot" />  
 			<property name="CompassIcon" value="ui_game_symbol_enemy_dot" />  <!-- comment out these lines if you dont want to see the NPC name and location on map -->
 			<property name="CompassUpIcon" value="ui_game_symbol_enemy_dot_up" />
 			<property name="CompassDownIcon" value="ui_game_symbol_enemy_dot_down" />
 			<property name="TrackerIcon" value="ui_game_symbol_run"/>		
-			<property name="AINoiseSeekDist" value="20"/>	
+			<property name="AINoiseSeekDist" value="30"/>	
 			<property name="AIPathCostScale" value="1, 1"/>
 			<property name="LookAtAngle" value="60"/> 
 			<property name="AttackTimeoutDay" value="0.025"/>  <!-- 0.05 * 20f = 1 seconds between attack -->
@@ -196,21 +180,21 @@
 			<property name="DismemberMultiplierHead" value="1"/>
 			<property name="DismemberMultiplierArms" value="1"/>
 			<property name="DismemberMultiplierLegs" value="1"/>
-			<property name="LegCrippleScale" value="1"/> 
+			<property name="LegCrippleScale" value="0"/> 
 			<property name="LegCrawlerThreshold" value="0"/> 
-			<property name="KnockdownProneDamageThreshold" value="0.5"/>
-			<property name="KnockdownProneStunDuration" value="0.5,1.8"/>
+			<property name="KnockdownProneDamageThreshold" value="0.4"/>
+			<property name="KnockdownProneStunDuration" value="0.5,0.5"/>
 			<property name="KnockdownProneRefillRate" value="0.045,0.045"/>
 			<property name="KnockdownKneelDamageThreshold" value="0.4"/>
-			<property name="KnockdownKneelStunDuration" value="0.5,1.8"/>
+			<property name="KnockdownKneelStunDuration" value="0.5,0.5"/>
 			<property name="KnockdownKneelRefillRate" value="0.045,0.045"/>
 			<property name="LegsExplosionDamageMultiplier" value="1"/>
 			<property name="ArmsExplosionDamageMultiplier" value="1"/>
 			<property name="HeadExplosionDamageMultiplier" value="1"/>
 			<property name="ChestExplosionDamageMultiplier" value="1"/>
-			<property name="PainResistPerHit" value=".75"/>		
-			<property name="MaxViewAngle" value="360"/>
-			<property name="SightRange" value="50"/>
+			<property name="PainResistPerHit" value=".6"/> <!-- Added when hit. Caps at 3. Decay .2 per second. At 1 movement is not slowed by pain -->
+			<property name="MaxViewAngle" value="360"/> <!-- NPCs dont "hear" so need to sense behind them for now this way  -->
+			<property name="SightRange" value="60"/>
 			<property name="SightLightThreshold" value="-2,150"/> 
 			<property name="SleeperWakeupSightDetectionMin" value="-40,5"/> 
 			<property name="SleeperWakeupSightDetectionMax" value="340,480"/> 
@@ -231,8 +215,9 @@
 			<property name="JumpMaxDistance" value="2.8, 3.9"/>
 			<property name="Immunity" value="sickness;disease;wellness"/> 
 			<property name="ExperienceGain" value="1000"/> 
-			<property name="LootDropProb" value="1.0"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerNPC"/>	
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+			<!--<property name="LootDropEntityClass" value="EntityLootContainerNPC"/>-->
 			<!--<property name="MapIcon" value="ui_game_symbol_bullet_point"/> -->
 			<property name="Names" value="TemplateBob" />		
 			<property name="Beds" value="mattressFlat" />
@@ -240,23 +225,24 @@
 			<property name="HomeBlocks" value="cntNPCHomeBlock"/>
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
-			<property name="TimeStayAfterDeath" value="30"/>
+			<property name="TimeStayAfterDeath" value="15"/>
 			<property name="DeadBodyHitPoints" value="1000"/>
-<!--			<property name="Buffs" value="IsHuman;buffNPCStatusCheck"/> -->
+			<!--<property name="Buffs" value="buffNPCStatusCheck"/> -->
 			<effect_group name="Base Effects">
 				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
 				<passive_effect name="HealthMax" operation="base_set" value="200"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_set" value="20" />
-				<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0" />
+				<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
 				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
 				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
 			</effect_group>	
-			<effect_group name="IsHuman"> 
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="IsHuman"/>
+			<effect_group name="IsNPC"> 
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="IsHuman"/> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffNPCStatusCheck"/> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffNPCStatusCheck"/> 
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="NPCHit"/> 
 				<!--  done twice intentionally, cause TFP notes say to.   -->
 			</effect_group>	
 			<property name="RotateToGround" value="false"/>	
@@ -308,8 +294,88 @@
 				<passive_effect name="ProjectileStickChance" operation="base_set" value=".5"/>
 				<passive_effect name="ProjectileStickChance" operation="perc_add" value="-2" tags="glass"/> 
 			</effect_group> 
-			<property name="AIPackages" value="Human Basic, Human Melee Basic, Human Heal Basic"/>  <!-- UAI overrides EAI if both exist -->
-			<!--<property name="AITask-1" value="ApproachAndAttackSDX, SCore" data="class=EntityAlive,0"/>
+			
+			<!-- SET FACTION CVARS : FuriousRamsay -->
+            <effect_group name="SetFactionCVars">
+                <triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="varFactionBandit" operation="set" value="1">
+                    <requirement name="EntityTagCompare" target="self" tags="bandit,whisperer"/>
+                </triggered_effect>
+            </effect_group>  
+			<effect_group name="EntityDamageKillCount">
+			  <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="varNumKills" operation="add" value="1"/>
+			</effect_group> 
+			<!-- SET PASSIVE DAMAGE BUFFS/DEBUFFS -->
+				<!-- BASED ON NUMBER OF KILLS -->
+			<effect_group name="EntityDamageKillsLevel1">
+			  <requirement name="CVarCompare" cvar="varNumKills" operation="GT" value="0"/>
+			  <requirement name="CVarCompare" cvar="varNumKills" operation="LTE" value="20"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="0.1"/>
+			</effect_group> 
+			<effect_group name="EntityDamageKillsLevel2">
+			  <requirement name="CVarCompare" cvar="varNumKills" operation="GT" value="20"/>
+			  <requirement name="CVarCompare" cvar="varNumKills" operation="LTE" value="50"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="0.2"/>
+			</effect_group> 
+			<effect_group name="EntityDamageKillsLevel3">
+			  <requirement name="CVarCompare" cvar="varNumKills" operation="GT" value="50"/>
+			  <requirement name="CVarCompare" cvar="varNumKills" operation="LTE" value="100"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="0.3"/>
+			</effect_group> 
+			<effect_group name="EntityDamageKillsLevel4">
+			  <requirement name="CVarCompare" cvar="varNumKills" operation="GT" value="100"/>
+			  <requirement name="CVarCompare" cvar="varNumKills" operation="LTE" value="200"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="0.4"/>
+			</effect_group> 
+			<effect_group name="EntityDamageKillsLevel5">
+			  <requirement name="CVarCompare" cvar="varNumKills" operation="GT" value="200"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="0.5"/>
+			</effect_group> 
+
+				<!-- BASED ON TIME OF DAY -->
+			<effect_group name="EntityDamageAtNight">
+				<requirement name="CVarCompare" cvar="varFactionBandit" operation="Equals" value="1"/>
+				<requirement name="IsNight"/>
+					<passive_effect name="DamageModifier" operation="perc_add" value="-.2"/>
+			</effect_group>                     
+			<!-- BASED ON BIOME DIFFICULTY -->
+			<effect_group name="EntityDamageInBiomeForest">
+				<requirement name="CVarCompare" cvar="varFactionBandit" operation="Equals" value="1"/>
+				<requirement name="InBiome" biome="3"/>
+					<passive_effect name="DamageModifier" operation="perc_add" value="-.3"/>
+			</effect_group> 
+			<effect_group name="EntityDamageInBiomeDesert">
+				<requirement name="CVarCompare" cvar="varFactionBandit" operation="Equals" value="1"/>
+				<requirement name="InBiome" biome="5"/>
+					<passive_effect name="DamageModifier" operation="perc_add" value="-.1"/>
+			</effect_group> 
+			<effect_group name="EntityDamageInBiomeSnow">
+				<requirement name="CVarCompare" cvar="varFactionBandit" operation="Equals" value="1"/>
+				<requirement name="InBiome" biome="1"/>
+					<passive_effect name="DamageModifier" operation="perc_add" value=".25"/>
+			</effect_group> 
+			<effect_group name="EntityDamageInBiomeBurntForest">
+				<requirement name="CVarCompare" cvar="varFactionBandit" operation="Equals" value="1"/>
+				<requirement name="InBiome" biome="9"/>
+					<passive_effect name="DamageModifier" operation="perc_add" value="-.5"/>
+			</effect_group> 
+			<effect_group name="EntityDamageInBiomeWasteland">
+				<requirement name="CVarCompare" cvar="varFactionBandit" operation="Equals" value="1"/>
+				<requirement name="InBiome" biome="8"/>
+					<passive_effect name="DamageModifier" operation="perc_add" value="-.5"/>
+			</effect_group> 
+			
+			<effect_group name="ReduceDamageToPlayers">
+				<requirement name="EntityTagCompare" target="other" tags="player"/>
+				<requirement name="HoldingItemHasTags" tags="ranged"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.2"/>
+			</effect_group>
+
+			<!-- UAI overrides EAI if both exist -->
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired"/>  
+			
+			
+			<!--EAI for NPC Humans (Requires SCore) * UNSUPPORTED for A20+ * -->
+<!--			<property name="AITask-1" value="ApproachAndAttackSDX, SCore" data="class=EntityAlive,0"/>
 				<property name="AITask-2" value="ApproachAndFollowTargetSDX, SCore" data="incentives=Leader"/>
 				<property name="AITask-3" value="Look"/>
 				<property name="AITask-4" value="ApproachDistraction"/>
@@ -318,18 +384,33 @@
 				<property name="AITask-7" value="BreakBlock"/>
 				<property name="AITask-8" value="Territorial"/>
 				<property name="AITask-9" value="" />
-				<property name="AITarget-1" value="SetAsTargetNearestEnemySDX, SCore" data="class=EntityAlive,80"/>
+				<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityAlive,80"/>
 				<property name="AITarget-2" value="SetAsTargetIfLeaderAttackedSDX, SCore" data="class=EntityAlive"/>
-				<property name="AITarget-3" value="SetAsTargetNearestEnemySDX, SCore" data="class=EntityAlive,80"/>
+				<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAlive,80"/>
 				<property name="AITarget-4" value="SetAsTargetIfHurtSDX, SCore" data="class=EntityAlive"/>
-				<property name="AITarget-5" value=""/>   Not working -->
-			</entity_class>
+				<property name="AITarget-5" value=""/>  -->
+				
+				
+			<!--EAI for CP Humans  (Without SCore) * UNSUPPORTED for A20+ * -->				
+			<!--<property name="AITask-1" value="BreakBlock"/> 
+				<property name="AITask-2" value="ApproachDistraction"/>
+				<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityPlayer,0,EntitySurvivor,0,EntityEnemyAnimal,0"/> 
+				<property name="AITask-4" value="ApproachSpot"/> 
+				<property name="AITask-5" value="Territorial"/>
+				<property name="AITask-6" value="Look"/> 
+				<property name="AITask-7" value="Wander"/>	
+				<property name="AITask-8" value=""/>	
+				<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityPlayer,EntitySurvivor,EntityEnemyAnimal"/> 
+				<property name="AITarget-2" value="BlockingTargetTask"/> 
+				<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntitySurvivor,0,0,EntityEnemyAnimal,0,0"/> 
+				<property name="AITarget-4" value=""/> 		-->			
 		
+		</entity_class>	
+	
 		<entity_class name="npcRangedTemplate" extends="npcMeleeTemplate"> 	
 			<property name="Tags" value="entity,cp,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="HideInSpawnMenu" value="true"/>
-			<property name="SightRange" value="50"/>
 			<property name="RightHandJointName" value="Gunjoint" /> <!-- I put Rifle type ranged weapons goes on this child object (Except longbows and 2H weapons) -->
 			<property name="AttackTimeoutDay" value="0.05"/>  <!-- 0.05 * 20f = 1 seconds between attack -->
             <property name="AttackTimeoutNight" value="0.05"/>
@@ -338,13 +419,14 @@
 				<property name="BoundaryBox" value="2.0,1.8,0.4" />
 				<property name="Center" value="0.0,0.9,0.0"/>
 			</property> -->
-			<property name="AIPackages" value="Human Basic, Human Ranged Enhanced, Human Heal Basic"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
+
 		</entity_class>	
 		
 		<entity_class name="npcMeleeSavableTemplate" extends="npcMeleeTemplate"> 
 			<property name="Tags" value="entity,male,melee"/> 
 			<property name="Faction" value="undead"/>
-			<effect_group name="IsHuman"> <!-- This activates the IsHuman Buff which sets an animator parameter value to path to only human animations  -->
+			<effect_group name="IsZombie"> <!-- This activates the IsHuman Buff which sets an animator parameter value to path to only human animations  -->
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="IsZombie"/>		
 			</effect_group>	
 		</entity_class>		
@@ -513,7 +595,6 @@
 			</effect_group>				
 		</entity_class>		
 		
-		
 		<entity_class name="npcMacheteTemplate" extends="npcMeleeTemplate"><property name="HideInSpawnMenu" value="true"/> 
 			<property name="Tags" value="entity,cp,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
@@ -570,8 +651,6 @@
 				</triggered_effect>
 			</effect_group>	
 		</entity_class>	
-		
-		
 
 		<entity_class name="npcPistolTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
 			<property name="Tags" value="entity,cp,male,npc,ranged"/>
@@ -586,14 +665,14 @@
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="PistolUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
-<!--				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Gunslinger"/> -->
-<!--				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Gunslinger"/> -->
+			<!--<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Gunslinger"/> -->
+			<!--<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Gunslinger"/> -->
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="15"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="15"/>
 			</effect_group>
 			<effect_group name="AddGunslingerProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkGunslinger" level="1"/>
-<!--				<triggered_effect trigger="onReloadStart" action="SetProgressionLevel" progression_name="perkGunslinger" level="1"/> -->
+			<!--<triggered_effect trigger="onReloadStart" action="SetProgressionLevel" progression_name="perkGunslinger" level="1"/> -->
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkGunslinger" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
 				</triggered_effect>
@@ -861,8 +940,8 @@
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="SRifleUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="1"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="12"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="12"/>
 			</effect_group>
 			<effect_group name="AddDeadEyeProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDeadEye" level="1"/>
@@ -923,8 +1002,8 @@
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="PShotgunUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="2"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="2"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="8"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="8"/>
 			</effect_group>
 			<effect_group name="AddBoomstickProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkBoomstick" level="1"/>
@@ -953,8 +1032,8 @@
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="AShotgunUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="12"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="12"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="16"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="16"/>
 			</effect_group>
 			<effect_group name="AddBoomstickProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkBoomstick" level="1"/>
@@ -1066,7 +1145,7 @@
 			</effect_group>	
 		</entity_class>			
 		
-<!--  NPC Animal templates  -->		
+		<!--  NPC Animal templates  -->		
 		
 		<entity_class name="npcAnimalMeleeTemplate" >
 			<property name="HideInSpawnMenu" value="true"/>
@@ -1102,7 +1181,7 @@
 			<property name="WalkType" value="7"/>
 			<property name="RightHandJointName" value="Head" />  	<!-- This is for spawned invisi weapons firing from under the head  -->			
 			<!--<property name="PathingBlocks" value="PathingCube" />   commented out in the template due to performance hit.  Enable in a specific entity as desired -->
-			<property name="AIPackages" value="Human Basic, Human Melee Basic"/> <!-- Will make animal specific AI packages later -->
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired "/> <!-- Will make animal specific AI packages later -->
 			<property name="AIPathCostScale" value=".9, 1"/>
 			<property name="AINoiseSeekDist" value="20"/>	
 			<property name="MaxViewAngle" value="210"/>
@@ -1176,7 +1255,7 @@
 			<property name="MoveSpeed" value="0.3"/> 
 			<property name="MoveSpeedAggro" value="1.1,1.1"/> 
 			<property name="MoveSpeedPanic" value="1.1"/>
-			<property name="AIPackages" value="Human Basic, Human Ranged Basic"/> <!-- Placeholder, will eventually make animal specific AI packages  -->
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/><!-- Placeholder, will eventually make animal specific AI packages  -->
 			<effect_group name="Base Effects">
 				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
 				<passive_effect name="HealthMax" operation="base_set" value="400"/>
@@ -1237,7 +1316,7 @@
 		</entity_class>		
 	
 		
-<!-- Dumb Animal Templates  -->	
+		<!-- Dumb Animal Templates  -->	
 
 		<entity_class name="animalTemplateHostileWalking" >
 			<property name="HideInSpawnMenu" value="true"/>
@@ -1487,7 +1566,7 @@
 		</entity_class> 
 
 	
-<!--  Zombie Templates	-->	
+		<!--  Zombie Templates	-->	
 		
 		<entity_class name="zombieRegularTemplate"> <!-- This is for custom zombies -->
 			<property name="EntityType" value="Zombie"/> 
@@ -1498,8 +1577,7 @@
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="HasRagdoll" value="true"/>
-		<!--	<property name="Prefab" value="NPC"/> -->
-			<property name="Prefab" value="Z"/> <!-- A20 testing-->
+			<property name="Prefab" value="NPC"/> 
 			<property name="Class" value="EntityZombie"/>
 			<property name="Parent" value="Enemies"/>
 			<property name="Mass" value="120"/>
@@ -1516,6 +1594,7 @@
 			<property name="AIFeralSense" value="1.5"/>
 			<property name="AINoiseSeekDist" value="8"/>
 			<property name="AIPathCostScale" value=".15, .4"/>
+			
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
 			<property name="AITask-3" value="Territorial"/>
@@ -1562,11 +1641,11 @@
 			<property name="ParticleOnDeath" value="blood_death"/>
 			<property name="SurfaceCategory" value="organic"/> 
 			
-		  <!-- Must match gore dismemberment tags -->
-		  <!-- Override parts in the derrived class -->
-		  <!-- The first prefab in each list is the default -->
-		  <!-- It is a fallback and uses no data but can take a scale -->
-		  <!-- <property name="DismemberTag_L_HeadGore" value="Prefabs/HeadGore;Prefabs/RedSphereTest;Prefabs/BlueSphereTest" data =";scale=1,1,1+type=blunt;scale=1,1,1+rot=1,1,1+type=blade"/> -->
+			  <!-- Must match gore dismemberment tags -->
+			  <!-- Override parts in the derrived class -->
+			  <!-- The first prefab in each list is the default -->
+			  <!-- It is a fallback and uses no data but can take a scale -->
+			  <!-- <property name="DismemberTag_L_HeadGore" value="Prefabs/HeadGore;Prefabs/RedSphereTest;Prefabs/BlueSphereTest" data =";scale=1,1,1+type=blunt;scale=1,1,1+rot=1,1,1+type=blade"/> -->
 		  
 		    <property name="DismemberTag_L_HeadGore" value="Prefabs/HeadGore"/>
 		    <property name="DismemberTag_L_LeftUpperLegGore" value="Prefabs/UpperLegGore"/>
@@ -1616,7 +1695,6 @@
 			<property name="SwimStrokeRate" value="1,1.5"/>
 			<property name="CanClimbLadders" value="true"/>
 			<property name="JumpMaxDistance" value="2.8, 3.9"/>
-			
 			<property name="HandItem" value="meleeHandZombie001"/>
 			<property name="HandItemCrawler" value="meleeHandZombie002"/> 
 			<property name="AttackTimeoutDay" value="1.5"/> <!-- 1.5 in s -->
@@ -1639,7 +1717,6 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffEntitySpawnHeal"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
 				<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
-
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="noTeethNoInfection" operation="set" value="0">
 					<requirement name="NotHasBuff" buff="buffBrawlerNoTeeth"/></triggered_effect>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="noTeethNoInfection" operation="set" value="1">
@@ -1872,14 +1949,8 @@
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
 		</entity_class>							
-		
-
-
-
-<!--  End Of Template Section  -->
-
-
-
+	
+	<!--  End Of Template Section  -->
 
 		<!--  Nurse  -->
 		
@@ -1892,7 +1963,6 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> 
-			<property name="AIPackages" value="Human Basic, Human Melee Basic, Human Heal Enhanced"/> <!-- testing enhanced healing UAI -->
 			<property name="SoundHurt" value="Player_Female/player2painlg"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
 			<property name="SoundDeath" value="Player_Female/player2death"/>
@@ -1921,7 +1991,8 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>		
+			</effect_group>	
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 			
 		</entity_class>	
 		
 		<entity_class name="npcNurseEmptyHandBloodMoon" extends="npcNurseEmptyHand"> <!-- The BM versions do not NRE on bloodmoon spawn  -->
@@ -1940,7 +2011,6 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCClubWood,medicalFirstAidBandage"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCClubWood,medicalFirstAidBandage"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCClubWood,medicalFirstAidBandage"/> 
-			<property name="AIPackages" value="Human Basic, Human Melee Basic, Human Heal Enhanced"/>
 			<property name="SoundHurt" value="Player_Female/player2painlg"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
 			<property name="SoundDeath" value="Player_Female/player2death"/>
@@ -1969,7 +2039,8 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>															
+			</effect_group>	
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 				
 		</entity_class>
 		
 		<entity_class name="npcNurseClubBloodMoon" extends="npcNurseClub"> <!-- Testing: The BM versions should not NRE on bloodmoon spawn  -->
@@ -1989,7 +2060,6 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCKnife,medicalFirstAidBandage"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCKnife,medicalFirstAidBandage"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCKnife,medicalFirstAidBandage"/> 
-			<property name="AIPackages" value="Human Basic, Human Melee Basic, Human Heal Enhanced"/>
 			<property name="SoundHurt" value="Player_Female/player2painlg"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
 			<property name="SoundDeath" value="Player_Female/player2death"/>
@@ -2018,7 +2088,8 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>		
+			</effect_group>	
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 					
 		</entity_class>	
 		
 		<entity_class name="npcNurseAxe" extends="npcAxeTemplate"> 
@@ -2030,7 +2101,6 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCAxe,medicalFirstAidBandage"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCAxe,medicalFirstAidBandage"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCAxe,medicalFirstAidBandage"/> 
-			<property name="AIPackages" value="Human Basic, Human Melee Basic, Human Heal Enhanced"/>
 			<property name="SoundHurt" value="Player_Female/player2painlg"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
 			<property name="SoundDeath" value="Player_Female/player2death"/>
@@ -2058,7 +2128,8 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>	
+			</effect_group>
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 				
 		</entity_class>	
 		
 		<entity_class name="npcNurseSpear" extends="npcSpearTemplate"> 
@@ -2070,7 +2141,6 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCSpear,medicalFirstAidBandage"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCSpear,medicalFirstAidBandage"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCSpear,medicalFirstAidBandage"/> 
-			<property name="AIPackages" value="Human Basic, Human Melee Basic, Human Heal Enhanced"/>
 			<property name="SoundHurt" value="Player_Female/player2painlg"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
 			<property name="SoundDeath" value="Player_Female/player2death"/>
@@ -2110,7 +2180,6 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCBatWood,medicalFirstAidBandage"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCBatWood,medicalFirstAidBandage"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCBatWood,medicalFirstAidBandage"/> 
-			<property name="AIPackages" value="Human Basic, Human Melee Basic, Human Heal Enhanced"/> 
 			<property name="SoundHurt" value="Player_Female/player2painlg"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
 			<property name="SoundDeath" value="Player_Female/player2death"/>
@@ -2139,7 +2208,8 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>				
+			</effect_group>	
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 				
 		</entity_class>			
 		
 		<entity_class name="npcNurseMachete" extends="npcMacheteTemplate"> 
@@ -2151,7 +2221,6 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCMachete,medicalFirstAidBandage"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCMachete,medicalFirstAidBandage"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCMachete,medicalFirstAidBandage"/> 
-			<property name="AIPackages" value="Human Basic, Human Melee Basic, Human Heal Enhanced"/>
 			<property name="SoundHurt" value="Player_Female/player2painlg"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
 			<property name="SoundDeath" value="Player_Female/player2death"/>
@@ -2179,7 +2248,8 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>				
+			</effect_group>	
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 				
 		</entity_class>	
 		
 		<entity_class name="npcNurseSMG" extends="npcSMGTemplate"> 
@@ -2205,7 +2275,6 @@
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>		
 			<property name="WalkType" value="7"/>
-			<property name="AIPackages" value="Human Basic, Human Ranged Enhanced, Human Heal Enhanced"/> 
 			<effect_group name="AddHealthProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="2">
@@ -2218,7 +2287,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-	
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 	
 		</entity_class>	
 		
 		<entity_class name="npcNurseSMGBloodMoon" extends="npcNurseSMG"> 
@@ -2250,7 +2319,6 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
-			<property name="AIPackages" value="Human Basic, Human Ranged Enhanced, Human Heal Enhanced"/> 
 			<effect_group name="AddHealthProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="2">
@@ -2262,7 +2330,8 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>				
+			</effect_group>	
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 
 		</entity_class>
 		
 		<entity_class name="npcNursePipePistol" extends="npcPipePistolTemplate"> 
@@ -2287,7 +2356,6 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
-			<property name="AIPackages" value="Human Basic, Human Ranged Enhanced, Human Heal Enhanced"/> 
 			<effect_group name="AddHealthProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="2">
@@ -2299,7 +2367,8 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>				
+			</effect_group>	
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>			
 		
 		<entity_class name="npcNursePistol" extends="npcPistolTemplate"> 
@@ -2324,7 +2393,6 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
-			<property name="AIPackages" value="Human Basic, Human Ranged Enhanced, Human Heal Enhanced"/> 
 			<effect_group name="AddHealthProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="2">
@@ -2337,6 +2405,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>				
 		
 		
@@ -2362,7 +2431,6 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
-			<property name="AIPackages" value="Human Basic, Human Ranged Enhanced, Human Heal Enhanced"/> 
 			<effect_group name="AddHealthProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="2">
@@ -2374,7 +2442,8 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>				
+			</effect_group>	
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>	
 
 		<entity_class name="npcNursePipeMG" extends="npcPipeMGTemplate"> 
@@ -2399,7 +2468,6 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
-			<property name="AIPackages" value="Human Basic, Human Ranged Enhanced, Human Heal Enhanced"/> 
 			<effect_group name="AddHealthProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="2">
@@ -2411,7 +2479,8 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>				
+			</effect_group>
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>
 
 		<entity_class name="npcNurseAK47" extends="npcAK47Template"> 
@@ -2436,7 +2505,6 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
-			<property name="AIPackages" value="Human Basic, Human Ranged Enhanced, Human Heal Enhanced"/> 
 			<effect_group name="AddHealthProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="2">
@@ -2448,7 +2516,8 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>				
+			</effect_group>	
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>
 		
 		<entity_class name="npcNurseTRifle" extends="npcTRifleTemplate"> 
@@ -2473,7 +2542,6 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
-			<property name="AIPackages" value="Human Basic, Human Ranged Enhanced, Human Heal Enhanced"/> 
 			<effect_group name="AddHealthProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="2">
@@ -2485,7 +2553,8 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>				
+			</effect_group>	
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>	
 
 		<entity_class name="npcNursePipeRifle" extends="npcPipeRifleTemplate"> 
@@ -2511,7 +2580,6 @@
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
 			<property name="WalkType" value="7"/>
-			<property name="AIPackages" value="Human Basic, Human Ranged Enhanced, Human Heal Enhanced"/> 
 			<effect_group name="AddHealthProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="2">
@@ -2523,7 +2591,8 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>				
+			</effect_group>	
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>    	
 		
 		
@@ -2550,7 +2619,6 @@
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
 			<property name="WalkType" value="7"/>
-			<property name="AIPackages" value="Human Basic, Human Ranged Enhanced, Human Heal Enhanced"/> 
 			<effect_group name="AddHealthProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="2">
@@ -2562,7 +2630,8 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>				
+			</effect_group>	
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>    		
 		
 		<entity_class name="npcNurseSRifle" extends="npcSRifleTemplate"> 
@@ -2588,7 +2657,6 @@
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
 			<property name="WalkType" value="7"/>
-			<property name="AIPackages" value="Human Basic, Human Ranged Enhanced, Human Heal Enhanced"/> 
 			<effect_group name="AddHealthProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="2">
@@ -2600,7 +2668,8 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>				
+			</effect_group>	
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class> 
 		
 		<entity_class name="npcNursePipeShotgun" extends="npcPipeShotgunTemplate"> 
@@ -2625,7 +2694,6 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
-			<property name="AIPackages" value="Human Basic, Human Ranged Enhanced, Human Heal Enhanced"/> 
 			<effect_group name="AddHealthProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="2">
@@ -2637,7 +2705,8 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>				
+			</effect_group>		
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class> 		
 		
 		<entity_class name="npcNursePShotgun" extends="npcPShotgunTemplate"> 
@@ -2662,7 +2731,6 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
-			<property name="AIPackages" value="Human Basic, Human Ranged Enhanced, Human Heal Enhanced"/> 
 			<effect_group name="AddHealthProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="2">
@@ -2674,7 +2742,8 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>				
+			</effect_group>		
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class> 
 		
 		<entity_class name="npcNurseAShotgun" extends="npcAShotgunTemplate"> 
@@ -2699,7 +2768,6 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
-			<property name="AIPackages" value="Human Basic, Human Ranged Enhanced, Human Heal Enhanced"/> 
 			<effect_group name="AddHealthProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="2">
@@ -2711,7 +2779,8 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>				
+			</effect_group>	
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class> 		
 		
 		<entity_class name="npcNurseXBow" extends="npcXBowTemplate"> 
@@ -2736,7 +2805,6 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
-			<property name="AIPackages" value="Human Basic, Human Ranged Enhanced, Human Heal Enhanced"/> 
 			<effect_group name="AddHealthProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="2">
@@ -2748,7 +2816,8 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>				
+			</effect_group>		
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>	
 		
 		<entity_class name="npcNurseLBow" extends="npcLBowTemplate"> 
@@ -2773,7 +2842,6 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>	
-			<property name="AIPackages" value="Human Basic, Human Ranged Enhanced, Human Heal Enhanced"/> 
 			<effect_group name="AddHealthProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="2">
@@ -2785,11 +2853,13 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPhysician" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>				
+			</effect_group>	
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class> 
 		
 		<entity_class name="npcNurseRocketL" extends="npcRocketLTemplate"> 
 			<property name="Tags" value="entity,female,cp,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
@@ -2821,7 +2891,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>				
-			<property name="AIPackages" value="Human Basic, Human Ranged Launcher, Human Heal Enhanced"/>
+			<property name="AIPackages" value="NPCBasic, NPCLauncher, NPCMedic, NPCHired"/>
 		</entity_class> 	
 		
 		<entity_class name="npcNurseRocketLBM" extends="npcNurseRocketL"> 
@@ -2835,13 +2905,13 @@
 		<!--  Harley  -->	
 		
 		<entity_class name="npcHarleyEmptyHand" extends="npcEmptyHandTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,voiceharley"/>
+			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundDeath" value="HarleyDie"/>
 			<property name="SoundStamina" value="Player_Female/player2stamina"/>
 			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
 			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
@@ -2850,21 +2920,22 @@
 			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>					
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditMelee, NPCMedic"/>
 		</entity_class>	
 
 		<entity_class name="npcHarleyClub" extends="npcClubTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,voiceharley"/>
+			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundDeath" value="HarleyDie"/>
 			<property name="SoundStamina" value="Player_Female/player2stamina"/>
 			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
 			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
@@ -2873,21 +2944,22 @@
 			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>					
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditMelee, NPCMedic"/>
 		</entity_class>
 		
 		<entity_class name="npcHarleyKnife" extends="npcKnifeTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,voiceharley"/>
+			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundDeath" value="HarleyDie"/>
 			<property name="SoundStamina" value="Player_Female/player2stamina"/>
 			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
 			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
@@ -2896,21 +2968,22 @@
 			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>					
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditMelee, NPCMedic"/>
 		</entity_class>	
 		
 		<entity_class name="npcHarleyBat" extends="npcBatTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,voiceharley"/>
+			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundDeath" value="HarleyDie"/>
 			<property name="SoundStamina" value="Player_Female/player2stamina"/>
 			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
 			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
@@ -2919,21 +2992,22 @@
 			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>					
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditMelee, NPCMedic"/>
 		</entity_class>			
 	
 		<entity_class name="npcHarleyMachete" extends="npcMacheteTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,voiceharley"/>
+			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundDeath" value="HarleyDie"/>
 			<property name="SoundStamina" value="Player_Female/player2stamina"/>
 			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
 			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
@@ -2942,21 +3016,71 @@
 			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>					
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditMelee, NPCMedic"/>
+		</entity_class>		
+
+
+		<entity_class name="npcHarleyAxe" extends="npcAxeTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="HarleyDie"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="HarleyRandom" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditMelee, NPCMedic"/>		
+		</entity_class>	
+		
+		<entity_class name="npcHarleySpear" extends="npcSpearTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="HarleyDie"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="HarleyRandom" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditMelee, NPCMedic"/>		
 		</entity_class>			
 		
-		<entity_class name="npcHarleySMG" extends="npcSMGTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley"/>
+		<entity_class name="npcHarleyPipePistol" extends="npcPipePistolTemplate"> 
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundDeath" value="HarleyDie"/>
 			<property name="SoundStamina" value="Player_Female/player2stamina"/>
 			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
 			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
@@ -2965,21 +3089,118 @@
 			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>					
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>		
+		</entity_class>	
+		
+		<entity_class name="npcHarleyPipeRifle" extends="npcPipeRifleTemplate"> 
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="HarleyDie"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="HarleyRandom" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
+		</entity_class>	
+		
+		<entity_class name="npcHarleyPipeMG" extends="npcPipeMGTemplate"> 
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="HarleyDie"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="HarleyRandom" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
+		</entity_class>				
+		
+		<entity_class name="npcHarleyPipeShotgun" extends="npcPipeShotgunTemplate"> 
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="HarleyDie"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="HarleyRandom" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>		
+		</entity_class>	
+
+		<entity_class name="npcHarleySMG" extends="npcSMGTemplate"> 
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="HarleyDie"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="HarleyRandom" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/> 
 		</entity_class>	
 		
 		<entity_class name="npcHarleyM60" extends="npcM60Template"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundDeath" value="HarleyDie"/>
 			<property name="SoundStamina" value="Player_Female/player2stamina"/>
 			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
 			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
@@ -2988,21 +3209,22 @@
 			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>					
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
 		</entity_class>			
 		
 		<entity_class name="npcHarleyPistol" extends="npcPistolTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundDeath" value="HarleyDie"/>
 			<property name="SoundStamina" value="Player_Female/player2stamina"/>
 			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
 			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
@@ -3011,21 +3233,22 @@
 			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>					
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
 		</entity_class>				
 		
 		<entity_class name="npcHarleyDPistol" extends="npcDPistolTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundDeath" value="HarleyDie"/>
 			<property name="SoundStamina" value="Player_Female/player2stamina"/>
 			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
 			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
@@ -3034,21 +3257,22 @@
 			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>					
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
 		</entity_class>				
 
 		<entity_class name="npcHarleyAK47" extends="npcAK47Template"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundDeath" value="HarleyDie"/>
 			<property name="SoundStamina" value="Player_Female/player2stamina"/>
 			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
 			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
@@ -3057,21 +3281,22 @@
 			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>					
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
 		</entity_class>
 		
 		<entity_class name="npcHarleyTRifle" extends="npcTRifleTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundDeath" value="HarleyDie"/>
 			<property name="SoundStamina" value="Player_Female/player2stamina"/>
 			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
 			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
@@ -3080,22 +3305,23 @@
 			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>					
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
 		</entity_class>		
 		
 		
 		<entity_class name="npcHarleyHRifle" extends="npcHRifleTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundDeath" value="HarleyDie"/>
 			<property name="SoundStamina" value="Player_Female/player2stamina"/>
 			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
 			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
@@ -3104,21 +3330,22 @@
 			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>					
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
         </entity_class>   
 
 		<entity_class name="npcHarleyPShotgun" extends="npcPShotgunTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundDeath" value="HarleyDie"/>
 			<property name="SoundStamina" value="Player_Female/player2stamina"/>
 			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
 			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
@@ -3127,21 +3354,22 @@
 			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>					
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
         </entity_class>   
 
 		<entity_class name="npcHarleyAShotgun" extends="npcAShotgunTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundDeath" value="HarleyDie"/>
 			<property name="SoundStamina" value="Player_Female/player2stamina"/>
 			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
 			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
@@ -3150,21 +3378,22 @@
 			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>					
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
         </entity_class>   	
 		
 		<entity_class name="npcHarleyLBow" extends="npcLBowTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundDeath" value="HarleyDie"/>
 			<property name="SoundStamina" value="Player_Female/player2stamina"/>
 			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
 			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
@@ -3173,21 +3402,22 @@
 			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>					
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
 		</entity_class> 
 
 		<entity_class name="npcHarleyXBow" extends="npcXBowTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundDeath" value="HarleyDie"/>
 			<property name="SoundStamina" value="Player_Female/player2stamina"/>
 			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
 			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
@@ -3196,154 +3426,223 @@
 			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandom" value="HarleyRandom" />
 			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>					
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
 		</entity_class>	
-
+		<entity_class name="npcHarleyRocketL" extends="npcRocketLTemplate"> 
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="HarleyDie"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="HarleyRandom" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
+		</entity_class>			
+		
 		<!--  Baker  -->
 
 		<entity_class name="npcBakerEmptyHand" extends="npcEmptyHandTemplate"> 
 			<property name="Tags" value="entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?BakerRagdoll2_X"/> 
-			<property name="AIPackages" value="Human Timid Basic, Human Loot Basic, Human Craft Basic"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
+			<property name="AIPackages" value="NPCBasic, NPCLoot, NPCMedic, NPCHired"/>
 			<effect_group name="HasBackpack"> <!-- This activates the backpack -->
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+			</effect_group>	
+			<effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
 			</effect_group>	
 		</entity_class>	
 
 		<entity_class name="npcBakerClub" extends="npcClubTemplate"> 
 			<property name="Tags" value="entity,male,npc,melee"/>
-			<property name="Faction" value="whiteriver"/>
+			<property name="Faction" value="whiteriver"/> 
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?BakerRagdoll2_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>
 		
 		<entity_class name="npcBakerKnife" extends="npcKnifeTemplate"> 
 			<property name="Tags" value="entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?BakerRagdoll2_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>	
 		
 		<entity_class name="npcBakerBat" extends="npcBatTemplate"> 
 			<property name="Tags" value="entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?BakerRagdoll2_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>				
 		
 		<entity_class name="npcBakerMachete" extends="npcMacheteTemplate"> 
 			<property name="Tags" value="entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?BakerRagdoll2_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
+		</entity_class>	
+
+		<entity_class name="npcBakerAxe" extends="npcAxeTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
+		</entity_class>				
+		
+		<entity_class name="npcBakerSpear" extends="npcSpearTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
+		</entity_class>	
+		
+		<entity_class name="npcBakerPipePistol" extends="npcPipePistolTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>		
 		
+		<entity_class name="npcBakerPipeRifle" extends="npcPipeRifleTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
+		</entity_class>			
+		
+		<entity_class name="npcBakerPipeMG" extends="npcPipeMGTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
+		</entity_class>			
+		
+		<entity_class name="npcBakerPipeShotgun" extends="npcPipeShotgunTemplate"> 		
+			<property name="Tags" value="entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
+		</entity_class>			
+	
 		<entity_class name="npcBakerSMG" extends="npcSMGTemplate"> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?BakerRagdoll2_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>	
 		
 		<entity_class name="npcBakerM60" extends="npcM60Template"> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?BakerRagdoll2_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>	
 
 		<entity_class name="npcBakerPistol" extends="npcPistolTemplate"> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
-			<property name="Faction" value="whiteriver"/>
+			<property name="Faction" value="whiteriver"/> 
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?BakerRagdoll2_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
+			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/> 
 		</entity_class>				
 		
 		<entity_class name="npcBakerDPistol" extends="npcDPistolTemplate"> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?BakerRagdoll2_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>	
 		
 		<entity_class name="npcBakerAK47" extends="npcAK47Template"> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?BakerRagdoll2_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>
 		
 		<entity_class name="npcBakerTRifle" extends="npcTRifleTemplate"> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?BakerRagdoll2_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>		
 		
 		<entity_class name="npcBakerHRifle" extends="npcHRifleTemplate"> 
             <property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?BakerRagdoll2_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
         </entity_class>    		
 		
 		<entity_class name="npcBakerSRifle" extends="npcSRifleTemplate"> 
             <property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?BakerRagdoll2_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
         </entity_class>  
 		
 		<entity_class name="npcBakerPShotgun" extends="npcPShotgunTemplate"> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?BakerRagdoll2_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>
  		
 		<entity_class name="npcBakerAShotgun" extends="npcAShotgunTemplate"> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?BakerRagdoll2_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class> 			
-		
 
 		<entity_class name="npcBakerLBow" extends="npcLBowTemplate"> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?BakerRagdoll2_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class> 		
 		
 		<entity_class name="npcBakerXBow" extends="npcXBowTemplate"> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?BakerRagdoll2_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>	 
 		
 		<entity_class name="npcBakerRocketL" extends="npcRocketLTemplate"> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
-			<property name="Faction" value="bandits"/>
+			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />	
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?BakerRagdoll2_X"/> 
-			<property name="AIPackages" value="Human Hero Basic, Human Ranged Launcher"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
+			<property name="AIPackages" value="NPCBasic, NPCLauncher, NPCMedic"/>
 		</entity_class> 					
 		
-		<!--  SemiHuman Saveable Quest characters  -->
+		<!--  SemiHuman Saveable Quest characters  WIP -->
 
 		<entity_class name="zombieFatMamaHDQuest" extends="npcMeleeSavableTemplate"> 
 			<property name="Tags" value="entity,female,zombie,saveable"/> 
 			<property name="Faction" value="undead"/>			
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-<!--			<property name="Mesh" value="#@modfolder(0-CreaturePackTFPZombies):Resources/XythTFPZombies.unity3d?zombieStandardBigMamaHDRagdoll_X"/> -->
+			<!--			<property name="Mesh" value="#@modfolder(0-CreaturePackTFPZombies):Resources/XythTFPZombies.unity3d?zombieStandardBigMamaHDRagdoll_X"/> -->
 			<!-- Model ripped from base game, Rig from base game  -->
 			<property name="WalkType" value="1"/> 
 			<property name="PhysicsBody" value="zombieFemaleFat"/>
@@ -3366,7 +3665,7 @@
 			<property name="AIPackages" value="Zombie Dumb, Human Basic, Human Melee Basic"/> 
 		</entity_class>	
 		
-<!-- Loot drop containers  -->
+		<!-- Loot drop containers  -->
 		
 		<entity_class name="EntityLootContainerNPC"> 
 			<property name="HideInSpawnMenu" value="true"/>
@@ -3377,11 +3676,11 @@
 			<property name="Parent" value="Backpack"/>
 			<property name="IsEnemyEntity" value="false"/>
 			<property name="TimeStayAfterDeath" value="300"/>
-			<property name="LootListOnDeath" value="banditLoot"/> <!-- bandit loot -->
+			<property name="LootListOnDeath" value="banditLoot"/> <!-- bandit loot, total crap -->
 			<property name="Faction" value="none"/>
 		</entity_class>		
 		
-<!--  NPC and Dumb animals  -->	
+		<!--  NPC and Dumb animals  -->	
 		<entity_class name="npcAnimalFox" extends="npcAnimalMeleeTemplate">
 			<property name="Tags" value="entity,cp,animal,npc,npcAnimalFox,perkAT03"/>
 			<property name="Faction" value="whiteriver"/>
@@ -3453,12 +3752,11 @@
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
 		</entity_class>
-
-
-
 		
-<!--  Zombies  -->
+	<!--  Zombies  -->
+	
 
+	
 		<!-- Tutorial Zombie -->
 		
 		<entity_class name="zombieFemaleTutorial" extends="zombieRegularTemplate">
@@ -3479,7 +3777,7 @@
 			<property name="WalkType" value="7"/>
 			<property name="Mass" value="150"/>
 			<!--  Testing on custom zed, uses Steve body parts, would need to make custom prefabs per zed, ouch  -->
-			  <property name="DismemberTag_L_HeadGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/Head;Prefabs/Dismemberment/ZombieSteve/Blade/Head" data="target=Neck+scale=1,0,1+atp=true+type=blunt+detach=true;target=Neck+scale=1,0,1+atp=true+type=blade+detach=true" />
+			<!--			  <property name="DismemberTag_L_HeadGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/Head;Prefabs/Dismemberment/ZombieSteve/Blade/Head" data="target=Neck+scale=1,0,1+atp=true+type=blunt+detach=true;target=Neck+scale=1,0,1+atp=true+type=blade+detach=true" />
 			  <property name="DismemberTag_L_LeftUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperLeg" data="target=LeftUpLeg+scale=.8,.4,.8+type=blunt+detach=true;target=LeftUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true" />
 			  <property name="DismemberTag_L_LeftLowerLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerLeg" data="target=LeftLeg+scale=.5,.05,.5+atp=true+type=blunt+detach=true;target=LeftLeg+scale=0,0,0+atp=true+type=blade+detach=true" />
 			  <property name="DismemberTag_L_RightUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperLeg" data="target=RightUpLeg+scale=.9,.2,.9+type=blunt+detach=true;target=RightUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true" />
@@ -3487,7 +3785,11 @@
 			  <property name="DismemberTag_L_LeftUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperArm" data="target=LeftArmRoll+scale=.2,1,1+atp=true+type=blunt+detach=true;target=LeftArmRoll+scale=.3,1,1+atp=true+type=blade+detach=true" />
 			  <property name="DismemberTag_L_LeftLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerArm" data="target=LeftForeArmRoll+scale=.15,1,1+type=blunt+detach=true;target=LeftForeArmRoll+scale=.01,.85,.85+type=blade+detach=true" />
 			  <property name="DismemberTag_L_RightUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperArm" data="target=RightArmRoll+scale=0.2,1,1+atp=true+type=blunt+detach=true;target=RightArmRoll+scale=.1,.8,.8+atp=true+type=blade+detach=true" />
-			  <property name="DismemberTag_L_RightLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerArm" data="target=RightForeArmRoll+scale=.15,1,1+atp=true+type=blunt+detach=true;target=RightForeArmRoll+scale=.1,.9,.9+type=blade+detach=true" />
+			  <property name="DismemberTag_L_RightLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerArm" data="target=RightForeArmRoll+scale=.15,1,1+atp=true+type=blunt+detach=true;target=RightForeArmRoll+scale=.1,.9,.9+type=blade+detach=true" /> -->
+		
+			<!--	<property name="AIPackages" value="Zombie Dumb"/>  -->
+			  
+			  
 		</entity_class>
 		
 		<entity_class name="zombieFemaleTutorialFeral" extends="zombieFemaleTutorial">
@@ -3504,10 +3806,10 @@
 				<passive_effect name="HealthMax" operation="base_set" value="300"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 			</effect_group>
-<!--			<property name="AIPackages" value="Zombie Dumb"/>   -->
+		<!--	<property name="AIPackages" value="Zombie Dumb"/>  Do not use yet  -->
 		</entity_class>		
 		
-	<!--  For testing walktypes and tuning  -->		
+		<!--  For testing walktypes and tuning  -->		
 		
 		<entity_class name="zombieFemaleTutorialT1" extends="zombieFemaleTutorial">
 			<property name="Tags" value="entity,female,zombie,walker,mixamo,normal,nowalkchange"/>
@@ -3546,9 +3848,9 @@
 			<property name="WalkType" value="7"/>
 		</entity_class>	
 		<entity_class name="zombieFemaleTutorialT8" extends="zombieFemaleTutorial">  
-			<property name="Tags" value="entity,female,zombie,walker,mixamo,normal,nowalkchange"/>
+			<property name="Tags" value="entity,female,zombie,mixamo,normal,nowalkchange"/>
 			<property name="Faction" value="undead"/>
-<!--			<property name="RotateToGround" value="true"/> -->
+		<!--<property name="RotateToGround" value="true"/> -->
 			<property name="WalkType" value="8"/>
 			<property name="LookAtAngle" value="0"/>
 			<property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam"/>
@@ -3588,16 +3890,10 @@
 			<property name="CanClimbVertical" value="true"/>
 			<property name="JumpMaxDistance" value="7, 9"/>
 		</entity_class>	
-		<entity_class name="zombieFemaleTutorialT9" extends="zombieFemaleTutorial">
-			<property name="Tags" value="entity,female,zombie,walker,mixamo,normal,nowalkchange"/>
-			<property name="Faction" value="undead"/>	
-			<property name="WalkType" value="9"/>
-		</entity_class>	
-		
 	</append>		
 		
 		
-<!--  Add sex tags to TFP characters  -->		
+	<!--  Add sex tags to TFP characters  -->		
 		
 	<append xpath="//entity_class[starts-with(@name, 'zombieArlene')]/property[@name='Tags']/@value">,female</append>
 	<append xpath="//entity_class[starts-with(@name, 'zombieMarlene')]/property[@name='Tags']/@value">,female</append>	
@@ -3628,12 +3924,6 @@
 	<append xpath="//entity_class[starts-with(@name, 'zombieScreamer')]/property[@name='Tags']/@value">,female</append>	
 	<append xpath="//entity_class[starts-with(@name, 'zombieMutated')]/property[@name='Tags']/@value">,male</append>	
 	<append xpath="//entity_class[starts-with(@name, 'zombieDemolition')]/property[@name='Tags']/@value">,male</append>	
-	
-	<!--	<append xpath="//entity_class[starts-with(@name, 'zombieFootballPlayer')]/property[@name='Tags']/@value">,male</append>	
-	<append xpath="//entity_class[starts-with(@name, 'zombieCheerleader')]/property[@name='Tags']/@value">,female</append>	
-	<append xpath="//entity_class[starts-with(@name, 'zombieOldTimer')]/property[@name='Tags']/@value">,male</append>		
-	<append xpath="//entity_class[starts-with(@name, 'zombieFarmer')]/property[@name='Tags']/@value">,male</append>	-->
-	
 	<append xpath="//entity_class[starts-with(@name, 'npcTraderJoel')]/property[@name='Tags']/@value">,male</append>		
 	<append xpath="//entity_class[starts-with(@name, 'npcTraderRekt')]/property[@name='Tags']/@value">,male</append>	
 	<append xpath="//entity_class[starts-with(@name, 'npcTraderBob')]/property[@name='Tags']/@value">,male</append>		
@@ -3641,9 +3931,9 @@
 	<append xpath="//entity_class[starts-with(@name, 'npcTraderJen')]/property[@name='Tags']/@value">,female</append>	
 	<append xpath="//entity_class[starts-with(@name, 'npcTraderTest')]/property[@name='Tags']/@value">,male</append>	
 	
-<!--  add infection attacks to all zombies  -->
+	<!--  add new infection attacks to all zombies  -->
 
-	<append xpath="/entity_classes/entity_class[@name='zombieTemplateMale']">
+	<!--<append xpath="/entity_classes/entity_class[@name='zombieTemplateMale']">
 		<effect_group name="Infection Attack Buff">
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="InfectedAttack"/>
 		</effect_group>
@@ -3652,9 +3942,9 @@
 		<effect_group name="Infection Attack Buff">
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="InfectedAttack"/>
 		</effect_group>
-	</append>
+	</append>  -->
 	
-<!--  add random walktypes to all zombies  -->	
+	<!--  add random walktypes to all zombies  -->	
 	
 	<append xpath="/entity_classes/entity_class[@name='zombieTemplateMale']">
 		<effect_group name="RNDWalkStart">
@@ -3667,20 +3957,4 @@
 		</effect_group>
 	</append>	
 	
-<!-- Removing the default vanilla sounds from humanoids (and zombies?) to be replaced by the new sound system  -->
-
-<!--	<remove xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundRandom')]"/> 
-	<remove xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundHurt')]"/> 
-	<remove xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundDeath')]"/> 
-	<remove xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundAttack')]"/> 
-	<remove xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundAlert')]"/> 
-	<remove xpath="//entity_class[starts-with(@name, 'zombie')]/property[starts-with(@name, 'SoundSense')]"/>  Need to figure out how to move these 2 events to the NPCSoundSystem  
-	
-	<remove xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundRandom')]" />
-	<remove xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundAlert')]" />
-	<remove xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundSense')]" />
-	<remove xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundHurt')]" />	
-	<remove xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundDeath')]" />
-	<remove xpath="//entity_class[starts-with(@name, 'npc') and  not ( starts-with(@name, 'npcTrader') ) ]/property[starts-with(@name, 'SoundAttack')]" />	-->
-
 </configs>

@@ -1,7 +1,7 @@
 <configs>
 
-	   <append xpath="/lootcontainers/lootgroup[@name='groupMedicalRare']">
+	   <!--<append xpath="/lootcontainers/lootgroup[@name='groupMedicalRare']">
 			<item name="drugHealInfectedCharacter" />
-	   </append>
+	   </append> -->
 
 </configs>

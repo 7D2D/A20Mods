@@ -17,7 +17,7 @@
 				portrait="npc_joel"
 				greeting_type="nearby"
 				stance="Like" voice_set="trader"
-				trader_id="1" dialog_id="GenericNPCWithQuest" />
+				trader_id="1" dialog_id="GenericNPC" />
 			<npc_info
 				id="xythtest"
 				name="NPC"
@@ -28,7 +28,7 @@
 				stance="Neutral" voice_set="trader"
 				trader_id="1" dialog_id="trader" 
 				quest_list="trader_quests" />
-			<npc_info
+			<!-- <npc_info
 				id="traderWeapons"
 				name="Weapon Trader"
 				name_key="npc_Tradertest"
@@ -67,7 +67,7 @@
 				greeting_type="nearby"
 				stance="Neutral" voice_set="trader"
 				trader_id="63" dialog_id="trader" 
-				quest_list="trader_quests" />		
+				quest_list="trader_quests" />	-->	
 
 			<npc_info
 				id="NPCAnimalGeneric"
@@ -101,6 +101,10 @@
 		<append xpath="/npc/factions/faction[@name='undead']" >		
 			<relationship name="whisperers" value="like"/>
 		</append>
+		
+		<append xpath="/npc/factions/faction[@name='bandits']" >		
+			<relationship name="animals" value="neutral"/>
+		</append>		
 		
 		<append xpath="/npc/factions" >	
 		
