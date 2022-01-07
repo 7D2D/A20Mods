@@ -1,0 +1,29 @@
+<configs>
+	<append xpath="/items">
+		<item name="AnimalXSpidersLoadingHack">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/XythSpiders.unity3d?Spider01_X"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/XythSpiders.unity3d?Spider01_X"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> <!-- STK resource -->
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>
+		<item name="meleeHandAnimalSpider">
+			<property name="Extends" value="meleeHandAnimalTemplate"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="35"/>
+			<property class="Action0">
+				<property name="Delay" value=".7"/> <!-- obsolete if rounds per minute exists -->
+				<property name="Range" value="1.65"/>
+				<property name="DamageEntity" value="15"/>
+				<property name="DamageBlock" value="4"/>
+			</property>
+		</item>
+	</append>	  
+</configs>

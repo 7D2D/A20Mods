@@ -1,0 +1,332 @@
+<configs>
+
+	<append xpath="/entity_classes">
+                
+                <!--  Soldier Models by Slayver Purchased for use in NPC Mod  -->
+
+	        <entity_class name="npcSoldier1RocketL" extends="npcRocketLTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />	
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier1Dark"/> 
+			<property name="AIPackages" value="NPCBasic, NPCLauncher"/>
+		</entity_class> 
+
+                <entity_class name="npcSoldier1TRifle" extends="npcTRifleTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />	
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier1Dark"/> 
+		</entity_class>	
+
+                <entity_class name="npcSoldier1Club" extends="npcClubTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />			
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier1Dark"/> 
+		</entity_class>
+
+		<entity_class name="npcSoldier1Knife" extends="npcKnifeTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />			
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier1Dark"/> 
+		</entity_class>	
+		
+		<entity_class name="npcSoldier1Bat" extends="npcBatTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier1Dark"/> 
+		</entity_class>				
+		
+		<entity_class name="npcSoldier1Machete" extends="npcMacheteTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier1Dark"/> 
+		</entity_class>	
+
+	        <entity_class name="npcSoldier1SMG" extends="npcSMGTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier1Dark"/> 
+		</entity_class>	
+
+		<entity_class name="npcSoldier1M60" extends="npcM60Template"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier1Dark"/>  
+		</entity_class>				
+		
+		<entity_class name="npcSoldier1DPistol" extends="npcDPistolTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />			
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier1Dark"/> 
+		</entity_class>	
+		
+		<entity_class name="npcSoldier1AK47" extends="npcAK47Template"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier1Dark"/> 
+		</entity_class>
+
+                <entity_class name="npcSoldier2Club" extends="npcClubTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier2Dark"/> 
+		</entity_class>
+
+		<entity_class name="npcSoldier2Knife" extends="npcKnifeTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier2Dark"/> 
+		</entity_class>	
+		
+		<entity_class name="npcSoldier2Bat" extends="npcBatTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier2Dark"/> 
+		</entity_class>		
+		
+		 <entity_class name="npcSoldier2TRifle" extends="npcTRifleTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />	
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier2Dark"/> 
+		</entity_class>	
+
+		<entity_class name="npcSoldier2Machete" extends="npcMacheteTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier2Dark"/> 
+		</entity_class>	
+
+	        <entity_class name="npcSoldier2SMG" extends="npcSMGTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier2Dark"/> 
+		</entity_class>	
+
+		<entity_class name="npcSoldier2M60" extends="npcM60Template"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier2Dark"/>  
+		</entity_class>				
+		
+		<entity_class name="npcSoldier2DPistol" extends="npcDPistolTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier2Dark"/> 
+		</entity_class>	
+		
+		<entity_class name="npcSoldier2AK47" extends="npcAK47Template"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier2Dark"/> 
+		</entity_class>
+
+		<entity_class name="npcSoldier3Club" extends="npcClubTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier3Dark"/> 
+		</entity_class>
+
+		<entity_class name="npcSoldier3Knife" extends="npcKnifeTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />			
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier3Dark"/> 
+		</entity_class>	
+		
+		<entity_class name="npcSoldier3Bat" extends="npcBatTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier3Dark"/> 
+		</entity_class>				
+		
+		<entity_class name="npcSoldier3Machete" extends="npcMacheteTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />			
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier3Dark"/> 
+		</entity_class>	
+
+	        <entity_class name="npcSoldier3SMG" extends="npcSMGTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier3Dark"/> 
+		</entity_class>	
+
+                <entity_class name="npcSoldier3TRifle" extends="npcTRifleTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />	
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier3Dark"/> 
+		</entity_class>	
+
+		<entity_class name="npcSoldier3M60" extends="npcM60Template"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier3Dark"/>  
+		</entity_class>				
+		
+		<entity_class name="npcSoldier3DPistol" extends="npcDPistolTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier3Dark"/> 
+		</entity_class>	
+		
+		<entity_class name="npcSoldier3AK47" extends="npcAK47Template"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier3Dark"/> 
+		</entity_class>
+		
+		<entity_class name="npcSoldier4Club" extends="npcClubTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier4Dark"/> 
+		</entity_class>
+
+		<entity_class name="npcSoldier4Knife" extends="npcKnifeTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier4Dark"/> 
+		</entity_class>	
+		
+		<entity_class name="npcSoldier4Bat" extends="npcBatTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier4Dark"/> 
+		</entity_class>				
+		
+		<entity_class name="npcSoldier4Machete" extends="npcMacheteTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier4Dark"/> 
+		</entity_class>	
+
+	        <entity_class name="npcSoldier4SMG" extends="npcSMGTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier4Dark"/> 
+		</entity_class>	
+
+		<entity_class name="npcSoldier4M60" extends="npcM60Template"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier4Dark"/>  
+		</entity_class>	
+
+                <entity_class name="npcSoldier4TRifle" extends="npcTRifleTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />	
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier4Dark"/> 
+		</entity_class>				
+		
+		<entity_class name="npcSoldier4DPistol" extends="npcDPistolTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier4Dark"/> 
+		</entity_class>	
+		
+		<entity_class name="npcSoldier4AK47" extends="npcAK47Template"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier4Dark"/> 
+		</entity_class>
+		
+		<entity_class name="npcOfficerClub" extends="npcClubTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="LtDan,CptRogers,LtFlagg,CptClarke,Brody,CptKurtz,LtTrevor,CptPaxton" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCOfficerDark"/> 
+		</entity_class>
+
+		<entity_class name="npcOfficerKnife" extends="npcKnifeTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="LtDan,CptRogers,LtFlagg,CptClarke,Brody,CptKurtz,LtTrevor,CptPaxton" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCOfficerDark"/> 
+		</entity_class>	
+		
+		<entity_class name="npcOfficerBat" extends="npcBatTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="LtDan,CptRogers,LtFlagg,CptClarke,Brody,CptKurtz,LtTrevor,CptPaxton" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCOfficerDark"/> 
+		</entity_class>				
+		
+		<entity_class name="npcOfficerMachete" extends="npcMacheteTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="LtDan,CptRogers,LtFlagg,CptClarke,Brody,CptKurtz,LtTrevor,CptPaxton" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCOfficerDark"/> 
+		</entity_class>	
+
+	        <entity_class name="npcOfficerSMG" extends="npcSMGTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="LtDan,CptRogers,LtFlagg,CptClarke,Brody,CptKurtz,LtTrevor,CptPaxton" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCOfficerDark"/> 
+		</entity_class>	
+
+		<entity_class name="npcOfficerM60" extends="npcM60Template"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="LtDan,CptRogers,LtFlagg,CptClarke,Brody,CptKurtz,LtTrevor,CptPaxton" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCOfficerDark"/>  
+		</entity_class>	
+
+                <entity_class name="npcOfficerTRifle" extends="npcTRifleTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />	
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCOfficerDark"/> 
+		</entity_class>			
+		
+		<entity_class name="npcOfficerDPistol" extends="npcDPistolTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="LtDan,CptRogers,LtFlagg,CptClarke,Brody,CptKurtz,LtTrevor,CptPaxton" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCOfficerDark"/> 
+		</entity_class>	
+		
+		<entity_class name="npcOfficerAK47" extends="npcAK47Template"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="LtDan,CptRogers,LtFlagg,CptClarke,Brody,CptKurtz,LtTrevor,CptPaxton" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCOfficerDark"/> 
+		</entity_class>
+
+		</append>	
+	
+</configs>

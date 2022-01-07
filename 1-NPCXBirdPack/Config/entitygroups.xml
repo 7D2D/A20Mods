@@ -1,0 +1,24 @@
+<configs>
+
+<!--	<remove xpath="//entitygroup/entity[starts-with(@name, 'animal')]" /> -->
+
+	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsBurntForest']">	
+		<entity name="animalCrow" prob="3" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesert']">	
+		<entity name="animalCrow" prob="5"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsSnow']">	
+		<entity name="animalEagle" prob="5" />
+		<entity name="animalPenguin" prob="5" />
+	</append>	
+	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']">	
+		<entity name="animalBat" prob="5"/>
+		<entity name="animalBats" prob="5"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='WildGameForest']">		
+		<entity name="animalRobin" prob="5"/>
+		<entity name="animalEagle" prob="5"/>
+		<entity name="animalAlcatraz" prob="5"/>
+	</append>
+</configs>

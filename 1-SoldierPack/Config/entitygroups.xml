@@ -1,0 +1,29 @@
+<configs>
+	
+	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'WildGameForest')]">
+                <entity name="npcOfficerDPistol" prob=".1" />
+                <entity name="npcOfficerMachete" prob=".1" />
+		<entity name="npcOfficerSMG" prob=".1" />
+		<entity name="npcOfficerAK47" prob=".1" />
+		<entity name="npcOfficerTRifle" prob=".1" />	
+		<entity name="npcSoldier1Club" prob=".1" />
+		<entity name="npcSoldier1SMG" prob=".1" />
+		<entity name="npcSoldier1AK47" prob=".1" />
+		<entity name="npcSoldier1TRifle" prob=".1" />
+		<entity name="npcSoldier1RocketL" prob=".1" />
+                <entity name="npcSoldier1M60" prob=".1" />
+                <entity name="npcSoldier2Knife" prob=".1" />
+		<entity name="npcSoldier2SMG" prob=".1" />
+		<entity name="npcSoldier2AK47" prob=".1" />
+		<entity name="npcSoldier2TRifle" prob=".1" />
+                <entity name="npcSoldier3Bat" prob=".1" />
+		<entity name="npcSoldier3SMG" prob=".1" />
+		<entity name="npcSoldier3AK47" prob=".1" />
+		<entity name="npcSoldier3TRifle" prob=".1" />
+                <entity name="npcSoldier4Machete" prob=".1" />
+		<entity name="npcSoldier4SMG" prob=".1" />
+		<entity name="npcSoldier4AK47" prob=".1" />
+		<entity name="npcSoldier4TRifle" prob=".1" />
+        </append> 	
+	
+</configs>

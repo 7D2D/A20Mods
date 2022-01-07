@@ -1585,6 +1585,7 @@
 
 				<passive_effect name="DegradationMax" operation="base_set" value="170,320" tier="1,6" tags="perkDeadEye"/>
 				<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkDeadEye"/>
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/> 
 			</effect_group>
 		</item>	
 		

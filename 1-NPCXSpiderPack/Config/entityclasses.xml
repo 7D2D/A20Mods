@@ -1,0 +1,63 @@
+<configs>
+	<append xpath="/entity_classes">		
+		<entity_class name="animalSpider01" extends="animalTemplateHostileWalking">
+			<property name="Mesh" value="#@modfolder:Resources/XythSpiders.unity3d?Spider01_X"/>
+			<property name="Tags" value="entity,animal,hostile,perkAT02,perkAT03,animalSpider01"/>
+			<property name="Faction" value="aggressiveanimals"/>
+			<property name="Prefab" value="NPC"/>
+			<property name="Parent" value="Animals"/>
+			<property name="Class" value="EntityEnemyAnimal"/>
+			<property name="IsEntityAnimal" value="true"/>
+			<property name="IsEnemyEntity" value="true"/> 
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="HasRagdoll" value="true"/> <!-- No ragdoll but needed for dedi -->
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>			
+			<property name="ExperienceGain" value="130"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<property name="SoundRandom" value="animalspiderrandom"/>
+			<property name="SoundAlert" value="animalspideralert"/>
+			<property name="SoundHurt" value="animalspiderhurt"/>
+			<property name="SoundDeath" value="animalspiderdeath"/>
+			<property name="SoundAttack" value="animalspiderattack"/>
+			<property name="SoundSense" value="animalspidersense"/>
+			<property name="SoundGiveUp" value="animalspiderroam"/>
+			<property name="MoveSpeed" value=".25"/>
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="HandItem" value="meleeHandAnimalSpider"/>			
+			<property name="DeadBodyHitPoints" value="100"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>				
+			</effect_group>
+		</entity_class>		
+		<entity_class name="animalSpider02" extends="animalSpider01">
+			<property name="Tags" value="entity,animal,hostile,animalSpider02,perkAT02,perkAT03"/>
+			<property name="Faction" value="aggressiveanimals"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythSpiders.unity3d?Spider02_X"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+		</entity_class>	
+		<entity_class name="animalSpider03" extends="animalSpider01">
+			<property name="Tags" value="entity,animal,hostile,animalSpider03,perkAT02,perkAT03"/>
+			<property name="Faction" value="aggressiveanimals"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythSpiders.unity3d?Spider03_X"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+		</entity_class>	
+	</append>
+</configs>

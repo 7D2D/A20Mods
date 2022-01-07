@@ -55,10 +55,35 @@
 		<set xpath="//entity_class[starts-with(@name, 'animalBossGrace')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,0,0,EntityZombie,0,3,EntityNPC,0,0</set> 	
 
 
-		<!--  Edits to convert aggressive animals to Faction 'Aggressive Animals'	-->
+		<!--  Edits to add factions to animals	-->
 
-		<set xpath="//entity_class[starts-with(@name, 'animalTemplateHostile')]/property[@name='Faction']/@value">aggressiveanimals</set> 
-		<set xpath="//entity_class[starts-with(@name, 'animalZombie')]/property[@name='Faction']/@value">undead</set>
+		<set xpath="//entity_class[@name='animalTemplateTimid']/property[@name='Faction']/@value">passiveanimalsmedium</set> 
+		<set xpath="//entity_class[@name='animalTemplateHostile']/property[@name='Faction']/@value">aggressiveanimalsmedium</set> 
+		<set xpath="//entity_class[@name='animalStag']/property[@name='Faction']/@value">passiveanimalsmedium</set> 
+		<set xpath="//entity_class[@name='animalRabbit']/property[@name='Faction']/@value">passiveanimalssmall</set> 
+		<set xpath="//entity_class[@name='animalChicken']/property[@name='Faction']/@value">passiveanimalssmall</set> 
+		<append xpath="/entity_classes/entity_class[@name='animalZombieBear' or 
+													@name='animalZombieVulture' or
+													@name='animalZombieDog']">
+			<property name="Faction" value="zombieanimals"/>
+		</append>	
+		<append xpath="/entity_classes/entity_class[@name='animalDoe']">
+			<property name="Faction" value="passiveanimalsmedium"/>
+		</append>
+		<append xpath="/entity_classes/entity_class[@name='animalSnake' or 
+													@name='animalCoyote']">
+			<property name="Faction" value="aggressiveanimalssmall"/>
+		</append>
+		<append xpath="/entity_classes/entity_class[@name='animalBoar' or 
+													@name='animalWolf' or
+													@name='animalDireWolf' or
+													@name='animalMountainLion']">
+			<property name="Faction" value="aggressiveanimalsmedium"/>
+		</append>
+		<append xpath="/entity_classes/entity_class[@name='animalBear' or 
+													@name='animalBossGrace']">
+			<property name="Faction" value="aggressiveanimalslarge"/>
+		</append>
 	
 		<!--  Weapons are spawned onto the joint specified in the RightHandJoint property.  
 		For spawned Melee weapons and pistol type weapons, the standard child object is located under RightWeapon (or LeftWeapon for melee but not both)
@@ -238,7 +263,7 @@
 				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
 				<passive_effect name="HealthMax" operation="base_set" value="200"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
-				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="2000"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0" />
 				<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
 				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
@@ -247,9 +272,9 @@
 			<effect_group name="IsNPC"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="IsHuman"/> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffNPCStatusCheck"/> 
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffNPCStatusCheck"/> 
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffNPCStatusCheck"/> <!--  done twice intentionally, cause TFP notes say to.   -->
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="NPCHit"/> 
-				<!--  done twice intentionally, cause TFP notes say to.   -->
+				<!--<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="respawn" operation="set" value="1"/>   uncomment this for hired NPCs to respawn with player, highly experimental  -->
 			</effect_group>	
 			<property name="RotateToGround" value="false"/>	
 			<property name="PushFactor" value="1"/>	

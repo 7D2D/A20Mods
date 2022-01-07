@@ -1,0 +1,46 @@
+<configs>
+	
+	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'WildGameForest')]">
+                <entity name="RaiderJayneClub" prob=".1" />
+                <entity name="RaiderGinaClub" prob=".1" />
+                <entity name="RaiderBettyClub" prob=".1" />
+                <entity name="RaiderHedyClub" prob=".1" />
+                <entity name="RaiderGypsyClub" prob=".1" />
+                <entity name="RaiderJayneMachete" prob=".1" />
+                <entity name="RaiderGinaMachete" prob=".1" />
+                <entity name="RaiderBettyMachete" prob=".1" />
+                <entity name="RaiderHedyMachete" prob=".1" />
+                <entity name="RaiderGypsyMachete" prob=".1" />
+                <entity name="RaiderJayneKnife" prob=".1" />
+                <entity name="RaiderGinaKnife" prob=".1" />
+                <entity name="RaiderBettyKnife" prob=".1" />
+                <entity name="RaiderHedyKnife" prob=".1" />
+                <entity name="RaiderGypsyKnife" prob=".1" />
+		<entity name="RaiderJayneBat" prob=".1" />
+                <entity name="RaiderGinaBat" prob=".1" />
+                <entity name="RaiderBettyBat" prob=".1" />
+                <entity name="RaiderHedyBat" prob=".1" />
+                <entity name="RaiderGypsyBat" prob=".1" />
+		<entity name="RaiderHedyAxe" prob=".1" />
+		<entity name="RaiderGinaAxe" prob=".1" />
+                <entity name="RaiderBettyAxe" prob=".1" />
+		<entity name="RaiderJayneAxe" prob=".1" />
+                <entity name="RaiderGypsyAxe" prob=".1" />	
+		<entity name="RaiderJayneSMG" prob=".1" />
+		<entity name="RaiderJayneDPistol" prob=".1" />
+		<entity name="RaiderJayneTRifle" prob=".1" />
+                <entity name="RaiderBettySMG" prob=".1" />
+		<entity name="RaiderBettyDPistol" prob=".1" />
+		<entity name="RaiderBettyTRifle" prob=".1" />
+                <entity name="RaiderGinaSMG" prob=".1" />
+		<entity name="RaiderGinaDPistol" prob=".1" />
+		<entity name="RaiderGinaTRifle" prob=".1" />
+                <entity name="RaiderHedySMG" prob=".1" />
+		<entity name="RaiderHedyDPistol" prob=".1" />
+		<entity name="RaiderHedyTRifle" prob=".1" />
+                <entity name="RaiderGypsySMG" prob=".1" />
+		<entity name="RaiderGypsyDPistol" prob=".1" />
+		<entity name="RaiderGypsyTRifle" prob=".1" />
+          </append> 	
+	
+</configs>

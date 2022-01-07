@@ -1,0 +1,367 @@
+<configs>
+
+	<append xpath="/entity_classes">
+                
+                <!--  Racer and James Models free to use on mixamo, Fumigator and Incinerator models free to use by megatrom,
+                      Custom Female Soldier by Eldanu Purchased for use in NPC Mod  -->
+
+                <entity_class name="RaiderMercClub" extends="npcClubTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,bandit,cp,UMA2"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Names" value="Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
+                        Rusty Rylee, Samara MadEye, Jazmine Ghost, Crazy Breonna, OneEye Jaelyn, Pickpocket Samantha, Eve The Brute, Rusty Cora, Elena Nine Lives" />
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderMercDark"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+		</entity_class>
+
+                <entity_class name="RaiderMercKnife" extends="npcKnifeTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,bandit,cp,UMA2"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
+                        Rusty Rylee, Samara MadEye, Jazmine Ghost, Crazy Breonna, OneEye Jaelyn, Pickpocket Samantha, Eve The Brute, Rusty Cora, Elena Nine Lives" />
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderMercDark"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+		</entity_class>
+
+                <entity_class name="RaiderMercMachete" extends="npcMacheteTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,bandit,cp,UMA2"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
+                        Rusty Rylee, Samara MadEye, Jazmine Ghost, Crazy Breonna, OneEye Jaelyn, Pickpocket Samantha, Eve The Brute, Rusty Cora, Elena Nine Lives" />
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderMercDark"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+		</entity_class>
+
+                <entity_class name="RaiderMercDPistol" extends="npcDPistolTemplate"> 
+			<property name="Tags" value="entity,female,npc,ranged,bandit,cp,UMA2"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
+                        Rusty Rylee, Samara MadEye, Jazmine Ghost, Crazy Breonna, OneEye Jaelyn, Pickpocket Samantha, Eve The Brute, Rusty Cora, Elena Nine Lives" />
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderMercDark"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+		</entity_class>
+
+                <entity_class name="RaiderMercTRifle" extends="npcTRifleTemplate"> 
+			<property name="Tags" value="entity,female,npc,ranged,bandit,cp,UMA2"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
+                        Rusty Rylee, Samara MadEye, Jazmine Ghost, Crazy Breonna, OneEye Jaelyn, Pickpocket Samantha, Eve The Brute, Rusty Cora, Elena Nine Lives" />
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderMercDark"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+		 </entity_class>
+
+                 <entity_class name="RaiderMercAK47" extends="npcAK47Template"> 
+			<property name="Tags" value="entity,female,npc,ranged,bandit,cp,UMA2"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
+                        Rusty Rylee, Samara MadEye, Jazmine Ghost, Crazy Breonna, OneEye Jaelyn, Pickpocket Samantha, Eve The Brute, Rusty Cora, Elena Nine Lives" />
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderMercDark"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+		 </entity_class>
+
+                 <entity_class name="RaiderMotoTRifle" extends="npcTRifleTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />	
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderMotoDark"/> 
+		</entity_class>	
+
+                <entity_class name="RaiderMotoAK47" extends="npcAK47Template"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />	
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderMotoDark"/> 
+		</entity_class>	
+
+                <entity_class name="RaiderMotoDPistol" extends="npcDPistolTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />	
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderMotoDark"/> 
+		</entity_class>	
+
+                <entity_class name="RaiderMotoBat" extends="npcBatTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />			
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderMotoDark"/> 
+		</entity_class>
+
+                <entity_class name="RaiderMotoAxe" extends="npcAxeTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />			
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderMotoDark"/> 
+		</entity_class>
+
+                <entity_class name="RaiderSluggerAK47" extends="npcAK47Template"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />	
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderSluggerDark"/> 
+		</entity_class>	
+
+                <entity_class name="RaiderSluggerM60" extends="npcM60Template"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />	
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderSluggerDark"/> 
+		</entity_class>	
+
+                <entity_class name="RaiderSluggerBat" extends="npcBatTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />			
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderSluggerDark"/> 
+		</entity_class>
+
+                <entity_class name="RaiderSluggerAxe" extends="npcAxeTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />			
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderSluggerDark"/> 
+		</entity_class>
+
+                <entity_class name="RaiderSluggerRocketL" extends="npcRocketLTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,bandit,cp,UMA2"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderSluggerDark"/> 
+		</entity_class>
+
+                <entity_class name="RaiderPestDPistol" extends="npcDPistolTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />	
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderPestDark"/> 
+		</entity_class>	
+
+                <entity_class name="RaiderPestSMG" extends="npcSMGTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />	
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderPestDark"/> 
+		</entity_class>	
+
+                <entity_class name="RaiderPestPipeMG" extends="npcPipeMGTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />	
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderPestDark"/> 
+		</entity_class>	
+
+                <entity_class name="RaiderPestBat" extends="npcBatTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />			
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderPestDark"/> 
+		</entity_class>
+
+                <entity_class name="RaiderPestAxe" extends="npcAxeTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />			
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderPestDark"/> 
+		</entity_class>
+
+                <entity_class name="RaiderPestKnife" extends="npcKnifeTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />			
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderPestDark"/> 
+		</entity_class>
+
+                <entity_class name="RaiderPestClub" extends="npcClubTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />			
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderPestDark"/> 
+		</entity_class>
+
+                <entity_class name="RaiderPestMachete" extends="npcMacheteTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />			
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderPestDark"/> 
+		</entity_class>
+
+                <entity_class name="RaiderBeatzSMG" extends="npcSMGTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />	
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderBeatzDark"/> 
+		</entity_class>	
+
+                <entity_class name="RaiderBeatzAK47" extends="npcAK47Template"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />	
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderBeatzDark"/> 
+		</entity_class>	
+
+                <entity_class name="RaiderBeatzDPistol" extends="npcDPistolTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />	
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderBeatzDark"/> 
+		</entity_class>	
+
+                <entity_class name="RaiderBeatzBat" extends="npcBatTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />			
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderBeatzDark"/> 
+		</entity_class>
+
+                <entity_class name="RaiderBeatzClub" extends="npcClubTemplate"> 
+			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />			
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderBeatzDark"/> 
+		</entity_class>
+
+		</append>	
+	
+</configs>

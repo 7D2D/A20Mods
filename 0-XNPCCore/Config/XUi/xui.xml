@@ -6,9 +6,9 @@
   <!--set xpath="/xui/ruleset[@name='default']/window_group[@name='dialog']/@controller">XUiC_DialogWindowGroupSDX, Mods</set-->
 
   
-  <append xpath="/xui/ruleset[@name='default']/window_group[@name='dialog']">
+  <!--<append xpath="/xui/ruleset[@name='default']/window_group[@name='dialog']">
     <window name="NPCCharacterFrameWindow" anchor="LeftTop"/>
-  </append>
+  </append>--> <!-- useful for debugging  -->
   
   <append xpath="/xui/ruleset[@name='default']">
     <window_group name="HireInformation" >

@@ -1,0 +1,156 @@
+<configs>
+	<append xpath="/entity_classes">		
+		
+<!-- Flying Things  -->
+
+		<entity_class name="animalRobin" extends="animalTemplateTimidFlying" >
+			<property name="Mesh" value="#@modfolder:Resources/XythBirds.unity3d?Robin_X" />
+			<property name="Tags" value="entity,cp,animal,timid,animalRobin"/>
+			<property name="Faction" value="animals"/>
+			<property name="HandItem" value="meleeHandAnimalRobin"/>
+			<property name="MaxTurnSpeed" value="190"/>
+			<property name="DeadBodyHitPoints" value="100"/>
+			<property name="SizeScale" value="1.1"/>
+			<property name="SoundRandomTime" value="10.0"/>
+			<property name="SoundRandom" value="RobinSounds" />
+			<property name="SoundAlert" value="RobinSounds"/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value="RobinSounds"/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundSense" value="RobinSounds"/>
+			<property name="SoundGiveUp" value="RobinSounds"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="20"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+		</entity_class> 		
+		<entity_class name="animalCrow" extends="animalTemplateTimidFlying">
+			<property name="Mesh" value="#@modfolder:Resources/XythBirds.unity3d?Crow_X" />
+			<property name="Tags" value="entity,cp,animal,timid,animalCrow"/>
+			<property name="Faction" value="animals"/>
+			<property name="SoundRandomTime" value="10.0"/>
+			<property name="SoundRandom" value="CrowRandom" />
+			<property name="SoundAlert" value="CrowRandom"/>
+			<property name="SoundHurt" value="CrowAttack"/>
+			<property name="SoundDeath" value="CrowAttack"/>
+			<property name="SoundAttack" value="CrowAttack"/>
+			<property name="SoundSense" value="CrowRandom"/>
+			<property name="SoundGiveUp" value="CrowRandom"/>	
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+		</entity_class>
+		<entity_class name="animalBat" extends="animalTemplateTimidFlying">
+			<property name="Mesh" value="#@modfolder:Resources/XythBirds.unity3d?Bat_X" />
+			<property name="Tags" value="entity,cp,animal,timid,animalBat"/>
+			<property name="Faction" value="animals"/>		
+			<property name="SoundRandomTime" value="10.0"/>
+			<property name="SoundRandom" value="BatRandom" />
+			<property name="SoundAlert" value="BatRandom"/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value="BatRandom"/>
+			<property name="SoundSense" value="BatRandom"/>
+			<property name="SoundGiveUp" value="BatRandom"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+		</entity_class> 
+		<entity_class name="animalBats" extends="animalTemplateTimidFlying"> <!-- has a particle of...Bats!  -->
+			<property name="Mesh" value="#@modfolder:Resources/XythBirds.unity3d?Bats_X" />	
+			<property name="Tags" value="entity,cp,animal,timid,animalBats"/>
+			<property name="Faction" value="animals"/>		
+			<property name="SoundRandomTime" value="10.0"/>
+			<property name="SoundRandom" value="BatRandom" />
+			<property name="SoundAlert" value="BatRandom"/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value="BatRandom"/>
+			<property name="SoundSense" value="BatRandom"/>
+			<property name="SoundGiveUp" value="BatRandom"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>			
+		</entity_class> 
+		<entity_class name="animalEagle" extends="animalTemplateTimidFlying">
+			<property name="Mesh" value="#@modfolder:Resources/XythBirds.unity3d?Eagle_X" />
+			<property name="Tags" value="entity,cp,animal,timid,animalEagle"/>
+			<property name="Faction" value="animals"/>					
+			<property name="SoundRandomTime" value="10.0"/>
+			<property name="SoundRandom" value="EagleSound" />
+			<property name="SoundAlert" value="EagleSound"/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value="EagleSound"/>
+			<property name="SoundSense" value="EagleSound"/>
+			<property name="SoundGiveUp" value="EagleSound"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="50"/>
+			</effect_group>
+		</entity_class>
+		<entity_class name="animalAlcatraz" extends="animalTemplateTimidFlying">
+			<property name="Mesh" value="#@modfolder:Resources/XythBirds.unity3d?Alcatraz_X" />
+			<property name="Tags" value="entity,cp,animal,timid,animalAlcatraz"/>
+			<property name="Faction" value="animals"/>					
+			<property name="SoundRandomTime" value="10.0"/>
+			<property name="SoundRandom" value="AlcatrazSound" />
+			<property name="SoundAlert" value="AlcatrazSound"/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value="AlcatrazSound"/>
+			<property name="SoundSense" value="AlcatrazSound"/>
+			<property name="SoundGiveUp" value="AlcatrazSound"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="30"/>
+			</effect_group>			
+		</entity_class>
+		<entity_class name="animalPenguin" extends="animalTemplateTimidWalking">
+			<property name="Mesh" value="#@modfolder:Resources/XythPenguin.unity3d?Penguin_X"/>
+			<property name="Tags" value="entity,animal,timid,perkAT02,perkAT03"/>
+			<property name="Faction" value="animals"/>	
+			<property name="Weight" value="20"/>
+			<property name="Mass" value="20"/>
+			<property name="PhysicsBody" value="Penguin"/>
+			<property name="HandItem" value="meleeHandAnimalFox"/>					
+			<property name="SoundRandom" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+			<property name="DeadBodyHitPoints" value="100"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="80"/>
+			</effect_group>
+		</entity_class>		
+
+	</append>
+</configs>
