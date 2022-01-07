@@ -431,7 +431,7 @@
 		<item name="meleeNPCAxe"> 
 			<property name="Extends" value="meleeHandNPCMaster"/>
 			<property name="Canhold" value="true"/> 
-			<property name="HoldType" value="2"/>
+			<property name="HoldType" value="1"/>
 			<property name="Tags" value="axe,melee,grunting,weapon,meleeWeapon,medium,longShaft,attStrength,perkDeepCuts,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="DisplayType" value="melee"/>
@@ -591,7 +591,7 @@
 		<!-- Ranged Weapons -->
 
 		<item name="gunNPCSMG5"> <!-- testing weapon -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,gun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,magazine,drumMagazine,firingMode,bottomAttachments,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,gun,reloadPenalty3,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,magazine,drumMagazine,firingMode,bottomAttachments,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="1"/> <!-- vanilla 6 --> <!-- So on ranged weapons, a small delay to the raycast is needed so the raycast doesnt fire when the melee animation is moving backwards.  Holdtype one adds a .16 delay.  Seems okay for the guns tested, but each weapon might better use more or less delay.  Setting Showhits in console shows the hit vector -->
@@ -687,7 +687,7 @@
 		
 		<item name="gunNPCPipePistol">
 			<property name="Extends" value="gunNPCSMG5"/> 
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,revolver,barrelAttachments,sideAttachments,smallTopAttachments,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty4,gun,shortRange,revolver,barrelAttachments,sideAttachments,smallTopAttachments,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="1"/>
 			<property name="Stacknumber" value="1"/>
@@ -776,7 +776,7 @@
 		
 		<item name="gunNPCPipeShotgun">
 			<property name="Extends" value="gunNPCSMG5"/> 
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,barrelAttachments,sideAttachments,stock,smallTopAttachments,noScopes,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty5,gun,shotgun,shortRange,barrelAttachments,sideAttachments,stock,smallTopAttachments,noScopes,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="DisplayType" value="rangedShotgun"/>
 			<property name="HoldType" value="1"/>
@@ -874,7 +874,7 @@
 		
 		<item name="gunNPCPipeRifle">
 			<property name="Extends" value="gunNPCSMG5"/> 
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,attachmentsIncluded,bottomAttachments,attPerception,perkDeadEye,canHaveCosmetic"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty3,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,attachmentsIncluded,bottomAttachments,attPerception,perkDeadEye,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="1"/>
@@ -962,7 +962,7 @@
 		
 		<item name="gunNPCPipeMG">
 			<property name="Extends" value="gunNPCSMG5"/> 
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty2,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/PipeMachineGun/PipeMachineGunPrefab.prefab"/>
 			<property name="Material" value="MMachineGunParts"/> <property name="Weight" value="4"/>
@@ -1046,7 +1046,7 @@
 		
 		<item name="gunNPCM60">
 			<property name="Extends" value="gunNPCSMG5"/> 
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,magazine,drumMagazine,bottomAttachments,mediumTopAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty4,gun,barrelAttachments,sideAttachments,smallTopAttachments,magazine,drumMagazine,bottomAttachments,mediumTopAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="DisplayType" value="rangedShotgun"/>
 			<property name="HoldType" value="1"/> <!-- 5  -->
@@ -1143,9 +1143,9 @@
 
 		<item name="gunNPCPistol">
 			<property name="Extends" value="gunNPCSMG5"/> 
-			<property name="Tags" value="weapon,ranged,gun,pistol,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attAgility,perkGunslinger"/>
+			<property name="Tags" value="weapon,ranged,gun,pistol,reloadPenalty1,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attAgility,perkGunslinger"/>
 			<property name="CreativeMode" value="None"/>
-			<property name="HoldType" value="1"/>
+			<property name="HoldType" value="2"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Candrop" value="false"/>	
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Pistol/PistolPrefab.prefab"/>
@@ -1241,7 +1241,7 @@
 
 		<item name="gunNPCDPistol">
 		<property name="Extends" value="gunNPCSMG5"/> 
-		<property name="Tags" value="weapon,ranged,revolver,gun,shortRange,pistol,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attAgility,perkGunslinger,attachmentsIncluded,canHaveCosmetic"/>
+		<property name="Tags" value="weapon,ranged,revolver,gun,shortRange,reloadPenalty1,pistol,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attAgility,perkGunslinger,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="1"/>
 			<property name="Stacknumber" value="1"/>
@@ -1335,7 +1335,7 @@
 		
 		<item name="gunNPCAk47">
 			<property name="Extends" value="gunNPCSMG5"/> 
-			<property name="Tags" value="weapon,ranged,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic"/>
+			<property name="Tags" value="weapon,ranged,gun,barrelAttachments,reloadPenalty2,sideAttachments,smallTopAttachments,mediumTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/ak47/ak47Prefab.prefab"/>
 			<property name="Material" value="MMachineGunParts"/> <property name="Weight" value="4"/>
@@ -1418,7 +1418,7 @@
 		
 		<item name="gunNPCTRifle">
 			<property name="Extends" value="gunNPCSMG5"/> 
-			<property name="Tags" value="weapon,ranged,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic"/>
+			<property name="Tags" value="weapon,ranged,gun,barrelAttachments,reloadPenalty1,sideAttachments,smallTopAttachments,mediumTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Tactical Assault Rifle/tacticalAssaultRiflePrefab.prefab"/>
 			<property name="Material" value="MMachineGunParts"/> <property name="Weight" value="4"/>
@@ -1499,7 +1499,7 @@
 		
 		<item name="gunNPCHRifle">
 			<property name="Extends" value="gunNPCSMG5"/> 
-			<property name="Tags" value="weapon,ranged,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,bottomAttachments,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic"/>
+			<property name="Tags" value="weapon,ranged,gun,barrelAttachments,reloadPenalty1,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,bottomAttachments,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="1"/>
@@ -1590,7 +1590,7 @@
 		
 		<item name="gunNPCSRifle">
 			<property name="Extends" value="gunNPCSMG5"/> 
-			<property name="Tags" value="weapon,ranged,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,magazine,firingMode,bottomAttachments,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic"/>
+			<property name="Tags" value="weapon,ranged,gun,barrelAttachments,reloadPenalty2,sideAttachments,smallTopAttachments,mediumTopAttachments,largeTopAttachments,stock,magazine,firingMode,bottomAttachments,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="1"/>
@@ -1687,7 +1687,7 @@
 			<property name="Tags" value="weapon,ranged,archery,bow,attAgility,perkArchery,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="DisplayType" value="rangedBow"/>
-			<property name="HoldType" value="1"/> 
+			<property name="HoldType" value="2"/> 
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/AdvancedBow/AdvancedWoodenBow/AdvancedWoodenBowPrefab.prefab"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Candrop" value="false"/>				
@@ -1757,8 +1757,8 @@
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="75" tags="perkArchery,bowDrawPenalty"/>
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkArchery"/>
 
-				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value=".5" tags="perkArchery"/>
-				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".5" tags="perkArchery"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value=".1" tags="perkArchery"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".1" tags="perkArchery"/>
 				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.2" tags="perkArchery"/>
 				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".2" tags="perkArchery"/>
 
@@ -1767,6 +1767,7 @@
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/> 
 			</effect_group>
 			<effect_group name="sneak damage bonus">
 				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
@@ -1779,7 +1780,7 @@
 
 		<item name="gunNPCXBow">
 			<property name="Extends" value="gunNPCSMG5"/>
-			<property name="Tags" value="weapon,ranged,sideAttachments,smallTopAttachments,mediumTopAttachments,bottomAttachments,attAgility,perkArchery,crossbow,attachmentsIncluded,canHaveCosmetic"/>
+			<property name="Tags" value="weapon,ranged,sideAttachments,reloadPenalty1,smallTopAttachments,mediumTopAttachments,bottomAttachments,attAgility,perkArchery,crossbow,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="1"/>
 			<property name="Stacknumber" value="1"/>
@@ -1888,7 +1889,7 @@
 		
 		<item name="gunNPCPShotgun">
 			<property name="Extends" value="gunNPCSMG5"/> 
-			<property name="Tags" value="weapon,ranged,gun,shotgun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,noScopes,stock,bottomAttachments,perkBoomstick,modGunShotgunTubeExtenderMagazine,attachmentsIncluded,canHaveCosmetic"/>
+			<property name="Tags" value="weapon,ranged,gun,shotgun,shortRange,reloadPenalty2,barrelAttachments,sideAttachments,smallTopAttachments,noScopes,stock,bottomAttachments,perkBoomstick,modGunShotgunTubeExtenderMagazine,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="DisplayType" value="rangedShotgun"/>
 			<property name="HoldType" value="1"/>
@@ -1986,7 +1987,7 @@
 	
 		<item name="gunNPCAShotgun">
 			<property name="Extends" value="gunNPCSMG5"/> 
-			<property name="Tags" value="weapon,ranged,gun,shotgun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,noScopes,stock,magazine,drumMagazine,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic"/>
+			<property name="Tags" value="weapon,ranged,gun,shotgun,shortRange,reloadPenalty2,barrelAttachments,sideAttachments,smallTopAttachments,noScopes,stock,magazine,drumMagazine,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="DisplayType" value="rangedShotgun"/>
 			<property name="HoldType" value="76"/>

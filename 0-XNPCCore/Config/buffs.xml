@@ -830,8 +830,6 @@
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Timid" operation="set" value="1"/>
 			</effect_group>
 		</buff>	
-	
-	
 
 		<buff name="NPCHit" hidden="true" remove_on_death="true" > <!-- note to self, we could use a buff that detects when targets are stunned/down  -->
 			<stack_type value="ignore"/>
@@ -850,15 +848,7 @@
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffHitStun" />
 			</effect_group>					
 		</buff>		
-		
-		<buff name="buffHitDelay" hidden="true">
-			<stack_type value="replace"/>
-			<duration value="3"/> 
-			<!--<effect_group>	
-				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetBool" property="IsHit" value="true"/>
-				<triggered_effect trigger="onSelfBuffFinish" action="AnimatorSetBool" property="IsHit" value="false"/>
-			</effect_group>		-->
-		</buff>		
+	
 		<buff name="buffHitStun" hidden="true">
 			<stack_type value="ignore"/>
 			<duration value="5"/> 
@@ -869,36 +859,38 @@
 			<duration value="1"/>
 			<update_rate value="2"/>
 			<effect_group>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="Heal" />
+				<!--<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="Heal" />-->
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorFireTrigger" property="Heal" />
 			</effect_group>
 		</buff>	
 		
+		<buff name="buffHealDelay" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="5"/> 
+		</buff>			
 
 		<buff name="IsHealing"> 
             <stack_type value="ignore"/>
-            <duration value="6"/>
-            <update_rate value="2"/>
-            <effect_group>
-                <requirement name="NotHasBuff" buff="buffIsCooldown"/>
-                <triggered_effect trigger="onSelfBuffStart" action="AnimatorSetBool" property="IsBusy" value="true"/>
-                <triggered_effect trigger="onSelfBuffFinish" action="AnimatorSetBool" property="IsBusy" value="false"/>
-                <!--<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="=== Pausing to do an action"/>  -->
-            </effect_group>        
-            <effect_group>
-                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="healAbrasionMult" operation="set" value="3"/> <!-- X -->
-                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="medicalRegHealthAmount" operation="add" value="30"/> <!-- X -->
-
+            <duration value="3"/>
+            <update_rate value="1"/>
+             <effect_group>
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="healAbrasionMult" operation="set" value="3"/> 
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="medicalRegHealthAmount" operation="add" value="30"/> 
                 <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="2">
-                    <requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="0"/></triggered_effect>
+                    <requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="0"/>
+				</triggered_effect>
                 <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="2.5">
-                    <requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="1"/></triggered_effect>
+                    <requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="1"/>
+				</triggered_effect>
                 <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="2.8">
-                    <requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="2"/></triggered_effect>
+                    <requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="2"/>
+				</triggered_effect>
                 <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="3.1">
-                    <requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="3"/></triggered_effect>
+                    <requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="3"/>
+				</triggered_effect>
                 <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="3.5">
-                    <requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="4"/></triggered_effect>
-
+                    <requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="4"/>
+				</triggered_effect>
                 <triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="other" buff="buffProcessConsumables"/>
                 <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
 			 </effect_group>	
@@ -911,7 +903,49 @@
                 <triggered_effect trigger="onSelfBuffStart" action="AnimatorFireTrigger" property="Heal" />
             </effect_group>
         </buff>    
-	
+	</append>	
+		
+	<append xpath="/buffs">
+		<buff name="ActivityCoolDown"> <!--  So NPCs do not repeat the same activity, as needed  -->
+			<stack_type value="ignore"/>
+			<duration value="20"/>
+		</buff>
+		
+		<buff name="ActivityBuff"> <!-- This sets the IsBusy animation selection -->
+			<stack_type value="ignore"/>
+			<duration value="6"/>
+			<update_rate value="2"/>
+			<effect_group name="Start" >
+				<!--<triggered_effect trigger="onSelfBuffStart" action="LogMessage" message="=== Starting ActivityBuff"/>  -->
+			<!--<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetBool" property="IsBusy" value="true"/> -->
+			</effect_group>
+			<effect_group name="IsPounding">
+			<!--<requirement name="NotHasBuff" buff="ActivityCoolDown"/> -->
+				<requirement name="RequirementLookingAt, SCore" block="Workstation, Forge"/>
+				<!--<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="=== Working at a workstation or forge"/> -->
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="true" parent_transform="Hips" transform_path="Axe"/> <!-- add in Unity  -->
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetBool" property="IsPounding" value="true"/>
+			</effect_group>
+			<effect_group name="IsLooting">
+			<!--<requirement name="NotHasBuff" buff="ActivityCoolDown"/> -->
+				<requirement name="RequirementLookingAt, SCore" block="Campfire, Loot, SecureLoot "/>
+				<!--<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="=== looting or gathering"/> -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetBool" property="IsGathering" value="true"/>
+			</effect_group>	
+			<effect_group name="LootHighorLow" >
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetBool" property="IsCrouching" value="true"/> 
+				<requirement name="CVarCompare" cvar="focusBlockLocation" operation="LTE" value="0"/> <!-- Sets a cvar (Default is: focusBlockLocation, overridable by attribute cvar="" ) based on position. -1 below your feet. 0 at your feet, 1 at your eye level, and 2 over your head. 0 is default.  -->
+			</effect_group>
+			<effect_group name="Finish">
+				<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="ActivityCoolDown"/> 
+				<!--<triggered_effect trigger="onSelfBuffFinish" action="LogMessage" message="=== Finished my activity"/>-->
+			<!--<triggered_effect trigger="onSelfBuffFinish" action="AnimatorSetBool" property="IsBusy" value="false"/> -->
+				<triggered_effect trigger="onSelfBuffFinish" action="AnimatorSetBool" property="IsGathering" value="false"/>
+				<triggered_effect trigger="onSelfBuffFinish" action="AnimatorSetBool" property="IsPounding" value="false"/>
+				<triggered_effect trigger="onSelfBuffFinish" action="SetTransformActive" active="false" parent_transform="Hips" transform_path="Axe"/>
+			</effect_group>
+		</buff>
+
 		<buff name="IsFishing"> <!-- This sets the IsBusy animation selection to Fishing   -->
 			<stack_type value="ignore"/>
 			<duration value="6"/>
@@ -999,43 +1033,7 @@
 		</buff>	
 	</append>			
 	
-	<append xpath="/buffs">
-		<buff name="ActivityCoolDown"> <!--  So NPCs do not repeat the same activity, as needed  -->
-			<stack_type value="ignore"/>
-			<duration value="25"/>
-		</buff>
-		
-		<buff name="ActivityBuff"> <!-- This sets the IsBusy animation selection -->
-			<stack_type value="ignore"/>
-			<duration value="6"/>
-			<update_rate value="2"/>
-			<effect_group name="Start" >
-				<!--<triggered_effect trigger="onSelfBuffStart" action="LogMessage" message="=== Starting ActivityBuff"/>  -->
-			<!--<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetBool" property="IsBusy" value="true"/> -->
-			</effect_group>
-			<effect_group name="IsPounding">
-			<!--<requirement name="NotHasBuff" buff="ActivityCoolDown"/> -->
-				<requirement name="RequirementLookingAt, SCore" block="Workstation, Forge"/>
-				<!--<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="=== Working at a workstation or forge"/> -->
-				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="true" parent_transform="Hips" transform_path="Axe"/> <!-- add in Unity  -->
-				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetBool" property="IsPounding" value="true"/>
-			</effect_group>
-			<effect_group name="IsGathering">
-			<!--<requirement name="NotHasBuff" buff="ActivityCoolDown"/> -->
-				<requirement name="RequirementLookingAt, SCore" block="Campfire, Loot, SecureLoot "/>
-				<!--<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="=== looting or gathering"/> -->
-				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetBool" property="IsGathering" value="true"/>
-			</effect_group>
-			<effect_group name="Finish">
-			<!--<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="ActivityCoolDown"/> -->
-				<!--<triggered_effect trigger="onSelfBuffFinish" action="LogMessage" message="=== Finished my activity"/>-->
-			<!--<triggered_effect trigger="onSelfBuffFinish" action="AnimatorSetBool" property="IsBusy" value="false"/> -->
-				<triggered_effect trigger="onSelfBuffFinish" action="AnimatorSetBool" property="IsGathering" value="false"/>
-				<triggered_effect trigger="onSelfBuffFinish" action="AnimatorSetBool" property="IsPounding" value="false"/>
-				<triggered_effect trigger="onSelfBuffFinish" action="SetTransformActive" active="false" parent_transform="Hips" transform_path="Axe"/>
-			</effect_group>
-		</buff>
-	</append>	
+
 	
 	<!-- Lets randomize the NPCs Idles  -->
 	
@@ -1407,12 +1405,34 @@
 				<triggered_effect trigger="onOtherDamagedSelf" action="PlaySound" target="self" sound="HarleyHurt"/>	
 				<triggered_effect trigger="onSelfDied" action="PlaySound" target="self" sound="HarleyDie"/>	
 			</effect_group>	
-	
 		</buff> 
 		
 	
+	
+		<buff name="buffBurst" hidden="true" >
+			<stack_type value="ignore"/><duration value="0"/><update_rate value=".1"/> 
+				<effect_group>
+					<requirement name="CVarCompare" cvar="$burstrate" operation="GT" value="0"/> <!-- Still bursting -->
+					<triggered_effect trigger="onSelfRangedBurstShot" action="ModifyCVar" cvar="$burstrate" operation="add" value="-1"/> <!-- use burstshot to decrement so bursts of >1 will be counted  -->
+				</effect_group> 
+				<effect_group>
+					<requirement name="CVarCompare" cvar="$burstrate" operation="LTE" value="0"/> <!-- done bursting? -->
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffBurstDelay" /> 
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffBurst"/> 
+				</effect_group>	
+		</buff>		
+		<buff name="buffBurstDelay" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="2"/> 
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$burstrate" operation="set" value="@Burstsize"/> 
+					<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffBurst" /> 
+				</effect_group>		
+		</buff>
+	
+
 		<!--  NPC Reloading hack buffs  -->
-		<buff name="buffReload" hidden="true" remove_on_death="true">
+		<buff name="buffReload" hidden="true" >
 			<stack_type value="ignore"/><duration value="0"/><update_rate value=".1"/> 
 				<effect_group>
 					<requirement name="CVarCompare" cvar="$roundsinmag" operation="GT" value="0"/> <!-- Still got bullets? -->
@@ -1421,39 +1441,87 @@
 				</effect_group> 
 				<effect_group>
 					<requirement name="CVarCompare" cvar="$roundsinmag" operation="LTE" value="0"/> <!-- Magazine empty? -->
-					<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetBool" property="Reload" value="true" duration="2" /> <!-- start animating the reloading  -->
 				<!--<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="   Reloading Anim Start"/>-->
 					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffReloadDelay" /> 
 				</effect_group>	
 		</buff>	
 		<buff name="buffReloadDelay" hidden="true">
-			<stack_type value="ignore"/><duration value=".5"/> <!-- provides time for the AnimatorsetBool from above to fire, make small as possible  -->
+			<stack_type value="ignore"/><duration value=".5"/> <!-- provides a delay for the firing to end before setting the AnimatorsetBool   -->
 				<effect_group> 
 					<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffReload2" /> 
+					<triggered_effect trigger="onSelfBuffFinish" action="AnimatorSetBool" property="Reload" value="true" duration="1" /> <!-- start animating the reloading  -->
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffReload" /> <!-- stop the Reload buff from running -->
 				</effect_group>	
 		</buff>	
 		<buff name="buffReload2" hidden="true">
-			<stack_type value="ignore"/><duration value="3"/> <!-- Guns wont fire while buffReload2 is running, Pipe weapon reloads are very long, may need another longer version -->
+			<stack_type value="ignore"/><duration value="1"/> <!-- Guns wont fire while buffReload2 is running, Pipe weapon reloads are very long, may need another longer version -->
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffReload" /> <!-- stop the Reload buff from running -->
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$roundsinmag" operation="set" value="@Magsize"/> <!-- refills magazine  -->
-					<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetBool" property="Reload" value="false" duration="2" /> <!-- stops reloading anim -->
+					<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetBool" property="Reload" value="false" duration="1" /> <!-- stops reloading anim -->
+					<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffReload2" /> <!-- might not be needed, failsafe  -->
 					<!--<triggered_effect trigger="onSelfBuffStart" action="LogMessage" message="   buffReload2 started -  reload anim stopped"/> -->
-					
 				</effect_group>	
 				<effect_group>
-					<requirement name="!HoldingItemHasTags" tags="reloadPenalty"/>
+					<requirement name="!HoldingItemHasTags" tags="reloadPenalty1,reloadPenalty2,reloadPenalty3,reloadPenalty4,reloadPenalty5,reloadPenalty6"/>
 					<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffReload" /> <!-- restarts the reloadbuff -->
-					<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffReload2" /> <!-- might not be needed, failsafe  -->
 				</effect_group>
 				<effect_group>
-					<requirement name="HoldingItemHasTags" tags="reloadPenalty"/>
-					<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffReloadDelay2" /> <!-- restarts the reloadbuff -->
-					<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffReload2" /> <!-- might not be needed, failsafe  -->
+					<requirement name="HoldingItemHasTags" tags="reloadPenalty1"/>
+					<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffReloadPenalty1" /> <!-- restarts the reloadbuff -->
+				</effect_group>
+				<effect_group>
+					<requirement name="HoldingItemHasTags" tags="reloadPenalty2"/>
+					<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffReloadPenalty2" /> <!-- restarts the reloadbuff -->
+				</effect_group>
+				<effect_group>
+					<requirement name="HoldingItemHasTags" tags="reloadPenalty3"/>
+					<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffReloadPenalty3" /> <!-- restarts the reloadbuff -->
+				</effect_group>
+				<effect_group>
+					<requirement name="HoldingItemHasTags" tags="reloadPenalty4"/>
+					<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffReloadPenalty4" /> <!-- restarts the reloadbuff -->
+				</effect_group>
+				<effect_group>
+					<requirement name="HoldingItemHasTags" tags="reloadPenalty5"/>
+					<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffReloadPenalty5" /> <!-- restarts the reloadbuff -->
+				</effect_group>
+				<effect_group>
+					<requirement name="HoldingItemHasTags" tags="reloadPenalty6"/>
+					<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffReloadPenalty6" /> <!-- restarts the reloadbuff -->
 				</effect_group>
 		</buff>	
-		<buff name="buffReloadDelay2" hidden="true">
+		<buff name="buffReloadPenalty1" hidden="true">
+			<stack_type value="ignore"/><duration value="1"/> <!-- provides extra time for the slow reload anims to finish -->
+				<effect_group> 
+					<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffReload" /> 
+				</effect_group>	
+		</buff>
+		<buff name="buffReloadPenalty2" hidden="true">
 			<stack_type value="ignore"/><duration value="2"/> <!-- provides extra time for the slow reload anims to finish -->
+				<effect_group> 
+					<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffReload" /> 
+				</effect_group>	
+		</buff>
+		<buff name="buffReloadPenalty3" hidden="true">
+			<stack_type value="ignore"/><duration value="3"/> <!-- provides extra time for the slow reload anims to finish -->
+				<effect_group> 
+					<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffReload" /> 
+				</effect_group>	
+		</buff>
+		<buff name="buffReloadPenalty4" hidden="true">
+			<stack_type value="ignore"/><duration value="4"/> <!-- provides extra time for the slow reload anims to finish -->
+				<effect_group> 
+					<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffReload" /> 
+				</effect_group>	
+		</buff>
+		<buff name="buffReloadPenalty5" hidden="true">
+			<stack_type value="ignore"/><duration value="5"/> <!-- provides extra time for the slow reload anims to finish -->
+				<effect_group> 
+					<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffReload" /> 
+				</effect_group>	
+		</buff>
+		<buff name="buffReloadPenalty6" hidden="true">
+			<stack_type value="ignore"/><duration value="6"/> <!-- provides extra time for the slow reload anims to finish -->
 				<effect_group> 
 					<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffReload" /> 
 				</effect_group>	
@@ -1539,7 +1607,7 @@
 			</effect_group>
 		</buff>		
 
-		<buff name="NPCSayYes">
+		<buff name="SayYes">
 			<stack_type value="ignore"/>
 			<duration value="1"/>
 			<update_rate value="2"/>
@@ -1548,7 +1616,7 @@
 			</effect_group>
 		</buff>	
 		
-		<buff name="NPCSayNo">
+		<buff name="SayNo">
 			<stack_type value="ignore"/>
 			<duration value="1"/>
 			<update_rate value="2"/>
@@ -1558,7 +1626,7 @@
 		</buff>	
 
 		<!--  If boobs are rigged, rescale them larger  -->
-		<buff name="NPCChesty">
+		<buff name="Chesty">
 			<stack_type value="ignore"/>
 			<duration value="10"/>
 			<effect_group>
@@ -1567,7 +1635,70 @@
 			</effect_group>
 		</buff>	
 	</append>	
-
+	<append xpath="/buffs">
+		<buff name="RandomFaceAnims" hidden="true" remove_on_death="true" ><stack_type value="ignore"/><duration value="0"/> <update_rate value="1"/>  
+			<effect_group name="Randomfaceanims">
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RandomFace" operation="set" value="randomint(0,19)"/>
+				<requirement name="EntityTagCompare" tags="npc"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="RandomFace" operation="LTE" value="15"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="Blink" />
+			</effect_group>			
+			
+			
+			<effect_group>
+				<requirement name="CVarCompare" cvar="RandomFace" operation="Equals" value="16"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="NoSmile" />
+			</effect_group>
+			
+			<effect_group>
+				<requirement name="CVarCompare" cvar="RandomFace" operation="Equals" value="17"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="Smile" />
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="RandomFace" operation="Equals" value="18"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="No" />
+			</effect_group>			
+			<effect_group>
+				<requirement name="CVarCompare" cvar="RandomFace" operation="Equals" value="19"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="Yes" />
+			</effect_group>
+		</buff>
+		<buff name="RandomMouthPhonemes" hidden="true" remove_on_death="true" ><stack_type value="ignore"/><duration value="0"/> <update_rate value="1"/>  
+			<effect_group name="Randomfaceanims">
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RandomMouth" operation="set" value="randomint(0,19)"/>
+				<requirement name="EntityTagCompare" tags="npc"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="RandomMouth" operation="LTE" value="15"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="Blink" />
+			</effect_group>			
+			
+			
+			<effect_group>
+				<requirement name="CVarCompare" cvar="RandomMouth" operation="Equals" value="16"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="NoSmile" />
+			</effect_group>
+			
+			<effect_group>
+				<requirement name="CVarCompare" cvar="RandomMouth" operation="Equals" value="17"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="Smile" />
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="RandomMouth" operation="Equals" value="18"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="No" />
+			</effect_group>			
+			<effect_group>
+				<requirement name="CVarCompare" cvar="RandomMouth" operation="Equals" value="19"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="Yes" />
+			</effect_group>
+		</buff>		
+		
+		
+		
+		
+	</append>		
 	<!--  Character mesh activation buffs  -->
 
 	<append xpath="/buffs">

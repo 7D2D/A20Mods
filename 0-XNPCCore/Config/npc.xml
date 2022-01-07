@@ -82,18 +82,13 @@
 	</insertAfter>
 
 	<append xpath="/npc/factions" >	
-		<faction name="Passive Animals">
+		<faction name="passiveanimals">
 			<relationship name="trader" value="neutral"/>
 			<relationship name="undead" value="hate"/>
 			<relationship name="*" value="neutral"/>
 		</faction>	
 		
-		<faction name="Neutral Animals">
-			<relationship name="*" value="neutral"/>
-		</faction>	
-		
-	
-		<faction name="Aggressive Animals">
+		<faction name="aggressiveanimals">
 			<relationship name="*" value="hate"/>
 		</faction>		
 	</append>

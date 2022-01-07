@@ -52,7 +52,13 @@
 		<set xpath="//entity_class[starts-with(@name, 'animalMountainLion')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,14,9,EntityAnimalStag,0,0,EntityZombie,0,5,EntityNPC,14,9</set> 				
 		<set xpath="//entity_class[starts-with(@name, 'animalBossGrace')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityPlayer,30,EntityZombie,10,EntityNPC,30</set> 
 		
-		<set xpath="//entity_class[starts-with(@name, 'animalBossGrace')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,0,0,EntityZombie,0,3,EntityNPC,0,0</set> 				
+		<set xpath="//entity_class[starts-with(@name, 'animalBossGrace')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,0,0,EntityZombie,0,3,EntityNPC,0,0</set> 	
+
+
+		<!--  Edits to convert aggressive animals to Faction 'Aggressive Animals'	-->
+
+		<set xpath="//entity_class[starts-with(@name, 'animalTemplateHostile')]/property[@name='Faction']/@value">aggressiveanimals</set> 
+		<set xpath="//entity_class[starts-with(@name, 'animalZombie')]/property[@name='Faction']/@value">undead</set>
 	
 		<!--  Weapons are spawned onto the joint specified in the RightHandJoint property.  
 		For spawned Melee weapons and pistol type weapons, the standard child object is located under RightWeapon (or LeftWeapon for melee but not both)
@@ -225,7 +231,7 @@
 			<property name="HomeBlocks" value="cntNPCHomeBlock"/>
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
-			<property name="TimeStayAfterDeath" value="15"/>
+			<property name="TimeStayAfterDeath" value="5"/>
 			<property name="DeadBodyHitPoints" value="1000"/>
 			<!--<property name="Buffs" value="buffNPCStatusCheck"/> -->
 			<effect_group name="Base Effects">
@@ -440,9 +446,9 @@
 			<property name="Names" value="Template" />	
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="HandItem" value="meleeNPCEmptyHand"/> 
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand"/> 
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="EmptyHandUser"/>
 			</effect_group>
@@ -467,9 +473,9 @@
 			<property name="Names" value="Template" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="RightHandJointName" value="Club" />
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCClubWood,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCClubWood,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCClubWood,medicalFirstAidBandage"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCClubWood"/> 
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="ClubUser"/>
 			</effect_group>	
@@ -494,9 +500,9 @@
 			<property name="Names" value="Template" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="RightHandJointName" value="Knife" />
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCKnife,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCKnife,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCKnife,medicalFirstAidBandage"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCKnife"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCKnife"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCKnife"/> 
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="KnifeUser"/>
 			</effect_group>	
@@ -521,9 +527,9 @@
 			<property name="Names" value="Template" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="RightHandJointName" value="Bat" />
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCBatWood,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCBatWood,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCBatWood,medicalFirstAidBandage"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCBatWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCBatWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCBatWood"/> 
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="BatUser"/>
 			</effect_group>
@@ -548,9 +554,9 @@
 			<property name="Names" value="Template" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="RightHandJointName" value="Axe" />
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCAxe,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCAxe,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCAxe,medicalFirstAidBandage"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCAxe"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCAxe"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCAxe"/> 
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="AxeUser"/>
 			</effect_group>
@@ -575,9 +581,9 @@
 			<property name="Names" value="Template" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="RightHandJointName" value="Spear" />
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCSpear,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCSpear,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCSpear,medicalFirstAidBandage"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCSpear"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCSpear"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCSpear"/> 
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="SpearUser"/>
 			</effect_group>	
@@ -602,9 +608,9 @@
 			<property name="Names" value="Template" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="RightHandJointName" value="Machete" />
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCMachete,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCMachete,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCMachete,medicalFirstAidBandage"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCMachete"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCMachete"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCMachete"/> 
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="MacheteUser"/>
 			</effect_group>
@@ -629,14 +635,17 @@
 			<property name="Names" value="Template" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="RightHandJointName" value="PipePistol" />
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPipePistol,ammoNPC9mmBulletBall,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPipePistol,ammoNPC9mmBulletBall,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPipePistol,ammoNPC9mmBulletBall,medicalFirstAidBandage"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPipePistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPipePistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPipePistol,ammoNPC9mmBulletBall"/>
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="PipePistolUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>				
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="6"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="6"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="3"/>
 			</effect_group>	
 			<effect_group name="AddGunslingerProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkGunslinger" level="1"/>
@@ -659,16 +668,19 @@
 			<property name="Names" value="Template" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="RightHandJointName" value="Pistol" />
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPistol,ammoNPC9mmBulletBall,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPistol,ammoNPC9mmBulletBall,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPistol,ammoNPC9mmBulletBall,medicalFirstAidBandage"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPistol,ammoNPC9mmBulletBall"/>
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="PistolUser"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
 			<!--<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Gunslinger"/> -->
 			<!--<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Gunslinger"/> -->
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="15"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="15"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="14"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="14"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="7"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="7"/>				
 			</effect_group>
 			<effect_group name="AddGunslingerProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkGunslinger" level="1"/>
@@ -692,14 +704,17 @@
 			<property name="Names" value="Template" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="RightHandJointName" value="DPistol" />
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCDPistol,ammoNPC9mmBulletBall,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCDPistol,ammoNPC9mmBulletBall,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCDPistol,ammoNPC9mmBulletBall,medicalFirstAidBandage"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCDPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCDPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCDPistol,ammoNPC9mmBulletBall"/>
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="DPistolUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="9"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="9"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="8"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="8"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="4"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="4"/>				
 			</effect_group>	
 			<effect_group name="AddGunslingerProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkGunslinger" level="1"/>
@@ -722,13 +737,17 @@
 			<property name="Names" value="Template" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="RightHandJointName" value="SMG" />
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCSMG5,ammoNPC9mmBulletBall,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCSMG5,ammoNPC9mmBulletBall,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCSMG5,ammoNPC9mmBulletBall,medicalFirstAidBandage"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCSMG5,ammoNPC9mmBulletBall"/> 
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="SMGUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="30"/>	<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="30"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/> 
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="30"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="30"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="15"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="15"/>
 			</effect_group>
 			<effect_group name="AddGunslingerProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkGunslinger" level="1"/>
@@ -751,14 +770,17 @@
 			<property name="Names" value="Template" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="RightHandJointName" value="M60" />
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCM60,ammo762mmBulletBall,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCM60,ammo762mmBulletBall,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCM60,ammo762mmBulletBall,medicalFirstAidBandage"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCM60,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCM60,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCM60,ammoNPC762mmBulletBall"/> 
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="M60User"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="50"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="50"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="25"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="25"/>				
 			</effect_group>
 			<effect_group name="AddMachineGunnerProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkMachineGunner" level="1"/>
@@ -781,14 +803,17 @@
 			<property name="Names" value="Template" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="RightHandJointName" value="AK47" />
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCAk47,ammoNPC762mmBulletBall,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCAk47,ammoNPC762mmBulletBall,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCAk47,ammoNPC762mmBulletBall,medicalFirstAidBandage"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCAk47,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCAk47,ammoNPC762mmBulletBall"/> 
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="AK47User"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="30"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="30"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="15"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="15"/>				
 			</effect_group>	
 			<effect_group name="AddMachineGunnerProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkMachineGunner" level="1"/>
@@ -811,14 +836,17 @@
 			<property name="Names" value="Template" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="RightHandJointName" value="PipeMG" />
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPipeMG,ammoNPC762mmBulletBall,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPipeMG,ammoNPC762mmBulletBall,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPipeMG,ammoNPC762mmBulletBall,medicalFirstAidBandage"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPipeMG,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPipeMG,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPipeMG,ammoNPC762mmBulletBall"/> 
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="PipeMGUser"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="20"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="20"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="10"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="10"/>				
 			</effect_group>
 			<effect_group name="AddMachineGunnerProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkMachineGunner" level="1"/>
@@ -842,14 +870,17 @@
 			<property name="Names" value="Template" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="RightHandJointName" value="TRifle" />
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCTRifle,ammoNPC762mmBulletBall,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCTRifle,ammoNPC762mmBulletBall,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCTRifle,ammoNPC762mmBulletBall,medicalFirstAidBandage"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCTRifle,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCTRifle,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCTRifle,ammoNPC762mmBulletBall"/> 
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="TRifleUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="30"/>	
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="30"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="15"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="15"/>				
 			</effect_group>
 			<effect_group name="AddMachineGunnerProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkMachineGunner" level="1"/>
@@ -872,14 +903,17 @@
 			<property name="Names" value="Template" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 	
 			<property name="RightHandJointName" value="PipeRifle" />
-  			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPipeRifle,ammoNPC762mmBulletBall,medicalFirstAidBandage"/>
-            <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPipeRifle,ammoNPC762mmBulletBall,medicalFirstAidBandage"/>
-            <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPipeRifle,ammoNPC762mmBulletBall,medicalFirstAidBandage"/> 
+  			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPipeRifle,ammoNPC762mmBulletBall"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPipeRifle,ammoNPC762mmBulletBall"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPipeRifle,ammoNPC762mmBulletBall"/> 
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="PipeRifleUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="1"/>				
 			</effect_group>
 			<effect_group name="AddDeadEyeProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDeadEye" level="1"/>
@@ -904,14 +938,17 @@
 			<property name="Names" value="Template" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/>
  			<property name="RightHandJointName" value="HRifle" />
-  			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCHRifle,ammoNPC762mmBulletBall,medicalFirstAidBandage"/>
-            <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCHRifle,ammoNPC762mmBulletBall,medicalFirstAidBandage"/>
-            <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCHRifle,ammoNPC762mmBulletBall,medicalFirstAidBandage"/> 
+  			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCHRifle,ammoNPC762mmBulletBall"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCHRifle,ammoNPC762mmBulletBall"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCHRifle,ammoNPC762mmBulletBall"/> 
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HRifleUser"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="1"/>							
 			</effect_group>
 			<effect_group name="AddDeadEyeProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDeadEye" level="1"/>
@@ -934,14 +971,17 @@
 			<property name="Names" value="Template" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 	
 			<property name="RightHandJointName" value="SRifle" />
-  			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCSRifle,ammoNPC762mmBulletBall,medicalFirstAidBandage"/>
-            <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCSRifle,ammoNPC762mmBulletBall,medicalFirstAidBandage"/>
-            <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCSRifle,ammoNPC762mmBulletBall,medicalFirstAidBandage"/> 
+  			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCSRifle,ammoNPC762mmBulletBall"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCSRifle,ammoNPC762mmBulletBall"/>
+            <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCSRifle,ammoNPC762mmBulletBall"/> 
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="SRifleUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="12"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="12"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="6"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="6"/>							
 			</effect_group>
 			<effect_group name="AddDeadEyeProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDeadEye" level="1"/>
@@ -964,14 +1004,17 @@
 			<property name="Names" value="Template" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="RightHandJointName" value="PipeSG" />
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPipeShotgun,ammoNPCShotgunShell,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPipeShotgun,ammoNPCShotgunShell,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPipeShotgun,ammoNPCShotgunShell,medicalFirstAidBandage"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPipeShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPipeShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPipeShotgun,ammoNPCShotgunShell"/> 
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="PipeShotgunUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="1"/>							
 			</effect_group>	
 			<effect_group name="AddBoomstickProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkBoomstick" level="1"/>
@@ -996,14 +1039,17 @@
 			<property name="Names" value="Template" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="RightHandJointName" value="PShotgun" />
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPShotgun,ammoNPCShotgunShell,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPShotgun,ammoNPCShotgunShell,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPShotgun,ammoNPCShotgunShell,medicalFirstAidBandage"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPShotgun,ammoNPCShotgunShell"/> 
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="PShotgunUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="8"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="8"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="4"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="4"/>							
 			</effect_group>
 			<effect_group name="AddBoomstickProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkBoomstick" level="1"/>
@@ -1026,14 +1072,17 @@
 			<property name="Names" value="Template" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/>
  			<property name="RightHandJointName" value="AShotgun" />
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCAShotgun,ammoNPCShotgunShell,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCAShotgun,ammoNPCShotgunShell,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCAShotgun,ammoNPCShotgunShell,medicalFirstAidBandage"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCAShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCAShotgun,ammoNPCShotgunShell"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCAShotgun,ammoNPCShotgunShell"/> 
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="AShotgunUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="16"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="16"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="8"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="8"/>							
 			</effect_group>
 			<effect_group name="AddBoomstickProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkBoomstick" level="1"/>
@@ -1056,14 +1105,17 @@
 			<property name="Names" value="Template" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 			
 			<property name="RightHandJointName" value="LBow" />  <!--  LongBows go in LeftHand as the anims are lefthanded -->
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCLBow,ammoNPCArrowIron,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCLBow,ammoNPCArrowIron,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCLBow,ammoNPCArrowIron,medicalFirstAidBandage"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCLBow,ammoNPCArrowIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCLBow,ammoNPCArrowIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCLBow,ammoNPCArrowIron"/> 
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="LBowUser"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="1"/>							
 			</effect_group>	
 			<effect_group name="AddArcheryProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkArchery" level="1"/>
@@ -1086,9 +1138,9 @@
 			<property name="Names" value="Template" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
 			<property name="RightHandJointName" value="XBow" />
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCXBow,ammoNPCCrossbowBoltIron,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCXBow,ammoNPCCrossbowBoltIron,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCXBow,ammoNPCCrossbowBoltIron,medicalFirstAidBandage"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCXBow,ammoNPCCrossbowBoltIron"/> 
 			<!-- For testing launcher version  -->
 			<!-- <property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCXBow,ammoNPCCrossbowBoltIron2"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCXBow,ammoNPCCrossbowBoltIron2"/>
@@ -1096,8 +1148,11 @@
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="XBowUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="1"/>							
 			</effect_group>	
 			<effect_group name="AddArcheryProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkArchery" level="1"/>
@@ -1122,14 +1177,17 @@
 			<property name="RightHandJointName" value="RocketL" />
 			<property name="AttackTimeoutDay" value="0.25"/>  <!-- 0.05 * 20f = 1 seconds between attack -->
             <property name="AttackTimeoutNight" value="0.25"/>
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCRocketLauncher,ammoNPCRocketHE,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCRocketLauncher,ammoNPCRocketHE,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCRocketLauncher,ammoNPCRocketHE,medicalFirstAidBandage"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCRocketLauncher,ammoNPCRocketHE"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCRocketLauncher,ammoNPCRocketHE"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCRocketLauncher,ammoNPCRocketHE"/> 
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="RocketLUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="1"/>				
 			</effect_group>
 			<effect_group name="AddDemolitionsExpertProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDemolitionsExpert" level="1"/>
@@ -1154,7 +1212,7 @@
 			<property name="ModelType" value="Standard"/>
 			<property name="Mass" value="150"/>
 			<property name="Weight" value="70"/>
-			<property name="PushFactor" value="10"/>				
+			<property name="PushFactor" value="1"/>				
 			<property name="Tags" value="entity,cp,npc,animal"/>			
 			<property name="Prefab" value="NPC"/>
 			<property name='Class' value='EntityAliveSDX, SCore' />
@@ -1181,7 +1239,7 @@
 			<property name="WalkType" value="7"/>
 			<property name="RightHandJointName" value="Head" />  	<!-- This is for spawned invisi weapons firing from under the head  -->			
 			<!--<property name="PathingBlocks" value="PathingCube" />   commented out in the template due to performance hit.  Enable in a specific entity as desired -->
-			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired "/> <!-- Will make animal specific AI packages later -->
+			<property name="AIPackages" value="NPCAnimalBasic, NPCMelee, NPCHired "/> <!-- Will make animal specific AI packages later -->
 			<property name="AIPathCostScale" value=".9, 1"/>
 			<property name="AINoiseSeekDist" value="20"/>	
 			<property name="MaxViewAngle" value="210"/>
@@ -1356,15 +1414,14 @@
 			<property name="SwimStrokeRate" value="1.1,1.5"/>
 			<property name="HandItem" value="meleeHandAnimalCoyote"/>
 			<property name="AITask-1" value="BreakBlock"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityPlayer,0,EntitySurvivor,0,EntityBandit,0,EntityAnimalRabbit,8"/>
-			<property name="AITask-3" value="ApproachSpot"/>
-			<property name="AITask-4" value="RunawayFromEntity" data="EntityZombie"/>
-			<property name="AITask-5" value="RunawayWhenHurt" data="runChance=.2;healthPer=.2;healthPerMax=0.4"/>
-			<property name="AITask-6" value="Look"/>
-			<property name="AITask-7" value="Wander"/>
-			<property name="AITask-8" value=""/>
+			<property name="AITask-2" value="Territorial"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityPlayer,0,EntitySurvivor,0,EntityBandit,0,EntityAnimalRabbit,8"/>
+			<property name="AITask-4" value="ApproachSpot"/>
+			<property name="AITask-5" value="Look"/>
+			<property name="AITask-6" value="Wander"/>
+			<property name="AITask-7" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,20,15,EntitySurvivor,20,15,EntityBandit,20,15,EntityZombie,20,15,EntityAnimalRabbit,0,18"/>
 			<property name="AITarget-4" value=""/>
 			<property name="SurfaceCategory" value="organic"/>
@@ -1996,7 +2053,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcNurseEmptyHandBloodMoon" extends="npcNurseEmptyHand"> <!-- The BM versions do not NRE on bloodmoon spawn  -->
-			<property name="Tags" value="entity,female,cp,npc,melee"/> <!-- cp tag means use the bonebased fire particle  -->
+			<property name="Tags" value="entity,female,cp,npc,melee,bandit"/> <!-- cp tag means use the bonebased fire particle  -->
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="Class" value="EntityEnemySDX, SCore" /> <!-- New class  -->
@@ -2291,7 +2348,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcNurseSMGBloodMoon" extends="npcNurseSMG"> 
-			<property name="Tags" value="entity,female,cp,npc,ranged"/>
+			<property name="Tags" value="entity,female,cp,npc,ranged,bandit"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="Class" value="EntityEnemySDX, SCore" /> <!-- New class  -->
@@ -2895,7 +2952,7 @@
 		</entity_class> 	
 		
 		<entity_class name="npcNurseRocketLBM" extends="npcNurseRocketL"> 
-			<property name="Tags" value="entity,female,cp,npc,ranged"/>
+			<property name="Tags" value="entity,female,cp,npc,ranged,bandit"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="Class" value="EntityEnemySDX, SCore" />
 			<property name="Faction" value="bandits"/>
@@ -2925,7 +2982,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditMelee, NPCMedic"/>
 		</entity_class>	
 
 		<entity_class name="npcHarleyClub" extends="npcClubTemplate"> 
@@ -2949,7 +3005,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditMelee, NPCMedic"/>
 		</entity_class>
 		
 		<entity_class name="npcHarleyKnife" extends="npcKnifeTemplate"> 
@@ -2973,7 +3028,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditMelee, NPCMedic"/>
 		</entity_class>	
 		
 		<entity_class name="npcHarleyBat" extends="npcBatTemplate"> 
@@ -2997,7 +3051,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditMelee, NPCMedic"/>
 		</entity_class>			
 	
 		<entity_class name="npcHarleyMachete" extends="npcMacheteTemplate"> 
@@ -3021,7 +3074,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditMelee, NPCMedic"/>
 		</entity_class>		
 
 
@@ -3046,7 +3098,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditMelee, NPCMedic"/>		
 		</entity_class>	
 		
 		<entity_class name="npcHarleySpear" extends="npcSpearTemplate"> 
@@ -3070,7 +3121,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditMelee, NPCMedic"/>		
 		</entity_class>			
 		
 		<entity_class name="npcHarleyPipePistol" extends="npcPipePistolTemplate"> 
@@ -3094,7 +3144,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>		
 		</entity_class>	
 		
 		<entity_class name="npcHarleyPipeRifle" extends="npcPipeRifleTemplate"> 
@@ -3118,7 +3167,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
 		</entity_class>	
 		
 		<entity_class name="npcHarleyPipeMG" extends="npcPipeMGTemplate"> 
@@ -3142,7 +3190,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
 		</entity_class>				
 		
 		<entity_class name="npcHarleyPipeShotgun" extends="npcPipeShotgunTemplate"> 
@@ -3166,7 +3213,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>		
 		</entity_class>	
 
 		<entity_class name="npcHarleySMG" extends="npcSMGTemplate"> 
@@ -3190,7 +3236,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/> 
 		</entity_class>	
 		
 		<entity_class name="npcHarleyM60" extends="npcM60Template"> 
@@ -3214,7 +3259,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
 		</entity_class>			
 		
 		<entity_class name="npcHarleyPistol" extends="npcPistolTemplate"> 
@@ -3238,7 +3282,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
 		</entity_class>				
 		
 		<entity_class name="npcHarleyDPistol" extends="npcDPistolTemplate"> 
@@ -3262,7 +3305,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
 		</entity_class>				
 
 		<entity_class name="npcHarleyAK47" extends="npcAK47Template"> 
@@ -3286,7 +3328,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
 		</entity_class>
 		
 		<entity_class name="npcHarleyTRifle" extends="npcTRifleTemplate"> 
@@ -3310,7 +3351,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
 		</entity_class>		
 		
 		
@@ -3335,7 +3375,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
         </entity_class>   
 
 		<entity_class name="npcHarleyPShotgun" extends="npcPShotgunTemplate"> 
@@ -3359,7 +3398,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
         </entity_class>   
 
 		<entity_class name="npcHarleyAShotgun" extends="npcAShotgunTemplate"> 
@@ -3383,7 +3421,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
         </entity_class>   	
 		
 		<entity_class name="npcHarleyLBow" extends="npcLBowTemplate"> 
@@ -3407,7 +3444,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
 		</entity_class> 
 
 		<entity_class name="npcHarleyXBow" extends="npcXBowTemplate"> 
@@ -3431,7 +3467,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
 		</entity_class>	
 		<entity_class name="npcHarleyRocketL" extends="npcRocketLTemplate"> 
 			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
@@ -3454,7 +3489,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/>
 		</entity_class>			
 		
 		<!--  Baker  -->
@@ -3464,7 +3498,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
-			<property name="AIPackages" value="NPCBasic, NPCLoot, NPCMedic, NPCHired"/>
 			<effect_group name="HasBackpack"> <!-- This activates the backpack -->
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
 			</effect_group>	
@@ -3562,7 +3595,6 @@
 			<property name="Faction" value="whiteriver"/> 
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
-			<property name="AIPackages" value="NPCBasic, BanditRanged, NPCMedic"/> 
 		</entity_class>				
 		
 		<entity_class name="npcBakerDPistol" extends="npcDPistolTemplate"> 
@@ -3633,7 +3665,7 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />	
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
-			<property name="AIPackages" value="NPCBasic, NPCLauncher, NPCMedic"/>
+			<property name="AIPackages" value="NPCBasic, NPCLauncher"/>
 		</entity_class> 					
 		
 		<!--  SemiHuman Saveable Quest characters  WIP -->
@@ -3891,6 +3923,7 @@
 			<property name="JumpMaxDistance" value="7, 9"/>
 		</entity_class>	
 	</append>		
+		
 		
 		
 	<!--  Add sex tags to TFP characters  -->		
