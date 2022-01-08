@@ -1,0 +1,48 @@
+<configs>
+	
+	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'WildGameForest')]">
+                <entity name="npcReconMaleRocketL" prob=".1" />
+                <entity name="npcReconMaleTRifle" prob=".1" />
+		<entity name="npcReconMaleM60" prob=".1" />
+		<entity name="npcReconMaleAK47" prob=".1" />
+                <entity name="npcReconMaleClub" prob=".1" />
+	        <entity name="npcReconFemaleClub" prob=".1" />
+                <entity name="npcReconFemaleTRifle" prob=".1" />
+		<entity name="npcReconFemaleM60" prob=".1" />
+		<entity name="npcReconFemaleAK47" prob=".1" />
+		<entity name="npcVaultSecurityMalePistol" prob=".1" />
+                <entity name="npcVaultSecurityMaleSMG" prob=".1" />
+		<entity name="npcVaultBossPistol" prob=".1" />
+                <entity name="npcVaultResidentMalePistol" prob=".1" />
+                <entity name="npcVaultResidentMalePipeMG" prob=".1" />
+                <entity name="npcVaultResidentFemalePipeMG" prob=".1" />
+                <entity name="npcVaultSecurityFemalePistol" prob=".1" />
+                <entity name="npcVaultSecurityFemaleSMG" prob=".1" />
+		<entity name="npcVaultDoctorPistol" prob=".1" />
+                <entity name="npcVaultResidentFemalePistol" prob=".1" />
+                <entity name="npcVaultSecurityMaleClub" prob=".1" />
+		<entity name="npcVaultBossClub" prob=".1" />
+		<entity name="npcVaultResidentMaleClub" prob=".1" />
+                <entity name="npcVaultSecurityFemaleClub" prob=".1" />
+		<entity name="npcVaultDoctorClub" prob=".1" />
+		<entity name="npcVaultResidentFemaleClub" prob=".1" />
+		<entity name="npcVaultResidentMaleKnife" prob=".1" />
+                <entity name="npcVaultBossKnife" prob=".1" />
+                <entity name="npcVaultResidentFemaleKnife" prob=".1" />
+                <entity name="npcVaultDoctorKnife" prob=".1" />
+		<entity name="npcVaultResidentMaleBat" prob=".1" />
+		<entity name="npcVaultSecurityMaleBat" prob=".1" />
+		<entity name="npcVaultSecurityFemaleBat" prob=".1" />
+		<entity name="npcVaultSecurityMaleAxe" prob=".1" />
+                <entity name="npcVaultResidentMaleAxe" prob=".1" />
+		<entity name="npcVaultSecurityFemaleAxe" prob=".1" />
+                <entity name="npcVaultResidentFemaleAxe" prob=".1" />
+                <entity name="npcArmyPowerArmorMaleRocketL" prob=".1" />
+                <entity name="npcArmyPowerArmorMaleM60" prob=".1" />
+                <entity name="npcArmyPowerArmorMaleAK47" prob=".1" />
+                <entity name="npcArmyPowerArmorFemaleAK47" prob=".1" />
+                <entity name="npcArmyPowerArmorFemaleRocketL" prob=".1" />
+                <entity name="npcArmyPowerArmorFemaleM60" prob=".1" />
+        </append> 	
+	
+</configs>

@@ -1,0 +1,37 @@
+<configs>
+	<append xpath="/Sounds">
+	
+		 <!--  free sounds by Little Robot Sound Factory and by Gamemaster Audio Purchased for use in NPC Mod  -->
+
+                <SoundDataNode name="RobotRandom">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/RobotzSounds.unity3d?Alarm_Loop_01 1" />
+			<AudioClip ClipName="#@modfolder:Resources/RobotzSounds.unity3d?Alien_Language_00 1" />
+			<AudioClip ClipName="#@modfolder:Resources/RobotzSounds.unity3d?Menu_Select_00 1" />
+			<AudioClip ClipName="#@modfolder:Resources/RobotzSounds.unity3d?Robot_Talk_01 1" />
+			<AudioClip ClipName="#@modfolder:Resources/RobotzSounds.unity3d?WarpDrive_00 1" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="3.0" />
+		</SoundDataNode>
+
+		  <SoundDataNode name="RobotFootstep">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/RobotzSounds.unity3d?Footstep_metal_land_07 1" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="0.5" />
+		</SoundDataNode>
+
+	</append>
+</configs>

@@ -1,0 +1,70 @@
+<configs>
+
+	<append xpath="/entity_classes">
+                
+                <!--  model by Protofactor Inc Purchased for use in NPC Mod  -->
+
+                <entity_class name="AssaultMech" extends="npcAnimalMeleeTemplate">
+			<property name="Faction" value="whiteriver"/>
+			<property name="Tags" value="entity,cp,npc,pets,ranged"/>
+                        <property name="Mesh" value="#@modfolder:Resources/Robotz.unity3d?AssaultMechDark"/>
+			<property name="MoveSpeed" value="0.3"/> 
+			<property name="MoveSpeedAggro" value="0.4,0.4"/> 
+                <property class="Boundary" >
+                        <property name="BoundaryBox" value="2.0,4,2.0" />
+                        <property name="Center" value="0.0,1.8,0.0"/>
+                </property> 
+                        <property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="RobotRandom"/>
+			<property name="SoundAlert" value="RobotRandom"/>
+			<property name="SoundHurt" value="RobotRandom"/>
+			<property name="SoundDeath" value="RobotRandom"/>
+			<property name="SoundAttack" value="RobotRandom"/>
+			<property name="SoundSense" value="RobotRandom"/>
+			<property name="SoundGiveUp" value="RobotRandom"/>
+                        <property name="SoundFootstepModifier" value="RobotFootstep"/>
+			<property name="MoveSpeedPanic" value="0.4"/>
+                        <property name="RightHandJointName" value="M60" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCM60,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCM60,ammoNPC762mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCM60,ammoNPC762mmBulletBall"/> 
+			<effect_group name="UseRangedWeaponType"> 
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="M60User"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="50"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="50"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="25"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="25"/>				
+			</effect_group>
+			<effect_group name="AddMachineGunnerProgression">
+				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkMachineGunner" level="1"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkMachineGunner" level="2">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkMachineGunner" level="3">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkMachineGunner" level="4">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+				</triggered_effect>
+                        </effect_group>
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/><!-- Placeholder, will eventually make animal specific AI packages  -->
+			<effect_group name="Base Effects"> 
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="5000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="60" />
+				<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>	
+                        <effect_group>
+				<passive_effect name="RunSpeed" operation="base_set" value="0.4"/> 
+			</effect_group>
+		</entity_class> 	
+     
+		</append>	
+	
+</configs>
