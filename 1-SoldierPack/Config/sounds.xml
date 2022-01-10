@@ -1,0 +1,34 @@
+<configs>
+	<append xpath="/Sounds">
+	
+		 <!-- sounds by iwanPlays Purchased for use in NPC Mod  -->
+
+                <SoundDataNode name="OfficerRadioChatterRandom">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/SoldierSoundz.unity3d?iSR-Acknowledged" />
+			<AudioClip ClipName="#@modfolder:Resources/SoldierSoundz.unity3d?iSR-All_Clear" />
+			<AudioClip ClipName="#@modfolder:Resources/SoldierSoundz.unity3d?iSR-Fire_In_The_Hole_1" />
+			<AudioClip ClipName="#@modfolder:Resources/SoldierSoundz.unity3d?iSR-Hold_Your_Position" />
+			<AudioClip ClipName="#@modfolder:Resources/SoldierSoundz.unity3d?iSR-Hooah" />
+			<AudioClip ClipName="#@modfolder:Resources/SoldierSoundz.unity3d?iSR-Kill_Confirmed" />
+			<AudioClip ClipName="#@modfolder:Resources/SoldierSoundz.unity3d?iSR-Move_Out" />
+			<AudioClip ClipName="#@modfolder:Resources/SoldierSoundz.unity3d?iSR-Order_Acknowledged" />
+			<AudioClip ClipName="#@modfolder:Resources/SoldierSoundz.unity3d?iSR-Over_1" />
+			<AudioClip ClipName="#@modfolder:Resources/SoldierSoundz.unity3d?iSR-Request_Immediate_Support" />
+                        <AudioClip ClipName="#@modfolder:Resources/SoldierSoundz.unity3d?iSR-Requesting_Assistance" />
+			<AudioClip ClipName="#@modfolder:Resources/SoldierSoundz.unity3d?iSR-Roger_That" />
+			<AudioClip ClipName="#@modfolder:Resources/SoldierSoundz.unity3d?iSR-We_Are_Under_Fire" />
+			<AudioClip ClipName="#@modfolder:Resources/SoldierSoundz.unity3d?iSR-Weapons_Free" />
+			<AudioClip ClipName="#@modfolder:Resources/SoldierSoundz.unity3d?iSR-Yes_Sir" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="3.0" />
+		</SoundDataNode>
+
+	</append>
+</configs>

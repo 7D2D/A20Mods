@@ -3,7 +3,7 @@
 	
 		 <!--  free sounds by Little Robot Sound Factory and by Gamemaster Audio Purchased for use in NPC Mod  -->
 
-                <SoundDataNode name="RobotRandom">
+                <SoundDataNode name="RobotzRandom">
 			<AudioSource name="Sounds/AudioSource_VO" />
 			<Channel name="Mouth"/>
 			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
@@ -20,7 +20,7 @@
 			<MaxRepeatRate name="3.0" />
 		</SoundDataNode>
 
-		  <SoundDataNode name="RobotFootstep">
+		  <SoundDataNode name="RobotzFootstep">
 			<AudioSource name="Sounds/AudioSource_VO" />
 			<Channel name="Mouth"/>
 			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
