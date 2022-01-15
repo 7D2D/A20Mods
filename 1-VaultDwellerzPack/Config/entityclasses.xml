@@ -5,7 +5,7 @@
                 <!--  Models by All * Star Characters and Protofactor, Inc. Purchased for use in NPC Mod  -->
 
                 <entity_class name="npcArmyPowerArmorMaleRocketL" extends="npcRocketLTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
 			<property name="Names" value="Jefry,Mikl,Timoth,Randis,Andry,Daryen,Ozcar,Kolb,Jayme,Daerryl,Rogr,Logan" />	
@@ -18,7 +18,7 @@
 		</entity_class> 
 
                 <entity_class name="npcArmyPowerArmorMaleM60" extends="npcM60Template"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jefry,Mikl,Timoth,Randis,Andry,Daryen,Ozcar,Kolb,Jayme,Daerryl,Rogr,Logan" />				
@@ -30,7 +30,7 @@
 		</entity_class>	
 
                 <entity_class name="npcArmyPowerArmorMaleAK47" extends="npcAK47Template"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/>  
                         <property name="Names" value="Jefry,Mikl,Timoth,Randis,Andry,Daryen,Ozcar,Kolb,Jayme,Daerryl,Rogr,Logan" />				
@@ -42,7 +42,7 @@
 		</entity_class>	
 
 	        <entity_class name="npcReconMaleRocketL" extends="npcRocketLTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -56,7 +56,7 @@
 		</entity_class> 
 
                 <entity_class name="npcReconMaleTRifle" extends="npcTRifleTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -69,7 +69,7 @@
 		</entity_class>	
 
                 <entity_class name="npcReconMaleAK47" extends="npcAK47Template"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -82,7 +82,7 @@
 		</entity_class>
 
                 <entity_class name="npcReconMaleM60" extends="npcM60Template"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -95,7 +95,7 @@
 		</entity_class>	
 
                 <entity_class name="npcReconMaleClub" extends="npcClubTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -108,7 +108,7 @@
 		</entity_class>	
 
                 <entity_class name="npcVaultSecurityMaleClub" extends="npcClubTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -122,7 +122,7 @@
 		</entity_class>
 
                 <entity_class name="npcVaultBossClub" extends="npcClubTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -131,7 +131,7 @@
 		</entity_class>
 
                 <entity_class name="npcVaultResidentMaleClub" extends="npcClubTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -140,7 +140,7 @@
 		</entity_class>
 
 		<entity_class name="npcVaultBossKnife" extends="npcKnifeTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -149,7 +149,7 @@
 		</entity_class>	
 
 		<entity_class name="npcVaultResidentMaleKnife" extends="npcKnifeTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -158,7 +158,7 @@
 		</entity_class>	
 
 		<entity_class name="npcVaultResidentMaleBat" extends="npcBatTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -167,7 +167,7 @@
 		</entity_class>	
 
 		<entity_class name="npcVaultSecurityMaleBat" extends="npcBatTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -181,7 +181,7 @@
 		</entity_class>	
 
                 <entity_class name="npcVaultSecurityMaleAxe" extends="npcAxeTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -195,7 +195,7 @@
 		</entity_class>	
 
                 <entity_class name="npcVaultResidentMaleAxe" extends="npcAxeTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,melee"/>
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -204,7 +204,7 @@
 		</entity_class>	
 
 		<entity_class name="npcVaultResidentMalePistol" extends="npcPistolTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -213,7 +213,7 @@
 		</entity_class>	
 	
 		<entity_class name="npcVaultResidentMalePipeMG" extends="npcPipeMGTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -222,7 +222,7 @@
 		</entity_class>	
 
                 <entity_class name="npcVaultBossPistol" extends="npcPistolTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -231,7 +231,7 @@
 		</entity_class>	
 	
 		<entity_class name="npcVaultSecurityMalePistol" extends="npcPistolTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -245,7 +245,7 @@
 		</entity_class>	
 			
 		<entity_class name="npcVaultSecurityMaleSMG" extends="npcSMGTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -259,7 +259,7 @@
 		</entity_class>	
 	
 		<entity_class name="npcVaultSecurityFemalePistol" extends="npcPistolTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,female,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -289,7 +289,7 @@
 		</entity_class>	
 	
                 <entity_class name="npcVaultSecurityFemaleSMG" extends="npcSMGTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,female,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -319,7 +319,7 @@
 		</entity_class>		
 
 	        <entity_class name="npcVaultDoctorPistol" extends="npcPistolTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,female,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -345,7 +345,7 @@
 		</entity_class>	
 
                 <entity_class name="npcVaultResidentFemalePistol" extends="npcPistolTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,female,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -370,7 +370,7 @@
 		</entity_class>	
 
                 <entity_class name="npcVaultResidentFemalePipeMG" extends="npcPipeMGTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,female,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -395,7 +395,7 @@
 		</entity_class>	
 
 		 <entity_class name="npcReconFemaleRocketL" extends="npcRocketLTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,female,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -425,7 +425,7 @@
 		</entity_class> 
 
                 <entity_class name="npcReconFemaleTRifle" extends="npcTRifleTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,female,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?ReconFemaleDark"/>
@@ -454,7 +454,7 @@
 		</entity_class>	
 
                 <entity_class name="npcReconFemaleAK47" extends="npcAK47Template"> 
-			<property name="Tags" value="cp,UMA2,entity,female,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -483,7 +483,7 @@
 		</entity_class>
 
                 <entity_class name="npcReconFemaleM60" extends="npcM60Template"> 
-			<property name="Tags" value="cp,UMA2,entity,female,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -512,7 +512,7 @@
 		</entity_class>	
 
                 <entity_class name="npcReconFemaleClub" extends="npcClubTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,female,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -541,7 +541,7 @@
 		</entity_class>	
 
                 <entity_class name="npcVaultResidentFemaleClub" extends="npcClubTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,female,npc,melee"/>
+			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -566,7 +566,7 @@
 		</entity_class>
 
                 <entity_class name="npcVaultResidentFemaleKnife" extends="npcKnifeTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,female,npc,melee"/>
+			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -591,7 +591,7 @@
 		</entity_class>
 
                 <entity_class name="npcVaultDoctorClub" extends="npcClubTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,female,npc,melee"/>
+			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -617,7 +617,7 @@
 		</entity_class>
 
                 <entity_class name="npcVaultDoctorKnife" extends="npcKnifeTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,female,npc,melee"/>
+			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -643,7 +643,7 @@
 		</entity_class>
 
                 <entity_class name="npcVaultSecurityFemaleClub" extends="npcClubTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,female,npc,melee"/>
+			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -673,7 +673,7 @@
 		</entity_class>
 
                 <entity_class name="npcVaultSecurityFemaleAxe" extends="npcAxeTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,female,npc,melee"/>
+			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -703,7 +703,7 @@
 		</entity_class>
 
                 <entity_class name="npcVaultResidentFemaleAxe" extends="npcAxeTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,female,npc,melee"/>
+			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -732,7 +732,7 @@
 		</entity_class>
 
                 <entity_class name="npcVaultSecurityFemaleBat" extends="npcBatTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,female,npc,melee"/>
+			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -762,7 +762,7 @@
 		</entity_class>
 
                 <entity_class name="npcVaultDoctorBat" extends="npcBatTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,female,npc,melee"/>
+			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -788,7 +788,7 @@
 		</entity_class>
 
                 <entity_class name="npcArmyPowerArmorFemaleM60" extends="npcM60Template"> 
-			<property name="Tags" value="cp,UMA2,entity,female,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="SoundHurt" value="Player_Female/player2painlg"/>
@@ -816,7 +816,7 @@
 		</entity_class>	
 
                 <entity_class name="npcArmyPowerArmorFemaleRocketL" extends="npcRocketLTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,female,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="SoundHurt" value="Player_Female/player2painlg"/>
@@ -845,7 +845,7 @@
 		</entity_class> 
 
                 <entity_class name="npcArmyPowerArmorFemaleAK47" extends="npcAK47Template"> 
-			<property name="Tags" value="cp,UMA2,entity,female,npc,ranged"/>
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="SoundHurt" value="Player_Female/player2painlg"/>

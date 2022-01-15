@@ -5,7 +5,7 @@
                 <!--  50s Women Models by Zuhian Teiyu Purchased for use in NPC Mod  -->
 
                 <entity_class name="RaiderJayneClub" extends="npcClubTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
 			<property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -27,10 +27,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderBettyClub" extends="npcClubTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -52,10 +55,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderGinaClub" extends="npcClubTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -77,10 +83,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderHedyClub" extends="npcClubTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -102,10 +111,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderGypsyClub" extends="npcClubTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -126,11 +138,14 @@
 			<property name="SoundRandomTime" value="60.0"/>
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>    
+			<property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderJayneKnife" extends="npcKnifeTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -152,10 +167,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderBettyKnife" extends="npcKnifeTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -177,10 +195,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderGinaKnife" extends="npcKnifeTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -202,10 +223,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderHedyKnife" extends="npcKnifeTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -227,10 +251,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderGypsyKnife" extends="npcKnifeTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/>  
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -252,10 +279,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
 	        <entity_class name="RaiderGypsyBat" extends="npcBatTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -277,10 +307,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderJayneBat" extends="npcBatTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -302,10 +335,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderBettyBat" extends="npcBatTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -327,10 +363,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderHedyBat" extends="npcBatTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -352,10 +391,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderGinaBat" extends="npcBatTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -377,10 +419,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderHedyAxe" extends="npcAxeTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -402,10 +447,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderBettyAxe" extends="npcAxeTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -427,10 +475,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderJayneAxe" extends="npcAxeTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -452,10 +503,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderGypsyAxe" extends="npcAxeTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -477,10 +531,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderGinaAxe" extends="npcAxeTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -502,10 +559,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderJayneSMG" extends="npcSMGTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -527,10 +587,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderBettySMG" extends="npcSMGTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -552,10 +615,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderHedySMG" extends="npcSMGTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -577,10 +643,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderGinaSMG" extends="npcSMGTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -602,10 +671,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderGypsySMG" extends="npcSMGTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -627,10 +699,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderGinaDPistol" extends="npcDPistolTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -652,10 +727,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderJayneDPistol" extends="npcDPistolTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -677,10 +755,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderHedyDPistol" extends="npcDPistolTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -702,10 +783,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class> 
 
                 <entity_class name="RaiderBettyDPistol" extends="npcDPistolTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -727,10 +811,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderGypsyDPistol" extends="npcDPistolTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -752,10 +839,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderGinaTRifle" extends="npcTRifleTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -777,10 +867,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderJayneTRifle" extends="npcTRifleTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -802,10 +895,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderHedyTRifle" extends="npcTRifleTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -827,10 +923,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderBettyTRifle" extends="npcTRifleTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -852,10 +951,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderGypsyTRifle" extends="npcTRifleTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -877,10 +979,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderGinaMachete" extends="npcMacheteTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -902,10 +1007,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderBettyMachete" extends="npcMacheteTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -927,10 +1035,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderJayneMachete" extends="npcMacheteTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -952,10 +1063,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderHedyMachete" extends="npcMacheteTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -977,10 +1091,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderGypsyMachete" extends="npcMacheteTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp,UMA2,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,UMA2,bandit"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="Jayne, Hedy, Gina, Betty, Gypsy, Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
@@ -1002,6 +1119,9 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
 		</append>	

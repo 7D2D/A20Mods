@@ -6,7 +6,7 @@
                       Custom Female Soldier by Eldanu Purchased for use in NPC Mod  -->
 
                 <entity_class name="RaiderMercClub" extends="npcClubTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,bandit,cp,UMA2"/>
+			<property name="Tags" value="entity,female,npc,melee,bandit,UMA2"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -29,10 +29,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderMercKnife" extends="npcKnifeTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,bandit,cp,UMA2"/>
+			<property name="Tags" value="entity,female,npc,melee,bandit,UMA2"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -55,10 +58,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderMercMachete" extends="npcMacheteTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,bandit,cp,UMA2"/>
+			<property name="Tags" value="entity,female,npc,melee,bandit,UMA2"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -81,10 +87,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderMercDPistol" extends="npcDPistolTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,bandit,cp,UMA2"/>
+			<property name="Tags" value="entity,female,npc,ranged,bandit,UMA2"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -107,10 +116,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderMercTRifle" extends="npcTRifleTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,bandit,cp,UMA2"/>
+			<property name="Tags" value="entity,female,npc,ranged,bandit,UMA2"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -133,10 +145,13 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		 </entity_class>
 
                  <entity_class name="RaiderMercAK47" extends="npcAK47Template"> 
-			<property name="Tags" value="entity,female,npc,ranged,bandit,cp,UMA2"/>
+			<property name="Tags" value="entity,female,npc,ranged,bandit,UMA2"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
@@ -159,236 +174,308 @@
 			<property name="SoundAlert" value="Player_Female/player2stamina"/>
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		 </entity_class>
 
                  <entity_class name="RaiderMotoTRifle" extends="npcTRifleTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
 			<property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />	
 			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderMotoDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>	
 
                 <entity_class name="RaiderMotoAK47" extends="npcAK47Template"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
 			<property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />	
 			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderMotoDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>	
 
                 <entity_class name="RaiderMotoDPistol" extends="npcDPistolTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
 			<property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />	
 			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderMotoDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>	
 
                 <entity_class name="RaiderMotoBat" extends="npcBatTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />			
 			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderMotoDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderMotoAxe" extends="npcAxeTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />			
 			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderMotoDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderSluggerAK47" extends="npcAK47Template"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
 			<property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />	
 			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderSluggerDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>	
 
                 <entity_class name="RaiderSluggerM60" extends="npcM60Template"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
 			<property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />	
 			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderSluggerDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>	
 
                 <entity_class name="RaiderSluggerBat" extends="npcBatTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />			
 			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderSluggerDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderSluggerAxe" extends="npcAxeTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />			
 			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderSluggerDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderSluggerRocketL" extends="npcRocketLTemplate"> 
-			<property name="Tags" value="entity,male,npc,ranged,bandit,cp,UMA2"/>
+			<property name="Tags" value="entity,male,npc,ranged,bandit,UMA2"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />
 			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderSluggerDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderPestDPistol" extends="npcDPistolTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
 			<property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />	
 			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderPestDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>	
 
                 <entity_class name="RaiderPestSMG" extends="npcSMGTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
 			<property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />	
 			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderPestDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>	
 
                 <entity_class name="RaiderPestPipeMG" extends="npcPipeMGTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
 			<property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />	
 			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderPestDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>	
 
                 <entity_class name="RaiderPestBat" extends="npcBatTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />			
 			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderPestDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderPestAxe" extends="npcAxeTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />			
 			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderPestDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderPestKnife" extends="npcKnifeTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />			
 			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderPestDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderPestClub" extends="npcClubTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />			
 			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderPestDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderPestMachete" extends="npcMacheteTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />			
 			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderPestDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderBeatzSMG" extends="npcSMGTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
 			<property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />	
 			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderBeatzDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>	
 
                 <entity_class name="RaiderBeatzAK47" extends="npcAK47Template"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
 			<property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />	
 			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderBeatzDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>	
 
                 <entity_class name="RaiderBeatzDPistol" extends="npcDPistolTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,ranged"/>
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,ranged"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
 			<property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />	
-			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderBeatzDark"/> 
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderBeatzDark"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/> 
 		</entity_class>	
 
                 <entity_class name="RaiderBeatzBat" extends="npcBatTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />			
 			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderBeatzDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
                 <entity_class name="RaiderBeatzClub" extends="npcClubTemplate"> 
-			<property name="Tags" value="cp,UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
                          Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
                          Squinty Thorne,Sly Bert,Mad Dog" />			
 			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderBeatzDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
 		</append>	

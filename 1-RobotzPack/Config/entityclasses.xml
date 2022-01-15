@@ -6,7 +6,7 @@
 
                 <entity_class name="AssaultMech" extends="npcAnimalMeleeTemplate">
 			<property name="Faction" value="whiteriver"/>
-			<property name="Tags" value="entity,cp,npc,pets,ranged"/>
+			<property name="Tags" value="entity,npc,pets,ranged"/>
                         <property name="Mesh" value="#@modfolder:Resources/Robotz.unity3d?AssaultMechDark"/>
                         <property name="Names" value="DeathBot,Hammer,Planetary Exploration Automaton,Golem,Juggernaut,Silver,ET Neutralization Device,Scrappy,
                         Core,Buttons,Sparky,01010010,Gigabit,Umiytron" />

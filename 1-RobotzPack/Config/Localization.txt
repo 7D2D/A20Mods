@@ -1,0 +1,2 @@
+Key,English,japanese
+AssaultMech,"Assault Robot","アサルトロボット"
