@@ -7,7 +7,7 @@
     <!-- The Maslow will scan for the home block -->
     <block name="cntNPCHomeBlock">
       <property name="Class" value="Loot"/>
-      <property name="CreativeMode" value="Player"/>
+      <property name="CreativeMode" value="None"/>
       <property name="Material" value="Mmetal_weak"/>
       <property name="MaxDamage" value="200" />
       <property name="Texture" value="267"/>
@@ -31,6 +31,7 @@
 
     <block name="NPCPoop">
       <property name="Material" value="Mdirt"/>
+	  <property name="CreativeMode" value="None"/>
       <property name="Shape" value="Terrain"/>
       <property name="Mesh" value="terrain"/>
       <property name="Texture" value="2"/>

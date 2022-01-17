@@ -427,7 +427,7 @@
 			</effect_group>
 
 			<!-- UAI overrides EAI if both exist -->
-			<property name="AIPackages" value="NPCBasic, NPCMeleeAdvanced, NPCHired"/>  
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired"/>  
 			
 			
 			<!--EAI for NPC Humans (Requires SCore) * UNSUPPORTED for A20+ * -->
@@ -475,7 +475,7 @@
 				<property name="BoundaryBox" value="2.0,1.8,0.4" />
 				<property name="Center" value="0.0,0.9,0.0"/>
 			</property> -->
-			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
 
 		</entity_class>	
 		
@@ -545,7 +545,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCMeleeAdvanced, NPCHired"/>
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired"/>
 		</entity_class>
 		
 		<entity_class name="npcKnifeTemplate" extends="npcMeleeTemplate"><property name="HideInSpawnMenu" value="true"/> 
@@ -726,7 +726,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
 		</entity_class>	
 
 		<entity_class name="npcPistolTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
@@ -1310,7 +1310,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?ArcticFox_X"/>
 			<property name="EntityType" value="Player"/>
 			<property name="ModelType" value="Standard"/>
-			<property name="Mass" value="150"/>
+			<property name="Mass" value="120"/>
 			<property name="Weight" value="70"/>
 			<property name="PushFactor" value="1"/>				
 			<property name="Tags" value="entity,cp,npc,animal"/>			
@@ -1323,7 +1323,6 @@
 			<property name="HasDeathAnim" value="true"/>
 			<property name="RootMotion" value="false"/>
 			<property name="RagdollOnDeathChance" value="0"/>
-			<property name="Mass" value="120"/>			
 			<property name="ExperienceGain" value="230"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="HandItem" value="meleeHandAnimalCoyote"/>
@@ -1339,7 +1338,7 @@
 			<property name="WalkType" value="7"/>
 			<property name="RightHandJointName" value="Head" />  	<!-- This is for spawned invisi weapons firing from under the head  -->			
 			<!--<property name="PathingBlocks" value="PathingCube" />   commented out in the template due to performance hit.  Enable in a specific entity as desired -->
-			<property name="AIPackages" value="NPCAnimalBasic, NPCMeleeAdvanced, NPCHired "/> <!-- Will make animal specific AI packages later -->
+			<property name="AIPackages" value="NPCAnimalBasic, NPCMelee, NPCHired "/> <!-- Will make animal specific AI packages later -->
 			<property name="AIPathCostScale" value=".9, 1"/>
 			<property name="AINoiseSeekDist" value="20"/>	
 			<property name="MaxViewAngle" value="210"/>
@@ -1413,7 +1412,7 @@
 			<property name="MoveSpeed" value="0.3"/> 
 			<property name="MoveSpeedAggro" value="1.1,1.1"/> 
 			<property name="MoveSpeedPanic" value="1.1"/>
-			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired"/><!-- Placeholder, will eventually make animal specific AI packages  -->
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/><!-- Placeholder, will eventually make animal specific AI packages  -->
 			<effect_group name="Base Effects">
 				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
 				<passive_effect name="HealthMax" operation="base_set" value="400"/>
@@ -2100,7 +2099,7 @@
 			<property name="RightHandJointName" value="RightHand" />  	
 			<property name="AIPathCostScale" value=".9, 1"/>
 			<property name="AINoiseSeekDist" value="20"/>
-			<property name="AIPackages" value="NPCBasic, NPCMeleeAdvanced, NPCHired"/>
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired"/>
 			<!--<property name="AITask-1" value="ApproachAndAttackSDX, SCore" data="class=EntityAlive,0"/>
 			<property name="AITask-2" value="ApproachAndFollowTargetSDX, SCore" data="incentives=Leader"/>
 			<property name="AITask-3" value="Look"/>
@@ -2167,7 +2166,7 @@
 			<property name="LegCrippleScale" value="0"/>
 			<property name="RightHandJointName" value="Gunjoint" /> 
 			<property name="HandItem" value="gunNPCPistolHidden"/> 
-			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired"/>
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/>
 			<!--<property name="AITask-1" value="RangedAttackTargetSDX, SCore" data="itemType=0;attackPeriod=10"/> 
 			<property name="AITask-2" value="ApproachAndAttackSDX, SCore" data="class=EntityAlive,0"/>
 			<property name="AITask-3" value="Look"/>	
@@ -2229,7 +2228,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCMeleeAdvanced, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 			
 		</entity_class>	
 		
 		<entity_class name="npcNurseEmptyHandBloodMoon" extends="npcNurseEmptyHand"> <!-- The BM versions do not NRE on bloodmoon spawn  -->
@@ -2277,7 +2276,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCMeleeAdvanced, NPCHired, NPCMedic"/> 				
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 				
 		</entity_class>
 		
 		<entity_class name="npcNurseClubBloodMoon" extends="npcNurseClub"> <!-- Testing: The BM versions should not NRE on bloodmoon spawn  -->
@@ -2326,7 +2325,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCMeleeAdvanced, NPCHired, NPCMedic"/> 					
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 					
 		</entity_class>	
 		
 		<entity_class name="npcNurseAxe" extends="npcAxeTemplate"> 
@@ -2366,7 +2365,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>
-			<property name="AIPackages" value="NPCBasic, NPCMeleeAdvanced, NPCHired, NPCMedic"/> 				
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 				
 		</entity_class>	
 		
 		<entity_class name="npcNurseSpear" extends="npcSpearTemplate"> 
@@ -2446,7 +2445,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCMeleeAdvanced, NPCHired, NPCMedic"/> 				
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 				
 		</entity_class>			
 		
 		<entity_class name="npcNurseMachete" extends="npcMacheteTemplate"> 
@@ -2486,7 +2485,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCMeleeAdvanced, NPCHired, NPCMedic"/> 				
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 				
 		</entity_class>	
 		
 		<entity_class name="npcNurseSMG" extends="npcSMGTemplate"> 
@@ -2524,7 +2523,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 	
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 	
 		</entity_class>	
 		
 		<entity_class name="npcNurseSMGBloodMoon" extends="npcNurseSMG"> 
@@ -2568,7 +2567,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 
 		</entity_class>
 		
 		<entity_class name="npcNursePipePistol" extends="npcPipePistolTemplate"> 
@@ -2605,7 +2604,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>			
 		
 		<entity_class name="npcNursePistol" extends="npcPistolTemplate"> 
@@ -2642,7 +2641,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>				
 		
 		
@@ -2680,7 +2679,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>	
 
 		<entity_class name="npcNursePipeMG" extends="npcPipeMGTemplate"> 
@@ -2717,7 +2716,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>
-			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>
 
 		<entity_class name="npcNurseAK47" extends="npcAK47Template"> 
@@ -2754,7 +2753,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>
 		
 		<entity_class name="npcNurseTRifle" extends="npcTRifleTemplate"> 
@@ -2791,7 +2790,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>	
 
 		<entity_class name="npcNursePipeRifle" extends="npcPipeRifleTemplate"> 
@@ -2829,7 +2828,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>    	
 		
 		
@@ -2868,7 +2867,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>    		
 		
 		<entity_class name="npcNurseSRifle" extends="npcSRifleTemplate"> 
@@ -2906,7 +2905,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class> 
 		
 		<entity_class name="npcNursePipeShotgun" extends="npcPipeShotgunTemplate"> 
@@ -2943,7 +2942,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>		
-			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class> 		
 		
 		<entity_class name="npcNursePShotgun" extends="npcPShotgunTemplate"> 
@@ -2980,7 +2979,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>		
-			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class> 
 		
 		<entity_class name="npcNurseAShotgun" extends="npcAShotgunTemplate"> 
@@ -3017,7 +3016,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class> 		
 		
 		<entity_class name="npcNurseXBow" extends="npcXBowTemplate"> 
@@ -3054,7 +3053,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>		
-			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>	
 		
 		<entity_class name="npcNurseLBow" extends="npcLBowTemplate"> 
@@ -3091,7 +3090,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class> 
 		
 		<entity_class name="npcNurseRocketL" extends="npcRocketLTemplate"> 

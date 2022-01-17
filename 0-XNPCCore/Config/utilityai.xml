@@ -134,7 +134,7 @@
 				</action>
 			</ai_package>
 			
-			<ai_package name="NPCMelee" entity_filter="IsEnemy"> <!-- faction check  -->
+			<ai_package name="NPCMeleeBasic" entity_filter="IsEnemy"> <!-- faction check  -->
 				<action name="MoveToEnemyRunMelee" weight="4">
 					<task class="MoveToTargetSDX, SCore" run="true" /> 
 					<consideration class="FailOnDistanceToLeader, Score" max_distance="30"/>
@@ -162,7 +162,7 @@
 				</action>
 			</ai_package>	
 	
-			<ai_package name="NPCRanged" entity_filter="IsEnemy" > <!-- props to the team, especially Ramsey, for this upgraded code  -->
+			<ai_package name="NPCRangedBasic" entity_filter="IsEnemy" > <!-- props to the team, especially Ramsey, for this upgraded code  -->
 				 <action name="MoveToRandomTarget" weight="4">
                     <task class="MoveToInvestigate, SCore" run="true" />
 					<consideration class="SelfHasCVar, SCore" cvar="varFactionBandit" value="1"/>
@@ -235,7 +235,7 @@
 			</ai_package>	
 
 			<!--NEW-->
-			<ai_package name="NPCMeleeAdvanced" entity_filter="IsEnemy"> <!-- faction check  -->
+			<ai_package name="NPCMelee" entity_filter="IsEnemy"> <!-- faction check  -->
 				<!-- DEFAULT ACTIONS -->
 				<action name="MoveToEnemyRunMelee" weight="4">
 					<task class="MoveToTargetSDX, SCore" run="true" /> 
@@ -373,7 +373,7 @@
 			</ai_package>	
 	
 			<!--NEW-->
-			<ai_package name="NPCRangedAdvanced" entity_filter="IsEnemy" > <!-- props to the team, especially Ramsey, for this upgraded code  -->
+			<ai_package name="NPCRanged" entity_filter="IsEnemy" > <!-- props to the team, especially Ramsey, for this upgraded code  -->
 				<!-- DEFAULT ACTIONS -->
 				 <action name="MoveToRandomTarget" weight="4">
 					<consideration class="SelfNotHasBuff, SCore" buffs="buffNPCModThreatControlMode,buffNPCModFullControlMode"/>

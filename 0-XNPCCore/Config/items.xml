@@ -834,7 +834,7 @@
 
 				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.6" tags="perkGunslinger,9mmGun"/>
 				<passive_effect name="WeaponHandling" operation="base_set" value=".8" tags="perkGunslinger"/>
-
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/> 
 				<passive_effect name="DegradationMax" operation="base_set" value="350,700" tier="1,6" tags="perkGunslinger,9mmGun"/>
 				<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkGunslinger,9mmGun"/> <!-- changed to 0 -->
 			</effect_group>			
@@ -924,7 +924,7 @@
 
 				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2.0" tags="perkGunslinger,9mmGun"/>
 				<passive_effect name="WeaponHandling" operation="base_set" value=".95" tags="perkGunslinger"/> <!-- crosshair reset speed -->
-
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/> 
 				<passive_effect name="DegradationMax" operation="base_set" value="175,315" tier="1,6" tags="perkGunslinger,9mmGun"/>
 				<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkGunslinger,9mmGun"/>
 			</effect_group>
@@ -1109,7 +1109,7 @@
 
 				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="50" tags="perkDeadEye"/>
 				<passive_effect name="WeaponHandling" operation="base_set" value=".65" tags="perkDeadEye"/>
-
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/> 
 				<passive_effect name="DegradationMax" operation="base_set" value="136,250" tier="1,6" tags="perkDeadEye"/>
 				<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkDeadEye"/>
 			</effect_group>
@@ -1192,7 +1192,7 @@
 
 				<passive_effect name="DegradationMax" operation="base_set" value="200,440" tier="1,6" tags="perkMachineGunner,perkBookAutoWeapons"/>
 				<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkMachineGunner,perkBookAutoWeapons"/>
-
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/> 
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
@@ -1289,7 +1289,7 @@
 
 				<passive_effect name="DegradationMax" operation="base_set" value="300,650" tier="1,6" tags="perkMachineGunner,perkBookAutoWeapons"/>
 				<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkMachineGunner,perkBookAutoWeapons"/>
-
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/> 
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
@@ -1389,7 +1389,7 @@
 
 				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2.0" tags="perkGunslinger,9mmGun"/>
 				<passive_effect name="WeaponHandling" operation="base_set" value=".95" tags="perkGunslinger"/>  <!-- crosshair reset speed -->
-
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/> 
 				<passive_effect name="DegradationMax" operation="base_set" value="250,450" tier="1,6" tags="perkGunslinger,9mmGun"/>
 				<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkGunslinger,9mmGun"/>
 			</effect_group>
@@ -1482,7 +1482,7 @@
 
 				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="3.2" tags="perkGunslinger"/>
 				<passive_effect name="WeaponHandling" operation="base_set" value=".6" tags="perkGunslinger"/>
-
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/> 
 				<passive_effect name="DegradationMax" operation="base_set" value="250,400" tier="1,6" tags="perkGunslinger"/>
 				<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkGunslinger"/>
 			</effect_group>
@@ -1565,7 +1565,7 @@
 
 				<passive_effect name="DegradationMax" operation="base_set" value="250,550" tier="1,6" tags="perkMachineGunner,perkBookAutoWeapons"/>
 				<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkMachineGunner,perkBookAutoWeapons"/>
-
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/> 
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
@@ -1645,7 +1645,7 @@
 
 				<passive_effect name="DegradationMax" operation="base_set" value="225,500" tier="1,6" tags="perkMachineGunner,perkBookAutoWeapons"/>
 				<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkMachineGunner,perkBookAutoWeapons"/>
-
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/> 
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
@@ -1738,7 +1738,7 @@
 
 				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="50" tags="perkDeadEye"/>
 				<passive_effect name="WeaponHandling" operation="base_set" value=".65" tags="perkDeadEye"/>
-
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/> 
 				<passive_effect name="DegradationMax" operation="base_set" value="170,320" tier="1,6" tags="perkDeadEye"/>
 				<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkDeadEye"/>
 				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/> 
@@ -1832,7 +1832,7 @@
 
 				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="11" tags="perkDeadEye"/>
 				<passive_effect name="WeaponHandling" operation="base_set" value=".75" tags="perkDeadEye"/>
-
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/> 
 				<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6" tags="perkDeadEye"/>
 				<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkDeadEye"/>
 
@@ -2028,7 +2028,7 @@
 				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="2" tags="perkArchery"/>
 				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-1" tags="perkArchery"/>
 				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="1" tags="perkArchery"/>
-
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/> 
 				<passive_effect name="DegradationMax" operation="base_set" value="100,200" tier="1,6" tags="perkArchery"/>
 				<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkArchery"/>
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
@@ -2243,6 +2243,7 @@
 			<property name="Tags" value="weapon,ranged,launcher,gun,perkDemolitionsExpert"/>
 			<property name="DisplayType" value="rangedLauncher"/>
 			<property name="HoldType" value="2"/>
+			<property name="CreativeMode" value="None"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/RocketLauncher/rocketlauncherPrefab.prefab"/>
 			<property name="Material" value="MRocketLauncherParts"/> <property name="Weight" value="4"/>
 			<property name="RepairTools" value="resourceRepairKit"/>
@@ -2514,6 +2515,7 @@
 		
 		<item name="ammoNPCRocketHE">
 			<property name="Extends" value="ammoRocketHE"/>
+			<property name="CreativeMode" value="None"/>
 			<property name="Tags" value="ammo"/>
 			<property name="DisplayType" value="ammoLauncher"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/RocketLauncher/rocketPrefab.prefab"/>
@@ -2549,6 +2551,7 @@
 		<item name="ammoNPCCrossbowBoltIron2"> <!-- test ammo -->
 			<property name="Tags" value="ammo,ranged,attAgility,perkArchery,perkPenetrator"/>
 			<property name="DisplayType" value="ammoArrowAP"/>
+			<property name="CreativeMode" value="None"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/Arrows/bolt_ironPrefab.prefab"/>
 			<property name="HoldType" value="45"/>
 			<property name="Candrop" value="false"/>
@@ -2621,7 +2624,7 @@
 			<property name="Extends" value="challengeQuestMaster"/>
 			<property name="CustomIcon" value="challengeQuestMaster" />
 			<property name="DescriptionKey" value="qc_FoolsGoldDesc"/>
-			<property name="CreativeMode" value="Dev"/>
+			<property name="CreativeMode" value="None"/>
 			<property class="Action0">
 				<property name="QuestGiven" value="challenge_FoolsGold"/>
 			</property>
@@ -3007,6 +3010,7 @@
 		
 		<item name="drugHealInfectedCharacter">
 			<property name="Tags" value="medical"/>
+			<property name="CreativeMode" value="Player"/>
 			<property name="DisplayType" value="cureInfection"/>
 			<property name="Group" value="Science,CFChemicals,Medical"/>
 			<property name="CustomIcon" value="drugSteroids"/> <property name="CustomIconTint" value="4040ff"/>
@@ -3155,7 +3159,7 @@
 		<item name="Yes">
 			<property name="Extends" value="schematicMaster" />
 			<property name="DescriptionKey" value="SayYes" />
-			<property name="CreativeMode" value="Player" />
+			<property name="CreativeMode" value="None"/>
 			<property name="CustomIcon" value="schematicMaster" />
 			<property name="CustomIconTint" value="#ffffff"/>
 			<effect_group name="Say yes">
@@ -3165,7 +3169,7 @@
 		<item name="No">
 			<property name="Extends" value="schematicMaster" />
 			<property name="DescriptionKey" value="SayNo" />
-			<property name="CreativeMode" value="Player" />
+			<property name="CreativeMode" value="None"/>
 			<property name="CustomIcon" value="schematicMaster" />
 			<property name="CustomIconTint" value="#ffffff"/>
 			<effect_group name="Say yes">
@@ -3175,7 +3179,7 @@
 		<item name="Chesty">
 			<property name="Extends" value="schematicMaster" />
 			<property name="DescriptionKey" value="SayNo" />
-			<property name="CreativeMode" value="Player" />
+			<property name="CreativeMode" value="None"/>
 			<property name="CustomIcon" value="schematicMaster" />
 			<property name="CustomIconTint" value="#ffffff"/>
 			<effect_group name="Say yes">
