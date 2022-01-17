@@ -62,27 +62,47 @@
 		<set xpath="//entity_class[@name='animalStag']/property[@name='Faction']/@value">passiveanimalsmedium</set> 
 		<set xpath="//entity_class[@name='animalRabbit']/property[@name='Faction']/@value">passiveanimalssmall</set> 
 		<set xpath="//entity_class[@name='animalChicken']/property[@name='Faction']/@value">passiveanimalssmall</set> 
+		<append xpath="/entity_classes/entity_class[@name='animalDoe']">
+			<property name="Faction" value="passiveanimalsmedium"/>
+		</append>
 		<append xpath="/entity_classes/entity_class[@name='animalZombieBear' or 
 													@name='animalZombieVulture' or
 													@name='animalZombieDog']">
 			<property name="Faction" value="zombieanimals"/>
+			<!--NEW-->
+			<effect_group name="Attack Buff">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffNPCModThreat"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="buffNPCModAttacking"/>
+			</effect_group>
 		</append>	
-		<append xpath="/entity_classes/entity_class[@name='animalDoe']">
-			<property name="Faction" value="passiveanimalsmedium"/>
-		</append>
 		<append xpath="/entity_classes/entity_class[@name='animalSnake' or 
 													@name='animalCoyote']">
 			<property name="Faction" value="aggressiveanimalssmall"/>
+			<!--NEW-->
+			<effect_group name="Attack Buff">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffNPCModThreat"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="buffNPCModAttacking"/>
+			</effect_group>
 		</append>
 		<append xpath="/entity_classes/entity_class[@name='animalBoar' or 
 													@name='animalWolf' or
 													@name='animalDireWolf' or
 													@name='animalMountainLion']">
 			<property name="Faction" value="aggressiveanimalsmedium"/>
+			<!--NEW-->
+			<effect_group name="Attack Buff">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffNPCModThreat"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="buffNPCModAttacking"/>
+			</effect_group>
 		</append>
 		<append xpath="/entity_classes/entity_class[@name='animalBear' or 
 													@name='animalBossGrace']">
 			<property name="Faction" value="aggressiveanimalslarge"/>
+			<!--NEW-->
+			<effect_group name="Attack Buff">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffNPCModThreat"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="buffNPCModAttacking"/>
+			</effect_group>
 		</append>
 	
 		<!--  Weapons are spawned onto the joint specified in the RightHandJoint property.  
@@ -95,6 +115,10 @@
 		<!--  Various player effects, including Snufkins Knockdown code bits  -->
 
 	<append xpath="/entity_classes/entity_class[@name='playerMale']">
+		<!--NEW-->
+		<effect_group name="Signal Hired NPCs to Attack">
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffNPCModAttacking"/>
+		</effect_group>
 		<effect_group>
 			<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffInjuryKnockdown01">
 				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
@@ -126,7 +150,7 @@
 			<property name="ModelType" value="Standard"/>
 			<property name="HasRagdoll" value="true"/>
 			<property name="Prefab" value="NPC"/>
-			<property name="Parent" value="Enemies"/>
+			<property name="Parent" value="Players"/>
 			<property name="Mass" value="120"/>
 			<property name="Weight" value="80"/>			
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
@@ -209,18 +233,18 @@
 			  <property name="DismemberTag_L_RightLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerArm" data ="target=RightForeArmRoll+scale=.15,1,1+atp=true+type=blunt+detach=true;target=RightForeArmRoll+scale=.1,.9,.9+type=blade+detach=true"/>			-->  
 	  
 			<property name="DismemberMultiplierHead" value="1"/>
-			<property name="DismemberMultiplierArms" value="1"/>
-			<property name="DismemberMultiplierLegs" value="1"/>
-			<property name="LegCrippleScale" value="0"/> 
-			<property name="LegCrawlerThreshold" value="0"/> 
+			<property name="DismemberMultiplierArms" value="0"/><!-- 1 when fixed  -->
+			<property name="DismemberMultiplierLegs" value="0"/><!-- 1 when fixed  -->
+			<property name="LegCrippleScale" value="0"/> <!-- 1 when fixed  -->
+			<property name="LegCrawlerThreshold" value="0"/> <!-- 1 when fixed  -->
 			<property name="KnockdownProneDamageThreshold" value="0.4"/>
 			<property name="KnockdownProneStunDuration" value="0.5,0.5"/>
 			<property name="KnockdownProneRefillRate" value="0.045,0.045"/>
 			<property name="KnockdownKneelDamageThreshold" value="0.4"/>
 			<property name="KnockdownKneelStunDuration" value="0.5,0.5"/>
 			<property name="KnockdownKneelRefillRate" value="0.045,0.045"/>
-			<property name="LegsExplosionDamageMultiplier" value="1"/>
-			<property name="ArmsExplosionDamageMultiplier" value="1"/>
+			<property name="LegsExplosionDamageMultiplier" value="0"/><!-- 1 when fixed  -->
+			<property name="ArmsExplosionDamageMultiplier" value="0"/><!-- 1 when fixed  -->
 			<property name="HeadExplosionDamageMultiplier" value="1"/>
 			<property name="ChestExplosionDamageMultiplier" value="1"/>
 			<property name="PainResistPerHit" value=".6"/> <!-- Added when hit. Caps at 3. Decay .2 per second. At 1 movement is not slowed by pain -->
@@ -245,9 +269,9 @@
 			<property name="CanClimbVertical" value="false"/>
 			<property name="JumpMaxDistance" value="2.8, 3.9"/>
 			<property name="Immunity" value="sickness;disease;wellness"/> 
-			<property name="ExperienceGain" value="1000"/> 
-			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+			<property name="ExperienceGain" value="100"/> 
+			<property name="LootDropProb" value="0.0"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerBandit"/>
 			<!--<property name="LootDropEntityClass" value="EntityLootContainerNPC"/>-->
 			<!--<property name="MapIcon" value="ui_game_symbol_bullet_point"/> -->
 			<property name="Names" value="TemplateBob" />		
@@ -256,12 +280,12 @@
 			<property name="HomeBlocks" value="cntNPCHomeBlock"/>
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
-			<property name="TimeStayAfterDeath" value="5"/>
+			<property name="TimeStayAfterDeath" value="3"/>
 			<property name="DeadBodyHitPoints" value="1000"/>
 			<!--<property name="Buffs" value="buffNPCStatusCheck"/> -->
 			<effect_group name="Base Effects">
 				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
-				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="base_set" value="300"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="2000"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0" />
@@ -316,7 +340,7 @@
 				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1"/>
 				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="1.05"/>
 				<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0"/>
 				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1"/>
 
 				<passive_effect name="CraftingTier" operation="base_set" value="1"/>
@@ -328,6 +352,7 @@
 			
 			<!-- SET FACTION CVARS : FuriousRamsay -->
             <effect_group name="SetFactionCVars">
+                <triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="respawn" operation="set" value="1"/>
                 <triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="varFactionBandit" operation="set" value="1">
                     <requirement name="EntityTagCompare" target="self" tags="bandit,whisperer"/>
                 </triggered_effect>
@@ -402,7 +427,7 @@
 			</effect_group>
 
 			<!-- UAI overrides EAI if both exist -->
-			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired"/>  
+			<property name="AIPackages" value="NPCBasic, NPCMeleeAdvanced, NPCHired"/>  
 			
 			
 			<!--EAI for NPC Humans (Requires SCore) * UNSUPPORTED for A20+ * -->
@@ -450,7 +475,7 @@
 				<property name="BoundaryBox" value="2.0,1.8,0.4" />
 				<property name="Center" value="0.0,0.9,0.0"/>
 			</property> -->
-			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired"/> 
 
 		</entity_class>	
 		
@@ -474,6 +499,8 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="750" />
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="EmptyHandUser"/>
 			</effect_group>
@@ -501,6 +528,8 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCClubWood"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCClubWood"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCClubWood"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="1000" />
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="ClubUser"/>
 			</effect_group>	
@@ -516,6 +545,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
+			<property name="AIPackages" value="NPCBasic, NPCMeleeAdvanced, NPCHired"/>
 		</entity_class>
 		
 		<entity_class name="npcKnifeTemplate" extends="npcMeleeTemplate"><property name="HideInSpawnMenu" value="true"/> 
@@ -528,6 +558,8 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCKnife"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCKnife"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCKnife"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="750" />			
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="KnifeUser"/>
 			</effect_group>	
@@ -555,6 +587,8 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCBatWood"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCBatWood"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCBatWood"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="1000" />			
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="BatUser"/>
 			</effect_group>
@@ -581,7 +615,9 @@
 			<property name="RightHandJointName" value="Axe" />
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCAxe"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCAxe"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCAxe"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCAxe"/>
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="1000" />
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="AxeUser"/>
 			</effect_group>
@@ -609,6 +645,8 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCSpear"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCSpear"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCSpear"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="1000" />
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="SpearUser"/>
 			</effect_group>	
@@ -636,6 +674,8 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCMachete"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCMachete"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCMachete"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="1000" />
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="MacheteUser"/>
 			</effect_group>
@@ -663,6 +703,8 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPipePistol,ammoNPC9mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPipePistol,ammoNPC9mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPipePistol,ammoNPC9mmBulletBall"/>
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="1250" />
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="PipePistolUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
@@ -684,6 +726,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
+			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired"/> 
 		</entity_class>	
 
 		<entity_class name="npcPistolTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
@@ -696,6 +739,8 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPistol,ammoNPC9mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPistol,ammoNPC9mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPistol,ammoNPC9mmBulletBall"/>
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="2250" />
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="PistolUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/>
@@ -732,6 +777,8 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCDPistol,ammoNPC9mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCDPistol,ammoNPC9mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCDPistol,ammoNPC9mmBulletBall"/>
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="2750" />
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="DPistolUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
@@ -765,6 +812,8 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCSMG5,ammoNPC9mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCSMG5,ammoNPC9mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCSMG5,ammoNPC9mmBulletBall"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="3250" />
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="SMGUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
@@ -798,6 +847,8 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCM60,ammoNPC762mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCM60,ammoNPC762mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCM60,ammoNPC762mmBulletBall"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="3500" />
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="M60User"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/>
@@ -831,6 +882,8 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCAk47,ammoNPC762mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCAk47,ammoNPC762mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCAk47,ammoNPC762mmBulletBall"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="3250" />
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="AK47User"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/>
@@ -864,6 +917,8 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPipeMG,ammoNPC762mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPipeMG,ammoNPC762mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPipeMG,ammoNPC762mmBulletBall"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="1750" />
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="PipeMGUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/>
@@ -898,6 +953,8 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCTRifle,ammoNPC762mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCTRifle,ammoNPC762mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCTRifle,ammoNPC762mmBulletBall"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="3500" />
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="TRifleUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
@@ -931,6 +988,8 @@
   			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPipeRifle,ammoNPC762mmBulletBall"/>
             <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPipeRifle,ammoNPC762mmBulletBall"/>
             <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPipeRifle,ammoNPC762mmBulletBall"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="1000" />
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="PipeRifleUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
@@ -966,6 +1025,8 @@
   			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCHRifle,ammoNPC762mmBulletBall"/>
             <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCHRifle,ammoNPC762mmBulletBall"/>
             <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCHRifle,ammoNPC762mmBulletBall"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="1250" />
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HRifleUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/>
@@ -999,6 +1060,8 @@
   			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCSRifle,ammoNPC762mmBulletBall"/>
             <property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCSRifle,ammoNPC762mmBulletBall"/>
             <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCSRifle,ammoNPC762mmBulletBall"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="3250" />
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="SRifleUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
@@ -1032,6 +1095,8 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPipeShotgun,ammoNPCShotgunShell"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPipeShotgun,ammoNPCShotgunShell"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPipeShotgun,ammoNPCShotgunShell"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="1250" />
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="PipeShotgunUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
@@ -1067,6 +1132,8 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPShotgun,ammoNPCShotgunShell"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPShotgun,ammoNPCShotgunShell"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPShotgun,ammoNPCShotgunShell"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="2250" />
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="PShotgunUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
@@ -1100,6 +1167,8 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCAShotgun,ammoNPCShotgunShell"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCAShotgun,ammoNPCShotgunShell"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCAShotgun,ammoNPCShotgunShell"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="3500" />
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="AShotgunUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
@@ -1133,6 +1202,8 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCLBow,ammoNPCArrowIron"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCLBow,ammoNPCArrowIron"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCLBow,ammoNPCArrowIron"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="2000" />
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="LBowUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/>
@@ -1166,6 +1237,8 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCXBow,ammoNPCCrossbowBoltIron"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCXBow,ammoNPCCrossbowBoltIron"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCXBow,ammoNPCCrossbowBoltIron"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="2500" />
 			<!-- For testing launcher version  -->
 			<!-- <property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCXBow,ammoNPCCrossbowBoltIron2"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCXBow,ammoNPCCrossbowBoltIron2"/>
@@ -1205,6 +1278,8 @@
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCRocketLauncher,ammoNPCRocketHE"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCRocketLauncher,ammoNPCRocketHE"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCRocketLauncher,ammoNPCRocketHE"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="3000" />
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="RocketLUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
@@ -1264,7 +1339,7 @@
 			<property name="WalkType" value="7"/>
 			<property name="RightHandJointName" value="Head" />  	<!-- This is for spawned invisi weapons firing from under the head  -->			
 			<!--<property name="PathingBlocks" value="PathingCube" />   commented out in the template due to performance hit.  Enable in a specific entity as desired -->
-			<property name="AIPackages" value="NPCAnimalBasic, NPCMelee, NPCHired "/> <!-- Will make animal specific AI packages later -->
+			<property name="AIPackages" value="NPCAnimalBasic, NPCMeleeAdvanced, NPCHired "/> <!-- Will make animal specific AI packages later -->
 			<property name="AIPathCostScale" value=".9, 1"/>
 			<property name="AINoiseSeekDist" value="20"/>	
 			<property name="MaxViewAngle" value="210"/>
@@ -1338,7 +1413,7 @@
 			<property name="MoveSpeed" value="0.3"/> 
 			<property name="MoveSpeedAggro" value="1.1,1.1"/> 
 			<property name="MoveSpeedPanic" value="1.1"/>
-			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/><!-- Placeholder, will eventually make animal specific AI packages  -->
+			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired"/><!-- Placeholder, will eventually make animal specific AI packages  -->
 			<effect_group name="Base Effects">
 				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
 				<passive_effect name="HealthMax" operation="base_set" value="400"/>
@@ -1356,48 +1431,6 @@
 			<property name="Tags" value="entity,npc,animal"/>	
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 		</entity_class>
-		
-		<entity_class name="npcDroneTemplate"> <!--  basic xml copy from vanilla, not yet working  -->
-			<property name="HideInSpawnMenu" value="true"/>    
-			<property name="Tags" value="drone,deployed,noMedBuffs"/>
-			<property name="Class" value="EntityDrone"/>
-			<property name="Parent" value="NPC"/>
-			<property name="Mesh" value="#Other/Items?Weapons/Ranged/Junk Drone/junkDrone_Prefab.prefab"/>
-			<property name="Prefab" value="NPC"/>
-			<property name="ModelType" value="Custom"/>
-			<property name="SurfaceCategory" value="metal"/>
-			<property name="SizeScale" value="0.25"/>
-
-			<property name="LootListAlive" value="roboticDrone"/>    <!-- used to determine container X/Y size -->
-			<property name="TimeStayAfterDeath" value="3600"/>    <!-- player death backpacks will go poof after this many seconds. 0 means 0, not infinite. -->
-			<property name="IsEnemyEntity" value="false"/>
-			<property name="Faction" value="none"/>
-			<property name="NPCID" value="NPCjunkDrone"/>
-			<property name="MapIcon" value="ui_game_symbol_map_player_arrow"/>
-			<property name="NavObject" value="NOJunkDrone" />
-			<!-- <property name="TrackerIcon" value="ui_game_symbol_drone"/> *Handled by NavObject -->
-
-			<property name="MaxDistance" value="15"/>
-			<property name="RaySpread" value="5"/>
-			<!--- <property name="RayCount" value="1"/> -->
-			<property name="BurstRoundCount" value="3"/>
-			<property name="BurstFireRate" value="0.2"/>
-			<property name="CooldownTime" value="1"/>
-			<property name="EntityDamage" value="5"/>
-
-			<property name="StunActionTime" value="1"/>
-			<property name="StunCooldown" value="14"/>
-			<property name="HealActionTime" value="2"/>
-			<property name="HealCooldown" value="15"/>
-			<property name="HealDamageThreshold" value="50"/>
-
-			<effect_group>
-				<passive_effect name="HealthMax" operation="base_set" value="100"/>
-				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
-				<passive_effect name="WaterMax" operation="base_set" value="100"/>
-			</effect_group>
-		</entity_class>		
-	
 		
 		<!-- Dumb Animal Templates  -->	
 
@@ -2030,8 +2063,130 @@
 			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
-		</entity_class>							
-	
+		</entity_class>		
+
+		<!--  NPC Mech templates  -->
+		
+		<entity_class name="NPCMechMeleeTemplate" extends="npcMeleeTemplate" >
+			<property name="Mesh" value="#@modfolder:Resources/XythMechs.unity3d?Drone_X"/>
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="EntityType" value="Player"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="Mass" value="150"/>
+			<property name="Weight" value="70"/>
+			<property name="PushFactor" value="30"/>				
+			<property name="Tags" value="entity,cp,npc,mech"/>			
+			<property name="Prefab" value="NPC"/>
+			<property name='Class' value='EntityAliveSDX, SCore' />
+			<property name="Parent" value="Enemies"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="RotateToGround" value="false"/>
+			<property name="HasRagdoll" value="true"/> 
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="Mass" value="120"/>			
+			<property name="ExperienceGain" value="230"/>
+			<property name="Faction" value="mechs"/>
+			<property name="HandItem" value="meleeNPCEmptyHand"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="NPCID" value="spheretest"/>
+			<property name="IsEnemyEntity" value="false"/> 		
+			<property name="MoveSpeed" value=".3"/>
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="PainResistPerHit" value=".5"/>			
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightHand" />  	
+			<property name="AIPathCostScale" value=".9, 1"/>
+			<property name="AINoiseSeekDist" value="20"/>
+			<property name="AIPackages" value="NPCBasic, NPCMeleeAdvanced, NPCHired"/>
+			<!--<property name="AITask-1" value="ApproachAndAttackSDX, SCore" data="class=EntityAlive,0"/>
+			<property name="AITask-2" value="ApproachAndFollowTargetSDX, SCore" data="incentives=Leader"/>
+			<property name="AITask-3" value="Look"/>
+			<property name="AITask-4" value="ApproachDistraction"/>
+			<property name="AITask-5" value="ApproachSpot"/> 
+			<property name="AITask-6" value="WanderSDX, SCore"/>
+			<property name="AITask-7" value="BreakBlock"/>
+			<property name="AITask-8" value="Territorial"/>
+			<property name="AITask-9" value="" />
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityAlive,80"/>
+			<property name="AITarget-2" value="SetAsTargetIfLeaderAttackedSDX, SCore" data="class=EntityAlive"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAlive,80"/>
+			<property name="AITarget-4" value="SetAsTargetIfHurtSDX, SCore" data="class=EntityAlive"/>
+			<property name="AITarget-5" value=""/> -->
+			<property name="MaxViewAngle" value="210"/>
+			<property name="SightRange" value="70"/>
+			<property name="JumpMaxDistance" value="3.0, 4.0"/>
+			<property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="DroneRandom" />
+			<property name="SoundAlert" value="DroneRandom" />
+			<property name="SoundAttack" value="DroneRandom" />
+			<property name="SoundDeath" value="DroneDie" />
+			<property name="SoundHurt" value="DroneRandom" />
+			<property name="SoundSense" value="DroneRandom" /> 
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
+			<property name="Immunity" value="sickness;disease;wellness"/>
+			<property name="LootListAlive" value="roboticDrone"/> 
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="DeadBodyHitPoints" value="800"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>	
+			<effect_group name="SelfMedicate Effects">
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value=".1"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+			</effect_group>					
+			<property name="ExperienceGain" value="1000"/> 
+			<property name="LootDropProb" value=".1"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>	
+			<!--<property name="MapIcon" value="ui_game_symbol_bullet_point"/> -->
+			<property name="Names" value="KITT,HK-47,ED-209,Clank,Johnny5,Roboto,Marvin,Robbie,Rosie,HAL9000,GLaDOS,Bender" />		
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="1000" />
+		</entity_class> 
+
+		<entity_class name="NPCMechRangedTemplate" extends="npcRangedTemplate"> 	
+			<property name="AvatarController" value="AvatarAnimalControllerSDX, SCore"/> 
+			<property name='Class' value='EntityAliveSDX, SCore' />
+			<property name="Tags" value="entity,mech,ranged"/>
+			<property name="Faction" value="mechs"/>
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="SightRange" value="70"/>
+			<property name="LegCrippleScale" value="0"/>
+			<property name="RightHandJointName" value="Gunjoint" /> 
+			<property name="HandItem" value="gunNPCPistolHidden"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired"/>
+			<!--<property name="AITask-1" value="RangedAttackTargetSDX, SCore" data="itemType=0;attackPeriod=10"/> 
+			<property name="AITask-2" value="ApproachAndAttackSDX, SCore" data="class=EntityAlive,0"/>
+			<property name="AITask-3" value="Look"/>	
+            <property name="AITask-4" value="ApproachAndFollowTargetSDX, SCore" data="incentives=Leader"/>
+            <property name="AITask-5" value="WanderSDX, SCore"/>
+			<property name="AITask-6" value="ApproachDistraction"/>
+			<property name="AITask-7" value="ApproachSpot"/> 
+			<property name="AITask-8" value="Territorial"/>
+            <property name="AITask-9" value="" />
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityAlive,80"/>
+			<property name="AITarget-2" value="SetAsTargetIfLeaderAttackedSDX, SCore" data="class=EntityAlive"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAlive,80"/>
+			<property name="AITarget-4" value="SetAsTargetIfHurtSDX, SCore" data="class=EntityAlive"/>
+			<property name="AITarget-5" value=""/> -->
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPistolHidden,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPistolHidden,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPistolHidden,ammoNPC9mmBulletBall"/> 				
+		</entity_class>	
+
 	<!--  End Of Template Section  -->
 
 		<!--  Nurse  -->
@@ -2074,7 +2229,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCMeleeAdvanced, NPCHired, NPCMedic"/> 			
 		</entity_class>	
 		
 		<entity_class name="npcNurseEmptyHandBloodMoon" extends="npcNurseEmptyHand"> <!-- The BM versions do not NRE on bloodmoon spawn  -->
@@ -2122,7 +2277,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 				
+			<property name="AIPackages" value="NPCBasic, NPCMeleeAdvanced, NPCHired, NPCMedic"/> 				
 		</entity_class>
 		
 		<entity_class name="npcNurseClubBloodMoon" extends="npcNurseClub"> <!-- Testing: The BM versions should not NRE on bloodmoon spawn  -->
@@ -2171,7 +2326,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 					
+			<property name="AIPackages" value="NPCBasic, NPCMeleeAdvanced, NPCHired, NPCMedic"/> 					
 		</entity_class>	
 		
 		<entity_class name="npcNurseAxe" extends="npcAxeTemplate"> 
@@ -2211,7 +2366,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>
-			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 				
+			<property name="AIPackages" value="NPCBasic, NPCMeleeAdvanced, NPCHired, NPCMedic"/> 				
 		</entity_class>	
 		
 		<entity_class name="npcNurseSpear" extends="npcSpearTemplate"> 
@@ -2291,7 +2446,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 				
+			<property name="AIPackages" value="NPCBasic, NPCMeleeAdvanced, NPCHired, NPCMedic"/> 				
 		</entity_class>			
 		
 		<entity_class name="npcNurseMachete" extends="npcMacheteTemplate"> 
@@ -2331,7 +2486,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 				
+			<property name="AIPackages" value="NPCBasic, NPCMeleeAdvanced, NPCHired, NPCMedic"/> 				
 		</entity_class>	
 		
 		<entity_class name="npcNurseSMG" extends="npcSMGTemplate"> 
@@ -2369,7 +2524,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 	
+			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 	
 		</entity_class>	
 		
 		<entity_class name="npcNurseSMGBloodMoon" extends="npcNurseSMG"> 
@@ -2413,7 +2568,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 
 		</entity_class>
 		
 		<entity_class name="npcNursePipePistol" extends="npcPipePistolTemplate"> 
@@ -2450,7 +2605,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
 		</entity_class>			
 		
 		<entity_class name="npcNursePistol" extends="npcPistolTemplate"> 
@@ -2487,7 +2642,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
 		</entity_class>				
 		
 		
@@ -2525,7 +2680,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
 		</entity_class>	
 
 		<entity_class name="npcNursePipeMG" extends="npcPipeMGTemplate"> 
@@ -2562,7 +2717,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>
-			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
 		</entity_class>
 
 		<entity_class name="npcNurseAK47" extends="npcAK47Template"> 
@@ -2599,7 +2754,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
 		</entity_class>
 		
 		<entity_class name="npcNurseTRifle" extends="npcTRifleTemplate"> 
@@ -2636,7 +2791,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
 		</entity_class>	
 
 		<entity_class name="npcNursePipeRifle" extends="npcPipeRifleTemplate"> 
@@ -2674,7 +2829,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
 		</entity_class>    	
 		
 		
@@ -2713,7 +2868,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
 		</entity_class>    		
 		
 		<entity_class name="npcNurseSRifle" extends="npcSRifleTemplate"> 
@@ -2751,7 +2906,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
 		</entity_class> 
 		
 		<entity_class name="npcNursePipeShotgun" extends="npcPipeShotgunTemplate"> 
@@ -2788,7 +2943,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>		
-			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
 		</entity_class> 		
 		
 		<entity_class name="npcNursePShotgun" extends="npcPShotgunTemplate"> 
@@ -2825,7 +2980,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>		
-			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
 		</entity_class> 
 		
 		<entity_class name="npcNurseAShotgun" extends="npcAShotgunTemplate"> 
@@ -2862,7 +3017,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
 		</entity_class> 		
 		
 		<entity_class name="npcNurseXBow" extends="npcXBowTemplate"> 
@@ -2899,7 +3054,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>		
-			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
 		</entity_class>	
 		
 		<entity_class name="npcNurseLBow" extends="npcLBowTemplate"> 
@@ -2936,7 +3091,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
+			<property name="AIPackages" value="NPCBasic, NPCRangedAdvanced, NPCHired, NPCMedic"/> 			
 		</entity_class> 
 		
 		<entity_class name="npcNurseRocketL" extends="npcRocketLTemplate"> 
@@ -3007,6 +3162,9 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>	
 
 		<entity_class name="npcHarleyClub" extends="npcClubTemplate"> 
@@ -3030,6 +3188,10 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+			
 		</entity_class>
 		
 		<entity_class name="npcHarleyKnife" extends="npcKnifeTemplate"> 
@@ -3053,6 +3215,9 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>	
 		
 		<entity_class name="npcHarleyBat" extends="npcBatTemplate"> 
@@ -3076,6 +3241,9 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>			
 	
 		<entity_class name="npcHarleyMachete" extends="npcMacheteTemplate"> 
@@ -3099,6 +3267,9 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>		
 
 
@@ -3123,6 +3294,9 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>	
 		
 		<entity_class name="npcHarleySpear" extends="npcSpearTemplate"> 
@@ -3146,6 +3320,9 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>			
 		
 		<entity_class name="npcHarleyPipePistol" extends="npcPipePistolTemplate"> 
@@ -3169,6 +3346,9 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>	
 		
 		<entity_class name="npcHarleyPipeRifle" extends="npcPipeRifleTemplate"> 
@@ -3192,6 +3372,9 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>	
 		
 		<entity_class name="npcHarleyPipeMG" extends="npcPipeMGTemplate"> 
@@ -3215,6 +3398,9 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>				
 		
 		<entity_class name="npcHarleyPipeShotgun" extends="npcPipeShotgunTemplate"> 
@@ -3238,6 +3424,9 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>	
 
 		<entity_class name="npcHarleySMG" extends="npcSMGTemplate"> 
@@ -3261,6 +3450,9 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>	
 		
 		<entity_class name="npcHarleyM60" extends="npcM60Template"> 
@@ -3284,6 +3476,9 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
 		</entity_class>			
 		
 		<entity_class name="npcHarleyPistol" extends="npcPistolTemplate"> 
@@ -3307,6 +3502,9 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
 		</entity_class>				
 		
 		<entity_class name="npcHarleyDPistol" extends="npcDPistolTemplate"> 
@@ -3330,6 +3528,9 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
 		</entity_class>				
 
 		<entity_class name="npcHarleyAK47" extends="npcAK47Template"> 
@@ -3353,6 +3554,9 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
 		</entity_class>
 		
 		<entity_class name="npcHarleyTRifle" extends="npcTRifleTemplate"> 
@@ -3376,6 +3580,9 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
 		</entity_class>		
 		
 		
@@ -3400,6 +3607,9 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
         </entity_class>   
 
 		<entity_class name="npcHarleyPShotgun" extends="npcPShotgunTemplate"> 
@@ -3423,6 +3633,9 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
         </entity_class>   
 
 		<entity_class name="npcHarleyAShotgun" extends="npcAShotgunTemplate"> 
@@ -3446,6 +3659,9 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
         </entity_class>   	
 		
 		<entity_class name="npcHarleyLBow" extends="npcLBowTemplate"> 
@@ -3469,6 +3685,9 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
 		</entity_class> 
 
 		<entity_class name="npcHarleyXBow" extends="npcXBowTemplate"> 
@@ -3492,6 +3711,9 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
 		</entity_class>	
 		<entity_class name="npcHarleyRocketL" extends="npcRocketLTemplate"> 
 			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
@@ -3514,6 +3736,9 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
 		</entity_class>			
 		
 		<!--  Baker  -->
@@ -3769,7 +3994,7 @@
 		
 		<entity_class name="animalFox" extends="animalTemplateHostileWalking">
 			<property name="Tags" value="entity,animal,perkAT02,perkAT03,animalFox"/>
-			<property name="Faction" value="animals"/> 
+			<property name="Faction" value="aggressiveanimalssmall"/> 
 			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="HasRagdoll" value="true"/>

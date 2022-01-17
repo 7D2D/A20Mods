@@ -30,36 +30,36 @@
 
       <!-- If the entity is hired, you can order the NPCs to do the following: -->
       <response id="FollowMe" text="Follow me" >
-        <requirement type="HiredSDX, SCore" requirementtype="Hide"/>
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderFollow" />
       </response>
 
       <response id="TellMe" text="Tell me about yourself" >
-        <requirement type="HiredSDX, SCore" requirementtype="Hide"/>
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
         <action type="ExecuteCommandSDX, SCore" id="TellMe" />
       </response>
 	  
       <response id="ShowMe" text="Show Me your inventory" >
-        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
+        <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
       </response>
 
 	  <response id="StayHere" text="Stay here" >
-        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
+        <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
       </response>
 	  
 	  <response id="Wander" text="Wander around here" >
-        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
+        <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
       </response>
 	  
-	  <!--<response id="Patrol" text="Patrol your route" >
-        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
+	  <response id="Patrol" text="Patrol your route" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderPatrol" />
-      </response> -->
+      </response>
 
-	  <!-- <response id="GuardHere" text="Guard here" >
+ <!-- <response id="GuardHere" text="Guard here" >
         <requirement type="HiredSDX, SCore" requirementtype="Hide" />
          <action type="ExecuteCommandSDX, SCore" id="GuardHere" />
       </response>
@@ -69,14 +69,15 @@
         <action type="OpenWindowSDX, SCore" id="SetCode" />
       </response> -->
 	  
-	  <!--<response id="Loot" text="Help me loot" >
-        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
+	  <response id="Loot" text="Help me loot" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
-      </response>	-->  
+      </response>	  
 
-      <response id="Dismiss" text="Dismiss" >
-        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
+	  <response id="Dismiss" text="Dismiss" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
       </response>
  
       <response id="done" text="dialog_trader_response_nevermind" />
@@ -156,36 +157,36 @@
 
       <!-- If the entity is hired, you can order the NPCs to do the following: -->
      <response id="FollowMe" text="Follow" >
-        <requirement type="HiredSDX, SCore" requirementtype="Hide"/>
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
         <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
       </response> 
 
       <response id="TellMe" text="Tell me about yourself" >
-        <requirement type="HiredSDX, SCore" requirementtype="Hide"/>
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
         <action type="ExecuteCommandSDX, SCore" id="TellMe" />
       </response>
       <response id="ShowMe" text="Show me your pack" >
-        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
+        <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
       </response>
 
 	  <response id="StayHere" text="Stay here" >
-        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
+        <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
       </response>
 	  
 	  <response id="Wander" text="Wander around here" >
-        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
+        <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
       </response>
 	  
 	  <response id="Patrol" text="Patrol your route" >
-        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
+        <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderPatrol" />
       </response>
 	  
 	  <response id="Loot" text="Loot around here" >
-        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
+        <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" />
       </response>	  
 	
@@ -195,9 +196,10 @@
       </response> -->
       
  
-      <response id="Dismiss" text="Dismiss" >
-        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
+	  <response id="Dismiss" text="Dismiss" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
       </response>
     
       <response id="done" text="dialog_trader_response_nevermind" />

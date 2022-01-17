@@ -1,7 +1,7 @@
 ﻿<configs>
 
-	<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedNPCFeatures']/property[@name='AllEntitiesUseFactionTargeting']/@value">true</set>
-	
+ <set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedNPCFeatures']/property[@name='AllEntitiesUseFactionTargeting']/@value">true</set>	
+
  <append xpath="/blocks" >
     <!-- This block will serve as a home location for the NPCs.-->
     <!-- The Maslow will scan for the home block -->

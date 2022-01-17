@@ -1,7 +1,114 @@
 <configs>
 
-	<!-- main control buff -->
+	<!-- Have player verify if all hired NPCs have the current player actions -->
+	<!--NEW-->
+	<append xpath="/buffs/buff[@name='buffStatusCheck01']">
+		<effect_group name="FuriousRamsayStatusCheck">
+			<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="buffNPCModVerifyCurrentActions"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffNPCModVerifyCurrentActions"/>
+			
+		</effect_group>
+	</append>
+
+	<!-- main player control buff -->
 	<append xpath="/buffs">
+		<!--NEW-->
+		<buff name="buffNPCModVerifyCurrentActions" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group name="buffNPCModVerifyCurrentActions">
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="selfAOE" range="60" buff="buffNPCModStopAttacking">
+					<requirement name="CVarCompare" target="other" cvar="Leader" operation="Equals" value="@EntityID" />
+					<requirement name="CVarCompare" cvar="varNPCModStopAttacking" operation="Equals" value="0" />
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="60" buff="buffNPCModStopAttacking">
+					<requirement name="CVarCompare" target="other" cvar="Leader" operation="Equals" value="@EntityID" />
+					<requirement name="CVarCompare" cvar="varNPCModStopAttacking" operation="Equals" value="1" />
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="selfAOE" range="60" buff="buffNPCModFullControlMode">
+					<requirement name="CVarCompare" target="other" cvar="Leader" operation="Equals" value="@EntityID" />
+					<requirement name="CVarCompare" cvar="varNPCModMode" operation="Equals" value="0" />
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="60" buff="buffNPCModThreatControlMode">
+					<requirement name="CVarCompare" target="other" cvar="Leader" operation="Equals" value="@EntityID" />
+					<requirement name="CVarCompare" cvar="varNPCModMode" operation="Equals" value="1" />
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="selfAOE" range="60" buff="buffNPCModThreatControlMode">
+					<requirement name="CVarCompare" target="other" cvar="Leader" operation="Equals" value="@EntityID" />
+					<requirement name="CVarCompare" cvar="varNPCModMode" operation="Equals" value="2" />
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="60" buff="buffNPCModFullControlMode">
+					<requirement name="CVarCompare" target="other" cvar="Leader" operation="Equals" value="@EntityID" />
+					<requirement name="CVarCompare" cvar="varNPCModMode" operation="Equals" value="2" />
+				</triggered_effect>
+			</effect_group>		
+		</buff>
+		<buff name="buffNPCModThreatControlMode" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+		</buff>
+		<buff name="buffNPCModFullControlMode" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+		</buff>
+		<buff name="buffNPCModThreat" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+		</buff>
+		<buff name="buffNPCModAttacking" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="15"/>
+		</buff>
+		<buff name="buffNPCModStopAttacking" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+		</buff>
+		<buff name="buffNPCModStopAttackingChange0" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="3"/>
+			<effect_group name="buffNPCModStopAttackingChange">
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varNPCModStopAttackingChange" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varNPCModStopAttacking" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="NPCResume" play_in_head="true"/>
+			</effect_group>
+		</buff>
+		<buff name="buffNPCModStopAttackingChange1" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="3"/>
+			<effect_group name="buffNPCModStopAttackingChange">
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varNPCModStopAttackingChange" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varNPCModStopAttacking" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="NPCHalt" play_in_head="true"/>
+			</effect_group>
+		</buff>
+		<buff name="buffNPCModModeChange0" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="3"/>
+			<effect_group name="buffNPCModStopAttackingChange">
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varNPCModModeChange" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varNPCModMode" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="NPCHuntingMode" play_in_head="true"/>
+			</effect_group>
+		</buff>
+		<buff name="buffNPCModModeChange1" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="3"/>
+			<effect_group name="buffNPCModStopAttackingChange">
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varNPCModModeChange" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varNPCModMode" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="NPCTheatControlMode" play_in_head="true"/>
+			</effect_group>
+		</buff>
+		<buff name="buffNPCModModeChange2" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="3"/>
+			<effect_group name="buffNPCModStopAttackingChange">
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varNPCModModeChange" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varNPCModMode" operation="set" value="2"/>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="NPCFullControlMode" play_in_head="true"/>
+			</effect_group>
+		</buff>
+
 		<buff name="buffNPCStatusCheck" hidden="true" remove_on_death="false">
 			<stack_type value="ignore"/>
 			<update_rate value="1"/>
@@ -1782,11 +1889,14 @@
 		<effect_group name="run particles, cleanup">
 			<requirement name="!EntityTagCompare" tags="cp"/>		
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffIsOnFireDisplay" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true"/> 
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,0,0" parent_transform="LOD0" shape_mesh="true"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,0,0" parent_transform="LOD0" shape_mesh="true"/>
 			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_onFire"/>
 			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_onFire"/>
 			<triggered_effect trigger="onSelfBuffStart" action="AddJournalEntry" journal="onFireTip"/>
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="buff_burn_lp"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="buff_burn_lp"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buff_burn_extinguish"/>
 		</effect_group>
 		<effect_group name="run particles for customs, cleanup">
 			<requirement name="EntityTagCompare" tags="cp"/>	
@@ -1796,7 +1906,10 @@
 			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel"/>
 			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel"/>
 			<triggered_effect trigger="onSelfBuffStart" action="AddJournalEntry" journal="onFireTip"/>
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="buff_burn_lp"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="buff_burn_lp"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buff_burn_extinguish"/>
 		</effect_group>
-	</insertAfter>	
+	</insertAfter>
 
 </configs>

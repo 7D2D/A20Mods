@@ -1,6 +1,6 @@
 <configs>
 	
-	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'WildGameForest')]">	
+	<insertBefore xpath="/entitygroups/entitygroup[starts-with(@name, 'WildGame')]/entity[@name='none']"> <!-- always insert before the None entry in groups, none must be last  -->
 		<entity name="npcBakerEmptyHand" prob=".3" />
 		<entity name="npcBakerClub" prob=".3" />
 		<entity name="npcBakerKnife" prob=".3" />
@@ -17,8 +17,41 @@
 		<entity name="npcNursePistol" prob=".2" />
 		<entity name="npcNurseLBow" prob=".2" />
 		<entity name="npcAnimalFox" prob=".2" />
-	</append> 
+	</insertBefore>  
 	
+	<insertBefore xpath="/entitygroups/entitygroup[starts-with(@name, 'EnemyAnimals')]/entity[@name='none']">
+		<entity name="npcHarleyClub" prob="1" />
+		<entity name="npcHarleyBat" prob="1" />
+		<entity name="npcHarleyKnife" prob="1" />	
+		<entity name="npcHarleyMachete" prob="1" />
+		<entity name="npcHarleySpear" prob="1" />	
+		<entity name="npcHarleyAxe" prob="1" />		
+		<entity name="npcHarleyPipePistol" prob=".5" />
+		<entity name="npcHarleyPipeRifle" prob=".5" />		
+		<entity name="npcHarleyPipeShotgun" prob=".5" />
+	</insertBefore>  
+	
+	<insertAfter xpath="/entitygroups/entitygroup[starts-with(@name, 'EnemyAnimalsWasteland')]/entity[@name='animalZombieBear']">
+		<entity name="npcHarleyBat" prob="1" />
+		<entity name="npcHarleyKnife" prob="1" />	
+		<entity name="npcHarleyMachete" prob="1" />
+		<entity name="npcHarleyPipePistol" prob="1" />
+		<entity name="npcHarleyPipeRifle" prob="1" />	
+		<entity name="npcHarleySMG" prob=".5" />
+		<entity name="npcHarleyAK47" prob=".5" />
+		<entity name="npcHarleyHRifle" prob="1" />
+		<entity name="npcHarleyPistol" prob="1" />
+		<entity name="npcHarleyLBow" prob="1" />
+		<entity name="npcHarleyTRifle" prob=".5" />	
+		<entity name="npcHarleyM60" prob=".25" />
+		<entity name="npcHarleyDPistol" prob="1" />
+		<entity name="npcHarleyPShotgun" prob="1" />	
+		<entity name="npcHarleyAShotgun" prob=".5" />
+		<entity name="npcHarleyXBow" prob="1" />
+		<entity name="npcHarleyRocketL" prob=".25" />
+	</insertAfter>
+
+		
 	<append xpath="/entitygroups/entitygroup[descendant::entity[@name='zombieArlene']]">	
 		<entity name="zombieFemaleTutorial" />
 	</append>

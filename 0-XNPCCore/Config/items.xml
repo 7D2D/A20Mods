@@ -12,6 +12,162 @@
 
 	<append xpath="/items">
 	
+		<!--NEW-->
+		<item name="itemNPCModHelp">
+			<property name="HoldType" value="9"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Canhold" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Candrop" value="true"/>
+			<property name="CustomIcon" value="NPCHelp_icon"/>
+			<property class="Action0">
+				<property name="Class" value="Melee"/>
+				<property name="Delay" value="0.1"/>
+				<property name="Range" value="0"/>
+				<property name="Sphere" value="0"/>
+				<property name="Block_range" value="0"/>
+				<property name="DamageEntity" value="0"/>
+				<property name="DamageBlock" value="0"/>
+				<property name="Sound_start" value="NPCHelp"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Melee"/>
+				<property name="Delay" value="0.1"/>
+				<property name="Range" value="0"/>
+				<property name="Sphere" value="0"/>
+				<property name="Block_range" value="0"/>
+				<property name="DamageEntity" value="0"/>
+				<property name="DamageBlock" value="0"/>
+				<property name="Sound_start" value="NPCHelp"/>
+			</property>
+			<effect_group name="itemNPCHelp" tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" target="selfAOE" range="20" buff="buffNPCModAttacking"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" target="selfAOE" range="20" buff="buffNPCModAttacking"/>
+			</effect_group>
+		</item>
+		<item name="itemNPCModStop">
+			<property name="HoldType" value="9"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Canhold" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Candrop" value="true"/>
+			<property name="CustomIcon" value="NPCStop_icon"/>
+			<property class="Action0">
+				<property name="Class" value="Melee"/>
+				<property name="Delay" value="0.1"/>
+				<property name="Range" value="0"/>
+				<property name="Sphere" value="0"/>
+				<property name="Block_range" value="0"/>
+				<property name="DamageEntity" value="0"/>
+				<property name="DamageBlock" value="0"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Melee"/>
+				<property name="Delay" value="0.1"/>
+				<property name="Range" value="0"/>
+				<property name="Sphere" value="0"/>
+				<property name="Block_range" value="0"/>
+				<property name="DamageEntity" value="0"/>
+				<property name="DamageBlock" value="0"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group name="itemNPCHelp" tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buffNPCModStopAttackingChange1">
+					<requirement name="CVarCompare" cvar="varNPCModStopAttacking" operation="Equals" value="0" />
+					<requirement name="CVarCompare" cvar="varNPCModStopAttackingChange" operation="Equals" value="0" />
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buffNPCModStopAttackingChange0">
+					<requirement name="CVarCompare" cvar="varNPCModStopAttacking" operation="Equals" value="1" />
+					<requirement name="CVarCompare" cvar="varNPCModStopAttackingChange" operation="Equals" value="0" />
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="buffNPCModStopAttackingChange1">
+					<requirement name="CVarCompare" cvar="varNPCModStopAttacking" operation="Equals" value="0" />
+					<requirement name="CVarCompare" cvar="varNPCModStopAttackingChange" operation="Equals" value="0" />
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="buffNPCModStopAttackingChange0">
+					<requirement name="CVarCompare" cvar="varNPCModStopAttacking" operation="Equals" value="1" />
+					<requirement name="CVarCompare" cvar="varNPCModStopAttackingChange" operation="Equals" value="0" />
+				</triggered_effect>
+				<!-- Moved commented out section to FuriousRamsayStatusCheck on player -->
+				<!--<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="60" buff="buffNPCModStopAttacking">
+					<requirement name="CVarCompare" target="other" cvar="Leader" operation="Equals" value="@EntityID" />
+					<requirement name="CVarCompare" cvar="varNPCModStopAttacking" operation="Equals" value="1" />
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="selfAOE" range="60" buff="buffNPCModStopAttacking">
+					<requirement name="CVarCompare" target="other" cvar="Leader" operation="Equals" value="@EntityID" />
+					<requirement name="CVarCompare" cvar="varNPCModStopAttacking" operation="Equals" value="0" />
+				</triggered_effect>-->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varNPCModStopAttackingChange" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" cvar="varNPCModStopAttackingChange" operation="set" value="0"/>
+			</effect_group>
+		</item>
+		<item name="itemNPCModMode">
+			<property name="HoldType" value="9"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Canhold" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Candrop" value="true"/>
+			<property name="CustomIcon" value="NPCMode_icon"/>
+			<property class="Action0">
+				<property name="Class" value="Melee"/>
+				<property name="Delay" value="0.1"/>
+				<property name="Range" value="0"/>
+				<property name="Sphere" value="0"/>
+				<property name="Block_range" value="0"/>
+				<property name="DamageEntity" value="0"/>
+				<property name="DamageBlock" value="0"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Melee"/>
+				<property name="Delay" value="0.1"/>
+				<property name="Range" value="0"/>
+				<property name="Sphere" value="0"/>
+				<property name="Block_range" value="0"/>
+				<property name="DamageEntity" value="0"/>
+				<property name="DamageBlock" value="0"/>
+				<property name="Sound_start" value=""/>
+			</property>
+			<effect_group name="itemNPCModMode" tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buffNPCModModeChange1">
+					<requirement name="CVarCompare" cvar="varNPCModMode" operation="Equals" value="0" />
+					<requirement name="CVarCompare" cvar="varNPCModModeChange" operation="Equals" value="0" />
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buffNPCModModeChange2">
+					<requirement name="CVarCompare" cvar="varNPCModMode" operation="Equals" value="1" />
+					<requirement name="CVarCompare" cvar="varNPCModModeChange" operation="Equals" value="0" />
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buffNPCModModeChange0">
+					<requirement name="CVarCompare" cvar="varNPCModMode" operation="Equals" value="2" />
+					<requirement name="CVarCompare" cvar="varNPCModModeChange" operation="Equals" value="0" />
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="buffNPCModModeChange1">
+					<requirement name="CVarCompare" cvar="varNPCModMode" operation="Equals" value="0" />
+					<requirement name="CVarCompare" cvar="varNPCModModeChange" operation="Equals" value="0" />
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="buffNPCModModeChange2">
+					<requirement name="CVarCompare" cvar="varNPCModMode" operation="Equals" value="1" />
+					<requirement name="CVarCompare" cvar="varNPCModModeChange" operation="Equals" value="0" />
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="buffNPCModModeChange0">
+					<requirement name="CVarCompare" cvar="varNPCModMode" operation="Equals" value="2" />
+					<requirement name="CVarCompare" cvar="varNPCModModeChange" operation="Equals" value="0" />
+				</triggered_effect>
+				<!-- Moved commented out section to FuriousRamsayStatusCheck on player -->
+				<!--<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="selfAOE" range="60" buff="buffNPCModControlMode">
+					<requirement name="CVarCompare" target="other" cvar="Leader" operation="Equals" value="@EntityID" />
+					<requirement name="CVarCompare" cvar="varNPCModMode" operation="Equals" value="1" />
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="selfAOE" range="60" buff="buffNPCModControlMode">
+					<requirement name="CVarCompare" target="other" cvar="Leader" operation="Equals" value="@EntityID" />
+					<requirement name="CVarCompare" cvar="varNPCModMode" operation="Equals" value="0" />
+				</triggered_effect>-->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varNPCModModeChange" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" cvar="varNPCModModeChange" operation="set" value="0"/>
+			</effect_group>
+		</item>
+
 		<item name="HumanEntityLoadingHack01">
 			<property name="CreativeMode" value="None"/>
 			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>

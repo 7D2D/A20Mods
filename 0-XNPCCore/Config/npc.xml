@@ -207,7 +207,13 @@
 			<relationship name="aggressiveanimalsmedium" value="hate"/>
 			<relationship name="aggressiveanimalslarge" value="hate"/>
 		</faction>	
-	
+		
+		<faction name="mechs">
+			<relationship name="trader" value="neutral"/>
+			<relationship name="undead" value="hate"/>
+			<relationship name="*" value="hate"/>
+		</faction>		
+		
 	</append>
 	
 </configs>
