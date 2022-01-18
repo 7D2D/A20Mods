@@ -134,13 +134,13 @@
 
 	<append xpath="/entity_classes">
 	
-	<!-- Human Melee and Ranged Base Templates -->
+	<!-- Human Melee and Ranged Base Templates, hirable, default neutral faction-->
 
 		<entity_class name="npcMeleeTemplate"> 
 			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="NPCID" value="spheretest"/>
 			<property name="EntityType" value="Player"/>
-			<property name="Tags" value="entity,cp,male,npc,melee"/> <!-- entity/sex/type/role/attacktype/name: Entity is required for code filtering, sex for sound filtering, type/role and Atype for buff filtering.  These DO NOT Extend! -->
+			<property name="Tags" value="entity,male,npc,melee"/> <!-- entity/sex/type/role/attacktype/name: Entity is required for code filtering, sex for sound filtering, type/role and Atype for buff filtering.  These DO NOT Extend! -->
 			<property name="Faction" value="whiteriver"/>
 			<property name="IsEnemyEntity" value="false"/> 
 			<property name="LootListAlive" value="traderNPC"/> <!-- removing this removes the E on death but disables NPC inventory  -->
@@ -460,26 +460,77 @@
 				<property name="AITarget-2" value="BlockingTargetTask"/> 
 				<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntitySurvivor,0,0,EntityEnemyAnimal,0,0"/> 
 				<property name="AITarget-4" value=""/> 		-->			
-		
 		</entity_class>	
-	
+		
+		<!--  Templates converting the above melee templates to non-hirable, enemy default faction   -->
+		
+		<entity_class name="npcMeleeRaiderTemplate" extends="npcMeleeTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Class" value="EntityAliveSDX, SCore" /> 
+			<property name="EntityType" value="Player"/>
+			<property name="Tags" value="entity,male,npc,melee"/> 
+			<property name="Faction" value="bandits"/>
+			<property name="IsEnemyEntity" value="true"/> 
+			<property name="LootListAlive" value=""/> <!-- removing these two properties removes the E when alive and on death but disables the inventory  -->	
+			<property name="NPCID" value=""/> 	
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="AIPackages" value="NPCBasic, NPCMelee"/> 
+		</entity_class>	
+		
+		<entity_class name="npcMeleeBloodmoonRaiderTemplate" extends="npcMeleeRaiderTemplate"> 
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Tags" value="entity,male,npc,melee"/> 
+			<property name="Faction" value="bandits"/>
+			<effect_group>
+				<passive_effect name="WalkSpeed" operation="base_set" value="1"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="2.0"/> 
+			</effect_group> 	
+		</entity_class>	
+		
 		<entity_class name="npcRangedTemplate" extends="npcMeleeTemplate"> 	
-			<property name="Tags" value="entity,cp,male,npc,ranged"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="RightHandJointName" value="Gunjoint" /> <!-- I put Rifle type ranged weapons goes on this child object (Except longbows and 2H weapons) -->
 			<property name="AttackTimeoutDay" value="0.05"/>  <!-- 0.05 * 20f = 1 seconds between attack -->
             <property name="AttackTimeoutNight" value="0.05"/>
-			<!-- Custom boundary box so they don't go into blocks, however, can mess with pathing down 1 block paths -->
-			<!--<property class="Boundary" >
+				<!-- Custom boundary box so they don't go into blocks, however, can mess with pathing down 1 block paths -->
+				<!--<property class="Boundary" >
 				<property name="BoundaryBox" value="2.0,1.8,0.4" />
 				<property name="Center" value="0.0,0.9,0.0"/>
-			</property> -->
+				</property> -->
 			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
-
 		</entity_class>	
 		
+		<!--  Templates converting the above ranged templates to non-hirable, enemy default faction   -->
+		
+		<entity_class name="npcRangedRaiderTemplate" extends="npcRangedTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Class" value="EntityAliveSDX, SCore" /> 
+			<property name="LootListAlive" value=""/> <!-- removing these two properties removes the E when alive and on death but disables the inventory  -->	
+			<property name="NPCID" value=""/> 	
+			<property name="EntityType" value="Player"/>
+			<property name="Tags" value="entity,male,npc,melee"/> 
+			<property name="Faction" value="bandits"/>
+			<property name="IsEnemyEntity" value="true"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged"/> 
+		</entity_class>	
+		
+		<entity_class name="npcRangedBloodmoonRaiderTemplate" extends="npcRangedRaiderTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+			<property name="Tags" value="entity,male,npc,melee"/> 
+			<property name="Faction" value="bandits"/>
+			<effect_group>
+				<passive_effect name="WalkSpeed" operation="base_set" value="1"/> <!-- these were doubled do to class differences  -->
+				<passive_effect name="RunSpeed" operation="base_set" value="2.0"/> 
+			</effect_group> 	
+		</entity_class>	
+
+		<!-- Used for a future quest  -->
+		
 		<entity_class name="npcMeleeSavableTemplate" extends="npcMeleeTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Tags" value="entity,male,melee"/> 
 			<property name="Faction" value="undead"/>
 			<effect_group name="IsZombie"> <!-- This activates the IsHuman Buff which sets an animator parameter value to path to only human animations  -->
@@ -490,7 +541,7 @@
 		<!--  NPC Weapon Templates -->
 		
 		<entity_class name="npcEmptyHandTemplate" extends="npcMeleeTemplate"><property name="HideInSpawnMenu" value="true"/>
-			<property name="Tags" value="entity,cp,male,npc,melee"/>
+			<property name="Tags" value="entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>			
 			<property name="Names" value="Template" />	
@@ -517,9 +568,28 @@
 				</triggered_effect>
 			</effect_group>			
 		</entity_class>	
-
+		
+		<!-- Examples on making a version of the unarmed "weapon" template to remove the "E" prompt on normal and bloodmoon characters  -->
+		
+		<entity_class name="npcRaiderEmptyHandTemplate" extends="npcEmptyHandTemplate"><property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,melee"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="bandits"/>
+			<property name="IsEnemyEntity" value="true"/> 
+			<property name="LootListAlive" value=""/> 
+			<property name="NPCID" value=""/> 	
+			<property name="AIPackages" value="NPCBasic, NPCMelee"/> 
+		</entity_class>			
+		
+		<entity_class name="npcBMRaiderEmptyHandTemplate" extends="npcRaiderEmptyHandTemplate"><property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,melee"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="bandits"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>				
+		
 		<entity_class name="npcClubTemplate" extends="npcMeleeTemplate"><property name="HideInSpawnMenu" value="true"/>
-			<property name="Tags" value="entity,cp,male,npc,melee"/>
+			<property name="Tags" value="entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>	
 			<property name="Names" value="Template" />
@@ -548,8 +618,10 @@
 			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired"/>
 		</entity_class>
 		
+		<!-- More weapons  -->
+		
 		<entity_class name="npcKnifeTemplate" extends="npcMeleeTemplate"><property name="HideInSpawnMenu" value="true"/> 
-			<property name="Tags" value="entity,cp,male,npc,melee"/>
+			<property name="Tags" value="entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>	
 			<property name="Names" value="Template" />
@@ -578,7 +650,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcBatTemplate" extends="npcMeleeTemplate"><property name="HideInSpawnMenu" value="true"/> 
-			<property name="Tags" value="entity,cp,male,npc,melee"/>
+			<property name="Tags" value="entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>	
 			<property name="Names" value="Template" />
@@ -607,7 +679,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcAxeTemplate" extends="npcMeleeTemplate"><property name="HideInSpawnMenu" value="true"/> 
-			<property name="Tags" value="entity,cp,male,npc,melee"/>
+			<property name="Tags" value="entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>	
 			<property name="Names" value="Template" />
@@ -636,7 +708,7 @@
 		</entity_class>			
 		
 		<entity_class name="npcSpearTemplate" extends="npcMeleeTemplate"><property name="HideInSpawnMenu" value="true"/> 
-			<property name="Tags" value="entity,cp,male,npc,melee"/>
+			<property name="Tags" value="entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>	
 			<property name="Names" value="Template" />
@@ -665,7 +737,7 @@
 		</entity_class>		
 		
 		<entity_class name="npcMacheteTemplate" extends="npcMeleeTemplate"><property name="HideInSpawnMenu" value="true"/> 
-			<property name="Tags" value="entity,cp,male,npc,melee"/>
+			<property name="Tags" value="entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>	
 			<property name="Names" value="Template" />
@@ -694,7 +766,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcPipePistolTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
-			<property name="Tags" value="entity,cp,male,npc,ranged"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/> <!-- 2 is old Walktype for Pistols  -->
 			<property name="Names" value="Template" />
@@ -730,7 +802,7 @@
 		</entity_class>	
 
 		<entity_class name="npcPistolTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
-			<property name="Tags" value="entity,cp,male,npc,ranged"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/> <!-- 2 is old Walktype for Pistols  -->
 			<property name="Names" value="Template" />
@@ -768,7 +840,7 @@
 		</entity_class>		
 		
 		<entity_class name="npcDPistolTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
-			<property name="Tags" value="entity,cp,male,npc,ranged"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/> <!-- 2 is old Walktype for Pistols  -->
 			<property name="Names" value="Template" />
@@ -803,7 +875,7 @@
 		</entity_class>		
 		
 		<entity_class name="npcSMGTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
-			<property name="Tags" value="entity,cp,male,npc,ranged"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/> <!-- 6 is old Walktype for rifles  -->
 			<property name="Names" value="Template" />
@@ -838,7 +910,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcM60Template" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
-			<property name="Tags" value="entity,cp,male,npc,ranged"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/> 
 			<property name="Names" value="Template" />
@@ -873,7 +945,7 @@
 		</entity_class>	
 	
 		<entity_class name="npcAK47Template" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
-			<property name="Tags" value="entity,cp,male,npc,ranged"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>
 			<property name="Names" value="Template" />
@@ -908,7 +980,7 @@
 		</entity_class>
 		
 		<entity_class name="npcPipeMGTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
-			<property name="Tags" value="entity,cp,male,npc,ranged"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>
 			<property name="Names" value="Template" />
@@ -944,7 +1016,7 @@
 		
 		
 		<entity_class name="npcTRifleTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
-			<property name="Tags" value="entity,cp,male,npc,ranged"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>
 			<property name="Names" value="Template" />
@@ -979,7 +1051,7 @@
 		</entity_class>	
 
 		<entity_class name="npcPipeRifleTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
-            <property name="Tags" value="entity,cp,male,npc,ranged"/>
+            <property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
             <property name="WalkType" value="7"/>
 			<property name="Names" value="Template" />
@@ -1016,7 +1088,7 @@
 		
 		
 		<entity_class name="npcHRifleTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
-            <property name="Tags" value="entity,cp,male,npc,ranged"/>
+            <property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
             <property name="WalkType" value="7"/>
 			<property name="Names" value="Template" />
@@ -1051,7 +1123,7 @@
         </entity_class>    		
 		
 		<entity_class name="npcSRifleTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
-            <property name="Tags" value="entity,cp,male,npc,ranged"/>
+            <property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
             <property name="WalkType" value="7"/>
 			<property name="Names" value="Template" />
@@ -1086,7 +1158,7 @@
         </entity_class>   
 
 		<entity_class name="npcPipeShotgunTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
-			<property name="Tags" value="entity,cp,male,npc,ranged"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>
 			<property name="Names" value="Template" />
@@ -1123,7 +1195,7 @@
  		
 	
 		<entity_class name="npcPShotgunTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
-			<property name="Tags" value="entity,cp,male,npc,ranged"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>
 			<property name="Names" value="Template" />
@@ -1158,7 +1230,7 @@
 		</entity_class> 
 		
 		<entity_class name="npcAShotgunTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
-			<property name="Tags" value="entity,cp,male,npc,ranged"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>
 			<property name="Names" value="Template" />
@@ -1193,7 +1265,7 @@
 		</entity_class> 
 
 		<entity_class name="npcLBowTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
-			<property name="Tags" value="entity,cp,male,npc,ranged"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>
 			<property name="Names" value="Template" />
@@ -1228,7 +1300,7 @@
 		</entity_class> 	
 		
 		<entity_class name="npcXBowTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
-			<property name="Tags" value="entity,cp,male,npc,ranged"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>
 			<property name="Names" value="Template" />
@@ -1267,7 +1339,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcRocketLTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
-			<property name="Tags" value="entity,cp,male,npc,ranged"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>
 			<property name="Names" value="Template" />
@@ -1313,7 +1385,7 @@
 			<property name="Mass" value="120"/>
 			<property name="Weight" value="70"/>
 			<property name="PushFactor" value="1"/>				
-			<property name="Tags" value="entity,cp,npc,animal"/>			
+			<property name="Tags" value="entity,npc,animal"/>			
 			<property name="Prefab" value="NPC"/>
 			<property name='Class' value='EntityAliveSDX, SCore' />
 			<property name="Parent" value="Enemies"/>
@@ -1407,8 +1479,9 @@
 		</entity_class> 
 
 		<entity_class name="npcAnimalRangedTemplate" extends="npcAnimalMeleeTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Faction" value="whiteriver"/>
-			<property name="Tags" value="entity,cp,npc,pets"/>
+			<property name="Tags" value="entity,npc,pets"/>
 			<property name="MoveSpeed" value="0.3"/> 
 			<property name="MoveSpeedAggro" value="1.1,1.1"/> 
 			<property name="MoveSpeedPanic" value="1.1"/>
@@ -1612,7 +1685,7 @@
 			<property name="Class" value="EntityHornet"/>
 			<property name="LookAtAngle" value="0"/> <!-- A19 , add if you dont want animals to head track  -->			
 			<property name="Mesh" value="#@modfolder:Resources/XythAnimals.unity3d?Robin_X" />
-			<property name="Tags" value="entity,cp,animal,timid,template"/>
+			<property name="Tags" value="entity,animal,timid,template"/>
 			<property name="Faction" value="animals"/>
 			<property name="SurfaceCategory" value="organic"/>
 			<property name="AvatarController" value="AvatarAnimalController"/> 
@@ -1684,7 +1757,7 @@
 		
 		<entity_class name="zombieRegularTemplate"> <!-- This is for custom zombies -->
 			<property name="EntityType" value="Zombie"/> 
-			<property name="Tags" value="entity,cp,male,zombie,walker,melee,template"/>  <!-- entity/sex/type/role/attacktype: Entity is required for code filtering, sex for sound filtering, type/role and Atype for buff filtering.  These DO NOT Extend! -->
+			<property name="Tags" value="entity,male,zombie,walker,melee,template"/>  <!-- entity/sex/type/role/attacktype: Entity is required for code filtering, sex for sound filtering, type/role and Atype for buff filtering.  These DO NOT Extend! -->
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="LookAtAngle" value="60"/> 
 			<property name="Mesh" value="Zombies/zombieStandardBoeRagdoll"/>
@@ -1840,7 +1913,7 @@
 		
 		<entity_class name="zombieRegularFemaleTemplate" extends="zombieRegularTemplate">
 			<property name="HideInSpawnMenu" value="true"/>
-			<property name="Tags" value="entity,cp,female,zombie,walker,template"/> 
+			<property name="Tags" value="entity,female,zombie,walker,template"/> 
 			<property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam"/>
 			<property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert"/>
 			<property name="SoundAttack" value="Enemies/Base_Zombie_Female2/zombiefemale2attack"/>
@@ -1852,13 +1925,13 @@
 		
 		<entity_class name="zombieRegularAltTemplate" extends="zombieRegularTemplate">
 			<property name="HideInSpawnMenu" value="true"/>
-			<property name="Tags" value="entity,cp,male,zombie,walker,template,alt"/> <!-- Zombies will attack other zombies if hit by them  -->
+			<property name="Tags" value="entity,male,zombie,walker,template,alt"/> <!-- Zombies will attack other zombies if hit by them  -->
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityAlive"/>
 		</entity_class> 
 			
 		<entity_class name="zombieBruteTemplate" extends="zombieRegularTemplate">
 			<property name="HideInSpawnMenu" value="true"/>
-			<property name="Tags" value="entity,cp,male,zombie,walker,template"/>
+			<property name="Tags" value="entity,male,zombie,walker,template"/>
 			<property name="Mesh" value="Zombies/zombieStandardHawaiianRagdoll"/>
 			<property name="SoundRandom" value="Enemies/Acid_Puking_Hulk/hulkroam"/>
 			<property name="SoundAlert" value="Enemies/Acid_Puking_Hulk/hulkalert"/>
@@ -1886,7 +1959,7 @@
 
 		<entity_class name="zombieBossTemplate" extends="zombieRegularTemplate">
 			<property name="HideInSpawnMenu" value="true"/>
-			<property name="Tags" value="entity,cp,male,zombie,walker,feral,template"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral,template"/>
 			<property name="Mesh" value="Zombies/zombieStandardFeralRagdoll"/>
 			<property name="SoundRandom" value="Enemies/Feral_Zombie/zombieferalroam"/>
 			<property name="SoundAlert" value="Enemies/Feral_Zombie/zombieferalalert"/>
@@ -1914,7 +1987,7 @@
 
 		<entity_class name="zombieCopTemplate" extends="zombieRegularTemplate">
 			<property name="HideInSpawnMenu" value="true"/>
-			<property name="Tags" value="entity,cp,male,zombie,walker,template"/>
+			<property name="Tags" value="entity,male,zombie,walker,template"/>
 			<property name="Mesh" value="Zombies/zombieStandardCopRagdoll"/>
 			<property name="Class" value="EntityZombieCop"/>
 			<property name="WalkType" value="1"/>
@@ -1977,7 +2050,7 @@
 		
 		<entity_class name="zombieAnimalTemplate" >
 			<property name="HideInSpawnMenu" value="true"/>
-			<property name="Tags" value="entity,cp,animal,hostile,template"/>
+			<property name="Tags" value="entity,animal,hostile,template"/>
 			<property name="Mesh" value="#@modfolder:Resources/guppyZombieAnimals.unity3d?guppyCreepyCrawly"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="Prefab" value="NPC"/>
@@ -2074,7 +2147,7 @@
 			<property name="Mass" value="150"/>
 			<property name="Weight" value="70"/>
 			<property name="PushFactor" value="30"/>				
-			<property name="Tags" value="entity,cp,npc,mech"/>			
+			<property name="Tags" value="entity,npc,mech"/>			
 			<property name="Prefab" value="NPC"/>
 			<property name='Class' value='EntityAliveSDX, SCore' />
 			<property name="Parent" value="Enemies"/>
@@ -2191,7 +2264,7 @@
 		<!--  Nurse  -->
 		
 		<entity_class name="npcNurseEmptyHand" extends="npcEmptyHandTemplate"> 
-			<property name="Tags" value="entity,female,cp,npc,melee"/> <!-- cp tag means use the bonebased fire particle  -->
+			<property name="Tags" value="entity,female,npc,melee,cp"/> <!-- cp tag means use the bonebased fire particle  -->
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -2231,15 +2304,8 @@
 			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 			
 		</entity_class>	
 		
-		<entity_class name="npcNurseEmptyHandBloodMoon" extends="npcNurseEmptyHand"> <!-- The BM versions do not NRE on bloodmoon spawn  -->
-			<property name="Tags" value="entity,female,cp,npc,melee,bandit"/> <!-- cp tag means use the bonebased fire particle  -->
-			<property name="Faction" value="bandits"/>
-			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
-			<property name="Class" value="EntityEnemySDX, SCore" /> <!-- New class  -->
-		</entity_class>	
-
 		<entity_class name="npcNurseClub" extends="npcClubTemplate"> 
-			<property name="Tags" value="entity,female,cp,npc,melee"/>
+			<property name="Tags" value="entity,female,npc,melee,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -2279,16 +2345,8 @@
 			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 				
 		</entity_class>
 		
-		<entity_class name="npcNurseClubBloodMoon" extends="npcNurseClub"> <!-- Testing: The BM versions should not NRE on bloodmoon spawn  -->
-			<property name="Tags" value="entity,female,cp,npc,melee"/> <!-- cp tag means use the bonebased fire particle  -->
-			<property name="Faction" value="bandits"/>
-			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
-			<property name="Class" value="EntityEnemySDX, SCore" /> <!-- New class  -->
-		</entity_class>	
-		
-		
 		<entity_class name="npcNurseKnife" extends="npcKnifeTemplate"> 
-			<property name="Tags" value="entity,female,cp,npc,melee"/>
+			<property name="Tags" value="entity,female,npc,melee,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -2329,7 +2387,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcNurseAxe" extends="npcAxeTemplate"> 
-			<property name="Tags" value="entity,female,cp,npc,melee"/>
+			<property name="Tags" value="entity,female,npc,melee,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -2369,7 +2427,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcNurseSpear" extends="npcSpearTemplate"> 
-			<property name="Tags" value="entity,female,cp,npc,melee"/>
+			<property name="Tags" value="entity,female,npc,melee,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -2408,7 +2466,7 @@
 		</entity_class>			
 		
 		<entity_class name="npcNurseBat" extends="npcBatTemplate"> 
-			<property name="Tags" value="entity,female,cp,npc,melee"/>
+			<property name="Tags" value="entity,female,npc,melee,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -2449,7 +2507,7 @@
 		</entity_class>			
 		
 		<entity_class name="npcNurseMachete" extends="npcMacheteTemplate"> 
-			<property name="Tags" value="entity,female,cp,npc,melee"/>
+			<property name="Tags" value="entity,female,npc,melee,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -2489,7 +2547,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcNurseSMG" extends="npcSMGTemplate"> 
-			<property name="Tags" value="entity,female,cp,npc,ranged"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
@@ -2526,15 +2584,8 @@
 			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 	
 		</entity_class>	
 		
-		<entity_class name="npcNurseSMGBloodMoon" extends="npcNurseSMG"> 
-			<property name="Tags" value="entity,female,cp,npc,ranged,bandit"/>
-			<property name="Faction" value="bandits"/>
-			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
-			<property name="Class" value="EntityEnemySDX, SCore" /> <!-- New class  -->
-		</entity_class>	
-		
 		<entity_class name="npcNurseM60" extends="npcM60Template"> 
-			<property name="Tags" value="entity,female,cp,npc,ranged"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -2571,7 +2622,7 @@
 		</entity_class>
 		
 		<entity_class name="npcNursePipePistol" extends="npcPipePistolTemplate"> 
-			<property name="Tags" value="entity,female,cp,npc,ranged"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -2608,7 +2659,7 @@
 		</entity_class>			
 		
 		<entity_class name="npcNursePistol" extends="npcPistolTemplate"> 
-			<property name="Tags" value="entity,female,cp,npc,ranged"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -2646,7 +2697,7 @@
 		
 		
 		<entity_class name="npcNurseDPistol" extends="npcDPistolTemplate"> 
-			<property name="Tags" value="entity,female,cp,npc,ranged"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -2683,7 +2734,7 @@
 		</entity_class>	
 
 		<entity_class name="npcNursePipeMG" extends="npcPipeMGTemplate"> 
-			<property name="Tags" value="entity,female,cp,npc,ranged"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -2720,7 +2771,7 @@
 		</entity_class>
 
 		<entity_class name="npcNurseAK47" extends="npcAK47Template"> 
-			<property name="Tags" value="entity,female,cp,npc,ranged"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />
 			<property name="DanceType" value="2" />
@@ -2757,7 +2808,7 @@
 		</entity_class>
 		
 		<entity_class name="npcNurseTRifle" extends="npcTRifleTemplate"> 
-			<property name="Tags" value="entity,female,cp,npc,ranged"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -2794,7 +2845,7 @@
 		</entity_class>	
 
 		<entity_class name="npcNursePipeRifle" extends="npcPipeRifleTemplate"> 
-			<property name="Tags" value="entity,female,cp,npc,ranged"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -2833,7 +2884,7 @@
 		
 		
 		<entity_class name="npcNurseHRifle" extends="npcHRifleTemplate"> 
-			<property name="Tags" value="entity,female,cp,npc,ranged"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -2871,7 +2922,7 @@
 		</entity_class>    		
 		
 		<entity_class name="npcNurseSRifle" extends="npcSRifleTemplate"> 
-			<property name="Tags" value="entity,female,cp,npc,ranged"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -2909,7 +2960,7 @@
 		</entity_class> 
 		
 		<entity_class name="npcNursePipeShotgun" extends="npcPipeShotgunTemplate"> 
-			<property name="Tags" value="entity,female,cp,npc,ranged"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />
 			<property name="DanceType" value="2" />
@@ -2946,7 +2997,7 @@
 		</entity_class> 		
 		
 		<entity_class name="npcNursePShotgun" extends="npcPShotgunTemplate"> 
-			<property name="Tags" value="entity,female,cp,npc,ranged"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />
 			<property name="DanceType" value="2" />
@@ -2983,7 +3034,7 @@
 		</entity_class> 
 		
 		<entity_class name="npcNurseAShotgun" extends="npcAShotgunTemplate"> 
-			<property name="Tags" value="entity,female,cp,npc,ranged"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />
 			<property name="DanceType" value="2" />
@@ -3020,7 +3071,7 @@
 		</entity_class> 		
 		
 		<entity_class name="npcNurseXBow" extends="npcXBowTemplate"> 
-			<property name="Tags" value="entity,female,cp,npc,ranged"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -3057,7 +3108,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcNurseLBow" extends="npcLBowTemplate"> 
-			<property name="Tags" value="entity,female,cp,npc,ranged"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -3094,7 +3145,7 @@
 		</entity_class> 
 		
 		<entity_class name="npcNurseRocketL" extends="npcRocketLTemplate"> 
-			<property name="Tags" value="entity,female,cp,npc,ranged"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -3130,15 +3181,7 @@
 			<property name="AIPackages" value="NPCBasic, NPCLauncher, NPCMedic, NPCHired"/>
 		</entity_class> 	
 		
-		<entity_class name="npcNurseRocketLBM" extends="npcNurseRocketL"> 
-			<property name="Tags" value="entity,female,cp,npc,ranged,bandit"/>
-			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
-			<property name="Class" value="EntityEnemySDX, SCore" />
-			<property name="Faction" value="bandits"/>
-		</entity_class> 
-
-
-		<!--  Harley  -->	
+		<!--  w  -->	
 		
 		<entity_class name="npcHarleyEmptyHand" extends="npcEmptyHandTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit"/>
@@ -3165,7 +3208,77 @@
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>	
+		
+		<entity_class name="npcHarleyRaiderEmptyHand" extends="npcHarleyEmptyHand"> 
+			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="HarleyDie"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="HarleyRandom" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+			<property name="Class" value="EntityAliveSDX, SCore" /> 
+			<property name="IsEnemyEntity" value="true"/> 
+			<property name="LootListAlive" value=""/> <!-- removing these two properties removes the E when alive and on death but disables the inventory  -->	
+			<property name="NPCID" value=""/>
+			<property name="AIPackages" value="NPCBasic, NPCMelee"/> 
+		</entity_class>			
 
+		<entity_class name="npcHarleyBMRaiderEmptyHand" extends="npcHarleyRaiderEmptyHand"> 
+			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="HarleyDie"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="HarleyRandom" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+			<property name="Class" value="EntityEnemySDX, SCore" />
+			<property name="IsEnemyEntity" value="true"/> 
+			<property name="LootListAlive" value=""/> 
+			<property name="NPCID" value=""/>
+			<property name="AIPackages" value="NPCBasic, NPCMelee"/> 
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="2.0, 2.0"/> 
+			<property name="MoveSpeedPanic" value="2.5"/>
+			<property name="MoveSpeedRand" value="-.2, .25"/> 
+			<effect_group>
+				<passive_effect name="WalkSpeed" operation="base_set" value="1"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="2.0"/> 
+			</effect_group> 	
+		</entity_class>			
+		
 		<entity_class name="npcHarleyClub" extends="npcClubTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit"/>
 			<property name="Faction" value="bandits"/>
@@ -3737,7 +3850,8 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+			<property name="AIPackages" value="NPCBasic, NPCLauncher"/>
 		</entity_class>			
 		
 		<!--  Baker  -->
@@ -3963,7 +4077,7 @@
 		
 		<!--  NPC and Dumb animals  -->	
 		<entity_class name="npcAnimalFox" extends="npcAnimalMeleeTemplate">
-			<property name="Tags" value="entity,cp,animal,npc,npcAnimalFox,perkAT03"/>
+			<property name="Tags" value="entity,animal,npc,npcAnimalFox,perkAT03"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>

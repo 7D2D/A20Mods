@@ -82,6 +82,8 @@
 			<AudioClip ClipName="#@modfolder:Resources/HarleySounds.unity3d?Iseeyou" />
 			<AudioClip ClipName="#@modfolder:Resources/HarleySounds.unity3d?Onemore" />
 			<AudioClip ClipName="#@modfolder:Resources/HarleySounds.unity3d?Bigape" />
+			<AudioClip ClipName="#@modfolder:Resources/HarleySounds.unity3d?Ominous" />
+			<AudioClip ClipName="#@modfolder:Resources/HarleySounds.unity3d?Wannaplay" />
 			<LocalCrouchVolumeScale name="1.0" />
 			<CrouchNoiseScale name="0.5" />
 			<NoiseScale name="1" />
@@ -154,6 +156,8 @@
 			<Channel name="Mouth"/>
 			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
 			<AudioClip ClipName="#@modfolder:Resources/HarleySounds.unity3d?Die02" />
+			<AudioClip ClipName="#@modfolder:Resources/HarleySounds.unity3d?Die01" />
+			<AudioClip ClipName="#@modfolder:Resources/HarleySounds.unity3d?Isntfunny" />
 			<LocalCrouchVolumeScale name="1.0" />
 			<CrouchNoiseScale name="0.5" />
 			<NoiseScale name="1" />
