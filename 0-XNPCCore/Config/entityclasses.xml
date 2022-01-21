@@ -413,10 +413,10 @@
 			
 			<effect_group name="ReduceDamageToPlayers">
 				<requirement name="EntityTagCompare" target="other" tags="player"/>
-				<requirement name="HoldingItemHasTags" tags="ranged"/>
+				<requirement name="HoldingItemHasTags" tags="ranged,melee"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="-.2"/>
 			</effect_group>
-
+			
 			<!--  Customization properties for defualt, passive, basic characters  -->
 			
 			<property name="AIPackages" value="NPCBasic, NPCMeleeBasic"/>  
