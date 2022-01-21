@@ -54,10 +54,10 @@
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
       </response>
 	  
-	  <response id="Patrol" text="Patrol your route" >
+	<!--  <response id="Patrol" text="Patrol your route" >
         <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderPatrol" />
-      </response>
+      </response> -->
 
  <!-- <response id="GuardHere" text="Guard here" >
         <requirement type="HiredSDX, SCore" requirementtype="Hide" />
@@ -69,10 +69,10 @@
         <action type="OpenWindowSDX, SCore" id="SetCode" />
       </response> -->
 	  
-	  <response id="Loot" text="Help me loot" >
+	  <!-- <response id="Loot" text="Help me loot" >
         <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
-      </response>	  
+      </response>	  -->
 
 	  <response id="Dismiss" text="Dismiss" >
         <requirement type="Leader, SCore" requirementtype="Hide" />
@@ -180,7 +180,7 @@
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
       </response>
 	  
-	  <response id="Patrol" text="Patrol your route" >
+	<!--  <response id="Patrol" text="Patrol your route" >
         <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderPatrol" />
       </response>
@@ -188,9 +188,9 @@
 	  <response id="Loot" text="Loot around here" >
         <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" />
-      </response>	  
+      </response>	 
 	
- <!--     <response id="GuardHere" text="Guard here" >
+    <response id="GuardHere" text="Guard here" >
         <requirement type="HiredSDX, SCore" requirementtype="Hide" />
          <action type="ExecuteCommandSDX, SCore" id="GuardHere" />
       </response> -->

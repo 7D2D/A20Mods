@@ -134,16 +134,12 @@
 
 	<append xpath="/entity_classes">
 	
-	<!-- Human Melee and Ranged Base Templates, hirable, default neutral faction-->
+	<!-- Human Melee Basic Templates, non-hirable, no interactable, default neutral faction , change faction on character -->
 
 		<entity_class name="npcMeleeTemplate"> 
 			<property name="Class" value="EntityAliveSDX, SCore" /> 
-			<property name="NPCID" value="spheretest"/>
 			<property name="EntityType" value="Player"/>
 			<property name="Tags" value="entity,male,npc,melee"/> <!-- entity/sex/type/role/attacktype/name: Entity is required for code filtering, sex for sound filtering, type/role and Atype for buff filtering.  These DO NOT Extend! -->
-			<property name="Faction" value="whiteriver"/>
-			<property name="IsEnemyEntity" value="false"/> 
-			<property name="LootListAlive" value="traderNPC"/> <!-- removing this removes the E on death but disables NPC inventory  -->
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="HideInSpawnMenu" value="true"/> <!-- A19  -->
@@ -204,8 +200,6 @@
 			<property name="HasDeathAnim" value="true"/>
 			<property name="ParticleOnDeath" value="blood_death"/>
 			<property name="SurfaceCategory" value="organic"/> 
-		
-			
 			  <!-- Must match gore dismemberment tags -->
 			  <!-- Override parts in the derrived class -->
 			  <!-- The first prefab in each list is the default -->
@@ -220,8 +214,6 @@
 			  <property name="DismemberTag_L_LeftLowerArmGore" value="Prefabs/LowerArmGore"/>
 			  <property name="DismemberTag_L_RightUpperArmGore" value="Prefabs/UpperArmGore"/>
 			  <property name="DismemberTag_L_RightLowerArmGore" value="Prefabs/LowerArmGore"/> 
-			  
-			  
 			  <!--	broken, will lock up game, do not try yet	<property name="DismemberTag_L_HeadGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/Head;Prefabs/Dismemberment/ZombieSteve/Blade/Head" data="target=Neck+scale=1,0,1+atp=true+type=blunt+detach=true;target=Neck+scale=1,0,1+atp=true+type=blade+detach=true"/>
 			  <property name="DismemberTag_L_LeftUpperLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftUpperLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftUpperLeg" data ="target=LeftUpLeg+scale=.8,.4,.8+type=blunt+detach=true;target=LeftUpLeg+scale=.5,.1,.5+atp=true+type=blade+detach=true"/>
 			  <property name="DismemberTag_L_LeftLowerLegGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerLeg;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerLeg" data ="target=LeftLeg+scale=.5,.05,.5+atp=true+type=blunt+detach=true;target=LeftLeg+scale=0,0,0+atp=true+type=blade+detach=true"/>
@@ -231,7 +223,6 @@
 			  <property name="DismemberTag_L_LeftLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerArm" data ="target=LeftForeArmRoll+scale=.15,1,1+type=blunt+detach=true;target=LeftForeArmRoll+scale=.01,.85,.85+type=blade+detach=true"/>
 			  <property name="DismemberTag_L_RightUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperArm" data ="target=RightArmRoll+scale=0.2,1,1+atp=true+type=blunt+detach=true;target=RightArmRoll+scale=.1,.8,.8+atp=true+type=blade+detach=true"/>
 			  <property name="DismemberTag_L_RightLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerArm" data ="target=RightForeArmRoll+scale=.15,1,1+atp=true+type=blunt+detach=true;target=RightForeArmRoll+scale=.1,.9,.9+type=blade+detach=true"/>			-->  
-	  
 			<property name="DismemberMultiplierHead" value="1"/>
 			<property name="DismemberMultiplierArms" value="0"/><!-- 1 when fixed  -->
 			<property name="DismemberMultiplierLegs" value="0"/><!-- 1 when fixed  -->
@@ -274,7 +265,8 @@
 			<property name="LootDropEntityClass" value="EntityLootContainerBandit"/>
 			<!--<property name="LootDropEntityClass" value="EntityLootContainerNPC"/>-->
 			<!--<property name="MapIcon" value="ui_game_symbol_bullet_point"/> -->
-			<property name="Names" value="TemplateBob" />		
+			<property name="Names" value="" />
+			<property name="Titles" value="" />
 			<property name="Beds" value="mattressFlat" />
 			 <!-- This is the block it'll call home -->
 			<property name="HomeBlocks" value="cntNPCHomeBlock"/>
@@ -282,7 +274,6 @@
 			<property name="HireCost" value="1000" />
 			<property name="TimeStayAfterDeath" value="3"/>
 			<property name="DeadBodyHitPoints" value="1000"/>
-			<!--<property name="Buffs" value="buffNPCStatusCheck"/> -->
 			<effect_group name="Base Effects">
 				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
 				<passive_effect name="HealthMax" operation="base_set" value="300"/>
@@ -426,10 +417,18 @@
 				<passive_effect name="DamageModifier" operation="perc_add" value="-.2"/>
 			</effect_group>
 
+			<!--  Customization properties for defualt, passive, basic characters  -->
+			
+			<property name="AIPackages" value="NPCBasic, NPCMeleeBasic"/>  
+			<property name="IsEnemyEntity" value="false"/> 
+			<property name="LootListAlive" value=""/> <!-- removing these two properties removes the E when alive and on death but disables the inventory  -->	
+			<property name="NPCID" value=""/> 
+			<property name="Faction" value="whiteriver"/>
+			
+			<!-- <property name="LootListAlive" value="traderNPC"/> --> <!-- removing this removes the E on death but disables NPC inventory  -->
+			
+			
 			<!-- UAI overrides EAI if both exist -->
-			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired"/>  
-			
-			
 			<!--EAI for NPC Humans (Requires SCore) * UNSUPPORTED for A20+ * -->
 <!--			<property name="AITask-1" value="ApproachAndAttackSDX, SCore" data="class=EntityAlive,0"/>
 				<property name="AITask-2" value="ApproachAndFollowTargetSDX, SCore" data="incentives=Leader"/>
@@ -462,30 +461,19 @@
 				<property name="AITarget-4" value=""/> 		-->			
 		</entity_class>	
 		
-		<!--  Templates converting the above melee templates to non-hirable, enemy default faction   -->
+
 		
-		<entity_class name="npcMeleeRaiderTemplate" extends="npcMeleeTemplate">
+		<!--  Template converting the above melee template to Bloodmoon spawnable , change faction on character -->
+		
+		<entity_class name="npcMeleeBloodmoonTemplate" extends="npcMeleeTemplate"> 
 			<property name="HideInSpawnMenu" value="true"/>
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
-			<property name="EntityType" value="Player"/>
-			<property name="Tags" value="entity,male,npc,melee"/> 
-			<property name="Faction" value="bandits"/>
-			<property name="IsEnemyEntity" value="true"/> 
-			<property name="LootListAlive" value=""/> <!-- removing these two properties removes the E when alive and on death but disables the inventory  -->	
-			<property name="NPCID" value=""/> 	
-			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="AIPackages" value="NPCBasic, NPCMelee"/> 
-		</entity_class>	
-		
-		<entity_class name="npcMeleeBloodmoonRaiderTemplate" extends="npcMeleeRaiderTemplate"> 
 			<property name="Class" value="EntityEnemySDX, SCore" /> 
 			<property name="Tags" value="entity,male,npc,melee"/> 
-			<property name="Faction" value="bandits"/>
-			<effect_group>
-				<passive_effect name="WalkSpeed" operation="base_set" value="1"/>
-				<passive_effect name="RunSpeed" operation="base_set" value="2.0"/> 
-			</effect_group> 	
+			<property name="Faction" value="whiteriver"/>
 		</entity_class>	
+		
+		<!--  Ranged Template , change faction on character -->
+		
 		
 		<entity_class name="npcRangedTemplate" extends="npcMeleeTemplate"> 	
 			<property name="Tags" value="entity,male,npc,ranged"/>
@@ -499,34 +487,42 @@
 				<property name="BoundaryBox" value="2.0,1.8,0.4" />
 				<property name="Center" value="0.0,0.9,0.0"/>
 				</property> -->
-			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRangedBasic"/> 
 		</entity_class>	
 		
-		<!--  Templates converting the above ranged templates to non-hirable, enemy default faction   -->
+		<!--  Template converting the above ranged template to bloodmoon enabled   -->
 		
-		<entity_class name="npcRangedRaiderTemplate" extends="npcRangedTemplate">
-			<property name="HideInSpawnMenu" value="true"/>
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
-			<property name="LootListAlive" value=""/> <!-- removing these two properties removes the E when alive and on death but disables the inventory  -->	
-			<property name="NPCID" value=""/> 	
-			<property name="EntityType" value="Player"/>
-			<property name="Tags" value="entity,male,npc,melee"/> 
-			<property name="Faction" value="bandits"/>
-			<property name="IsEnemyEntity" value="true"/> 
-			<property name="AIPackages" value="NPCBasic, NPCRanged"/> 
-		</entity_class>	
 		
-		<entity_class name="npcRangedBloodmoonRaiderTemplate" extends="npcRangedRaiderTemplate"> 
+		<entity_class name="npcRangedBloodmoonTemplate" extends="npcRangedTemplate"> 
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Class" value="EntityEnemySDX, SCore" /> 
-			<property name="Tags" value="entity,male,npc,melee"/> 
-			<property name="Faction" value="bandits"/>
-			<effect_group>
-				<passive_effect name="WalkSpeed" operation="base_set" value="1"/> <!-- these were doubled do to class differences  -->
-				<passive_effect name="RunSpeed" operation="base_set" value="2.0"/> 
-			</effect_group> 	
+			<property name="Tags" value="entity,male,npc,ranged"/> 
+			<property name="Faction" value="whiteriver"/>
 		</entity_class>	
-
+		
+		<!--  Templates converting the above templates to advanced UAI and hirable, neutral default faction   -->
+		
+		<entity_class name="npcMeleeAdvancedTemplate" extends="npcMeleeTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,melee"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="IsEnemyEntity" value="false"/> 
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired"/> 
+		</entity_class>
+		
+		<entity_class name="npcRangedAdvancedTemplate" extends="npcRangedTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="IsEnemyEntity" value="false"/> 
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
+		</entity_class>		
+		
+		
 		<!-- Used for a future quest  -->
 		
 		<entity_class name="npcMeleeSavableTemplate" extends="npcMeleeTemplate"> 
@@ -538,9 +534,12 @@
 			</effect_group>	
 		</entity_class>		
 		
-		<!--  NPC Weapon Templates -->
+	<!--  NPC Weapon Templates -->
 		
-		<entity_class name="npcEmptyHandTemplate" extends="npcMeleeTemplate"><property name="HideInSpawnMenu" value="true"/>
+		<!--  EmptyHand , change faction on character-->
+		
+		<entity_class name="npcEmptyHandTemplate" extends="npcMeleeTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Tags" value="entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>			
@@ -569,26 +568,34 @@
 			</effect_group>			
 		</entity_class>	
 		
-		<!-- Examples on making a version of the unarmed "weapon" template to remove the "E" prompt on normal and bloodmoon characters  -->
+		<!-- EmptyHand "weapon" template for bloodmoon -->
 		
-		<entity_class name="npcRaiderEmptyHandTemplate" extends="npcEmptyHandTemplate"><property name="HideInSpawnMenu" value="true"/>
+		<entity_class name="npcBMEmptyHandTemplate" extends="npcEmptyHandTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Tags" value="entity,male,npc,melee"/>
 			<property name="Names" value="Template" />	
-			<property name="Faction" value="bandits"/>
+			<property name="Faction" value="whiteriver"/>
 			<property name="IsEnemyEntity" value="true"/> 
-			<property name="LootListAlive" value=""/> 
-			<property name="NPCID" value=""/> 	
-			<property name="AIPackages" value="NPCBasic, NPCMelee"/> 
-		</entity_class>			
-		
-		<entity_class name="npcBMRaiderEmptyHandTemplate" extends="npcRaiderEmptyHandTemplate"><property name="HideInSpawnMenu" value="true"/>
-			<property name="Tags" value="entity,male,npc,melee"/>
-			<property name="Names" value="Template" />	
-			<property name="Faction" value="bandits"/>
 			<property name="Class" value="EntityEnemySDX, SCore" /> 
-		</entity_class>				
-		
-		<entity_class name="npcClubTemplate" extends="npcMeleeTemplate"><property name="HideInSpawnMenu" value="true"/>
+		</entity_class>	
+
+		<!-- EmptyHand "weapon" template for advanced, hireable characters , change faction on character --> 
+
+		<entity_class name="npcAdvancedEmptyHandTemplate" extends="npcEmptyHandTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,melee"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="IsEnemyEntity" value="false"/> 
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired"/> 
+		</entity_class>
+
+	
+		<!--  Club  -->
+	
+		<entity_class name="npcClubTemplate" extends="npcMeleeTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Tags" value="entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>	
@@ -615,12 +622,35 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired"/>
+		</entity_class>
+		
+		
+		<!-- Weapon template for bloodmoon  -->
+		
+
+		<entity_class name="npcBMClubTemplate" extends="npcClubTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,melee"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedClubTemplate" extends="npcClubTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,melee"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired"/> 
 		</entity_class>
 		
 		<!-- More weapons  -->
 		
-		<entity_class name="npcKnifeTemplate" extends="npcMeleeTemplate"><property name="HideInSpawnMenu" value="true"/> 
+		<entity_class name="npcKnifeTemplate" extends="npcMeleeTemplate">
+			<property name="HideInSpawnMenu" value="true"/> 
 			<property name="Tags" value="entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>	
@@ -649,7 +679,27 @@
 			</effect_group>		
 		</entity_class>	
 		
-		<entity_class name="npcBatTemplate" extends="npcMeleeTemplate"><property name="HideInSpawnMenu" value="true"/> 
+		<entity_class name="npcBMKnifeTemplate" extends="npcKnifeTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,melee"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedKnifeTemplate" extends="npcKnifeTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,melee"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired"/> 
+		</entity_class>
+		
+		<entity_class name="npcBatTemplate" extends="npcMeleeTemplate">
+			<property name="HideInSpawnMenu" value="true"/> 
 			<property name="Tags" value="entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>	
@@ -678,7 +728,29 @@
 			</effect_group>	
 		</entity_class>	
 		
-		<entity_class name="npcAxeTemplate" extends="npcMeleeTemplate"><property name="HideInSpawnMenu" value="true"/> 
+		<entity_class name="npcBMBatTemplate" extends="npcBatTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,melee"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedBatTemplate" extends="npcBatTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,melee"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired"/> 
+		</entity_class>
+		
+		
+		
+		<entity_class name="npcAxeTemplate" extends="npcMeleeTemplate">
+			<property name="HideInSpawnMenu" value="true"/> 
 			<property name="Tags" value="entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>	
@@ -705,9 +777,32 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>			
-		</entity_class>			
+		</entity_class>		
+
+		<entity_class name="npcBMAxeTemplate" extends="npcAxeTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,melee"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedAxeTemplate" extends="npcAxeTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,melee"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired"/> 
+		</entity_class>
+
+
 		
-		<entity_class name="npcSpearTemplate" extends="npcMeleeTemplate"><property name="HideInSpawnMenu" value="true"/> 
+		
+		<entity_class name="npcSpearTemplate" extends="npcMeleeTemplate">
+			<property name="HideInSpawnMenu" value="true"/> 
 			<property name="Tags" value="entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>	
@@ -735,6 +830,28 @@
 				</triggered_effect>
 			</effect_group>				
 		</entity_class>		
+		
+		<entity_class name="npcBMSpearTemplate" extends="npcSpearTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,melee"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedSpearTemplate" extends="npcSpearTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,melee"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired"/> 
+		</entity_class>
+		
+		
+		
 		
 		<entity_class name="npcMacheteTemplate" extends="npcMeleeTemplate"><property name="HideInSpawnMenu" value="true"/> 
 			<property name="Tags" value="entity,male,npc,melee"/>
@@ -765,7 +882,29 @@
 			</effect_group>			
 		</entity_class>	
 		
-		<entity_class name="npcPipePistolTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
+		<entity_class name="npcBMMacheteTemplate" extends="npcMacheteTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,melee"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedMacheteTemplate" extends="npcMacheteTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,melee"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired"/> 
+		</entity_class>
+		
+		
+		
+		<entity_class name="npcPipePistolTemplate" extends="npcRangedTemplate">
+			<property name="HideInSpawnMenu" value="true"/> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/> <!-- 2 is old Walktype for Pistols  -->
@@ -798,9 +937,27 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
+		</entity_class>	
+		
+		<entity_class name="npcBMPipePistolTemplate" extends="npcPipePistolTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
 		</entity_class>	
 
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedPipePistolTemplate" extends="npcPipePistolTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
+		</entity_class>
+		
 		<entity_class name="npcPistolTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
@@ -839,6 +996,26 @@
 			</effect_group>	
 		</entity_class>		
 		
+		<entity_class name="npcBMPistolTemplate" extends="npcPistolTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedPistolTemplate" extends="npcPistolTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
+		</entity_class>
+		
+	
 		<entity_class name="npcDPistolTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
@@ -872,7 +1049,28 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-		</entity_class>		
+		</entity_class>	
+
+		<entity_class name="npcBMDPistolTemplate" extends="npcDPistolTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedDPistolTemplate" extends="npcDPistolTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
+		</entity_class>
+
+		
 		
 		<entity_class name="npcSMGTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
@@ -909,6 +1107,27 @@
 			</effect_group>	
 		</entity_class>	
 		
+		<entity_class name="npcBMSMGTemplate" extends="npcSMGTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedSMGTemplate" extends="npcSMGTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
+		</entity_class>		
+		
+		
+		
 		<entity_class name="npcM60Template" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
@@ -943,8 +1162,28 @@
 				</triggered_effect>
 			</effect_group>	
 		</entity_class>	
+		
+		<entity_class name="npcBMM60Template" extends="npcM60Template">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedM60Template" extends="npcM60Template"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
+		</entity_class>		
 	
-		<entity_class name="npcAK47Template" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
+		<entity_class name="npcAK47Template" extends="npcRangedTemplate">
+			<property name="HideInSpawnMenu" value="true"/> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>
@@ -979,6 +1218,25 @@
 			</effect_group>		
 		</entity_class>
 		
+		<entity_class name="npcBMAK47Template" extends="npcAK47Template">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedAK47Template" extends="npcAK47Template"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
+		</entity_class>		
+		
 		<entity_class name="npcPipeMGTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
@@ -1012,6 +1270,25 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
+		</entity_class>	
+
+		<entity_class name="npcBMPipeMGTemplate" extends="npcPipeMGTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedPipeMGTemplate" extends="npcPipeMGTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
 		</entity_class>		
 		
 		
@@ -1049,6 +1326,26 @@
 				</triggered_effect>
 			</effect_group>	
 		</entity_class>	
+		
+		<entity_class name="npcBMTRifleTemplate" extends="npcTRifleTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedTRifleTemplate" extends="npcTRifleTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
+		</entity_class>		
+		
 
 		<entity_class name="npcPipeRifleTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
             <property name="Tags" value="entity,male,npc,ranged"/>
@@ -1085,7 +1382,24 @@
 			</effect_group>	
         </entity_class>    
 
-		
+		<entity_class name="npcBMPipeRifleTemplate" extends="npcPipeRifleTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedPipeRifleTemplate" extends="npcPipeRifleTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
+		</entity_class>		
 		
 		<entity_class name="npcHRifleTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
             <property name="Tags" value="entity,male,npc,ranged"/>
@@ -1120,7 +1434,26 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-        </entity_class>    		
+        </entity_class> 
+
+ 		<entity_class name="npcBMHRifleTemplate" extends="npcHRifleTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedHRifleTemplate" extends="npcHRifleTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
+		</entity_class>  		
 		
 		<entity_class name="npcSRifleTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
             <property name="Tags" value="entity,male,npc,ranged"/>
@@ -1155,7 +1488,26 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>			
-        </entity_class>   
+        </entity_class>  
+
+		<entity_class name="npcBMSRifleTemplate" extends="npcSRifleTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedSRifleTemplate" extends="npcSRifleTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
+		</entity_class>		
 
 		<entity_class name="npcPipeShotgunTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
@@ -1192,7 +1544,24 @@
 			</effect_group>	
 		</entity_class> 
 
- 		
+		<entity_class name="npcBMPipeShotgunTemplate" extends="npcPipeShotgunTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedPipeShotgunTemplate" extends="npcPipeShotgunTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
+		</entity_class> 		
 	
 		<entity_class name="npcPShotgunTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
@@ -1229,6 +1598,25 @@
 			</effect_group>	
 		</entity_class> 
 		
+		<entity_class name="npcBMPShotgunTemplate" extends="npcPShotgunTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedPShotgunTemplate" extends="npcPShotgunTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
+		</entity_class>		
+		
 		<entity_class name="npcAShotgunTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
@@ -1262,7 +1650,26 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-		</entity_class> 
+		</entity_class>
+
+		<entity_class name="npcBMAShotgunTemplate" extends="npcAShotgunTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedAShotgunTemplate" extends="npcAShotgunTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
+		</entity_class>		
 
 		<entity_class name="npcLBowTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
@@ -1297,7 +1704,26 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-		</entity_class> 	
+		</entity_class> 
+
+		<entity_class name="npcBMLBowTemplate" extends="npcLBowTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedLBowTemplate" extends="npcLBowTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
+		</entity_class>		
 		
 		<entity_class name="npcXBowTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
@@ -1338,7 +1764,27 @@
 			</effect_group>	
 		</entity_class>	
 		
-		<entity_class name="npcRocketLTemplate" extends="npcRangedTemplate"><property name="HideInSpawnMenu" value="true"/> 
+		<entity_class name="npcBMXBowTemplate" extends="npcXBowTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedXBowTemplate" extends="npcXBowTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
+		</entity_class>		
+		
+		<entity_class name="npcRocketLTemplate" extends="npcRangedTemplate">
+			<property name="HideInSpawnMenu" value="true"/> 
 			<property name="Tags" value="entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="WalkType" value="7"/>
@@ -1373,7 +1819,27 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>	
-		</entity_class>			
+			<property name="AIPackages" value="NPCBasic, NPCRangedBasic"/> 
+		</entity_class>	
+
+		<entity_class name="npcBMRocketLTemplate" extends="npcRocketLTemplate">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/>
+			<property name="Names" value="Template" />	
+			<property name="Faction" value="whiteriver"/>
+			<property name="Class" value="EntityEnemySDX, SCore" /> 
+		</entity_class>	
+
+		<!-- Weapon template for advanced, hireable characters  -->
+
+		<entity_class name="npcAdvancedRocketLTemplate" extends="npcRocketLTemplate"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,male,npc,ranged"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="traderNPC"/>
+			<property name="NPCID" value="spheretest"/> 
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
+		</entity_class>		
 		
 		<!--  NPC Animal templates  -->		
 		
@@ -2263,13 +2729,13 @@
 
 		<!--  Nurse  -->
 		
-		<entity_class name="npcNurseEmptyHand" extends="npcEmptyHandTemplate"> 
+		<entity_class name="npcNurseEmptyHand" extends="npcAdvancedEmptyHandTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp"/> <!-- cp tag means use the bonebased fire particle  -->
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/>
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> 
 			<property name="SoundHurt" value="Player_Female/player2painlg"/>
@@ -2304,15 +2770,12 @@
 			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 			
 		</entity_class>	
 		
-		<entity_class name="npcNurseClub" extends="npcClubTemplate"> 
+		<entity_class name="npcNurseClub" extends="npcAdvancedClubTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCClubWood,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCClubWood,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCClubWood,medicalFirstAidBandage"/> 
 			<property name="SoundHurt" value="Player_Female/player2painlg"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
 			<property name="SoundDeath" value="Player_Female/player2death"/>
@@ -2345,15 +2808,12 @@
 			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 				
 		</entity_class>
 		
-		<entity_class name="npcNurseKnife" extends="npcKnifeTemplate"> 
+		<entity_class name="npcNurseKnife" extends="npcAdvancedKnifeTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCKnife,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCKnife,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCKnife,medicalFirstAidBandage"/> 
 			<property name="SoundHurt" value="Player_Female/player2painlg"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
 			<property name="SoundDeath" value="Player_Female/player2death"/>
@@ -2386,15 +2846,12 @@
 			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 					
 		</entity_class>	
 		
-		<entity_class name="npcNurseAxe" extends="npcAxeTemplate"> 
+		<entity_class name="npcNurseAxe" extends="npcAdvancedAxeTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCAxe,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCAxe,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCAxe,medicalFirstAidBandage"/> 
 			<property name="SoundHurt" value="Player_Female/player2painlg"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
 			<property name="SoundDeath" value="Player_Female/player2death"/>
@@ -2426,15 +2883,12 @@
 			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 				
 		</entity_class>	
 		
-		<entity_class name="npcNurseSpear" extends="npcSpearTemplate"> 
+		<entity_class name="npcNurseSpear" extends="npcAdvancedSpearTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCSpear,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCSpear,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCSpear,medicalFirstAidBandage"/> 
 			<property name="SoundHurt" value="Player_Female/player2painlg"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
 			<property name="SoundDeath" value="Player_Female/player2death"/>
@@ -2465,15 +2919,13 @@
 			</effect_group>				
 		</entity_class>			
 		
-		<entity_class name="npcNurseBat" extends="npcBatTemplate"> 
+		<entity_class name="npcNurseBat" extends="npcAdvancedBatTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="Titles" value="Batter,Smacker,Hitter" />
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCBatWood,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCBatWood,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCBatWood,medicalFirstAidBandage"/> 
 			<property name="SoundHurt" value="Player_Female/player2painlg"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
 			<property name="SoundDeath" value="Player_Female/player2death"/>
@@ -2506,15 +2958,12 @@
 			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 				
 		</entity_class>			
 		
-		<entity_class name="npcNurseMachete" extends="npcMacheteTemplate"> 
+		<entity_class name="npcNurseMachete" extends="npcAdvancedMacheteTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCMachete,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCMachete,medicalFirstAidBandage"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCMachete,medicalFirstAidBandage"/> 
 			<property name="SoundHurt" value="Player_Female/player2painlg"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
 			<property name="SoundDeath" value="Player_Female/player2death"/>
@@ -2546,7 +2995,7 @@
 			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 				
 		</entity_class>	
 		
-		<entity_class name="npcNurseSMG" extends="npcSMGTemplate"> 
+		<entity_class name="npcNurseSMG" extends="npcAdvancedSMGTemplate"> 
 			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
@@ -2584,7 +3033,7 @@
 			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 	
 		</entity_class>	
 		
-		<entity_class name="npcNurseM60" extends="npcM60Template"> 
+		<entity_class name="npcNurseM60" extends="npcAdvancedM60Template"> 
 			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
@@ -2621,7 +3070,7 @@
 			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 
 		</entity_class>
 		
-		<entity_class name="npcNursePipePistol" extends="npcPipePistolTemplate"> 
+		<entity_class name="npcNursePipePistol" extends="npcAdvancedPipePistolTemplate"> 
 			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
@@ -2658,7 +3107,7 @@
 			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>			
 		
-		<entity_class name="npcNursePistol" extends="npcPistolTemplate"> 
+		<entity_class name="npcNursePistol" extends="npcAdvancedPistolTemplate"> 
 			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
@@ -2696,7 +3145,7 @@
 		</entity_class>				
 		
 		
-		<entity_class name="npcNurseDPistol" extends="npcDPistolTemplate"> 
+		<entity_class name="npcNurseDPistol" extends="npcAdvancedDPistolTemplate"> 
 			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
@@ -2733,7 +3182,7 @@
 			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>	
 
-		<entity_class name="npcNursePipeMG" extends="npcPipeMGTemplate"> 
+		<entity_class name="npcNursePipeMG" extends="npcAdvancedPipeMGTemplate"> 
 			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
@@ -2770,7 +3219,7 @@
 			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>
 
-		<entity_class name="npcNurseAK47" extends="npcAK47Template"> 
+		<entity_class name="npcNurseAK47" extends="npcAdvancedAK47Template"> 
 			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />
@@ -2807,7 +3256,7 @@
 			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>
 		
-		<entity_class name="npcNurseTRifle" extends="npcTRifleTemplate"> 
+		<entity_class name="npcNurseTRifle" extends="npcAdvancedTRifleTemplate"> 
 			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
@@ -2844,7 +3293,7 @@
 			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>	
 
-		<entity_class name="npcNursePipeRifle" extends="npcPipeRifleTemplate"> 
+		<entity_class name="npcNursePipeRifle" extends="npcAdvancedPipeRifleTemplate"> 
 			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
@@ -2883,7 +3332,7 @@
 		</entity_class>    	
 		
 		
-		<entity_class name="npcNurseHRifle" extends="npcHRifleTemplate"> 
+		<entity_class name="npcNurseHRifle" extends="npcAdvancedHRifleTemplate"> 
 			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
@@ -2921,7 +3370,7 @@
 			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>    		
 		
-		<entity_class name="npcNurseSRifle" extends="npcSRifleTemplate"> 
+		<entity_class name="npcNurseSRifle" extends="npcAdvancedSRifleTemplate"> 
 			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
@@ -2959,7 +3408,7 @@
 			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class> 
 		
-		<entity_class name="npcNursePipeShotgun" extends="npcPipeShotgunTemplate"> 
+		<entity_class name="npcNursePipeShotgun" extends="npcAdvancedPipeShotgunTemplate"> 
 			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />
@@ -2996,7 +3445,7 @@
 			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class> 		
 		
-		<entity_class name="npcNursePShotgun" extends="npcPShotgunTemplate"> 
+		<entity_class name="npcNursePShotgun" extends="npcAdvancedPShotgunTemplate"> 
 			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />
@@ -3033,7 +3482,7 @@
 			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class> 
 		
-		<entity_class name="npcNurseAShotgun" extends="npcAShotgunTemplate"> 
+		<entity_class name="npcNurseAShotgun" extends="npcAdvancedAShotgunTemplate"> 
 			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />
@@ -3070,7 +3519,7 @@
 			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class> 		
 		
-		<entity_class name="npcNurseXBow" extends="npcXBowTemplate"> 
+		<entity_class name="npcNurseXBow" extends="npcAdvancedXBowTemplate"> 
 			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
@@ -3107,7 +3556,7 @@
 			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class>	
 		
-		<entity_class name="npcNurseLBow" extends="npcLBowTemplate"> 
+		<entity_class name="npcNurseLBow" extends="npcAdvancedLBowTemplate"> 
 			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
@@ -3144,7 +3593,7 @@
 			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 			
 		</entity_class> 
 		
-		<entity_class name="npcNurseRocketL" extends="npcRocketLTemplate"> 
+		<entity_class name="npcNurseRocketL" extends="npcAdvancedRocketLTemplate"> 
 			<property name="Tags" value="entity,female,npc,ranged,cp"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
@@ -3178,7 +3627,7 @@
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
 			</effect_group>				
-			<property name="AIPackages" value="NPCBasic, NPCLauncher, NPCMedic, NPCHired"/>
+			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCMedic, NPCHired"/>
 		</entity_class> 	
 		
 		<!--  w  -->	
@@ -3209,74 +3658,12 @@
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>	
 		
-		<entity_class name="npcHarleyRaiderEmptyHand" extends="npcHarleyEmptyHand"> 
+		<entity_class name="npcHarleyBMEmptyHand" extends="npcHarleyEmptyHand"> <!--  example of a bloodmoon version  -->
 			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
-			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
-			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value="HarleyAlert"/>
-			<property name="SoundAttack" value="HarleyAttack"/>
-			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="500"/> 
-			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
-			<property name="IsEnemyEntity" value="true"/> 
-			<property name="LootListAlive" value=""/> <!-- removing these two properties removes the E when alive and on death but disables the inventory  -->	
-			<property name="NPCID" value=""/>
-			<property name="AIPackages" value="NPCBasic, NPCMelee"/> 
-		</entity_class>			
-
-		<entity_class name="npcHarleyBMRaiderEmptyHand" extends="npcHarleyRaiderEmptyHand"> 
-			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit"/>
-			<property name="Faction" value="bandits"/>
-			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
-			<property name="SoundHurt" value="HarleyHurt"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="HarleyDie"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
-			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="HarleyRandom" />
-			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value="HarleyAlert"/>
-			<property name="SoundAttack" value="HarleyAttack"/>
-			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="500"/> 
-			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 			<property name="Class" value="EntityEnemySDX, SCore" />
 			<property name="IsEnemyEntity" value="true"/> 
-			<property name="LootListAlive" value=""/> 
-			<property name="NPCID" value=""/>
-			<property name="AIPackages" value="NPCBasic, NPCMelee"/> 
-			<property name="MoveSpeed" value="0.5"/> 
-			<property name="MoveSpeedAggro" value="2.0, 2.0"/> 
-			<property name="MoveSpeedPanic" value="2.5"/>
-			<property name="MoveSpeedRand" value="-.2, .25"/> 
-			<effect_group>
-				<passive_effect name="WalkSpeed" operation="base_set" value="1"/>
-				<passive_effect name="RunSpeed" operation="base_set" value="2.0"/> 
-			</effect_group> 	
 		</entity_class>			
 		
 		<entity_class name="npcHarleyClub" extends="npcClubTemplate"> 
@@ -3851,7 +4238,6 @@
 			<property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
-			<property name="AIPackages" value="NPCBasic, NPCLauncher"/>
 		</entity_class>			
 		
 		<!--  Baker  -->
@@ -3873,7 +4259,7 @@
 			<property name="Tags" value="entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/> 
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/>
 		</entity_class>
 		
 		<entity_class name="npcBakerKnife" extends="npcKnifeTemplate"> 
@@ -4028,7 +4414,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />	
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
-			<property name="AIPackages" value="NPCBasic, NPCLauncher"/>
 		</entity_class> 					
 		
 		<!--  SemiHuman Saveable Quest characters  WIP -->

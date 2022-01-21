@@ -57,7 +57,7 @@
 		<window name="windowStatement" depth="1" pos="0,-100" width="1000" height="200"
 		controller="DialogStatementWindow">
 			<rect name="content" depth="1">
-				<label name="statementLabel" depth="3" pos="0,11" size="800,200" text="{statement}" font_size="30"
+				<label name="statementLabel" depth="3" pos="0,-25" size="800,200" text="{statement}" font_size="30"
 				justify="left" pivot="top" overflow="resizeheight"/>
 			</rect>
 		</window>

@@ -16,7 +16,7 @@
 		<item name="itemNPCModHelp">
 			<property name="HoldType" value="9"/>
 			<property name="Material" value="Morganic"/>
-			<property name="Canhold" value="false"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Candrop" value="true"/>
 			<property name="CustomIcon" value="NPCHelp_icon"/>
@@ -48,7 +48,7 @@
 		<item name="itemNPCModStop">
 			<property name="HoldType" value="9"/>
 			<property name="Material" value="Morganic"/>
-			<property name="Canhold" value="false"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Candrop" value="true"/>
 			<property name="CustomIcon" value="NPCStop_icon"/>
@@ -105,7 +105,7 @@
 		<item name="itemNPCModMode">
 			<property name="HoldType" value="9"/>
 			<property name="Material" value="Morganic"/>
-			<property name="Canhold" value="false"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Candrop" value="true"/>
 			<property name="CustomIcon" value="NPCMode_icon"/>
