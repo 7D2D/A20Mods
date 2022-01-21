@@ -32,6 +32,7 @@
                         <property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+                         
 		</entity_class>
 
                 <entity_class name="RaiderMercKnife" extends="npcKnifeTemplate"> 
@@ -61,6 +62,7 @@
                         <property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+                         
 		</entity_class>
 
                 <entity_class name="RaiderMercMachete" extends="npcMacheteTemplate"> 
@@ -90,6 +92,7 @@
                         <property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+                         
 		</entity_class>
 
                 <entity_class name="RaiderMercDPistol" extends="npcDPistolTemplate"> 
@@ -229,6 +232,7 @@
                         <property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+                         
 		</entity_class>
 
                 <entity_class name="RaiderMotoAxe" extends="npcAxeTemplate"> 
@@ -242,6 +246,7 @@
                         <property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+                         
 		</entity_class>
 
                 <entity_class name="RaiderSluggerAK47" extends="npcAK47Template"> 
@@ -281,6 +286,7 @@
                         <property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+                         
 		</entity_class>
 
                 <entity_class name="RaiderSluggerAxe" extends="npcAxeTemplate"> 
@@ -294,6 +300,7 @@
                         <property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+                         
 		</entity_class>
 
                 <entity_class name="RaiderSluggerRocketL" extends="npcRocketLTemplate"> 
@@ -359,6 +366,7 @@
                         <property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+                         
 		</entity_class>
 
                 <entity_class name="RaiderPestAxe" extends="npcAxeTemplate"> 
@@ -372,6 +380,7 @@
                         <property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+                         
 		</entity_class>
 
                 <entity_class name="RaiderPestKnife" extends="npcKnifeTemplate"> 
@@ -385,6 +394,7 @@
                         <property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+                         
 		</entity_class>
 
                 <entity_class name="RaiderPestClub" extends="npcClubTemplate"> 
@@ -398,6 +408,7 @@
                         <property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+                         
 		</entity_class>
 
                 <entity_class name="RaiderPestMachete" extends="npcMacheteTemplate"> 
@@ -411,6 +422,7 @@
                         <property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+                         
 		</entity_class>
 
                 <entity_class name="RaiderBeatzSMG" extends="npcSMGTemplate"> 
@@ -463,6 +475,7 @@
                         <property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+                         
 		</entity_class>
 
                 <entity_class name="RaiderBeatzClub" extends="npcClubTemplate"> 
@@ -476,6 +489,7 @@
                         <property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+                         
 		</entity_class>
 
 		</append>	

@@ -1,0 +1,175 @@
+<configs>
+
+	<append xpath="/entity_classes">
+                
+                <!--  Fighter models by Maksim Bugrimov Purchased for use in NPC Mod  -->
+
+                <entity_class name="FireBoxerBanditEmptyHand" extends="npcEmptyHandTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,bandit,UMA2"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Names" value="Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
+                        Rusty Rylee, Samara MadEye, Jazmine Ghost, Crazy Breonna, OneEye Jaelyn, Pickpocket Samantha, Eve The Brute, Rusty Cora, Elena Nine Lives" />
+			<property name="Mesh" value="#@modfolder:Resources/PitFighterz.unity3d?FemaleFighter2Dark"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>                  
+		</entity_class>
+
+                <entity_class name="GoldilocksBanditEmptyHand" extends="npcEmptyHandTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,bandit,UMA2"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Names" value="Molly Straight Jacket, Halie Numbers, Kyra the Beast, Pegleg Mandy, Fast Fingers Sonya,
+                        Rusty Rylee, Samara MadEye, Jazmine Ghost, Crazy Breonna, OneEye Jaelyn, Pickpocket Samantha, Eve The Brute, Rusty Cora, Elena Nine Lives" />
+			<property name="Mesh" value="#@modfolder:Resources/PitFighterz.unity3d?FemaleFighter1Dark"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>                  
+		</entity_class>
+
+                <entity_class name="MMABanditEmptyHand" extends="npcEmptyHandTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />			
+			<property name="Mesh" value="#@modfolder:Resources/PitFighterz.unity3d?MaleFighter1Dark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+                         
+		</entity_class>
+
+                <entity_class name="KarateBanditEmptyHand" extends="npcEmptyHandTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="Names" value="King Moneybags,Colby Bullseye,Prince Scarface,Poison Rhett,Action Priestly,Aron the Pillager,
+                         Rusty Redman,Barkley Black Eye,Rober the Bull,Bulletproof Allen,Mad Watkins,Farley Grin,Wallis the Bandit,Cliff Muscles,
+                         Squinty Thorne,Sly Bert,Mad Dog" />			
+			<property name="Mesh" value="#@modfolder:Resources/PitFighterz.unity3d?MaleFighter2Dark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+                         
+		</entity_class>
+
+                <entity_class name="FireBoxerSurvivorEmptyHand" extends="npcEmptyHandTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,UMA2"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Holly,Julia,Abby,Faith,Diane,Grace,Jessie,Danielle,Cherry,Leah,Joy,Anna,Zoe" />
+			<property name="Mesh" value="#@modfolder:Resources/PitFighterz.unity3d?FemaleFighter2Dark"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>                  
+		</entity_class>
+
+                <entity_class name="GoldilocksSurvivorEmptyHand" extends="npcEmptyHandTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,UMA2"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Holly,Julia,Abby,Faith,Diane,Grace,Jessie,Danielle,Cherry,Leah,Joy,Anna,Zoe" />
+			<property name="Mesh" value="#@modfolder:Resources/PitFighterz.unity3d?FemaleFighter1Dark"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>                  
+		</entity_class>
+
+                <entity_class name="MMASurvivorEmptyHand" extends="npcEmptyHandTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="Names" value="Rex,Dan,Lucas,Tom,Mike,Jack,Bill,Brad,Sam,Rick,Frank,Jake,Nick,Jim,Stan" />			
+			<property name="Mesh" value="#@modfolder:Resources/PitFighterz.unity3d?MaleFighter1Dark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+                         
+		</entity_class>
+
+                <entity_class name="KarateSurvivorEmptyHand" extends="npcEmptyHandTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="Names" value="Rex,Dan,Lucas,Tom,Mike,Jack,Bill,Brad,Sam,Rick,Frank,Jake,Nick,Jim,Stan" />
+			<property name="Mesh" value="#@modfolder:Resources/PitFighterz.unity3d?MaleFighter2Dark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+                         
+		</entity_class>
+
+		</append>	
+	
+</configs>

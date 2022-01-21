@@ -1,6 +1,53 @@
 <configs>
+
+         <insertBefore xpath="/entitygroups/entitygroup[starts-with(@name, 'WildGame')]/entity[@name='none']">
+                <entity name="survivorReconMaleRocketL" prob=".1" />
+                <entity name="survivorReconMaleTRifle" prob=".1" />
+		<entity name="survivorReconMaleM60" prob=".1" />
+		<entity name="survivorReconMaleAK47" prob=".1" />
+                <entity name="survivorReconMaleClub" prob=".1" />
+	        <entity name="survivorReconFemaleClub" prob=".1" />
+                <entity name="survivorReconFemaleTRifle" prob=".1" />
+		<entity name="survivorReconFemaleM60" prob=".1" />
+		<entity name="survivorReconFemaleAK47" prob=".1" />
+		<entity name="survivorVaultSecurityMalePistol" prob=".1" />
+                <entity name="survivorVaultSecurityMaleSMG" prob=".1" />
+		<entity name="survivorVaultBossPistol" prob=".1" />
+                <entity name="survivorVaultResidentMalePistol" prob=".1" />
+                <entity name="survivorVaultResidentMalePipeMG" prob=".1" />
+                <entity name="survivorVaultResidentFemalePipeMG" prob=".1" />
+                <entity name="survivorVaultSecurityFemalePistol" prob=".1" />
+                <entity name="survivorVaultSecurityFemaleSMG" prob=".1" />
+		<entity name="survivorVaultDoctorPistol" prob=".1" />
+                <entity name="survivorVaultResidentFemalePistol" prob=".1" />
+                <entity name="survivorVaultSecurityMaleClub" prob=".1" />
+		<entity name="survivorVaultBossClub" prob=".1" />
+		<entity name="survivorVaultResidentMaleClub" prob=".1" />
+                <entity name="survivorVaultSecurityFemaleClub" prob=".1" />
+		<entity name="survivorVaultDoctorClub" prob=".1" />
+		<entity name="survivorVaultResidentFemaleClub" prob=".1" />
+		<entity name="survivorVaultResidentMaleKnife" prob=".1" />
+                <entity name="survivorVaultBossKnife" prob=".1" />
+                <entity name="survivorVaultResidentFemaleKnife" prob=".1" />
+                <entity name="survivorVaultDoctorKnife" prob=".1" />
+		<entity name="survivorVaultResidentMaleBat" prob=".1" />
+		<entity name="survivorVaultSecurityMaleBat" prob=".1" />
+		<entity name="survivorVaultSecurityFemaleBat" prob=".1" />
+		<entity name="survivorVaultSecurityMaleAxe" prob=".1" />
+                <entity name="survivorVaultResidentMaleAxe" prob=".1" />
+		<entity name="survivorVaultSecurityFemaleAxe" prob=".1" />
+                <entity name="survivorVaultResidentFemaleAxe" prob=".1" />
+                <entity name="survivorArmyPowerArmorMaleRocketL" prob=".1" />
+                <entity name="survivorArmyPowerArmorMaleM60" prob=".1" />
+                <entity name="survivorArmyPowerArmorMaleAK47" prob=".1" />
+                <entity name="survivorArmyPowerArmorFemaleAK47" prob=".1" />
+                <entity name="survivorArmyPowerArmorFemaleRocketL" prob=".1" />
+                <entity name="survivorArmyPowerArmorFemaleM60" prob=".1" />
+        </insertBefore> 	
 	
-	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'WildGameForest')]">
+       
+       
+	<insertBefore xpath="/entitygroups/entitygroup[starts-with(@name, 'WildGame')]/entity[@name='none']">
                 <entity name="npcReconMaleRocketL" prob=".1" />
                 <entity name="npcReconMaleTRifle" prob=".1" />
 		<entity name="npcReconMaleM60" prob=".1" />
@@ -43,6 +90,7 @@
                 <entity name="npcArmyPowerArmorFemaleAK47" prob=".1" />
                 <entity name="npcArmyPowerArmorFemaleRocketL" prob=".1" />
                 <entity name="npcArmyPowerArmorFemaleM60" prob=".1" />
-        </append> 	
+        </insertBefore> 
+       	
 	
 </configs>

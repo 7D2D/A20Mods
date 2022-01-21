@@ -1,6 +1,6 @@
 <configs>
-	
-	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'WildGameForest')]">
+
+	<insertBefore xpath="/entitygroups/entitygroup[starts-with(@name, 'WildGame')]/entity[@name='none']">
                 <entity name="RaiderMercClub" prob=".1" />
                 <entity name="RaiderMercKnife" prob=".1" />
                 <entity name="RaiderMercMachete" prob=".1" />
@@ -30,6 +30,6 @@
 		<entity name="RaiderBeatzDPistol" prob=".1" />
 		<entity name="RaiderBeatzBat" prob=".1" />
 		<entity name="RaiderBeatzClub" prob=".1" />
-          </append> 	
+          </insertBefore> 	
 	
 </configs>

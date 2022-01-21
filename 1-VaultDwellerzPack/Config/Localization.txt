@@ -1,46 +1,46 @@
-Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+Key,english,japanese
 
-npcArmyPowerArmorMaleRocketL,entityclasses,Entity,,,Power Armor Operator,,,,,,,,,,,,,
-npcArmyPowerArmorMaleM60,entityclasses,Entity,,,Power Armor Operator,,,,,,,,,,,,,
-npcArmyPowerArmorMaleAK47,entityclasses,Entity,,,Power Armor Operator,,,,,,,,,,,,,
-npcReconMaleRocketL,entityclasses,Entity,,,Reconnaissance,,,,,,,,,,,,,
-npcReconMaleTRifle,entityclasses,Entity,,,Reconnaissance,,,,,,,,,,,,,
-npcReconMaleAK47,entityclasses,Entity,,,Reconnaissance,,,,,,,,,,,,,
-npcReconMaleM60,entityclasses,Entity,,,Reconnaissance,,,,,,,,,,,,,
-npcReconMaleClub,entityclasses,Entity,,,Reconnaissance,,,,,,,,,,,,,
-npcVaultSecurityMaleClub,entityclasses,Entity,,,Vault Security,,,,,,,,,,,,,
-npcVaultBossClub,entityclasses,Entity,,,Vault Director,,,,,,,,,,,,,
-npcVaultResidentMaleClub,entityclasses,Entity,,,Vault Resident,,,,,,,,,,,,,
-npcVaultBossKnife,entityclasses,Entity,,,Vault Director,,,,,,,,,,,,,
-npcVaultResidentMaleKnife,entityclasses,Entity,,,Vault Resident,,,,,,,,,,,,,
-npcVaultResidentMaleBat,entityclasses,Entity,,,Vault Resident,,,,,,,,,,,,,
-npcVaultSecurityMaleBat,entityclasses,Entity,,,Vault Security,,,,,,,,,,,,,
-npcVaultSecurityMaleAxe,entityclasses,Entity,,,Vault Security,,,,,,,,,,,,,
-npcVaultResidentMaleAxe,entityclasses,Entity,,,Vault Resident,,,,,,,,,,,,,
-npcVaultResidentMalePistol,entityclasses,Entity,,,Vault Resident,,,,,,,,,,,,,
-npcVaultResidentMalePipeMG,entityclasses,Entity,,,Vault Resident,,,,,,,,,,,,,
-npcVaultBossPistol,entityclasses,Entity,,,Vault Director,,,,,,,,,,,,,
-npcVaultSecurityMalePistol,entityclasses,Entity,,,Vault Security,,,,,,,,,,,,,
-npcVaultSecurityMaleSMG,entityclasses,Entity,,,Vault Security,,,,,,,,,,,,,
-npcVaultSecurityFemalePistol,entityclasses,Entity,,,Vault Security,,,,,,,,,,,,,
-npcVaultSecurityFemaleSMG,entityclasses,Entity,,,Vault Security,,,,,,,,,,,,,
-npcVaultDoctorPistol,entityclasses,Entity,,,Vault Doctor,,,,,,,,,,,,,
-npcVaultResidentFemalePistol,entityclasses,Entity,,,Vault Resident,,,,,,,,,,,,,
-npcVaultResidentFemalePipeMG,entityclasses,Entity,,,Vault Resident,,,,,,,,,,,,,
-npcReconFemaleRocketL,entityclasses,Entity,,,Reconnaissance,,,,,,,,,,,,,
-npcReconFemaleTRifle,entityclasses,Entity,,,Reconnaissance,,,,,,,,,,,,,
-npcReconFemaleAK47,entityclasses,Entity,,,Reconnaissance,,,,,,,,,,,,,
-npcReconFemaleM60,entityclasses,Entity,,,Reconnaissance,,,,,,,,,,,,,
-npcReconFemaleClub,entityclasses,Entity,,,Reconnaissance,,,,,,,,,,,,,
-npcVaultResidentFemaleClub,entityclasses,Entity,,,Vault Resident,,,,,,,,,,,,,
-npcVaultResidentFemaleKnife,entityclasses,Entity,,,Vault Resident,,,,,,,,,,,,,
-npcVaultDoctorClub,entityclasses,Entity,,,Vault Doctor,,,,,,,,,,,,,
-npcVaultDoctorKnife,entityclasses,Entity,,,Vault Doctor,,,,,,,,,,,,,
-npcVaultSecurityFemaleClub,entityclasses,Entity,,,Vault Security,,,,,,,,,,,,,
-npcVaultSecurityFemaleAxe,entityclasses,Entity,,,Vault Security,,,,,,,,,,,,,
-npcVaultResidentFemaleAxe,entityclasses,Entity,,,Vault Resident,,,,,,,,,,,,,
-npcVaultSecurityFemaleBat,entityclasses,Entity,,,Vault Security,,,,,,,,,,,,,
-npcVaultDoctorBat,entityclasses,Entity,,,Vault Doctor,,,,,,,,,,,,,
-npcArmyPowerArmorFemaleM60,entityclasses,Entity,,,Power Armor Operator,,,,,,,,,,,,,
-npcArmyPowerArmorFemaleRocketL,entityclasses,Entity,,,Power Armor Operator,,,,,,,,,,,,,
-npcArmyPowerArmorFemaleAK47,entityclasses,Entity,,,Power Armor Operator,,,,,,,,,,,,,
+npcArmyPowerArmorMaleRocketL,Power Armor Operator,パワーアーマー操作員
+npcArmyPowerArmorMaleM60,Power Armor Operator,パワーアーマー操作員
+npcArmyPowerArmorMaleAK47,Power Armor Operator,パワーアーマー操作員
+npcReconMaleRocketL,Reconnaissance,偵察係
+npcReconMaleTRifle,Reconnaissance,偵察係
+npcReconMaleAK47,Reconnaissance,偵察係
+npcReconMaleM60,Reconnaissance,偵察係
+npcReconMaleClub,Reconnaissance,偵察係
+npcVaultSecurityMaleClub,Vault Security,ボルト警備
+npcVaultBossClub,Vault Director,ボルト責任者
+npcVaultResidentMaleClub,Vault Resident,ボルト住人
+npcVaultBossKnife,Vault Director,ボルト責任者
+npcVaultResidentMaleKnife,Vault Resident,ボルト住人
+npcVaultResidentMaleBat,Vault Resident,ボルト住人
+npcVaultSecurityMaleBat,Vault Security,ボルト警備
+npcVaultSecurityMaleAxe,Vault Security,ボルト警備
+npcVaultResidentMaleAxe,Vault Resident,ボルト住人
+npcVaultResidentMalePistol,Vault Resident,ボルト住人
+npcVaultResidentMalePipeMG,Vault Resident,ボルト住人
+npcVaultBossPistol,Vault Director,ボルト責任者
+npcVaultSecurityMalePistol,Vault Security,ボルト警備
+npcVaultSecurityMaleSMG,Vault Security,ボルト警備
+npcVaultSecurityFemalePistol,Vault Security,ボルト警備
+npcVaultSecurityFemaleSMG,Vault Security,ボルト警備
+npcVaultDoctorPistol,Vault Doctor,ボルト医師
+npcVaultResidentFemalePistol,Vault Resident,ボルト住人
+npcVaultResidentFemalePipeMG,Vault Resident,ボルト住人
+npcReconFemaleRocketL,Reconnaissance,偵察係
+npcReconFemaleTRifle,Reconnaissance,偵察係
+npcReconFemaleAK47,Reconnaissance,偵察係
+npcReconFemaleM60,Reconnaissance,偵察係
+npcReconFemaleClub,Reconnaissance,偵察係
+npcVaultResidentFemaleClub,Vault Resident,ボルト住人
+npcVaultResidentFemaleKnife,Vault Resident,ボルト住人
+npcVaultDoctorClub,Vault Doctor,ボルト医師
+npcVaultDoctorKnife,Vault Doctor,ボルト医師
+npcVaultSecurityFemaleClub,Vault Security,ボルト警備
+npcVaultSecurityFemaleAxe,Vault Security,ボルト警備
+npcVaultResidentFemaleAxe,Vault Resident,ボルト住人
+npcVaultSecurityFemaleBat,Vault Security,ボルト警備
+npcVaultDoctorBat,Vault Doctor,ボルト医師
+npcArmyPowerArmorFemaleM60,Power Armor Operator,パワーアーマー操作員
+npcArmyPowerArmorFemaleRocketL,Power Armor Operator,パワーアーマー操作員
+npcArmyPowerArmorFemaleAK47,Power Armor Operator,パワーアーマー操作員

@@ -1,6 +1,33 @@
 <configs>
+
+	<insertBefore xpath="/entitygroups/entitygroup[starts-with(@name, 'WildGame')]/entity[@name='none']">
+                <entity name="survivorOfficerDPistol" prob=".1" />
+                <entity name="survivorOfficerMachete" prob=".1" />
+		<entity name="survivorOfficerSMG" prob=".1" />
+		<entity name="survivorOfficerAK47" prob=".1" />
+		<entity name="survivorOfficerTRifle" prob=".1" />	
+		<entity name="survivorSoldier1Club" prob=".1" />
+		<entity name="survivorSoldier1SMG" prob=".1" />
+		<entity name="survivorSoldier1AK47" prob=".1" />
+		<entity name="survivorSoldier1TRifle" prob=".1" />
+		<entity name="survivorSoldier1RocketL" prob=".1" />
+                <entity name="survivorSoldier1M60" prob=".1" />
+                <entity name="survivorSoldier2Knife" prob=".1" />
+		<entity name="survivorSoldier2SMG" prob=".1" />
+		<entity name="survivorSoldier2AK47" prob=".1" />
+		<entity name="survivorSoldier2TRifle" prob=".1" />
+                <entity name="survivorSoldier3Bat" prob=".1" />
+		<entity name="survivorSoldier3SMG" prob=".1" />
+		<entity name="survivorSoldier3AK47" prob=".1" />
+		<entity name="survivorSoldier3TRifle" prob=".1" />
+                <entity name="survivorSoldier4Machete" prob=".1" />
+		<entity name="survivorSoldier4SMG" prob=".1" />
+		<entity name="survivorSoldier4AK47" prob=".1" />
+		<entity name="survivorSoldier4TRifle" prob=".1" />
+        </insertBefore> 
 	
-	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'WildGameForest')]">
+	
+        <insertBefore xpath="/entitygroups/entitygroup[starts-with(@name, 'WildGame')]/entity[@name='none']">
                 <entity name="npcOfficerDPistol" prob=".1" />
                 <entity name="npcOfficerMachete" prob=".1" />
 		<entity name="npcOfficerSMG" prob=".1" />
@@ -24,6 +51,7 @@
 		<entity name="npcSoldier4SMG" prob=".1" />
 		<entity name="npcSoldier4AK47" prob=".1" />
 		<entity name="npcSoldier4TRifle" prob=".1" />
-        </append> 	
-	
+        </insertBefore> 
+          
+ 
 </configs>

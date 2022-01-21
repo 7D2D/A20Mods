@@ -4,7 +4,7 @@
                 
                 <!--  Soldier Models by Slayver Purchased for use in NPC Mod  -->
 
-	        <entity_class name="npcSoldier1RocketL" extends="npcRocketLTemplate"> 
+	        <entity_class name="survivorSoldier1RocketL" extends="npcRocketLTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -17,7 +17,7 @@
 	        </effect_group>
 		</entity_class> 
 
-                <entity_class name="npcSoldier1TRifle" extends="npcTRifleTemplate"> 
+                <entity_class name="survivorSoldier1TRifle" extends="npcTRifleTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -29,7 +29,7 @@
 	        </effect_group>
 		</entity_class>	
 
-                <entity_class name="npcSoldier1Club" extends="npcClubTemplate"> 
+                <entity_class name="survivorSoldier1Club" extends="npcClubTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -41,7 +41,7 @@
 	        </effect_group>
 		</entity_class>
 
-		<entity_class name="npcSoldier1Knife" extends="npcKnifeTemplate"> 
+		<entity_class name="survivorSoldier1Knife" extends="npcKnifeTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -53,7 +53,7 @@
 	        </effect_group>
 		</entity_class>	
 		
-		<entity_class name="npcSoldier1Bat" extends="npcBatTemplate"> 
+		<entity_class name="survivorSoldier1Bat" extends="npcBatTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -65,7 +65,7 @@
 	        </effect_group>
 		</entity_class>				
 		
-		<entity_class name="npcSoldier1Machete" extends="npcMacheteTemplate"> 
+		<entity_class name="survivorSoldier1Machete" extends="npcMacheteTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -77,7 +77,7 @@
 	        </effect_group>
 		</entity_class>	
 
-	        <entity_class name="npcSoldier1SMG" extends="npcSMGTemplate"> 
+	        <entity_class name="survivorSoldier1SMG" extends="npcSMGTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -89,7 +89,7 @@
 	        </effect_group>
 		</entity_class>	
 
-		<entity_class name="npcSoldier1M60" extends="npcM60Template"> 
+		<entity_class name="survivorSoldier1M60" extends="npcM60Template"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -101,7 +101,7 @@
 	        </effect_group>
 		</entity_class>				
 		
-		<entity_class name="npcSoldier1DPistol" extends="npcDPistolTemplate"> 
+		<entity_class name="survivorSoldier1DPistol" extends="npcDPistolTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -113,7 +113,7 @@
 	        </effect_group>
 		</entity_class>	
 		
-		<entity_class name="npcSoldier1AK47" extends="npcAK47Template"> 
+		<entity_class name="survivorSoldier1AK47" extends="npcAK47Template"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -125,7 +125,7 @@
 	        </effect_group>
 		</entity_class>
 
-                <entity_class name="npcSoldier2Club" extends="npcClubTemplate"> 
+                <entity_class name="survivorSoldier2Club" extends="npcClubTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -137,7 +137,7 @@
 	        </effect_group>
 		</entity_class>
 
-		<entity_class name="npcSoldier2Knife" extends="npcKnifeTemplate"> 
+		<entity_class name="survivorSoldier2Knife" extends="npcKnifeTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -149,7 +149,7 @@
 	        </effect_group>
 		</entity_class>	
 		
-		<entity_class name="npcSoldier2Bat" extends="npcBatTemplate"> 
+		<entity_class name="survivorSoldier2Bat" extends="npcBatTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -161,7 +161,7 @@
 	        </effect_group>
 		</entity_class>		
 		
-		 <entity_class name="npcSoldier2TRifle" extends="npcTRifleTemplate"> 
+		 <entity_class name="survivorSoldier2TRifle" extends="npcTRifleTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -173,7 +173,7 @@
 	        </effect_group>
 		</entity_class>	
 
-		<entity_class name="npcSoldier2Machete" extends="npcMacheteTemplate"> 
+		<entity_class name="survivorSoldier2Machete" extends="npcMacheteTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -185,7 +185,7 @@
 	        </effect_group>
 		</entity_class>	
 
-	        <entity_class name="npcSoldier2SMG" extends="npcSMGTemplate"> 
+	        <entity_class name="survivorSoldier2SMG" extends="npcSMGTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -197,7 +197,7 @@
 	        </effect_group>
 		</entity_class>	
 
-		<entity_class name="npcSoldier2M60" extends="npcM60Template"> 
+		<entity_class name="survivorSoldier2M60" extends="npcM60Template"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -209,7 +209,7 @@
 	        </effect_group>
 		</entity_class>				
 		
-		<entity_class name="npcSoldier2DPistol" extends="npcDPistolTemplate"> 
+		<entity_class name="survivorSoldier2DPistol" extends="npcDPistolTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -221,7 +221,7 @@
 	        </effect_group>
 		</entity_class>	
 		
-		<entity_class name="npcSoldier2AK47" extends="npcAK47Template"> 
+		<entity_class name="survivorSoldier2AK47" extends="npcAK47Template"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -233,7 +233,7 @@
 	        </effect_group>
 		</entity_class>
 
-		<entity_class name="npcSoldier3Club" extends="npcClubTemplate"> 
+		<entity_class name="survivorSoldier3Club" extends="npcClubTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -245,7 +245,7 @@
 	        </effect_group>
 		</entity_class>
 
-		<entity_class name="npcSoldier3Knife" extends="npcKnifeTemplate"> 
+		<entity_class name="survivorSoldier3Knife" extends="npcKnifeTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -257,7 +257,7 @@
 	        </effect_group>
 		</entity_class>	
 		
-		<entity_class name="npcSoldier3Bat" extends="npcBatTemplate"> 
+		<entity_class name="survivorSoldier3Bat" extends="npcBatTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -269,7 +269,7 @@
 	        </effect_group>
 		</entity_class>				
 		
-		<entity_class name="npcSoldier3Machete" extends="npcMacheteTemplate"> 
+		<entity_class name="survivorSoldier3Machete" extends="npcMacheteTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -281,7 +281,7 @@
 	        </effect_group>
 		</entity_class>	
 
-	        <entity_class name="npcSoldier3SMG" extends="npcSMGTemplate"> 
+	        <entity_class name="survivorSoldier3SMG" extends="npcSMGTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -293,7 +293,7 @@
 	        </effect_group>
 		</entity_class>	
 
-                <entity_class name="npcSoldier3TRifle" extends="npcTRifleTemplate"> 
+                <entity_class name="survivorSoldier3TRifle" extends="npcTRifleTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -305,7 +305,7 @@
 	        </effect_group>
 		</entity_class>	
 
-		<entity_class name="npcSoldier3M60" extends="npcM60Template"> 
+		<entity_class name="survivorSoldier3M60" extends="npcM60Template"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -317,7 +317,7 @@
 	        </effect_group>
 		</entity_class>				
 		
-		<entity_class name="npcSoldier3DPistol" extends="npcDPistolTemplate"> 
+		<entity_class name="survivorSoldier3DPistol" extends="npcDPistolTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -329,7 +329,7 @@
 	        </effect_group>
 		</entity_class>	
 		
-		<entity_class name="npcSoldier3AK47" extends="npcAK47Template"> 
+		<entity_class name="survivorSoldier3AK47" extends="npcAK47Template"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -341,7 +341,7 @@
 	        </effect_group>
 		</entity_class>
 		
-		<entity_class name="npcSoldier4Club" extends="npcClubTemplate"> 
+		<entity_class name="survivorSoldier4Club" extends="npcClubTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -353,7 +353,7 @@
 	        </effect_group>
 		</entity_class>
 
-		<entity_class name="npcSoldier4Knife" extends="npcKnifeTemplate"> 
+		<entity_class name="survivorSoldier4Knife" extends="npcKnifeTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -365,7 +365,7 @@
 	        </effect_group>
 		</entity_class>	
 		
-		<entity_class name="npcSoldier4Bat" extends="npcBatTemplate"> 
+		<entity_class name="survivorSoldier4Bat" extends="npcBatTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -377,7 +377,7 @@
 	        </effect_group>
 		</entity_class>				
 		
-		<entity_class name="npcSoldier4Machete" extends="npcMacheteTemplate"> 
+		<entity_class name="survivorSoldier4Machete" extends="npcMacheteTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -389,7 +389,7 @@
 	        </effect_group>
 		</entity_class>	
 
-	        <entity_class name="npcSoldier4SMG" extends="npcSMGTemplate"> 
+	        <entity_class name="survivorSoldier4SMG" extends="npcSMGTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -401,7 +401,7 @@
 	        </effect_group>
 		</entity_class>	
 
-		<entity_class name="npcSoldier4M60" extends="npcM60Template"> 
+		<entity_class name="survivorSoldier4M60" extends="npcM60Template"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -413,7 +413,7 @@
 	        </effect_group>
 		</entity_class>	
 
-                <entity_class name="npcSoldier4TRifle" extends="npcTRifleTemplate"> 
+                <entity_class name="survivorSoldier4TRifle" extends="npcTRifleTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -425,7 +425,7 @@
 	        </effect_group>
 		</entity_class>				
 		
-		<entity_class name="npcSoldier4DPistol" extends="npcDPistolTemplate"> 
+		<entity_class name="survivorSoldier4DPistol" extends="npcDPistolTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -437,7 +437,7 @@
 	        </effect_group>
 		</entity_class>	
 		
-		<entity_class name="npcSoldier4AK47" extends="npcAK47Template"> 
+		<entity_class name="survivorSoldier4AK47" extends="npcAK47Template"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -449,7 +449,7 @@
 	        </effect_group>
 		</entity_class>
 		
-		<entity_class name="npcOfficerClub" extends="npcClubTemplate"> 
+		<entity_class name="survivorOfficerClub" extends="npcClubTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -463,7 +463,7 @@
 	        </effect_group>
 		</entity_class>
 
-		<entity_class name="npcOfficerKnife" extends="npcKnifeTemplate"> 
+		<entity_class name="survivorOfficerKnife" extends="npcKnifeTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -477,7 +477,7 @@
 	        </effect_group>
 		</entity_class>	
 		
-		<entity_class name="npcOfficerBat" extends="npcBatTemplate"> 
+		<entity_class name="survivorOfficerBat" extends="npcBatTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -491,7 +491,7 @@
 	        </effect_group>
 		</entity_class>				
 		
-		<entity_class name="npcOfficerMachete" extends="npcMacheteTemplate"> 
+		<entity_class name="survivorOfficerMachete" extends="npcMacheteTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -505,7 +505,7 @@
 	        </effect_group>
 		</entity_class>	
 
-	        <entity_class name="npcOfficerSMG" extends="npcSMGTemplate"> 
+	        <entity_class name="survivorOfficerSMG" extends="npcSMGTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -519,7 +519,7 @@
 	        </effect_group>
 		</entity_class>	
 
-		<entity_class name="npcOfficerM60" extends="npcM60Template"> 
+		<entity_class name="survivorOfficerM60" extends="npcM60Template"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -533,7 +533,7 @@
 	        </effect_group>
 		</entity_class>	
 
-                <entity_class name="npcOfficerTRifle" extends="npcTRifleTemplate"> 
+                <entity_class name="survivorOfficerTRifle" extends="npcTRifleTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -547,7 +547,7 @@
 	        </effect_group>
 		</entity_class>			
 		
-		<entity_class name="npcOfficerDPistol" extends="npcDPistolTemplate"> 
+		<entity_class name="survivorOfficerDPistol" extends="npcDPistolTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -561,7 +561,580 @@
 	        </effect_group>
 		</entity_class>	
 		
-		<entity_class name="npcOfficerAK47" extends="npcAK47Template"> 
+		<entity_class name="survivorOfficerAK47" extends="npcAK47Template"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="LtDan,CptRogers,LtFlagg,CptClarke,Brody,CptKurtz,LtTrevor,CptPaxton" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCOfficerDark"/> 
+                        <property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="OfficerRadioChatterRandom"/>
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>
+
+               
+
+                <entity_class name="npcSoldier1RocketL" extends="npcAdvancedRocketLTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />	
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier1Dark"/> 
+			<property name="AIPackages" value="NPCBasic, NPCLauncher"/>
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class> 
+
+                <entity_class name="npcSoldier1TRifle" extends="npcAdvancedTRifleTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />	
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier1Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+
+                <entity_class name="npcSoldier1Club" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />			
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier1Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>
+
+		<entity_class name="npcSoldier1Knife" extends="npcAdvancedKnifeTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />			
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier1Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+		
+		<entity_class name="npcSoldier1Bat" extends="npcAdvancedBatTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier1Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>				
+		
+		<entity_class name="npcSoldier1Machete" extends="npcAdvancedMacheteTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier1Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+
+	        <entity_class name="npcSoldier1SMG" extends="npcAdvancedSMGTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier1Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+
+		<entity_class name="npcSoldier1M60" extends="npcAdvancedM60Template"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier1Dark"/>  
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>				
+		
+		<entity_class name="npcSoldier1DPistol" extends="npcAdvancedDPistolTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />			
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier1Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+		
+		<entity_class name="npcSoldier1AK47" extends="npcAdvancedAK47Template"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier1Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>
+
+                <entity_class name="npcSoldier2Club" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier2Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>
+
+		<entity_class name="npcSoldier2Knife" extends="npcAdvancedKnifeTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier2Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+		
+		<entity_class name="npcSoldier2Bat" extends="npcAdvancedBatTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier2Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>		
+		
+		 <entity_class name="npcSoldier2TRifle" extends="npcAdvancedTRifleTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />	
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier2Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+
+		<entity_class name="npcSoldier2Machete" extends="npcAdvancedMacheteTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier2Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+
+	        <entity_class name="npcSoldier2SMG" extends="npcAdvancedSMGTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier2Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+
+		<entity_class name="npcSoldier2M60" extends="npcAdvancedM60Template"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier2Dark"/>  
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>				
+		
+		<entity_class name="npcSoldier2DPistol" extends="npcAdvancedDPistolTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier2Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+		
+		<entity_class name="npcSoldier2AK47" extends="npcAdvancedAK47Template"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier2Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>
+
+		<entity_class name="npcSoldier3Club" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier3Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>
+
+		<entity_class name="npcSoldier3Knife" extends="npcAdvancedKnifeTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />			
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier3Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+		
+		<entity_class name="npcSoldier3Bat" extends="npcAdvancedBatTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier3Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>				
+		
+		<entity_class name="npcSoldier3Machete" extends="npcAdvancedMacheteTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />			
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier3Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+
+	        <entity_class name="npcSoldier3SMG" extends="npcAdvancedSMGTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier3Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+
+                <entity_class name="npcSoldier3TRifle" extends="npcAdvancedTRifleTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />	
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier3Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+
+		<entity_class name="npcSoldier3M60" extends="npcAdvancedM60Template"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier3Dark"/>  
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>				
+		
+		<entity_class name="npcSoldier3DPistol" extends="npcAdvancedDPistolTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier3Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+		
+		<entity_class name="npcSoldier3AK47" extends="npcAdvancedAK47Template"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier3Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>
+		
+		<entity_class name="npcSoldier4Club" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier4Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>
+
+		<entity_class name="npcSoldier4Knife" extends="npcAdvancedKnifeTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier4Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+		
+		<entity_class name="npcSoldier4Bat" extends="npcAdvancedBatTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier4Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>				
+		
+		<entity_class name="npcSoldier4Machete" extends="npcAdvancedMacheteTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier4Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+
+	        <entity_class name="npcSoldier4SMG" extends="npcAdvancedSMGTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier4Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+
+		<entity_class name="npcSoldier4M60" extends="npcAdvancedM60Template"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier4Dark"/>  
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+
+                <entity_class name="npcSoldier4TRifle" extends="npcAdvancedTRifleTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />	
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier4Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>				
+		
+		<entity_class name="npcSoldier4DPistol" extends="npcAdvancedDPistolTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier4Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+		
+		<entity_class name="npcSoldier4AK47" extends="npcAdvancedAK47Template"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier4Dark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>
+		
+		<entity_class name="npcOfficerClub" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="LtDan,CptRogers,LtFlagg,CptClarke,Brody,CptKurtz,LtTrevor,CptPaxton" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCOfficerDark"/> 
+                        <property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="OfficerRadioChatterRandom"/>
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>
+
+		<entity_class name="npcOfficerKnife" extends="npcAdvancedKnifeTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="LtDan,CptRogers,LtFlagg,CptClarke,Brody,CptKurtz,LtTrevor,CptPaxton" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCOfficerDark"/> 
+                        <property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="OfficerRadioChatterRandom"/>
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+		
+		<entity_class name="npcOfficerBat" extends="npcAdvancedBatTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="LtDan,CptRogers,LtFlagg,CptClarke,Brody,CptKurtz,LtTrevor,CptPaxton" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCOfficerDark"/> 
+                        <property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="OfficerRadioChatterRandom"/>
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>				
+		
+		<entity_class name="npcOfficerMachete" extends="npcAdvancedMacheteTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="LtDan,CptRogers,LtFlagg,CptClarke,Brody,CptKurtz,LtTrevor,CptPaxton" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCOfficerDark"/>
+                        <property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="OfficerRadioChatterRandom"/>
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+
+	        <entity_class name="npcOfficerSMG" extends="npcAdvancedSMGTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="LtDan,CptRogers,LtFlagg,CptClarke,Brody,CptKurtz,LtTrevor,CptPaxton" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCOfficerDark"/> 
+                        <property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="OfficerRadioChatterRandom"/>
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+
+		<entity_class name="npcOfficerM60" extends="npcAdvancedM60Template"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="LtDan,CptRogers,LtFlagg,CptClarke,Brody,CptKurtz,LtTrevor,CptPaxton" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCOfficerDark"/>  
+                        <property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="OfficerRadioChatterRandom"/>
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+
+                <entity_class name="npcOfficerTRifle" extends="npcAdvancedTRifleTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />	
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCOfficerDark"/> 
+                        <property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="OfficerRadioChatterRandom"/>
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>			
+		
+		<entity_class name="npcOfficerDPistol" extends="npcAdvancedDPistolTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="LtDan,CptRogers,LtFlagg,CptClarke,Brody,CptKurtz,LtTrevor,CptPaxton" />				
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCOfficerDark"/> 
+                        <property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="OfficerRadioChatterRandom"/>
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>
+		</entity_class>	
+		
+		<entity_class name="npcOfficerAK47" extends="npcAdvancedAK47Template"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 

@@ -1,0 +1,14 @@
+<configs>
+
+	<insertBefore xpath="/entitygroups/entitygroup[starts-with(@name, 'WildGame')]/entity[@name='none']">
+                <entity name="FireBoxerBanditEmptyHand" prob=".1" />
+                <entity name="GoldilocksBanditEmptyHand" prob=".1" />
+                <entity name="MMABanditEmptyHand" prob=".1" />
+                <entity name="KarateBanditEmptyHand" prob=".1" />
+                <entity name="FireBoxerSurvivorEmptyHand" prob=".1" />
+                <entity name="GoldilocksSurvivorEmptyHand" prob=".1" />
+                <entity name="MMASurvivorEmptyHand" prob=".1" />
+                <entity name="KarateSurvivorEmptyHand" prob=".1" />
+          </insertBefore> 	
+	
+</configs>

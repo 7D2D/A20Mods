@@ -4,20 +4,19 @@
                 
                 <!--  Models by All * Star Characters and Protofactor, Inc. Purchased for use in NPC Mod  -->
 
-                <entity_class name="npcArmyPowerArmorMaleRocketL" extends="npcRocketLTemplate"> 
+                <entity_class name="survivorArmyPowerArmorMaleRocketL" extends="npcRocketLTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
 			<property name="Names" value="Jefry,Mikl,Timoth,Randis,Andry,Daryen,Ozcar,Kolb,Jayme,Daerryl,Rogr,Logan" />	
 			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?ArmyPowerArmorDark"/> 
-			<property name="AIPackages" value="NPCBasic, NPCLauncher"/>
                 <effect_group name="Base Effects">
 		        <passive_effect name="HealthMax" operation="base_set" value="1000"/>
 		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="90"/>
 	        </effect_group>
 		</entity_class> 
 
-                <entity_class name="npcArmyPowerArmorMaleM60" extends="npcM60Template"> 
+                <entity_class name="survivorArmyPowerArmorMaleM60" extends="npcM60Template"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -29,7 +28,7 @@
 	        </effect_group>
 		</entity_class>	
 
-                <entity_class name="npcArmyPowerArmorMaleAK47" extends="npcAK47Template"> 
+                <entity_class name="survivorArmyPowerArmorMaleAK47" extends="npcAK47Template"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/>  
@@ -41,21 +40,20 @@
 	        </effect_group>
 		</entity_class>	
 
-	        <entity_class name="npcReconMaleRocketL" extends="npcRocketLTemplate"> 
+	        <entity_class name="survivorReconMaleRocketL" extends="npcRocketLTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
                         <property name="PhysicsBody" value="ASCharacterStandard"/>
 			<property name="Names" value="Jefry,Mikl,Timoth,Randis,Andry,Daryen,Ozcar,Kolb,Jayme,Daerryl,Rogr,Logan" />	
 			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?ReconMaleDark"/> 
-			<property name="AIPackages" value="NPCBasic, NPCLauncher"/>
                 <effect_group name="Base Effects">
 		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
 		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
 	        </effect_group>
 		</entity_class> 
 
-                <entity_class name="npcReconMaleTRifle" extends="npcTRifleTemplate"> 
+                <entity_class name="survivorReconMaleTRifle" extends="npcTRifleTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -68,7 +66,7 @@
 	        </effect_group>
 		</entity_class>	
 
-                <entity_class name="npcReconMaleAK47" extends="npcAK47Template"> 
+                <entity_class name="survivorReconMaleAK47" extends="npcAK47Template"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -81,7 +79,7 @@
 	        </effect_group>
 		</entity_class>
 
-                <entity_class name="npcReconMaleM60" extends="npcM60Template"> 
+                <entity_class name="survivorReconMaleM60" extends="npcM60Template"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -94,7 +92,7 @@
 	        </effect_group>
 		</entity_class>	
 
-                <entity_class name="npcReconMaleClub" extends="npcClubTemplate"> 
+                <entity_class name="survivorReconMaleClub" extends="npcClubTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -107,7 +105,7 @@
 	        </effect_group>
 		</entity_class>	
 
-                <entity_class name="npcVaultSecurityMaleClub" extends="npcClubTemplate"> 
+                <entity_class name="survivorVaultSecurityMaleClub" extends="npcClubTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -121,7 +119,7 @@
 	        </effect_group>   
 		</entity_class>
 
-                <entity_class name="npcVaultBossClub" extends="npcClubTemplate"> 
+                <entity_class name="survivorVaultBossClub" extends="npcClubTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -130,7 +128,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultBossDark"/> 
 		</entity_class>
 
-                <entity_class name="npcVaultResidentMaleClub" extends="npcClubTemplate"> 
+                <entity_class name="survivorVaultResidentMaleClub" extends="npcClubTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -139,7 +137,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?MaleResidentDark"/> 
 		</entity_class>
 
-		<entity_class name="npcVaultBossKnife" extends="npcKnifeTemplate"> 
+		<entity_class name="survivorVaultBossKnife" extends="npcKnifeTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -148,7 +146,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultBossDark"/> 
 		</entity_class>	
 
-		<entity_class name="npcVaultResidentMaleKnife" extends="npcKnifeTemplate"> 
+		<entity_class name="survivorVaultResidentMaleKnife" extends="npcKnifeTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -157,7 +155,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?MaleResidentDark"/> 
 		</entity_class>	
 
-		<entity_class name="npcVaultResidentMaleBat" extends="npcBatTemplate"> 
+		<entity_class name="survivorVaultResidentMaleBat" extends="npcBatTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -166,7 +164,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?MaleResidentDark"/> 
 		</entity_class>	
 
-		<entity_class name="npcVaultSecurityMaleBat" extends="npcBatTemplate"> 
+		<entity_class name="survivorVaultSecurityMaleBat" extends="npcBatTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -180,7 +178,7 @@
 	        </effect_group>   
 		</entity_class>	
 
-                <entity_class name="npcVaultSecurityMaleAxe" extends="npcAxeTemplate"> 
+                <entity_class name="survivorVaultSecurityMaleAxe" extends="npcAxeTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -194,7 +192,7 @@
 	        </effect_group>   
 		</entity_class>	
 
-                <entity_class name="npcVaultResidentMaleAxe" extends="npcAxeTemplate"> 
+                <entity_class name="survivorVaultResidentMaleAxe" extends="npcAxeTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -203,7 +201,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?MaleResidentDark"/> 
 		</entity_class>	
 
-		<entity_class name="npcVaultResidentMalePistol" extends="npcPistolTemplate"> 
+		<entity_class name="survivorVaultResidentMalePistol" extends="npcPistolTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -212,7 +210,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?MaleResidentDark"/>  
 		</entity_class>	
 	
-		<entity_class name="npcVaultResidentMalePipeMG" extends="npcPipeMGTemplate"> 
+		<entity_class name="survivorVaultResidentMalePipeMG" extends="npcPipeMGTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -221,7 +219,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?MaleResidentDark"/>  
 		</entity_class>	
 
-                <entity_class name="npcVaultBossPistol" extends="npcPistolTemplate"> 
+                <entity_class name="survivorVaultBossPistol" extends="npcPistolTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -230,7 +228,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultBossDark"/>  
 		</entity_class>	
 	
-		<entity_class name="npcVaultSecurityMalePistol" extends="npcPistolTemplate"> 
+		<entity_class name="survivorVaultSecurityMalePistol" extends="npcPistolTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -244,7 +242,7 @@
 	        </effect_group>    
 		</entity_class>	
 			
-		<entity_class name="npcVaultSecurityMaleSMG" extends="npcSMGTemplate"> 
+		<entity_class name="survivorVaultSecurityMaleSMG" extends="npcSMGTemplate"> 
 			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -258,7 +256,7 @@
 	        </effect_group>    
 		</entity_class>	
 	
-		<entity_class name="npcVaultSecurityFemalePistol" extends="npcPistolTemplate"> 
+		<entity_class name="survivorVaultSecurityFemalePistol" extends="npcPistolTemplate"> 
 			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -288,7 +286,7 @@
 	        </effect_group>    
 		</entity_class>	
 	
-                <entity_class name="npcVaultSecurityFemaleSMG" extends="npcSMGTemplate"> 
+                <entity_class name="survivorVaultSecurityFemaleSMG" extends="npcSMGTemplate"> 
 			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -318,7 +316,7 @@
 	        </effect_group>   
 		</entity_class>		
 
-	        <entity_class name="npcVaultDoctorPistol" extends="npcPistolTemplate"> 
+	        <entity_class name="survivorVaultDoctorPistol" extends="npcPistolTemplate"> 
 			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -341,10 +339,9 @@
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
 			<property name="Names" value="Dr Fox,Dr Kline,Dr Day,Dr Ward,Dr Clarke,Dr Price,Dr Sykes,Dr Brooks,Dr Bolton,Dr Webb" />				
 			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultDoctorDark"/>  
-                        <property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 
 		</entity_class>	
 
-                <entity_class name="npcVaultResidentFemalePistol" extends="npcPistolTemplate"> 
+                <entity_class name="survivorVaultResidentFemalePistol" extends="npcPistolTemplate"> 
 			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -369,7 +366,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?FemaleResidentDark"/>  
 		</entity_class>	
 
-                <entity_class name="npcVaultResidentFemalePipeMG" extends="npcPipeMGTemplate"> 
+                <entity_class name="survivorVaultResidentFemalePipeMG" extends="npcPipeMGTemplate"> 
 			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -394,7 +391,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?FemaleResidentDark"/>  
 		</entity_class>	
 
-		 <entity_class name="npcReconFemaleRocketL" extends="npcRocketLTemplate"> 
+		 <entity_class name="survivorReconFemaleRocketL" extends="npcRocketLTemplate"> 
 			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -417,14 +414,13 @@
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
 			<property name="Names" value="Elaena,Kamryn,Danice,Krissa,Sanya,Caelia,Dafnea,Riya,Arlyse,Caeryssa,Rayven,Riley" />	
 			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?ReconFemaleDark"/>
-                        <property name="AIPackages" value="NPCBasic, NPCLauncher"/>
                 <effect_group name="Base Effects">
 		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
 		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
 	        </effect_group> 
 		</entity_class> 
 
-                <entity_class name="npcReconFemaleTRifle" extends="npcTRifleTemplate"> 
+                <entity_class name="survivorReconFemaleTRifle" extends="npcTRifleTemplate"> 
 			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -453,7 +449,7 @@
 	        </effect_group>	
 		</entity_class>	
 
-                <entity_class name="npcReconFemaleAK47" extends="npcAK47Template"> 
+                <entity_class name="survivorReconFemaleAK47" extends="npcAK47Template"> 
 			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -482,7 +478,7 @@
 	        </effect_group> 
 		</entity_class>
 
-                <entity_class name="npcReconFemaleM60" extends="npcM60Template"> 
+                <entity_class name="survivorReconFemaleM60" extends="npcM60Template"> 
 			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -511,7 +507,7 @@
 	        </effect_group> 
 		</entity_class>	
 
-                <entity_class name="npcReconFemaleClub" extends="npcClubTemplate"> 
+                <entity_class name="survivorReconFemaleClub" extends="npcClubTemplate"> 
 			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -540,7 +536,7 @@
 	        </effect_group> 
 		</entity_class>	
 
-                <entity_class name="npcVaultResidentFemaleClub" extends="npcClubTemplate"> 
+                <entity_class name="survivorVaultResidentFemaleClub" extends="npcClubTemplate"> 
 			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -565,7 +561,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?FemaleResidentDark"/> 
 		</entity_class>
 
-                <entity_class name="npcVaultResidentFemaleKnife" extends="npcKnifeTemplate"> 
+                <entity_class name="survivorVaultResidentFemaleKnife" extends="npcKnifeTemplate"> 
 			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -590,7 +586,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?FemaleResidentDark"/> 
 		</entity_class>
 
-                <entity_class name="npcVaultDoctorClub" extends="npcClubTemplate"> 
+                <entity_class name="survivorVaultDoctorClub" extends="npcClubTemplate"> 
 			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -613,10 +609,9 @@
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
                         <property name="Names" value="Dr Fox,Dr Kline,Dr Day,Dr Ward,Dr Clarke,Dr Price,Dr Sykes,Dr Brooks,Dr Bolton,Dr Webb" />			
 			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultDoctorDark"/> 
-                        <property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 
 		</entity_class>
 
-                <entity_class name="npcVaultDoctorKnife" extends="npcKnifeTemplate"> 
+                <entity_class name="survivorVaultDoctorKnife" extends="npcKnifeTemplate"> 
 			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -638,11 +633,10 @@
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
                         <property name="Names" value="Dr Fox,Dr Kline,Dr Day,Dr Ward,Dr Clarke,Dr Price,Dr Sykes,Dr Brooks,Dr Bolton,Dr Webb" />			
-			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultDoctorDark"/>
-                        <property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/>  
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultDoctorDark"/> 
 		</entity_class>
 
-                <entity_class name="npcVaultSecurityFemaleClub" extends="npcClubTemplate"> 
+                <entity_class name="survivorVaultSecurityFemaleClub" extends="npcClubTemplate"> 
 			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -672,7 +666,7 @@
 	        </effect_group>  
 		</entity_class>
 
-                <entity_class name="npcVaultSecurityFemaleAxe" extends="npcAxeTemplate"> 
+                <entity_class name="survivorVaultSecurityFemaleAxe" extends="npcAxeTemplate"> 
 			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -702,7 +696,7 @@
 	        </effect_group>   
 		</entity_class>
 
-                <entity_class name="npcVaultResidentFemaleAxe" extends="npcAxeTemplate"> 
+                <entity_class name="survivorVaultResidentFemaleAxe" extends="npcAxeTemplate"> 
 			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -731,7 +725,7 @@
 	        </effect_group>  
 		</entity_class>
 
-                <entity_class name="npcVaultSecurityFemaleBat" extends="npcBatTemplate"> 
+                <entity_class name="survivorVaultSecurityFemaleBat" extends="npcBatTemplate"> 
 			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -761,7 +755,7 @@
 	        </effect_group>  
 		</entity_class>
 
-                <entity_class name="npcVaultDoctorBat" extends="npcBatTemplate"> 
+                <entity_class name="survivorVaultDoctorBat" extends="npcBatTemplate"> 
 			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -784,10 +778,9 @@
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
                         <property name="Names" value="Dr Fox,Dr Kline,Dr Day,Dr Ward,Dr Clarke,Dr Price,Dr Sykes,Dr Brooks,Dr Bolton,Dr Webb" />			
 			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultDoctorDark"/> 
-                        <property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 
 		</entity_class>
 
-                <entity_class name="npcArmyPowerArmorFemaleM60" extends="npcM60Template"> 
+                <entity_class name="survivorArmyPowerArmorFemaleM60" extends="npcM60Template"> 
 			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -815,7 +808,7 @@
 	        </effect_group> 
 		</entity_class>	
 
-                <entity_class name="npcArmyPowerArmorFemaleRocketL" extends="npcRocketLTemplate"> 
+                <entity_class name="survivorArmyPowerArmorFemaleRocketL" extends="npcRocketLTemplate"> 
 			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
@@ -837,14 +830,877 @@
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
 			<property name="Names" value="Elaena,Kamryn,Danice,Krissa,Sanya,Caelia,Dafnea,Riya,Arlyse,Caeryssa,Rayven,Riley" />	
 			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?ArmyPowerArmorDark"/>
-                        <property name="AIPackages" value="NPCBasic, NPCLauncher"/>
                 <effect_group name="Base Effects">
 		        <passive_effect name="HealthMax" operation="base_set" value="1000"/>
 		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="90"/>
 	        </effect_group> 
 		</entity_class> 
 
-                <entity_class name="npcArmyPowerArmorFemaleAK47" extends="npcAK47Template"> 
+                <entity_class name="survivorArmyPowerArmorFemaleAK47" extends="npcAK47Template"> 
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="Names" value="Elaena,Kamryn,Danice,Krissa,Sanya,Caelia,Dafnea,Riya,Arlyse,Caeryssa,Rayven,Riley" />				
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?ArmyPowerArmorDark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="1000"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="90"/>
+	        </effect_group> 
+		</entity_class>	
+
+                <entity_class name="npcArmyPowerArmorMaleRocketL" extends="npcAdvancedRocketLTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="Jefry,Mikl,Timoth,Randis,Andry,Daryen,Ozcar,Kolb,Jayme,Daerryl,Rogr,Logan" />	
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?ArmyPowerArmorDark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="1000"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="90"/>
+	        </effect_group>
+		</entity_class> 
+
+                <entity_class name="npcArmyPowerArmorMaleM60" extends="npcAdvancedM60Template"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="Names" value="Jefry,Mikl,Timoth,Randis,Andry,Daryen,Ozcar,Kolb,Jayme,Daerryl,Rogr,Logan" />				
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?ArmyPowerArmorDark"/>  
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="1000"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="90"/>
+	        </effect_group>
+		</entity_class>	
+
+                <entity_class name="npcArmyPowerArmorMaleAK47" extends="npcAdvancedAK47Template"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/>  
+                        <property name="Names" value="Jefry,Mikl,Timoth,Randis,Andry,Daryen,Ozcar,Kolb,Jayme,Daerryl,Rogr,Logan" />				
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?ArmyPowerArmorDark"/>  
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="1000"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="90"/>
+	        </effect_group>
+		</entity_class>	
+
+	        <entity_class name="npcReconMaleRocketL" extends="npcAdvancedRocketLTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Names" value="Jefry,Mikl,Timoth,Randis,Andry,Daryen,Ozcar,Kolb,Jayme,Daerryl,Rogr,Logan" />	
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?ReconMaleDark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group>
+		</entity_class> 
+
+                <entity_class name="npcReconMaleTRifle" extends="npcAdvancedTRifleTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Jefry,Mikl,Timoth,Randis,Andry,Daryen,Ozcar,Kolb,Jayme,Daerryl,Rogr,Logan" />	
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?ReconMaleDark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group>
+		</entity_class>	
+
+                <entity_class name="npcReconMaleAK47" extends="npcAdvancedAK47Template"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Jefry,Mikl,Timoth,Randis,Andry,Daryen,Ozcar,Kolb,Jayme,Daerryl,Rogr,Logan" />				
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?ReconMaleDark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group>
+		</entity_class>
+
+                <entity_class name="npcReconMaleM60" extends="npcAdvancedM60Template"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Jefry,Mikl,Timoth,Randis,Andry,Daryen,Ozcar,Kolb,Jayme,Daerryl,Rogr,Logan" />				
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?ReconMaleDark"/>  
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group>
+		</entity_class>	
+
+                <entity_class name="npcReconMaleClub" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Jefry,Mikl,Timoth,Randis,Andry,Daryen,Ozcar,Kolb,Jayme,Daerryl,Rogr,Logan" />				
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?ReconMaleDark"/>  
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group>
+		</entity_class>	
+
+                <entity_class name="npcVaultSecurityMaleClub" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Officer King,Officer Horn, Officer Snow, Officer Adams, Officer Jackson, Officer Ford, Officer Burns,
+                        Barney,Officer Matthews,Officer Price,Officer Graves,Officer Moore,Officer Brady" />			
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultSecurityMaleDark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>   
+		</entity_class>
+
+                <entity_class name="npcVaultBossClub" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Names" value="Isaac,Ryan,Daniel,Joe,Phillip,Malcolm,Marco,Samuel" />			
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultBossDark"/> 
+		</entity_class>
+
+                <entity_class name="npcVaultResidentMaleClub" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Names" value="Ollie,Jake,Eddie,Bruno,Luke,Nathan,Andy,Paul" />			
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?MaleResidentDark"/> 
+		</entity_class>
+
+		<entity_class name="npcVaultBossKnife" extends="npcAdvancedKnifeTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Isaac,Ryan,Daniel,Joe,Phillip,Malcolm,Marco,Samuel" />			
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultBossDark"/> 
+		</entity_class>	
+
+		<entity_class name="npcVaultResidentMaleKnife" extends="npcAdvancedKnifeTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Ollie,Jake,Eddie,Bruno,Luke,Nathan,Andy,Paul" />				
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?MaleResidentDark"/> 
+		</entity_class>	
+
+		<entity_class name="npcVaultResidentMaleBat" extends="npcAdvancedBatTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Ollie,Jake,Eddie,Bruno,Luke,Nathan,Andy,Paul" />					
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?MaleResidentDark"/> 
+		</entity_class>	
+
+		<entity_class name="npcVaultSecurityMaleBat" extends="npcAdvancedBatTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Names" value="Officer King,Officer Horn, Officer Snow, Officer Adams, Officer Jackson, Officer Ford, Officer Burns,
+                        Barney,Officer Matthews,Officer Price,Officer Graves,Officer Moore,Officer Brady" />				
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultSecurityMaleDark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>   
+		</entity_class>	
+
+                <entity_class name="npcVaultSecurityMaleAxe" extends="npcAdvancedAxeTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Officer King,Officer Horn, Officer Snow, Officer Adams, Officer Jackson, Officer Ford, Officer Burns,
+                        Barney,Officer Matthews,Officer Price,Officer Graves,Officer Moore,Officer Brady" />			
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultSecurityMaleDark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>   
+		</entity_class>	
+
+                <entity_class name="npcVaultResidentMaleAxe" extends="npcAdvancedAxeTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Ollie,Jake,Eddie,Bruno,Luke,Nathan,Andy,Paul" />					
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?MaleResidentDark"/> 
+		</entity_class>	
+
+		<entity_class name="npcVaultResidentMalePistol" extends="npcAdvancedPistolTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Ollie,Jake,Eddie,Bruno,Luke,Nathan,Andy,Paul" />					
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?MaleResidentDark"/>  
+		</entity_class>	
+	
+		<entity_class name="npcVaultResidentMalePipeMG" extends="npcAdvancedPipeMGTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Ollie,Jake,Eddie,Bruno,Luke,Nathan,Andy,Paul" />					
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?MaleResidentDark"/>  
+		</entity_class>	
+
+                <entity_class name="npcVaultBossPistol" extends="npcAdvancedPistolTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Isaac,Ryan,Daniel,Joe,Phillip,Malcolm,Marco,Samuel" />				
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultBossDark"/>  
+		</entity_class>	
+	
+		<entity_class name="npcVaultSecurityMalePistol" extends="npcAdvancedPistolTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Officer King,Officer Horn, Officer Snow, Officer Adams, Officer Jackson, Officer Ford, Officer Burns,
+                        Barney,Officer Matthews,Officer Price,Officer Graves,Officer Moore,Officer Brady" />				
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultSecurityMaleDark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>    
+		</entity_class>	
+			
+		<entity_class name="npcVaultSecurityMaleSMG" extends="npcAdvancedSMGTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Officer King,Officer Horn, Officer Snow, Officer Adams, Officer Jackson, Officer Ford, Officer Burns,
+                        Barney,Officer Matthews,Officer Price,Officer Graves,Officer Moore,Officer Brady" />				
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultSecurityMaleDark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>    
+		</entity_class>	
+	
+		<entity_class name="npcVaultSecurityFemalePistol" extends="npcAdvancedPistolTemplate"> 
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Officer King,Officer Horn, Officer Snow, Officer Adams, Officer Jackson, Officer Ford, Officer Burns,
+                        Moira,Officer Matthews,Officer Price,Officer Graves,Officer Moore,Officer Brady" />
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>				
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultSecurityFemaleDark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>    
+		</entity_class>	
+	
+                <entity_class name="npcVaultSecurityFemaleSMG" extends="npcAdvancedSMGTemplate"> 
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Officer King,Officer Horn, Officer Snow, Officer Adams, Officer Jackson, Officer Ford, Officer Burns,
+                        Moira,Officer Matthews,Officer Price,Officer Graves,Officer Moore,Officer Brady" />
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>				
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultSecurityFemaleDark"/>
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>   
+		</entity_class>		
+
+	        <entity_class name="npcVaultDoctorPistol" extends="npcAdvancedPistolTemplate"> 
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="Names" value="Dr Fox,Dr Kline,Dr Day,Dr Ward,Dr Clarke,Dr Price,Dr Sykes,Dr Brooks,Dr Bolton,Dr Webb" />				
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultDoctorDark"/>  
+                        <property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired, NPCMedic"/> 
+		</entity_class>	
+
+                <entity_class name="npcVaultResidentFemalePistol" extends="npcAdvancedPistolTemplate"> 
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="Names" value="Emma,Tegan,Carly,Annabelle,Amy,Ruby,Lucy,Shannon,Rebecca,Jessica,Elsie" />				
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?FemaleResidentDark"/>  
+		</entity_class>	
+
+                <entity_class name="npcVaultResidentFemalePipeMG" extends="npcAdvancedPipeMGTemplate"> 
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="Names" value="Emma,Tegan,Carly,Annabelle,Amy,Ruby,Lucy,Shannon,Rebecca,Jessica,Elsie" />				
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?FemaleResidentDark"/>  
+		</entity_class>	
+
+		 <entity_class name="npcReconFemaleRocketL" extends="npcAdvancedRocketLTemplate"> 
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="Names" value="Elaena,Kamryn,Danice,Krissa,Sanya,Caelia,Dafnea,Riya,Arlyse,Caeryssa,Rayven,Riley" />	
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?ReconFemaleDark"/>
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group> 
+		</entity_class> 
+
+                <entity_class name="npcReconFemaleTRifle" extends="npcAdvancedTRifleTemplate"> 
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?ReconFemaleDark"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="Names" value="Elaena,Kamryn,Danice,Krissa,Sanya,Caelia,Dafnea,Riya,Arlyse,Caeryssa,Rayven,Riley" />
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group>	
+		</entity_class>	
+
+                <entity_class name="npcReconFemaleAK47" extends="npcAdvancedAK47Template"> 
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="Names" value="Elaena,Kamryn,Danice,Krissa,Sanya,Caelia,Dafnea,Riya,Arlyse,Caeryssa,Rayven,Riley" />				
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?ReconFemaleDark"/>
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group> 
+		</entity_class>
+
+                <entity_class name="npcReconFemaleM60" extends="npcAdvancedM60Template"> 
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="Names" value="Elaena,Kamryn,Danice,Krissa,Sanya,Caelia,Dafnea,Riya,Arlyse,Caeryssa,Rayven,Riley" />				
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?ReconFemaleDark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group> 
+		</entity_class>	
+
+                <entity_class name="npcReconFemaleClub" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="Names" value="Elaena,Kamryn,Danice,Krissa,Sanya,Caelia,Dafnea,Riya,Arlyse,Caeryssa,Rayven,Riley" />				
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?ReconFemaleDark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="500"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group> 
+		</entity_class>	
+
+                <entity_class name="npcVaultResidentFemaleClub" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="Names" value="Emma,Tegan,Carly,Annabelle,Amy,Ruby,Lucy,Shannon,Rebecca,Jessica,Elsie" />			
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?FemaleResidentDark"/> 
+		</entity_class>
+
+                <entity_class name="npcVaultResidentFemaleKnife" extends="npcAdvancedKnifeTemplate"> 
+			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="Names" value="Emma,Tegan,Carly,Annabelle,Amy,Ruby,Lucy,Shannon,Rebecca,Jessica,Elsie" />			
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?FemaleResidentDark"/> 
+		</entity_class>
+
+                <entity_class name="npcVaultDoctorClub" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="Names" value="Dr Fox,Dr Kline,Dr Day,Dr Ward,Dr Clarke,Dr Price,Dr Sykes,Dr Brooks,Dr Bolton,Dr Webb" />			
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultDoctorDark"/> 
+                        <property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 
+		</entity_class>
+
+                <entity_class name="npcVaultDoctorKnife" extends="npcAdvancedKnifeTemplate"> 
+			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="Names" value="Dr Fox,Dr Kline,Dr Day,Dr Ward,Dr Clarke,Dr Price,Dr Sykes,Dr Brooks,Dr Bolton,Dr Webb" />			
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultDoctorDark"/>
+                        <property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/>  
+		</entity_class>
+
+                <entity_class name="npcVaultSecurityFemaleClub" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Officer King,Officer Horn, Officer Snow, Officer Adams, Officer Jackson, Officer Ford, Officer Burns,
+                        Moira,Officer Matthews,Officer Price,Officer Graves,Officer Moore,Officer Brady" />
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>			
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultSecurityFemaleDark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>  
+		</entity_class>
+
+                <entity_class name="npcVaultSecurityFemaleAxe" extends="npcAdvancedAxeTemplate"> 
+			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Officer King,Officer Horn, Officer Snow, Officer Adams, Officer Jackson, Officer Ford, Officer Burns,
+                        Moira,Officer Matthews,Officer Price,Officer Graves,Officer Moore,Officer Brady" />
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>			
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultSecurityFemaleDark"/>
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>   
+		</entity_class>
+
+                <entity_class name="npcVaultResidentFemaleAxe" extends="npcAdvancedAxeTemplate"> 
+			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="Names" value="Emma,Tegan,Carly,Annabelle,Amy,Ruby,Lucy,Shannon,Rebecca,Jessica,Elsie" />			
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?FemaleResidentDark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>  
+		</entity_class>
+
+                <entity_class name="npcVaultSecurityFemaleBat" extends="npcAdvancedBatTemplate"> 
+			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="Names" value="Officer King,Officer Horn, Officer Snow, Officer Adams, Officer Jackson, Officer Ford, Officer Burns,
+                        Moira,Officer Matthews,Officer Price,Officer Graves,Officer Moore,Officer Brady" />
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>			
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultSecurityFemaleDark"/>
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+	        </effect_group>  
+		</entity_class>
+
+                <entity_class name="npcVaultDoctorBat" extends="npcAdvancedBatTemplate"> 
+			<property name="Tags" value="UMA2,entity,female,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="ASCharacterStandard"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="Names" value="Dr Fox,Dr Kline,Dr Day,Dr Ward,Dr Clarke,Dr Price,Dr Sykes,Dr Brooks,Dr Bolton,Dr Webb" />			
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?VaultDoctorDark"/> 
+                        <property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired, NPCMedic"/> 
+		</entity_class>
+
+                <entity_class name="npcArmyPowerArmorFemaleM60" extends="npcAdvancedM60Template"> 
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="Names" value="Elaena,Kamryn,Danice,Krissa,Sanya,Caelia,Dafnea,Riya,Arlyse,Caeryssa,Rayven,Riley" />				
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?ArmyPowerArmorDark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="1000"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="90"/>
+	        </effect_group> 
+		</entity_class>	
+
+                <entity_class name="npcArmyPowerArmorFemaleRocketL" extends="npcAdvancedRocketLTemplate"> 
+			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="Names" value="Elaena,Kamryn,Danice,Krissa,Sanya,Caelia,Dafnea,Riya,Arlyse,Caeryssa,Rayven,Riley" />	
+			<property name="Mesh" value="#@modfolder:Resources/VaultDwellerz.unity3d?ArmyPowerArmorDark"/>
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="1000"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="90"/>
+	        </effect_group> 
+		</entity_class> 
+
+                <entity_class name="npcArmyPowerArmorFemaleAK47" extends="npcAdvancedAK47Template"> 
 			<property name="Tags" value="UMA2,entity,female,npc,ranged"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="LookAtAngle" value="0"/> 
