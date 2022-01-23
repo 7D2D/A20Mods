@@ -10,7 +10,6 @@
                         <property name="LookAtAngle" value="0"/> 
 			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />	
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier1Dark"/> 
-			<property name="AIPackages" value="NPCBasic, NPCLauncher"/>
                 <effect_group name="Base Effects">
 		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
 		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
@@ -583,7 +582,6 @@
                         <property name="LookAtAngle" value="0"/> 
 			<property name="Names" value="SgtRock,PvtBailey,CplBarnes,PvtWaller,SgtPayne,PvtGump,CplPile,SgtMalone" />	
 			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NBCSoldier1Dark"/> 
-			<property name="AIPackages" value="NPCBasic, NPCLauncher"/>
                 <effect_group name="Base Effects">
 		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
 		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
