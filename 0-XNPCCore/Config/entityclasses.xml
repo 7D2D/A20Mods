@@ -84,8 +84,7 @@
 				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="buffNPCModAttacking"/>
 			</effect_group>
 		</append>
-		<append xpath="/entity_classes/entity_class[@name='animalBoar' or 
-													@name='animalWolf' or
+		<append xpath="/entity_classes/entity_class[@name='animalWolf' or
 													@name='animalDireWolf' or
 													@name='animalMountainLion']">
 			<property name="Faction" value="aggressiveanimalsmedium"/>
@@ -104,6 +103,12 @@
 				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="buffNPCModAttacking"/>
 			</effect_group>
 		</append>
+		
+		<append xpath="/entity_classes/entity_class[@name='animalBoar']">
+            <property name="Faction" value="passiveanimalsmedium"/>
+        </append>
+
+		
 	
 		<!--  Weapons are spawned onto the joint specified in the RightHandJoint property.  
 		For spawned Melee weapons and pistol type weapons, the standard child object is located under RightWeapon (or LeftWeapon for melee but not both)
@@ -260,7 +265,7 @@
 			<property name="CanClimbVertical" value="false"/>
 			<property name="JumpMaxDistance" value="2.8, 3.9"/>
 			<property name="Immunity" value="sickness;disease;wellness"/> 
-			<property name="ExperienceGain" value="100"/> 
+			<property name="ExperienceGain" value="600"/> 
 			<property name="LootDropProb" value="0.0"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerBandit"/>
 			<!--<property name="LootDropEntityClass" value="EntityLootContainerNPC"/>-->
@@ -272,7 +277,7 @@
 			<property name="HomeBlocks" value="cntNPCHomeBlock"/>
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
-			<property name="TimeStayAfterDeath" value="3"/>
+			<property name="TimeStayAfterDeath" value="5"/>
 			<property name="DeadBodyHitPoints" value="1000"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
@@ -551,6 +556,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand"/> 
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="750" />
+			<property name="ExperienceGain" value="600"/> 
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="EmptyHandUser"/>
 			</effect_group>
@@ -607,6 +613,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCClubWood"/> 
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
+			<property name="ExperienceGain" value="600"/> 
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="ClubUser"/>
 			</effect_group>	
@@ -663,6 +670,7 @@
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="750" />			
 			<effect_group name="WeaponType"> 
+			<property name="ExperienceGain" value="600"/> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="KnifeUser"/>
 			</effect_group>	
 			<effect_group name="AddDeepCutsProgression">
@@ -710,7 +718,8 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCBatWood"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCBatWood"/> 
 			<property name="HireCurrency" value="casinoCoin" />
-			<property name="HireCost" value="1000" />			
+			<property name="HireCost" value="1000" />
+			<property name="ExperienceGain" value="600"/>
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="BatUser"/>
 			</effect_group>
@@ -762,6 +771,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCAxe"/>
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
+			<property name="ExperienceGain" value="600"/>
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="AxeUser"/>
 			</effect_group>
@@ -814,6 +824,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCSpear"/> 
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
+			<property name="ExperienceGain" value="600"/>
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="SpearUser"/>
 			</effect_group>	
@@ -865,6 +876,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCMachete"/> 
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
+			<property name="ExperienceGain" value="600"/>
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="MacheteUser"/>
 			</effect_group>
@@ -916,6 +928,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPipePistol,ammoNPC9mmBulletBall"/>
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1250" />
+			<property name="ExperienceGain" value="1000"/>
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="PipePistolUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
@@ -970,6 +983,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPistol,ammoNPC9mmBulletBall"/>
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="2250" />
+			<property name="ExperienceGain" value="1200"/>
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="PistolUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/>
@@ -1028,6 +1042,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCDPistol,ammoNPC9mmBulletBall"/>
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="2750" />
+			<property name="ExperienceGain" value="1400"/>
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="DPistolUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
@@ -1084,6 +1099,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCSMG5,ammoNPC9mmBulletBall"/> 
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="3250" />
+			<property name="ExperienceGain" value="1400"/>
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="SMGUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
@@ -1140,6 +1156,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCM60,ammoNPC762mmBulletBall"/> 
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="3500" />
+			<property name="ExperienceGain" value="1400"/>
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="M60User"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/>
@@ -1195,6 +1212,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCAk47,ammoNPC762mmBulletBall"/> 
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="3250" />
+			<property name="ExperienceGain" value="1200"/>
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="AK47User"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/>
@@ -1249,6 +1267,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPipeMG,ammoNPC762mmBulletBall"/> 
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1750" />
+			<property name="ExperienceGain" value="1000"/>
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="PipeMGUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/>
@@ -1304,6 +1323,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCTRifle,ammoNPC762mmBulletBall"/> 
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="3500" />
+			<property name="ExperienceGain" value="1200"/>
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="TRifleUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
@@ -1359,6 +1379,7 @@
             <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPipeRifle,ammoNPC762mmBulletBall"/> 
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1000" />
+			<property name="ExperienceGain" value="800"/>
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="PipeRifleUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
@@ -1413,6 +1434,7 @@
             <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCHRifle,ammoNPC762mmBulletBall"/> 
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1250" />
+			<property name="ExperienceGain" value="1000"/>
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HRifleUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/>
@@ -1467,6 +1489,7 @@
             <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCSRifle,ammoNPC762mmBulletBall"/> 
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="3250" />
+			<property name="ExperienceGain" value="1400"/>
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="SRifleUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
@@ -1521,6 +1544,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPipeShotgun,ammoNPCShotgunShell"/> 
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="1250" />
+			<property name="ExperienceGain" value="800"/>
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="PipeShotgunUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
@@ -1575,6 +1599,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPShotgun,ammoNPCShotgunShell"/> 
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="2250" />
+			<property name="ExperienceGain" value="1200"/>
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="PShotgunUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
@@ -1629,6 +1654,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCAShotgun,ammoNPCShotgunShell"/> 
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="3500" />
+			<property name="ExperienceGain" value="1400"/>
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="AShotgunUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
@@ -1683,6 +1709,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCLBow,ammoNPCArrowIron"/> 
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="2000" />
+			<property name="ExperienceGain" value="800"/>
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="LBowUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/>
@@ -1737,6 +1764,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCXBow,ammoNPCCrossbowBoltIron"/> 
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="2500" />
+			<property name="ExperienceGain" value="1000"/>
 			<!-- For testing launcher version  -->
 			<!-- <property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCXBow,ammoNPCCrossbowBoltIron2"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCXBow,ammoNPCCrossbowBoltIron2"/>
@@ -1798,6 +1826,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCRocketLauncher,ammoNPCRocketHE"/> 
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="3000" />
+			<property name="ExperienceGain" value="1400"/>
 			<effect_group name="UseRangedWeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="RocketLUser"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffReload"/> 
@@ -1936,7 +1965,7 @@
 			<!--<effect_group name="ragtestforNREs">
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="ragtest"/>		
 			</effect_group>  Activate this if your testing ragdolls for NREs  -->				
-			<property name="ExperienceGain" value="1000"/> 
+			<property name="ExperienceGain" value="400"/> 
 			<property name="LootDropProb" value="0"/> 
 			<!--<property name="MapIcon" value="ui_game_symbol_bullet_point"/> -->
 			<property name="Names" value="Buster, Sally, Fluffy" />		
@@ -2353,7 +2382,7 @@
 			<property name="AttackTimeoutDay" value="1.5"/> <!-- 1.5 in s -->
 			<property name="AttackTimeoutNight" value="1.1"/>
 			<property name="Immunity" value="sickness;disease;wellness"/> <!-- bleeding; -->
-			<property name="ExperienceGain" value="413"/> <!-- XP grunt -->
+			<property name="ExperienceGain" value="400"/> <!-- XP grunt -->
 			<property name="LootDropProb" value="0.02"/> <!-- Whether it drops a loot bag on death or not. -->
 			<!-- <property name="LootListOnDeath" value="45"/> -->
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
@@ -2624,7 +2653,7 @@
 			<property name="RootMotion" value="false"/>
 			<property name="RagdollOnDeathChance" value="0"/>
 			<property name="Mass" value="120"/>			
-			<property name="ExperienceGain" value="230"/>
+			<property name="ExperienceGain" value="500"/>
 			<property name="Faction" value="mechs"/>
 			<property name="HandItem" value="meleeNPCEmptyHand"/>
 			<property name="SurfaceCategory" value="metal"/>
@@ -2686,7 +2715,6 @@
 				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value=".1"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 			</effect_group>					
-			<property name="ExperienceGain" value="1000"/> 
 			<property name="LootDropProb" value=".1"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>	
 			<!--<property name="MapIcon" value="ui_game_symbol_bullet_point"/> -->
@@ -3653,7 +3681,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="500"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>	
@@ -3687,7 +3714,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="500"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 			
@@ -3714,7 +3740,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="500"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>	
@@ -3740,7 +3765,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="500"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>			
@@ -3766,7 +3790,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="500"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>		
@@ -3793,7 +3816,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="500"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>	
@@ -3819,7 +3841,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="500"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>			
@@ -3845,7 +3866,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="500"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>	
@@ -3871,7 +3891,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="500"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>	
@@ -3897,7 +3916,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="500"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>				
@@ -3923,7 +3941,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="500"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>	
@@ -3949,7 +3966,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>	
@@ -3975,7 +3991,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
 		</entity_class>			
@@ -4001,7 +4016,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
 		</entity_class>				
@@ -4027,7 +4041,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
 		</entity_class>				
@@ -4053,7 +4066,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
 		</entity_class>
@@ -4079,7 +4091,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
 		</entity_class>		
@@ -4106,7 +4117,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
         </entity_class>   
@@ -4132,7 +4142,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
         </entity_class>   
@@ -4158,7 +4167,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
         </entity_class>   	
@@ -4184,7 +4192,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
 		</entity_class> 
@@ -4210,7 +4217,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
 		</entity_class>	
@@ -4235,7 +4241,6 @@
 			<property name="SoundAlert" value="HarleyAlert"/>
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
-			<property name="ExperienceGain" value="800"/> 
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>			
@@ -4474,7 +4479,7 @@
 			<property name="IsEnemyEntity" value="false"/> 			
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?ArcticFox_X"/>
 			<property name="HandItem" value="meleeHandAnimalFox"/>
-			<property name="ExperienceGain" value="206"/>
+			<property name="ExperienceGain" value="300"/>
 			<property name="DeadBodyHitPoints" value="200"/>
 			<property name="SizeScale" value="1.3"/> 
 			<property name="Weight" value="5"/> <!-- Game weight for being moved  -->
@@ -4520,7 +4525,7 @@
 			<property name="SoundSense" value="wolfsense"/>
 			<property name="SoundGiveUp" value="wolfgiveup"/>
 			<property name="HandItem" value="meleeHandAnimalCoyote"/>
-			<property name="ExperienceGain" value="206"/>
+			<property name="ExperienceGain" value="200"/>
 			<property name="DeadBodyHitPoints" value="200"/>
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
 			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/>
