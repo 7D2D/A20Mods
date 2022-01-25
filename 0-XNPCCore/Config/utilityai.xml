@@ -143,15 +143,16 @@
 					<consideration class="SelfNotHasBuff, SCore" buffs="buffHitStun"/>	
 					<consideration class="NotHasOrder, SCore" order="Stay"/>
 				</action>
-				 <action name="MoveToRandomTarget" weight="3">
+				 <action name="MoveToRandomTarget" weight="3" entity_filter="IsPlayer" >
                     <task class="MoveToInvestigate, SCore" run="true" />
-					<consideration class="SelfHasCVar, SCore" cvar="varFactionBandit" value="1"/>
-					<consideration class="FailOnDistanceToLeader, Score" max_distance="30"/>
-					<consideration class="NotInWeaponRange, SCore" action_index="0" /> 
-					<consideration class="CanNotSeeTarget, SCore"/>
-					<consideration class="SelfNotHasBuff, SCore" buffs="buffHitStun"/>	
-					<consideration class="NotHasOrder, SCore" order="Stay"/>
-                 </action>					
+                    <consideration class="SelfHasCVar, SCore" cvar="varFactionBandit" value="1"/>
+                    <consideration class="FailOnDistanceToLeader, Score" max_distance="30"/>
+                    <consideration class="NotInWeaponRange, SCore" action_index="0" /> 
+                    <consideration class="CanNotSeeTarget, SCore"/>
+                    <consideration class="CanHearTarget, SCore" /> <!-- Only valid for players, fails otherwise -->
+                    <consideration class="SelfNotHasBuff, SCore" buffs="buffHitStun"/>    
+                    <consideration class="NotHasOrder, SCore" order="Stay"/>
+                 </action>    					
 				<action name="MeleeAttackEntity" weight="5">
 					<task class="AttackTargetEntitySDX, SCore" action_index="0"/>
 					<consideration class="FailOnDistanceToLeader, Score" max_distance="30"/>
@@ -163,11 +164,12 @@
 			</ai_package>	
 	
 			<ai_package name="NPCRangedBasic" entity_filter="IsEnemy" > <!-- props to the team, especially Ramsey, for this upgraded code  -->
-				 <action name="MoveToRandomTarget" weight="4">
+				 <action name="MoveToRandomTarget" weight="4" entity_filter="IsPlayer">
                     <task class="MoveToInvestigate, SCore" run="true" />
 					<consideration class="SelfHasCVar, SCore" cvar="varFactionBandit" value="1"/>
                     <consideration class="TargetDistance" max="30" curve="threshold"/>
                     <consideration class="CanNotSeeTarget, SCore"/>
+					<consideration class="CanHearTarget, SCore" />
                 </action>	
 				<action name="MoveToEnemyShortRanged" weight="4">
 					<task class="MoveToAttackTargetSDX, SCore" run="true" action_index="1" />
@@ -244,12 +246,13 @@
 					<consideration class="SelfNotHasBuff, SCore" buffs="buffNPCModThreatControlMode,buffNPCModFullControlMode,buffHitStun"/>	
 					<consideration class="NotHasOrder, SCore" order="Stay"/>
 				</action>
-				 <action name="MoveToRandomTarget" weight="3">
+				 <action name="MoveToRandomTarget" weight="3" entity_filter="IsPlayer">
                     <task class="MoveToInvestigate, SCore" run="true" />
 					<consideration class="SelfHasCVar, SCore" cvar="varFactionBandit" value="1"/>
 					<consideration class="FailOnDistanceToLeader, Score" max_distance="30"/>
 					<consideration class="NotInWeaponRange, SCore" action_index="0" /> 
 					<consideration class="CanNotSeeTarget, SCore"/>
+					<consideration class="CanHearTarget, SCore" />
 					<consideration class="SelfNotHasBuff, SCore" buffs="buffNPCModThreatControlMode,buffNPCModFullControlMode,buffHitStun"/>	
 					<consideration class="NotHasOrder, SCore" order="Stay"/>
                  </action>					
@@ -278,7 +281,7 @@
 					<consideration class="SelfNotHasBuff, SCore" buffs="buffNPCModStopAttacking,buffHitStun"/>	
 					<consideration class="NotHasOrder, SCore" order="Stay"/>
 				</action>
-				 <action name="MoveToRandomTargetThreatControl" weight="3">
+				 <action name="MoveToRandomTargetThreatControl" weight="3" entity_filter="IsPlayer" >
 					<consideration class="SelfHasBuff, SCore" buffs="buffNPCModThreatControlMode"/>
 					<consideration class="TargetNotHasBuff, SCore" buffs="buffNPCModThreat"/>
                     <task class="MoveToInvestigate, SCore" run="true" />
@@ -286,6 +289,7 @@
 					<consideration class="FailOnDistanceToLeader, Score" max_distance="30"/>
 					<consideration class="NotInWeaponRange, SCore" action_index="0" /> 
 					<consideration class="CanNotSeeTarget, SCore"/>
+					<consideration class="CanHearTarget, SCore" />
 					<consideration class="SelfNotHasBuff, SCore" buffs="buffNPCModStopAttacking,buffHitStun"/>	
 					<consideration class="NotHasOrder, SCore" order="Stay"/>
                  </action>					
@@ -315,13 +319,14 @@
 					<consideration class="SelfNotHasBuff, SCore" buffs="buffNPCModStopAttacking,buffHitStun"/>	
 					<consideration class="NotHasOrder, SCore" order="Stay"/>
 				</action>
-				 <action name="MoveToRandomTargetThreatControl" weight="3">
+				 <action name="MoveToRandomTargetThreatControl" weight="3" entity_filter="IsPlayer">
 					<consideration class="SelfHasBuff, SCore" buffs="buffNPCModFullControlMode"/>
                     <task class="MoveToInvestigate, SCore" run="true" />
 					<consideration class="SelfHasCVar, SCore" cvar="varFactionBandit" value="1"/>
 					<consideration class="FailOnDistanceToLeader, Score" max_distance="30"/>
 					<consideration class="NotInWeaponRange, SCore" action_index="0" /> 
 					<consideration class="CanNotSeeTarget, SCore"/>
+					<consideration class="CanHearTarget, SCore" />
 					<consideration class="SelfNotHasBuff, SCore" buffs="buffNPCModStopAttacking,buffHitStun"/>	
 					<consideration class="NotHasOrder, SCore" order="Stay"/>
                  </action>					
@@ -346,7 +351,7 @@
 					<consideration class="SelfNotHasBuff, SCore" buffs="buffNPCModStopAttacking,buffHitStun"/>	
 					<consideration class="NotHasOrder, SCore" order="Stay"/>
 				</action>
-				 <action name="MoveToRandomTargetControlAttacked" weight="3">
+				 <action name="MoveToRandomTargetControlAttacked" weight="3" entity_filter="IsPlayer">
 					<consideration class="SelfHasBuff, SCore" buffs="buffNPCModThreatControlMode,buffNPCModFullControlMode"/>
 					<!--<consideration class="TargetHasBuff, SCore" buffs="buffNPCModThreat"/>-->
 					<consideration class="TargetHasBuff, SCore" buffs="buffNPCModAttacking"/>
@@ -355,6 +360,7 @@
 					<consideration class="FailOnDistanceToLeader, Score" max_distance="30"/>
 					<consideration class="NotInWeaponRange, SCore" action_index="0" /> 
 					<consideration class="CanNotSeeTarget, SCore"/>
+					<consideration class="CanHearTarget, SCore" />
 					<consideration class="SelfNotHasBuff, SCore" buffs="buffNPCModStopAttacking,buffHitStun"/>	
 					<consideration class="NotHasOrder, SCore" order="Stay"/>
                  </action>					
@@ -373,12 +379,13 @@
 			
 			<ai_package name="NPCRanged" entity_filter="IsEnemy" > <!-- props to the team, especially Ramsey, for this upgraded code  -->
 				<!-- DEFAULT ACTIONS -->
-				 <action name="MoveToRandomTarget" weight="4">
+				 <action name="MoveToRandomTarget" weight="4" entity_filter="IsPlayer">
                     <task class="MoveToInvestigate, SCore" run="true" />
 					<consideration class="SelfNotHasBuff, SCore" buffs="buffNPCModThreatControlMode,buffNPCModFullControlMode"/>
 					<consideration class="SelfHasCVar, SCore" cvar="varFactionBandit" value="1"/>
                     <consideration class="TargetDistance" max="30" curve="threshold"/>
                     <consideration class="CanNotSeeTarget, SCore"/>
+					<consideration class="CanHearTarget, SCore" />
                 </action>	
 				<action name="MoveToEnemyShortRanged" weight="4">
 					<task class="MoveToAttackTargetSDX, SCore" run="true" action_index="1" />
@@ -458,7 +465,7 @@
 					<consideration class="SelfHasBuff, SCore" buffs="buffNPCModStopAttacking"/>
 					<consideration class="HasOrder, SCore" order="Follow"/>
 				</action>
-				 <action name="MoveToRandomTargetThreatControl" weight="4">
+				 <action name="MoveToRandomTargetThreatControl" weight="4" entity_filter="IsPlayer">
                     <task class="MoveToInvestigate, SCore" run="true" />
 					<consideration class="SelfHasBuff, SCore" buffs="buffNPCModThreatControlMode"/>
 					<consideration class="SelfNotHasBuff, SCore" buffs="buffNPCModStopAttacking"/>
@@ -466,6 +473,7 @@
 					<consideration class="SelfHasCVar, SCore" cvar="varFactionBandit" value="1"/>
                     <consideration class="TargetDistance" max="30" curve="threshold"/>
                     <consideration class="CanNotSeeTarget, SCore"/>
+					<consideration class="CanHearTarget, SCore" />
                 </action>	
 				<action name="MoveToEnemyShortRangedThreatControl" weight="4">
 					<task class="MoveToAttackTargetSDX, SCore" run="true" action_index="1" />
@@ -554,7 +562,7 @@
 					<consideration class="NotHasOrder, SCore" order="Stay"/>
 				</action>
 				<!-- CONTROL ACTIONS - PLAYER IS BEING ATTACKED OR GAVE ATTACK COMMAND -->
-				 <action name="MoveToRandomTargetControlAttacked" weight="4">
+				 <action name="MoveToRandomTargetControlAttacked" weight="4" entity_filter="IsPlayer">
                     <task class="MoveToInvestigate, SCore" run="true" />
 					<consideration class="SelfHasBuff, SCore" buffs="buffNPCModThreatControlMode,buffNPCModFullControlMode"/>
 					<consideration class="SelfNotHasBuff, SCore" buffs="buffNPCModStopAttacking"/>
@@ -562,6 +570,7 @@
 					<consideration class="SelfHasCVar, SCore" cvar="varFactionBandit" value="1"/>
                     <consideration class="TargetDistance" max="30" curve="threshold"/>
                     <consideration class="CanNotSeeTarget, SCore"/>
+					<consideration class="CanHearTarget, SCore" />
                 </action>	
 				<action name="MoveToEnemyShortRangedControlAttacked" weight="4">
 					<task class="MoveToAttackTargetSDX, SCore" run="true" action_index="1" />

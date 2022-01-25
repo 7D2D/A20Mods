@@ -19,13 +19,15 @@
 
 		<!--  Edits to convert zombies to Faction based targeting for whisperers -->
 
-		<set xpath="//entity_class[starts-with(@name, 'zombieTemplate')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,0,0,EntityAlive,0,0</set> 
+		<set xpath="//entity_class[starts-with(@name, 'zombieTemplate')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,0,0,EntityNPC,0,0</set> 
 		
 		<!--  Edits to add NPCs to targeting  -->	
 
-		<set xpath="//entity_class[starts-with(@name, 'zombieMutated')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityEnemyAnimal,0,EntityPlayer,0,EntityAlive,0</set> 
+		<set xpath="//entity_class[starts-with(@name, 'zombieMutated')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityEnemyAnimal,0,EntityPlayer,0,EntityNPC,0</set> 
 	
 		<set xpath="//entity_class[starts-with(@name, 'animalTemplateTimid')]/property[@value='RunawayFromEntity']/@data">class=EntityPlayer,EntityZombie,EntityEnemyAnimal,EntityNPC</set> 
+		
+		<set xpath="//entity_class[starts-with(@name, 'animalTemplateHostile')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,20,15,EntityZombie,15,10,EntityNPC,15,10</set> 
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalRabbit')]/property[@value='RunawayFromEntity']/@data">class=EntityPlayer,EntityZombie,EntityEnemyAnimal,EntityNPC;safeDistance=20</set> 
 		
@@ -244,7 +246,7 @@
 			<property name="HeadExplosionDamageMultiplier" value="1"/>
 			<property name="ChestExplosionDamageMultiplier" value="1"/>
 			<property name="PainResistPerHit" value=".6"/> <!-- Added when hit. Caps at 3. Decay .2 per second. At 1 movement is not slowed by pain -->
-			<property name="MaxViewAngle" value="360"/> <!-- NPCs dont "hear" so need to sense behind them for now this way  -->
+			<property name="MaxViewAngle" value="180"/> 
 			<property name="SightRange" value="60"/>
 			<property name="SightLightThreshold" value="-2,150"/> 
 			<property name="SleeperWakeupSightDetectionMin" value="-40,5"/> 
@@ -2288,7 +2290,7 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityNPC,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
-			<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityAlive,0,0"/> 
+			<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityNPC,0,0"/> 
 			<property class="FallLandBehavior">
 				<property name="1None" data="anim=None;height=0,1;weight=0.4"/>
 				<property name="1Land" data="anim=Land;height=0,1;weight=0.4"/>
