@@ -1,0 +1,131 @@
+<configs>
+	<append xpath="/recipes" >
+		<recipe name="CCTV0-3" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
+			<ingredient name="resourceScrapPolymers" count="8"/>
+			<ingredient name="resourceElectricParts" count="12"/>
+			<ingredient name="glassBlockVariantHelper" count="1"/>
+			<ingredient name="solarCellSmall" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>	
+		<recipe name="CCTV4-7" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable" >
+			<ingredient name="resourceScrapPolymers" count="8"/>
+			<ingredient name="resourceElectricParts" count="12"/>
+			<ingredient name="glassBlockVariantHelper" count="1"/>
+			<ingredient name="solarCellSmall" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+		<recipe name="CCTVLarge0-3" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable" >
+			<ingredient name="resourceScrapPolymers" count="16"/>
+			<ingredient name="resourceElectricParts" count="24"/>
+			<ingredient name="glassBlockVariantHelper" count="2"/>
+			<ingredient name="solarCellSmall" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>	
+		<recipe name="CCTVLarge4-7" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable" >
+			<ingredient name="resourceScrapPolymers" count="16"/>
+			<ingredient name="resourceElectricParts" count="24"/>
+			<ingredient name="glassBlockVariantHelper" count="2"/>
+			<ingredient name="solarCellSmall" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+		<recipe name="solarCellSmall" count="2" craft_area="workbench" tags="perkAdvancedEngineering,learnable" >
+			<ingredient name="solarCell" count="1"/>
+		</recipe>
+		<recipe name="CamPan0" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable" >
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceElectricParts" count="5"/>
+			<ingredient name="solarCellSmall" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>	
+		<recipe name="CamPan1" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceElectricParts" count="5"/>
+			<ingredient name="solarCellSmall" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+		<recipe name="CamPan2" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable" >
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceElectricParts" count="5"/>
+			<ingredient name="solarCellSmall" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+		<recipe name="CamPan3" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable" >
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceElectricParts" count="5"/>
+			<ingredient name="solarCellSmall" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+		<recipe name="CamPan4" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable" >
+			<ingredient name="resourceMechanicalParts" count="1"/>
+			<ingredient name="resourceElectricParts" count="1"/>
+			<ingredient name="solarCellSmall" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+		<recipe name="CamPan5" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable" >
+			<ingredient name="resourceMechanicalParts" count="1"/>
+			<ingredient name="resourceElectricParts" count="1"/>
+			<ingredient name="solarCellSmall" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+		<recipe name="CamPan6" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable" >
+			<ingredient name="resourceMechanicalParts" count="1"/>
+			<ingredient name="resourceElectricParts" count="1"/>
+			<ingredient name="solarCellSmall" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+		<recipe name="CamPan7" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
+			<ingredient name="resourceMechanicalParts" count="1"/>
+			<ingredient name="resourceElectricParts" count="1"/>
+			<ingredient name="solarCellSmall" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+		<recipe name="CamPanSm0" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable" >
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceElectricParts" count="5"/>
+			<ingredient name="solarCellSmall" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>	
+		<recipe name="CamPanSm1" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable" >
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceElectricParts" count="5"/>
+			<ingredient name="solarCellSmall" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+		<recipe name="CamPanSm2" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceElectricParts" count="5"/>
+			<ingredient name="solarCellSmall" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+		<recipe name="CamPanSm3" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceElectricParts" count="5"/>
+			<ingredient name="solarCellSmall" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+		<recipe name="CamPanSm4" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable" >
+			<ingredient name="resourceMechanicalParts" count="1"/>
+			<ingredient name="resourceElectricParts" count="1"/>
+			<ingredient name="solarCellSmall" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+		<recipe name="CamPanSm5" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable" >
+			<ingredient name="resourceMechanicalParts" count="1"/>
+			<ingredient name="resourceElectricParts" count="1"/>
+			<ingredient name="solarCellSmall" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+		<recipe name="CamPanSm6" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable" >
+			<ingredient name="resourceMechanicalParts" count="1"/>
+			<ingredient name="resourceElectricParts" count="1"/>
+			<ingredient name="solarCellSmall" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+		<recipe name="CamPanSm7" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable" >
+			<ingredient name="resourceMechanicalParts" count="1"/>
+			<ingredient name="resourceElectricParts" count="1"/>
+			<ingredient name="solarCellSmall" count="1"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>		
+	</append>
+</configs>		

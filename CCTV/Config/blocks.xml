@@ -1,0 +1,196 @@
+<configs>
+	<append xpath="/blocks">
+		<block name="CCTV0-3"> 
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CCTV01_X" /> <!-- Free model by NordicStarship -->
+			<property name="Class" value="Switch"/>		
+            <property name="DisplayType" value="blockElectrical" />
+            <property name="RequiredPower" value="0"/>
+            <property name="CreativeMode" value="Player"/>
+			<property name="TriggerType" value="Switch"/> 
+			<property name="CustomIcon" value="CCTV1" />
+			<property name="Material" value="Mmetal_medium"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="TakeDelay" value="5"/>
+			<property name="EconomicValue" value="2000"/>
+			<property name="Group" value="Science"/>
+			<property class="RepairItems"> <property name="resourceForgedIron" value="1"/> <property name="resourceElectricParts" value="3"/> </property>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/> 
+			<drop event="Destroy" name="resourceScrapIron" count="5" prob="1"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="UnlockedBy" value="perkAdvancedEngineering,CCTVSchematic"/>
+			<property name="DescriptionKey" value="CCTV_MonitorDesc"/> 
+		</block>
+		<block name="CCTV4-7"> 
+			<property name="Extends" value="CCTV0-3"/>
+			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CCTV02_X" /> <!-- Free model by NordicStarship -->
+			<property name="CustomIcon" value="CCTV2" />
+		</block>
+		
+		<block name="CCTVLarge0-3"> 
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CCTV01Large_X" /> <!-- Free model by NordicStarship -->
+			<property name="MultiBlockDim" value="2,1,1" /> 
+			<property name="Class" value="Switch"/>		
+            <property name="DisplayType" value="blockElectrical" />
+            <property name="RequiredPower" value="0"/>
+            <property name="CreativeMode" value="Player"/>
+			<property name="TriggerType" value="Switch"/> 
+			<property name="CustomIcon" value="CCTV1" />
+			<property name="Material" value="Mmetal_medium"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="TakeDelay" value="5"/>
+			<property name="EconomicValue" value="2000"/>
+			<property name="Group" value="Science"/>
+			<property class="RepairItems"> <property name="resourceForgedIron" value="1"/> <property name="resourceElectricParts" value="3"/> </property>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/> 
+			<drop event="Destroy" name="resourceScrapIron" count="5" prob="1"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="UnlockedBy" value="perkAdvancedEngineering,CCTVSchematic"/>
+			<property name="DescriptionKey" value="CCTV_MonitorDesc"/> 
+		</block>
+		<block name="CCTVLarge4-7"> 
+			<property name="Extends" value="CCTVLarge0-3"/>
+			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CCTV02Large_X" /> <!-- Free model by NordicStarship -->
+			<property name="CustomIcon" value="CCTV2" />
+		</block>
+		
+		<block name="CamPan0">
+			<property name="Material" value="Mmetal"/>
+			<property name="Class" value="Switch"/>		
+            <property name="DisplayType" value="blockElectrical" />
+			<property name="RequiredPower" value="0"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="TriggerType" value="Switch"/> 
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Path" value="solid"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="OnlySimpleRotations" value="true"/> 
+			<property name="CanPickup" value="true" /> 
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMetalPipe" count="4,8" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapIron" count="2,5" tag="allHarvest"/>
+			<drop event="Destroy" name="resourceScrapIron" count="2,5"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="DescriptionKey" value="CCTV_CamDesc"/> 
+			<property name="Shape" value="ModelEntity" /> <!-- Free model by gromorg -->
+			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPan0_X" />
+			<property name="CustomIcon" value="Cam0" />
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="Stacknumber" value="1"/>
+		</block>
+		<block name="CamPan1">
+			<property name="Extends" value="CamPan0"/>
+			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPan1_X" />
+			<property name="CustomIcon" value="Cam1" />
+		</block>
+		<block name="CamPan2">
+			<property name="Extends" value="CamPan0"/>
+			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPan2_X" />
+			<property name="CustomIcon" value="Cam2" />
+		</block>
+		<block name="CamPan3">
+			<property name="Extends" value="CamPan0"/>
+			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPan3_X" />
+			<property name="CustomIcon" value="Cam3" />
+		</block>
+		<block name="CamPan4">
+			<property name="Extends" value="CamPan0"/>
+			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPan4_X" />
+			<property name="CustomIcon" value="Cam4" />
+		</block>	
+		<block name="CamPan5">
+			<property name="Extends" value="CamPan0"/>
+			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPan5_X" />
+			<property name="CustomIcon" value="Cam5" />
+		</block>	
+		<block name="CamPan6">
+			<property name="Extends" value="CamPan0"/>
+			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPan6_X" />
+			<property name="CustomIcon" value="Cam6" />
+		</block>	
+		<block name="CamPan7">
+			<property name="Extends" value="CamPan0"/>
+			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPan7_X" />
+			<property name="CustomIcon" value="Cam7" />
+		</block>
+		<block name="CamPanSm0">
+			<property name="Material" value="Mmetal"/>
+			<property name="Class" value="Switch"/>		
+            <property name="DisplayType" value="blockElectrical" />
+			<property name="RequiredPower" value="0"/>
+            <property name="CreativeMode" value="Player"/>
+			<property name="TriggerType" value="Switch"/> 
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Path" value="solid"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="OnlySimpleRotations" value="true"/> 
+			<property name="CanPickup" value="true" /> 
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMetalPipe" count="4,8" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapIron" count="2,5" tag="allHarvest"/>
+			<drop event="Destroy" name="resourceScrapIron" count="2,5"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="DescriptionKey" value="CCTV_CamDesc"/> 
+			<property name="Shape" value="ModelEntity" /> <!-- Free model by gromorg -->
+			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPanSm0_X" />
+			<property name="CustomIcon" value="Cam0" />
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="Stacknumber" value="1"/>
+		</block>
+		<block name="CamPanSm1">
+			<property name="Extends" value="CamPanSm0"/>
+			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPanSm1_X" />
+			<property name="CustomIcon" value="Cam1" />
+		</block>
+		<block name="CamPanSm2">
+			<property name="Extends" value="CamPanSm0"/>
+			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPanSm2_X" />
+			<property name="CustomIcon" value="Cam2" />
+		</block>
+		<block name="CamPanSm3">
+			<property name="Extends" value="CamPanSm0"/>
+			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPanSm3_X" />
+			<property name="CustomIcon" value="Cam3" />
+		</block>
+		<block name="CamPanSm4">
+			<property name="Extends" value="CamPanSm0"/>
+			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPanSm4_X" />
+			<property name="CustomIcon" value="Cam4" />
+		</block>	
+		<block name="CamPanSm5">
+			<property name="Extends" value="CamPanSm0"/>
+			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPanSm5_X" />
+			<property name="CustomIcon" value="Cam5" />
+		</block>	
+		<block name="CamPanSm6">
+			<property name="Extends" value="CamPanSm0"/>
+			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPanSm6_X" />
+			<property name="CustomIcon" value="Cam6" />
+		</block>	
+		<block name="CamPanSm7">
+			<property name="Extends" value="CamPanSm0"/>
+			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPanSm7_X" />
+			<property name="CustomIcon" value="Cam7" />
+
+		</block>
+	</append>
+</configs>
