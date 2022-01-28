@@ -270,5 +270,494 @@
 
     </append> 		-->
 	
-	
+	<!-- 
+        Sleeper Volume Entity Groups
+
+        These are used by the sleeper volume spawners, defined in gamestages.xml.
+        By convention, they are named "npc[Association][Classification]GroupGS[01|50|100|200|400|800]",
+        where "Association" is a larger category (like a faction),
+        and "Classification" is a smaller category within that association (like ranged vs. melee).
+		The numbers represent the maximum gamestage for that group - see gamestages.xml.
+        This should make them easier to target with XPath.
+
+		The associations and classifications of the NPCs in these groups are not enforced by the game.
+		You can place military NPCs in the "military" group, even if they are in the "whiteriver" faction.
+
+		Since entity groups cannot be empty, sample NPCs are added to all groups:
+		
+		* Harley NPCs are added to human "enemy" groups.
+		* Nurse NPCs are added to human "friendly" groups.
+		* The NPC fox and vanilla timid animals are added to the friendly animal group.
+		* Vanilla hostile animals (live only, no zombies) are added to the enemy animal groups.
+		* For weapon-bearing groups without appropriate sample NPCs (like "Mech"), Nurses added at a very low probabilty,
+		  to make their chance of spawning insignificant when other NPCs are added to those groups.
+		* For non-weapon-bearing groups without appropriate sample NPCs (like "Arachnid"), Rattlesnakes added at a very low probabilty.
+
+		The sample Core NPCs are gamestaged, even when they spawn at a low probability.
+		NPC pack creators can target them when inserting their own NPCs.
+		
+		* For Core NPCs that are in appropriate entity groups, target their probabilities, and match them.
+
+			Example: You have a bandit NPC with a weapon that is the general equivalent of a machete.
+			Match the Harley NPC armed with a machete, and spawn in with the same probability:
+			<insertAfter xpath="//entitygroup[starts-with(@name, 'npcBandit')]/entity[@name='npcHarleyMachete' and @prob='0.1']">
+				<entity name="whateverMyMechIsNamed" prob="0.1" />
+			</insertAfter>
+			<insertAfter xpath="//entitygroup[starts-with(@name, 'npcBandit')]/entity[@name='npcHarleyMachete' and @prob='0.2']">
+				<entity name="whateverMyMechIsNamed" prob="0.2" />
+			</insertAfter>
+			...etc.
+
+		* For Core NPCs that are not in appropriate entity groups, target their probabilities,
+		  but make your own NPCs 100x their probabilities.
+
+			Example: You have a Mech NPC with a weapon that is the general equivalent of a pistol.
+			Match the Nurse NPC armed with a pistol, and spawn in with 10x their probability:
+			<insertAfter xpath="//entitygroup[starts-with(@name, 'npcMech')]/entity[@name='npcNursePistol' and @prob='0.001']">
+				<entity name="whateverMyMechIsNamed" prob="0.1" />
+			</insertAfter>
+			<insertAfter xpath="//entitygroup[starts-with(@name, 'npcMech')]/entity[@name='npcNursePistol' and @prob='0.002']">
+				<entity name="whateverMyMechIsNamed" prob="0.2" />
+			</insertAfter>
+			...etc.
+    -->
+	<insertAfter xpath="/entitygroups/entitygroup[last()]">
+		<!-- Bandits NPC entity groups -->
+		<entitygroup name="npcBanditsAllGroupGS01">
+		</entitygroup>
+		<entitygroup name="npcBanditsAllGroupGS50">
+		</entitygroup>
+		<entitygroup name="npcBanditsAllGroupGS100">
+		</entitygroup>
+		<entitygroup name="npcBanditsAllGroupGS200">
+		</entitygroup>
+		<entitygroup name="npcBanditsAllGroupGS400">
+		</entitygroup>
+		<entitygroup name="npcBanditsAllGroupGS800">
+		</entitygroup>
+		<entitygroup name="npcBanditsMeleeGroupGS01">
+		</entitygroup>
+		<entitygroup name="npcBanditsMeleeGroupGS50">
+		</entitygroup>
+		<entitygroup name="npcBanditsMeleeGroupGS100">
+		</entitygroup>
+		<entitygroup name="npcBanditsMeleeGroupGS200">
+		</entitygroup>
+		<entitygroup name="npcBanditsMeleeGroupGS400">
+		</entitygroup>
+		<entitygroup name="npcBanditsMeleeGroupGS800">
+		</entitygroup>
+		<entitygroup name="npcBanditsRangedGroupGS01">
+		</entitygroup>
+		<entitygroup name="npcBanditsRangedGroupGS50">
+		</entitygroup>
+		<entitygroup name="npcBanditsRangedGroupGS100">
+		</entitygroup>
+		<entitygroup name="npcBanditsRangedGroupGS200">
+		</entitygroup>
+		<entitygroup name="npcBanditsRangedGroupGS400">
+		</entitygroup>
+		<entitygroup name="npcBanditsRangedGroupGS800">
+		</entitygroup>
+		<entitygroup name="npcBanditsBossGroupGS01"></entitygroup>
+		<entitygroup name="npcBanditsBossGroupGS50"></entitygroup>
+		<entitygroup name="npcBanditsBossGroupGS100"></entitygroup>
+		<entitygroup name="npcBanditsBossGroupGS200"></entitygroup>
+		<entitygroup name="npcBanditsBossGroupGS400"></entitygroup>
+		<entitygroup name="npcBanditsBossGroupGS800"></entitygroup>
+
+		<!-- Duke NPC entity groups -->
+		<entitygroup name="npcDukeAllGroupGS01">
+		</entitygroup>
+		<entitygroup name="npcDukeAllGroupGS50">
+		</entitygroup>
+		<entitygroup name="npcDukeAllGroupGS100">
+		</entitygroup>
+		<entitygroup name="npcDukeAllGroupGS200">
+		</entitygroup>
+		<entitygroup name="npcDukeAllGroupGS400">
+		</entitygroup>
+		<entitygroup name="npcDukeAllGroupGS800">
+		</entitygroup>
+		<entitygroup name="npcDukeMeleeGroupGS01">
+		</entitygroup>
+		<entitygroup name="npcDukeMeleeGroupGS50">
+		</entitygroup>
+		<entitygroup name="npcDukeMeleeGroupGS100">
+		</entitygroup>
+		<entitygroup name="npcDukeMeleeGroupGS200">
+		</entitygroup>
+		<entitygroup name="npcDukeMeleeGroupGS400">
+		</entitygroup>
+		<entitygroup name="npcDukeMeleeGroupGS800">
+		</entitygroup>
+		<entitygroup name="npcDukeRangedGroupGS01">
+		</entitygroup>
+		<entitygroup name="npcDukeRangedGroupGS50">
+		</entitygroup>
+		<entitygroup name="npcDukeRangedGroupGS100">
+		</entitygroup>
+		<entitygroup name="npcDukeRangedGroupGS200">
+		</entitygroup>
+		<entitygroup name="npcDukeRangedGroupGS400">
+		</entitygroup>
+		<entitygroup name="npcDukeRangedGroupGS800">
+		</entitygroup>
+		<entitygroup name="npcDukeBossGroupGS01"></entitygroup>
+		<entitygroup name="npcDukeBossGroupGS50"></entitygroup>
+		<entitygroup name="npcDukeBossGroupGS100"></entitygroup>
+		<entitygroup name="npcDukeBossGroupGS200"></entitygroup>
+		<entitygroup name="npcDukeBossGroupGS400"></entitygroup>
+		<entitygroup name="npcDukeBossGroupGS800"></entitygroup>
+
+		<!-- Military NPC entity groups -->
+		<entitygroup name="npcMilitaryAllGroupGS01">
+		</entitygroup>
+		<entitygroup name="npcMilitaryAllGroupGS50">
+		</entitygroup>
+		<entitygroup name="npcMilitaryAllGroupGS100">
+		</entitygroup>
+		<entitygroup name="npcMilitaryAllGroupGS200">
+		</entitygroup>
+		<entitygroup name="npcMilitaryAllGroupGS400">
+		</entitygroup>
+		<entitygroup name="npcMilitaryAllGroupGS800">
+		</entitygroup>
+		<entitygroup name="npcMilitaryMeleeGroupGS01">
+		</entitygroup>
+		<entitygroup name="npcMilitaryMeleeGroupGS50">
+		</entitygroup>
+		<entitygroup name="npcMilitaryMeleeGroupGS100">
+		</entitygroup>
+		<entitygroup name="npcMilitaryMeleeGroupGS200">
+		</entitygroup>
+		<entitygroup name="npcMilitaryMeleeGroupGS400">
+		</entitygroup>
+		<entitygroup name="npcMilitaryMeleeGroupGS800">
+		</entitygroup>
+		<entitygroup name="npcMilitaryRangedGroupGS01">
+		</entitygroup>
+		<entitygroup name="npcMilitaryRangedGroupGS50">
+		</entitygroup>
+		<entitygroup name="npcMilitaryRangedGroupGS100">
+		</entitygroup>
+		<entitygroup name="npcMilitaryRangedGroupGS200">
+		</entitygroup>
+		<entitygroup name="npcMilitaryRangedGroupGS400">
+		</entitygroup>
+		<entitygroup name="npcMilitaryRangedGroupGS800">
+		</entitygroup>
+		<entitygroup name="npcMilitaryBossGroupGS01"></entitygroup>
+		<entitygroup name="npcMilitaryBossGroupGS50"></entitygroup>
+		<entitygroup name="npcMilitaryBossGroupGS100"></entitygroup>
+		<entitygroup name="npcMilitaryBossGroupGS200"></entitygroup>
+		<entitygroup name="npcMilitaryBossGroupGS400"></entitygroup>
+		<entitygroup name="npcMilitaryBossGroupGS800"></entitygroup>
+
+		<!-- Vault NPC entity groups -->
+		<entitygroup name="npcVaultAllGroupGS01">
+		</entitygroup>
+		<entitygroup name="npcVaultAllGroupGS50">
+		</entitygroup>
+		<entitygroup name="npcVaultAllGroupGS100">
+		</entitygroup>
+		<entitygroup name="npcVaultAllGroupGS200">
+		</entitygroup>
+		<entitygroup name="npcVaultAllGroupGS400">
+		</entitygroup>
+		<entitygroup name="npcVaultAllGroupGS800">
+		</entitygroup>
+		<entitygroup name="npcVaultMeleeGroupGS01">
+		</entitygroup>
+		<entitygroup name="npcVaultMeleeGroupGS50">
+		</entitygroup>
+		<entitygroup name="npcVaultMeleeGroupGS100">
+		</entitygroup>
+		<entitygroup name="npcVaultMeleeGroupGS200">
+		</entitygroup>
+		<entitygroup name="npcVaultMeleeGroupGS400">
+		</entitygroup>
+		<entitygroup name="npcVaultMeleeGroupGS800">
+		</entitygroup>
+		<entitygroup name="npcVaultRangedGroupGS01">
+		</entitygroup>
+		<entitygroup name="npcVaultRangedGroupGS50">
+		</entitygroup>
+		<entitygroup name="npcVaultRangedGroupGS100">
+		</entitygroup>
+		<entitygroup name="npcVaultRangedGroupGS200">
+		</entitygroup>
+		<entitygroup name="npcVaultRangedGroupGS400">
+		</entitygroup>
+		<entitygroup name="npcVaultRangedGroupGS800">
+		</entitygroup>
+		<entitygroup name="npcVaultBossGroupGS01"></entitygroup>
+		<entitygroup name="npcVaultBossGroupGS50"></entitygroup>
+		<entitygroup name="npcVaultBossGroupGS100"></entitygroup>
+		<entitygroup name="npcVaultBossGroupGS200"></entitygroup>
+		<entitygroup name="npcVaultBossGroupGS400"></entitygroup>
+		<entitygroup name="npcVaultBossGroupGS800"></entitygroup>
+
+		<!-- Whisperers NPC entity groups -->
+		<entitygroup name="npcWhisperersAllGroupGS01">
+		</entitygroup>
+		<entitygroup name="npcWhisperersAllGroupGS50">
+		</entitygroup>
+		<entitygroup name="npcWhisperersAllGroupGS100">
+		</entitygroup>
+		<entitygroup name="npcWhisperersAllGroupGS200">
+		</entitygroup>
+		<entitygroup name="npcWhisperersAllGroupGS400">
+		</entitygroup>
+		<entitygroup name="npcWhisperersAllGroupGS800">
+		</entitygroup>
+		<entitygroup name="npcWhisperersMeleeGroupGS01">
+		</entitygroup>
+		<entitygroup name="npcWhisperersMeleeGroupGS50">
+		</entitygroup>
+		<entitygroup name="npcWhisperersMeleeGroupGS100">
+		</entitygroup>
+		<entitygroup name="npcWhisperersMeleeGroupGS200">
+		</entitygroup>
+		<entitygroup name="npcWhisperersMeleeGroupGS400">
+		</entitygroup>
+		<entitygroup name="npcWhisperersMeleeGroupGS800">
+		</entitygroup>
+		<entitygroup name="npcWhisperersRangedGroupGS01">
+		</entitygroup>
+		<entitygroup name="npcWhisperersRangedGroupGS50">
+		</entitygroup>
+		<entitygroup name="npcWhisperersRangedGroupGS100">
+		</entitygroup>
+		<entitygroup name="npcWhisperersRangedGroupGS200">
+		</entitygroup>
+		<entitygroup name="npcWhisperersRangedGroupGS400">
+		</entitygroup>
+		<entitygroup name="npcWhisperersRangedGroupGS800">
+		</entitygroup>
+		<entitygroup name="npcWhisperersBossGroupGS01"></entitygroup>
+		<entitygroup name="npcWhisperersBossGroupGS50"></entitygroup>
+		<entitygroup name="npcWhisperersBossGroupGS100"></entitygroup>
+		<entitygroup name="npcWhisperersBossGroupGS200"></entitygroup>
+		<entitygroup name="npcWhisperersBossGroupGS400"></entitygroup>
+		<entitygroup name="npcWhisperersBossGroupGS800"></entitygroup>
+
+		<!-- Whiteriver NPC entity groups -->
+		<entitygroup name="npcWhiteriverAllGroupGS01">
+		</entitygroup>
+		<entitygroup name="npcWhiteriverAllGroupGS50">
+		</entitygroup>
+		<entitygroup name="npcWhiteriverAllGroupGS100">
+		</entitygroup>
+		<entitygroup name="npcWhiteriverAllGroupGS200">
+		</entitygroup>
+		<entitygroup name="npcWhiteriverAllGroupGS400">
+		</entitygroup>
+		<entitygroup name="npcWhiteriverAllGroupGS800">
+		</entitygroup>
+		<entitygroup name="npcWhiteriverMeleeGroupGS01">
+		</entitygroup>
+		<entitygroup name="npcWhiteriverMeleeGroupGS50">
+		</entitygroup>
+		<entitygroup name="npcWhiteriverMeleeGroupGS100">
+		</entitygroup>
+		<entitygroup name="npcWhiteriverMeleeGroupGS200">
+		</entitygroup>
+		<entitygroup name="npcWhiteriverMeleeGroupGS400">
+		</entitygroup>
+		<entitygroup name="npcWhiteriverMeleeGroupGS800">
+		</entitygroup>
+		<entitygroup name="npcWhiteriverRangedGroupGS01">
+		</entitygroup>
+		<entitygroup name="npcWhiteriverRangedGroupGS50">
+		</entitygroup>
+		<entitygroup name="npcWhiteriverRangedGroupGS100">
+		</entitygroup>
+		<entitygroup name="npcWhiteriverRangedGroupGS200">
+		</entitygroup>
+		<entitygroup name="npcWhiteriverRangedGroupGS400">
+		</entitygroup>
+		<entitygroup name="npcWhiteriverRangedGroupGS800">
+		</entitygroup>
+		<entitygroup name="npcWhiteriverBossGroupGS01"></entitygroup>
+		<entitygroup name="npcWhiteriverBossGroupGS50"></entitygroup>
+		<entitygroup name="npcWhiteriverBossGroupGS100"></entitygroup>
+		<entitygroup name="npcWhiteriverBossGroupGS200"></entitygroup>
+		<entitygroup name="npcWhiteriverBossGroupGS400"></entitygroup>
+		<entitygroup name="npcWhiteriverBossGroupGS800"></entitygroup>
+
+		<!-- Enemy NPC entity groups -->
+		<entitygroup name="npcEnemyAllGroupGS01"></entitygroup>
+		<entitygroup name="npcEnemyAllGroupGS50"></entitygroup>
+		<entitygroup name="npcEnemyAllGroupGS100"></entitygroup>
+		<entitygroup name="npcEnemyAllGroupGS200"></entitygroup>
+		<entitygroup name="npcEnemyAllGroupGS400"></entitygroup>
+		<entitygroup name="npcEnemyAllGroupGS800"></entitygroup>
+		<entitygroup name="npcEnemyMeleeGroupGS01"></entitygroup>
+		<entitygroup name="npcEnemyMeleeGroupGS50"></entitygroup>
+		<entitygroup name="npcEnemyMeleeGroupGS100"></entitygroup>
+		<entitygroup name="npcEnemyMeleeGroupGS200"></entitygroup>
+		<entitygroup name="npcEnemyMeleeGroupGS400"></entitygroup>
+		<entitygroup name="npcEnemyMeleeGroupGS800"></entitygroup>
+		<entitygroup name="npcEnemyRangedGroupGS01"></entitygroup>
+		<entitygroup name="npcEnemyRangedGroupGS50"></entitygroup>
+		<entitygroup name="npcEnemyRangedGroupGS100"></entitygroup>
+		<entitygroup name="npcEnemyRangedGroupGS200"></entitygroup>
+		<entitygroup name="npcEnemyRangedGroupGS400"></entitygroup>
+		<entitygroup name="npcEnemyRangedGroupGS800"></entitygroup>
+		<entitygroup name="npcEnemyBossGroupGS01"></entitygroup>
+		<entitygroup name="npcEnemyBossGroupGS50"></entitygroup>
+		<entitygroup name="npcEnemyBossGroupGS100"></entitygroup>
+		<entitygroup name="npcEnemyBossGroupGS200"></entitygroup>
+		<entitygroup name="npcEnemyBossGroupGS400"></entitygroup>
+		<entitygroup name="npcEnemyBossGroupGS800"></entitygroup>
+
+		<!-- Friendly NPC entity groups -->
+		<entitygroup name="npcFriendlyAllGroupGS01"></entitygroup>
+		<entitygroup name="npcFriendlyAllGroupGS50"></entitygroup>
+		<entitygroup name="npcFriendlyAllGroupGS100"></entitygroup>
+		<entitygroup name="npcFriendlyAllGroupGS200"></entitygroup>
+		<entitygroup name="npcFriendlyAllGroupGS400"></entitygroup>
+		<entitygroup name="npcFriendlyAllGroupGS800"></entitygroup>
+		<entitygroup name="npcFriendlyMeleeGroupGS01"></entitygroup>
+		<entitygroup name="npcFriendlyMeleeGroupGS50"></entitygroup>
+		<entitygroup name="npcFriendlyMeleeGroupGS100"></entitygroup>
+		<entitygroup name="npcFriendlyMeleeGroupGS200"></entitygroup>
+		<entitygroup name="npcFriendlyMeleeGroupGS400"></entitygroup>
+		<entitygroup name="npcFriendlyMeleeGroupGS800"></entitygroup>
+		<entitygroup name="npcFriendlyRangedGroupGS01"></entitygroup>
+		<entitygroup name="npcFriendlyRangedGroupGS50"></entitygroup>
+		<entitygroup name="npcFriendlyRangedGroupGS100"></entitygroup>
+		<entitygroup name="npcFriendlyRangedGroupGS200"></entitygroup>
+		<entitygroup name="npcFriendlyRangedGroupGS400"></entitygroup>
+		<entitygroup name="npcFriendlyRangedGroupGS800"></entitygroup>
+		<entitygroup name="npcFriendlyBossGroupGS01"></entitygroup>
+		<entitygroup name="npcFriendlyBossGroupGS50"></entitygroup>
+		<entitygroup name="npcFriendlyBossGroupGS100"></entitygroup>
+		<entitygroup name="npcFriendlyBossGroupGS200"></entitygroup>
+		<entitygroup name="npcFriendlyBossGroupGS400"></entitygroup>
+		<entitygroup name="npcFriendlyBossGroupGS800"></entitygroup>
+
+		<!-- Mech NPC entity groups -->
+		<entitygroup name="npcMechAllGroupGS01"></entitygroup>
+		<entitygroup name="npcMechAllGroupGS50"></entitygroup>
+		<entitygroup name="npcMechAllGroupGS100"></entitygroup>
+		<entitygroup name="npcMechAllGroupGS200"></entitygroup>
+		<entitygroup name="npcMechAllGroupGS400"></entitygroup>
+		<entitygroup name="npcMechAllGroupGS800"></entitygroup>
+		<entitygroup name="npcMechMeleeGroupGS01"></entitygroup>
+		<entitygroup name="npcMechMeleeGroupGS50"></entitygroup>
+		<entitygroup name="npcMechMeleeGroupGS100"></entitygroup>
+		<entitygroup name="npcMechMeleeGroupGS200"></entitygroup>
+		<entitygroup name="npcMechMeleeGroupGS400"></entitygroup>
+		<entitygroup name="npcMechMeleeGroupGS800"></entitygroup>
+		<entitygroup name="npcMechRangedGroupGS01"></entitygroup>
+		<entitygroup name="npcMechRangedGroupGS50"></entitygroup>
+		<entitygroup name="npcMechRangedGroupGS100"></entitygroup>
+		<entitygroup name="npcMechRangedGroupGS200"></entitygroup>
+		<entitygroup name="npcMechRangedGroupGS400"></entitygroup>
+		<entitygroup name="npcMechRangedGroupGS800"></entitygroup>
+		<entitygroup name="npcMechBossGroupGS01"></entitygroup>
+		<entitygroup name="npcMechBossGroupGS50"></entitygroup>
+		<entitygroup name="npcMechBossGroupGS100"></entitygroup>
+		<entitygroup name="npcMechBossGroupGS200"></entitygroup>
+		<entitygroup name="npcMechBossGroupGS400"></entitygroup>
+		<entitygroup name="npcMechBossGroupGS800"></entitygroup>
+
+		<!-- Fantasy NPC entity groups -->
+		<entitygroup name="npcFantasyAllGroupGS01"></entitygroup>
+		<entitygroup name="npcFantasyAllGroupGS50"></entitygroup>
+		<entitygroup name="npcFantasyAllGroupGS100"></entitygroup>
+		<entitygroup name="npcFantasyAllGroupGS200"></entitygroup>
+		<entitygroup name="npcFantasyAllGroupGS400"></entitygroup>
+		<entitygroup name="npcFantasyAllGroupGS800"></entitygroup>
+		<entitygroup name="npcFantasyMeleeGroupGS01"></entitygroup>
+		<entitygroup name="npcFantasyMeleeGroupGS50"></entitygroup>
+		<entitygroup name="npcFantasyMeleeGroupGS100"></entitygroup>
+		<entitygroup name="npcFantasyMeleeGroupGS200"></entitygroup>
+		<entitygroup name="npcFantasyMeleeGroupGS400"></entitygroup>
+		<entitygroup name="npcFantasyMeleeGroupGS800"></entitygroup>
+		<entitygroup name="npcFantasyRangedGroupGS01"></entitygroup>
+		<entitygroup name="npcFantasyRangedGroupGS50"></entitygroup>
+		<entitygroup name="npcFantasyRangedGroupGS100"></entitygroup>
+		<entitygroup name="npcFantasyRangedGroupGS200"></entitygroup>
+		<entitygroup name="npcFantasyRangedGroupGS400"></entitygroup>
+		<entitygroup name="npcFantasyRangedGroupGS800"></entitygroup>
+		<entitygroup name="npcFantasyBossGroupGS01"></entitygroup>
+		<entitygroup name="npcFantasyBossGroupGS50"></entitygroup>
+		<entitygroup name="npcFantasyBossGroupGS100"></entitygroup>
+		<entitygroup name="npcFantasyBossGroupGS200"></entitygroup>
+		<entitygroup name="npcFantasyBossGroupGS400"></entitygroup>
+		<entitygroup name="npcFantasyBossGroupGS800"></entitygroup>
+
+		<!-- Enemy animal entity groups -->
+		<entitygroup name="npcEnemyAnimalsAllGroupGS01"></entitygroup>
+		<entitygroup name="npcEnemyAnimalsAllGroupGS50"></entitygroup>
+		<entitygroup name="npcEnemyAnimalsAllGroupGS100"></entitygroup>
+		<entitygroup name="npcEnemyAnimalsAllGroupGS200"></entitygroup>
+		<entitygroup name="npcEnemyAnimalsAllGroupGS400"></entitygroup>
+		<entitygroup name="npcEnemyAnimalsAllGroupGS800"></entitygroup>
+		<entitygroup name="npcEnemyAnimalsBossGroupGS01"></entitygroup>
+		<entitygroup name="npcEnemyAnimalsBossGroupGS50"></entitygroup>
+		<entitygroup name="npcEnemyAnimalsBossGroupGS100"></entitygroup>
+		<entitygroup name="npcEnemyAnimalsBossGroupGS200"></entitygroup>
+		<entitygroup name="npcEnemyAnimalsBossGroupGS400"></entitygroup>
+		<entitygroup name="npcEnemyAnimalsBossGroupGS800"></entitygroup>
+
+		<!-- Friendly animal entity groups -->
+		<entitygroup name="npcFriendlyAnimalsAllGroupGS01"></entitygroup>
+		<entitygroup name="npcFriendlyAnimalsAllGroupGS50"></entitygroup>
+		<entitygroup name="npcFriendlyAnimalsAllGroupGS100"></entitygroup>
+		<entitygroup name="npcFriendlyAnimalsAllGroupGS200"></entitygroup>
+		<entitygroup name="npcFriendlyAnimalsAllGroupGS400"></entitygroup>
+		<entitygroup name="npcFriendlyAnimalsAllGroupGS800"></entitygroup>
+
+		<!-- Arachnid entity groups -->
+		<entitygroup name="npcArachnidsAllGroupGS01"></entitygroup>
+		<entitygroup name="npcArachnidsAllGroupGS50"></entitygroup>
+		<entitygroup name="npcArachnidsAllGroupGS100"></entitygroup>
+		<entitygroup name="npcArachnidsAllGroupGS200"></entitygroup>
+		<entitygroup name="npcArachnidsAllGroupGS400"></entitygroup>
+		<entitygroup name="npcArachnidsAllGroupGS800"></entitygroup>
+		<entitygroup name="npcArachnidsBossGroupGS01"></entitygroup>
+		<entitygroup name="npcArachnidsBossGroupGS50"></entitygroup>
+		<entitygroup name="npcArachnidsBossGroupGS100"></entitygroup>
+		<entitygroup name="npcArachnidsBossGroupGS200"></entitygroup>
+		<entitygroup name="npcArachnidsBossGroupGS400"></entitygroup>
+		<entitygroup name="npcArachnidsBossGroupGS800"></entitygroup>
+
+		<!-- Flyer entity groups -->
+		<entitygroup name="npcFlyersAllGroupGS01"></entitygroup>
+		<entitygroup name="npcFlyersAllGroupGS50"></entitygroup>
+		<entitygroup name="npcFlyersAllGroupGS100"></entitygroup>
+		<entitygroup name="npcFlyersAllGroupGS200"></entitygroup>
+		<entitygroup name="npcFlyersAllGroupGS400"></entitygroup>
+		<entitygroup name="npcFlyersAllGroupGS800"></entitygroup>
+		<entitygroup name="npcFlyersBossGroupGS01"></entitygroup>
+		<entitygroup name="npcFlyersBossGroupGS50"></entitygroup>
+		<entitygroup name="npcFlyersBossGroupGS100"></entitygroup>
+		<entitygroup name="npcFlyersBossGroupGS200"></entitygroup>
+		<entitygroup name="npcFlyersBossGroupGS400"></entitygroup>
+		<entitygroup name="npcFlyersBossGroupGS800"></entitygroup>
+
+		<!-- Deco entity groups -->
+		<entitygroup name="npcDecoTrapGroupGS01"></entitygroup>
+		<entitygroup name="npcDecoTrapGroupGS50"></entitygroup>
+		<entitygroup name="npcDecoTrapGroupGS100"></entitygroup>
+		<entitygroup name="npcDecoTrapGroupGS200"></entitygroup>
+		<entitygroup name="npcDecoTrapGroupGS400"></entitygroup>
+		<entitygroup name="npcDecoTrapGroupGS800"></entitygroup>
+		<entitygroup name="npcDecoRescueGroupGS01"></entitygroup>
+		<entitygroup name="npcDecoRescueGroupGS50"></entitygroup>
+		<entitygroup name="npcDecoRescueGroupGS100"></entitygroup>
+		<entitygroup name="npcDecoRescueGroupGS200"></entitygroup>
+		<entitygroup name="npcDecoRescueGroupGS400"></entitygroup>
+		<entitygroup name="npcDecoRescueGroupGS800"></entitygroup>
+		<entitygroup name="npcDecoTraderGroupGS01"></entitygroup>
+		<entitygroup name="npcDecoTraderGroupGS50"></entitygroup>
+		<entitygroup name="npcDecoTraderGroupGS100"></entitygroup>
+		<entitygroup name="npcDecoTraderGroupGS200"></entitygroup>
+		<entitygroup name="npcDecoTraderGroupGS400"></entitygroup>
+		<entitygroup name="npcDecoTraderGroupGS800"></entitygroup>
+	</insertAfter>
 </configs>
