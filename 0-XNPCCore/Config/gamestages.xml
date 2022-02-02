@@ -155,6 +155,12 @@
 		<group name="S_-Group_NPC_FriendlyAnimals_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
 			<spawner name="NPCFriendlyAnimalsAllHorde" count="5,6" />
 		</group>
+		<group name="S_-Group_NPC_FriendlyAnimals_Domestic" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCFriendlyAnimalsDomesticHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_FriendlyAnimals_Farm" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCFriendlyAnimalsFarmHorde" count="5,6" />
+		</group>
         <!-- Arachnids (spiders, scorpions) gamestage groups -->
 		<group name="S_-Group_NPC_Arachnids_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
 			<spawner name="NPCEnemyAnimalsAllHorde" count="5,6" />
@@ -1069,6 +1075,46 @@
 			</gamestage>
 			<gamestage stage="800">
 				<spawn group="npcFriendlyAnimalsAllGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCFriendlyAnimalsDomesticHorde">
+			<gamestage stage="1">
+				<spawn group="npcFriendlyAnimalsDomesticGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcFriendlyAnimalsDomesticGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcFriendlyAnimalsDomesticGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcFriendlyAnimalsDomesticGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcFriendlyAnimalsDomesticGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcFriendlyAnimalsDomesticGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCFriendlyAnimalsFarmHorde">
+			<gamestage stage="1">
+				<spawn group="npcFriendlyAnimalsFarmGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcFriendlyAnimalsFarmGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcFriendlyAnimalsFarmGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcFriendlyAnimalsFarmGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcFriendlyAnimalsFarmGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcFriendlyAnimalsFarmGroupGS800" num="1" maxAlive="1" duration="1" />
 			</gamestage>
 		</spawner>
         <!-- Arachnid spawners -->
