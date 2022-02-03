@@ -4121,7 +4121,32 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
-        </entity_class>   
+		</entity_class>
+
+		<entity_class name="npcHarleySRifle" extends="npcSRifleTemplate"> 
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="HarleyDie"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="HarleyRandom" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
+		</entity_class>
 
 		<entity_class name="npcHarleyPShotgun" extends="npcPShotgunTemplate"> 
 			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
