@@ -5548,5 +5548,5 @@
 			<entity name="npcNurseTRifle" prob="0.005" />
 			<entity name="npcNurseXBow" prob="0.004" />
 		</entitygroup>
-		</insertAfter>
+    </insertAfter>
 </configs>

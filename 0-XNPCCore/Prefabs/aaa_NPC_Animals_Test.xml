@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<prefab>
+  <property name="CopyAirBlocks" value="True" />
+  <property name="ExcludeDistantPOIMesh" value="False" />
+  <property name="ExcludePOICulling" value="False" />
+  <property name="DistantPOIYOffset" value="0" />
+  <property name="AllowTopSoilDecorations" value="False" />
+  <property name="DifficultyTier" value="0" />
+  <property name="ShowQuestClearCount" value="1" />
+  <property name="TraderArea" value="False" />
+  <property name="PrefabSize" value="60, 8, 60" />
+  <property name="RotationToFaceNorth" value="2" />
+  <property name="YOffset" value="-1" />
+  <property name="Zoning" value="none" />
+  <property name="SleeperVolumeSize" value="8, 3, 6#9, 3, 6#8, 3, 6#8, 3, 6#9, 3, 6#8, 3, 6#8, 4, 6#9, 4, 6#8, 4, 6#8, 6, 7#9, 6, 7#8, 6, 7#12, 5, 7#12, 5, 7#12, 5, 7#10, 5, 7#10, 5, 7#10, 5, 7#10, 6, 8#10, 6, 9#13, 6, 8#9, 6, 8#9, 6, 9#9, 6, 8" />
+  <property name="SleeperVolumeStart" value="2, 1, 22#9, 1, 22#17, 1, 22#17, 1, 2#9, 1, 2#2, 1, 2#35, 1, 2#42, 1, 2#50, 1, 2#35, 1, 21#42, 1, 21#50, 1, 21#2, 1, 35#2, 1, 43#2, 1, 51#17, 1, 35#17, 1, 43#17, 1, 51#32, 1, 35#32, 1, 42#29, 1, 50#49, 1, 50#49, 1, 42#49, 1, 35" />
+  <property name="SleeperVolumeGroupId" value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" />
+  <property name="SleeperVolumeGroup" value="S_-Group_NPC_Enemy_Animals_Boss,1,2,S_-Group_NPC_Enemy_Animals_Boss,1,2,S_-Group_NPC_Enemy_Animals_Boss,1,2,S_-Group_NPC_Enemy_Animals_All,1,2,S_-Group_NPC_Enemy_Animals_All,1,2,S_-Group_NPC_Enemy_Animals_All,1,2,S_-Group_NPC_FriendlyAnimals_Farm,2,3,S_-Group_NPC_FriendlyAnimals_Farm,2,3,S_-Group_NPC_FriendlyAnimals_Farm,2,3,S_-Group_NPC_FriendlyAnimals_Domestic,2,3,S_-Group_NPC_FriendlyAnimals_Domestic,2,3,S_-Group_NPC_FriendlyAnimals_Domestic,2,3,S_-Group_NPC_Arachnids_All,2,3,S_-Group_NPC_Arachnids_All,2,3,S_-Group_NPC_Arachnids_All,2,3,S_-Group_NPC_Arachnids_Boss,1,2,S_-Group_NPC_Arachnids_Boss,1,2,S_-Group_NPC_Arachnids_Boss,1,2,S_-Group_NPC_Flyers_All,2,3,S_-Group_NPC_Flyers_All,2,3,S_-Group_NPC_Flyers_All,2,3,S_-Group_NPC_Flyers_Boss,1,2,S_-Group_NPC_Flyers_Boss,1,2,S_-Group_NPC_Flyers_Boss,1,2" />
+  <property name="SleeperIsLootVolume" value="False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False" />
+  <property name="SleeperIsQuestExclude" value="False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False" />
+  <property name="SleeperVolumeFlags" value="2,0,1,1,0,2,1,0,2,1,0,2,1,0,2,1,0,2,1,0,2,2,0,1" />
+  <property name="EditorGroups" value="test stuff" />
+  <property name="Tags" value="testonly,test" />
+  <property class="Stats">
+    <property name="TotalVertices" value="356259" />
+    <property name="TotalTriangles" value="319389" />
+    <property class="BlockEntities">
+      <property name="Vertices" value="245145" />
+      <property name="Triangles" value="245568" />
+    </property>
+    <property class="ChunkMeshes0">
+      <property name="Vertices" value="97084" />
+      <property name="Triangles" value="55414" />
+    </property>
+    <property class="ChunkMeshes1">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes2">
+      <property name="Vertices" value="200" />
+      <property name="Triangles" value="100" />
+    </property>
+    <property class="ChunkMeshes3">
+      <property name="Vertices" value="1848" />
+      <property name="Triangles" value="924" />
+    </property>
+    <property class="ChunkMeshes4">
+      <property name="Vertices" value="7766" />
+      <property name="Triangles" value="9823" />
+    </property>
+    <property class="ChunkMeshes5">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes6">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes7">
+      <property name="Vertices" value="4216" />
+      <property name="Triangles" value="7560" />
+    </property>
+    <property class="ChunkMeshes8">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes9">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+  </property>
+  <property class="IndexedBlockOffsets">
+    <property class="TraderOnOff">
+      <property name="0" value="50, 1, 46" />
+      <property name="1" value="50, 1, 54" />
+    </property>
+    <property class="POILight">
+      <property name="0" value="46, 5, 25" />
+      <property name="1" value="54, 5, 25" />
+    </property>
+  </property>
+</prefab>

@@ -15,22 +15,22 @@
   <property name="SleeperVolumeSize" value="5, 9, 12#8, 4, 14#8, 3, 15#5, 8, 12#14, 3, 8#12, 8, 6#12, 10, 6#14, 4, 8" />
   <property name="SleeperVolumeStart" value="9, 1, 9#2, 1, 8#50, 1, 7#46, 1, 9#38, 1, 50#39, 1, 46#9, 1, 46#8, 1, 50" />
   <property name="SleeperVolumeGroupId" value="0,0,0,0,0,0,0,0" />
-  <property name="SleeperVolumeGroup" value="S_-Group_NPC_Enemy_Ranged,3,4,S_-Group_NPC_Enemy_Melee,3,4,S_-Group_NPC_Enemy_Melee,3,4,S_-Group_NPC_Enemy_Ranged,3,4,S_-Group_NPC_Enemy_Melee,3,4,S_-Group_NPC_Enemy_Ranged,3,4,S_-Group_NPC_Enemy_Boss,3,4,S_-Group_NPC_Enemy_Boss,3,4" />
+  <property name="SleeperVolumeGroup" value="S_-Group_NPC_Friendly_Ranged,3,4,S_-Group_NPC_Friendly_Melee,3,4,S_-Group_NPC_Friendly_Melee,3,4,S_-Group_NPC_Friendly_Ranged,3,4,S_-Group_NPC_Friendly_Melee,3,4,S_-Group_NPC_Friendly_Ranged,3,4,S_-Group_NPC_Friendly_Boss,3,4,S_-Group_NPC_Friendly_Boss,3,4" />
   <property name="SleeperIsLootVolume" value="False,False,False,False,False,False,False,False" />
   <property name="SleeperIsQuestExclude" value="False,False,False,False,False,False,False,False" />
   <property name="SleeperVolumeFlags" value="0,0,1,1,2,2,2,2" />
   <property name="EditorGroups" value="test stuff" />
   <property name="Tags" value="testonly,test" />
   <property class="Stats">
-    <property name="TotalVertices" value="134463" />
-    <property name="TotalTriangles" value="93252" />
+    <property name="TotalVertices" value="134335" />
+    <property name="TotalTriangles" value="93128" />
     <property class="BlockEntities">
       <property name="Vertices" value="44507" />
       <property name="Triangles" value="40596" />
     </property>
     <property class="ChunkMeshes0">
-      <property name="Vertices" value="87588" />
-      <property name="Triangles" value="49456" />
+      <property name="Vertices" value="87460" />
+      <property name="Triangles" value="49332" />
     </property>
     <property class="ChunkMeshes1">
       <property name="Vertices" value="0" />

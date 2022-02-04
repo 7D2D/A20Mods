@@ -170,10 +170,10 @@
 		</group>
         <!-- Flyers (birds, bats, etc.) gamestage groups -->
 		<group name="S_-Group_NPC_Flyers_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCEnemyAnimalsAllHorde" count="5,6" />
+			<spawner name="NPCFlyersAllHorde" count="5,6" />
 		</group>
 		<group name="S_-Group_NPC_Flyers_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
-			<spawner name="NPCEnemyAnimalsBossHorde" count="5,6" />
+			<spawner name="NPCFlyersBossHorde" count="5,6" />
 		</group>
         <!--
             Deco spawners.
