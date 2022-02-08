@@ -1,0 +1,52 @@
+<configs>
+	<append xpath="/Sounds">
+	
+		 <!-- sounds by Affordable Audio 4 Everyone Purchased for use in NPC Mod  -->
+
+                <SoundDataNode name="GurlzChatterRandom">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_BattleStart_01-Rina" />
+			<AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_BattleWon_02_Rina" />
+			<AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_BattleWon_06_Rina" />
+			<AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_CannotCarry_01_Rina" />
+			<AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_CriticalHit_01_Rina" />
+			<AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_CriticalHit_06_Rina" />
+			<AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_DiscoveringWonderous_02_Rina" />
+			<AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_DiscoveringWonderous_04_Rina" />
+			<AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_EnteringDungeon_01_Rina" />
+			<AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_EnteringDungeon_06_Rina" />
+                        <AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_EnteringDungeon_07_Rina" />
+			<AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_Idle_01_Rina" />
+                        <AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_Idle_05_Rina" />
+                        <AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_Idle_07_Rina" />
+                        <AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_Idle_08_Rina" />
+                        <AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_Idle_09_Rina" />
+			<AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_JoinParty_10_Rina" />
+                        <AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_JoinParty_12_Rina" />
+                        <AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_JoinParty_13_Rina" />
+			<AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_LevelGained_01_Rina" />
+                        <AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_LevelGained_07_Rina" />
+                        <AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_LevelGained_09_Rina" />
+			<AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_Sad_Dissapointed_01_Rina" />
+                        <AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_Sad_Dissapointed_02_Rina" />
+                        <AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_Sad_Dissapointed_04_Rina" />
+                        <AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_Sad_Dissapointed_05_Rina" />
+                        <AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_ShadyDistrusting_01_Rina" />
+                        <AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_Snob_02_Rina" />
+                        <AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_Snob_03_Rina" />
+                        <AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_Townsfolk_01_Rina" />
+                        <AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_UseItem_02_Rina" />
+                        <AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_UseItem_03_Rina" />
+                        <AudioClip ClipName="#@modfolder:Resources/GurlSounds.unity3d?Female_UseItem_04_Rina" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="3.0" />
+		</SoundDataNode>
+
+	</append>
+</configs>

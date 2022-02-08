@@ -1,0 +1,136 @@
+<configs>
+
+	<append xpath="/entity_classes">
+                
+                <!--  free Female models by xdgtz, Fighter models by Maksim Bugrimov/Elf model by 3DFOIN Purchased for use in NPC Mod  -->
+
+             
+                <entity_class name="npcAirForceTRifle" extends="npcAdvancedTRifleTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,UMA2"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="Mildred Kipps,Nettie Hedersett,Eva Kadwell,Primrose Pocket,Lydia Whitesmith,Gertie Forward,Felicia Lovegrove,
+                        Fanny Harriden,Eunice Habsburg,Ginny Powers,Delphinium Steele,Jane Wyndham,Adeline Stanhope,Patience Jarvis,Adeline Oakley,Electa Rowley" />
+			<property name="Mesh" value="#@modfolder:Resources/Survivorz.unity3d?AirForceDark"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundRandom" value="GurlzChatterRandom"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	        </effect_group>                 
+		</entity_class>
+
+                <entity_class name="npcTattooGurlTRifle" extends="npcAdvancedTRifleTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,UMA2"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="Mildred Kipps,Nettie Hedersett,Eva Kadwell,Primrose Pocket,Lydia Whitesmith,Gertie Forward,Felicia Lovegrove,
+                        Fanny Harriden,Eunice Habsburg,Ginny Powers,Delphinium Steele,Jane Wyndham,Adeline Stanhope,Patience Jarvis,Adeline Oakley,Electa Rowley" />
+			<property name="Mesh" value="#@modfolder:Resources/Survivorz.unity3d?TattooGurlDark"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandomTime" value="60.0"/>
+                        <property name="SoundRandom" value="GurlzChatterRandom"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	        </effect_group>                       
+		</entity_class>
+ 
+                <entity_class name="npcCosplayerBow" extends="npcAdvancedLBowTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,UMA2"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="Thalia,Amedee,Myriani,Dilya,Ilyrana,Saria,Aerith,Rina,Lyeecia,Maggwyn,Viessa,Tisha,
+                        Naexi,Lithoniel,Shaerra,Alyndra" />
+			<property name="Mesh" value="#@modfolder:Resources/Survivorz.unity3d?FemaleElvenArcherDark"/>
+                        <property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+                        <property name="SoundRandom" value="GurlzChatterRandom"/>
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	        </effect_group>                       
+		</entity_class>
+
+                <entity_class name="npcWrestlerEmptyHand" extends="npcAdvancedEmptyHandTemplate"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="Names" value="Sasagawa,Tomatsu,Fujimura,Kenzo,Gonshiro,Shoichi,Hideyoshi,Nishida,Norio,Kazunori,Hiraoka,Genichi" />			
+			<property name="Mesh" value="#@modfolder:Resources/Survivorz.unity3d?SumoDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>  
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	        </effect_group>                
+		</entity_class>
+
+                <entity_class name="npcMrFriendlyM60" extends="npcAdvancedM60Template"> 
+			<property name="Tags" value="UMA2,entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="Names" value="Mr Friendly" />			
+			<property name="Mesh" value="#@modfolder:Resources/Survivorz.unity3d?MrFriendlyDark"/> 
+                        <property name="ExperienceGain" value="800"/> 
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>     
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	        </effect_group>             
+		</entity_class>
+
+		</append>	
+	
+</configs>
