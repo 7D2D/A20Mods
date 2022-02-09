@@ -84,6 +84,10 @@
 			<property name="OnlySimpleRotations" value="true"/> 
 			<property name="CanPickup" value="true" /> 
 			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="1"/>
+				<property name="resourceElectricParts" value="1"/>
+            </property>
 			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 			<drop event="Harvest" name="resourceMetalPipe" count="4,8" tag="salvageHarvest"/>
 			<drop event="Harvest" name="resourceScrapIron" count="2,5" tag="allHarvest"/>
@@ -144,6 +148,10 @@
 			<property name="OnlySimpleRotations" value="true"/> 
 			<property name="CanPickup" value="true" /> 
 			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="1"/>
+				<property name="resourceElectricParts" value="1"/>
+            </property>
 			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 			<drop event="Harvest" name="resourceMetalPipe" count="4,8" tag="salvageHarvest"/>
 			<drop event="Harvest" name="resourceScrapIron" count="2,5" tag="allHarvest"/>
