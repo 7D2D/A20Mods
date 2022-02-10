@@ -1,0 +1,6 @@
+Key,English,japanese
+npcAirForceTRifle,"Air Force","エアフォース"
+npcTattooGurlTRifle,"Tattoo Girl","タトゥーガール"
+npcCosplayerBow,"Cosplayer Girl","コスプレイヤー"
+npcWrestlerEmptyHand,"Sumo Wrestler","相撲取り"
+npcMrFriendlyM60,"Mr Friendly","ミスター・フレンドリー"

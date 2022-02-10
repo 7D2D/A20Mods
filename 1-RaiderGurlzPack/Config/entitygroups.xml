@@ -26,21 +26,21 @@
                 <entity name="RaiderBettyAxe" prob=".1" />
 		<entity name="RaiderJayneAxe" prob=".1" />
                 <entity name="RaiderGypsyAxe" prob=".1" />	
-		<entity name="RaiderJayneSMG" prob=".1" />
-		<entity name="RaiderJayneDPistol" prob=".1" />
-		<entity name="RaiderJayneTRifle" prob=".1" />
-                <entity name="RaiderBettySMG" prob=".1" />
-		<entity name="RaiderBettyDPistol" prob=".1" />
-		<entity name="RaiderBettyTRifle" prob=".1" />
-                <entity name="RaiderGinaSMG" prob=".1" />
-		<entity name="RaiderGinaDPistol" prob=".1" />
-		<entity name="RaiderGinaTRifle" prob=".1" />
-                <entity name="RaiderHedySMG" prob=".1" />
-		<entity name="RaiderHedyDPistol" prob=".1" />
-		<entity name="RaiderHedyTRifle" prob=".1" />
-                <entity name="RaiderGypsySMG" prob=".1" />
-		<entity name="RaiderGypsyDPistol" prob=".1" />
-		<entity name="RaiderGypsyTRifle" prob=".1" />
+		<entity name="RaiderJayneSMG" prob=".05" />
+		<entity name="RaiderJayneDPistol" prob=".05" />
+		<entity name="RaiderJayneTRifle" prob=".05" />
+                <entity name="RaiderBettySMG" prob=".05" />
+		<entity name="RaiderBettyDPistol" prob=".05" />
+		<entity name="RaiderBettyTRifle" prob=".05" />
+                <entity name="RaiderGinaSMG" prob=".05" />
+		<entity name="RaiderGinaDPistol" prob=".05" />
+		<entity name="RaiderGinaTRifle" prob=".05" />
+                <entity name="RaiderHedySMG" prob=".05" />
+		<entity name="RaiderHedyDPistol" prob=".05" />
+		<entity name="RaiderHedyTRifle" prob=".05" />
+                <entity name="RaiderGypsySMG" prob=".05" />
+		<entity name="RaiderGypsyDPistol" prob=".05" />
+		<entity name="RaiderGypsyTRifle" prob=".05" />
           </insertBefore> 	
 	
 </configs>
