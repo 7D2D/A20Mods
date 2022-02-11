@@ -1,14 +1,29 @@
 <configs>
 
+	<append xpath="/entitygroups">
+		<entitygroup name="npcBanditsAllGroupGS01">
+            <entity name="FireBoxerBanditEmptyHand"/>
+            <entity name="GoldilocksBanditEmptyHand"/>
+            <entity name="MMABanditEmptyHand"/>
+            <entity name="KarateBanditEmptyHand"/>			
+		</entitygroup>
+		<entitygroup name="npcBanditsMeleeGroupGS01">
+            <entity name="FireBoxerBanditEmptyHand"/>
+            <entity name="GoldilocksBanditEmptyHand"/>
+            <entity name="MMABanditEmptyHand"/>
+            <entity name="KarateBanditEmptyHand"/>		
+		</entitygroup>		
+	</append>
+
 	<insertBefore xpath="/entitygroups/entitygroup[starts-with(@name, 'WildGame')]/entity[@name='none']">
-                <entity name="FireBoxerBanditEmptyHand" prob=".1" />
-                <entity name="GoldilocksBanditEmptyHand" prob=".1" />
-                <entity name="MMABanditEmptyHand" prob=".1" />
-                <entity name="KarateBanditEmptyHand" prob=".1" />
-                <entity name="FireBoxerSurvivorEmptyHand" prob=".1" />
-                <entity name="GoldilocksSurvivorEmptyHand" prob=".1" />
-                <entity name="MMASurvivorEmptyHand" prob=".1" />
-                <entity name="KarateSurvivorEmptyHand" prob=".1" />
-          </insertBefore> 	
+            <entity name="FireBoxerBanditEmptyHand" prob=".1" />
+            <entity name="GoldilocksBanditEmptyHand" prob=".1" />
+            <entity name="MMABanditEmptyHand" prob=".1" />
+            <entity name="KarateBanditEmptyHand" prob=".1" />
+            <entity name="FireBoxerSurvivorEmptyHand" prob=".1" />
+            <entity name="GoldilocksSurvivorEmptyHand" prob=".1" />
+            <entity name="MMASurvivorEmptyHand" prob=".1" />
+            <entity name="KarateSurvivorEmptyHand" prob=".1" />
+    </insertBefore> 	
 	
 </configs>
