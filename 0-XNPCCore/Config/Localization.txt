@@ -123,3 +123,14 @@ zombieFemaleTutorialFeral,"DeadGirl","Fille morte",
 itemNPCModHelp,"NPC Action: Help","Action PNJ: Aide","NPCアクション： 手助け"
 itemNPCModStop,"NPC Action: Stop","Action PNJ: Arrêt","NPCアクション： 停止"
 itemNPCModMode,"NPC Action: Mode","Action PNJ: Mode","NPCアクション： モード"
+
+buffNPCModHaltDisplayName,Halt,Arrêter,
+buffNPCModHaltDisplayDesc,"While in either Threat or Full Control Mode, your hired NPCs will not engage until you tell them to Resume","Tant que vos PNJs seront en mode de contrôle complet ou de menaces, ils n'initieront pas le combat tant que vous le leur disiez de Reprendre",
+buffNPCModResumeDisplayName,Resume,Reprendre,
+buffNPCModResumeDisplayDesc,"While in either Threat or Full Control Mode, your hired NPCs will engage until you tell them to Halt","Tant que vos PNJs seront en mode de contrôle complet ou de menaces, ils initieront le combat tant que vous le leur disiez d'Arrêter",
+buffNPCModHuntingModeDisplayName,Hunting Mode,Mode de Chasse,
+buffNPCModHuntingModeDisplayDesc,"While in this mode, your hired NPCs will engage with everything considered as hostile","Dans ce mode, vos PNJs embauchés initieront le combat avec tout ce qu'ils considèrent être hostile",
+buffNPCModThreatControlModeDisplayName,Threat Control Mode,Mode de contrôle des menaces,
+buffNPCModThreatControlModeDisplayDesc,"While in this mode, your hired NPCs will not engage with hostile animals (including zombies animals), unless:\n • You attack\n • You get attacked and took damage","Dans ce mode, vos your PNJs embauchés n'initieront pas le combat avec des animaux hostiles (incluant les animaux zombies), à moins que:\n • Vous attaquiez\n • Vous vous fassiez attaquer et prenez du dommage",
+buffNPCModFullControlModeDisplayName,Full Control Mode,Mode de contrôle complet,
+buffNPCModFullControlModeDisplayDesc,"While in this mode, your hired NPCs will not engage, unless:\n • You attack\n • You get attacked and took damage","Dans ce mode, vos your PNJs embauchés n'initieront pas le combat, à moins que:\n • Vous attaquiez\n • Vous vous fassiez attaquer et prenez du dommage",

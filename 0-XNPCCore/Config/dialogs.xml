@@ -34,10 +34,10 @@
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderFollow" />
       </response>
 
-      <response id="TellMe" text="Tell me about yourself" >
+     <!-- <response id="TellMe" text="Tell me about yourself" >
         <requirement type="Leader, SCore" requirementtype="Hide"/>
         <action type="ExecuteCommandSDX, SCore" id="TellMe" />
-      </response>
+      </response> -->
 	  
       <response id="ShowMe" text="Show Me your inventory" >
         <requirement type="Leader, SCore" requirementtype="Hide" />
@@ -49,7 +49,7 @@
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
       </response>
 	  
-	  <response id="Wander" text="Wander around here" >
+	  <response id="Wander" text="Patrol around here" >
         <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
       </response>
@@ -59,20 +59,22 @@
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderPatrol" />
       </response> -->
 
- <!-- <response id="GuardHere" text="Guard here" >
-        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
-         <action type="ExecuteCommandSDX, SCore" id="GuardHere" />
+	  <response id="GuardHere" text="Guard here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="Stay" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuardHere" />
       </response>
 
-      <response id="SetCode" text="Here is your Patrol Code" >
+    <!-- <response id="SetCode" text="Here is your Patrol Code" >
         <requirement type="HiredSDX, SCore" requirementtype="Hide" />
         <action type="OpenWindowSDX, SCore" id="SetCode" />
       </response> -->
 	  
-	  <!-- <response id="Loot" text="Help me loot" >
+	  <response id="Loot" text="Help me loot" >
         <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="LootBasic" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
-      </response>	  -->
+      </response>  
 
 	  <response id="Dismiss" text="Dismiss" >
         <requirement type="Leader, SCore" requirementtype="Hide" />
@@ -156,26 +158,27 @@
       </response>
 
       <!-- If the entity is hired, you can order the NPCs to do the following: -->
-     <response id="FollowMe" text="Follow" >
+     <response id="FollowMe" text="Follow Me" >
         <requirement type="Leader, SCore" requirementtype="Hide"/>
         <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
       </response> 
 
-      <response id="TellMe" text="Tell me about yourself" >
+<!--      <response id="TellMe" text="Tell me about yourself" >
         <requirement type="Leader, SCore" requirementtype="Hide"/>
         <action type="ExecuteCommandSDX, SCore" id="TellMe" />
-      </response>
-      <response id="ShowMe" text="Show me your pack" >
+      </response> -->
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
         <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
       </response>
 
-	  <response id="StayHere" text="Stay here" >
+	  <response id="StayHere" text="Stay" >
         <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
       </response>
 	  
-	  <response id="Wander" text="Wander around here" >
+	  <response id="Wander" text="Go play around here" >
         <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
       </response>
@@ -183,20 +186,21 @@
 	<!--  <response id="Patrol" text="Patrol your route" >
         <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderPatrol" />
-      </response>
+      </response> -->
 	  
 	  <response id="Loot" text="Loot around here" >
         <requirement type="Leader, SCore" requirementtype="Hide" />
-        <action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
       </response>	 
 	
-    <response id="GuardHere" text="Guard here" >
-        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
-         <action type="ExecuteCommandSDX, SCore" id="GuardHere" />
-      </response> -->
-      
- 
-	  <response id="Dismiss" text="Dismiss" >
+	  <response id="GuardHere" text="Guard" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="Stay" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuardHere" /> 
+      </response>
+  
+	  <response id="Dismiss" text="Abandon" >
         <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />

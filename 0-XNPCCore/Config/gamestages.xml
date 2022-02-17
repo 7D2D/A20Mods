@@ -1,0 +1,1264 @@
+<configs>
+	<!-- 
+		Gamestage groups
+		
+		These are shown in the UI when choosing sleeper volumes.
+		By convention, they are displayed as "Group NPC [Association] [Classification]",
+		where "Association" is a larger type or category (like a faction),
+		and "Classification" is a smaller category within that association (like ranged vs. melee).
+
+		The associations and classifications are not enforced by the game.
+		Like the vanilla spawn groups, modders can put any entities they want into these groups.
+		They exist as general guidelines for prefab designers and NPC pack creators.
+
+		The attribute values, and spawner counts, are taken from vanilla.
+	-->
+	<insertAfter xpath="/gamestages/group[last()]">
+		<!-- Bandits gamestage groups -->
+		<group name="S_-Group_NPC_Bandits_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCBanditsAllHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Bandits_Melee" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCBanditsMeleeHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Bandits_Ranged" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCBanditsRangedHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Bandits_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCBanditsBossHorde" count="5,6" />
+		</group>
+		<!-- Duke gamestage groups -->
+		<group name="S_-Group_NPC_Duke_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCDukeAllHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Duke_Melee" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCDukeMeleeHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Duke_Ranged" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCDukeRangedHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Duke_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCDukeBossHorde" count="5,6" />
+		</group>
+		<!-- Military gamestage groups -->
+		<group name="S_-Group_NPC_Military_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCMilitaryAllHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Military_Melee" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCMilitaryMeleeHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Military_Ranged" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCMilitaryRangedHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Military_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCMilitaryBossHorde" count="5,6" />
+		</group>
+		<!-- Vault gamestage groups -->
+		<group name="S_-Group_NPC_Vault_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCVaultAllHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Vault_Melee" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCVaultMeleeHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Vault_Ranged" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCVaultRangedHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Vault_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCVaultBossHorde" count="5,6" />
+		</group>
+		<!-- Whisperers gamestage groups -->
+		<group name="S_-Group_NPC_Whisperers_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCWhisperersAllHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Whisperers_Melee" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCWhisperersMeleeHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Whisperers_Ranged" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCWhisperersRangedHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Whisperers_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCWhisperersBossHorde" count="5,6" />
+		</group>
+		<!-- Whiteriver gamestage groups -->
+		<group name="S_-Group_NPC_Whiteriver_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCWhiteriverAllHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Whiteriver_Melee" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCWhiteriverMeleeHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Whiteriver_Ranged" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCWhiteriverRangedHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Whiteriver_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCWhiteriverBossHorde" count="5,6" />
+		</group>
+		<!-- Enemy gamestage groups - when the type of enemy doesn't matter -->
+		<group name="S_-Group_NPC_Enemy_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCEnemyAllHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Enemy_Melee" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCEnemyMeleeHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Enemy_Ranged" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCEnemyRangedHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Enemy_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCEnemyBossHorde" count="5,6" />
+		</group>
+		<!-- Friendly gamestage groups - when the type of friendly NPC doesn't matter -->
+		<group name="S_-Group_NPC_Friendly_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCFriendlyAllHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Friendly_Melee" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCFriendlyMeleeHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Friendly_Ranged" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCFriendlyRangedHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Friendly_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCFriendlyBossHorde" count="5,6" />
+		</group>
+		<!-- Mechanical NPC (robot, cyborg, etc.) gamestage groups -->
+		<group name="S_-Group_NPC_Mech_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCMechAllHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Mech_Melee" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCMechMeleeHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Mech_Ranged" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCMechRangedHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Mech_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCMechBossHorde" count="5,6" />
+		</group>
+		<!-- Fantasy NPC (orc, goblin, etc.) gamestage groups -->
+		<group name="S_-Group_NPC_Fantasy_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCFantasyAllHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Fantasy_Melee" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCFantasyMeleeHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Fantasy_Ranged" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCFantasyRangedHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Fantasy_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCFantasyBossHorde" count="5,6" />
+		</group>
+        <!-- Enemy animals gamestage groups -->
+		<group name="S_-Group_NPC_Enemy_Animals_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCEnemyAnimalsAllHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Enemy_Animals_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCEnemyAnimalsBossHorde" count="5,6" />
+		</group>
+        <!-- Friendly animals gamestage groups -->
+		<group name="S_-Group_NPC_FriendlyAnimals_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCFriendlyAnimalsAllHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_FriendlyAnimals_Domestic" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCFriendlyAnimalsDomesticHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_FriendlyAnimals_Farm" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCFriendlyAnimalsFarmHorde" count="5,6" />
+		</group>
+        <!-- Arachnids (spiders, scorpions) gamestage groups -->
+		<group name="S_-Group_NPC_Arachnids_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCEnemyAnimalsAllHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Arachnids_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCEnemyAnimalsBossHorde" count="5,6" />
+		</group>
+        <!-- Flyers (birds, bats, etc.) gamestage groups -->
+		<group name="S_-Group_NPC_Flyers_All" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCFlyersAllHorde" count="5,6" />
+		</group>
+		<group name="S_-Group_NPC_Flyers_Boss" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCFlyersBossHorde" count="5,6" />
+		</group>
+        <!--
+            Deco spawners.
+
+            These are spawners that are intended to be used for sleeper volumes in prefab decorations.
+            NPCs in these categories should be able to be spawned into tight spaces.
+            They are named after how they are used in Age of Oblivion.
+        -->
+        <!-- Trap deco group: hostiles -->
+		<group name="S_-Group_NPC_Deco_Trap" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCDecoTrapHorde" count="5,6" />
+		</group>
+        <!-- Rescue deco group: friendlies -->
+		<group name="S_-Group_NPC_Deco_Rescue" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCDecoRescueHorde" count="5,6" />
+		</group>
+		<!-- Trader deco group -->
+		<group name="S_-Group_NPC_Deco_Trader" emptyChance="0" decoyChance="0" decoy1hpChance="0">
+			<spawner name="NPCDecoTraderHorde" count="5,6" />
+		</group>
+	</insertAfter>
+
+	<!-- 
+		Spawners
+
+		These are used by gamestage groups, and use entity groups by game stage.
+		By convention, they are named "NPC[Association][Classification]Horde".
+
+		The gamestage levels and spawn attributes are modeled after vanilla spawners.
+	-->
+	<insertAfter xpath="/gamestages/spawner[last()]">
+		<!-- Bandits spawners -->
+		<spawner name="NPCBanditsAllHorde">
+			<gamestage stage="1">
+				<spawn group="npcBanditsAllGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcBanditsAllGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcBanditsAllGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcBanditsAllGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcBanditsAllGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcBanditsAllGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCBanditsMeleeHorde">
+			<gamestage stage="1">
+				<spawn group="npcBanditsMeleeGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcBanditsMeleeGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcBanditsMeleeGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcBanditsMeleeGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcBanditsMeleeGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcBanditsMeleeGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCBanditsRangedHorde">
+			<gamestage stage="1">
+				<spawn group="npcBanditsRangedGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcBanditsRangedGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcBanditsRangedGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcBanditsRangedGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcBanditsRangedGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcBanditsRangedGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCBanditsBossHorde">
+			<gamestage stage="1">
+				<spawn group="npcBanditsBossGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcBanditsBossGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcBanditsBossGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcBanditsBossGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcBanditsBossGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcBanditsBossGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<!-- Duke spawners -->
+		<spawner name="NPCDukeAllHorde">
+			<gamestage stage="1">
+				<spawn group="npcDukeAllGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcDukeAllGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcDukeAllGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcDukeAllGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcDukeAllGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcDukeAllGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCDukeMeleeHorde">
+			<gamestage stage="1">
+				<spawn group="npcDukeMeleeGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcDukeMeleeGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcDukeMeleeGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcDukeMeleeGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcDukeMeleeGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcDukeMeleeGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCDukeRangedHorde">
+			<gamestage stage="1">
+				<spawn group="npcDukeRangedGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcDukeRangedGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcDukeRangedGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcDukeRangedGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcDukeRangedGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcDukeRangedGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCDukeBossHorde">
+			<gamestage stage="1">
+				<spawn group="npcDukeBossGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcDukeBossGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcDukeBossGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcDukeBossGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcDukeBossGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcDukeBossGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<!-- Military spawners -->
+		<spawner name="NPCMilitaryAllHorde">
+			<gamestage stage="1">
+				<spawn group="npcMilitaryAllGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcMilitaryAllGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcMilitaryAllGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcMilitaryAllGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcMilitaryAllGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcMilitaryAllGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCMilitaryMeleeHorde">
+			<gamestage stage="1">
+				<spawn group="npcMilitaryMeleeGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcMilitaryMeleeGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcMilitaryMeleeGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcMilitaryMeleeGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcMilitaryMeleeGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcMilitaryMeleeGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCMilitaryRangedHorde">
+			<gamestage stage="1">
+				<spawn group="npcMilitaryRangedGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcMilitaryRangedGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcMilitaryRangedGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcMilitaryRangedGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcMilitaryRangedGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcMilitaryRangedGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCMilitaryBossHorde">
+			<gamestage stage="1">
+				<spawn group="npcMilitaryBossGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcMilitaryBossGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcMilitaryBossGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcMilitaryBossGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcMilitaryBossGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcMilitaryBossGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<!-- Vault spawners -->
+		<spawner name="NPCVaultAllHorde">
+			<gamestage stage="1">
+				<spawn group="npcVaultAllGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcVaultAllGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcVaultAllGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcVaultAllGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcVaultAllGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcVaultAllGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCVaultMeleeHorde">
+			<gamestage stage="1">
+				<spawn group="npcVaultMeleeGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcVaultMeleeGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcVaultMeleeGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcVaultMeleeGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcVaultMeleeGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcVaultMeleeGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCVaultRangedHorde">
+			<gamestage stage="1">
+				<spawn group="npcVaultRangedGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcVaultRangedGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcVaultRangedGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcVaultRangedGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcVaultRangedGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcVaultRangedGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCVaultBossHorde">
+			<gamestage stage="1">
+				<spawn group="npcVaultBossGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcVaultBossGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcVaultBossGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcVaultBossGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcVaultBossGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcVaultBossGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<!-- Whisperers spawners -->
+		<spawner name="NPCWhisperersAllHorde">
+			<gamestage stage="1">
+				<spawn group="npcWhisperersAllGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcWhisperersAllGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcWhisperersAllGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcWhisperersAllGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcWhisperersAllGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcWhisperersAllGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCWhisperersMeleeHorde">
+			<gamestage stage="1">
+				<spawn group="npcWhisperersMeleeGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcWhisperersMeleeGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcWhisperersMeleeGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcWhisperersMeleeGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcWhisperersMeleeGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcWhisperersMeleeGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCWhisperersRangedHorde">
+			<gamestage stage="1">
+				<spawn group="npcWhisperersRangedGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcWhisperersRangedGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcWhisperersRangedGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcWhisperersRangedGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcWhisperersRangedGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcWhisperersRangedGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCWhisperersBossHorde">
+			<gamestage stage="1">
+				<spawn group="npcWhisperersBossGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcWhisperersBossGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcWhisperersBossGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcWhisperersBossGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcWhisperersBossGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcWhisperersBossGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<!-- Whiteriver spawners -->
+		<spawner name="NPCWhiteriverAllHorde">
+			<gamestage stage="1">
+				<spawn group="npcWhiteriverAllGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcWhiteriverAllGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcWhiteriverAllGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcWhiteriverAllGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcWhiteriverAllGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcWhiteriverAllGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCWhiteriverMeleeHorde">
+			<gamestage stage="1">
+				<spawn group="npcWhiteriverMeleeGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcWhiteriverMeleeGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcWhiteriverMeleeGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcWhiteriverMeleeGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcWhiteriverMeleeGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcWhiteriverMeleeGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCWhiteriverRangedHorde">
+			<gamestage stage="1">
+				<spawn group="npcWhiteriverRangedGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcWhiteriverRangedGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcWhiteriverRangedGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcWhiteriverRangedGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcWhiteriverRangedGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcWhiteriverRangedGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCWhiteriverBossHorde">
+			<gamestage stage="1">
+				<spawn group="npcWhiteriverBossGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcWhiteriverBossGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcWhiteriverBossGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcWhiteriverBossGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcWhiteriverBossGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcWhiteriverBossGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<!-- Enemy spawners -->
+		<spawner name="NPCEnemyAllHorde">
+			<gamestage stage="1">
+				<spawn group="npcEnemyAllGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcEnemyAllGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcEnemyAllGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcEnemyAllGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcEnemyAllGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcEnemyAllGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCEnemyMeleeHorde">
+			<gamestage stage="1">
+				<spawn group="npcEnemyMeleeGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcEnemyMeleeGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcEnemyMeleeGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcEnemyMeleeGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcEnemyMeleeGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcEnemyMeleeGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCEnemyRangedHorde">
+			<gamestage stage="1">
+				<spawn group="npcEnemyRangedGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcEnemyRangedGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcEnemyRangedGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcEnemyRangedGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcEnemyRangedGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcEnemyRangedGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCEnemyBossHorde">
+			<gamestage stage="1">
+				<spawn group="npcEnemyBossGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcEnemyBossGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcEnemyBossGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcEnemyBossGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcEnemyBossGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcEnemyBossGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<!-- Friendly spawners -->
+		<spawner name="NPCFriendlyAllHorde">
+			<gamestage stage="1">
+				<spawn group="npcFriendlyAllGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcFriendlyAllGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcFriendlyAllGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcFriendlyAllGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcFriendlyAllGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcFriendlyAllGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCFriendlyMeleeHorde">
+			<gamestage stage="1">
+				<spawn group="npcFriendlyMeleeGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcFriendlyMeleeGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcFriendlyMeleeGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcFriendlyMeleeGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcFriendlyMeleeGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcFriendlyMeleeGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCFriendlyRangedHorde">
+			<gamestage stage="1">
+				<spawn group="npcFriendlyRangedGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcFriendlyRangedGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcFriendlyRangedGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcFriendlyRangedGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcFriendlyRangedGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcFriendlyRangedGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCFriendlyBossHorde">
+			<gamestage stage="1">
+				<spawn group="npcFriendlyBossGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcFriendlyBossGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcFriendlyBossGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcFriendlyBossGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcFriendlyBossGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcFriendlyBossGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<!-- Mech spawners -->
+		<spawner name="NPCMechAllHorde">
+			<gamestage stage="1">
+				<spawn group="npcMechAllGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcMechAllGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcMechAllGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcMechAllGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcMechAllGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcMechAllGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCMechMeleeHorde">
+			<gamestage stage="1">
+				<spawn group="npcMechMeleeGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcMechMeleeGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcMechMeleeGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcMechMeleeGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcMechMeleeGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcMechMeleeGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCMechRangedHorde">
+			<gamestage stage="1">
+				<spawn group="npcMechRangedGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcMechRangedGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcMechRangedGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcMechRangedGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcMechRangedGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcMechRangedGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCMechBossHorde">
+			<gamestage stage="1">
+				<spawn group="npcMechBossGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcMechBossGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcMechBossGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcMechBossGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcMechBossGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcMechBossGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<!-- Fantasy spawners -->
+		<spawner name="NPCFantasyAllHorde">
+			<gamestage stage="1">
+				<spawn group="npcFantasyAllGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcFantasyAllGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcFantasyAllGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcFantasyAllGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcFantasyAllGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcFantasyAllGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCFantasyMeleeHorde">
+			<gamestage stage="1">
+				<spawn group="npcFantasyMeleeGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcFantasyMeleeGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcFantasyMeleeGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcFantasyMeleeGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcFantasyMeleeGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcFantasyMeleeGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCFantasyRangedHorde">
+			<gamestage stage="1">
+				<spawn group="npcFantasyRangedGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcFantasyRangedGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcFantasyRangedGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcFantasyRangedGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcFantasyRangedGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcFantasyRangedGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCFantasyBossHorde">
+			<gamestage stage="1">
+				<spawn group="npcFantasyBossGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcFantasyBossGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcFantasyBossGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcFantasyBossGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcFantasyBossGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcFantasyBossGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+        <!-- Enemy animal spawners -->
+		<spawner name="NPCEnemyAnimalsAllHorde">
+			<gamestage stage="1">
+				<spawn group="npcEnemyAnimalsAllGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcEnemyAnimalsAllGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcEnemyAnimalsAllGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcEnemyAnimalsAllGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcEnemyAnimalsAllGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcEnemyAnimalsAllGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCEnemyAnimalsBossHorde">
+			<gamestage stage="1">
+				<spawn group="npcEnemyAnimalsBossGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcEnemyAnimalsBossGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcEnemyAnimalsBossGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcEnemyAnimalsBossGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcEnemyAnimalsBossGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcEnemyAnimalsBossGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+        <!-- Friendly animal spawners -->
+		<spawner name="NPCFriendlyAnimalsAllHorde">
+			<gamestage stage="1">
+				<spawn group="npcFriendlyAnimalsAllGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcFriendlyAnimalsAllGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcFriendlyAnimalsAllGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcFriendlyAnimalsAllGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcFriendlyAnimalsAllGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcFriendlyAnimalsAllGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCFriendlyAnimalsDomesticHorde">
+			<gamestage stage="1">
+				<spawn group="npcFriendlyAnimalsDomesticGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcFriendlyAnimalsDomesticGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcFriendlyAnimalsDomesticGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcFriendlyAnimalsDomesticGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcFriendlyAnimalsDomesticGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcFriendlyAnimalsDomesticGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCFriendlyAnimalsFarmHorde">
+			<gamestage stage="1">
+				<spawn group="npcFriendlyAnimalsFarmGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcFriendlyAnimalsFarmGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcFriendlyAnimalsFarmGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcFriendlyAnimalsFarmGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcFriendlyAnimalsFarmGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcFriendlyAnimalsFarmGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+        <!-- Arachnid spawners -->
+		<spawner name="NPCArachnidsAllHorde">
+			<gamestage stage="1">
+				<spawn group="npcArachnidsAllGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcArachnidsAllGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcArachnidsAllGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcArachnidsAllGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcArachnidsAllGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcArachnidsAllGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCArachnidsBossHorde">
+			<gamestage stage="1">
+				<spawn group="npcArachnidsBossGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcArachnidsBossGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcArachnidsBossGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcArachnidsBossGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcArachnidsBossGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcArachnidsBossGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+        <!-- Flyer spawners -->
+		<spawner name="NPCFlyersAllHorde">
+			<gamestage stage="1">
+				<spawn group="npcFlyersAllGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcFlyersAllGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcFlyersAllGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcFlyersAllGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcFlyersAllGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcFlyersAllGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCFlyersBossHorde">
+			<gamestage stage="1">
+				<spawn group="npcFlyersBossGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcFlyersBossGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcFlyersBossGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcFlyersBossGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcFlyersBossGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcFlyersBossGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+        <!-- Deco spawners -->
+        <spawner name="NPCDecoTrapHorde">
+			<gamestage stage="1">
+				<spawn group="npcDecoTrapGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcDecoTrapGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcDecoTrapGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcDecoTrapGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcDecoTrapGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcDecoTrapGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+		<spawner name="NPCDecoRescueHorde">
+			<gamestage stage="1">
+				<spawn group="npcDecoRescueGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcDecoRescueGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcDecoRescueGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcDecoRescueGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcDecoRescueGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcDecoRescueGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+        <spawner name="NPCDecoTraderHorde">
+			<gamestage stage="1">
+				<spawn group="npcDecoTraderGroupGS01" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="npcDecoTraderGroupGS50" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="npcDecoTraderGroupGS100" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="npcDecoTraderGroupGS200" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="400">
+				<spawn group="npcDecoTraderGroupGS400" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+			<gamestage stage="800">
+				<spawn group="npcDecoTraderGroupGS800" num="1" maxAlive="1" duration="1" />
+			</gamestage>
+		</spawner>
+	</insertAfter>
+</configs>

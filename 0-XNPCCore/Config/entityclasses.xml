@@ -122,9 +122,10 @@
 		<!--  Various player effects, including Snufkins Knockdown code bits  -->
 
 	<append xpath="/entity_classes/entity_class[@name='playerMale']">
-		<!--NEW-->
+		<property name="Buffs" value="buffNPCModSlowStatusCheck"/>
 		<effect_group name="Signal Hired NPCs to Attack">
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffNPCModAttacking"/>
+			<triggered_effect trigger="onOtherAttackedSelf" action="AddBuff" target="other" buff="buffNPCModAttacking"/>
 		</effect_group>
 		<effect_group>
 			<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffInjuryKnockdown01">
@@ -136,6 +137,15 @@
 				<requirement name="EntityTagCompare" target="other" tags="staminadrain"/> <!-- If the attacking entity has this tag, it will lower the players stamina   -->
 			</triggered_effect>
 		</effect_group>
+		<effect_group name="CVar Hired Cleanup">
+			<triggered_effect trigger="onSelfEnteredGame" action="ClearStaleHires, SCore" />
+		</effect_group>	
+		<!--  This effect group sets a cvar on the player called "DamageRelationship" which is the faction relationship at which the player can damage NPCs. 1001 means "everyone." 400 is the default, and what is in effect when this effect group is commented out.  This is only for faction targeting - it doesn't affect allies (hired NPCs), and other players and their NPCs are governed by the server's "Player Killing" setting. If you want to adjust the value: 800+ is "Love", 600+ is "Like", 400+ is "Neutral", 200+ is "Dislike", and 0+ is "Hate". -->
+			<!--<effect_group name="Damage All NPCs">
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="DamageRelationship" operation="set" value="1001" />
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="DamageRelationship" operation="set" value="1001" />
+				<triggered_effect trigger="onSelfRespawn" action="ModifyCVar" cvar="DamageRelationship" operation="set" value="1001" />
+			</effect_group>-->
 	</append>
 
 
@@ -145,6 +155,7 @@
 
 		<entity_class name="npcMeleeTemplate"> 
 			<property name="Class" value="EntityAliveSDX, SCore" /> 
+			<property name="SleeperInstantAwake" value="true" /> <!-- needed to make sure NPCs fully initialized on spawning in all sleeper volumes  -->
 			<property name="EntityType" value="Player"/>
 			<property name="Tags" value="entity,male,npc,melee"/> <!-- entity/sex/type/role/attacktype/name: Entity is required for code filtering, sex for sound filtering, type/role and Atype for buff filtering.  These DO NOT Extend! -->
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/>
@@ -265,7 +276,7 @@
 			<property name="SwimStrokeRate" value="1,1.5"/>
 			<property name="CanClimbLadders" value="true"/>
 			<property name="CanClimbVertical" value="false"/>
-			<property name="JumpMaxDistance" value="2.8, 3.9"/>
+			<property name="JumpMaxDistance" value="2.8, 3.9"/> 
 			<property name="Immunity" value="sickness;disease;wellness"/> 
 			<property name="ExperienceGain" value="600"/> 
 			<property name="LootDropProb" value="0.0"/> 
@@ -286,17 +297,16 @@
 				<passive_effect name="HealthMax" operation="base_set" value="300"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="2000"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0" />
-				<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffBurningEnvironment,buffFatiguedTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/> 
+				<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger"/>
+				<passive_effect name="LandMineImmunity" operation="base_set" value="1"/> <!--  SCore add  -->
 			</effect_group>	
 			<effect_group name="IsNPC"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="IsHuman"/> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffNPCStatusCheck"/> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffNPCStatusCheck"/> <!--  done twice intentionally, cause TFP notes say to.   -->
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="NPCHit"/> 
-				<!--<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="respawn" operation="set" value="1"/>   uncomment this for hired NPCs to respawn with player, highly experimental  -->
 			</effect_group>	
 			<property name="RotateToGround" value="false"/>	
 			<property name="PushFactor" value="1"/>	
@@ -312,7 +322,6 @@
 				<passive_effect name="DamageModifier" operation="perc_set" value="1"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="head"/>
 				<passive_effect name="DismemberChance" operation="base_set" value=".05"/> 
-				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
 				<passive_effect name="WaterMax" operation="base_set" value="100"/> 
 				<passive_effect name="CrouchSpeed" operation="base_set" value=".3"/> 
 				<passive_effect name="WalkSpeed" operation="base_set" value="0.35" tags="swimming"/>
@@ -322,8 +331,6 @@
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onOtherAttackedSelf" action="AddBuff" target="self" buff="buffCumChanceCH"/>
-				<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/> 
-				<passive_effect name="BuffResistance" operation="base_add" value="-.1" tags="buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
 				<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" buff="buffPowerAttackStaminaStunt">
 					<requirement name="HoldingItemHasTags" tags="melee"/>
 					<requirement name="!HoldingItemHasTags" tags="thrownWeapon"/>
@@ -348,18 +355,23 @@
 				<passive_effect name="ProjectileStickChance" operation="perc_add" value="-2" tags="glass"/> 
 			</effect_group> 
 			
+			<effect_group name="NPCMutualAidBuff"> <!--  damage one npc, others will respond to assist  -->
+                <triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="other" buff="buffNPCModAttacking"/> 
+            </effect_group> 
+			
 			<!-- SET FACTION CVARS : FuriousRamsay -->
             <effect_group name="SetFactionCVars">
                 <triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="respawn" operation="set" value="1"/>
                 <triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="varFactionBandit" operation="set" value="1">
-                    <requirement name="EntityTagCompare" target="self" tags="bandit,whisperer"/>
+                    <requirement name="EntityTagCompare" target="self" tags="bandit,whisperer,mech"/>
                 </triggered_effect>
             </effect_group>  
 			<effect_group name="EntityDamageKillCount">
 			  <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="varNumKills" operation="add" value="1"/>
 			</effect_group> 
+			
 			<!-- SET PASSIVE DAMAGE BUFFS/DEBUFFS -->
-				<!-- BASED ON NUMBER OF KILLS -->
+			<!-- DAMAGE MODIFIER BASED ON NUMBER OF KILLS -->
 			<effect_group name="EntityDamageKillsLevel1">
 			  <requirement name="CVarCompare" cvar="varNumKills" operation="GT" value="0"/>
 			  <requirement name="CVarCompare" cvar="varNumKills" operation="LTE" value="20"/>
@@ -384,14 +396,13 @@
 			  <requirement name="CVarCompare" cvar="varNumKills" operation="GT" value="200"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="0.5"/>
 			</effect_group> 
-
-				<!-- BASED ON TIME OF DAY -->
+			<!-- DAMAGE MODIFIER BASED ON TIME OF DAY -->
 			<effect_group name="EntityDamageAtNight">
 				<requirement name="CVarCompare" cvar="varFactionBandit" operation="Equals" value="1"/>
 				<requirement name="IsNight"/>
 					<passive_effect name="DamageModifier" operation="perc_add" value="-.2"/>
 			</effect_group>                     
-			<!-- BASED ON BIOME DIFFICULTY -->
+			<!-- DAMAGE MODIFIER BASED ON BIOME DIFFICULTY -->
 			<effect_group name="EntityDamageInBiomeForest">
 				<requirement name="CVarCompare" cvar="varFactionBandit" operation="Equals" value="1"/>
 				<requirement name="InBiome" biome="3"/>
@@ -417,16 +428,165 @@
 				<requirement name="InBiome" biome="8"/>
 					<passive_effect name="DamageModifier" operation="perc_add" value="-.5"/>
 			</effect_group> 
+			 <!-- DAMAGE MODIFIER BASED ON LEADER LEVEL -->
+			 <effect_group name="EntityDamageLeaderLevel1">
+			   <requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="GTE" value="20"/>
+			   <requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="LT" value="40"/>
+				 <passive_effect name="DamageModifier" operation="perc_add" value="0.1"/>
+			 </effect_group> 
+			 <effect_group name="EntityDamageLeaderLevel2">
+			   <requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="GTE" value="40"/>
+			   <requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="LT" value="60"/>
+				 <passive_effect name="DamageModifier" operation="perc_add" value="0.2"/>
+			 </effect_group> 
+			 <effect_group name="EntityDamageLeaderLevel3">
+			   <requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="GTE" value="60"/>
+			   <requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="LT" value="80"/>
+				 <passive_effect name="DamageModifier" operation="perc_add" value="0.3"/>
+			 </effect_group> 
+			 <effect_group name="EntityDamageLeaderLevel4">
+			   <requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="GTE" value="80"/>
+			   <requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="LT" value="100"/>
+				 <passive_effect name="DamageModifier" operation="perc_add" value="0.4"/>
+			 </effect_group> 
+			 <effect_group name="EntityDamageLeaderLevel5">
+			   <requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="GTE" value="100"/>
+			   <requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="LT" value="120"/>
+				 <passive_effect name="DamageModifier" operation="perc_add" value="0.5"/>
+			 </effect_group> 
 			
+			<!-- HEALTH ADJUSTMENTS BASED ON GAME DIFFICULTY -->
+            <effect_group name="GameDifficulty0">
+              <requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="0"/>
+                <passive_effect name="HealthMax" operation="perc_add" value="-0.5"/>
+            </effect_group> 
+            <effect_group name="GameDifficulty1">
+              <requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="1"/>
+                <passive_effect name="HealthMax" operation="perc_add" value="-0.25"/>
+            </effect_group> 
+            <effect_group name="GameDifficulty2">
+              <requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="2"/>
+                <passive_effect name="HealthMax" operation="perc_add" value="0"/>
+            </effect_group> 
+            <effect_group name="GameDifficulty3">
+              <requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="3"/>
+                <passive_effect name="HealthMax" operation="perc_add" value="0.5"/>
+            </effect_group> 
+            <effect_group name="GameDifficulty4">
+              <requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="4"/>
+                <passive_effect name="HealthMax" operation="perc_add" value="1"/>
+            </effect_group> 
+            <effect_group name="GameDifficulty5">
+              <requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="5"/>
+                <passive_effect name="HealthMax" operation="perc_add" value="1.5"/>
+            </effect_group> 
+
+			 <!-- DAMAGE RESISTANCE BASED ON LEADER LEVEL -->
+			 <!-- LOW DR LEVELING -->
+			<effect_group name="PhysicalResistanceLeaderLevel1DRLow">
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="GTE" value="20"/>
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="LT" value="40"/>
+				<requirement name="EntityTagCompare" tags="DRLow"/>
+					<passive_effect name="PhysicalDamageResist" operation="base_set" value="2.5"/>
+			</effect_group>
+			<effect_group name="PhysicalResistanceLeaderLevel2DRLow">
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="GTE" value="40"/>
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="LT" value="60"/>
+				<requirement name="EntityTagCompare" target="self" tags="DRLow"/>
+					<passive_effect name="PhysicalDamageResist" operation="base_add" value="5"/>
+			</effect_group> 
+			<effect_group name="PhysicalResistanceLeaderLevel3DRLow">
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="GTE" value="60"/>
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="LT" value="80"/>
+				<requirement name="EntityTagCompare" target="self" tags="DRLow"/>
+					<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.5"/>
+			</effect_group> 
+			<effect_group name="PhysicalResistanceLeaderLevel4DRLow">
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="GTE" value="80"/>
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="LT" value="100"/>
+				<requirement name="EntityTagCompare" target="self" tags="DRLow"/>
+					<passive_effect name="PhysicalDamageResist" operation="base_add" value="10"/>
+			</effect_group> 
+			<effect_group name="PhysicalResistanceLeaderLevel5DRLow">
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="GTE" value="100"/>
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="LT" value="120"/>
+				<requirement name="EntityTagCompare" target="self" tags="DRLow"/>
+					<passive_effect name="PhysicalDamageResist" operation="base_add" value="15"/>
+			</effect_group>	 
+			<!-- MID DR LEVELING -->
+			<effect_group name="PhysicalResistanceLeaderLevel1DRMid">
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="GTE" value="20"/>
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="LT" value="40"/>
+				<requirement name="EntityTagCompare" target="self" tags="DRMid"/>
+					<passive_effect name="PhysicalDamageResist" operation="base_add" value="5"/>
+			</effect_group> 
+			<effect_group name="PhysicalResistanceLeaderLevel2DRMid">
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="GTE" value="40"/>
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="LT" value="60"/>
+				<requirement name="EntityTagCompare" target="self" tags="DRMid"/>
+					<passive_effect name="PhysicalDamageResist" operation="base_add" value="10"/>
+			</effect_group> 	 
+			<effect_group name="PhysicalResistanceLeaderLevel3DRMid">
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="GTE" value="60"/>
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="LT" value="80"/>
+				<requirement name="EntityTagCompare" target="self" tags="DRMid"/>
+					<passive_effect name="PhysicalDamageResist" operation="base_add" value="15"/>
+			</effect_group> 
+			<effect_group name="PhysicalResistanceLeaderLevel4DRMid">
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="GTE" value="80"/>
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="LT" value="100"/>
+				<requirement name="EntityTagCompare" target="self" tags="DRMid"/>
+					<passive_effect name="PhysicalDamageResist" operation="base_add" value="20"/>
+			</effect_group> 
+			<effect_group name="PhysicalResistanceLeaderLevel5DRMid">
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="GTE" value="100"/>
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="LT" value="120"/>
+				<requirement name="EntityTagCompare" target="self" tags="DRMid"/>
+					<passive_effect name="PhysicalDamageResist" operation="base_add" value="25"/>
+			</effect_group>	 
+			<!-- HIGH DR LEVELING -->
+			<effect_group name="PhysicalResistanceLeaderLevel1DRHigh">
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="GTE" value="20"/>
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="LT" value="40"/>
+				<requirement name="EntityTagCompare" target="self" tags="DRHigh"/>
+					<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.5"/>
+			</effect_group> 
+			<effect_group name="PhysicalResistanceLeaderLevel2DRHigh">
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="GTE" value="40"/>
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="LT" value="60"/>
+				<requirement name="EntityTagCompare" target="self" tags="DRHigh"/>
+					<passive_effect name="PhysicalDamageResist" operation="base_add" value="15"/>
+			</effect_group> 
+			<effect_group name="PhysicalResistanceLeaderLevel3DRHigh">
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="GTE" value="60"/>
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="LT" value="80"/>
+				<requirement name="EntityTagCompare" target="self" tags="DRHigh"/>
+					<passive_effect name="PhysicalDamageResist" operation="base_add" value="22.5"/>
+			</effect_group> 
+			<effect_group name="PhysicalResistanceLeaderLevel4DRHigh">
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="GTE" value="80"/>
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="LT" value="100"/>
+				<requirement name="EntityTagCompare" target="self" tags="DRHigh"/>
+					<passive_effect name="PhysicalDamageResist" operation="base_add" value="30"/>
+			</effect_group> 
+			<effect_group name="PhysicalResistanceLeaderLevel5DRHigh">
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="GTE" value="100"/>
+				<requirement name="CVarCompare" cvar="varNPCModLeaderLevel" operation="LT" value="120"/>
+				<requirement name="EntityTagCompare" target="self" tags="DRHigh"/>
+					<passive_effect name="PhysicalDamageResist" operation="base_add" value="37.5"/>
+			</effect_group>
+	
+	 
+			<!-- REDUCE NPC DAMAGE TO PLAYER -->
 			<effect_group name="ReduceDamageToPlayers">
 				<requirement name="EntityTagCompare" target="other" tags="player"/>
 				<requirement name="HoldingItemHasTags" tags="ranged,melee"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="-.2"/>
 			</effect_group>
+						
+			<!--  Customization properties for default, passive, basic characters  -->
 			
-			<!--  Customization properties for defualt, passive, basic characters  -->
-			
-			<property name="AIPackages" value="NPCBasic, NPCMeleeBasic"/>  
+			<property name="AIPackages" value="NPCBasicNoChat, NPCMeleeBasic"/>  
 			<property name="IsEnemyEntity" value="false"/> 
 			<property name="LootListAlive" value=""/> <!-- removing these two properties removes the E when alive and on death but disables the inventory  -->	
 			<property name="NPCID" value=""/> 
@@ -468,8 +628,6 @@
 				<property name="AITarget-4" value=""/> 		-->			
 		</entity_class>	
 		
-
-		
 		<!--  Template converting the above melee template to Bloodmoon spawnable , change faction on character -->
 		
 		<entity_class name="npcMeleeBloodmoonTemplate" extends="npcMeleeTemplate"> 
@@ -480,7 +638,6 @@
 		</entity_class>	
 		
 		<!--  Ranged Template , change faction on character -->
-		
 		
 		<entity_class name="npcRangedTemplate" extends="npcMeleeTemplate"> 	
 			<property name="Tags" value="entity,male,npc,ranged"/>
@@ -494,11 +651,10 @@
 				<property name="BoundaryBox" value="2.0,1.8,0.4" />
 				<property name="Center" value="0.0,0.9,0.0"/>
 				</property> -->
-			<property name="AIPackages" value="NPCBasic, NPCRangedBasic"/> 
+			<property name="AIPackages" value="NPCBasicNoChat, NPCRangedBasic"/> 
 		</entity_class>	
 		
 		<!--  Template converting the above ranged template to bloodmoon enabled   -->
-		
 		
 		<entity_class name="npcRangedBloodmoonTemplate" extends="npcRangedTemplate"> 
 			<property name="HideInSpawnMenu" value="true"/>
@@ -513,7 +669,6 @@
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Tags" value="entity,male,npc,melee"/> 
 			<property name="Faction" value="whiteriver"/>
-			<property name="IsEnemyEntity" value="false"/> 
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
 			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired"/> 
@@ -523,7 +678,6 @@
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Tags" value="entity,male,npc,ranged"/> 
 			<property name="Faction" value="whiteriver"/>
-			<property name="IsEnemyEntity" value="false"/> 
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
 			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/> 
@@ -562,7 +716,7 @@
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="EmptyHandUser"/>
 			</effect_group>
-			<effect_group name="AddBrawlerProgression">
+			<!--<effect_group name="AddBrawlerProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkBrawler" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkBrawler" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -573,7 +727,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkBrawler" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>			
+			</effect_group>		-->	
 		</entity_class>	
 		
 		<!-- EmptyHand "weapon" template for bloodmoon -->
@@ -592,14 +746,33 @@
 		<entity_class name="npcAdvancedEmptyHandTemplate" extends="npcEmptyHandTemplate"> 
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Tags" value="entity,male,npc,melee"/> 
+			<property name="Names" value="Template" />	
 			<property name="Faction" value="whiteriver"/>
-			<property name="IsEnemyEntity" value="false"/> 
-			<property name="LootListAlive" value="traderNPC"/>
+			<property name="LootListAlive" value="traderNPC"/> 
 			<property name="NPCID" value="spheretest"/> 
 			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired"/> 
 		</entity_class>
-
-	
+		
+		<!-- testing characters  -->
+		
+		<entity_class name="npcTestEmptyHandBasic" extends="npcEmptyHandTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Tester" />	
+			<property name="LookAtAngle" value="60"/> 
+			<!--<property name="Mesh" value="#@modfolder:Resources/FemaleElvenArcherDark.unity3d?FemaleElvenArcherDark"/> -->
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
+		</entity_class>	
+		<entity_class name="npcTestEmptyHandAdvanced" extends="npcAdvancedEmptyHandTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Tester" />	
+			<property name="LookAtAngle" value="60"/> 
+			<!--<property name="Mesh" value="#@modfolder:Resources/FemaleElvenArcherDark.unity3d?FemaleElvenArcherDark"/> -->
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
+			<!--<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired"/> -->
+		</entity_class>			
+		
 		<!--  Club  -->
 	
 		<entity_class name="npcClubTemplate" extends="npcMeleeTemplate">
@@ -619,7 +792,7 @@
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="ClubUser"/>
 			</effect_group>	
-			<effect_group name="AddPummelPeteProgression">
+			<!--<effect_group name="AddPummelPeteProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPummelPete" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPummelPete" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -630,7 +803,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPummelPete" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>	
+			</effect_group>	-->
 		</entity_class>
 		
 		
@@ -675,7 +848,7 @@
 			<property name="ExperienceGain" value="600"/> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="KnifeUser"/>
 			</effect_group>	
-			<effect_group name="AddDeepCutsProgression">
+			<!--<effect_group name="AddDeepCutsProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDeepCuts" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDeepCuts" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -686,7 +859,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDeepCuts" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>		
+			</effect_group>		-->
 		</entity_class>	
 		
 		<entity_class name="npcBMKnifeTemplate" extends="npcKnifeTemplate">
@@ -725,7 +898,7 @@
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="BatUser"/>
 			</effect_group>
-			<effect_group name="AddPummelPeteProgression">
+			<!--<effect_group name="AddPummelPeteProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPummelPete" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPummelPete" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -736,7 +909,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkPummelPete" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>	
+			</effect_group>	-->
 		</entity_class>	
 		
 		<entity_class name="npcBMBatTemplate" extends="npcBatTemplate">
@@ -777,7 +950,7 @@
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="AxeUser"/>
 			</effect_group>
-			<effect_group name="AddDeepCutsProgression">
+			<!--<effect_group name="AddDeepCutsProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDeepCuts" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDeepCuts" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -788,7 +961,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDeepCuts" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>			
+			</effect_group>		-->	
 		</entity_class>		
 
 		<entity_class name="npcBMAxeTemplate" extends="npcAxeTemplate">
@@ -830,7 +1003,7 @@
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="SpearUser"/>
 			</effect_group>	
-			<effect_group name="AddJavelinMasterProgression">
+			<!--<effect_group name="AddJavelinMasterProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkJavelinMaster" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkJavelinMaster" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -841,7 +1014,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkJavelinMaster" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>				
+			</effect_group>	-->			
 		</entity_class>		
 		
 		<entity_class name="npcBMSpearTemplate" extends="npcSpearTemplate">
@@ -882,7 +1055,7 @@
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="MacheteUser"/>
 			</effect_group>
-			<effect_group name="AddDeepCutsProgression">
+			<!--<effect_group name="AddDeepCutsProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDeepCuts" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDeepCuts" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -893,7 +1066,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDeepCuts" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>			
+			</effect_group>	-->		
 		</entity_class>	
 		
 		<entity_class name="npcBMMacheteTemplate" extends="npcMacheteTemplate">
@@ -940,7 +1113,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="3"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="3"/>
 			</effect_group>	
-			<effect_group name="AddGunslingerProgression">
+			<!--<effect_group name="AddGunslingerProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkGunslinger" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkGunslinger" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -951,7 +1124,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkGunslinger" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>	
+			</effect_group>	-->
 		</entity_class>	
 		
 		<entity_class name="npcBMPipePistolTemplate" extends="npcPipePistolTemplate">
@@ -997,9 +1170,8 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="7"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="7"/>				
 			</effect_group>
-			<effect_group name="AddGunslingerProgression">
+			<!--<effect_group name="AddGunslingerProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkGunslinger" level="1"/>
-			<!--<triggered_effect trigger="onReloadStart" action="SetProgressionLevel" progression_name="perkGunslinger" level="1"/> -->
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkGunslinger" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
 				</triggered_effect>
@@ -1009,7 +1181,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkGunslinger" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>	
+			</effect_group>	-->
 		</entity_class>		
 		
 		<entity_class name="npcBMPistolTemplate" extends="npcPistolTemplate">
@@ -1054,7 +1226,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="4"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="4"/>				
 			</effect_group>	
-			<effect_group name="AddGunslingerProgression">
+			<!--<effect_group name="AddGunslingerProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkGunslinger" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkGunslinger" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -1065,7 +1237,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkGunslinger" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>	
+			</effect_group>	-->
 		</entity_class>	
 
 		<entity_class name="npcBMDPistolTemplate" extends="npcDPistolTemplate">
@@ -1108,10 +1280,11 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="30"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="30"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="15"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="15"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="10"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="10"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="reloadDelay" operation="set" value="3"/><!--  test cvar  -->
 			</effect_group>
-			<effect_group name="AddGunslingerProgression">
+			<!--<effect_group name="AddGunslingerProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkGunslinger" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkGunslinger" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -1122,7 +1295,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkGunslinger" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>	
+			</effect_group>	-->
 		</entity_class>	
 		
 		<entity_class name="npcBMSMGTemplate" extends="npcSMGTemplate">
@@ -1165,10 +1338,10 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="50"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="50"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="25"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="25"/>				
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="10"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="10"/>				
 			</effect_group>
-			<effect_group name="AddMachineGunnerProgression">
+			<!--<effect_group name="AddMachineGunnerProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkMachineGunner" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkMachineGunner" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -1179,7 +1352,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkMachineGunner" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>	
+			</effect_group>	-->
 		</entity_class>	
 		
 		<entity_class name="npcBMM60Template" extends="npcM60Template">
@@ -1221,10 +1394,10 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="30"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="30"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="15"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="15"/>				
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="5"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="5"/>				
 			</effect_group>	
-			<effect_group name="AddMachineGunnerProgression">
+			<!--<effect_group name="AddMachineGunnerProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkMachineGunner" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkMachineGunner" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -1235,7 +1408,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkMachineGunner" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>		
+			</effect_group>		-->
 		</entity_class>
 		
 		<entity_class name="npcBMAK47Template" extends="npcAK47Template">
@@ -1276,10 +1449,10 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="20"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="20"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="10"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="10"/>				
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="5"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="5"/>				
 			</effect_group>
-			<effect_group name="AddMachineGunnerProgression">
+			<!--<effect_group name="AddMachineGunnerProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkMachineGunner" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkMachineGunner" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -1290,7 +1463,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkMachineGunner" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>	
+			</effect_group>	-->
 		</entity_class>	
 
 		<entity_class name="npcBMPipeMGTemplate" extends="npcPipeMGTemplate">
@@ -1332,10 +1505,10 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="30"/>	
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="30"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="15"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="15"/>				
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="10"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="10"/>				
 			</effect_group>
-			<effect_group name="AddMachineGunnerProgression">
+			<!--<effect_group name="AddMachineGunnerProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkMachineGunner" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkMachineGunner" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -1346,7 +1519,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkMachineGunner" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>	
+			</effect_group>	-->
 		</entity_class>	
 		
 		<entity_class name="npcBMTRifleTemplate" extends="npcTRifleTemplate">
@@ -1391,7 +1564,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="1"/>				
 			</effect_group>
-			<effect_group name="AddDeadEyeProgression">
+			<!--<effect_group name="AddDeadEyeProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDeadEye" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDeadEye" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -1402,7 +1575,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDeadEye" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>	
+			</effect_group>	-->
         </entity_class>    
 
 		<entity_class name="npcBMPipeRifleTemplate" extends="npcPipeRifleTemplate">
@@ -1446,7 +1619,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="1"/>							
 			</effect_group>
-			<effect_group name="AddDeadEyeProgression">
+			<!--<effect_group name="AddDeadEyeProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDeadEye" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDeadEye" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -1457,7 +1630,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDeadEye" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>	
+			</effect_group>	-->
         </entity_class> 
 
  		<entity_class name="npcBMHRifleTemplate" extends="npcHRifleTemplate">
@@ -1498,10 +1671,10 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="12"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="12"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="6"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="6"/>							
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="3"/>							
 			</effect_group>
-			<effect_group name="AddDeadEyeProgression">
+			<!--<effect_group name="AddDeadEyeProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDeadEye" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDeadEye" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -1512,7 +1685,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDeadEye" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>			
+			</effect_group>		-->	
         </entity_class>  
 
 		<entity_class name="npcBMSRifleTemplate" extends="npcSRifleTemplate">
@@ -1556,7 +1729,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="1"/>							
 			</effect_group>	
-			<effect_group name="AddBoomstickProgression">
+			<!--<effect_group name="AddBoomstickProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkBoomstick" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkBoomstick" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -1567,7 +1740,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkBoomstick" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>	
+			</effect_group>	-->
 		</entity_class> 
 
 		<entity_class name="npcBMPipeShotgunTemplate" extends="npcPipeShotgunTemplate">
@@ -1608,10 +1781,10 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="8"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="8"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="4"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="4"/>							
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="2"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="2"/>							
 			</effect_group>
-			<effect_group name="AddBoomstickProgression">
+			<!--<effect_group name="AddBoomstickProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkBoomstick" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkBoomstick" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -1622,7 +1795,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkBoomstick" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>	
+			</effect_group>	-->
 		</entity_class> 
 		
 		<entity_class name="npcBMPShotgunTemplate" extends="npcPShotgunTemplate">
@@ -1663,10 +1836,10 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBurst"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Magsize" operation="set" value="16"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$roundsinmag" operation="set" value="16"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="8"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="8"/>							
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="4"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="4"/>							
 			</effect_group>
-			<effect_group name="AddBoomstickProgression">
+			<!--<effect_group name="AddBoomstickProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkBoomstick" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkBoomstick" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -1677,7 +1850,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkBoomstick" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>	
+			</effect_group>	-->
 		</entity_class>
 
 		<entity_class name="npcBMAShotgunTemplate" extends="npcAShotgunTemplate">
@@ -1721,7 +1894,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="1"/>							
 			</effect_group>	
-			<effect_group name="AddArcheryProgression">
+			<!--<effect_group name="AddArcheryProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkArchery" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkArchery" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -1732,7 +1905,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkArchery" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>	
+			</effect_group>	-->
 		</entity_class> 
 
 		<entity_class name="npcBMLBowTemplate" extends="npcLBowTemplate">
@@ -1780,7 +1953,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="1"/>							
 			</effect_group>	
-			<effect_group name="AddArcheryProgression">
+			<!--<effect_group name="AddArcheryProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkArchery" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkArchery" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -1791,7 +1964,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkArchery" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>	
+			</effect_group>	-->
 		</entity_class>	
 		
 		<entity_class name="npcBMXBowTemplate" extends="npcXBowTemplate">
@@ -1838,7 +2011,7 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="Burstsize" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="$burstrate" operation="set" value="1"/>				
 			</effect_group>
-			<effect_group name="AddDemolitionsExpertProgression">
+			<!--<effect_group name="AddDemolitionsExpertProgression">
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDemolitionsExpert" level="1"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDemolitionsExpert" level="2">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
@@ -1849,8 +2022,8 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="SetProgressionLevel" progression_name="perkDemolitionsExpert" level="4">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
-			</effect_group>	
-			<property name="AIPackages" value="NPCBasic, NPCRangedBasic"/> 
+			</effect_group>	-->
+			<property name="AIPackages" value="NPCBasicNoChat, NPCRangedBasic"/> 
 		</entity_class>	
 
 		<entity_class name="npcBMRocketLTemplate" extends="npcRocketLTemplate">
@@ -1874,106 +2047,65 @@
 		
 		<!--  NPC Animal templates  -->		
 		
-		<entity_class name="npcAnimalMeleeTemplate" >
-			<property name="HideInSpawnMenu" value="true"/>
-			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?ArcticFox_X"/>
-			<property name="EntityType" value="Player"/>
-			<property name="ModelType" value="Standard"/>
-			<property name="Mass" value="120"/>
-			<property name="Weight" value="70"/>
-			<property name="PushFactor" value="1"/>				
-			<property name="Tags" value="entity,npc,animal"/>			
-			<property name="Prefab" value="NPC"/>
-			<property name='Class' value='EntityAliveSDX, SCore' />
-			<property name="Parent" value="Enemies"/>
-			<property name="AvatarController" value="AvatarAnimalController"/> 
-			<property name="RotateToGround" value="false"/>
-			<property name="HasRagdoll" value="true"/> <!-- (A19 issue, still valid?) If there is really no ragdoll on your animals, This still must be set to true.  When both Ragdoll and Rootmotion is false, the entity will not animate attacks on dedicated servers (A19 issue, still valid?).  Set it to true even without a ragdoll, but dont use tags other than head, body and root -->
-			<property name="HasDeathAnim" value="true"/>
-			<property name="RootMotion" value="false"/>
-			<property name="RagdollOnDeathChance" value="0"/>
-			<property name="ExperienceGain" value="230"/>
-			<property name="Faction" value="whiteriver"/>
-			<property name="HandItem" value="meleeHandAnimalCoyote"/>
-			<property name="SurfaceCategory" value="organic"/>
-			<property name="AttackTimeoutDay" value="0.05"/>  <!-- 0.05 * 20f = 1 seconds between attack -->
-            <property name="AttackTimeoutNight" value="0.05"/>
-			<property name="NPCID" value="NPCAnimalGeneric"/>
-			<property name="IsEnemyEntity" value="false"/> 		
-			<property name="MoveSpeed" value=".3"/>
-			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
-			<property name="MoveSpeedPanic" value="1.2"/>
-			<property name="PainResistPerHit" value=".5"/>			
-			<property name="WalkType" value="7"/>
-			<property name="RightHandJointName" value="Head" />  	<!-- This is for spawned invisi weapons firing from under the head  -->			
-			<!--<property name="PathingBlocks" value="PathingCube" />   commented out in the template due to performance hit.  Enable in a specific entity as desired -->
-			<property name="AIPackages" value="NPCAnimalBasic, NPCMelee, NPCHired "/> <!-- Will make animal specific AI packages later -->
-			<property name="AIPathCostScale" value=".9, 1"/>
-			<property name="AINoiseSeekDist" value="20"/>	
-			<property name="MaxViewAngle" value="210"/>
-			<property name="SightRange" value="70"/>
-			<property name="JumpMaxDistance" value="3.0, 4.0"/>
-			<property name="SoundRandomTime" value="20.0"/>
-			<property name="SoundRandom" value="wolfroam"/>
-			<property name="SoundAlert" value="wolfalert"/>
-			<property name="SoundHurt" value="wolfpain"/>
-			<property name="SoundDeath" value="wolfdeath"/>
-			<property name="SoundAttack" value="wolfattack"/>
-			<property name="SoundSense" value="wolfsense"/>
-			<property name="SoundGiveUp" value="wolfgiveup"/>
-			<effect_group name="Base Effects">
-				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
-				<passive_effect name="HealthMax" operation="base_set" value="100"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
-				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
-				<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
-			</effect_group>	
-			<effect_group>
-				<passive_effect name="WalkSpeed" operation="base_set" value=".4"/>
-				<passive_effect name="RunSpeed" operation="base_set" value="1.0"/> 
-				<passive_effect name="HealthChangeOT" operation="base_set" value="0.1"/>  <!-- heal x point of (red) health / minute -->
-				<passive_effect name="DamageModifier" operation="perc_set" value="1"/>
-				<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="head"/>
-				<passive_effect name="DismemberChance" operation="base_set" value=".05"/> 
-				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
-				<passive_effect name="WaterMax" operation="base_set" value="100"/> 
-				<passive_effect name="CrouchSpeed" operation="base_set" value=".3"/> 
-				<passive_effect name="WalkSpeed" operation="base_set" value="0.35" tags="swimming"/>
-				<passive_effect name="RunSpeed" operation="base_set" value="0.35" tags="swimming"/>
-				<passive_effect name="Mobility" operation="base_set" value="1"/> 
-				<passive_effect name="JumpStrength" operation="base_set" value="0.16"/> 
-			</effect_group>
+		
+		<entity_class name="npcAnimalMeleeTemplate" extends="npcMeleeTemplate">
+            <property name="HideInSpawnMenu" value="true"/>    
+            <property name="SizeScale" value="1"/> 
+            <property name="Tags" value="entity,animal,npc,DRMid,perkAT03"/>
+            <property name="Faction" value="companionanimals"/>
+            <property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
+            <property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
+            <property name="HasRagdoll" value="true"/>
+            <property name="HasDeathAnim" value="true"/>
+            <property name="RootMotion" value="false"/>
+            <property name="PhysicsBody" value="REPLACE"/>
+            <property name="IsEntityAnimal" value="true"/> 
+            <property name="IsEnemyEntity" value="false"/>             
+            <property name="AvatarController" value="AvatarAnimalController"/> 
+            <property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?ArcticFox_X"/>
+            <property name="ExperienceGain" value="300"/>
+            <property name="DeadBodyHitPoints" value="200"/>
+            <property name="Mass" value="120"/>
+            <property name="Weight" value="80"/>            
+            <property name="LootListAlive" value="traderNPC"/>
+            <property name="HandItem" value="meleeHandAnimalCoyote"/>
+            <property name="SoundRandom" value="wolfroam"/>
+            <property name="SoundAlert" value="wolfalert"/>
+            <property name="SoundHurt" value="wolfpain"/>
+            <property name="SoundDeath" value="wolfdeath"/>
+            <property name="SoundAttack" value="wolfattack"/>
+            <property name="SoundSense" value="wolfsense"/>
+            <property name="SoundGiveUp" value="wolfgiveup"/>		
+			<property name="AIPackages" value="NPCAnimalCompanion, NPCMeleeCompanion, NPCHiredCompanion "/>
+            <property name="MaxViewAngle" value="360"/>
+            <property name="NPCID" value="NPCAnimalGeneric"/> 
+            <property class="Boundary" >
+                <property name="BoundaryBox" value=".2,.3,1.1" />
+                <property name="Center" value="0,0,0"/>
+            </property>
+            <property name="Names" value="Buster, Sally, Fluffy" />        
+            <property name="HireCurrency" value="foodRawMeat" />
+            <property name="HireCost" value="20" />
+            <property name="MoveSpeed" value=".3"/>
+            <property name="MoveSpeedAggro" value="1.5, 1.5"/> 
+            <property name="MoveSpeedPanic" value="1.5"/>
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
-			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
-			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
-			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
-			<property name="Immunity" value="sickness;disease;wellness"/>
-			<property name="LootListAlive" value="traderNPC"/>
-			<property name="TimeStayAfterDeath" value="300"/>
-			<property name="DeadBodyHitPoints" value="800"/>
-
-			<effect_group name="SelfMedicate Effects">
-				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value=".05"/>
-				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
-			</effect_group>		
-			<!--<effect_group name="ragtestforNREs">
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="ragtest"/>		
-			</effect_group>  Activate this if your testing ragdolls for NREs  -->				
-			<property name="ExperienceGain" value="400"/> 
-			<property name="LootDropProb" value="0"/> 
-			<!--<property name="MapIcon" value="ui_game_symbol_bullet_point"/> -->
-			<property name="Names" value="Buster, Sally, Fluffy" />		
-			<property name="HireCurrency" value="foodRawMeat" />
-			<property name="HireCost" value="10" />
-		</entity_class> 
+            <drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/>
+            <drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+            <drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+            <drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+            <drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+            <drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+            <drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+            <drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+            <effect_group name="NPCModAnimalBuffs">
+                <triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="other" buff="buffNPCModAttacking"/> 
+            </effect_group>    
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="400"/>
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+            </effect_group>    
+        </entity_class>    
 
 		<entity_class name="npcAnimalRangedTemplate" extends="npcAnimalMeleeTemplate">
 			<property name="HideInSpawnMenu" value="true"/>
@@ -1982,17 +2114,11 @@
 			<property name="MoveSpeed" value="0.3"/> 
 			<property name="MoveSpeedAggro" value="1.1,1.1"/> 
 			<property name="MoveSpeedPanic" value="1.1"/>
-			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/><!-- Placeholder, will eventually make animal specific AI packages  -->
+			<property name="AIPackages" value="NPCAnimalBasic, NPCRanged, NPCHired"/><!-- Placeholder, will eventually make animal specific AI packages  -->
 			<effect_group name="Base Effects">
-				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
 				<passive_effect name="HealthMax" operation="base_set" value="400"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
-				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
-				<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
-			</effect_group>	
+			</effect_group>		
 		</entity_class> 	
 
 		<entity_class name="npcAnimalHumanoidRigMeleeTemplate" extends="npcAnimalMeleeTemplate" > <!-- Yea, some animals can walk upright, so....  -->
@@ -2666,10 +2792,10 @@
 			<property name="MoveSpeedPanic" value="1.2"/>
 			<property name="PainResistPerHit" value=".5"/>			
 			<property name="WalkType" value="7"/>
-			<property name="RightHandJointName" value="RightHand" />  	
+			<property name="RightHandJointName" value="GunJoint" />  	
 			<property name="AIPathCostScale" value=".9, 1"/>
 			<property name="AINoiseSeekDist" value="20"/>
-			<property name="AIPackages" value="NPCBasic, NPCMelee, NPCHired"/>
+			<property name="AIPackages" value="NPCMechBasic, NPCMelee, NPCHired"/>
 			<!--<property name="AITask-1" value="ApproachAndAttackSDX, SCore" data="class=EntityAlive,0"/>
 			<property name="AITask-2" value="ApproachAndFollowTargetSDX, SCore" data="incentives=Leader"/>
 			<property name="AITask-3" value="Look"/>
@@ -2721,46 +2847,18 @@
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>	
 			<!--<property name="MapIcon" value="ui_game_symbol_bullet_point"/> -->
 			<property name="Names" value="KITT,HK-47,ED-209,Clank,Johnny5,Roboto,Marvin,Robbie,Rosie,HAL9000,GLaDOS,Bender" />		
-			<property name="HireCurrency" value="casinoCoin" />
-			<property name="HireCost" value="1000" />
+			<property name="HireCurrency" value="carBattery" />
+			<property name="HireCost" value="1" />
 		</entity_class> 
 
-		<entity_class name="NPCMechRangedTemplate" extends="npcRangedTemplate"> 	
-			<property name="AvatarController" value="AvatarAnimalControllerSDX, SCore"/> 
-			<property name='Class' value='EntityAliveSDX, SCore' />
-			<property name="Tags" value="entity,mech,ranged"/>
-			<property name="Faction" value="mechs"/>
-			<property name="HideInSpawnMenu" value="true"/>
-			<property name="SightRange" value="70"/>
-			<property name="LegCrippleScale" value="0"/>
-			<property name="RightHandJointName" value="Gunjoint" /> 
-			<property name="HandItem" value="gunNPCPistolHidden"/> 
-			<property name="AIPackages" value="NPCBasic, NPCRanged, NPCHired"/>
-			<!--<property name="AITask-1" value="RangedAttackTargetSDX, SCore" data="itemType=0;attackPeriod=10"/> 
-			<property name="AITask-2" value="ApproachAndAttackSDX, SCore" data="class=EntityAlive,0"/>
-			<property name="AITask-3" value="Look"/>	
-            <property name="AITask-4" value="ApproachAndFollowTargetSDX, SCore" data="incentives=Leader"/>
-            <property name="AITask-5" value="WanderSDX, SCore"/>
-			<property name="AITask-6" value="ApproachDistraction"/>
-			<property name="AITask-7" value="ApproachSpot"/> 
-			<property name="AITask-8" value="Territorial"/>
-            <property name="AITask-9" value="" />
-			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityAlive,80"/>
-			<property name="AITarget-2" value="SetAsTargetIfLeaderAttackedSDX, SCore" data="class=EntityAlive"/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAlive,80"/>
-			<property name="AITarget-4" value="SetAsTargetIfHurtSDX, SCore" data="class=EntityAlive"/>
-			<property name="AITarget-5" value=""/> -->
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPistolHidden,ammoNPC9mmBulletBall"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPistolHidden,ammoNPC9mmBulletBall"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPistolHidden,ammoNPC9mmBulletBall"/> 				
-		</entity_class>	
+
 
 	<!--  End Of Template Section  -->
 
 		<!--  Nurse  -->
 		
 		<entity_class name="npcNurseEmptyHand" extends="npcAdvancedEmptyHandTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp"/> <!-- cp tag means use the bonebased fire particle  -->
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -2801,7 +2899,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcNurseClub" extends="npcAdvancedClubTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp"/>
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -2839,7 +2937,7 @@
 		</entity_class>
 		
 		<entity_class name="npcNurseKnife" extends="npcAdvancedKnifeTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp"/>
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -2877,7 +2975,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcNurseAxe" extends="npcAdvancedAxeTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp"/>
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -2914,7 +3012,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcNurseSpear" extends="npcAdvancedSpearTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp"/>
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -2950,7 +3048,7 @@
 		</entity_class>			
 		
 		<entity_class name="npcNurseBat" extends="npcAdvancedBatTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp"/>
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="Titles" value="Batter,Smacker,Hitter" />
@@ -2989,7 +3087,7 @@
 		</entity_class>			
 		
 		<entity_class name="npcNurseMachete" extends="npcAdvancedMacheteTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,cp"/>
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -3026,7 +3124,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcNurseSMG" extends="npcAdvancedSMGTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancy_X"/> 
@@ -3064,7 +3162,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcNurseM60" extends="npcAdvancedM60Template"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -3101,7 +3199,7 @@
 		</entity_class>
 		
 		<entity_class name="npcNursePipePistol" extends="npcAdvancedPipePistolTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -3138,7 +3236,7 @@
 		</entity_class>			
 		
 		<entity_class name="npcNursePistol" extends="npcAdvancedPistolTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -3176,7 +3274,7 @@
 		
 		
 		<entity_class name="npcNurseDPistol" extends="npcAdvancedDPistolTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -3213,7 +3311,7 @@
 		</entity_class>	
 
 		<entity_class name="npcNursePipeMG" extends="npcAdvancedPipeMGTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -3250,7 +3348,7 @@
 		</entity_class>
 
 		<entity_class name="npcNurseAK47" extends="npcAdvancedAK47Template"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />
 			<property name="DanceType" value="2" />
@@ -3287,7 +3385,7 @@
 		</entity_class>
 		
 		<entity_class name="npcNurseTRifle" extends="npcAdvancedTRifleTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -3324,7 +3422,7 @@
 		</entity_class>	
 
 		<entity_class name="npcNursePipeRifle" extends="npcAdvancedPipeRifleTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -3363,7 +3461,7 @@
 		
 		
 		<entity_class name="npcNurseHRifle" extends="npcAdvancedHRifleTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -3401,7 +3499,7 @@
 		</entity_class>    		
 		
 		<entity_class name="npcNurseSRifle" extends="npcAdvancedSRifleTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -3439,7 +3537,7 @@
 		</entity_class> 
 		
 		<entity_class name="npcNursePipeShotgun" extends="npcAdvancedPipeShotgunTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />
 			<property name="DanceType" value="2" />
@@ -3476,7 +3574,7 @@
 		</entity_class> 		
 		
 		<entity_class name="npcNursePShotgun" extends="npcAdvancedPShotgunTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />
 			<property name="DanceType" value="2" />
@@ -3513,7 +3611,7 @@
 		</entity_class> 
 		
 		<entity_class name="npcNurseAShotgun" extends="npcAdvancedAShotgunTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />
 			<property name="DanceType" value="2" />
@@ -3550,7 +3648,7 @@
 		</entity_class> 		
 		
 		<entity_class name="npcNurseXBow" extends="npcAdvancedXBowTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -3587,7 +3685,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcNurseLBow" extends="npcAdvancedLBowTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -3624,7 +3722,7 @@
 		</entity_class> 
 		
 		<entity_class name="npcNurseRocketL" extends="npcAdvancedRocketLTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,cp"/>
+			<property name="Tags" value="entity,female,npc,ranged,cp,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
 			<property name="DanceType" value="2" />
@@ -3663,7 +3761,7 @@
 		<!--  w  -->	
 		
 		<entity_class name="npcHarleyEmptyHand" extends="npcEmptyHandTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3688,7 +3786,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcHarleyBMEmptyHand" extends="npcHarleyEmptyHand"> <!--  example of a bloodmoon version  -->
-			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Class" value="EntityEnemySDX, SCore" />
@@ -3722,7 +3820,7 @@
 		</entity_class>
 		
 		<entity_class name="npcHarleyKnife" extends="npcKnifeTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3747,7 +3845,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcHarleyBat" extends="npcBatTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3772,7 +3870,7 @@
 		</entity_class>			
 	
 		<entity_class name="npcHarleyMachete" extends="npcMacheteTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3798,7 +3896,7 @@
 
 
 		<entity_class name="npcHarleyAxe" extends="npcAxeTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3823,7 +3921,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcHarleySpear" extends="npcSpearTemplate"> 
-			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3848,7 +3946,7 @@
 		</entity_class>			
 		
 		<entity_class name="npcHarleyPipePistol" extends="npcPipePistolTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3873,7 +3971,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcHarleyPipeRifle" extends="npcPipeRifleTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3898,7 +3996,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcHarleyPipeMG" extends="npcPipeMGTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3923,7 +4021,7 @@
 		</entity_class>				
 		
 		<entity_class name="npcHarleyPipeShotgun" extends="npcPipeShotgunTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3948,7 +4046,7 @@
 		</entity_class>	
 
 		<entity_class name="npcHarleySMG" extends="npcSMGTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3973,7 +4071,7 @@
 		</entity_class>	
 		
 		<entity_class name="npcHarleyM60" extends="npcM60Template"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -3998,7 +4096,7 @@
 		</entity_class>			
 		
 		<entity_class name="npcHarleyPistol" extends="npcPistolTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -4023,7 +4121,7 @@
 		</entity_class>				
 		
 		<entity_class name="npcHarleyDPistol" extends="npcDPistolTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -4048,7 +4146,7 @@
 		</entity_class>				
 
 		<entity_class name="npcHarleyAK47" extends="npcAK47Template"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -4073,7 +4171,7 @@
 		</entity_class>
 		
 		<entity_class name="npcHarleyTRifle" extends="npcTRifleTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -4097,9 +4195,8 @@
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
 		</entity_class>		
 		
-		
 		<entity_class name="npcHarleyHRifle" extends="npcHRifleTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -4121,10 +4218,35 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
-        </entity_class>   
+		</entity_class>
+
+		<entity_class name="npcHarleySRifle" extends="npcSRifleTemplate">
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit,DRMid" />
+			<property name="Faction" value="bandits" />
+			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X" />
+			<property name="SoundHurt" value="HarleyHurt" />
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm" />
+			<property name="SoundDeath" value="HarleyDie" />
+			<property name="SoundStamina" value="Player_Female/player2stamina" />
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain" />
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface" />
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath" />
+			<property name="SoundJump" value="Player_Male/player2Jump" />
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft" />
+			<property name="SoundLandHard" value="Player_Male/player2LandHard" />
+			<property name="SoundPlayerLandThump" value="PlayerLandThump" />
+			<property name="SoundRandom" value="HarleyRandom" />
+			<property name="SoundRandomTime" value="60.0" />
+			<property name="SoundAlert" value="HarleyAlert" />
+			<property name="SoundAttack" value="HarleyAttack" />
+			<property name="SoundSense" value="HarleySense" />
+			<property name="LootDropProb" value="0.2" />
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular" />
+		</entity_class>
 
 		<entity_class name="npcHarleyPShotgun" extends="npcPShotgunTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -4149,7 +4271,7 @@
         </entity_class>   
 
 		<entity_class name="npcHarleyAShotgun" extends="npcAShotgunTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -4174,7 +4296,7 @@
         </entity_class>   	
 		
 		<entity_class name="npcHarleyLBow" extends="npcLBowTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -4199,7 +4321,7 @@
 		</entity_class> 
 
 		<entity_class name="npcHarleyXBow" extends="npcXBowTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -4223,7 +4345,7 @@
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>						
 		</entity_class>	
 		<entity_class name="npcHarleyRocketL" extends="npcRocketLTemplate"> 
-			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit"/>
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
@@ -4250,7 +4372,7 @@
 		<!--  Baker  -->
 
 		<entity_class name="npcBakerEmptyHand" extends="npcEmptyHandTemplate"> 
-			<property name="Tags" value="entity,male,npc,melee"/>
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
@@ -4262,166 +4384,166 @@
 			</effect_group>	
 		</entity_class>	
 
-		<entity_class name="npcBakerClub" extends="npcClubTemplate"> 
-			<property name="Tags" value="entity,male,npc,melee"/>
+		<entity_class name="npcBakerClub" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
 			<property name="Faction" value="whiteriver"/> 
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/>
 		</entity_class>
 		
-		<entity_class name="npcBakerKnife" extends="npcKnifeTemplate"> 
-			<property name="Tags" value="entity,male,npc,melee"/>
+		<entity_class name="npcBakerKnife" extends="npcAdvancedKnifeTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>	
 		
-		<entity_class name="npcBakerBat" extends="npcBatTemplate"> 
-			<property name="Tags" value="entity,male,npc,melee"/>
+		<entity_class name="npcBakerBat" extends="npcAdvancedBatTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>				
 		
-		<entity_class name="npcBakerMachete" extends="npcMacheteTemplate"> 
-			<property name="Tags" value="entity,male,npc,melee"/>
+		<entity_class name="npcBakerMachete" extends="npcAdvancedMacheteTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>	
 
-		<entity_class name="npcBakerAxe" extends="npcAxeTemplate"> 
-			<property name="Tags" value="entity,male,npc,melee"/>
+		<entity_class name="npcBakerAxe" extends="npcAdvancedAxeTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>				
 		
-		<entity_class name="npcBakerSpear" extends="npcSpearTemplate"> 
-			<property name="Tags" value="entity,male,npc,melee"/>
+		<entity_class name="npcBakerSpear" extends="npcAdvancedSpearTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>	
 		
-		<entity_class name="npcBakerPipePistol" extends="npcPipePistolTemplate"> 
-			<property name="Tags" value="entity,male,npc,ranged"/>
+		<entity_class name="npcBakerPipePistol" extends="npcAdvancedPipePistolTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>		
 		
-		<entity_class name="npcBakerPipeRifle" extends="npcPipeRifleTemplate"> 
-			<property name="Tags" value="entity,male,npc,ranged"/>
+		<entity_class name="npcBakerPipeRifle" extends="npcAdvancedPipeRifleTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>			
 		
-		<entity_class name="npcBakerPipeMG" extends="npcPipeMGTemplate"> 
-			<property name="Tags" value="entity,male,npc,ranged"/>
+		<entity_class name="npcBakerPipeMG" extends="npcAdvancedPipeMGTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>			
 		
-		<entity_class name="npcBakerPipeShotgun" extends="npcPipeShotgunTemplate"> 		
-			<property name="Tags" value="entity,male,npc,ranged"/>
+		<entity_class name="npcBakerPipeShotgun" extends="npcAdvancedPipeShotgunTemplate"> 		
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>			
 	
-		<entity_class name="npcBakerSMG" extends="npcSMGTemplate"> 
-			<property name="Tags" value="entity,male,npc,ranged"/>
+		<entity_class name="npcBakerSMG" extends="npcAdvancedSMGTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>	
 		
-		<entity_class name="npcBakerM60" extends="npcM60Template"> 
-			<property name="Tags" value="entity,male,npc,ranged"/>
+		<entity_class name="npcBakerM60" extends="npcAdvancedM60Template"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>	
 
-		<entity_class name="npcBakerPistol" extends="npcPistolTemplate"> 
-			<property name="Tags" value="entity,male,npc,ranged"/>
+		<entity_class name="npcBakerPistol" extends="npcAdvancedPistolTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
 			<property name="Faction" value="whiteriver"/> 
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>				
 		
-		<entity_class name="npcBakerDPistol" extends="npcDPistolTemplate"> 
-			<property name="Tags" value="entity,male,npc,ranged"/>
+		<entity_class name="npcBakerDPistol" extends="npcAdvancedDPistolTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>	
 		
-		<entity_class name="npcBakerAK47" extends="npcAK47Template"> 
-			<property name="Tags" value="entity,male,npc,ranged"/>
+		<entity_class name="npcBakerAK47" extends="npcAdvancedAK47Template"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>
 		
-		<entity_class name="npcBakerTRifle" extends="npcTRifleTemplate"> 
-			<property name="Tags" value="entity,male,npc,ranged"/>
+		<entity_class name="npcBakerTRifle" extends="npcAdvancedTRifleTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>		
 		
-		<entity_class name="npcBakerHRifle" extends="npcHRifleTemplate"> 
-            <property name="Tags" value="entity,male,npc,ranged"/>
+		<entity_class name="npcBakerHRifle" extends="npcAdvancedHRifleTemplate"> 
+            <property name="Tags" value="entity,male,npc,ranged,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
         </entity_class>    		
 		
-		<entity_class name="npcBakerSRifle" extends="npcSRifleTemplate"> 
-            <property name="Tags" value="entity,male,npc,ranged"/>
+		<entity_class name="npcBakerSRifle" extends="npcAdvancedSRifleTemplate"> 
+            <property name="Tags" value="entity,male,npc,ranged,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
         </entity_class>  
 		
-		<entity_class name="npcBakerPShotgun" extends="npcPShotgunTemplate"> 
-			<property name="Tags" value="entity,male,npc,ranged"/>
+		<entity_class name="npcBakerPShotgun" extends="npcAdvancedPShotgunTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>
  		
-		<entity_class name="npcBakerAShotgun" extends="npcAShotgunTemplate"> 
-			<property name="Tags" value="entity,male,npc,ranged"/>
+		<entity_class name="npcBakerAShotgun" extends="npcAdvancedAShotgunTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class> 			
 
-		<entity_class name="npcBakerLBow" extends="npcLBowTemplate"> 
-			<property name="Tags" value="entity,male,npc,ranged"/>
+		<entity_class name="npcBakerLBow" extends="npcAdvancedLBowTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class> 		
 		
-		<entity_class name="npcBakerXBow" extends="npcXBowTemplate"> 
-			<property name="Tags" value="entity,male,npc,ranged"/>
+		<entity_class name="npcBakerXBow" extends="npcAdvancedXBowTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />				
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>	 
 		
-		<entity_class name="npcBakerRocketL" extends="npcRocketLTemplate"> 
-			<property name="Tags" value="entity,male,npc,ranged"/>
+		<entity_class name="npcBakerRocketL" extends="npcAdvancedRocketLTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />	
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
-		</entity_class> 					
+		</entity_class> 	
 		
 		<!--  SemiHuman Saveable Quest characters  WIP -->
 
@@ -4465,22 +4587,39 @@
 			<property name="TimeStayAfterDeath" value="300"/>
 			<property name="LootListOnDeath" value="banditLoot"/> <!-- bandit loot, total crap -->
 			<property name="Faction" value="none"/>
-		</entity_class>		
+		</entity_class>	
+
+		<entity_class name="BackpackNPC">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack_droppedPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityBackpackNPC, SCore"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="TimeStayAfterDeath" value="3600"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="LootListOnDeath" value="playerBackpack"/>
+			<property name="Faction" value="none"/>
+			<property name="NavObject" value="backpack" />
+		</entity_class>
+
 		
 		<!--  NPC and Dumb animals  -->	
 		<entity_class name="npcAnimalFox" extends="npcAnimalMeleeTemplate">
-			<property name="Tags" value="entity,animal,npc,npcAnimalFox,perkAT03"/>
+			<property name="Tags" value="entity,animal,npc,npcAnimalFox,perkAT03,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="HasRagdoll" value="true"/>
 			<property name="HasDeathAnim" value="true"/>
 			<property name="RootMotion" value="false"/>
+			<property name="Faction" value="companionanimals"/>	
 			<property name="PhysicsBody" value="ArcticFox"/>
 			<property name="IsEntityAnimal" value="true"/> 
 			<property name="IsEnemyEntity" value="false"/> 			
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?ArcticFox_X"/>
 			<property name="HandItem" value="meleeHandAnimalFox"/>
+			<property name="RightHandJointName" value="articfox_Head_bone" />
 			<property name="ExperienceGain" value="300"/>
 			<property name="DeadBodyHitPoints" value="200"/>
 			<property name="SizeScale" value="1.3"/> 
@@ -4495,6 +4634,11 @@
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<property name="AIPackages" value="NPCAnimalCompanion, NPCMeleeCompanion, NPCHiredCompanion, NPCLoot "/> 
+			<property class="Boundary" >
+                <property name="BoundaryBox" value=".2,.3,1.1" />
+                <property name="Center" value="0,0,0"/>
+            </property>
 		</entity_class>	
 		
 		<entity_class name="animalFox" extends="animalTemplateHostileWalking">
