@@ -1,0 +1,333 @@
+<configs>
+
+	<append xpath="/entity_classes">		
+<!-- Melee and Ranged templates -->
+		
+		<entity_class name="NPCMechDrone" extends="NPCMechMeleeTemplate">
+			<property name="Mesh" value="#@modfolder:Resources/XythMechs.unity3d?Drone_X"/>	<!-- Free CC model by Willy Decarpentrie -->
+			<property name="Tags" value="entity,cp,mech,npc,floating"/>			
+			<property name="Faction" value="mechs"/>
+			<property name="HandItem" value="handDrone"/>
+			<property name="LookAtAngle" value="0"/> 
+			<property name="HireCurrency" value="carBattery" />
+			<property name="HireCost" value="2" />
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>	
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="60" />
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="NPCMechRustyDrone" extends="NPCMechDrone" >
+			<property name="Tags" value="entity,cp,mech,npc,floating"/>
+			<property name="Faction" value="mechs"/>		
+		    <property name="ReplaceMaterial0" value="#@modfolder:Resources/RustyDroidMat.unity3d?RustyDroid"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>		
+		</entity_class>
+			
+		<entity_class name="NPCMechRobot" extends="NPCMechMeleeTemplate" >
+			<property name="Mesh" value="#@modfolder:Resources/XythMechs.unity3d?Robot_X" /> <!-- Free CC model by Willy Decarpentrie -->
+			<property name="Tags" value="entity,cp,mech,npc"/>
+			<property name="PhysicsBody" value="RobotRig"/>
+			<property name="LookAtAngle" value="0"/> 
+			<property name="Faction" value="mechs"/>
+			<property name="HandItem" value="handRobot"/>
+			<property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="RobotRandom" />
+			<property name="SoundAlert" value="RobotAlert" />
+			<property name="SoundAttack" value="RobotAttack" />
+			<property name="SoundDeath" value="RobotDie" />
+			<property name="SoundHurt" value="RobotRandom" />
+			<property name="SoundSense" value="RobotSense" /> 
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="300"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="60" />
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+		</entity_class>
+		<entity_class name="NPCMechRangedRobot" extends="npcPistolTemplate" >
+			<property name="Mesh" value="#@modfolder:Resources/XythMechs.unity3d?RobotRanged_X" /> <!-- Free CC model by Willy Decarpentrie -->
+			<property name="Tags" value="entity,cp,mech,ranged,npc"/>
+			<property name="PhysicsBody" value="RobotRig"/>
+			<property name="Faction" value="mechs"/>
+			<property name="HandItem" value="gunNPCPistol"/>
+			<property name="RightHandJointName" value="Gunjoint" />
+			<property name="LookAtAngle" value="0"/> 
+			<!--<property name="AvatarController" value="AvatarAnimalControllerSDX, SCore"/> -->
+			<!--<property name='Class' value='EntityAliveSDX, SCore' /> -->
+			<property name="RootMotion" value="false"/> 
+			<property name="ParticleOnDeath" value="blood_death"/>
+			<property name="SurfaceCategory" value="metal"/> 
+			<property name="AIPackages" value="NPCMechBasic, NPCMechRangedBasic"/> 
+			<property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="RobotRandom" />
+			<property name="SoundAlert" value="RobotAlert" />
+			<property name="SoundAttack" value="RobotAttack" />
+			<property name="SoundDeath" value="RobotDie" />
+			<property name="SoundHurt" value="RobotRandom" />
+			<property name="SoundSense" value="RobotSense" /> 
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="300"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="60" />
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPistolHidden,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPistolHidden,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPistolHidden,ammoNPC9mmBulletBall"/> 		
+		</entity_class>		
+		<entity_class name="NPCMechRobotArmy" extends="NPCMechRobot" >
+			<property name="Mesh" value="#@modfolder:Resources/XythMechs.unity3d?Robot_X" />
+			<property name="Tags" value="entity,cp,mech,npc"/>
+			<property name="Faction" value="mechs"/>		
+			<property name="HandItem" value="gunNPCPistol"/>
+			<property name="HireCurrency" value="carBattery" />
+			<property name="HireCost" value="2" />
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>						
+		    <property name="ReplaceMaterial0" value="#@modfolder:Resources/RobotArmyMat.unity3d?metal_albedo"/>
+		    <property name="ReplaceMaterial1" value="#@modfolder:Resources/RobotArmyMat.unity3d?paint_albedo"/>
+			<property name="ReplaceMaterial2" value="#@modfolder:Resources/RobotArmyMat.unity3d?rubber_albedo"/>
+		</entity_class>					
+		<entity_class name="NPCMechSphereI" extends="NPCMechMeleeTemplate" >
+			<property name="Mesh" value="#@modfolder:Resources/XythMechs.unity3d?SphereI_X" />	<!-- Free CC model by 3DHaupt -->
+			<property name="DeadBodyHitPoints" value="1000"/> 
+			<property name="HandItem" value="handSphereII"/> 
+			<property name="Tags" value="entity,cp,mech,knockdown"/>
+			<property name="Faction" value="mechs"/>	
+			<property name="LookAtAngle" value="0"/> 
+			<property name="HireCurrency" value="carBattery" />
+			<property name="HireCost" value="2" />
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="500"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="60" />
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+		</entity_class> 
+		
+		<entity_class name="NPCMechSphereII" extends="NPCMechSphereI" >
+			<property name="Mesh" value="#@modfolder:Resources/XythMechs.unity3d?SphereII_X" />
+			<property name="DeadBodyHitPoints" value="1000"/> 
+			<property name="Tags" value="entity,cp,mech,npc,knockdown"/>	
+			<property name="Faction" value="mechs"/>		
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="500"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="60" />
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
+		</entity_class> 
+		
+		<entity_class name="NPCMechBee" extends="NPCMechMeleeTemplate" >
+			<property name="Class" value="EntityHornet"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythMechs.unity3d?Mecbee_X" /> <!--  Free CC model but cant find attribution yet  -->
+			<property name="Tags" value="entity,cp,mech,npc,floating"/>
+			<property name="Faction" value="mechs"/>
+			<property name="LookAtAngle" value="0"/> 
+			<property name="PushFactor" value="0"/>		
+			<property name="Mass" value="30"/>
+			<property name="Weight" value="70"/>
+			<property name="HandItem" value="handMecBee"/>
+			<property name="AIPathCostScale" value=".9, 1"/>
+			<property name="SightRange" value="70"/>
+			<property name="MoveSpeed" value="1"/>
+			<property name="MoveSpeedAggro" value="2.1, 2.1"/> <!-- Used when player in vehicle -->
+			<property name="MaxTurnSpeed" value="190"/>
+			<property name="DeadBodyHitPoints" value="100"/>
+			<property name="SizeScale" value="1.0"/>
+			<property name="LootListAlive" value=""/> <!-- removing these two properties removes the E when alive and on death but disables the inventory  -->	
+			<property name="NPCID" value=""/> 
+			<property name="TimeStayAfterDeath" value="5"/>
+			<!--<property name="AIPackages" value="NPCMechBasic, NPCMeleeBasic"/> -->
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="1"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="3"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="3"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="2"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="50"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+		</entity_class> 
+		
+		<entity_class name="NPCMechBeeVomit" extends="NPCMechBee" >
+			<property name="HideInSpawnMenu" value="false"/> <!-- needs work, not meleeing  -->
+			<property name="Class" value="EntityVulture"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythMechs.unity3d?Mecbee_X" />
+			<property name="Tags" value="entity,cp,mech,npc,floating"/>
+			<property name="Faction" value="mechs"/>
+			<property name="LookAtAngle" value="0"/> 
+			<property name="HandItem" value="HandMecVomit"/>
+			<property name="SizeScale" value="1.0"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="1"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="3"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="3"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="2"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="30"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+		</entity_class> 
+	
+		<entity_class name="NPCMechGunBot" extends="NPCMechRangedRobot" >
+			<property name="Mesh" value="#@modfolder:Resources/XythMechs.unity3d?GunBot_X" /> <!-- Free CC model by Willy Decarpentrie -->
+			<property name="Tags" value="entity,cp,mech,ranged,npc,knockdown"/>
+			<property name="Faction" value="mechs"/>
+			<property name="HandItem" value="handSphereII"/> 
+			<property name="LookAtAngle" value="0"/> 
+			<property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="RobotRandom" />
+			<property name="SoundAlert" value="RobotAlert" />
+			<property name="SoundAttack" value="RobotAttack" />
+			<property name="SoundDeath" value="RobotDie" />
+			<property name="SoundHurt" value="RobotRandom" />
+			<property name="SoundSense" value="RobotSense" /> 
+			<property name="RightHandJointName" value="Gunjoint" /> 
+			<property name="HireCurrency" value="carBattery" />
+			<property name="HireCost" value="3" />
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="500"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="60" />
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPistolHidden,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPistolHidden,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPistolHidden,ammoNPC9mmBulletBall"/> 		
+		</entity_class>	
+		
+		<entity_class name="NPCMechFlyingRangedTemplate" > 	
+			<property name="Mesh" value="#@modfolder:Resources/XythMechs.unity3d?Drone_X"/>	
+			<property name="AvatarController" value="AvatarAnimalControllerSDX, SCore"/> 
+			<property name="Class" value="EntityHornet"/>
+			<property name="Tags" value="allowEAI,entity,cp,mech,npc"/>
+			<property name="Faction" value="mechs"/>		
+			<property name="AIPathCostScale" value=".9, 1"/>
+			<property name="HideInSpawnMenu" value="false"/> <!--  Needs work, dont use yet -->
+			<property name="ModelType" value="Standard"/>
+			<property name="Prefab" value="NPC"/>
+			<property name="Parent" value="Animals"/>
+			<property name="EntityType" value="Animal"/>
+			<property name="PhysicsBody" value="bear"/>
+			<property name="HasRagdoll" value="false"/>
+			<property name="Weight" value="300"/>
+			<property name="IsEnemyEntity" value="true"/>
+			<property name="MaxViewAngle" value="230"/>
+			<property name="SightLightThreshold" value="-2,150"/>
+			<property name="PainResistPerHit" value=".6"/>
+			<property name="MaxTurnSpeed" value="280"/>
+			<property name="MoveSpeed" value=".3"/>
+			<property name="MoveSpeedAggro" value="1.15, 1.2"/>
+			<property name="MoveSpeedRand" value="-.2, .2"/>
+			<property name="MoveSpeedPanic" value="1.5"/>
+			<property name="SwimSpeed" value="1.2"/>
+			<property name="SwimStrokeRate" value="1.1,1.5"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="NavObject" value="twitch_spawn,twitch_spawn_other,animaltracking_hostile,clear_sleeper" />
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="ExperienceGain" value="400"/>
+			<property name="DeadBodyHitPoints" value="350"/>	
+			<property name="SightRange" value="70"/>
+			<property name="RootMotion" value="false"/>
+			<property name="SurfaceCategory" value="metal"/> 
+			<property name="LegCrippleScale" value="0"/>
+			<property name="AttackTimeoutDay" value=".25"/>
+			<property name="AttackTimeoutNight" value=".25"/>
+			<property name="RightHandJointName" value="WristRight" /> 
+			<property name="HandItem" value="gunNPCPistolHiddenFlying"/> 
+			<property name="AITask-1" value="RangedAttackTargetSDX, SCore" data="itemType=1;attackPeriod=10"/>
+			<property name="AITask-2" value="RangedAttackTargetSDX, SCore" data="itemType=0;attackPeriod=10"/>
+			<property name="AITask-3" value="" />
+			<property name="AITarget-1" value="RangedAttackTargetSDX, SCore" data="itemType=1;attackPeriod=10"/> 
+			<property name="AITarget-2" value="SetAsTargetIfHurt" data="class=EntityAlive"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityNPC,0,0"/> 
+			<property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="RobotRandom" />
+			<property name="SoundAlert" value="RobotAlert" />
+			<property name="SoundAttack" value="RobotAttack" />
+			<property name="SoundDeath" value="RobotDie" />
+			<property name="SoundHurt" value="RobotRandom" />
+			<property name="SoundSense" value="RobotSense" /> 
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="300"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="60" />
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunNPCPistolHiddenFlying,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunNPCPistolHiddenFlying,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunNPCPistolHiddenFlying,ammoNPC9mmBulletBall"/> 
+		</entity_class>	
+		
+		
+<!-- Loot drop containers  -->
+		
+<!--		<entity_class name="EntityLootContainerMechNPC"> 
+			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="74"/> 
+			<property name="Faction" value="none"/>
+		</entity_class> -->
+
+	</append>
+	
+	
+</configs>

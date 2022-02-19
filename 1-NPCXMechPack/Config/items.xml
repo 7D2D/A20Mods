@@ -1,0 +1,176 @@
+<configs>
+	<append xpath="/items">
+	
+		<item name="MechEntityLoadingHack">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/XythMechs.unity3d?Drone_X"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/XythMechs.unity3d?Drone_X"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> <!-- STK resource -->
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>
+		
+		<item name="meleeHandMechTemplate">
+			<property name="Extends" value="meleeNPCEmptyHand"/>
+			<property name="CreativeMode" value="None"/>
+			<!--<property name="HoldType" value="2"/> --> <!-- 35  -->
+			<property class="Action0">
+				<property name="Delay" value=".6"/> <!-- obsolete if rounds per minute exists -->
+				<property name="Range" value="1.65"/>
+				<property name="DamageEntity" value="25"/>
+				<property name="DamageBlock" value="50"/>
+			</property>
+			<effect_group name="meleeHandMechTemplate" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="3" tags="earth"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+					weights=".11,.07,.07,.05,.29,.36,.11"/>
+			</effect_group>
+		</item>		
+		<item name="handSphereII">
+			<property name="Extends" value="meleeHandMechTemplate"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="Delay" value=".6"/> 
+				<property name="Range" value="2.5"/>
+				<property name="DamageEntity" value="35"/>
+				<property name="DamageBlock" value="65"/>
+			</property>
+			<effect_group name="meleeHandMechTemplate" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="3" tags="earth"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+					weights=".11,.07,.07,.05,.29,.36,.11"/>
+			</effect_group>
+		</item>
+		<item name="handDrone">
+			<property name="Extends" value="meleeHandMechTemplate"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="Delay" value=".6"/> 
+				<property name="Range" value="2.0"/>
+				<property name="DamageEntity" value="15"/>
+				<property name="DamageBlock" value="40"/>
+			</property>	
+			<effect_group name="meleeHandMechTemplate" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="3" tags="earth"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+					weights=".11,.07,.07,.05,.29,.36,.11"/>
+			</effect_group>			
+		</item>		
+		<item name="handRobot">
+			<property name="Extends" value="meleeHandMechTemplate"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="Delay" value=".6"/> 
+				<property name="Range" value="2.0"/>
+				<property name="DamageEntity" value="25"/>
+				<property name="DamageBlock" value="45"/>
+			</property>	
+			<effect_group name="meleeHandMechTemplate" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="3" tags="earth"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+					weights=".11,.07,.07,.05,.29,.36,.11"/>
+			</effect_group>			
+		</item>	
+		<item name="handRobotArmy">
+			<property name="Extends" value="meleeHandMechTemplate"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="Delay" value=".6"/> 
+				<property name="Range" value="1.65"/>
+				<property name="DamageEntity" value="40"/>
+				<property name="DamageBlock" value="80"/>
+			</property>	
+			<effect_group name="meleeHandMechTemplate" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="3" tags="earth"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+					weights=".11,.07,.07,.05,.29,.36,.11"/>
+			</effect_group>			
+		</item>			
+		<item name="handMecBee">
+			<property name="Extends" value="meleeHandMechTemplate"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="Delay" value=".6"/> 
+				<property name="Range" value="1.65"/>
+				<property name="Sphere" value="1.2"/>
+				<property name="DamageEntity" value="5"/>
+				<property name="DamageBlock" value="20"/>
+			</property>
+			<effect_group name="meleeHandMechTemplate" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="3" tags="earth"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+					weights=".11,.07,.07,.05,.29,.36,.11"/>
+			</effect_group>			
+		</item>	
+		
+		<item name="HandMecVomit">
+			<property name="Extends" value="handMecBee"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action1">
+				<property name="Class" value="Vomit"/>
+				<property name="Hitmask_override" value="Arrow"/>
+				<property name="Delay" value=".5"/>
+				<property name="Infinite_ammo" value="true"/>
+				<property name="Magazine_items" value="ammoProjectileVomit"/>
+				<property name="Sound_warning" value="vulturevomitwarning"/>
+				<property name="Sound_start" value="vulturevomitattack"/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value=""/>
+				<property name="Sound_reload" value=""/>
+			</property>
+			<effect_group name="meleeHandAnimalZombieVulture" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="1"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="2"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="6"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="15"/>
+				<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
+				<passive_effect name="MaxRange" operation="base_set" value="50"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+					weights=".11,.07,.05,.29,.36,.11"/>
+			</effect_group>
+		</item>
+
+		<item name="ammoProjectileVomit">
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Vomit/vomitBulbPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action1">
+				<property name="Class" value="Projectile"/>
+				<property name="DamageEntity" value="15"/>
+				<property name="DamageBlock" value="20"/>
+				<property name="Explosion.ParticleIndex" value="7"/>
+				<property name="Velocity" value="13"/>
+				<property name="FlyTime" value="6"/>
+				<property name="LifeTime" value="8"/>
+				<property name="CollisionRadius" value=".5"/>
+			</property>
+			<effect_group name="ammoProjectileVultureVomit" tiered="false">
+				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
+			</effect_group>
+		</item>		
+	</append>
+</configs>

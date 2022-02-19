@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <ModInfo>
+    <Name value="1-NPCXMechPack" />
+    <Description value="Extends NPCMod with Mechs" />
+    <Author value="Xyth" />
+     <Version value="20.2.0.1" />
+    <Website value="" />
+  </ModInfo>
+ </xml>

@@ -1,0 +1,61 @@
+<configs>
+
+	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombiesAll')]">
+		<entity name="NPCMechDrone" prob=".1" />
+		<entity name="NPCMechRustyDrone" prob=".1" />
+		<entity name="NPCMechRobot" prob=".1" />
+		<entity name="NPCMechRobotArmy" prob=".1" />		
+		<entity name="NPCMechSphereI" prob=".1" />
+		<entity name="NPCMechSphereII" prob=".1" />
+		<entity name="NPCMechBee" prob=".1" />
+		<entity name="NPCMechGunBot" prob=".1" />
+	</append> 
+	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombiesNight')]">
+		<entity name="NPCMechDrone" prob=".3" />
+		<entity name="NPCMechRustyDrone" prob=".3" />
+		<entity name="NPCMechRobot" prob=".3" />
+		<entity name="NPCMechRobotArmy" prob=".3" />		
+		<entity name="NPCMechSphereI" prob=".3" />
+		<entity name="NPCMechSphereII" prob=".3" />
+		<entity name="NPCMechBee" prob=".1" />
+		<entity name="NPCMechGunBot" prob=".1" />
+	</append> 
+	
+	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'npcMech')]">
+		<entity name="NPCMechDrone" prob=".03" />
+		<entity name="NPCMechRustyDrone" prob=".03" />
+		<entity name="NPCMechRobot" prob=".03" />
+		<entity name="NPCMechRobotArmy" prob=".03" />		
+		<entity name="NPCMechSphereI" prob=".03" />
+		<entity name="NPCMechSphereII" prob=".03" />
+		<entity name="NPCMechGunBot" prob=".03" />
+	</append>
+	
+	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'npcEnemyAll')]">
+		<entity name="NPCMechDrone" prob=".3" />
+		<entity name="NPCMechRustyDrone" prob=".3" />
+		<entity name="NPCMechRobot" prob=".3" />
+		<entity name="NPCMechRobotArmy" prob=".3" />		
+		<entity name="NPCMechSphereI" prob=".3" />
+		<entity name="NPCMechSphereII" prob=".3" />
+		<entity name="NPCMechGunBot" prob=".15" />
+		<entity name="NPCMechRangedRobot" prob=".15" />
+	</append>	
+	
+	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'npcEnemyMelee')]">
+		<entity name="NPCMechDrone" prob=".3" />
+		<entity name="NPCMechRustyDrone" prob=".3" />
+		<entity name="NPCMechRobot" prob=".3" />
+		<entity name="NPCMechRobotArmy" prob=".3" />		
+		<entity name="NPCMechSphereI" prob=".3" />
+		<entity name="NPCMechSphereII" prob=".3" />
+	</append>	
+
+	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'npcEnemyRanged')]">
+		<entity name="NPCMechRangedRobot" prob=".3" />
+		<entity name="NPCMechGunBot" prob=".3" />
+	</append>		
+	
+	
+
+</configs>

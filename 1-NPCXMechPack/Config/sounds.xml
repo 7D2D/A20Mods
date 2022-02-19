@@ -1,0 +1,130 @@
+<configs>
+	<append xpath="/Sounds">
+		<SoundDataNode name="DroneRandom">
+			<AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+			<Channel name="Mouth"/>
+			<Priority name="3"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<Channel name="Mouth"/>
+		    <Priority name="3"/>
+		    <maxVoicesPerEntity value="1"/>
+	  	    <LowestPitch name="0.95"/>
+		    <HighestPitch name="1.05"/>
+		    <LocalCrouchVolumeScale value="1.0"/>
+		    <CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="3"/>
+			<AudioClip ClipName="#@modfolder:/Resources/DroneSounds.unity3d?Idle1" />
+			<AudioClip ClipName="#@modfolder:/Resources/DroneSounds.unity3d?Idle2" />
+			<AudioClip ClipName="#@modfolder:/Resources/DroneSounds.unity3d?Idle3" />
+			<AudioClip ClipName="#@modfolder:/Resources/DroneSounds.unity3d?Idle4" />
+			<AudioClip ClipName="#@modfolder:/Resources/DroneSounds.unity3d?Idle5" />
+		</SoundDataNode>
+		<SoundDataNode name="DroneDie">
+			<AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+			<Channel name="Mouth"/>
+			<Priority name="3"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<Channel name="Mouth"/>
+		    <Priority name="3"/>
+		    <maxVoicesPerEntity value="1"/>
+	  	    <LowestPitch name="0.95"/>
+		    <HighestPitch name="1.05"/>
+		    <LocalCrouchVolumeScale value="1.0"/>
+		    <CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="3"/>
+			<AudioClip ClipName="#@modfolder:/Resources/DroneSounds.unity3d?Die" />
+		</SoundDataNode>
+		<SoundDataNode name="RobotRandom">
+			<AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+			<Channel name="Mouth"/>
+			<Priority name="3"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<Channel name="Mouth"/>
+		    <Priority name="3"/>
+		    <maxVoicesPerEntity value="1"/>
+	  	    <LowestPitch name="0.95"/>
+		    <HighestPitch name="1.05"/>
+		    <LocalCrouchVolumeScale value="1.0"/>
+		    <CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="3"/>
+			<AudioClip ClipName="#@modfolder:/Resources/RobotSounds.unity3d?Idle1" />
+			<AudioClip ClipName="#@modfolder:/Resources/RobotSounds.unity3d?Idle2" />
+		</SoundDataNode>
+		<SoundDataNode name="RobotDie">
+			<AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+			<Channel name="Mouth"/>
+			<Priority name="3"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<Channel name="Mouth"/>
+		    <Priority name="3"/>
+		    <maxVoicesPerEntity value="1"/>
+	  	    <LowestPitch name="0.95"/>
+		    <HighestPitch name="1.05"/>
+		    <LocalCrouchVolumeScale value="1.0"/>
+		    <CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="3"/>
+			<AudioClip ClipName="#@modfolder:/Resources/RobotSounds.unity3d?Die" />
+		</SoundDataNode>
+		<SoundDataNode name="RobotAlert">
+			<AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+			<Channel name="Mouth"/>
+			<Priority name="3"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<Channel name="Mouth"/>
+		    <Priority name="3"/>
+		    <maxVoicesPerEntity value="1"/>
+	  	    <LowestPitch name="0.95"/>
+		    <HighestPitch name="1.05"/>
+		    <LocalCrouchVolumeScale value="1.0"/>
+		    <CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="3"/>
+			<AudioClip ClipName="#@modfolder:/Resources/RobotSounds.unity3d?Danger" />
+			<AudioClip ClipName="#@modfolder:/Resources/RobotSounds.unity3d?Emergency" />
+			<AudioClip ClipName="#@modfolder:/Resources/RobotSounds.unity3d?Redalert" />
+		</SoundDataNode>
+		<SoundDataNode name="RobotSense">
+			<AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+			<Channel name="Mouth"/>
+			<Priority name="3"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<Channel name="Mouth"/>
+		    <Priority name="3"/>
+		    <maxVoicesPerEntity value="1"/>
+	  	    <LowestPitch name="0.95"/>
+		    <HighestPitch name="1.05"/>
+		    <LocalCrouchVolumeScale value="1.0"/>
+		    <CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="3"/>
+			<AudioClip ClipName="#@modfolder:/Resources/RobotSounds.unity3d?Warning" />
+		</SoundDataNode>
+		<SoundDataNode name="RobotAttack">
+			<AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+			<Channel name="Mouth"/>
+			<Priority name="3"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<Channel name="Mouth"/>
+		    <Priority name="3"/>
+		    <maxVoicesPerEntity value="1"/>
+	  	    <LowestPitch name="0.95"/>
+		    <HighestPitch name="1.05"/>
+		    <LocalCrouchVolumeScale value="1.0"/>
+		    <CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="3"/>
+			<AudioClip ClipName="#@modfolder:/Resources/RobotSounds.unity3d?Attack" />
+		</SoundDataNode>		
+	</append>
+</configs>
