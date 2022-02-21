@@ -1906,7 +1906,7 @@
 			</property>			
 			<property class="Action1">
 				<property name="Class" value="Ranged"/>
-				<property name="Magazine_items" value="ammoNPC762mmBulletAP"/>
+				<property name="Magazine_items" value="ammoNPC762mmBulletBall"/>
 				<property name="Reload_time" value="0"/>
 				<property name="Infinite_ammo" value="true" />
 				<property name="Single_magazine_usage" value="false"/>
