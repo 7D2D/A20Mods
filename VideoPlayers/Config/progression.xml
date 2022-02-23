@@ -1,0 +1,4 @@
+<progression>
+	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='3,5']/@tags">,VideoTV,TVWall,TheaterScreen,BillboardVideoMP4,Billboard01
+	</append>
+</progression>
