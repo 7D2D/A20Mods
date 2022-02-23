@@ -1,0 +1,55 @@
+<configs>
+	<append xpath="/recipes" >
+		<recipe name="VideoTV" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
+			<ingredient name="resourceMechanicalParts" count="10"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="switch" count="1"/>
+			<ingredient name="speaker" count="1"/>
+			<ingredient name="glassBusinessPlateCurved" count="1"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceElectricParts,resourceMechanicalParts"/>
+			</effect_group>
+		</recipe>
+		
+		<recipe name="TVWall" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
+			<ingredient name="resourceMechanicalParts" count="10"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="switch" count="1"/>
+			<ingredient name="speaker" count="1"/>
+			<ingredient name="glassBusinessPlateCurved" count="1"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceElectricParts,resourceMechanicalParts"/>
+			</effect_group>
+		</recipe>
+		
+		<recipe name="TheaterScreen" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
+			<ingredient name="resourceMechanicalParts" count="20"/>
+			<ingredient name="resourceElectricParts" count="20"/>
+			<ingredient name="switch" count="1"/>
+			<ingredient name="speaker" count="2"/>
+			<ingredient name="glassBusinessSheet" count="10"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceElectricParts,resourceMechanicalParts,glassBusinessSheet"/>
+			</effect_group>
+		</recipe>
+		
+		<recipe name="BillboardVideoMP4" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
+			<ingredient name="resourceMechanicalParts" count="20"/>
+			<ingredient name="resourceElectricParts" count="20"/>
+			<ingredient name="switch" count="1"/>
+			<ingredient name="speaker" count="2"/>
+			<ingredient name="glassBusinessSheet" count="10"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceElectricParts,resourceMechanicalParts,glassBusinessSheet"/>
+			</effect_group>
+		</recipe>
+		
+		<recipe name="Billboard01" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
+			<ingredient name="resourceMechanicalParts" count="10"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+		</recipe>	
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceElectricParts,resourceMechanicalParts"/>
+		</effect_group>
+	</append>
+</configs>
