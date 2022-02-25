@@ -1,7 +1,9 @@
 <configs>
 
-	<insertBefore xpath="/entitygroups/entitygroup[starts-with(@name, 'WildGame')]/entity[@name='none']">
-                <entity name="RaiderJayneClub" prob=".1" />
+	
+	
+          <append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
+	        <entity name="RaiderJayneClub" prob=".1" />
                 <entity name="RaiderGinaClub" prob=".1" />
                 <entity name="RaiderBettyClub" prob=".1" />
                 <entity name="RaiderHedyClub" prob=".1" />
@@ -40,8 +42,180 @@
 		<entity name="RaiderHedyTRifle" prob=".05" />
                 <entity name="RaiderGypsySMG" prob=".05" />
 		<entity name="RaiderGypsyDPistol" prob=".05" />
+		<entity name="RaiderGypsyTRifle" prob=".05" />     	
+	</append>
+	
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
+		<entity name="RaiderJayneClub" prob=".05" />
+                <entity name="RaiderGinaClub" prob=".05" />
+                <entity name="RaiderBettyClub" prob=".05" />
+                <entity name="RaiderHedyClub" prob=".05" />
+                <entity name="RaiderGypsyClub" prob=".05" />
+                <entity name="RaiderJayneMachete" prob=".05" />
+                <entity name="RaiderGinaMachete" prob=".05" />
+                <entity name="RaiderBettyMachete" prob=".05" />
+                <entity name="RaiderHedyMachete" prob=".05" />
+                <entity name="RaiderGypsyMachete" prob=".05" />
+                <entity name="RaiderJayneKnife" prob=".05" />
+                <entity name="RaiderGinaKnife" prob=".05" />
+                <entity name="RaiderBettyKnife" prob=".05" />
+                <entity name="RaiderHedyKnife" prob=".05" />
+                <entity name="RaiderGypsyKnife" prob=".05" />
+		<entity name="RaiderJayneBat" prob=".05" />
+                <entity name="RaiderGinaBat" prob=".05" />
+                <entity name="RaiderBettyBat" prob=".05" />
+                <entity name="RaiderHedyBat" prob=".05" />
+                <entity name="RaiderGypsyBat" prob=".05" />
+		<entity name="RaiderHedyAxe" prob=".05" />
+		<entity name="RaiderGinaAxe" prob=".05" />
+                <entity name="RaiderBettyAxe" prob=".05" />
+		<entity name="RaiderJayneAxe" prob=".05" />
+                <entity name="RaiderGypsyAxe" prob=".05" />	
+		<entity name="RaiderJayneSMG" prob=".05" />
+		<entity name="RaiderJayneDPistol" prob=".05" />
+		<entity name="RaiderJayneTRifle" prob=".05" />
+                <entity name="RaiderBettySMG" prob=".05" />
+		<entity name="RaiderBettyDPistol" prob=".05" />
+		<entity name="RaiderBettyTRifle" prob=".05" />
+                <entity name="RaiderGinaSMG" prob=".05" />
+		<entity name="RaiderGinaDPistol" prob=".05" />
+		<entity name="RaiderGinaTRifle" prob=".05" />
+                <entity name="RaiderHedySMG" prob=".05" />
+		<entity name="RaiderHedyDPistol" prob=".05" />
+		<entity name="RaiderHedyTRifle" prob=".05" />
+                <entity name="RaiderGypsySMG" prob=".05" />
+		<entity name="RaiderGypsyDPistol" prob=".05" />
+		<entity name="RaiderGypsyTRifle" prob=".05" />	
+	</append>
+	
+	<append xpath="/entitygroups/entitygroup[@name='SnowZombies']">
+		<entity name="RaiderJayneClub" prob=".05" />
+                <entity name="RaiderGinaClub" prob=".05" />
+                <entity name="RaiderBettyClub" prob=".05" />
+                <entity name="RaiderHedyClub" prob=".05" />
+                <entity name="RaiderGypsyClub" prob=".05" />
+                <entity name="RaiderJayneMachete" prob=".05" />
+                <entity name="RaiderGinaMachete" prob=".05" />
+                <entity name="RaiderBettyMachete" prob=".05" />
+                <entity name="RaiderHedyMachete" prob=".05" />
+                <entity name="RaiderGypsyMachete" prob=".05" />
+                <entity name="RaiderJayneKnife" prob=".05" />
+                <entity name="RaiderGinaKnife" prob=".05" />
+                <entity name="RaiderBettyKnife" prob=".05" />
+                <entity name="RaiderHedyKnife" prob=".05" />
+                <entity name="RaiderGypsyKnife" prob=".05" />
+		<entity name="RaiderJayneBat" prob=".05" />
+                <entity name="RaiderGinaBat" prob=".05" />
+                <entity name="RaiderBettyBat" prob=".05" />
+                <entity name="RaiderHedyBat" prob=".05" />
+                <entity name="RaiderGypsyBat" prob=".05" />
+		<entity name="RaiderHedyAxe" prob=".05" />
+		<entity name="RaiderGinaAxe" prob=".05" />
+                <entity name="RaiderBettyAxe" prob=".05" />
+		<entity name="RaiderJayneAxe" prob=".05" />
+                <entity name="RaiderGypsyAxe" prob=".05" />	
+		<entity name="RaiderJayneSMG" prob=".05" />
+		<entity name="RaiderJayneDPistol" prob=".05" />
+		<entity name="RaiderJayneTRifle" prob=".05" />
+                <entity name="RaiderBettySMG" prob=".05" />
+		<entity name="RaiderBettyDPistol" prob=".05" />
+		<entity name="RaiderBettyTRifle" prob=".05" />
+                <entity name="RaiderGinaSMG" prob=".05" />
+		<entity name="RaiderGinaDPistol" prob=".05" />
+		<entity name="RaiderGinaTRifle" prob=".05" />
+                <entity name="RaiderHedySMG" prob=".05" />
+		<entity name="RaiderHedyDPistol" prob=".05" />
+		<entity name="RaiderHedyTRifle" prob=".05" />
+                <entity name="RaiderGypsySMG" prob=".05" />
+		<entity name="RaiderGypsyDPistol" prob=".05" />
+		<entity name="RaiderGypsyTRifle" prob=".05" />		
+	</append>	
+
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']">
+	       	<entity name="RaiderJayneClub" prob=".05" />
+                <entity name="RaiderGinaClub" prob=".05" />
+                <entity name="RaiderBettyClub" prob=".05" />
+                <entity name="RaiderHedyClub" prob=".05" />
+                <entity name="RaiderGypsyClub" prob=".05" />
+                <entity name="RaiderJayneMachete" prob=".05" />
+                <entity name="RaiderGinaMachete" prob=".05" />
+                <entity name="RaiderBettyMachete" prob=".05" />
+                <entity name="RaiderHedyMachete" prob=".05" />
+                <entity name="RaiderGypsyMachete" prob=".05" />
+                <entity name="RaiderJayneKnife" prob=".05" />
+                <entity name="RaiderGinaKnife" prob=".05" />
+                <entity name="RaiderBettyKnife" prob=".05" />
+                <entity name="RaiderHedyKnife" prob=".05" />
+                <entity name="RaiderGypsyKnife" prob=".05" />
+		<entity name="RaiderJayneBat" prob=".05" />
+                <entity name="RaiderGinaBat" prob=".05" />
+                <entity name="RaiderBettyBat" prob=".05" />
+                <entity name="RaiderHedyBat" prob=".05" />
+                <entity name="RaiderGypsyBat" prob=".05" />
+		<entity name="RaiderHedyAxe" prob=".05" />
+		<entity name="RaiderGinaAxe" prob=".05" />
+                <entity name="RaiderBettyAxe" prob=".05" />
+		<entity name="RaiderJayneAxe" prob=".05" />
+                <entity name="RaiderGypsyAxe" prob=".05" />	
+		<entity name="RaiderJayneSMG" prob=".05" />
+		<entity name="RaiderJayneDPistol" prob=".05" />
+		<entity name="RaiderJayneTRifle" prob=".05" />
+                <entity name="RaiderBettySMG" prob=".05" />
+		<entity name="RaiderBettyDPistol" prob=".05" />
+		<entity name="RaiderBettyTRifle" prob=".05" />
+                <entity name="RaiderGinaSMG" prob=".05" />
+		<entity name="RaiderGinaDPistol" prob=".05" />
+		<entity name="RaiderGinaTRifle" prob=".05" />
+                <entity name="RaiderHedySMG" prob=".05" />
+		<entity name="RaiderHedyDPistol" prob=".05" />
+		<entity name="RaiderHedyTRifle" prob=".05" />
+                <entity name="RaiderGypsySMG" prob=".05" />
+		<entity name="RaiderGypsyDPistol" prob=".05" />
+		<entity name="RaiderGypsyTRifle" prob=".05" />	
+	</append>
+
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']">
+		<entity name="RaiderJayneClub" prob=".05" />
+                <entity name="RaiderGinaClub" prob=".05" />
+                <entity name="RaiderBettyClub" prob=".05" />
+                <entity name="RaiderHedyClub" prob=".05" />
+                <entity name="RaiderGypsyClub" prob=".05" />
+                <entity name="RaiderJayneMachete" prob=".05" />
+                <entity name="RaiderGinaMachete" prob=".05" />
+                <entity name="RaiderBettyMachete" prob=".05" />
+                <entity name="RaiderHedyMachete" prob=".05" />
+                <entity name="RaiderGypsyMachete" prob=".05" />
+                <entity name="RaiderJayneKnife" prob=".05" />
+                <entity name="RaiderGinaKnife" prob=".05" />
+                <entity name="RaiderBettyKnife" prob=".05" />
+                <entity name="RaiderHedyKnife" prob=".05" />
+                <entity name="RaiderGypsyKnife" prob=".05" />
+		<entity name="RaiderJayneBat" prob=".05" />
+                <entity name="RaiderGinaBat" prob=".05" />
+                <entity name="RaiderBettyBat" prob=".05" />
+                <entity name="RaiderHedyBat" prob=".05" />
+                <entity name="RaiderGypsyBat" prob=".05" />
+		<entity name="RaiderHedyAxe" prob=".05" />
+		<entity name="RaiderGinaAxe" prob=".05" />
+                <entity name="RaiderBettyAxe" prob=".05" />
+		<entity name="RaiderJayneAxe" prob=".05" />
+                <entity name="RaiderGypsyAxe" prob=".05" />	
+		<entity name="RaiderJayneSMG" prob=".05" />
+		<entity name="RaiderJayneDPistol" prob=".05" />
+		<entity name="RaiderJayneTRifle" prob=".05" />
+                <entity name="RaiderBettySMG" prob=".05" />
+		<entity name="RaiderBettyDPistol" prob=".05" />
+		<entity name="RaiderBettyTRifle" prob=".05" />
+                <entity name="RaiderGinaSMG" prob=".05" />
+		<entity name="RaiderGinaDPistol" prob=".05" />
+		<entity name="RaiderGinaTRifle" prob=".05" />
+                <entity name="RaiderHedySMG" prob=".05" />
+		<entity name="RaiderHedyDPistol" prob=".05" />
+		<entity name="RaiderHedyTRifle" prob=".05" />
+                <entity name="RaiderGypsySMG" prob=".05" />
+		<entity name="RaiderGypsyDPistol" prob=".05" />
 		<entity name="RaiderGypsyTRifle" prob=".05" />
-          </insertBefore> 	
+	</append>
 
           <append xpath="/entitygroups">
 		<entitygroup name="npcBanditsAllGroupGS01">
@@ -132,47 +306,6 @@
 		</entitygroup>		
 	</append>
 
-	<insertBefore xpath="/entitygroups/entitygroup[starts-with(@name, 'WildGame')]/entity[@name='none']">
-            <entity name="RaiderJayneClub" prob=".1" />
-            <entity name="RaiderGinaClub" prob=".1" />
-            <entity name="RaiderBettyClub" prob=".1" />
-            <entity name="RaiderHedyClub" prob=".1" />
-            <entity name="RaiderGypsyClub" prob=".1" />
-            <entity name="RaiderJayneMachete" prob=".1" />
-            <entity name="RaiderGinaMachete" prob=".1" />
-            <entity name="RaiderBettyMachete" prob=".1" />
-            <entity name="RaiderHedyMachete" prob=".1" />
-            <entity name="RaiderGypsyMachete" prob=".1" />
-            <entity name="RaiderJayneKnife" prob=".1" />
-            <entity name="RaiderGinaKnife" prob=".1" />
-            <entity name="RaiderBettyKnife" prob=".1" />
-            <entity name="RaiderHedyKnife" prob=".1" />
-            <entity name="RaiderGypsyKnife" prob=".1" />
-			<entity name="RaiderJayneBat" prob=".1" />
-            <entity name="RaiderGinaBat" prob=".1" />
-            <entity name="RaiderBettyBat" prob=".1" />
-            <entity name="RaiderHedyBat" prob=".1" />
-            <entity name="RaiderGypsyBat" prob=".1" />
-			<entity name="RaiderHedyAxe" prob=".1" />
-			<entity name="RaiderGinaAxe" prob=".1" />
-            <entity name="RaiderBettyAxe" prob=".1" />
-			<entity name="RaiderJayneAxe" prob=".1" />
-            <entity name="RaiderGypsyAxe" prob=".1" />	
-			<entity name="RaiderJayneSMG" prob=".1" />
-			<entity name="RaiderJayneDPistol" prob=".1" />
-			<entity name="RaiderJayneTRifle" prob=".1" />
-            <entity name="RaiderBettySMG" prob=".1" />
-			<entity name="RaiderBettyDPistol" prob=".1" />
-			<entity name="RaiderBettyTRifle" prob=".1" />
-            <entity name="RaiderGinaSMG" prob=".1" />
-			<entity name="RaiderGinaDPistol" prob=".1" />
-			<entity name="RaiderGinaTRifle" prob=".1" />
-            <entity name="RaiderHedySMG" prob=".1" />
-			<entity name="RaiderHedyDPistol" prob=".1" />
-			<entity name="RaiderHedyTRifle" prob=".1" />
-            <entity name="RaiderGypsySMG" prob=".1" />
-			<entity name="RaiderGypsyDPistol" prob=".1" />
-			<entity name="RaiderGypsyTRifle" prob=".1" />
-        </insertBefore> 	
+	
 	
 </configs>

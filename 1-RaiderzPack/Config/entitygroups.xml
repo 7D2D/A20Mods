@@ -1,7 +1,7 @@
 <configs>
 
-	<insertBefore xpath="/entitygroups/entitygroup[starts-with(@name, 'WildGame')]/entity[@name='none']">
-                <entity name="RaiderMercClub" prob=".1" />
+	 <append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
+	        <entity name="RaiderMercClub" prob=".1" />
                 <entity name="RaiderMercKnife" prob=".1" />
                 <entity name="RaiderMercMachete" prob=".1" />
                 <entity name="RaiderMercDPistol" prob=".05" />
@@ -29,9 +29,137 @@
                 <entity name="RaiderBeatzAK47" prob=".05" />
 		<entity name="RaiderBeatzDPistol" prob=".05" />
 		<entity name="RaiderBeatzBat" prob=".1" />
-		<entity name="RaiderBeatzClub" prob=".1" />
-          </insertBefore> 	
+		<entity name="RaiderBeatzClub" prob=".1" />     
+	</append>
 	
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
+		<entity name="RaiderMercClub" prob=".05" />
+                <entity name="RaiderMercKnife" prob=".05" />
+                <entity name="RaiderMercMachete" prob=".05" />
+                <entity name="RaiderMercDPistol" prob=".05" />
+                <entity name="RaiderMercTRifle" prob=".05" />
+                <entity name="RaiderMercAK47" prob=".05" />
+                <entity name="RaiderMotoTRifle" prob=".05" />
+                <entity name="RaiderMotoAK47" prob=".05" />
+                <entity name="RaiderMotoDPistol" prob=".05" />
+                <entity name="RaiderMotoBat" prob=".05" />
+		<entity name="RaiderMotoAxe" prob=".05" />
+                <entity name="RaiderSluggerAK47" prob=".05" />
+                <entity name="RaiderSluggerM60" prob=".05" />
+                <entity name="RaiderSluggerBat" prob=".05" />
+		<entity name="RaiderSluggerAxe" prob=".05" />
+		<entity name="RaiderSluggerRocketL" prob=".05" />	
+		<entity name="RaiderPestSMG" prob=".05" />
+		<entity name="RaiderPestDPistol" prob=".05" />
+		<entity name="RaiderPestPipeMG" prob=".05" />
+                <entity name="RaiderPestBat" prob=".05" />
+		<entity name="RaiderPestAxe" prob=".05" />
+		<entity name="RaiderPestKnife" prob=".05" />
+                <entity name="RaiderPestClub" prob=".05" />
+		<entity name="RaiderPestMachete" prob=".05" />
+		<entity name="RaiderBeatzSMG" prob=".05" />
+                <entity name="RaiderBeatzAK47" prob=".05" />
+		<entity name="RaiderBeatzDPistol" prob=".05" />
+		<entity name="RaiderBeatzBat" prob=".05" />
+		<entity name="RaiderBeatzClub" prob=".05" />     		
+	</append>
+	
+	<append xpath="/entitygroups/entitygroup[@name='SnowZombies']">
+		<entity name="RaiderMercClub" prob=".05" />
+                <entity name="RaiderMercKnife" prob=".05" />
+                <entity name="RaiderMercMachete" prob=".05" />
+                <entity name="RaiderMercDPistol" prob=".05" />
+                <entity name="RaiderMercTRifle" prob=".05" />
+                <entity name="RaiderMercAK47" prob=".05" />
+                <entity name="RaiderMotoTRifle" prob=".05" />
+                <entity name="RaiderMotoAK47" prob=".05" />
+                <entity name="RaiderMotoDPistol" prob=".05" />
+                <entity name="RaiderMotoBat" prob=".05" />
+		<entity name="RaiderMotoAxe" prob=".05" />
+                <entity name="RaiderSluggerAK47" prob=".05" />
+                <entity name="RaiderSluggerM60" prob=".05" />
+                <entity name="RaiderSluggerBat" prob=".05" />
+		<entity name="RaiderSluggerAxe" prob=".05" />
+		<entity name="RaiderSluggerRocketL" prob=".05" />	
+		<entity name="RaiderPestSMG" prob=".05" />
+		<entity name="RaiderPestDPistol" prob=".05" />
+		<entity name="RaiderPestPipeMG" prob=".05" />
+                <entity name="RaiderPestBat" prob=".05" />
+		<entity name="RaiderPestAxe" prob=".05" />
+		<entity name="RaiderPestKnife" prob=".05" />
+                <entity name="RaiderPestClub" prob=".05" />
+		<entity name="RaiderPestMachete" prob=".05" />
+		<entity name="RaiderBeatzSMG" prob=".05" />
+                <entity name="RaiderBeatzAK47" prob=".05" />
+		<entity name="RaiderBeatzDPistol" prob=".05" />
+		<entity name="RaiderBeatzBat" prob=".05" />
+		<entity name="RaiderBeatzClub" prob=".05" />     
+	</append>	
+
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']">
+	       	<entity name="RaiderMercClub" prob=".05" />
+                <entity name="RaiderMercKnife" prob=".05" />
+                <entity name="RaiderMercMachete" prob=".05" />
+                <entity name="RaiderMercDPistol" prob=".05" />
+                <entity name="RaiderMercTRifle" prob=".05" />
+                <entity name="RaiderMercAK47" prob=".05" />
+                <entity name="RaiderMotoTRifle" prob=".05" />
+                <entity name="RaiderMotoAK47" prob=".05" />
+                <entity name="RaiderMotoDPistol" prob=".05" />
+                <entity name="RaiderMotoBat" prob=".05" />
+		<entity name="RaiderMotoAxe" prob=".05" />
+                <entity name="RaiderSluggerAK47" prob=".05" />
+                <entity name="RaiderSluggerM60" prob=".05" />
+                <entity name="RaiderSluggerBat" prob=".05" />
+		<entity name="RaiderSluggerAxe" prob=".05" />
+		<entity name="RaiderSluggerRocketL" prob=".05" />	
+		<entity name="RaiderPestSMG" prob=".05" />
+		<entity name="RaiderPestDPistol" prob=".05" />
+		<entity name="RaiderPestPipeMG" prob=".05" />
+                <entity name="RaiderPestBat" prob=".05" />
+		<entity name="RaiderPestAxe" prob=".05" />
+		<entity name="RaiderPestKnife" prob=".05" />
+                <entity name="RaiderPestClub" prob=".05" />
+		<entity name="RaiderPestMachete" prob=".05" />
+		<entity name="RaiderBeatzSMG" prob=".05" />
+                <entity name="RaiderBeatzAK47" prob=".05" />
+		<entity name="RaiderBeatzDPistol" prob=".05" />
+		<entity name="RaiderBeatzBat" prob=".05" />
+		<entity name="RaiderBeatzClub" prob=".05" />     		
+	</append>
+
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']">
+		<entity name="RaiderMercClub" prob=".05" />
+                <entity name="RaiderMercKnife" prob=".05" />
+                <entity name="RaiderMercMachete" prob=".05" />
+                <entity name="RaiderMercDPistol" prob=".05" />
+                <entity name="RaiderMercTRifle" prob=".05" />
+                <entity name="RaiderMercAK47" prob=".05" />
+                <entity name="RaiderMotoTRifle" prob=".05" />
+                <entity name="RaiderMotoAK47" prob=".05" />
+                <entity name="RaiderMotoDPistol" prob=".05" />
+                <entity name="RaiderMotoBat" prob=".05" />
+		<entity name="RaiderMotoAxe" prob=".05" />
+                <entity name="RaiderSluggerAK47" prob=".05" />
+                <entity name="RaiderSluggerM60" prob=".05" />
+                <entity name="RaiderSluggerBat" prob=".05" />
+		<entity name="RaiderSluggerAxe" prob=".05" />
+		<entity name="RaiderSluggerRocketL" prob=".05" />	
+		<entity name="RaiderPestSMG" prob=".05" />
+		<entity name="RaiderPestDPistol" prob=".05" />
+		<entity name="RaiderPestPipeMG" prob=".05" />
+                <entity name="RaiderPestBat" prob=".05" />
+		<entity name="RaiderPestAxe" prob=".05" />
+		<entity name="RaiderPestKnife" prob=".05" />
+                <entity name="RaiderPestClub" prob=".05" />
+		<entity name="RaiderPestMachete" prob=".05" />
+		<entity name="RaiderBeatzSMG" prob=".05" />
+                <entity name="RaiderBeatzAK47" prob=".05" />
+		<entity name="RaiderBeatzDPistol" prob=".05" />
+		<entity name="RaiderBeatzBat" prob=".05" />
+		<entity name="RaiderBeatzClub" prob=".05" />     	
+	</append>
+
           <append xpath="/entitygroups">
 		<entitygroup name="npcBanditsAllGroupGS01">
             <entity name="RaiderMercClub"/>
@@ -99,36 +227,6 @@
 		</entitygroup>		
 	</append>
 
-	<insertBefore xpath="/entitygroups/entitygroup[starts-with(@name, 'WildGame')]/entity[@name='none']">
-            <entity name="RaiderMercClub" prob=".1" />
-            <entity name="RaiderMercKnife" prob=".1" />
-            <entity name="RaiderMercMachete" prob=".1" />
-            <entity name="RaiderMercDPistol" prob=".1" />
-            <entity name="RaiderMercTRifle" prob=".1" />
-            <entity name="RaiderMercAK47" prob=".1" />
-            <entity name="RaiderMotoTRifle" prob=".1" />
-            <entity name="RaiderMotoAK47" prob=".1" />
-            <entity name="RaiderMotoDPistol" prob=".1" />
-            <entity name="RaiderMotoBat" prob=".1" />
-			<entity name="RaiderMotoAxe" prob=".1" />
-            <entity name="RaiderSluggerAK47" prob=".1" />
-            <entity name="RaiderSluggerM60" prob=".1" />
-            <entity name="RaiderSluggerBat" prob=".1" />
-			<entity name="RaiderSluggerAxe" prob=".1" />
-			<entity name="RaiderSluggerRocketL" prob=".1" />	
-			<entity name="RaiderPestSMG" prob=".1" />
-			<entity name="RaiderPestDPistol" prob=".1" />
-			<entity name="RaiderPestPipeMG" prob=".1" />
-            <entity name="RaiderPestBat" prob=".1" />
-			<entity name="RaiderPestAxe" prob=".1" />
-			<entity name="RaiderPestKnife" prob=".1" />
-            <entity name="RaiderPestClub" prob=".1" />
-			<entity name="RaiderPestMachete" prob=".1" />
-			<entity name="RaiderBeatzSMG" prob=".1" />
-            <entity name="RaiderBeatzAK47" prob=".1" />
-			<entity name="RaiderBeatzDPistol" prob=".1" />
-			<entity name="RaiderBeatzBat" prob=".1" />
-			<entity name="RaiderBeatzClub" prob=".1" />
-    </insertBefore> 	
+	
 
 </configs>

@@ -1,0 +1,223 @@
+<configs>
+
+	<append xpath="/entity_classes">
+                
+                <!--  Swat models free to use from mixamo, Parazite models by Maksim Bugrimov, Mutant model by Andryuha1981 Purchased for use in NPC Mod  -->
+
+               <entity_class name="BloatedParasite" extends="zombieRegularTemplate">
+			<property name="Tags" value="entity,male,zombie,walker,mixamo,normal"/>
+			<property name="Faction" value="undead"/>				
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombiez.unity3d?BloatedParasiteDark"/> 
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>			
+			<property name="WalkType" value="7"/>
+			<property name="Mass" value="150"/>
+                        <property name="SoundRandom" value="Enemies/Acid_Puking_Hulk/hulkroam"/>
+	                <property name="SoundAlert" value="Enemies/Acid_Puking_Hulk/hulkalert"/>
+	                <property name="SoundAttack" value="Enemies/Acid_Puking_Hulk/hulkattack"/>
+	                <property name="SoundHurt" value="Enemies/Acid_Puking_Hulk/hulkpain"/>
+	                <property name="SoundDeath" value="Enemies/Acid_Puking_Hulk/hulkdeath"/>
+	                <property name="SoundSense" value="Enemies/Acid_Puking_Hulk/hulksense"/>
+	                <property name="SoundFootstepModifier" value="Animals/Bear/bear_footstep"/>  
+		</entity_class>
+
+                <entity_class name="ExperimentZ" extends="zombieRegularTemplate">
+			<property name="Tags" value="entity,male,zombie,walker,mixamo,normal"/>
+			<property name="Faction" value="undead"/>				
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombiez.unity3d?ExperimentZDark"/> 
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>			
+			<property name="WalkType" value="7"/>
+			<property name="Mass" value="150"/>
+                        <property name="SoundRandom" value="Enemies/Snow_Zombie_Male/zombiemalesnowroam"/>
+	                <property name="SoundAlert" value="Enemies/Snow_Zombie_Male/zombiemalesnowalert"/>
+	                <property name="SoundAttack" value="Enemies/Snow_Zombie_Male/zombiemalesnowattack"/>
+	                <property name="SoundHurt" value="Enemies/Snow_Zombie_Male/zombiemalesnowpain"/>
+	                <property name="SoundDeath" value="Enemies/Snow_Zombie_Male/zombiemalesnowdeath"/>
+	                <property name="SoundSense" value="Enemies/Snow_Zombie_Male/zombiemalesnowsense"/>
+	                <property name="SoundFootstepModifier" value="zombielumberjackfootstep"/>
+		</entity_class>
+
+                <entity_class name="SwatZombie" extends="zombieRegularTemplate">
+			<property name="Tags" value="entity,male,zombie,walker,mixamo,normal"/>
+			<property name="Faction" value="undead"/>				
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombiez.unity3d?SwatZombieDark"/> 
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>			
+			<property name="WalkType" value="7"/>
+			<property name="Mass" value="150"/>
+                        <property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
+	                <property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
+	                <property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
+	                <property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
+	                <property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
+	                <property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
+		</entity_class>
+
+                <entity_class name="SwatCaptainZombie" extends="zombieRegularTemplate">
+			<property name="Tags" value="entity,male,zombie,walker,mixamo,normal"/>
+			<property name="Faction" value="undead"/>				
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombiez.unity3d?SwatCaptainZombieDark"/> 
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>			
+			<property name="WalkType" value="7"/>
+			<property name="Mass" value="150"/>
+                        <property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
+	                <property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
+	                <property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
+	                <property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
+	                <property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
+	                <property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
+		</entity_class>
+
+                <entity_class name="Parasite" extends="zombieRegularTemplate">
+			<property name="Tags" value="entity,male,zombie,walker,mixamo,normal"/>
+			<property name="Faction" value="undead"/>				
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombiez.unity3d?ParasiteDark"/> 
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>			
+			<property name="WalkType" value="7"/>
+			<property name="Mass" value="150"/>
+                        <property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam"/>
+	                <property name="SoundAlert" value="Enemies/Spider_Zombie/spideralert"/>
+	                <property name="SoundAttack" value="Enemies/Spider_Zombie/spiderattack"/>
+	                <property name="SoundDeath" value="Enemies/Spider_Zombie/spiderdeath"/>
+	                <property name="SoundHurt" value="Enemies/Spider_Zombie/spiderpain"/>
+	                <property name="SoundSense" value="Enemies/Spider_Zombie/spidersense"/> 
+		</entity_class>
+
+                <entity_class name="ParasiteFeral" extends="zombieFemaleTutorial">
+			<property name="Tags" value="entity,male,zombie,walker,mixamo,feral"/>
+			<property name="Faction" value="undead"/>
+                        <property name="Mesh" value="#@modfolder:Resources/Zombiez.unity3d?ParasiteDark"/> 				
+			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
+			<property name="PainResistPerHit" value=".25"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			<property name="HandItem" value="meleeHandZombieFeral2"/>
+			<property name="ExperienceGain" value="750"/>
+			<property name="LootDropProb" value=".03"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+                        <property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam"/>
+	                <property name="SoundAlert" value="Enemies/Spider_Zombie/spideralert"/>
+	                <property name="SoundAttack" value="Enemies/Spider_Zombie/spiderattack"/>
+	                <property name="SoundDeath" value="Enemies/Spider_Zombie/spiderdeath"/>
+	                <property name="SoundHurt" value="Enemies/Spider_Zombie/spiderpain"/>
+	                <property name="SoundSense" value="Enemies/Spider_Zombie/spidersense"/> 
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+		</entity_class>	
+
+	        <entity_class name="SwatCaptainZombieFeral" extends="zombieFemaleTutorial">
+			<property name="Tags" value="entity,male,zombie,walker,mixamo,feral"/>
+			<property name="Faction" value="undead"/>	
+                        <property name="Mesh" value="#@modfolder:Resources/Zombiez.unity3d?SwatCaptainZombieDark"/> 			
+			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
+			<property name="PainResistPerHit" value=".25"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			<property name="HandItem" value="meleeHandZombieFeral2"/>
+			<property name="ExperienceGain" value="750"/>
+			<property name="LootDropProb" value=".03"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+                        <property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
+	                <property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
+	                <property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
+	                <property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
+	                <property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
+	                <property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="300"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+		</entity_class>	
+
+                <entity_class name="SwatZombieFeral" extends="zombieFemaleTutorial">
+			<property name="Tags" value="entity,male,zombie,walker,mixamo,feral"/>
+			<property name="Faction" value="undead"/>
+                        <property name="Mesh" value="#@modfolder:Resources/Zombiez.unity3d?SwatZombieDark"/> 				
+			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
+			<property name="PainResistPerHit" value=".25"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			<property name="HandItem" value="meleeHandZombieFeral2"/>
+			<property name="ExperienceGain" value="750"/>
+			<property name="LootDropProb" value=".03"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+                        <property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
+	                <property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
+	                <property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
+	                <property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
+	                <property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
+	                <property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="300"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+		</entity_class>	
+
+                <entity_class name="BloatedParasiteFeral" extends="zombieFemaleTutorial">
+			<property name="Tags" value="entity,male,zombie,walker,mixamo,feral"/>
+			<property name="Faction" value="undead"/>
+                        <property name="Mesh" value="#@modfolder:Resources/Zombiez.unity3d?BloatedParasiteDark"/> 				
+			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
+			<property name="PainResistPerHit" value=".25"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			<property name="HandItem" value="meleeHandZombieFeral2"/>
+			<property name="ExperienceGain" value="750"/>
+			<property name="LootDropProb" value=".03"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+                        <property name="SoundRandom" value="Enemies/Acid_Puking_Hulk/hulkroam"/>
+	                <property name="SoundAlert" value="Enemies/Acid_Puking_Hulk/hulkalert"/>
+	                <property name="SoundAttack" value="Enemies/Acid_Puking_Hulk/hulkattack"/>
+	                <property name="SoundHurt" value="Enemies/Acid_Puking_Hulk/hulkpain"/>
+	                <property name="SoundDeath" value="Enemies/Acid_Puking_Hulk/hulkdeath"/>
+	                <property name="SoundSense" value="Enemies/Acid_Puking_Hulk/hulksense"/>
+	                <property name="SoundFootstepModifier" value="Animals/Bear/bear_footstep"/>  
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+		</entity_class>	
+
+                <entity_class name="ExperimentZFeral" extends="zombieFemaleTutorial">
+			<property name="Tags" value="entity,male,zombie,walker,mixamo,feral"/>
+			<property name="Faction" value="undead"/>	
+                        <property name="Mesh" value="#@modfolder:Resources/Zombiez.unity3d?ExperimentZDark"/> 			
+			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
+			<property name="PainResistPerHit" value=".25"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			<property name="HandItem" value="meleeHandZombieFeral2"/>
+			<property name="ExperienceGain" value="750"/>
+			<property name="LootDropProb" value=".03"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+                        <property name="SoundRandom" value="Enemies/Snow_Zombie_Male/zombiemalesnowroam"/>
+	                <property name="SoundAlert" value="Enemies/Snow_Zombie_Male/zombiemalesnowalert"/>
+	                <property name="SoundAttack" value="Enemies/Snow_Zombie_Male/zombiemalesnowattack"/>
+	                <property name="SoundHurt" value="Enemies/Snow_Zombie_Male/zombiemalesnowpain"/>
+	                <property name="SoundDeath" value="Enemies/Snow_Zombie_Male/zombiemalesnowdeath"/>
+	                <property name="SoundSense" value="Enemies/Snow_Zombie_Male/zombiemalesnowsense"/>
+	                <property name="SoundFootstepModifier" value="zombielumberjackfootstep"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="500"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+		</entity_class>	
+
+		</append>	
+	
+</configs>

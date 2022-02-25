@@ -1,0 +1,20 @@
+<configs>
+	
+	<append xpath="/entitygroups/entitygroup[descendant::entity[@name='zombieMoe']]">	
+		<entity name="Parasite" prob=".3" />
+                <entity name="BloatedParasite" prob=".3" />
+                <entity name="ExperimentZ" prob=".3" />
+                <entity name="SwatZombie" prob=".3" />
+                <entity name="SwatCaptainZombie" prob=".3" />
+	</append>
+	
+	
+	<append xpath="/entitygroups/entitygroup[descendant::entity[@name='zombieMoeFeral']]">	
+		<entity name="ParasiteFeral" prob=".15" />
+                <entity name="BloatedParasiteFeral" prob=".15" />
+                <entity name="ExperimentZFeral" prob=".15" />
+                <entity name="SwatZombieFeral" prob=".15" />
+                <entity name="SwatCaptainZombieFeral" prob=".15" />
+	</append>
+	
+</configs>

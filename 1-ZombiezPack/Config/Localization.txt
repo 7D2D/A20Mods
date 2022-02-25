@@ -1,0 +1,11 @@
+Key,English,japanese
+BloatedParasite,"Bloated Parasite","ブロートパラサイト"
+ExperimentZ,"Experiment Z","実験体Z"
+SwatZombie,"Swat Zombie","Swatゾンビ"
+SwatCaptainZombie,"Swat Captain Zombie","Swatキャプテンゾンビ"
+Parasite,"Parasite","パラサイト"
+ParasiteFeral,"Feral Parasite","残忍パラサイト"
+SwatCaptainZombieFeral,"Feral Swat Captain","残忍Swatキャプテン"
+SwatZombieFeral,"Feral Swat","残忍Swat"
+BloatedParasiteFeral,"Feral Bloated Parasite","残忍ブロートパラサイト"
+ExperimentZFeral,"Feral Experiment Z","残忍実験体Z"
