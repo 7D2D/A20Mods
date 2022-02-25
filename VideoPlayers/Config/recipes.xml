@@ -47,9 +47,9 @@
 		<recipe name="Billboard01" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
 			<ingredient name="resourceMechanicalParts" count="10"/>
 			<ingredient name="resourceElectricParts" count="10"/>
-		</recipe>	
-		<effect_group>
-			<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceElectricParts,resourceMechanicalParts"/>
-		</effect_group>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceElectricParts,resourceMechanicalParts"/>
+			</effect_group>
+		</recipe>
 	</append>
 </configs>

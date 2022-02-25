@@ -82,6 +82,7 @@
 			<property name="CreativeMode" value="Player"/>
 			<property name="Shape" value="ModelEntity" />
 			<property name="Model" value="#@modfolder:Resources/VideoTVs.unity3d?VideoScreen_X" /> <!-- Free model by stepanprokop -->
+			<!--<property name="ModelOffset" value="0.5,0,0.5"/> -->
 			<property name="Class" value="Switch"/>		
             <property name="DisplayType" value="blockElectrical" />
             <property name="RequiredPower" value="0"/>
