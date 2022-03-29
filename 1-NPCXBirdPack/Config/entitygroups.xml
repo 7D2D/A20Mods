@@ -21,4 +21,29 @@
 		<entity name="animalEagle" prob="5"/>
 		<entity name="animalAlcatraz" prob="5"/>
 	</append>
+
+	<!--
+		Entity groups used by spawners for sleeper volumes.
+		Since these birds are all timid, they have low probabilities of spawning in,
+		relative to animals that can attack others.
+	-->
+	<append xpath="/entitygroups/entitygroup[starts-with(@name,'npcEnemyAnimalsAllGroup')]">
+		<entity name="animalBat" prob="0.1" />
+		<entity name="animalBats" prob="0.1" />
+		<entity name="animalCrow" prob="0.1" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[starts-with(@name,'npcFriendlyAnimalsAllGroup')]">
+		<entity name="animalAlcatraz" prob="0.1" />
+		<entity name="animalEagle" prob="0.1" />
+		<entity name="animalPenguin" prob="0.05" />
+		<entity name="animalRobin" prob="0.1" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[starts-with(@name,'npcFlyersAllGroup')]">
+		<entity name="animalAlcatraz" prob="0.1" />
+		<entity name="animalBat" prob="0.1" />
+		<entity name="animalBats" prob="0.1" />
+		<entity name="animalCrow" prob="0.1" />
+		<entity name="animalEagle" prob="0.1" />
+		<entity name="animalRobin" prob="0.1" />
+	</append>
 </configs>

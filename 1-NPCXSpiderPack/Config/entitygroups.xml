@@ -10,4 +10,100 @@
 		<entity name="animalSpider02" prob="5"/>
 		<entity name="animalSpider03" prob="5"/>
 	</append>
+
+	<!--
+		Entity groups used by spawners for sleeper volumes
+		TODO:
+		200 health / 15 damage - same as (non-dire) wolf
+	-->
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsAllGroupGS01']">
+		<entity name="animalSpider01" prob="0.9" />
+		<entity name="animalSpider02" prob="0.9" />
+		<entity name="animalSpider03" prob="0.9" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsAllGroupGS50']">
+		<entity name="animalSpider01" prob="0.7" />
+		<entity name="animalSpider02" prob="0.7" />
+		<entity name="animalSpider03" prob="0.7" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsAllGroupGS100']">
+		<entity name="animalSpider01" prob="0.6" />
+		<entity name="animalSpider02" prob="0.6" />
+		<entity name="animalSpider03" prob="0.6" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsAllGroupGS200']">
+		<entity name="animalSpider01" prob="0.4" />
+		<entity name="animalSpider02" prob="0.4" />
+		<entity name="animalSpider03" prob="0.4" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsAllGroupGS400']">
+		<entity name="animalSpider01" prob="0.3" />
+		<entity name="animalSpider02" prob="0.3" />
+		<entity name="animalSpider03" prob="0.3" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsAllGroupGS800']">
+		<entity name="animalSpider01" prob="0.1" />
+		<entity name="animalSpider02" prob="0.1" />
+		<entity name="animalSpider03" prob="0.1" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcArachnidsAllGroupGS01']">
+		<entity name="animalSpider01" prob="0.9" />
+		<entity name="animalSpider02" prob="0.9" />
+		<entity name="animalSpider03" prob="0.9" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcArachnidsAllGroupGS50']">
+		<entity name="animalSpider01" prob="0.7" />
+		<entity name="animalSpider02" prob="0.7" />
+		<entity name="animalSpider03" prob="0.7" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcArachnidsAllGroupGS100']">
+		<entity name="animalSpider01" prob="0.6" />
+		<entity name="animalSpider02" prob="0.6" />
+		<entity name="animalSpider03" prob="0.6" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcArachnidsAllGroupGS200']">
+		<entity name="animalSpider01" prob="0.4" />
+		<entity name="animalSpider02" prob="0.4" />
+		<entity name="animalSpider03" prob="0.4" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcArachnidsAllGroupGS400']">
+		<entity name="animalSpider01" prob="0.3" />
+		<entity name="animalSpider02" prob="0.3" />
+		<entity name="animalSpider03" prob="0.3" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcArachnidsAllGroupGS800']">
+		<entity name="animalSpider01" prob="0.1" />
+		<entity name="animalSpider02" prob="0.1" />
+		<entity name="animalSpider03" prob="0.1" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcArachnidsBossGroupGS01']">
+		<entity name="animalSpider01" prob="0.09" />
+		<entity name="animalSpider02" prob="0.09" />
+		<entity name="animalSpider03" prob="0.09" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcArachnidsBossGroupGS50']">
+		<entity name="animalSpider01" prob="0.07" />
+		<entity name="animalSpider02" prob="0.07" />
+		<entity name="animalSpider03" prob="0.07" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcArachnidsBossGroupGS100']">
+		<entity name="animalSpider01" prob="0.06" />
+		<entity name="animalSpider02" prob="0.06" />
+		<entity name="animalSpider03" prob="0.06" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcArachnidsBossGroupGS200']">
+		<entity name="animalSpider01" prob="0.04" />
+		<entity name="animalSpider02" prob="0.04" />
+		<entity name="animalSpider03" prob="0.04" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcArachnidsBossGroupGS400']">
+		<entity name="animalSpider01" prob="0.03" />
+		<entity name="animalSpider02" prob="0.03" />
+		<entity name="animalSpider03" prob="0.03" />
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcArachnidsBossGroupGS800']">
+		<entity name="animalSpider01" prob="0.01" />
+		<entity name="animalSpider02" prob="0.01" />
+		<entity name="animalSpider03" prob="0.01" />
+	</append>
 </configs>
