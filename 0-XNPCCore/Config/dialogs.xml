@@ -44,7 +44,7 @@
         <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
       </response>
 
-	  <response id="StayHere" text="Stay here" >
+	  <response id="StayHere" text="Stay where you are standing" >
         <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
       </response>
@@ -59,7 +59,7 @@
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderPatrol" />
       </response> -->
 
-	  <response id="GuardHere" text="Guard here" >
+	  <response id="GuardHere" text="Stay where I am standing" >
         <requirement type="Leader, SCore" requirementtype="Hide" />
         <requirement type="HasTask, SCore" requirementtype="Hide" value="Stay" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuardHere" />
@@ -70,7 +70,7 @@
         <action type="OpenWindowSDX, SCore" id="SetCode" />
       </response> -->
 	  
-	  <response id="Loot" text="Help me loot" >
+	  <response id="Loot" text="Loot around here" >
         <requirement type="Leader, SCore" requirementtype="Hide" />
         <requirement type="HasTask, SCore" requirementtype="Hide" value="LootBasic" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
@@ -173,7 +173,7 @@
         <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
       </response>
 
-	  <response id="StayHere" text="Stay" >
+	  <response id="StayHere" text="Stay right there" >
         <requirement type="Leader, SCore" requirementtype="Hide" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
       </response>
@@ -194,7 +194,7 @@
 		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
       </response>	 
 	
-	  <response id="GuardHere" text="Guard" >
+	  <response id="GuardHere" text="Stay over here" >
         <requirement type="Leader, SCore" requirementtype="Hide" />
         <requirement type="HasTask, SCore" requirementtype="Hide" value="Stay" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuardHere" /> 

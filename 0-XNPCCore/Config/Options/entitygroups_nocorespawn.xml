@@ -1,0 +1,1215 @@
+<configs>
+
+	<!--
+        Sleeper Volume Entity Groups
+
+        These are used by the sleeper volume spawners, defined in gamestages.xml.
+        By convention, they are named "npc[Association][Classification]GroupGS[01|50|100|200|400|800]",
+        where "Association" is a larger category (like a faction),
+        and "Classification" is a smaller category within that association (like ranged vs. melee).
+		The numbers represent the maximum gamestage for that group - see gamestages.xml.
+        This should make them easier to target with XPath.
+
+		The associations and classifications of the NPCs in these groups are not enforced by the game.
+		You can place military NPCs in the "military" group, even if they are in the "whiteriver" faction.
+		(In fact, you could even put them in the "friendl animals" group, though you shouldn't.)
+
+		Since entity groups cannot be empty, None entity is added to all groups:
+		
+		The entity probabilities are gamestaged, even when they spawn at a low probability.
+
+		All probabilities have only one significant digit.
+
+		This is designed so that NPC pack creators can target those probabilities when inserting their own NPCs.
+		
+		* For Core NPCs that are in appropriate entity groups, target their probabilities, and match them.
+
+			Example: You have a bandit NPC with a weapon that is the general equivalent of a machete.
+			Match the Harley NPC armed with a machete, and spawn in with the same probability:
+			<insertAfter xpath="//entitygroup[starts-with(@name, 'npcBandit')]/entity[@name='npcHarleyMachete' and @prob='0.1']">
+				<entity name="whateverMyBanditIsNamed" prob="0.1" />
+			</insertAfter>
+			<insertAfter xpath="//entitygroup[starts-with(@name, 'npcBandit')]/entity[@name='npcHarleyMachete' and @prob='0.2']">
+				<entity name="whateverMyBanditIsNamed" prob="0.2" />
+			</insertAfter>
+			...etc.
+
+		* For Core NPCs that are not in appropriate entity groups, target their probabilities,
+		  but make your own NPCs 100x their probabilities.
+
+			Example: You have a Mech NPC with a weapon that is the general equivalent of a pistol.
+			Match the Harley NPC armed with a pistol, and spawn in with 100x their probability:
+			<insertAfter xpath="//entitygroup[starts-with(@name, 'npcMech')]/entity[@name='npcHarleyPistol' and @prob='0.001']">
+				<entity name="whateverMyMechIsNamed" prob="0.1" />
+			</insertAfter>
+			<insertAfter xpath="//entitygroup[starts-with(@name, 'npcMech')]/entity[@name='npcHarleyPistol' and @prob='0.002']">
+				<entity name="whateverMyMechIsNamed" prob="0.2" />
+			</insertAfter>
+			...etc.
+    -->
+	<insertAfter xpath="/entitygroups/entitygroup[last()]">
+		<!-- Bandits NPC entity groups -->
+		<entitygroup name="npcBanditsAllGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsAllGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsAllGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsAllGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsAllGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsAllGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsMeleeGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsMeleeGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsMeleeGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsMeleeGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsMeleeGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsMeleeGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsRangedGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsRangedGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsRangedGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsRangedGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsRangedGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsRangedGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsBossGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsBossGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsBossGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsBossGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsBossGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcBanditsBossGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+
+		<!-- Duke NPC entity groups -->
+		<entitygroup name="npcDukeAllGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeAllGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeAllGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeAllGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeAllGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeAllGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeMeleeGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeMeleeGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeMeleeGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeMeleeGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeMeleeGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeMeleeGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeRangedGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeRangedGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeRangedGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeRangedGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeRangedGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeRangedGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeBossGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeBossGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeBossGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeBossGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeBossGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDukeBossGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+
+		<!-- Military NPC entity groups -->
+		<entitygroup name="npcMilitaryAllGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryAllGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryAllGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryAllGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryAllGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryAllGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryMeleeGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryMeleeGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryMeleeGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryMeleeGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryMeleeGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryMeleeGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryRangedGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryRangedGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryRangedGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryRangedGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryRangedGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryRangedGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryBossGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryBossGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryBossGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryBossGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryBossGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMilitaryBossGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+
+		<!-- Vault NPC entity groups -->
+		<entitygroup name="npcVaultAllGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultAllGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultAllGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultAllGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultAllGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultAllGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultMeleeGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultMeleeGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultMeleeGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultMeleeGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultMeleeGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultMeleeGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultRangedGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultRangedGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultRangedGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultRangedGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultRangedGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultRangedGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultBossGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultBossGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultBossGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultBossGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultBossGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcVaultBossGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+
+		<!-- Whisperers NPC entity groups -->
+		<entitygroup name="npcWhisperersAllGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersAllGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersAllGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersAllGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersAllGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersAllGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersMeleeGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersMeleeGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersMeleeGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersMeleeGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersMeleeGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersMeleeGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersRangedGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersRangedGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersRangedGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersRangedGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersRangedGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersRangedGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersBossGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersBossGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersBossGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersBossGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersBossGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhisperersBossGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+
+		<!-- Whiteriver NPC entity groups -->
+		<entitygroup name="npcWhiteriverAllGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverAllGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverAllGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverAllGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverAllGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverAllGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverMeleeGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverMeleeGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverMeleeGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverMeleeGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverMeleeGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverMeleeGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverRangedGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverRangedGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverRangedGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverRangedGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverRangedGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverRangedGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverBossGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverBossGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverBossGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverBossGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverBossGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcWhiteriverBossGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+
+		<!-- Enemy NPC entity groups -->
+		<entitygroup name="npcEnemyAllGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyAllGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyAllGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyAllGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyAllGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyAllGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyMeleeGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyMeleeGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyMeleeGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyMeleeGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyMeleeGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyMeleeGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyRangedGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyRangedGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyRangedGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyRangedGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyRangedGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyRangedGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyBossGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyBossGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyBossGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyBossGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyBossGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyBossGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+
+		<!-- Friendly NPC entity groups -->
+		<entitygroup name="npcFriendlyAllGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyAllGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyAllGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyAllGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyAllGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyAllGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyMeleeGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyMeleeGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyMeleeGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyMeleeGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyMeleeGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyMeleeGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyRangedGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyRangedGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyRangedGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyRangedGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyRangedGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyRangedGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyBossGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyBossGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyBossGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyBossGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyBossGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyBossGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+
+		<!-- Mech NPC entity groups -->
+		<entitygroup name="npcMechAllGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechAllGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechAllGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechAllGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechAllGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechAllGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechMeleeGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechMeleeGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechMeleeGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechMeleeGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechMeleeGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechMeleeGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechRangedGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechRangedGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechRangedGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechRangedGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechRangedGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechRangedGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechBossGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechBossGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechBossGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechBossGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechBossGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcMechBossGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+
+		<!-- Fantasy NPC entity groups -->
+		<entitygroup name="npcFantasyAllGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyAllGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyAllGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyAllGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyAllGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyAllGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyMeleeGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyMeleeGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyMeleeGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyMeleeGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyMeleeGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyMeleeGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyRangedGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyRangedGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyRangedGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyRangedGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyRangedGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyRangedGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyBossGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyBossGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyBossGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyBossGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyBossGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFantasyBossGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+
+		<!-- Enemy animal entity groups -->
+		<entitygroup name="npcEnemyAnimalsAllGroupGS01">
+			<entity name="animalBear" prob="0.1" />
+			<entity name="animalCoyote" prob="0.9" />
+			<entity name="animalDireWolf" prob="0.5" />
+			<entity name="animalMountainLion" prob="0.5" />
+			<entity name="animalSnake" prob="1" />
+			<entity name="animalWolf" prob="0.9" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyAnimalsAllGroupGS50">
+			<entity name="animalBear" prob="0.2" />
+			<entity name="animalCoyote" prob="0.8" />
+			<entity name="animalDireWolf" prob="0.5" />
+			<entity name="animalMountainLion" prob="0.5" />
+			<entity name="animalSnake" prob="0.8" />
+			<entity name="animalWolf" prob="0.7" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyAnimalsAllGroupGS100">
+			<entity name="animalBear" prob="0.4" />
+			<entity name="animalCoyote" prob="0.6" />
+			<entity name="animalDireWolf" prob="0.5" />
+			<entity name="animalMountainLion" prob="0.5" />
+			<entity name="animalSnake" prob="0.6" />
+			<entity name="animalWolf" prob="0.6" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyAnimalsAllGroupGS200">
+			<entity name="animalBear" prob="0.6" />
+			<entity name="animalCoyote" prob="0.4" />
+			<entity name="animalDireWolf" prob="0.5" />
+			<entity name="animalMountainLion" prob="0.5" />
+			<entity name="animalSnake" prob="0.4" />
+			<entity name="animalWolf" prob="0.4" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyAnimalsAllGroupGS400">
+			<entity name="animalBear" prob="0.8" />
+			<entity name="animalCoyote" prob="0.2" />
+			<entity name="animalDireWolf" prob="0.5" />
+			<entity name="animalMountainLion" prob="0.5" />
+			<entity name="animalSnake" prob="0.2" />
+			<entity name="animalWolf" prob="0.3" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyAnimalsAllGroupGS800">
+			<entity name="animalBear" prob="1" />
+			<entity name="animalCoyote" prob="0.1" />
+			<entity name="animalDireWolf" prob="0.5" />
+			<entity name="animalMountainLion" prob="0.5" />
+			<entity name="animalSnake" prob="0.1" />
+			<entity name="animalWolf" prob="0.1" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyAnimalsBossGroupGS01">
+			<entity name="animalBear" prob="0.3" />
+			<entity name="animalBossGrace" prob="0.1" />
+			<entity name="animalDireWolf" prob="1" />
+			<entity name="animalMountainLion" prob="1" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyAnimalsBossGroupGS50">
+			<entity name="animalBear" prob="0.4" />
+			<entity name="animalBossGrace" prob="0.2" />
+			<entity name="animalDireWolf" prob="0.8" />
+			<entity name="animalMountainLion" prob="0.8" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyAnimalsBossGroupGS100">
+			<entity name="animalBear" prob="0.5" />
+			<entity name="animalBossGrace" prob="0.4" />
+			<entity name="animalDireWolf" prob="0.6" />
+			<entity name="animalMountainLion" prob="0.6" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyAnimalsBossGroupGS200">
+			<entity name="animalBear" prob="0.5" />
+			<entity name="animalBossGrace" prob="0.6" />
+			<entity name="animalDireWolf" prob="0.4" />
+			<entity name="animalMountainLion" prob="0.4" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyAnimalsBossGroupGS400">
+			<entity name="animalBear" prob="0.6" />
+			<entity name="animalBossGrace" prob="0.8" />
+			<entity name="animalDireWolf" prob="0.2" />
+			<entity name="animalMountainLion" prob="0.2" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcEnemyAnimalsBossGroupGS800">
+			<entity name="animalBear" prob="0.7" />
+			<entity name="animalBossGrace" prob="1" />
+			<entity name="animalDireWolf" prob="0.1" />
+			<entity name="animalMountainLion" prob="0.1" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+
+		<!-- Friendly animal entity groups -->
+		<entitygroup name="npcFriendlyAnimalsAllGroupGS01">
+			<entity name="animalBoar" prob="0.1" />
+			<entity name="animalChicken" prob="1" />
+			<entity name="animalDoe" prob="0.8" />
+			<entity name="animalRabbit" prob="1" />
+			<entity name="animalStag" prob="0.7" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyAnimalsAllGroupGS50">
+			<entity name="animalBoar" prob="0.2" />
+			<entity name="animalChicken" prob="0.8" />
+			<entity name="animalDoe" prob="0.7" />
+			<entity name="animalRabbit" prob="0.8" />
+			<entity name="animalStag" prob="0.6" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyAnimalsAllGroupGS100">
+			<entity name="animalBoar" prob="0.4" />
+			<entity name="animalChicken" prob="0.6" />
+			<entity name="animalDoe" prob="0.6" />
+			<entity name="animalRabbit" prob="0.6" />
+			<entity name="animalStag" prob="0.5" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyAnimalsAllGroupGS200">
+			<entity name="animalBoar" prob="0.6" />
+			<entity name="animalChicken" prob="0.4" />
+			<entity name="animalDoe" prob="0.4" />
+			<entity name="animalRabbit" prob="0.4" />
+			<entity name="animalStag" prob="0.5" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyAnimalsAllGroupGS400">
+			<entity name="animalBoar" prob="0.8" />
+			<entity name="animalChicken" prob="0.2" />
+			<entity name="animalDoe" prob="0.3" />
+			<entity name="animalRabbit" prob="0.2" />
+			<entity name="animalStag" prob="0.4" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyAnimalsAllGroupGS800">
+			<entity name="animalBoar" prob="1" />
+			<entity name="animalChicken" prob="0.1" />
+			<entity name="animalDoe" prob="0.2" />
+			<entity name="animalRabbit" prob="0.1" />
+			<entity name="animalStag" prob="0.3" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyAnimalsDomesticGroupGS01">
+			<entity name="animalRabbit" prob="1" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyAnimalsDomesticGroupGS50">
+			<entity name="animalRabbit" prob="0.8" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyAnimalsDomesticGroupGS100">
+			<entity name="animalRabbit" prob="0.6" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyAnimalsDomesticGroupGS200">
+			<entity name="animalRabbit" prob="0.4" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyAnimalsDomesticGroupGS400">
+			<entity name="animalRabbit" prob="0.2" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyAnimalsDomesticGroupGS800">
+			<entity name="animalRabbit" prob="0.1" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyAnimalsFarmGroupGS01">
+			<entity name="animalBoar" prob="0.1" />
+			<entity name="animalChicken" prob="1" />
+			<entity name="animalRabbit" prob="1" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyAnimalsFarmGroupGS50">
+			<entity name="animalBoar" prob="0.2" />
+			<entity name="animalChicken" prob="0.8" />
+			<entity name="animalRabbit" prob="0.8" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyAnimalsFarmGroupGS100">
+			<entity name="animalBoar" prob="0.4" />
+			<entity name="animalChicken" prob="0.6" />
+			<entity name="animalRabbit" prob="0.6" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyAnimalsFarmGroupGS200">
+			<entity name="animalBoar" prob="0.6" />
+			<entity name="animalChicken" prob="0.4" />
+			<entity name="animalRabbit" prob="0.4" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyAnimalsFarmGroupGS400">
+			<entity name="animalBoar" prob="0.8" />
+			<entity name="animalChicken" prob="0.2" />
+			<entity name="animalRabbit" prob="0.2" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFriendlyAnimalsFarmGroupGS800">
+			<entity name="animalBoar" prob="1" />
+			<entity name="animalChicken" prob="0.1" />
+			<entity name="animalRabbit" prob="0.1" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+
+		<!-- Arachnids entity groups -->
+		<entitygroup name="npcArachnidsAllGroupGS01">
+			<entity name="animalBear" prob="0.001" />
+			<entity name="animalCoyote" prob="0.009" />
+			<entity name="animalDireWolf" prob="0.005" />
+			<entity name="animalMountainLion" prob="0.005" />
+			<entity name="animalSnake" prob="0.01" />
+			<entity name="animalWolf" prob="0.009" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcArachnidsAllGroupGS50">
+			<entity name="animalBear" prob="0.002" />
+			<entity name="animalCoyote" prob="0.008" />
+			<entity name="animalDireWolf" prob="0.005" />
+			<entity name="animalMountainLion" prob="0.005" />
+			<entity name="animalSnake" prob="0.008" />
+			<entity name="animalWolf" prob="0.007" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcArachnidsAllGroupGS100">
+			<entity name="animalBear" prob="0.004" />
+			<entity name="animalCoyote" prob="0.006" />
+			<entity name="animalDireWolf" prob="0.005" />
+			<entity name="animalMountainLion" prob="0.005" />
+			<entity name="animalSnake" prob="0.006" />
+			<entity name="animalWolf" prob="0.006" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcArachnidsAllGroupGS200">
+			<entity name="animalBear" prob="0.006" />
+			<entity name="animalCoyote" prob="0.004" />
+			<entity name="animalDireWolf" prob="0.005" />
+			<entity name="animalMountainLion" prob="0.005" />
+			<entity name="animalSnake" prob="0.004" />
+			<entity name="animalWolf" prob="0.004" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcArachnidsAllGroupGS400">
+			<entity name="animalBear" prob="0.008" />
+			<entity name="animalCoyote" prob="0.002" />
+			<entity name="animalDireWolf" prob="0.005" />
+			<entity name="animalMountainLion" prob="0.005" />
+			<entity name="animalSnake" prob="0.002" />
+			<entity name="animalWolf" prob="0.003" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcArachnidsAllGroupGS800">
+			<entity name="animalBear" prob="0.01" />
+			<entity name="animalCoyote" prob="0.001" />
+			<entity name="animalDireWolf" prob="0.005" />
+			<entity name="animalMountainLion" prob="0.005" />
+			<entity name="animalSnake" prob="0.001" />
+			<entity name="animalWolf" prob="0.001" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcArachnidsBossGroupGS01">
+			<entity name="animalBear" prob="0.003" />
+			<entity name="animalBossGrace" prob="0.001" />
+			<entity name="animalDireWolf" prob="0.01" />
+			<entity name="animalMountainLion" prob="0.01" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcArachnidsBossGroupGS50">
+			<entity name="animalBear" prob="0.004" />
+			<entity name="animalBossGrace" prob="0.002" />
+			<entity name="animalDireWolf" prob="0.008" />
+			<entity name="animalMountainLion" prob="0.008" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcArachnidsBossGroupGS100">
+			<entity name="animalBear" prob="0.005" />
+			<entity name="animalBossGrace" prob="0.004" />
+			<entity name="animalDireWolf" prob="0.006" />
+			<entity name="animalMountainLion" prob="0.006" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcArachnidsBossGroupGS200">
+			<entity name="animalBear" prob="0.005" />
+			<entity name="animalBossGrace" prob="0.006" />
+			<entity name="animalDireWolf" prob="0.004" />
+			<entity name="animalMountainLion" prob="0.004" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcArachnidsBossGroupGS400">
+			<entity name="animalBear" prob="0.006" />
+			<entity name="animalBossGrace" prob="0.008" />
+			<entity name="animalDireWolf" prob="0.002" />
+			<entity name="animalMountainLion" prob="0.002" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcArachnidsBossGroupGS800">
+			<entity name="animalBear" prob="0.007" />
+			<entity name="animalBossGrace" prob="0.01" />
+			<entity name="animalDireWolf" prob="0.001" />
+			<entity name="animalMountainLion" prob="0.001" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+
+		<!-- Flyer entity groups -->
+		<entitygroup name="npcFlyersAllGroupGS01">
+			<entity name="animalZombieVultureRadiated" prob="0.001" />
+			<entity name="animalZombieVulture" prob="0.005" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFlyersAllGroupGS50">
+			<entity name="animalZombieVultureRadiated" prob="0.002" />
+			<entity name="animalZombieVulture" prob="0.005" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFlyersAllGroupGS100">
+			<entity name="animalZombieVultureRadiated" prob="0.004" />
+			<entity name="animalZombieVulture" prob="0.005" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFlyersAllGroupGS200">
+			<entity name="animalZombieVultureRadiated" prob="0.006" />
+			<entity name="animalZombieVulture" prob="0.005" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFlyersAllGroupGS400">
+			<entity name="animalZombieVultureRadiated" prob="0.008" />
+			<entity name="animalZombieVulture" prob="0.005" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFlyersAllGroupGS800">
+			<entity name="animalZombieVultureRadiated" prob="0.01" />
+			<entity name="animalZombieVulture" prob="0.005" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFlyersBossGroupGS01">
+			<entity name="animalZombieVultureRadiated" prob="0.003" />
+			<entity name="animalZombieVulture" prob="0.01" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFlyersBossGroupGS50">
+			<entity name="animalZombieVultureRadiated" prob="0.004" />
+			<entity name="animalZombieVulture" prob="0.008" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFlyersBossGroupGS100">
+			<entity name="animalZombieVultureRadiated" prob="0.005" />
+			<entity name="animalZombieVulture" prob="0.006" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFlyersBossGroupGS200">
+			<entity name="animalZombieVultureRadiated" prob="0.005" />
+			<entity name="animalZombieVulture" prob="0.004" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFlyersBossGroupGS400">
+			<entity name="animalZombieVultureRadiated" prob="0.006" />
+			<entity name="animalZombieVulture" prob="0.002" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcFlyersBossGroupGS800">
+			<entity name="animalZombieVultureRadiated" prob="0.007" />
+			<entity name="animalZombieVulture" prob="0.001" />
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+
+		<!-- Deco entity groups -->
+		<entitygroup name="npcDecoTrapGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDecoTrapGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDecoTrapGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDecoTrapGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDecoTrapGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDecoTrapGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDecoRescueGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDecoRescueGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDecoRescueGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDecoRescueGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDecoRescueGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDecoRescueGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDecoTraderGroupGS01">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDecoTraderGroupGS50">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDecoTraderGroupGS100">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDecoTraderGroupGS200">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDecoTraderGroupGS400">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+		<entitygroup name="npcDecoTraderGroupGS800">
+			<entity name="none" prob="0.001"/>
+		</entitygroup>
+	</insertAfter>
+</configs>

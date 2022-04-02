@@ -2,81 +2,79 @@
 
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
 		<!-- Goodies -->
-		<entity name="npcBakerEmptyHand" prob="0.15" />
-		<entity name="npcBakerClub" prob="0.15" />
-		<entity name="npcBakerKnife" prob="0.15" />
-		<entity name="npcBakerBat" prob="0.15" />
-		<entity name="npcBakerMachete" prob="0.15" />
-		<entity name="npcBakerSMG" prob="0.1" />
-		<entity name="npcBakerAK47" prob="0.1" />
-		<entity name="npcBakerHRifle" prob="0.1" />
-		<entity name="npcBakerPistol" prob="0.1" />
-		<entity name="npcBakerLBow" prob="0.1" />
-		<entity name="npcNurseEmptyHand" prob="0.15" />
-		<entity name="npcNurseClub" prob="0.15" />
-		<entity name="npcNurseKnife" prob="0.15" />
-		<entity name="npcNursePistol" prob="0.1" />
-		<entity name="npcNurseLBow" prob="0.1" />
-		<entity name="npcAnimalFox" prob="0.1" />
+		<entity name="npcBakerEmptyHand" prob="0.075" />
+		<entity name="npcBakerClub" prob="0.075" />
+		<entity name="npcBakerKnife" prob="0.075" />
+		<entity name="npcBakerBat" prob="0.075" />
+		<entity name="npcBakerMachete" prob="0.075" />
+		<entity name="npcBakerSMG" prob="0.05" />
+		<entity name="npcBakerAK47" prob="0.05" />
+		<entity name="npcBakerHRifle" prob="0.05" />
+		<entity name="npcBakerPistol" prob="0.05" />
+		<entity name="npcBakerLBow" prob="0.05" />
+		<entity name="npcNurseEmptyHand" prob="0.075" />
+		<entity name="npcNurseClub" prob="0.075" />
+		<entity name="npcNurseKnife" prob="0.075" />
+		<entity name="npcNursePistol" prob="0.05" />
+		<entity name="npcNurseLBow" prob="0.05" />
+		<entity name="npcAnimalFox" prob="0.05" />
 		<!-- Baddies -->
-		<entity name="npcHarleyClub" prob="0.1" />
-		<entity name="npcHarleyBat" prob="0.1" />
-		<entity name="npcHarleyKnife" prob="0.1" />	
-		<entity name="npcHarleyMachete" prob="0.1" />
-		<entity name="npcHarleySpear" prob="0.1" />	
-		<entity name="npcHarleyAxe" prob="0.1" />		
-		<entity name="npcHarleyPipePistol" prob="0.1" />
-		<entity name="npcHarleyPipeRifle" prob="0.1" />		
-		<entity name="npcHarleyPipeShotgun" prob="0.1" />
-		<entity name="none" prob="0.001"/>
+		<entity name="npcHarleyClub" prob="0.05" />
+		<entity name="npcHarleyBat" prob="0.05" />
+		<entity name="npcHarleyKnife" prob="0.05" />	
+		<entity name="npcHarleyMachete" prob="0.05" />
+		<entity name="npcHarleySpear" prob="0.05" />	
+		<entity name="npcHarleyAxe" prob="0.05" />		
+		<entity name="npcHarleyPipePistol" prob="0.05" />
+		<entity name="npcHarleyPipeRifle" prob="0.05" />		
+		<entity name="npcHarleyPipeShotgun" prob="0.05" />
 	</append>
 
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
 		<!-- Goodies -->	
-		<entity name="npcBakerEmptyHand" prob="0.15" />
-		<entity name="npcBakerClub" prob="0.15" />
-		<entity name="npcBakerKnife" prob="0.15" />
-		<entity name="npcBakerBat" prob="0.15" />
-		<entity name="npcBakerMachete" prob="0.15" />
-		<entity name="npcBakerSMG" prob="0.1" />
-		<entity name="npcBakerAK47" prob="0.1" />
-		<entity name="npcBakerHRifle" prob="0.1" />
-		<entity name="npcBakerPistol" prob="0.1" />
-		<entity name="npcBakerLBow" prob="0.1" />
-		<entity name="npcNurseEmptyHand" prob="0.15" />
-		<entity name="npcNurseClub" prob="0.15" />
-		<entity name="npcNurseKnife" prob="0.15" />
-		<entity name="npcNursePistol" prob="0.1" />
-		<entity name="npcNurseLBow" prob="0.1" />
-		<entity name="npcAnimalFox" prob="0.1" />
+		<entity name="npcBakerEmptyHand" prob="0.075" />
+		<entity name="npcBakerClub" prob="0.075" />
+		<entity name="npcBakerKnife" prob="0.075" />
+		<entity name="npcBakerBat" prob="0.075" />
+		<entity name="npcBakerMachete" prob="0.075" />
+		<entity name="npcBakerSMG" prob="0.05" />
+		<entity name="npcBakerAK47" prob="0.05" />
+		<entity name="npcBakerHRifle" prob="0.05" />
+		<entity name="npcBakerPistol" prob="0.05" />
+		<entity name="npcBakerLBow" prob="0.05" />
+		<entity name="npcNurseEmptyHand" prob="0.075" />
+		<entity name="npcNurseClub" prob="0.075" />
+		<entity name="npcNurseKnife" prob="0.075" />
+		<entity name="npcNursePistol" prob="0.05" />
+		<entity name="npcNurseLBow" prob="0.05" />
+		<entity name="npcAnimalFox" prob="0.05" />
 		<!-- Baddies -->
-		<entity name="npcHarleyClub" prob="0.1" />
-		<entity name="npcHarleyBat" prob="0.1" />
-		<entity name="npcHarleyKnife" prob="0.1" />	
-		<entity name="npcHarleyMachete" prob="0.1" />
-		<entity name="npcHarleySpear" prob="0.1" />	
-		<entity name="npcHarleyAxe" prob="0.1" />		
-		<entity name="npcHarleyPipePistol" prob="0.1" />
-		<entity name="npcHarleyPipeRifle" prob="0.1" />		
-		<entity name="npcHarleyPipeShotgun" prob="0.1" />
-		<entity name="none" prob="0.001"/>
+		<entity name="npcHarleyClub" prob="0.05" />
+		<entity name="npcHarleyBat" prob="0.05" />
+		<entity name="npcHarleyKnife" prob="0.05" />	
+		<entity name="npcHarleyMachete" prob="0.05" />
+		<entity name="npcHarleySpear" prob="0.05" />	
+		<entity name="npcHarleyAxe" prob="0.05" />		
+		<entity name="npcHarleyPipePistol" prob="0.05" />
+		<entity name="npcHarleyPipeRifle" prob="0.05" />		
+		<entity name="npcHarleyPipeShotgun" prob="0.05" />
 	</append>
 
 	<append xpath="/entitygroups/entitygroup[@name='SnowZombies']">
 		<!-- Goodies -->	
-		<entity name="npcBakerEmptyHand" prob="0.15" />
-		<entity name="npcBakerClub" prob="0.15" />
-		<entity name="npcBakerKnife" prob="0.15" />
-		<entity name="npcBakerBat" prob="0.15" />
-		<entity name="npcBakerMachete" prob="0.15" />
+		<entity name="npcBakerEmptyHand" prob="0.075" />
+		<entity name="npcBakerClub" prob="0.075" />
+		<entity name="npcBakerKnife" prob="0.075" />
+		<entity name="npcBakerBat" prob="0.075" />
+		<entity name="npcBakerMachete" prob="0.075" />
 		<entity name="npcBakerSMG" prob="0.1" />
 		<entity name="npcBakerAK47" prob="0.1" />
 		<entity name="npcBakerHRifle" prob="0.1" />
 		<entity name="npcBakerPistol" prob="0.1" />
 		<entity name="npcBakerLBow" prob="0.1" />
-		<entity name="npcNurseEmptyHand" prob="0.15" />
-		<entity name="npcNurseClub" prob="0.15" />
-		<entity name="npcNurseKnife" prob="0.15" />
+		<entity name="npcNurseEmptyHand" prob="0.075" />
+		<entity name="npcNurseClub" prob="0.075" />
+		<entity name="npcNurseKnife" prob="0.075" />
 		<entity name="npcNursePistol" prob="0.1" />
 		<entity name="npcNurseLBow" prob="0.1" />
 		<entity name="npcAnimalFox" prob="0.1" />
@@ -90,7 +88,6 @@
 		<entity name="npcHarleyPipePistol" prob="0.1" />
 		<entity name="npcHarleyPipeRifle" prob="0.1" />		
 		<entity name="npcHarleyPipeShotgun" prob="0.1" />
-		<entity name="none" prob="0.001"/>
 	</append>	
 
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']">
@@ -112,7 +109,6 @@
 		<entity name="npcHarleyAShotgun" prob="0.05" />
 		<entity name="npcHarleyXBow" prob="0.1" />
 		<entity name="npcHarleyRocketL" prob="0.025" />
-		<entity name="none" prob="0.001"/>
 	</append>
 
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']">
@@ -134,12 +130,10 @@
 		<entity name="npcHarleyAShotgun" prob="0.05" />
 		<entity name="npcHarleyXBow" prob="0.1" />
 		<entity name="npcHarleyRocketL" prob="0.025" />
-		<entity name="none" prob="0.001"/>
 	</append>
 
 	<append xpath="/entitygroups/entitygroup[descendant::entity[@name='zombieArlene']]">	
 		<entity name="zombieFemaleTutorial" />
-		<entity name="none" prob="0.001"/>
 	</append>
 
 	<!--

@@ -6,7 +6,6 @@
 			<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="buffNPCModVerifyCurrentActions"/>
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffNPCModVerifyCurrentActions"/>
 		</effect_group>
-		
 		<effect_group name="LeaderLevelUpdate"> <!-- Communicate Leaders Level to nearby NPCs -->
                 <triggered_effect trigger="onSelfBuffUpdate" target="selfAOE" range="60" action="ModifyCVar" cvar="varNPCModLeaderLevel" operation="set" value="20">
                     <requirement name="CVarCompare" target="other" cvar="Leader" operation="Equals" value="@EntityID" />
@@ -44,7 +43,7 @@
 	<!-- main player control buff -->
 	<append xpath="/buffs">
 		<buff name="buffNPCModSlowStatusCheck" hidden="true" remove_on_death="false">
-            <stack_type value="ignore"/>
+            <stack_type value="replace"/>
             <update_rate value="10"/>
             <effect_group name="buffNPCModSlowStatusCheck">
                 <triggered_effect trigger="onSelfBuffUpdate" action="NotifyTeamTeleport, SCore"/>
@@ -161,11 +160,11 @@
 			<stack_type value="ignore"/>
 			<duration value="0"/>
 		</buff>
-		<buff name="buffNPCModThreat" hidden="true">
+		<buff name="buffNPCModThreat" hidden="true" remove_on_death="true">
 			<stack_type value="ignore"/>
 			<duration value="0"/>
 		</buff>
-		<buff name="buffNPCModAttacking" hidden="true">
+		<buff name="buffNPCModAttacking" hidden="true" remove_on_death="true">
 			<stack_type value="replace"/>
 			<duration value="0"/>
 		</buff>
@@ -177,7 +176,7 @@
 			<stack_type value="replace"/>
 			<duration value="3"/>
 			<effect_group name="buffNPCModStopAttackingChange">
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varNPCModStopAttackingChange" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$varNPCModStopAttackingChange" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varNPCModStopAttacking" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="NPCResume" play_in_head="true"/>
 			</effect_group>
@@ -186,7 +185,7 @@
 			<stack_type value="replace"/>
 			<duration value="3"/>
 			<effect_group name="buffNPCModStopAttackingChange">
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varNPCModStopAttackingChange" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$varNPCModStopAttackingChange" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varNPCModStopAttacking" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="NPCHalt" play_in_head="true"/>
 			</effect_group>
@@ -195,7 +194,7 @@
 			<stack_type value="replace"/>
 			<duration value="3"/>
 			<effect_group name="buffNPCModStopAttackingChange">
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varNPCModModeChange" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$varNPCModModeChange" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varNPCModMode" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="NPCHuntingMode" play_in_head="true"/>
 			</effect_group>
@@ -204,7 +203,7 @@
 			<stack_type value="replace"/>
 			<duration value="3"/>
 			<effect_group name="buffNPCModStopAttackingChange">
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varNPCModModeChange" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$varNPCModModeChange" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varNPCModMode" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="NPCTheatControlMode" play_in_head="true"/>
 			</effect_group>
@@ -213,37 +212,18 @@
 			<stack_type value="replace"/>
 			<duration value="3"/>
 			<effect_group name="buffNPCModStopAttackingChange">
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varNPCModModeChange" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$varNPCModModeChange" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varNPCModMode" operation="set" value="2"/>
 				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="NPCFullControlMode" play_in_head="true"/>
 			</effect_group>
 		</buff>
 
-		<buff name="buffNPCStatusCheck" hidden="true" remove_on_death="false">
+		<buff name="buffNPCStatusCheck" hidden="true" remove_on_death="true">
 			<stack_type value="ignore"/>
-			<update_rate value="1"/>
+			<update_rate value="2"/>
 			<effect_group>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$infectionMaxDuration" operation="set" value="25200"/> <!-- in seconds -->
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$dysenteryMaxDuration" operation="set" value="3600"/> <!-- in seconds -->
-				<!-- Being at low health increases the chance of getting hit by a critical effect -->
-				<!--<passive_effect name="BuffResistance" operation="base_add" value="-.04" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire">
-					<requirement name="StatComparePercModMaxToMax" stat="Health" operation="LT" value="0.9"/>
-				</passive_effect>
-				<passive_effect name="BuffResistance" operation="base_add" value="-.04" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire">
-					<requirement name="StatComparePercModMaxToMax" stat="Health" operation="LT" value="0.8"/>
-				</passive_effect>
-				<passive_effect name="BuffResistance" operation="base_add" value="-.04" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire">
-					<requirement name="StatComparePercModMaxToMax" stat="Health" operation="LT" value="0.7"/>
-				</passive_effect>
-				<passive_effect name="BuffResistance" operation="base_add" value="-.04" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire">
-					<requirement name="StatComparePercModMaxToMax" stat="Health" operation="LT" value="0.6"/>
-				</passive_effect>
-				<passive_effect name="BuffResistance" operation="base_add" value="-.04" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire">
-					<requirement name="StatComparePercModMaxToMax" stat="Health" operation="LT" value="0.5"/>
-				</passive_effect>
-				<passive_effect name="BuffResistance" operation="base_add" value="-.04" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire">
-					<requirement name="StatComparePercModMaxToMax" stat="Health" operation="LT" value="0.4"/>
-				</passive_effect> -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="$infectionMaxDuration" operation="set" value="25200"/> <!-- in seconds -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="$dysenteryMaxDuration" operation="set" value="3600"/> <!-- in seconds -->
 
 				<!-- Remove particle effect if not on fire, this is a backup removal for remote clients -->
 				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveParticleEffectFromEntity" particle="p_onFire">
@@ -257,39 +237,18 @@
 				<!-- One time weather survival buff for newbies -->
 				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffNewbieCoat"/>
 				
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffRadiation03"> <!-- do we want NPCs to die if they wander into rad zones? -->
+				<!--<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffRadiation03"> 
 					<requirement name="!HasBuff" buff="god"/>
 					<requirement name="CVarCompare" cvar="_biomeradiation" operation="GT" value="2.5"/>
-				</triggered_effect>
+				</triggered_effect> -->
 				
 				<!-- Falling -->
 				<triggered_effect trigger="onSelfFallImpact" action="AddBuff" buff="buffPlayerFallingDamage">
-					<requirement name="CVarCompare" cvar="_fallSpeed" operation="GTE" value=".08"/> <!-- a bit over 1.5m while walking -->
-				</triggered_effect>
+					<requirement name="CVarCompare" cvar="_fallSpeed" operation="GTE" value=".08"/> 
+				</triggered_effect>  
 
 				<!-- Crouching -->
 				<triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="buffCrouching"/>
-				
-
-				<!-- set max bleeding stacks that an NPC can apply -->
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$maxBleedCounter" operation="set" value="2">
-					<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="0"/></triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$maxBleedCounter" operation="set" value="3">
-					<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="1"/></triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$maxBleedCounter" operation="set" value="4">
-					<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="2"/></triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$maxBleedCounter" operation="set" value="5">
-					<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="3"/></triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$maxBleedCounter" operation="set" value="6">
-					<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="4"/></triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$maxBleedCounter" operation="set" value="7">
-					<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="5"/></triggered_effect>
-
-				<!-- Initialise perk abilities; buff only works onStack so fire it 2x -->
-				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-				<!-- Update cvar driven perks on buying perk levels -->
-				<!--<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffPerkAbilityUpdate"/> -->
 			</effect_group>
 			
 			<!-- SET PASSIVE DAMAGE BUFFS/DEBUFFS -->
@@ -321,7 +280,7 @@
             </effect_group> 
 		</buff>
 	</append>	
-      
+	
 	<!-- Unity default is zero (0) for the property IsHuman.  Changing this value with a buff will change the animations from human to zombie.   -->
  
 	<!-- IsHuman Animator set to "0" (Unity default) for zombie, 1 for infected, 2 for Human, 3 for humanoid rigged animals.  Set WalkType to "7"	-->
@@ -333,10 +292,8 @@
 			<update_rate value="1"/>
 			<effect_group name="IsHuman">
 				<requirement name="!EntityTagCompare" tags="saveable"/>
-<!--				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="NPCSoundSys" /> -->
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetFloat" property="IVar" value="0.0" />
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="IsHuman" value="2" /> <!-- need to make sure animator is initalized before ending this set  -->
-<!--				<triggered_effect trigger="onSelfBuffStart" action="AnimatorFireTrigger" property="MovementTrigger" value="true" /> -->
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetInt" property="IsHuman" value="2" /> 
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="IVar" value="0.0" /> 
 			</effect_group>
@@ -1062,25 +1019,22 @@
 			<stack_type value="ignore"/>
 			<duration value="1"/>
 			<effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Timid" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$Timid" operation="set" value="1"/>
 			</effect_group>
 		</buff>	
 
 		<buff name="NPCHit" hidden="true" remove_on_death="true" > <!-- note to self, we could use a buff that detects when targets are stunned/down  -->
 			<stack_type value="ignore"/>
 			<duration value="0"/>
-			<update_rate value=".1"/>
-			<effect_group>
-				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" buff="buffHitDelay" />
-			</effect_group>
+			<update_rate value="1"/>
 			<effect_group>
 				<requirement name="CVarCompare" cvar="_stunned" operation="Equals" value="0"/> 			
-				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetBool" property="IsStunned" value="false"/> <!-- unused so far  -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetBool" property="IsStunned" value="false"/> 
  			</effect_group>		
 			<effect_group>
 				<requirement name="CVarCompare" cvar="_stunned" operation="GT" value="0"/> 			
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetBool" property="IsStunned" value="true"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffHitStun" />
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffHitStun" /> 
 			</effect_group>					
 		</buff>		
 	
@@ -1146,7 +1100,7 @@
 			<duration value="20"/>
 		</buff>
 		
-		<buff name="ActivityBuff"> <!-- This sets the IsBusy animation selection -->
+		<buff name="ActivityBuff"> 
 			<stack_type value="ignore"/>
 			<duration value="6"/>
 			<update_rate value="2"/>
@@ -1660,7 +1614,7 @@
 			<stack_type value="ignore"/>
 			<duration value="3"/> 
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$burstrate" operation="set" value="@Burstsize"/> 
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$burstrate" operation="set" value="@$Burstsize"/> 
 					<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffBurst" /> 
 				</effect_group>		
 		</buff>
@@ -1691,7 +1645,7 @@
 		<buff name="buffReload2" hidden="true">
 			<stack_type value="ignore"/><duration value="1"/> <!-- Guns wont fire while buffReload2 is running, Pipe weapon reloads are very long, may need another longer version -->
 				<effect_group name="InitializeReloadDelay">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$roundsinmag" operation="set" value="@Magsize"/> <!-- refills magazine  -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$roundsinmag" operation="set" value="@$Magsize"/> <!-- refills magazine  -->
 					<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetBool" property="Reload" value="false" duration="1" /> <!-- stops reloading anim -->
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffReload3" /> 
 					<!--<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffReload2" /> -->
@@ -1738,20 +1692,6 @@
 					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffReload" /> 
 				</effect_group>
 		</buff>	
-		
-		<!--  Buff for testing IsBusy code  -->
-		<buff name="MyNPCTestBuff">
-			<stack_type value="ignore"/>
-			<duration value="6"/>
-			<update_rate value="2"/>
-			<effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetBool" property="IsBusy" value="true"/>
-				<triggered_effect trigger="onSelfBuffFinish" action="AnimatorSetBool" property="IsBusy" value="false"/>
-			</effect_group>
-			<effect_group>
-				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="=== Pausing to do an action"/>
-			</effect_group>
-		</buff>
 	</append>
 	
 	<!--  Werewolf transform Buffs  -->
@@ -1906,10 +1846,6 @@
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorFireTrigger" property="Yes" />
 			</effect_group>
 		</buff>		
-		
-		
-		
-		
 	</append>		
 	<!--  Character mesh activation buffs  -->
 
@@ -1933,58 +1869,10 @@
 			<stack_type value="ignore"/>
 			<effect_group>
 			<!--	<passive_effect name="WalkSpeed" operation="base_set" value=".6"/> -->
-				<passive_effect name="RunSpeed" operation="base_set" value="1.6"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="2.0"/>
 			</effect_group>
 		</buff>
 	</append>	
-	
-	<!--  Buff to test strafing, but A* pathing keeps them on rails  -->	
-	<append xpath="/buffs">	
-		<buff name="NPCevade" icon="ui_game_symbol_agility" icon_color="132,0,155">
-			<display_value_key value="Evade"/> <display_value value="xxx"/>
-			<stack_type value="ignore"/>
-			<duration value="0"/>
-			<update_rate value="1"/>
-					<effect_group name="NPCStrafeChange">
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="StrafeChange" operation="set" value="randomint(0,2)"/>
-			</effect_group> 
-				<effect_group>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="Strafe" value="0" />
-				<requirement name="CVarCompare" cvar="StrafeChange" operation="Equals" value="0"/>
-			</effect_group> 
-			<effect_group>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="Strafe" value="0.07" />
-				<requirement name="CVarCompare" cvar="StrafeChange" operation="Equals" value="1"/> 
-			</effect_group>			
-			<effect_group>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetFloat" property="Strafe" value="-0.25" />
-				<requirement name="CVarCompare" cvar="StrafeChange" operation="Equals" value="2"/>
-			</effect_group>		
-		</buff>
-	</append>	
-	
-	
-	<!--  Testing Perks -->
-	<append xpath="/buffs"> 
-		<buff name="Gunslinger" hidden="true" remove_on_death="true" >
-		<stack_type value="ignore"/>
-			<duration value="0"/>
-			<update_rate value="1"/>
-			<effect_group name="AddGunslingerProgression">
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="SetProgressionLevel" progression_name="perkGunslinger" level="1"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkGunslinger" level="1"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="perkGunslinger" level="2">
-					<requirement name="RandomRoll" seed_type="Player" min_max="0,100" operation="LTE" value="30"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="perkGunslinger" level="3">
-					<requirement name="RandomRoll" seed_type="Player" min_max="0,100" operation="LTE" value="20"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="perkGunslinger" level="4">
-					<requirement name="RandomRoll" seed_type="Player" min_max="0,100" operation="LTE" value="10"/>
-				</triggered_effect> 
-			</effect_group>	
-		</buff>	
-	</append>
 	
 	<!--  Until TFP changes the configuration of the fire particle, its not compatible with some custom entities, so if there is a tag "cp" on a character, it will use alternative particles --> 
 
@@ -2016,5 +1904,110 @@
 			<triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buff_burn_extinguish"/>
 		</effect_group>
 	</insertAfter>
+
+	<!-- 2022-03-23 OPTIMIZATION CHANGES -->
+	<!-- 2022-03-23 OPTIMIZATION CHANGES -->
+	<!-- 2022-03-23 OPTIMIZATION CHANGES -->
+
+	<!-- REMOVE BUFF WITH NETWORKED VARIABLES AND AOE TARGETS -->
+	<remove xpath="//buff[@name='buffStatusCheck01']/effect_group[@name='LeaderLevelUpdate']"/>
+	<remove xpath="//buff[@name='buffNPCStatusCheck']/effect_group[starts-with(@name, 'EntityDamageLeaderLevel')]"/>
+	<remove xpath="//buff[@name='buffNPCModVerifyCurrentActions']/effect_group[@name='buffNPCModVerifyCurrentActions']/triggered_effect[@target='selfAOE']"/>
+
+	<set xpath="//buff[@name='buffNPCStatusCheck']">
+		<stack_type value="ignore"/>
+		<update_rate value="2"/>
+		<effect_group>
+			<!-- Crouching -->
+			<triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="buffCrouching"/>
+		</effect_group>
+	</set>
+
+	<append xpath="/buffs">
+		<buff name="NPCModUpdateLeaderControl" >
+			<stack_type value="ignore"/>
+			<duration value="1" />
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="NPCModPreviousOrder" operation="set" value="@CurrentOrder"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffNPCModStopAttacking">
+					<requirement name="CVarCompare" target="other" cvar="EntityID" operation="Equals" value="@Leader" />
+					<requirement name="CVarCompare" target="other" cvar="varNPCModStopAttacking" operation="Equals" value="0" />
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffNPCModStopAttacking">
+					<requirement name="CVarCompare" target="other" cvar="EntityID" operation="Equals" value="@Leader" />
+					<requirement name="CVarCompare" target="other" cvar="varNPCModStopAttacking" operation="Equals" value="1" />
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffNPCModFullControlMode">
+					<requirement name="CVarCompare" target="other" cvar="EntityID" operation="Equals" value="@Leader" />
+					<requirement name="CVarCompare" target="other" cvar="varNPCModMode" operation="Equals" value="0" />
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffNPCModFullControlMode">
+					<requirement name="CVarCompare" target="other" cvar="EntityID" operation="Equals" value="@Leader" />
+					<requirement name="CVarCompare" target="other" cvar="varNPCModMode" operation="Equals" value="1" />
+				</triggered_effect>
+			</effect_group>
+		</buff>
+	</append> 
+
+	<append xpath="/buffs/buff[@name='buffNPCStatusCheck']">
+		<!-- REPLACEMENT FOR HEALING CONSIDERATIONS -->
+		<effect_group name="NPCHealing">
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="IsHealing">
+				<requirement name="!HasBuff" buff="IsHealing"/>
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="LTE" value=".8"/>
+				<requirement name="CVarCompare" cvar="$NPCModHealingCooldown" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$NPCModHealingCooldown" operation="add" value="-1">
+				<requirement name="CVarCompare" cvar="$NPCModHealingCooldown" operation="GT" value="0"/>
+			</triggered_effect>
+		</effect_group> 
+		<effect_group name="NPCModUpdateLeaderControl">
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="NPCModUpdateLeaderControl">
+				<requirement name="CVarCompare" cvar="NPCModPreviousOrder" operation="NotEquals" value="@CurrentOrder" />
+			</triggered_effect>		
+		</effect_group> 
+	</append> 
+
+	<!-- REMOVE NOTIFY TEAM TELEPORT -->
+	<!--<remove xpath="//buff[@name='buffNPCModSlowStatusCheck']"/>-->
+
+	<setattribute xpath="/buffs/buff[@name='buffNPCModModeChange0']/effect_group/triggered_effect[@cvar='varNPCModMode']" name="value">0</setattribute>
+	<setattribute xpath="/buffs/buff[@name='buffNPCModModeChange2']/effect_group/triggered_effect[@cvar='varNPCModMode']" name="value">1</setattribute>
+				
+	<remove xpath="//buff[@name='buffNPCModVerifyCurrentActions']/effect_group/triggered_effect[@buff='buffNPCModHuntingModeDisplay']"/>
+	<remove xpath="//buff[@name='buffNPCModVerifyCurrentActions']/effect_group/triggered_effect[@buff='buffNPCModThreatControlModeDisplay']"/>
+	<remove xpath="//buff[@name='buffNPCModVerifyCurrentActions']/effect_group/triggered_effect[@buff='buffNPCModFullControlModeDisplay']"/>
+
+	<append xpath="/buffs/buff[@name='buffNPCModVerifyCurrentActions']/effect_group[@name='buffNPCModVerifyCurrentActions']">
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffNPCModFullControlModeDisplay">
+			<requirement name="CVarCompare" cvar="varNPCModMode" operation="Equals" value="0" />
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffNPCModHuntingModeDisplay">
+			<requirement name="CVarCompare" cvar="varNPCModMode" operation="Equals" value="0" />
+			<requirement name="CVarCompare" cvar="EntityID" operation="GT" value="0" />				
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffNPCModHuntingModeDisplay">
+			<requirement name="CVarCompare" cvar="varNPCModMode" operation="Equals" value="1" />
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffNPCModFullControlModeDisplay">
+			<requirement name="CVarCompare" cvar="varNPCModMode" operation="Equals" value="1" />
+			<requirement name="CVarCompare" cvar="EntityID" operation="GT" value="0" />				
+		</triggered_effect>
+	</append> 
+
+	<set xpath="//buff[@name='IsHealing']">
+		<stack_type value="ignore"/>
+		<duration value="3"/>
+		<update_rate value="1"/>
+		<effect_group name="IsHealing">
+			<triggered_effect trigger="onSelfBuffStart" action="AnimatorFireTrigger" property="Heal" />
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="healAbrasionMult" operation="set" value="3"/> 
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="medicalRegHealthAmount" operation="add" value="30"/> 
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="medRegHealthIncSpeed" operation="set" value="2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryBleeding"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NPCModHealingCooldown" operation="set" value="20"/>
+		</effect_group>
+	</set>
 
 </configs>

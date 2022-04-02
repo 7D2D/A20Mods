@@ -54,9 +54,21 @@
       <property name="SortOrder2" value="0050"/>
       <property name="DisplayType" value="blockTerrainFertile" />
     </block>
-   
-
- <!--		<block name="DeadNurseBlock">
+	
+	<!-- Example xml for spawning in a NPC with an order and weapon -->
+	
+	<block name="SpawnCubeNurseX">
+		<property name="CreativeMode" value="Player"/>
+		<property name="Extends" value="SpawnCube"/> <!-- loads from SCore mod  -->
+		<property name="Class" value="SpawnCube2SDX, SCore" />
+		<property name="Config" value="ec=npcNurseClub;buff=buffOrderStay;pc=0" />
+		<property name="Model" value="#@modfolder:Resources/XythNPCs.unity3d?NurseNancySpawnBlock_X"/>
+		<property name="ModelOffset" value="0,0,0"/>
+	</block>
+	
+	<!-- older spawning method  -->
+ 
+ <!--	<block name="DeadNurseBlock">
 			<property name="CustomIcon" value="sleeperWolfAnimal" />
 			<property name="DescriptionKey" value="DFbabyWolfMaleDesc"/> 
 			<property name="LightOpacity" value="0"/>
