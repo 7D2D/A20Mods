@@ -90,6 +90,7 @@
 			<relationship name="undead" value="hate"/>
 			<relationship name="whisperers" value="hate"/>
 			<relationship name="bandits" value="hate"/>
+			<relationship name="zombieanimals" value="hate" />
 			<relationship name="mechs" value="hate"/>
 		</faction>	
 
@@ -157,6 +158,7 @@
         <relationship name="aggressiveanimalssmall" value="hate"/>
         <relationship name="aggressiveanimalsmedium" value="hate"/>
 		<relationship name="aggressiveanimalslarge" value="hate"/>
+		<relationship name="zombieanimals" value="hate" />
 		<relationship name="mechs" value="hate"/>
 		<relationship name="whisperers" value="hate"/>
     </append>
@@ -184,6 +186,7 @@
             <relationship name="aggressiveanimalssmall" value="hate"/>
             <relationship name="aggressiveanimalsmedium" value="hate"/>
 			<relationship name="aggressiveanimalslarge" value="hate"/>
+			<relationship name="zombieanimals" value="hate" />
 			<relationship name="mechs" value="hate"/>
         </faction>
         <!-- Generic military faction - see below to see how it might be broken up into other factions -->
@@ -211,6 +214,7 @@
 			<relationship name="aggressiveanimalssmall" value="hate"/>
 			<relationship name="aggressiveanimalsmedium" value="hate"/>
 			<relationship name="aggressiveanimalslarge" value="hate"/>
+			<relationship name="zombieanimals" value="hate" />
 			<relationship name="mechs" value="hate"/>
 		</faction>
 		<faction name="blueteam">
@@ -223,6 +227,7 @@
 			<relationship name="aggressiveanimalssmall" value="hate"/>
 			<relationship name="aggressiveanimalsmedium" value="hate"/>
 			<relationship name="aggressiveanimalslarge" value="hate"/>
+			<relationship name="zombieanimals" value="hate" />
 			<relationship name="mechs" value="hate"/>
 		</faction>	
 		<faction name="greenteam">
@@ -235,6 +240,7 @@
 			<relationship name="aggressiveanimalssmall" value="hate"/>
 			<relationship name="aggressiveanimalsmedium" value="hate"/>
 			<relationship name="aggressiveanimalslarge" value="hate"/>
+			<relationship name="zombieanimals" value="hate" />
 			<relationship name="mechs" value="hate"/>
 		</faction>	
 		
