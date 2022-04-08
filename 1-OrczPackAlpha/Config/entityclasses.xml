@@ -1,0 +1,76 @@
+<configs>
+
+	<append xpath="/entity_classes">
+                
+                <!-- Orc models by Maksim Bugrimov, Female Orc by Andryuha 1981 Purchased for use in NPC Mod  -->
+
+                <entity_class name="OrcGurl" extends="npcMacheteTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="Ghak,Bogdub,Nargol,Ghorza,Dura,Atub,Rogbut,Oghash" />
+			<property name="Mesh" value="#@modfolder:Resources/Orcz.unity3d?OrcGurlDark"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="OrcSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="OrcSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="OrcSword"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
+		</entity_class>	
+	
+		<entity_class name="OrcBandit" extends="npcClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="OrcClub"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="OrcClub"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="OrcClub"/> 
+			<property name="Names" value="Grug,Urug,Lumdum,Lorzub,Snaglak,Shamob,Purbag,Orgug" />				
+			<property name="Mesh" value="#@modfolder:Resources/Orcz.unity3d?OrcHorde1Dark"/>
+		</entity_class>
+
+                <entity_class name="OrcRaider" extends="npcClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="OrcClub"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="OrcClub"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="OrcClub"/> 
+			<property name="Names" value="Grug,Urug,Lumdum,Lorzub,Snaglak,Shamob,Purbag,Orgug" />				
+			<property name="Mesh" value="#@modfolder:Resources/Orcz.unity3d?OrcHorde2Dark"/>
+		</entity_class>
+
+                <entity_class name="OrcArcher" extends="npcLBowTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="Names" value="Grug,Urug,Lumdum,Lorzub,Snaglak,Shamob,Purbag,Orgug" />
+		        <property name="LookAtAngle" value="0"/> 			
+			<property name="Mesh" value="#@modfolder:Resources/Orcz.unity3d?OrcArcherDark"/> 
+		</entity_class> 		
+		
+		<entity_class name="OrcCrossbowman" extends="npcXBowTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="Names" value="Grug,Urug,Lumdum,Lorzub,Snaglak,Shamob,Purbag,Orgug" />
+			<property name="LookAtAngle" value="0"/> 				
+			<property name="Mesh" value="#@modfolder:Resources/Orcz.unity3d?OrcArcherDark"/> 
+		</entity_class>	 
+
+		</append>	
+	
+</configs>

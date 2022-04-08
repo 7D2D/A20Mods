@@ -1,0 +1,68 @@
+<configs>
+
+	 <append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
+		<entity name="OrcGurl" prob=".05" />
+                <entity name="OrcBandit" prob=".05" />
+		<entity name="OrcRaider" prob=".05" />
+		<entity name="OrcArcher" prob=".05" />
+		<entity name="OrcCrossbowman" prob=".05" />     
+	</append>
+	
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
+		<entity name="OrcGurl" prob=".05" />
+                <entity name="OrcBandit" prob=".05" />
+		<entity name="OrcRaider" prob=".05" />
+		<entity name="OrcArcher" prob=".05" />
+		<entity name="OrcCrossbowman" prob=".05" /> 		
+	</append>
+	
+	<append xpath="/entitygroups/entitygroup[@name='SnowZombies']">
+		<entity name="OrcGurl" prob=".05" />
+                <entity name="OrcBandit" prob=".05" />
+		<entity name="OrcRaider" prob=".05" />
+		<entity name="OrcArcher" prob=".05" />
+		<entity name="OrcCrossbowman" prob=".05" /> 
+	</append>	
+
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']">
+	       	<entity name="OrcGurl" prob=".05" />
+                <entity name="OrcBandit" prob=".05" />
+		<entity name="OrcRaider" prob=".05" />
+		<entity name="OrcArcher" prob=".05" />
+		<entity name="OrcCrossbowman" prob=".05" /> 		
+	</append>
+
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']">
+		<entity name="OrcGurl" prob=".05" />
+                <entity name="OrcBandit" prob=".05" />
+		<entity name="OrcRaider" prob=".05" />
+		<entity name="OrcArcher" prob=".05" />
+		<entity name="OrcCrossbowman" prob=".05" />    	
+	</append>
+
+          <append xpath="/entitygroups">
+
+		<entitygroup name="npcBanditsAllGroupGS01">
+            <entity name="OrcGurl"/>
+            <entity name="OrcBandit"/>
+            <entity name="OrcRaider"/>
+            <entity name="OrcArcher"/>
+            <entity name="OrcCrossbowman"/>			
+		</entitygroup>
+
+		<entitygroup name="npcBanditsMeleeGroupGS01">
+            <entity name="OrcGurl"/>
+            <entity name="OrcBandit"/>
+            <entity name="OrcRaider"/>		
+		</entitygroup>
+
+		<entitygroup name="npcBanditsRangedGroupGS01">
+            <entity name="OrcArcher"/>
+            <entity name="OrcCrossbowman"/>				
+		</entitygroup>	
+	
+	</append>
+
+	
+
+</configs>
