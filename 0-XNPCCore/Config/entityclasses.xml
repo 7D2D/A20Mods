@@ -1698,7 +1698,6 @@
             <property name="SoundAttack" value="wolfattack"/>
             <property name="SoundSense" value="wolfsense"/>
             <property name="SoundGiveUp" value="wolfgiveup"/>		
-			<property name="AIPackages" value="NPCAnimalCompanion, NPCMeleeCompanion, NPCHiredCompanion "/>
             <property name="MaxViewAngle" value="360"/>
             <property name="NPCID" value="NPCAnimalGeneric"/> 
 			<property name="Hirable" value="true" />
@@ -1738,7 +1737,6 @@
 			<property name="MoveSpeed" value="0.3"/> 
 			<property name="MoveSpeedAggro" value="1.1,1.1"/> 
 			<property name="MoveSpeedPanic" value="1.1"/>
-			<property name="AIPackages" value="NPCAnimalCompanion, NPCRanged, NPCHiredCompanion"/><!-- Placeholder, will eventually make animal specific AI packages  -->
 			<property name="Hirable" value="true" />
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="400"/>
@@ -2387,7 +2385,7 @@
 
 		<!--  NPC Mech templates  -->
 		
-		<entity_class name="NPCMechMeleeTemplate" extends="npcMeleeTemplate" >
+		<entity_class name="npcMechMeleeTemplate" extends="npcMeleeTemplate" >
 			<property name="Mesh" value="#@modfolder:Resources/XythMechs.unity3d?Drone_X"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="EntityType" value="Player"/>
@@ -2410,7 +2408,6 @@
 			<property name="Faction" value="mechs"/>
 			<property name="HandItem" value="meleeNPCEmptyHand"/>
 			<property name="SurfaceCategory" value="metal"/>
-			<property name="NPCID" value="spheretest"/>
 			<property name="IsEnemyEntity" value="false"/> 		
 			<property name="MoveSpeed" value=".3"/>
 			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
@@ -2420,7 +2417,7 @@
 			<property name="RightHandJointName" value="GunJoint" />  	
 			<property name="AIPathCostScale" value=".9, 1"/>
 			<property name="AINoiseSeekDist" value="20"/>
-			<property name="AIPackages" value="NPCMechBasic, NPCMelee, NPCHired"/>
+
 			<!--<property name="AITask-1" value="ApproachAndAttackSDX, SCore" data="class=EntityAlive,0"/>
 			<property name="AITask-2" value="ApproachAndFollowTargetSDX, SCore" data="incentives=Leader"/>
 			<property name="AITask-3" value="Look"/>
@@ -2475,6 +2472,16 @@
 			<property name="HireCurrency" value="carBattery" />
 			<property name="HireCost" value="1" />
 		</entity_class> 
+		
+		<entity_class name="NPCMechMeleeTemplate" extends="npcMechMeleeTemplate" > <!-- for backwards compatibility  -->
+			<property name="Tags" value="entity,npc,mech"/>	
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Faction" value="mechs"/>
+			<property name="Names" value="KITT,HK-47,ED-209,Clank,Johnny5,Roboto,Marvin,Robbie,Rosie,HAL9000,GLaDOS,Bender" />		
+		</entity_class> 
+		
+		
+		
 
 	<!--  End Of Template Section  -->
 
@@ -3853,35 +3860,6 @@
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class> 	
 		
-		<!--  SemiHuman Saveable Quest characters  WIP -->
-
-		<entity_class name="zombieFatMamaHDQuest" extends="npcMeleeSavableTemplate"> 
-			<property name="Tags" value="entity,female,zombie,saveable"/> 
-			<property name="Faction" value="undead"/>			
-			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<!--			<property name="Mesh" value="#@modfolder(0-CreaturePackTFPZombies):Resources/XythTFPZombies.unity3d?zombieStandardBigMamaHDRagdoll_X"/> -->
-			<!-- Model ripped from base game, Rig from base game  -->
-			<property name="WalkType" value="1"/> 
-			<property name="PhysicsBody" value="zombieFemaleFat"/>
-			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
-			<property name="Mass" value="260"/>
-			<property name="MoveSpeed" value="0.08"/> <!-- Just shambling around -->
-			<property name="MoveSpeedAggro" value="0.2, 1.25"/> <!-- Chasing a target min/max (like day or night)-->
-			<property name="MoveSpeedRand" value="-.2, .25"/> <!-- Rand added to min aggro speed -->
-			<property name="MoveSpeedPanic" value="0.55"/>
-			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="300"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
-				<triggered_effect trigger="onSelfFirstSpawn" action="AnimatorSetFloat" property="IVar" value="1.0" duration="1"/>
-			</effect_group>
-			<effect_group name="IsTFPZombie">
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="IsZombie"/>	
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="CanTalk"/>	
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="IsTalking"/>	
-			</effect_group>	
-			<property name="AIPackages" value="Zombie Dumb, Human Basic, Human Melee Basic"/> 
-		</entity_class>	
-		
 		<!-- Loot drop containers  -->
 		
 		<entity_class name="EntityLootContainerNPC"> 
@@ -3918,6 +3896,7 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
+			<property name="LookAtAngle" value="0"/> 
 			<property name="HasRagdoll" value="true"/>
 			<property name="HasDeathAnim" value="true"/>
 			<property name="RootMotion" value="false"/>
@@ -3942,7 +3921,6 @@
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
-			<property name="AIPackages" value="NPCAnimalCompanion, NPCMeleeCompanion, NPCHiredCompanion, NPCLoot "/> 
 			<property class="Boundary" >
                 <property name="BoundaryBox" value=".2,.3,1.1" />
                 <property name="Center" value="0,.15,0"/>
@@ -3972,6 +3950,7 @@
 			<property name="Faction" value="aggressiveanimalssmall"/> 
 			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
+			<property name="LookAtAngle" value="0"/> 
 			<property name="HasRagdoll" value="true"/>
 			<property name="HasDeathAnim" value="true"/>
 			<property name="RootMotion" value="false"/>
@@ -3987,8 +3966,6 @@
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAnimalRabbit,0,0"/>
 			<property name="AITarget-4" value=""/>
-			<!--<property name="Faction" value="Aggressive Animals"/>
-			<property name="AIPackages" value="Animal Aggressive"/> Testing  -->
 			<property name="SoundRandom" value="coyoteroam"/>
 			<property name="SoundAlert" value="wolfalert"/>
 			<property name="SoundHurt" value="wolfpain"/>
@@ -4043,10 +4020,7 @@
 			  <property name="DismemberTag_L_LeftLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/LeftLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/LeftLowerArm" data="target=LeftForeArmRoll+scale=.15,1,1+type=blunt+detach=true;target=LeftForeArmRoll+scale=.01,.85,.85+type=blade+detach=true" />
 			  <property name="DismemberTag_L_RightUpperArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightUpperArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightUpperArm" data="target=RightArmRoll+scale=0.2,1,1+atp=true+type=blunt+detach=true;target=RightArmRoll+scale=.1,.8,.8+atp=true+type=blade+detach=true" />
 			  <property name="DismemberTag_L_RightLowerArmGore" value="Prefabs/Dismemberment/ZombieSteve/Blunt/RightLowerArm;Prefabs/Dismemberment/ZombieSteve/Blade/RightLowerArm" data="target=RightForeArmRoll+scale=.15,1,1+atp=true+type=blunt+detach=true;target=RightForeArmRoll+scale=.1,.9,.9+type=blade+detach=true" /> -->
-		
-			<!--	<property name="AIPackages" value="Zombie Dumb"/>  -->
-			  
-			  
+		  
 		</entity_class>
 		
 		<entity_class name="zombieFemaleTutorialFeral" extends="zombieFemaleTutorial">
@@ -4063,7 +4037,6 @@
 				<passive_effect name="HealthMax" operation="base_set" value="300"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 			</effect_group>
-		<!--	<property name="AIPackages" value="Zombie Dumb"/>  Do not use yet  -->
 		</entity_class>		
 		
 		<!--  For testing walktypes and tuning  -->		
@@ -4216,9 +4189,6 @@
 	</append>	
 
 	<!-- 2022-03-23 OPTIMIZATION CHANGES -->
-
-	<remove xpath="//entity_class[starts-with(@name, 'npc')]/property[@name='AIPackages']"/>
-	
 	<!-- ASSOCIATE WEAPON-SPECIFIC UAI PACKAGES -->
 	<!-- BASIC TEMPLATE -->
 	<append xpath="/entity_classes/entity_class[@name='npcEmptyHandTemplate' or
@@ -4301,5 +4271,17 @@
 												]">
 		<property name="AIPackages" value="NPCModBasicRanged, NPCModNPCLongRanged, NPCHired"/>
 	</append>
-
+	
+	<append xpath="/entity_classes/entity_class[@name='npcAnimalMeleeTemplate']">
+        <property name="AIPackages" value="NPCAnimalCompanion, NPCModNPCMeleeBasic, NPCHired"/>
+    </append>
+	
+	<append xpath="/entity_classes/entity_class[@name='npcAnimalRangedTemplate']">
+        <property name="AIPackages" value="NPCAnimalCompanion, NPCModNPCShortRanged, NPCHired"/>
+    </append>
+	
+	<append xpath="/entity_classes/entity_class[@name='npcMechMeleeTemplate']">
+        <property name="AIPackages" value="NPCModBasicMeleeNoChat, NPCModNPCMeleeBasic"/><!-- add NPCHired if your making mechs a hireable faction  -->
+    </append>			
+	
 </configs>
