@@ -517,7 +517,7 @@
                 </action>
             </ai_package>
 			
-			<ai_package name="NPCCraft"> <!--  Not hooked up yet  -->
+			<ai_package name="NPCCrafter"> <!--  Not hooked up yet  -->
 				<action name="Craft Basic" weight="2">
 					<task class="MoveToExplore, SCore" run="false" buff="ActivityBuff"/>
 					<!-- NPC will wander a chunk area and look for a PathTarget type specified.  If true, move to target and when reached, run the specified ActivityBuff so correct animation plays  -->
@@ -530,6 +530,16 @@
 					<!-- Checks if the NPC has any Tile Entities in its area of scan. If there's none, it'll scan for some -->
 					<consideration class="PathTarget, SCore" type="Campfire, Forge, Workstation"/>
 					<!-- filter the task even more by tile entity type. -->
+				</action>
+			</ai_package>
+			<ai_package name="NPCFarmer" >
+				<action name="Harvest" weight="3" entity_filter="IsSelf" >
+					<task class="Farming, SCore" run="false" buff="IsGathering"/>
+					<!-- Default distance is 10 if distance is not specified.-->
+					<consideration class="IsNearFarm, SCore" distance="50" />
+				
+					<!-- Don't do farming if the enemies are dear by-->
+					<consideration class="EnemyNotNear, SCore" distance="15"/>
 				</action>
 			</ai_package>
 
