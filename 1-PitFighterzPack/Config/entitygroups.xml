@@ -1,263 +1,361 @@
 <configs>
-	<insertBefore xpath="/entitygroups/entitygroup[starts-with(@name, 'WildGame')]/entity[@name='none']">
-		<entity name="FireBoxerBanditEmptyHand" prob=".1" />
-		<entity name="GoldilocksBanditEmptyHand" prob=".1" />
-		<entity name="MMABanditEmptyHand" prob=".1" />
-		<entity name="KarateBanditEmptyHand" prob=".1" />
-		<entity name="FireBoxerSurvivorEmptyHand" prob=".1" />
-		<entity name="GoldilocksSurvivorEmptyHand" prob=".1" />
-		<entity name="MMASurvivorEmptyHand" prob=".1" />
-		<entity name="KarateSurvivorEmptyHand" prob=".1" />
-	</insertBefore>
+
+<!-- Lowest Vanilla ZombiesAll is zombieJanitor prob=0.2 -->
+	 <append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
+		<entity name="FireBoxerBanditEmptyHand" prob="0.1" />
+		<entity name="GoldilocksBanditEmptyHand" prob="0.1" />
+		<entity name="MMABanditEmptyHand" prob="0.1" />
+		<entity name="KarateBanditEmptyHand" prob="0.1" />
+		<entity name="FireBoxerSurvivorEmptyHand" prob="0.1" />
+		<entity name="GoldilocksSurvivorEmptyHand" prob="0.1" />
+		<entity name="MMASurvivorEmptyHand" prob="0.1" />
+		<entity name="KarateSurvivorEmptyHand" prob="0.1" />     
+	</append>
+
+<!-- Lowest Vanilla ZombiesNight is animalZombieDog prob=0.05 -->	
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
+		<entity name="FireBoxerBanditEmptyHand" prob="0.025" />
+		<entity name="GoldilocksBanditEmptyHand" prob="0.025" />
+		<entity name="MMABanditEmptyHand" prob="0.025" />
+		<entity name="KarateBanditEmptyHand" prob="0.025" />
+		<entity name="FireBoxerSurvivorEmptyHand" prob="0.025" />
+		<entity name="GoldilocksSurvivorEmptyHand" prob="0.025" />
+		<entity name="MMASurvivorEmptyHand" prob="0.025" />
+		<entity name="KarateSurvivorEmptyHand" prob="0.025" /> 		
+	</append>
+	
+<!-- Lowest Vanilla SnowZombies is zombieLumberjack prob=1.0 -->	
+	<append xpath="/entitygroups/entitygroup[@name='SnowZombies']">
+		<entity name="FireBoxerBanditEmptyHand" prob="0.1" />
+		<entity name="GoldilocksBanditEmptyHand" prob="0.1" />
+		<entity name="MMABanditEmptyHand" prob="0.1" />
+		<entity name="KarateBanditEmptyHand" prob="0.1" />
+		<entity name="FireBoxerSurvivorEmptyHand" prob="0.1" />
+		<entity name="GoldilocksSurvivorEmptyHand" prob="0.1" />
+		<entity name="MMASurvivorEmptyHand" prob="0.1" />
+		<entity name="KarateSurvivorEmptyHand" prob="0.1" />  
+	</append>	
+
+<!-- Lowest Vanilla ZombiesWasteland is mixed prob=1.0 -->
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']">
+		<entity name="FireBoxerBanditEmptyHand" prob="0.1" />
+		<entity name="GoldilocksBanditEmptyHand" prob="0.1" />
+		<entity name="MMABanditEmptyHand" prob="0.1" />
+		<entity name="KarateBanditEmptyHand" prob="0.1" />
+		<entity name="FireBoxerSurvivorEmptyHand" prob="0.1" />
+		<entity name="GoldilocksSurvivorEmptyHand" prob="0.1" />
+		<entity name="MMASurvivorEmptyHand" prob="0.1" />
+		<entity name="KarateSurvivorEmptyHand" prob="0.1" />  		
+	</append>
+
+<!-- Lowest Vanilla ZombiesWastelandNight is mixed prob=1.0 -->
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']">
+		<entity name="FireBoxerBanditEmptyHand" prob="0.1" />
+		<entity name="GoldilocksBanditEmptyHand" prob="0.1" />
+		<entity name="MMABanditEmptyHand" prob="0.1" />
+		<entity name="KarateBanditEmptyHand" prob="0.1" />
+		<entity name="FireBoxerSurvivorEmptyHand" prob="0.1" />
+		<entity name="GoldilocksSurvivorEmptyHand" prob="0.1" />
+		<entity name="MMASurvivorEmptyHand" prob="0.1" />
+		<entity name="KarateSurvivorEmptyHand" prob="0.1" />     	
+	</append>
 
 	<!--
 		Entity groups used by spawners for sleeper volumes
 	-->
 	<!-- Bandits NPC entity groups -->
 	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS01']">
-		<entity name="FireBoxerBanditEmptyHand" prob="1" />
-		<entity name="GoldilocksBanditEmptyHand" prob="1" />
-		<entity name="MMABanditEmptyHand" prob="1" />
-		<entity name="KarateBanditEmptyHand" prob="1" />
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS50']">
-		<entity name="FireBoxerBanditEmptyHand" prob="0.8" />
-		<entity name="GoldilocksBanditEmptyHand" prob="0.8" />
-		<entity name="MMABanditEmptyHand" prob="0.8" />
-		<entity name="KarateBanditEmptyHand" prob="0.8" />
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS100']">
-		<entity name="FireBoxerBanditEmptyHand" prob="0.6" />
-		<entity name="GoldilocksBanditEmptyHand" prob="0.6" />
-		<entity name="MMABanditEmptyHand" prob="0.6" />
-		<entity name="KarateBanditEmptyHand" prob="0.6" />
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS200']">
-		<entity name="FireBoxerBanditEmptyHand" prob="0.4" />
-		<entity name="GoldilocksBanditEmptyHand" prob="0.4" />
-		<entity name="MMABanditEmptyHand" prob="0.4" />
-		<entity name="KarateBanditEmptyHand" prob="0.4" />
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS400']">
-		<entity name="FireBoxerBanditEmptyHand" prob="0.2" />
-		<entity name="GoldilocksBanditEmptyHand" prob="0.2" />
-		<entity name="MMABanditEmptyHand" prob="0.2" />
-		<entity name="KarateBanditEmptyHand" prob="0.2" />
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
 	</append>
-	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS01']">
-		<entity name="FireBoxerBanditEmptyHand" prob="1" />
-		<entity name="GoldilocksBanditEmptyHand" prob="1" />
-		<entity name="MMABanditEmptyHand" prob="1" />
-		<entity name="KarateBanditEmptyHand" prob="1" />
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS800']">
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
 	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS01']">
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
+	</append>	
 	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS50']">
-		<entity name="FireBoxerBanditEmptyHand" prob="0.8" />
-		<entity name="GoldilocksBanditEmptyHand" prob="0.8" />
-		<entity name="MMABanditEmptyHand" prob="0.8" />
-		<entity name="KarateBanditEmptyHand" prob="0.8" />
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS100']">
-		<entity name="FireBoxerBanditEmptyHand" prob="0.6" />
-		<entity name="GoldilocksBanditEmptyHand" prob="0.6" />
-		<entity name="MMABanditEmptyHand" prob="0.6" />
-		<entity name="KarateBanditEmptyHand" prob="0.6" />
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS200']">
-		<entity name="FireBoxerBanditEmptyHand" prob="0.4" />
-		<entity name="GoldilocksBanditEmptyHand" prob="0.4" />
-		<entity name="MMABanditEmptyHand" prob="0.4" />
-		<entity name="KarateBanditEmptyHand" prob="0.4" />
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS400']">
-		<entity name="FireBoxerBanditEmptyHand" prob="0.2" />
-		<entity name="GoldilocksBanditEmptyHand" prob="0.2" />
-		<entity name="MMABanditEmptyHand" prob="0.2" />
-		<entity name="KarateBanditEmptyHand" prob="0.2" />
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
 	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS800']">
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
+	</append>	
 
 	<!-- Whiteriver NPC entity groups -->
 	<append xpath="/entitygroups/entitygroup[@name='npcWhiteriverAllGroupGS01']">
-		<entity name="FireBoxerSurvivorEmptyHand" prob="1" />
-		<entity name="GoldilocksSurvivorEmptyHand" prob="1" />
-		<entity name="MMASurvivorEmptyHand" prob="1" />
-		<entity name="KarateSurvivorEmptyHand" prob="1" />
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcWhiteriverAllGroupGS50']">
-		<entity name="FireBoxerSurvivorEmptyHand" prob="0.8" />
-		<entity name="GoldilocksSurvivorEmptyHand" prob="0.8" />
-		<entity name="MMASurvivorEmptyHand" prob="0.8" />
-		<entity name="KarateSurvivorEmptyHand" prob="0.8" />
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcWhiteriverAllGroupGS100']">
-		<entity name="FireBoxerSurvivorEmptyHand" prob="0.6" />
-		<entity name="GoldilocksSurvivorEmptyHand" prob="0.6" />
-		<entity name="MMASurvivorEmptyHand" prob="0.6" />
-		<entity name="KarateSurvivorEmptyHand" prob="0.6" />
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcWhiteriverAllGroupGS200']">
-		<entity name="FireBoxerSurvivorEmptyHand" prob="0.4" />
-		<entity name="GoldilocksSurvivorEmptyHand" prob="0.4" />
-		<entity name="MMASurvivorEmptyHand" prob="0.4" />
-		<entity name="KarateSurvivorEmptyHand" prob="0.4" />
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcWhiteriverAllGroupGS400']">
-		<entity name="FireBoxerSurvivorEmptyHand" prob="0.2" />
-		<entity name="GoldilocksSurvivorEmptyHand" prob="0.2" />
-		<entity name="MMASurvivorEmptyHand" prob="0.2" />
-		<entity name="KarateSurvivorEmptyHand" prob="0.2" />
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
 	</append>
-	<append xpath="/entitygroups/entitygroup[@name='npcWhiteriverAllGroupGS01']">
-		<entity name="FireBoxerSurvivorEmptyHand" prob="1" />
-		<entity name="GoldilocksSurvivorEmptyHand" prob="1" />
-		<entity name="MMASurvivorEmptyHand" prob="1" />
-		<entity name="KarateSurvivorEmptyHand" prob="1" />
+	<append xpath="/entitygroups/entitygroup[@name='npcWhiteriverAllGroupGS800']">
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
 	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcWhiteriverMeleeGroupGS01']">
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
+	</append>	
 	<append xpath="/entitygroups/entitygroup[@name='npcWhiteriverMeleeGroupGS50']">
-		<entity name="FireBoxerSurvivorEmptyHand" prob="0.8" />
-		<entity name="GoldilocksSurvivorEmptyHand" prob="0.8" />
-		<entity name="MMASurvivorEmptyHand" prob="0.8" />
-		<entity name="KarateSurvivorEmptyHand" prob="0.8" />
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcWhiteriverMeleeGroupGS100']">
-		<entity name="FireBoxerSurvivorEmptyHand" prob="0.6" />
-		<entity name="GoldilocksSurvivorEmptyHand" prob="0.6" />
-		<entity name="MMASurvivorEmptyHand" prob="0.6" />
-		<entity name="KarateSurvivorEmptyHand" prob="0.6" />
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcWhiteriverMeleeGroupGS200']">
-		<entity name="FireBoxerSurvivorEmptyHand" prob="0.4" />
-		<entity name="GoldilocksSurvivorEmptyHand" prob="0.4" />
-		<entity name="MMASurvivorEmptyHand" prob="0.4" />
-		<entity name="KarateSurvivorEmptyHand" prob="0.4" />
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcWhiteriverMeleeGroupGS400']">
-		<entity name="FireBoxerSurvivorEmptyHand" prob="0.2" />
-		<entity name="GoldilocksSurvivorEmptyHand" prob="0.2" />
-		<entity name="MMASurvivorEmptyHand" prob="0.2" />
-		<entity name="KarateSurvivorEmptyHand" prob="0.2" />
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcWhiteriverMeleeGroupGS800']">
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
 	</append>
 
 	<!-- Enemy NPC entity groups -->
 	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAllGroupGS01']">
-		<entity name="FireBoxerBanditEmptyHand" prob="1" />
-		<entity name="GoldilocksBanditEmptyHand" prob="1" />
-		<entity name="MMABanditEmptyHand" prob="1" />
-		<entity name="KarateBanditEmptyHand" prob="1" />
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAllGroupGS50']">
-		<entity name="FireBoxerBanditEmptyHand" prob="0.8" />
-		<entity name="GoldilocksBanditEmptyHand" prob="0.8" />
-		<entity name="MMABanditEmptyHand" prob="0.8" />
-		<entity name="KarateBanditEmptyHand" prob="0.8" />
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAllGroupGS100']">
-		<entity name="FireBoxerBanditEmptyHand" prob="0.6" />
-		<entity name="GoldilocksBanditEmptyHand" prob="0.6" />
-		<entity name="MMABanditEmptyHand" prob="0.6" />
-		<entity name="KarateBanditEmptyHand" prob="0.6" />
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAllGroupGS200']">
-		<entity name="FireBoxerBanditEmptyHand" prob="0.4" />
-		<entity name="GoldilocksBanditEmptyHand" prob="0.4" />
-		<entity name="MMABanditEmptyHand" prob="0.4" />
-		<entity name="KarateBanditEmptyHand" prob="0.4" />
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAllGroupGS400']">
-		<entity name="FireBoxerBanditEmptyHand" prob="0.2" />
-		<entity name="GoldilocksBanditEmptyHand" prob="0.2" />
-		<entity name="MMABanditEmptyHand" prob="0.2" />
-		<entity name="KarateBanditEmptyHand" prob="0.2" />
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
 	</append>
-	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAllGroupGS01']">
-		<entity name="FireBoxerBanditEmptyHand" prob="1" />
-		<entity name="GoldilocksBanditEmptyHand" prob="1" />
-		<entity name="MMABanditEmptyHand" prob="1" />
-		<entity name="KarateBanditEmptyHand" prob="1" />
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAllGroupGS800']">
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
 	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyMeleeGroupGS01']">
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
+	</append>	
 	<append xpath="/entitygroups/entitygroup[@name='npcEnemyMeleeGroupGS50']">
-		<entity name="FireBoxerBanditEmptyHand" prob="0.8" />
-		<entity name="GoldilocksBanditEmptyHand" prob="0.8" />
-		<entity name="MMABanditEmptyHand" prob="0.8" />
-		<entity name="KarateBanditEmptyHand" prob="0.8" />
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcEnemyMeleeGroupGS100']">
-		<entity name="FireBoxerBanditEmptyHand" prob="0.6" />
-		<entity name="GoldilocksBanditEmptyHand" prob="0.6" />
-		<entity name="MMABanditEmptyHand" prob="0.6" />
-		<entity name="KarateBanditEmptyHand" prob="0.6" />
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcEnemyMeleeGroupGS200']">
-		<entity name="FireBoxerBanditEmptyHand" prob="0.4" />
-		<entity name="GoldilocksBanditEmptyHand" prob="0.4" />
-		<entity name="MMABanditEmptyHand" prob="0.4" />
-		<entity name="KarateBanditEmptyHand" prob="0.4" />
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcEnemyMeleeGroupGS400']">
-		<entity name="FireBoxerBanditEmptyHand" prob="0.2" />
-		<entity name="GoldilocksBanditEmptyHand" prob="0.2" />
-		<entity name="MMABanditEmptyHand" prob="0.2" />
-		<entity name="KarateBanditEmptyHand" prob="0.2" />
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
 	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyMeleeGroupGS800']">
+		<entity name="FireBoxerBanditEmptyHand"/>
+		<entity name="GoldilocksBanditEmptyHand"/>
+		<entity name="MMABanditEmptyHand"/>
+		<entity name="KarateBanditEmptyHand"/>
+	</append>	
 	
 	<!-- Friendly NPC entity groups -->
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS01']">
-		<entity name="FireBoxerSurvivorEmptyHand" prob="1" />
-		<entity name="GoldilocksSurvivorEmptyHand" prob="1" />
-		<entity name="MMASurvivorEmptyHand" prob="1" />
-		<entity name="KarateSurvivorEmptyHand" prob="1" />
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS50']">
-		<entity name="FireBoxerSurvivorEmptyHand" prob="0.8" />
-		<entity name="GoldilocksSurvivorEmptyHand" prob="0.8" />
-		<entity name="MMASurvivorEmptyHand" prob="0.8" />
-		<entity name="KarateSurvivorEmptyHand" prob="0.8" />
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS100']">
-		<entity name="FireBoxerSurvivorEmptyHand" prob="0.6" />
-		<entity name="GoldilocksSurvivorEmptyHand" prob="0.6" />
-		<entity name="MMASurvivorEmptyHand" prob="0.6" />
-		<entity name="KarateSurvivorEmptyHand" prob="0.6" />
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS200']">
-		<entity name="FireBoxerSurvivorEmptyHand" prob="0.4" />
-		<entity name="GoldilocksSurvivorEmptyHand" prob="0.4" />
-		<entity name="MMASurvivorEmptyHand" prob="0.4" />
-		<entity name="KarateSurvivorEmptyHand" prob="0.4" />
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS400']">
-		<entity name="FireBoxerSurvivorEmptyHand" prob="0.2" />
-		<entity name="GoldilocksSurvivorEmptyHand" prob="0.2" />
-		<entity name="MMASurvivorEmptyHand" prob="0.2" />
-		<entity name="KarateSurvivorEmptyHand" prob="0.2" />
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
 	</append>
-	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS01']">
-		<entity name="FireBoxerSurvivorEmptyHand" prob="1" />
-		<entity name="GoldilocksSurvivorEmptyHand" prob="1" />
-		<entity name="MMASurvivorEmptyHand" prob="1" />
-		<entity name="KarateSurvivorEmptyHand" prob="1" />
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS800']">
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
+	</append>	
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS01']">
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS50']">
-		<entity name="FireBoxerSurvivorEmptyHand" prob="0.8" />
-		<entity name="GoldilocksSurvivorEmptyHand" prob="0.8" />
-		<entity name="MMASurvivorEmptyHand" prob="0.8" />
-		<entity name="KarateSurvivorEmptyHand" prob="0.8" />
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS100']">
-		<entity name="FireBoxerSurvivorEmptyHand" prob="0.6" />
-		<entity name="GoldilocksSurvivorEmptyHand" prob="0.6" />
-		<entity name="MMASurvivorEmptyHand" prob="0.6" />
-		<entity name="KarateSurvivorEmptyHand" prob="0.6" />
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS200']">
-		<entity name="FireBoxerSurvivorEmptyHand" prob="0.4" />
-		<entity name="GoldilocksSurvivorEmptyHand" prob="0.4" />
-		<entity name="MMASurvivorEmptyHand" prob="0.4" />
-		<entity name="KarateSurvivorEmptyHand" prob="0.4" />
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS400']">
-		<entity name="FireBoxerSurvivorEmptyHand" prob="0.2" />
-		<entity name="GoldilocksSurvivorEmptyHand" prob="0.2" />
-		<entity name="MMASurvivorEmptyHand" prob="0.2" />
-		<entity name="KarateSurvivorEmptyHand" prob="0.2" />
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
 	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS800']">
+		<entity name="FireBoxerSurvivorEmptyHand"/>
+		<entity name="GoldilocksSurvivorEmptyHand"/>
+		<entity name="MMASurvivorEmptyHand"/>
+		<entity name="KarateSurvivorEmptyHand"/>
+	</append>	
 </configs>

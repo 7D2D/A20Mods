@@ -1,455 +1,463 @@
 <configs>
 
-       
-	
-       <append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
-	        <entity name="survivorReconMaleRocketL" prob=".025" />
-                <entity name="survivorReconMaleTRifle" prob=".025" />
-		<entity name="survivorReconMaleM60" prob=".025" />
-		<entity name="survivorReconMaleAK47" prob=".025" />
-                <entity name="survivorReconMaleClub" prob=".025" />
-	        <entity name="survivorReconFemaleClub" prob=".025" />
-                <entity name="survivorReconFemaleTRifle" prob=".025" />
-		<entity name="survivorReconFemaleM60" prob=".025" />
-		<entity name="survivorReconFemaleAK47" prob=".025" />
-		<entity name="survivorVaultSecurityMalePistol" prob=".025" />
-                <entity name="survivorVaultSecurityMaleSMG" prob=".025" />
-		<entity name="survivorVaultBossPistol" prob=".025" />
-                <entity name="survivorVaultResidentMalePistol" prob=".025" />
-                <entity name="survivorVaultResidentMalePipeMG" prob=".025" />
-                <entity name="survivorVaultResidentFemalePipeMG" prob=".025" />
-                <entity name="survivorVaultSecurityFemalePistol" prob=".025" />
-                <entity name="survivorVaultSecurityFemaleSMG" prob=".025" />
-		<entity name="survivorVaultDoctorPistol" prob=".025" />
-                <entity name="survivorVaultResidentFemalePistol" prob=".025" />
-                <entity name="survivorVaultSecurityMaleClub" prob=".025" />
-		<entity name="survivorVaultBossClub" prob=".025" />
-		<entity name="survivorVaultResidentMaleClub" prob=".025" />
-                <entity name="survivorVaultSecurityFemaleClub" prob=".025" />
-		<entity name="survivorVaultDoctorClub" prob=".025" />
-		<entity name="survivorVaultResidentFemaleClub" prob=".025" />
-		<entity name="survivorVaultResidentMaleKnife" prob=".025" />
-                <entity name="survivorVaultBossKnife" prob=".025" />
-                <entity name="survivorVaultResidentFemaleKnife" prob=".025" />
-                <entity name="survivorVaultDoctorKnife" prob=".025" />
-		<entity name="survivorVaultResidentMaleBat" prob=".025" />
-		<entity name="survivorVaultSecurityMaleBat" prob=".025" />
-		<entity name="survivorVaultSecurityFemaleBat" prob=".025" />
-		<entity name="survivorVaultSecurityMaleAxe" prob=".025" />
-                <entity name="survivorVaultResidentMaleAxe" prob=".025" />
-		<entity name="survivorVaultSecurityFemaleAxe" prob=".025" />
-                <entity name="survivorVaultResidentFemaleAxe" prob=".025" />
-                <entity name="survivorArmyPowerArmorMaleRocketL" prob=".025" />
-                <entity name="survivorArmyPowerArmorMaleM60" prob=".025" />
-                <entity name="survivorArmyPowerArmorMaleAK47" prob=".025" />
-                <entity name="survivorArmyPowerArmorFemaleAK47" prob=".025" />
-                <entity name="survivorArmyPowerArmorFemaleRocketL" prob=".025" />
-                <entity name="survivorArmyPowerArmorFemaleM60" prob=".025" /> 	
+<!-- Lowest Vanilla ZombiesAll is zombieJanitor prob=0.2 -->
+    <append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
+	    <entity name="survivorReconMaleRocketL" prob="0.025" />
+        <entity name="survivorReconMaleTRifle" prob="0.1" />
+		<entity name="survivorReconMaleM60" prob="0.1" />
+		<entity name="survivorReconMaleAK47" prob="0.1" />
+        <entity name="survivorReconMaleClub" prob="0.1" />
+	    <entity name="survivorReconFemaleClub" prob="0.1" />
+        <entity name="survivorReconFemaleTRifle" prob="0.1" />
+		<entity name="survivorReconFemaleM60" prob="0.1" />
+		<entity name="survivorReconFemaleAK47" prob="0.1" />
+		<entity name="survivorVaultSecurityMalePistol" prob="0.1" />
+        <entity name="survivorVaultSecurityMaleSMG" prob="0.1" />
+		<entity name="survivorVaultBossPistol" prob="0.1" />
+        <entity name="survivorVaultResidentMalePistol" prob="0.1" />
+        <entity name="survivorVaultResidentMalePipeMG" prob="0.1" />
+		<entity name="survivorVaultResidentFemalePipeMG" prob="0.1" />
+        <entity name="survivorVaultSecurityFemalePistol" prob="0.1" />
+        <entity name="survivorVaultSecurityFemaleSMG" prob="0.1" />
+		<entity name="survivorVaultDoctorPistol" prob="0.1" />
+        <entity name="survivorVaultResidentFemalePistol" prob="0.1" />
+        <entity name="survivorVaultSecurityMaleClub" prob="0.1" />
+		<entity name="survivorVaultBossClub" prob="0.1" />
+		<entity name="survivorVaultResidentMaleClub" prob="0.1" />
+        <entity name="survivorVaultSecurityFemaleClub" prob="0.1" />
+		<entity name="survivorVaultDoctorClub" prob="0.1" />
+		<entity name="survivorVaultResidentFemaleClub" prob="0.1" />
+		<entity name="survivorVaultResidentMaleKnife" prob="0.1" />
+        <entity name="survivorVaultBossKnife" prob="0.1" />
+        <entity name="survivorVaultResidentFemaleKnife" prob="0.1" />
+        <entity name="survivorVaultDoctorKnife" prob="0.1" />
+		<entity name="survivorVaultResidentMaleBat" prob="0.1" />
+		<entity name="survivorVaultSecurityMaleBat" prob="0.1" />
+		<entity name="survivorVaultSecurityFemaleBat" prob="0.1" />
+		<entity name="survivorVaultSecurityMaleAxe" prob="0.1" />
+        <entity name="survivorVaultResidentMaleAxe" prob="0.1" />
+		<entity name="survivorVaultSecurityFemaleAxe" prob="0.1" />
+        <entity name="survivorVaultResidentFemaleAxe" prob="0.1" />
+        <entity name="survivorArmyPowerArmorMaleRocketL" prob="0.025" />
+        <entity name="survivorArmyPowerArmorMaleM60" prob="0.1" />
+        <entity name="survivorArmyPowerArmorMaleAK47" prob="0.1" />
+        <entity name="survivorArmyPowerArmorFemaleAK47" prob="0.1" />
+        <entity name="survivorArmyPowerArmorFemaleRocketL" prob="0.025" />
+        <entity name="survivorArmyPowerArmorFemaleM60" prob="0.1" /> 	
 	</append>
 	
+<!-- Lowest Vanilla ZombiesNight is animalZombieDog prob=0.05 -->	
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
-		<entity name="survivorReconMaleRocketL" prob=".025" />
-                <entity name="survivorReconMaleTRifle" prob=".025" />
-		<entity name="survivorReconMaleM60" prob=".025" />
-		<entity name="survivorReconMaleAK47" prob=".025" />
-                <entity name="survivorReconMaleClub" prob=".025" />
-	        <entity name="survivorReconFemaleClub" prob=".025" />
-                <entity name="survivorReconFemaleTRifle" prob=".025" />
-		<entity name="survivorReconFemaleM60" prob=".025" />
-		<entity name="survivorReconFemaleAK47" prob=".025" />
-		<entity name="survivorVaultSecurityMalePistol" prob=".025" />
-                <entity name="survivorVaultSecurityMaleSMG" prob=".025" />
-		<entity name="survivorVaultBossPistol" prob=".025" />
-                <entity name="survivorVaultResidentMalePistol" prob=".025" />
-                <entity name="survivorVaultResidentMalePipeMG" prob=".025" />
-                <entity name="survivorVaultResidentFemalePipeMG" prob=".025" />
-                <entity name="survivorVaultSecurityFemalePistol" prob=".025" />
-                <entity name="survivorVaultSecurityFemaleSMG" prob=".025" />
-		<entity name="survivorVaultDoctorPistol" prob=".025" />
-                <entity name="survivorVaultResidentFemalePistol" prob=".025" />
-                <entity name="survivorVaultSecurityMaleClub" prob=".025" />
-		<entity name="survivorVaultBossClub" prob=".025" />
-		<entity name="survivorVaultResidentMaleClub" prob=".025" />
-                <entity name="survivorVaultSecurityFemaleClub" prob=".025" />
-		<entity name="survivorVaultDoctorClub" prob=".025" />
-		<entity name="survivorVaultResidentFemaleClub" prob=".025" />
-		<entity name="survivorVaultResidentMaleKnife" prob=".025" />
-                <entity name="survivorVaultBossKnife" prob=".025" />
-                <entity name="survivorVaultResidentFemaleKnife" prob=".025" />
-                <entity name="survivorVaultDoctorKnife" prob=".025" />
-		<entity name="survivorVaultResidentMaleBat" prob=".025" />
-		<entity name="survivorVaultSecurityMaleBat" prob=".025" />
-		<entity name="survivorVaultSecurityFemaleBat" prob=".025" />
-		<entity name="survivorVaultSecurityMaleAxe" prob=".025" />
-                <entity name="survivorVaultResidentMaleAxe" prob=".025" />
-		<entity name="survivorVaultSecurityFemaleAxe" prob=".025" />
-                <entity name="survivorVaultResidentFemaleAxe" prob=".025" />
-                <entity name="survivorArmyPowerArmorMaleRocketL" prob=".025" />
-                <entity name="survivorArmyPowerArmorMaleM60" prob=".025" />
-                <entity name="survivorArmyPowerArmorMaleAK47" prob=".025" />
-                <entity name="survivorArmyPowerArmorFemaleAK47" prob=".025" />
-                <entity name="survivorArmyPowerArmorFemaleRocketL" prob=".025" />
-                <entity name="survivorArmyPowerArmorFemaleM60" prob=".025" />		
+	    <entity name="survivorReconMaleRocketL" prob="0.00625" />
+        <entity name="survivorReconMaleTRifle" prob="0.025" />
+		<entity name="survivorReconMaleM60" prob="0.025" />
+		<entity name="survivorReconMaleAK47" prob="0.025" />
+        <entity name="survivorReconMaleClub" prob="0.025" />
+	    <entity name="survivorReconFemaleClub" prob="0.025" />
+        <entity name="survivorReconFemaleTRifle" prob="0.025" />
+		<entity name="survivorReconFemaleM60" prob="0.025" />
+		<entity name="survivorReconFemaleAK47" prob="0.025" />
+		<entity name="survivorVaultSecurityMalePistol" prob="0.025" />
+        <entity name="survivorVaultSecurityMaleSMG" prob="0.025" />
+		<entity name="survivorVaultBossPistol" prob="0.025" />
+        <entity name="survivorVaultResidentMalePistol" prob="0.025" />
+        <entity name="survivorVaultResidentMalePipeMG" prob="0.025" />
+		<entity name="survivorVaultResidentFemalePipeMG" prob="0.025" />
+        <entity name="survivorVaultSecurityFemalePistol" prob="0.025" />
+        <entity name="survivorVaultSecurityFemaleSMG" prob="0.025" />
+		<entity name="survivorVaultDoctorPistol" prob="0.025" />
+        <entity name="survivorVaultResidentFemalePistol" prob="0.025" />
+        <entity name="survivorVaultSecurityMaleClub" prob="0.025" />
+		<entity name="survivorVaultBossClub" prob="0.025" />
+		<entity name="survivorVaultResidentMaleClub" prob="0.025" />
+        <entity name="survivorVaultSecurityFemaleClub" prob="0.025" />
+		<entity name="survivorVaultDoctorClub" prob="0.025" />
+		<entity name="survivorVaultResidentFemaleClub" prob="0.025" />
+		<entity name="survivorVaultResidentMaleKnife" prob="0.025" />
+        <entity name="survivorVaultBossKnife" prob="0.025" />
+        <entity name="survivorVaultResidentFemaleKnife" prob="0.025" />
+        <entity name="survivorVaultDoctorKnife" prob="0.025" />
+		<entity name="survivorVaultResidentMaleBat" prob="0.025" />
+		<entity name="survivorVaultSecurityMaleBat" prob="0.025" />
+		<entity name="survivorVaultSecurityFemaleBat" prob="0.025" />
+		<entity name="survivorVaultSecurityMaleAxe" prob="0.025" />
+        <entity name="survivorVaultResidentMaleAxe" prob="0.025" />
+		<entity name="survivorVaultSecurityFemaleAxe" prob="0.025" />
+        <entity name="survivorVaultResidentFemaleAxe" prob="0.025" />
+        <entity name="survivorArmyPowerArmorMaleRocketL" prob="0.00625" />
+        <entity name="survivorArmyPowerArmorMaleM60" prob="0.025" />
+        <entity name="survivorArmyPowerArmorMaleAK47" prob="0.025" />
+        <entity name="survivorArmyPowerArmorFemaleAK47" prob="0.025" />
+        <entity name="survivorArmyPowerArmorFemaleRocketL" prob="0.00625" />
+        <entity name="survivorArmyPowerArmorFemaleM60" prob="0.025" />		
 	</append>
-	
+
+<!-- Lowest Vanilla SnowZombies is zombieLumberjack prob=1.0 -->	
 	<append xpath="/entitygroups/entitygroup[@name='SnowZombies']">
-		<entity name="survivorReconMaleRocketL" prob=".025" />
-                <entity name="survivorReconMaleTRifle" prob=".025" />
-		<entity name="survivorReconMaleM60" prob=".025" />
-		<entity name="survivorReconMaleAK47" prob=".025" />
-                <entity name="survivorReconMaleClub" prob=".025" />
-	        <entity name="survivorReconFemaleClub" prob=".025" />
-                <entity name="survivorReconFemaleTRifle" prob=".025" />
-		<entity name="survivorReconFemaleM60" prob=".025" />
-		<entity name="survivorReconFemaleAK47" prob=".025" />
-		<entity name="survivorVaultSecurityMalePistol" prob=".025" />
-                <entity name="survivorVaultSecurityMaleSMG" prob=".025" />
-		<entity name="survivorVaultBossPistol" prob=".025" />
-                <entity name="survivorVaultResidentMalePistol" prob=".025" />
-                <entity name="survivorVaultResidentMalePipeMG" prob=".025" />
-                <entity name="survivorVaultResidentFemalePipeMG" prob=".025" />
-                <entity name="survivorVaultSecurityFemalePistol" prob=".025" />
-                <entity name="survivorVaultSecurityFemaleSMG" prob=".025" />
-		<entity name="survivorVaultDoctorPistol" prob=".025" />
-                <entity name="survivorVaultResidentFemalePistol" prob=".025" />
-                <entity name="survivorVaultSecurityMaleClub" prob=".025" />
-		<entity name="survivorVaultBossClub" prob=".025" />
-		<entity name="survivorVaultResidentMaleClub" prob=".025" />
-                <entity name="survivorVaultSecurityFemaleClub" prob=".025" />
-		<entity name="survivorVaultDoctorClub" prob=".025" />
-		<entity name="survivorVaultResidentFemaleClub" prob=".025" />
-		<entity name="survivorVaultResidentMaleKnife" prob=".025" />
-                <entity name="survivorVaultBossKnife" prob=".025" />
-                <entity name="survivorVaultResidentFemaleKnife" prob=".025" />
-                <entity name="survivorVaultDoctorKnife" prob=".025" />
-		<entity name="survivorVaultResidentMaleBat" prob=".025" />
-		<entity name="survivorVaultSecurityMaleBat" prob=".025" />
-		<entity name="survivorVaultSecurityFemaleBat" prob=".025" />
-		<entity name="survivorVaultSecurityMaleAxe" prob=".025" />
-                <entity name="survivorVaultResidentMaleAxe" prob=".025" />
-		<entity name="survivorVaultSecurityFemaleAxe" prob=".025" />
-                <entity name="survivorVaultResidentFemaleAxe" prob=".025" />
-                <entity name="survivorArmyPowerArmorMaleRocketL" prob=".025" />
-                <entity name="survivorArmyPowerArmorMaleM60" prob=".025" />
-                <entity name="survivorArmyPowerArmorMaleAK47" prob=".025" />
-                <entity name="survivorArmyPowerArmorFemaleAK47" prob=".025" />
-                <entity name="survivorArmyPowerArmorFemaleRocketL" prob=".025" />
-                <entity name="survivorArmyPowerArmorFemaleM60" prob=".025" />
+	    <entity name="survivorReconMaleRocketL" prob="0.025" />
+        <entity name="survivorReconMaleTRifle" prob="0.1" />
+		<entity name="survivorReconMaleM60" prob="0.1" />
+		<entity name="survivorReconMaleAK47" prob="0.1" />
+        <entity name="survivorReconMaleClub" prob="0.1" />
+	    <entity name="survivorReconFemaleClub" prob="0.1" />
+        <entity name="survivorReconFemaleTRifle" prob="0.1" />
+		<entity name="survivorReconFemaleM60" prob="0.1" />
+		<entity name="survivorReconFemaleAK47" prob="0.1" />
+		<entity name="survivorVaultSecurityMalePistol" prob="0.1" />
+        <entity name="survivorVaultSecurityMaleSMG" prob="0.1" />
+		<entity name="survivorVaultBossPistol" prob="0.1" />
+        <entity name="survivorVaultResidentMalePistol" prob="0.1" />
+        <entity name="survivorVaultResidentMalePipeMG" prob="0.1" />
+		<entity name="survivorVaultResidentFemalePipeMG" prob="0.1" />
+        <entity name="survivorVaultSecurityFemalePistol" prob="0.1" />
+        <entity name="survivorVaultSecurityFemaleSMG" prob="0.1" />
+		<entity name="survivorVaultDoctorPistol" prob="0.1" />
+        <entity name="survivorVaultResidentFemalePistol" prob="0.1" />
+        <entity name="survivorVaultSecurityMaleClub" prob="0.1" />
+		<entity name="survivorVaultBossClub" prob="0.1" />
+		<entity name="survivorVaultResidentMaleClub" prob="0.1" />
+        <entity name="survivorVaultSecurityFemaleClub" prob="0.1" />
+		<entity name="survivorVaultDoctorClub" prob="0.1" />
+		<entity name="survivorVaultResidentFemaleClub" prob="0.1" />
+		<entity name="survivorVaultResidentMaleKnife" prob="0.1" />
+        <entity name="survivorVaultBossKnife" prob="0.1" />
+        <entity name="survivorVaultResidentFemaleKnife" prob="0.1" />
+        <entity name="survivorVaultDoctorKnife" prob="0.1" />
+		<entity name="survivorVaultResidentMaleBat" prob="0.1" />
+		<entity name="survivorVaultSecurityMaleBat" prob="0.1" />
+		<entity name="survivorVaultSecurityFemaleBat" prob="0.1" />
+		<entity name="survivorVaultSecurityMaleAxe" prob="0.1" />
+        <entity name="survivorVaultResidentMaleAxe" prob="0.1" />
+		<entity name="survivorVaultSecurityFemaleAxe" prob="0.1" />
+        <entity name="survivorVaultResidentFemaleAxe" prob="0.1" />
+        <entity name="survivorArmyPowerArmorMaleRocketL" prob="0.025" />
+        <entity name="survivorArmyPowerArmorMaleM60" prob="0.1" />
+        <entity name="survivorArmyPowerArmorMaleAK47" prob="0.1" />
+        <entity name="survivorArmyPowerArmorFemaleAK47" prob="0.1" />
+        <entity name="survivorArmyPowerArmorFemaleRocketL" prob="0.025" />
+        <entity name="survivorArmyPowerArmorFemaleM60" prob="0.1" />
 	</append>	
 
+<!-- Lowest Vanilla ZombiesWasteland is mixed prob=1.0 -->
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']">
-	       	<entity name="survivorReconMaleRocketL" prob=".025" />
-                <entity name="survivorReconMaleTRifle" prob=".025" />
-		<entity name="survivorReconMaleM60" prob=".025" />
-		<entity name="survivorReconMaleAK47" prob=".025" />
-                <entity name="survivorReconMaleClub" prob=".025" />
-	        <entity name="survivorReconFemaleClub" prob=".025" />
-                <entity name="survivorReconFemaleTRifle" prob=".025" />
-		<entity name="survivorReconFemaleM60" prob=".025" />
-		<entity name="survivorReconFemaleAK47" prob=".025" />
-		<entity name="survivorVaultSecurityMalePistol" prob=".025" />
-                <entity name="survivorVaultSecurityMaleSMG" prob=".025" />
-		<entity name="survivorVaultBossPistol" prob=".025" />
-                <entity name="survivorVaultResidentMalePistol" prob=".025" />
-                <entity name="survivorVaultResidentMalePipeMG" prob=".025" />
-                <entity name="survivorVaultResidentFemalePipeMG" prob=".025" />
-                <entity name="survivorVaultSecurityFemalePistol" prob=".025" />
-                <entity name="survivorVaultSecurityFemaleSMG" prob=".025" />
-		<entity name="survivorVaultDoctorPistol" prob=".025" />
-                <entity name="survivorVaultResidentFemalePistol" prob=".025" />
-                <entity name="survivorVaultSecurityMaleClub" prob=".025" />
-		<entity name="survivorVaultBossClub" prob=".025" />
-		<entity name="survivorVaultResidentMaleClub" prob=".025" />
-                <entity name="survivorVaultSecurityFemaleClub" prob=".025" />
-		<entity name="survivorVaultDoctorClub" prob=".025" />
-		<entity name="survivorVaultResidentFemaleClub" prob=".025" />
-		<entity name="survivorVaultResidentMaleKnife" prob=".025" />
-                <entity name="survivorVaultBossKnife" prob=".025" />
-                <entity name="survivorVaultResidentFemaleKnife" prob=".025" />
-                <entity name="survivorVaultDoctorKnife" prob=".025" />
-		<entity name="survivorVaultResidentMaleBat" prob=".025" />
-		<entity name="survivorVaultSecurityMaleBat" prob=".025" />
-		<entity name="survivorVaultSecurityFemaleBat" prob=".025" />
-		<entity name="survivorVaultSecurityMaleAxe" prob=".025" />
-                <entity name="survivorVaultResidentMaleAxe" prob=".025" />
-		<entity name="survivorVaultSecurityFemaleAxe" prob=".025" />
-                <entity name="survivorVaultResidentFemaleAxe" prob=".025" />
-                <entity name="survivorArmyPowerArmorMaleRocketL" prob=".025" />
-                <entity name="survivorArmyPowerArmorMaleM60" prob=".025" />
-                <entity name="survivorArmyPowerArmorMaleAK47" prob=".025" />
-                <entity name="survivorArmyPowerArmorFemaleAK47" prob=".025" />
-                <entity name="survivorArmyPowerArmorFemaleRocketL" prob=".025" />
-                <entity name="survivorArmyPowerArmorFemaleM60" prob=".025" />	
+	    <entity name="survivorReconMaleRocketL" prob="0.025" />
+        <entity name="survivorReconMaleTRifle" prob="0.1" />
+		<entity name="survivorReconMaleM60" prob="0.1" />
+		<entity name="survivorReconMaleAK47" prob="0.1" />
+        <entity name="survivorReconMaleClub" prob="0.1" />
+	    <entity name="survivorReconFemaleClub" prob="0.1" />
+        <entity name="survivorReconFemaleTRifle" prob="0.1" />
+		<entity name="survivorReconFemaleM60" prob="0.1" />
+		<entity name="survivorReconFemaleAK47" prob="0.1" />
+		<entity name="survivorVaultSecurityMalePistol" prob="0.1" />
+        <entity name="survivorVaultSecurityMaleSMG" prob="0.1" />
+		<entity name="survivorVaultBossPistol" prob="0.1" />
+        <entity name="survivorVaultResidentMalePistol" prob="0.1" />
+        <entity name="survivorVaultResidentMalePipeMG" prob="0.1" />
+		<entity name="survivorVaultResidentFemalePipeMG" prob="0.1" />
+        <entity name="survivorVaultSecurityFemalePistol" prob="0.1" />
+        <entity name="survivorVaultSecurityFemaleSMG" prob="0.1" />
+		<entity name="survivorVaultDoctorPistol" prob="0.1" />
+        <entity name="survivorVaultResidentFemalePistol" prob="0.1" />
+        <entity name="survivorVaultSecurityMaleClub" prob="0.1" />
+		<entity name="survivorVaultBossClub" prob="0.1" />
+		<entity name="survivorVaultResidentMaleClub" prob="0.1" />
+        <entity name="survivorVaultSecurityFemaleClub" prob="0.1" />
+		<entity name="survivorVaultDoctorClub" prob="0.1" />
+		<entity name="survivorVaultResidentFemaleClub" prob="0.1" />
+		<entity name="survivorVaultResidentMaleKnife" prob="0.1" />
+        <entity name="survivorVaultBossKnife" prob="0.1" />
+        <entity name="survivorVaultResidentFemaleKnife" prob="0.1" />
+        <entity name="survivorVaultDoctorKnife" prob="0.1" />
+		<entity name="survivorVaultResidentMaleBat" prob="0.1" />
+		<entity name="survivorVaultSecurityMaleBat" prob="0.1" />
+		<entity name="survivorVaultSecurityFemaleBat" prob="0.1" />
+		<entity name="survivorVaultSecurityMaleAxe" prob="0.1" />
+        <entity name="survivorVaultResidentMaleAxe" prob="0.1" />
+		<entity name="survivorVaultSecurityFemaleAxe" prob="0.1" />
+        <entity name="survivorVaultResidentFemaleAxe" prob="0.1" />
+        <entity name="survivorArmyPowerArmorMaleRocketL" prob="0.025" />
+        <entity name="survivorArmyPowerArmorMaleM60" prob="0.1" />
+        <entity name="survivorArmyPowerArmorMaleAK47" prob="0.1" />
+        <entity name="survivorArmyPowerArmorFemaleAK47" prob="0.1" />
+        <entity name="survivorArmyPowerArmorFemaleRocketL" prob="0.025" />
+        <entity name="survivorArmyPowerArmorFemaleM60" prob="0.1" />	
+	</append>
+	
+<!-- Lowest Vanilla ZombiesWastelandNight is mixed prob=1.0 -->
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']">
+	    <entity name="survivorReconMaleRocketL" prob="0.025" />
+        <entity name="survivorReconMaleTRifle" prob="0.1" />
+		<entity name="survivorReconMaleM60" prob="0.1" />
+		<entity name="survivorReconMaleAK47" prob="0.1" />
+        <entity name="survivorReconMaleClub" prob="0.1" />
+	    <entity name="survivorReconFemaleClub" prob="0.1" />
+        <entity name="survivorReconFemaleTRifle" prob="0.1" />
+		<entity name="survivorReconFemaleM60" prob="0.1" />
+		<entity name="survivorReconFemaleAK47" prob="0.1" />
+		<entity name="survivorVaultSecurityMalePistol" prob="0.1" />
+        <entity name="survivorVaultSecurityMaleSMG" prob="0.1" />
+		<entity name="survivorVaultBossPistol" prob="0.1" />
+        <entity name="survivorVaultResidentMalePistol" prob="0.1" />
+        <entity name="survivorVaultResidentMalePipeMG" prob="0.1" />
+		<entity name="survivorVaultResidentFemalePipeMG" prob="0.1" />
+        <entity name="survivorVaultSecurityFemalePistol" prob="0.1" />
+        <entity name="survivorVaultSecurityFemaleSMG" prob="0.1" />
+		<entity name="survivorVaultDoctorPistol" prob="0.1" />
+        <entity name="survivorVaultResidentFemalePistol" prob="0.1" />
+        <entity name="survivorVaultSecurityMaleClub" prob="0.1" />
+		<entity name="survivorVaultBossClub" prob="0.1" />
+		<entity name="survivorVaultResidentMaleClub" prob="0.1" />
+        <entity name="survivorVaultSecurityFemaleClub" prob="0.1" />
+		<entity name="survivorVaultDoctorClub" prob="0.1" />
+		<entity name="survivorVaultResidentFemaleClub" prob="0.1" />
+		<entity name="survivorVaultResidentMaleKnife" prob="0.1" />
+        <entity name="survivorVaultBossKnife" prob="0.1" />
+        <entity name="survivorVaultResidentFemaleKnife" prob="0.1" />
+        <entity name="survivorVaultDoctorKnife" prob="0.1" />
+		<entity name="survivorVaultResidentMaleBat" prob="0.1" />
+		<entity name="survivorVaultSecurityMaleBat" prob="0.1" />
+		<entity name="survivorVaultSecurityFemaleBat" prob="0.1" />
+		<entity name="survivorVaultSecurityMaleAxe" prob="0.1" />
+        <entity name="survivorVaultResidentMaleAxe" prob="0.1" />
+		<entity name="survivorVaultSecurityFemaleAxe" prob="0.1" />
+        <entity name="survivorVaultResidentFemaleAxe" prob="0.1" />
+        <entity name="survivorArmyPowerArmorMaleRocketL" prob="0.025" />
+        <entity name="survivorArmyPowerArmorMaleM60" prob="0.1" />
+        <entity name="survivorArmyPowerArmorMaleAK47" prob="0.1" />
+        <entity name="survivorArmyPowerArmorFemaleAK47" prob="0.1" />
+        <entity name="survivorArmyPowerArmorFemaleRocketL" prob="0.025" />
+        <entity name="survivorArmyPowerArmorFemaleM60" prob="0.1" />
 	</append>
 
-	<append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']">
-		<entity name="survivorReconMaleRocketL" prob=".025" />
-                <entity name="survivorReconMaleTRifle" prob=".025" />
-		<entity name="survivorReconMaleM60" prob=".025" />
-		<entity name="survivorReconMaleAK47" prob=".025" />
-                <entity name="survivorReconMaleClub" prob=".025" />
-	        <entity name="survivorReconFemaleClub" prob=".025" />
-                <entity name="survivorReconFemaleTRifle" prob=".025" />
-		<entity name="survivorReconFemaleM60" prob=".025" />
-		<entity name="survivorReconFemaleAK47" prob=".025" />
-		<entity name="survivorVaultSecurityMalePistol" prob=".025" />
-                <entity name="survivorVaultSecurityMaleSMG" prob=".025" />
-		<entity name="survivorVaultBossPistol" prob=".025" />
-                <entity name="survivorVaultResidentMalePistol" prob=".025" />
-                <entity name="survivorVaultResidentMalePipeMG" prob=".025" />
-                <entity name="survivorVaultResidentFemalePipeMG" prob=".025" />
-                <entity name="survivorVaultSecurityFemalePistol" prob=".025" />
-                <entity name="survivorVaultSecurityFemaleSMG" prob=".025" />
-		<entity name="survivorVaultDoctorPistol" prob=".025" />
-                <entity name="survivorVaultResidentFemalePistol" prob=".025" />
-                <entity name="survivorVaultSecurityMaleClub" prob=".025" />
-		<entity name="survivorVaultBossClub" prob=".025" />
-		<entity name="survivorVaultResidentMaleClub" prob=".025" />
-                <entity name="survivorVaultSecurityFemaleClub" prob=".025" />
-		<entity name="survivorVaultDoctorClub" prob=".025" />
-		<entity name="survivorVaultResidentFemaleClub" prob=".025" />
-		<entity name="survivorVaultResidentMaleKnife" prob=".025" />
-                <entity name="survivorVaultBossKnife" prob=".025" />
-                <entity name="survivorVaultResidentFemaleKnife" prob=".025" />
-                <entity name="survivorVaultDoctorKnife" prob=".025" />
-		<entity name="survivorVaultResidentMaleBat" prob=".025" />
-		<entity name="survivorVaultSecurityMaleBat" prob=".025" />
-		<entity name="survivorVaultSecurityFemaleBat" prob=".025" />
-		<entity name="survivorVaultSecurityMaleAxe" prob=".025" />
-                <entity name="survivorVaultResidentMaleAxe" prob=".025" />
-		<entity name="survivorVaultSecurityFemaleAxe" prob=".025" />
-                <entity name="survivorVaultResidentFemaleAxe" prob=".025" />
-                <entity name="survivorArmyPowerArmorMaleRocketL" prob=".025" />
-                <entity name="survivorArmyPowerArmorMaleM60" prob=".025" />
-                <entity name="survivorArmyPowerArmorMaleAK47" prob=".025" />
-                <entity name="survivorArmyPowerArmorFemaleAK47" prob=".025" />
-                <entity name="survivorArmyPowerArmorFemaleRocketL" prob=".025" />
-                <entity name="survivorArmyPowerArmorFemaleM60" prob=".025" />
-	</append>
-       
+<!-- Lowest Vanilla ZombiesAll is zombieJanitor prob=0.2 -->       
 	 <append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
-	        <entity name="npcReconMaleRocketL" prob=".025" />
-                <entity name="npcReconMaleTRifle" prob=".025" />
-		<entity name="npcReconMaleM60" prob=".025" />
-		<entity name="npcReconMaleAK47" prob=".025" />
-                <entity name="npcReconMaleClub" prob=".025" />
-	        <entity name="npcReconFemaleClub" prob=".025" />
-                <entity name="npcReconFemaleTRifle" prob=".025" />
-		<entity name="npcReconFemaleM60" prob=".025" />
-		<entity name="npcReconFemaleAK47" prob=".025" />
-		<entity name="npcVaultSecurityMalePistol" prob=".025" />
-                <entity name="npcVaultSecurityMaleSMG" prob=".025" />
-		<entity name="npcVaultBossPistol" prob=".025" />
-                <entity name="npcVaultResidentMalePistol" prob=".025" />
-                <entity name="npcVaultResidentMalePipeMG" prob=".025" />
-                <entity name="npcVaultResidentFemalePipeMG" prob=".025" />
-                <entity name="npcVaultSecurityFemalePistol" prob=".025" />
-                <entity name="npcVaultSecurityFemaleSMG" prob=".025" />
-		<entity name="npcVaultDoctorPistol" prob=".025" />
-                <entity name="npcVaultResidentFemalePistol" prob=".025" />
-                <entity name="npcVaultSecurityMaleClub" prob=".025" />
-		<entity name="npcVaultBossClub" prob=".025" />
-		<entity name="npcVaultResidentMaleClub" prob=".025" />
-                <entity name="npcVaultSecurityFemaleClub" prob=".025" />
-		<entity name="npcVaultDoctorClub" prob=".025" />
-		<entity name="npcVaultResidentFemaleClub" prob=".025" />
-		<entity name="npcVaultResidentMaleKnife" prob=".025" />
-                <entity name="npcVaultBossKnife" prob=".025" />
-                <entity name="npcVaultResidentFemaleKnife" prob=".025" />
-                <entity name="npcVaultDoctorKnife" prob=".025" />
-		<entity name="npcVaultResidentMaleBat" prob=".025" />
-		<entity name="npcVaultSecurityMaleBat" prob=".025" />
-		<entity name="npcVaultSecurityFemaleBat" prob=".025" />
-		<entity name="npcVaultSecurityMaleAxe" prob=".025" />
-                <entity name="npcVaultResidentMaleAxe" prob=".025" />
-		<entity name="npcVaultSecurityFemaleAxe" prob=".025" />
-                <entity name="npcVaultResidentFemaleAxe" prob=".025" />
-                <entity name="npcArmyPowerArmorMaleRocketL" prob=".025" />
-                <entity name="npcArmyPowerArmorMaleM60" prob=".025" />
-                <entity name="npcArmyPowerArmorMaleAK47" prob=".025" />
-                <entity name="npcArmyPowerArmorFemaleAK47" prob=".025" />
-                <entity name="npcArmyPowerArmorFemaleRocketL" prob=".025" />
-                <entity name="npcArmyPowerArmorFemaleM60" prob=".025" /> 	
+	    <entity name="npcReconMaleRocketL" prob="0.025" />
+        <entity name="npcReconMaleTRifle" prob="0.1" />
+		<entity name="npcReconMaleM60" prob="0.1" />
+		<entity name="npcReconMaleAK47" prob="0.1" />
+        <entity name="npcReconMaleClub" prob="0.1" />
+	    <entity name="npcReconFemaleClub" prob="0.1" />
+        <entity name="npcReconFemaleTRifle" prob="0.1" />
+		<entity name="npcReconFemaleM60" prob="0.1" />
+		<entity name="npcReconFemaleAK47" prob="0.1" />
+		<entity name="npcVaultSecurityMalePistol" prob="0.1" />
+        <entity name="npcVaultSecurityMaleSMG" prob="0.1" />
+		<entity name="npcVaultBossPistol" prob="0.1" />
+        <entity name="npcVaultResidentMalePistol" prob="0.1" />
+        <entity name="npcVaultResidentMalePipeMG" prob="0.1" />
+        <entity name="npcVaultResidentFemalePipeMG" prob="0.1" />
+        <entity name="npcVaultSecurityFemalePistol" prob="0.1" />
+        <entity name="npcVaultSecurityFemaleSMG" prob="0.1" />
+		<entity name="npcVaultDoctorPistol" prob="0.1" />
+        <entity name="npcVaultResidentFemalePistol" prob="0.1" />
+        <entity name="npcVaultSecurityMaleClub" prob="0.1" />
+		<entity name="npcVaultBossClub" prob="0.1" />
+		<entity name="npcVaultResidentMaleClub" prob="0.1" />
+        <entity name="npcVaultSecurityFemaleClub" prob="0.1" />
+		<entity name="npcVaultDoctorClub" prob="0.1" />
+		<entity name="npcVaultResidentFemaleClub" prob="0.1" />
+		<entity name="npcVaultResidentMaleKnife" prob="0.1" />
+        <entity name="npcVaultBossKnife" prob="0.1" />
+        <entity name="npcVaultResidentFemaleKnife" prob="0.1" />
+        <entity name="npcVaultDoctorKnife" prob="0.1" />
+		<entity name="npcVaultResidentMaleBat" prob="0.1" />
+		<entity name="npcVaultSecurityMaleBat" prob="0.1" />
+		<entity name="npcVaultSecurityFemaleBat" prob="0.1" />
+		<entity name="npcVaultSecurityMaleAxe" prob="0.1" />
+        <entity name="npcVaultResidentMaleAxe" prob="0.1" />
+		<entity name="npcVaultSecurityFemaleAxe" prob="0.1" />
+        <entity name="npcVaultResidentFemaleAxe" prob="0.1" />
+        <entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+        <entity name="npcArmyPowerArmorMaleM60" prob="0.1" />
+        <entity name="npcArmyPowerArmorMaleAK47" prob="0.1" />
+        <entity name="npcArmyPowerArmorFemaleAK47" prob="0.1" />
+        <entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+        <entity name="npcArmyPowerArmorFemaleM60" prob="0.1" /> 	
 	</append>
 	
+<!-- Lowest Vanilla ZombiesNight is animalZombieDog prob=0.05 -->	
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
-		<entity name="npcReconMaleRocketL" prob=".025" />
-                <entity name="npcReconMaleTRifle" prob=".025" />
-		<entity name="npcReconMaleM60" prob=".025" />
-		<entity name="npcReconMaleAK47" prob=".025" />
-                <entity name="npcReconMaleClub" prob=".025" />
-	        <entity name="npcReconFemaleClub" prob=".025" />
-                <entity name="npcReconFemaleTRifle" prob=".025" />
-		<entity name="npcReconFemaleM60" prob=".025" />
-		<entity name="npcReconFemaleAK47" prob=".025" />
-		<entity name="npcVaultSecurityMalePistol" prob=".025" />
-                <entity name="npcVaultSecurityMaleSMG" prob=".025" />
-		<entity name="npcVaultBossPistol" prob=".025" />
-                <entity name="npcVaultResidentMalePistol" prob=".025" />
-                <entity name="npcVaultResidentMalePipeMG" prob=".025" />
-                <entity name="npcVaultResidentFemalePipeMG" prob=".025" />
-                <entity name="npcVaultSecurityFemalePistol" prob=".025" />
-                <entity name="npcVaultSecurityFemaleSMG" prob=".025" />
-		<entity name="npcVaultDoctorPistol" prob=".025" />
-                <entity name="npcVaultResidentFemalePistol" prob=".025" />
-                <entity name="npcVaultSecurityMaleClub" prob=".025" />
-		<entity name="npcVaultBossClub" prob=".025" />
-		<entity name="npcVaultResidentMaleClub" prob=".025" />
-                <entity name="npcVaultSecurityFemaleClub" prob=".025" />
-		<entity name="npcVaultDoctorClub" prob=".025" />
-		<entity name="npcVaultResidentFemaleClub" prob=".025" />
-		<entity name="npcVaultResidentMaleKnife" prob=".025" />
-                <entity name="npcVaultBossKnife" prob=".025" />
-                <entity name="npcVaultResidentFemaleKnife" prob=".025" />
-                <entity name="npcVaultDoctorKnife" prob=".025" />
-		<entity name="npcVaultResidentMaleBat" prob=".025" />
-		<entity name="npcVaultSecurityMaleBat" prob=".025" />
-		<entity name="npcVaultSecurityFemaleBat" prob=".025" />
-		<entity name="npcVaultSecurityMaleAxe" prob=".025" />
-                <entity name="npcVaultResidentMaleAxe" prob=".025" />
-		<entity name="npcVaultSecurityFemaleAxe" prob=".025" />
-                <entity name="npcVaultResidentFemaleAxe" prob=".025" />
-                <entity name="npcArmyPowerArmorMaleRocketL" prob=".025" />
-                <entity name="npcArmyPowerArmorMaleM60" prob=".025" />
-                <entity name="npcArmyPowerArmorMaleAK47" prob=".025" />
-                <entity name="npcArmyPowerArmorFemaleAK47" prob=".025" />
-                <entity name="npcArmyPowerArmorFemaleRocketL" prob=".025" />
-                <entity name="npcArmyPowerArmorFemaleM60" prob=".025" />		
+	    <entity name="npcReconMaleRocketL" prob="0.00625" />
+        <entity name="npcReconMaleTRifle" prob="0.025" />
+		<entity name="npcReconMaleM60" prob="0.025" />
+		<entity name="npcReconMaleAK47" prob="0.025" />
+        <entity name="npcReconMaleClub" prob="0.025" />
+	    <entity name="npcReconFemaleClub" prob="0.025" />
+        <entity name="npcReconFemaleTRifle" prob="0.025" />
+		<entity name="npcReconFemaleM60" prob="0.025" />
+		<entity name="npcReconFemaleAK47" prob="0.025" />
+		<entity name="npcVaultSecurityMalePistol" prob="0.025" />
+        <entity name="npcVaultSecurityMaleSMG" prob="0.025" />
+		<entity name="npcVaultBossPistol" prob="0.025" />
+        <entity name="npcVaultResidentMalePistol" prob="0.025" />
+        <entity name="npcVaultResidentMalePipeMG" prob="0.025" />
+        <entity name="npcVaultResidentFemalePipeMG" prob="0.025" />
+        <entity name="npcVaultSecurityFemalePistol" prob="0.025" />
+        <entity name="npcVaultSecurityFemaleSMG" prob="0.025" />
+		<entity name="npcVaultDoctorPistol" prob="0.025" />
+        <entity name="npcVaultResidentFemalePistol" prob="0.025" />
+        <entity name="npcVaultSecurityMaleClub" prob="0.025" />
+		<entity name="npcVaultBossClub" prob="0.025" />
+		<entity name="npcVaultResidentMaleClub" prob="0.025" />
+        <entity name="npcVaultSecurityFemaleClub" prob="0.025" />
+		<entity name="npcVaultDoctorClub" prob="0.025" />
+		<entity name="npcVaultResidentFemaleClub" prob="0.025" />
+		<entity name="npcVaultResidentMaleKnife" prob="0.025" />
+        <entity name="npcVaultBossKnife" prob="0.025" />
+        <entity name="npcVaultResidentFemaleKnife" prob="0.025" />
+        <entity name="npcVaultDoctorKnife" prob="0.025" />
+		<entity name="npcVaultResidentMaleBat" prob="0.025" />
+		<entity name="npcVaultSecurityMaleBat" prob="0.025" />
+		<entity name="npcVaultSecurityFemaleBat" prob="0.025" />
+		<entity name="npcVaultSecurityMaleAxe" prob="0.025" />
+        <entity name="npcVaultResidentMaleAxe" prob="0.025" />
+		<entity name="npcVaultSecurityFemaleAxe" prob="0.025" />
+        <entity name="npcVaultResidentFemaleAxe" prob="0.025" />
+        <entity name="npcArmyPowerArmorMaleRocketL" prob="0.00625" />
+        <entity name="npcArmyPowerArmorMaleM60" prob="0.025" />
+        <entity name="npcArmyPowerArmorMaleAK47" prob="0.025" />
+        <entity name="npcArmyPowerArmorFemaleAK47" prob="0.025" />
+        <entity name="npcArmyPowerArmorFemaleRocketL" prob="0.00625" />
+        <entity name="npcArmyPowerArmorFemaleM60" prob="0.025" />		
 	</append>
-	
+
+<!-- Lowest Vanilla SnowZombies is zombieLumberjack prob=1.0 -->	
 	<append xpath="/entitygroups/entitygroup[@name='SnowZombies']">
-		<entity name="npcReconMaleRocketL" prob=".025" />
-                <entity name="npcReconMaleTRifle" prob=".025" />
-		<entity name="npcReconMaleM60" prob=".025" />
-		<entity name="npcReconMaleAK47" prob=".025" />
-                <entity name="npcReconMaleClub" prob=".025" />
-	        <entity name="npcReconFemaleClub" prob=".025" />
-                <entity name="npcReconFemaleTRifle" prob=".025" />
-		<entity name="npcReconFemaleM60" prob=".025" />
-		<entity name="npcReconFemaleAK47" prob=".025" />
-		<entity name="npcVaultSecurityMalePistol" prob=".025" />
-                <entity name="npcVaultSecurityMaleSMG" prob=".025" />
-		<entity name="npcVaultBossPistol" prob=".025" />
-                <entity name="npcVaultResidentMalePistol" prob=".025" />
-                <entity name="npcVaultResidentMalePipeMG" prob=".025" />
-                <entity name="npcVaultResidentFemalePipeMG" prob=".025" />
-                <entity name="npcVaultSecurityFemalePistol" prob=".025" />
-                <entity name="npcVaultSecurityFemaleSMG" prob=".025" />
-		<entity name="npcVaultDoctorPistol" prob=".025" />
-                <entity name="npcVaultResidentFemalePistol" prob=".025" />
-                <entity name="npcVaultSecurityMaleClub" prob=".025" />
-		<entity name="npcVaultBossClub" prob=".025" />
-		<entity name="npcVaultResidentMaleClub" prob=".025" />
-                <entity name="npcVaultSecurityFemaleClub" prob=".025" />
-		<entity name="npcVaultDoctorClub" prob=".025" />
-		<entity name="npcVaultResidentFemaleClub" prob=".025" />
-		<entity name="npcVaultResidentMaleKnife" prob=".025" />
-                <entity name="npcVaultBossKnife" prob=".025" />
-                <entity name="npcVaultResidentFemaleKnife" prob=".025" />
-                <entity name="npcVaultDoctorKnife" prob=".025" />
-		<entity name="npcVaultResidentMaleBat" prob=".025" />
-		<entity name="npcVaultSecurityMaleBat" prob=".025" />
-		<entity name="npcVaultSecurityFemaleBat" prob=".025" />
-		<entity name="npcVaultSecurityMaleAxe" prob=".025" />
-                <entity name="npcVaultResidentMaleAxe" prob=".025" />
-		<entity name="npcVaultSecurityFemaleAxe" prob=".025" />
-                <entity name="npcVaultResidentFemaleAxe" prob=".025" />
-                <entity name="npcArmyPowerArmorMaleRocketL" prob=".025" />
-                <entity name="npcArmyPowerArmorMaleM60" prob=".025" />
-                <entity name="npcArmyPowerArmorMaleAK47" prob=".025" />
-                <entity name="npcArmyPowerArmorFemaleAK47" prob=".025" />
-                <entity name="npcArmyPowerArmorFemaleRocketL" prob=".025" />
-                <entity name="npcArmyPowerArmorFemaleM60" prob=".025" />
+	    <entity name="npcReconMaleRocketL" prob="0.025" />
+        <entity name="npcReconMaleTRifle" prob="0.1" />
+		<entity name="npcReconMaleM60" prob="0.1" />
+		<entity name="npcReconMaleAK47" prob="0.1" />
+        <entity name="npcReconMaleClub" prob="0.1" />
+	    <entity name="npcReconFemaleClub" prob="0.1" />
+        <entity name="npcReconFemaleTRifle" prob="0.1" />
+		<entity name="npcReconFemaleM60" prob="0.1" />
+		<entity name="npcReconFemaleAK47" prob="0.1" />
+		<entity name="npcVaultSecurityMalePistol" prob="0.1" />
+        <entity name="npcVaultSecurityMaleSMG" prob="0.1" />
+		<entity name="npcVaultBossPistol" prob="0.1" />
+        <entity name="npcVaultResidentMalePistol" prob="0.1" />
+        <entity name="npcVaultResidentMalePipeMG" prob="0.1" />
+        <entity name="npcVaultResidentFemalePipeMG" prob="0.1" />
+        <entity name="npcVaultSecurityFemalePistol" prob="0.1" />
+        <entity name="npcVaultSecurityFemaleSMG" prob="0.1" />
+		<entity name="npcVaultDoctorPistol" prob="0.1" />
+        <entity name="npcVaultResidentFemalePistol" prob="0.1" />
+        <entity name="npcVaultSecurityMaleClub" prob="0.1" />
+		<entity name="npcVaultBossClub" prob="0.1" />
+		<entity name="npcVaultResidentMaleClub" prob="0.1" />
+        <entity name="npcVaultSecurityFemaleClub" prob="0.1" />
+		<entity name="npcVaultDoctorClub" prob="0.1" />
+		<entity name="npcVaultResidentFemaleClub" prob="0.1" />
+		<entity name="npcVaultResidentMaleKnife" prob="0.1" />
+        <entity name="npcVaultBossKnife" prob="0.1" />
+        <entity name="npcVaultResidentFemaleKnife" prob="0.1" />
+        <entity name="npcVaultDoctorKnife" prob="0.1" />
+		<entity name="npcVaultResidentMaleBat" prob="0.1" />
+		<entity name="npcVaultSecurityMaleBat" prob="0.1" />
+		<entity name="npcVaultSecurityFemaleBat" prob="0.1" />
+		<entity name="npcVaultSecurityMaleAxe" prob="0.1" />
+        <entity name="npcVaultResidentMaleAxe" prob="0.1" />
+		<entity name="npcVaultSecurityFemaleAxe" prob="0.1" />
+        <entity name="npcVaultResidentFemaleAxe" prob="0.1" />
+        <entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+        <entity name="npcArmyPowerArmorMaleM60" prob="0.1" />
+        <entity name="npcArmyPowerArmorMaleAK47" prob="0.1" />
+        <entity name="npcArmyPowerArmorFemaleAK47" prob="0.1" />
+        <entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+        <entity name="npcArmyPowerArmorFemaleM60" prob="0.1" />
 	</append>	
 
+<!-- Lowest Vanilla ZombiesWasteland is mixed prob=1.0 -->
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']">
-	       	<entity name="npcReconMaleRocketL" prob=".025" />
-                <entity name="npcReconMaleTRifle" prob=".025" />
-		<entity name="npcReconMaleM60" prob=".025" />
-		<entity name="npcReconMaleAK47" prob=".025" />
-                <entity name="npcReconMaleClub" prob=".025" />
-	        <entity name="npcReconFemaleClub" prob=".025" />
-                <entity name="npcReconFemaleTRifle" prob=".025" />
-		<entity name="npcReconFemaleM60" prob=".025" />
-		<entity name="npcReconFemaleAK47" prob=".025" />
-		<entity name="npcVaultSecurityMalePistol" prob=".025" />
-                <entity name="npcVaultSecurityMaleSMG" prob=".025" />
-		<entity name="npcVaultBossPistol" prob=".025" />
-                <entity name="npcVaultResidentMalePistol" prob=".025" />
-                <entity name="npcVaultResidentMalePipeMG" prob=".025" />
-                <entity name="npcVaultResidentFemalePipeMG" prob=".025" />
-                <entity name="npcVaultSecurityFemalePistol" prob=".025" />
-                <entity name="npcVaultSecurityFemaleSMG" prob=".025" />
-		<entity name="npcVaultDoctorPistol" prob=".025" />
-                <entity name="npcVaultResidentFemalePistol" prob=".025" />
-                <entity name="npcVaultSecurityMaleClub" prob=".025" />
-		<entity name="npcVaultBossClub" prob=".025" />
-		<entity name="npcVaultResidentMaleClub" prob=".025" />
-                <entity name="npcVaultSecurityFemaleClub" prob=".025" />
-		<entity name="npcVaultDoctorClub" prob=".025" />
-		<entity name="npcVaultResidentFemaleClub" prob=".025" />
-		<entity name="npcVaultResidentMaleKnife" prob=".025" />
-                <entity name="npcVaultBossKnife" prob=".025" />
-                <entity name="npcVaultResidentFemaleKnife" prob=".025" />
-                <entity name="npcVaultDoctorKnife" prob=".025" />
-		<entity name="npcVaultResidentMaleBat" prob=".025" />
-		<entity name="npcVaultSecurityMaleBat" prob=".025" />
-		<entity name="npcVaultSecurityFemaleBat" prob=".025" />
-		<entity name="npcVaultSecurityMaleAxe" prob=".025" />
-                <entity name="npcVaultResidentMaleAxe" prob=".025" />
-		<entity name="npcVaultSecurityFemaleAxe" prob=".025" />
-                <entity name="npcVaultResidentFemaleAxe" prob=".025" />
-                <entity name="npcArmyPowerArmorMaleRocketL" prob=".025" />
-                <entity name="npcArmyPowerArmorMaleM60" prob=".025" />
-                <entity name="npcArmyPowerArmorMaleAK47" prob=".025" />
-                <entity name="npcArmyPowerArmorFemaleAK47" prob=".025" />
-                <entity name="npcArmyPowerArmorFemaleRocketL" prob=".025" />
-                <entity name="npcArmyPowerArmorFemaleM60" prob=".025" />	
+	    <entity name="npcReconMaleRocketL" prob="0.025" />
+        <entity name="npcReconMaleTRifle" prob="0.1" />
+		<entity name="npcReconMaleM60" prob="0.1" />
+		<entity name="npcReconMaleAK47" prob="0.1" />
+        <entity name="npcReconMaleClub" prob="0.1" />
+	    <entity name="npcReconFemaleClub" prob="0.1" />
+        <entity name="npcReconFemaleTRifle" prob="0.1" />
+		<entity name="npcReconFemaleM60" prob="0.1" />
+		<entity name="npcReconFemaleAK47" prob="0.1" />
+		<entity name="npcVaultSecurityMalePistol" prob="0.1" />
+        <entity name="npcVaultSecurityMaleSMG" prob="0.1" />
+		<entity name="npcVaultBossPistol" prob="0.1" />
+        <entity name="npcVaultResidentMalePistol" prob="0.1" />
+        <entity name="npcVaultResidentMalePipeMG" prob="0.1" />
+        <entity name="npcVaultResidentFemalePipeMG" prob="0.1" />
+        <entity name="npcVaultSecurityFemalePistol" prob="0.1" />
+        <entity name="npcVaultSecurityFemaleSMG" prob="0.1" />
+		<entity name="npcVaultDoctorPistol" prob="0.1" />
+        <entity name="npcVaultResidentFemalePistol" prob="0.1" />
+        <entity name="npcVaultSecurityMaleClub" prob="0.1" />
+		<entity name="npcVaultBossClub" prob="0.1" />
+		<entity name="npcVaultResidentMaleClub" prob="0.1" />
+        <entity name="npcVaultSecurityFemaleClub" prob="0.1" />
+		<entity name="npcVaultDoctorClub" prob="0.1" />
+		<entity name="npcVaultResidentFemaleClub" prob="0.1" />
+		<entity name="npcVaultResidentMaleKnife" prob="0.1" />
+        <entity name="npcVaultBossKnife" prob="0.1" />
+        <entity name="npcVaultResidentFemaleKnife" prob="0.1" />
+        <entity name="npcVaultDoctorKnife" prob="0.1" />
+		<entity name="npcVaultResidentMaleBat" prob="0.1" />
+		<entity name="npcVaultSecurityMaleBat" prob="0.1" />
+		<entity name="npcVaultSecurityFemaleBat" prob="0.1" />
+		<entity name="npcVaultSecurityMaleAxe" prob="0.1" />
+        <entity name="npcVaultResidentMaleAxe" prob="0.1" />
+		<entity name="npcVaultSecurityFemaleAxe" prob="0.1" />
+        <entity name="npcVaultResidentFemaleAxe" prob="0.1" />
+        <entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+        <entity name="npcArmyPowerArmorMaleM60" prob="0.1" />
+        <entity name="npcArmyPowerArmorMaleAK47" prob="0.1" />
+        <entity name="npcArmyPowerArmorFemaleAK47" prob="0.1" />
+        <entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+        <entity name="npcArmyPowerArmorFemaleM60" prob="0.1" />	
 	</append>
 
+<!-- Lowest Vanilla ZombiesWastelandNight is mixed prob=1.0 -->
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']">
-		<entity name="npcReconMaleRocketL" prob=".025" />
-                <entity name="npcReconMaleTRifle" prob=".025" />
-		<entity name="npcReconMaleM60" prob=".025" />
-		<entity name="npcReconMaleAK47" prob=".025" />
-                <entity name="npcReconMaleClub" prob=".025" />
-	        <entity name="npcReconFemaleClub" prob=".025" />
-                <entity name="npcReconFemaleTRifle" prob=".025" />
-		<entity name="npcReconFemaleM60" prob=".025" />
-		<entity name="npcReconFemaleAK47" prob=".025" />
-		<entity name="npcVaultSecurityMalePistol" prob=".025" />
-                <entity name="npcVaultSecurityMaleSMG" prob=".025" />
-		<entity name="npcVaultBossPistol" prob=".025" />
-                <entity name="npcVaultResidentMalePistol" prob=".025" />
-                <entity name="npcVaultResidentMalePipeMG" prob=".025" />
-                <entity name="npcVaultResidentFemalePipeMG" prob=".025" />
-                <entity name="npcVaultSecurityFemalePistol" prob=".025" />
-                <entity name="npcVaultSecurityFemaleSMG" prob=".025" />
-		<entity name="npcVaultDoctorPistol" prob=".025" />
-                <entity name="npcVaultResidentFemalePistol" prob=".025" />
-                <entity name="npcVaultSecurityMaleClub" prob=".025" />
-		<entity name="npcVaultBossClub" prob=".025" />
-		<entity name="npcVaultResidentMaleClub" prob=".025" />
-                <entity name="npcVaultSecurityFemaleClub" prob=".025" />
-		<entity name="npcVaultDoctorClub" prob=".025" />
-		<entity name="npcVaultResidentFemaleClub" prob=".025" />
-		<entity name="npcVaultResidentMaleKnife" prob=".025" />
-                <entity name="npcVaultBossKnife" prob=".025" />
-                <entity name="npcVaultResidentFemaleKnife" prob=".025" />
-                <entity name="npcVaultDoctorKnife" prob=".025" />
-		<entity name="npcVaultResidentMaleBat" prob=".025" />
-		<entity name="npcVaultSecurityMaleBat" prob=".025" />
-		<entity name="npcVaultSecurityFemaleBat" prob=".025" />
-		<entity name="npcVaultSecurityMaleAxe" prob=".025" />
-                <entity name="npcVaultResidentMaleAxe" prob=".025" />
-		<entity name="npcVaultSecurityFemaleAxe" prob=".025" />
-                <entity name="npcVaultResidentFemaleAxe" prob=".025" />
-                <entity name="npcArmyPowerArmorMaleRocketL" prob=".025" />
-                <entity name="npcArmyPowerArmorMaleM60" prob=".025" />
-                <entity name="npcArmyPowerArmorMaleAK47" prob=".025" />
-                <entity name="npcArmyPowerArmorFemaleAK47" prob=".025" />
-                <entity name="npcArmyPowerArmorFemaleRocketL" prob=".025" />
-                <entity name="npcArmyPowerArmorFemaleM60" prob=".025" />
+	    <entity name="npcReconMaleRocketL" prob="0.025" />
+        <entity name="npcReconMaleTRifle" prob="0.1" />
+		<entity name="npcReconMaleM60" prob="0.1" />
+		<entity name="npcReconMaleAK47" prob="0.1" />
+        <entity name="npcReconMaleClub" prob="0.1" />
+	    <entity name="npcReconFemaleClub" prob="0.1" />
+        <entity name="npcReconFemaleTRifle" prob="0.1" />
+		<entity name="npcReconFemaleM60" prob="0.1" />
+		<entity name="npcReconFemaleAK47" prob="0.1" />
+		<entity name="npcVaultSecurityMalePistol" prob="0.1" />
+        <entity name="npcVaultSecurityMaleSMG" prob="0.1" />
+		<entity name="npcVaultBossPistol" prob="0.1" />
+        <entity name="npcVaultResidentMalePistol" prob="0.1" />
+        <entity name="npcVaultResidentMalePipeMG" prob="0.1" />
+        <entity name="npcVaultResidentFemalePipeMG" prob="0.1" />
+        <entity name="npcVaultSecurityFemalePistol" prob="0.1" />
+        <entity name="npcVaultSecurityFemaleSMG" prob="0.1" />
+		<entity name="npcVaultDoctorPistol" prob="0.1" />
+        <entity name="npcVaultResidentFemalePistol" prob="0.1" />
+        <entity name="npcVaultSecurityMaleClub" prob="0.1" />
+		<entity name="npcVaultBossClub" prob="0.1" />
+		<entity name="npcVaultResidentMaleClub" prob="0.1" />
+        <entity name="npcVaultSecurityFemaleClub" prob="0.1" />
+		<entity name="npcVaultDoctorClub" prob="0.1" />
+		<entity name="npcVaultResidentFemaleClub" prob="0.1" />
+		<entity name="npcVaultResidentMaleKnife" prob="0.1" />
+        <entity name="npcVaultBossKnife" prob="0.1" />
+        <entity name="npcVaultResidentFemaleKnife" prob="0.1" />
+        <entity name="npcVaultDoctorKnife" prob="0.1" />
+		<entity name="npcVaultResidentMaleBat" prob="0.1" />
+		<entity name="npcVaultSecurityMaleBat" prob="0.1" />
+		<entity name="npcVaultSecurityFemaleBat" prob="0.1" />
+		<entity name="npcVaultSecurityMaleAxe" prob="0.1" />
+        <entity name="npcVaultResidentMaleAxe" prob="0.1" />
+		<entity name="npcVaultSecurityFemaleAxe" prob="0.1" />
+        <entity name="npcVaultResidentFemaleAxe" prob="0.1" />
+        <entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+        <entity name="npcArmyPowerArmorMaleM60" prob="0.1" />
+        <entity name="npcArmyPowerArmorMaleAK47" prob="0.1" />
+        <entity name="npcArmyPowerArmorFemaleAK47" prob="0.1" />
+        <entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+        <entity name="npcArmyPowerArmorFemaleM60" prob="0.1" />
 	</append>
 
 	<!--
@@ -457,1270 +465,1446 @@
 	-->
 	<!-- Vault NPC entity groups -->
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultAllGroupGS01']">
-		<entity name="npcReconFemaleAK47" prob="0.6" />
-		<entity name="npcReconFemaleClub" prob="0.7" />
-		<entity name="npcReconFemaleM60" prob="0.6" />
-		<entity name="npcReconFemaleRocketL" prob="0.5" />
-		<entity name="npcReconFemaleTRifle" prob="0.6" />
-		<entity name="npcReconMaleAK47" prob="0.6" />
-		<entity name="npcReconMaleClub" prob="0.7" />
-		<entity name="npcReconMaleM60" prob="0.6" />
-		<entity name="npcReconMaleRocketL" prob="0.5" />
-		<entity name="npcReconMaleTRifle" prob="0.6" />
-		<entity name="npcVaultBossClub" prob="1" />
-		<entity name="npcVaultBossKnife" prob="1" />
-		<entity name="npcVaultBossPistol" prob="1" />
-		<entity name="npcVaultDoctorBat" prob="1" />
-		<entity name="npcVaultDoctorClub" prob="1" />
-		<entity name="npcVaultDoctorKnife" prob="1" />
-		<entity name="npcVaultDoctorPistol" prob="1" />
-		<entity name="npcVaultResidentFemaleAxe" prob="1" />
-		<entity name="npcVaultResidentFemaleClub" prob="1" />
-		<entity name="npcVaultResidentFemaleKnife" prob="1" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="1" />
-		<entity name="npcVaultResidentFemalePistol" prob="1" />
-		<entity name="npcVaultResidentMaleAxe" prob="1" />
-		<entity name="npcVaultResidentMaleBat" prob="1" />
-		<entity name="npcVaultResidentMaleClub" prob="1" />
-		<entity name="npcVaultResidentMaleKnife" prob="1" />
-		<entity name="npcVaultResidentMalePipeMG" prob="1" />
-		<entity name="npcVaultResidentMalePistol" prob="1" />
-		<entity name="npcVaultSecurityFemaleAxe" prob="0.9" />
-		<entity name="npcVaultSecurityFemaleBat" prob="0.9" />
-		<entity name="npcVaultSecurityFemaleClub" prob="0.9" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.8" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.8" />
-		<entity name="npcVaultSecurityMaleAxe" prob="0.9" />
-		<entity name="npcVaultSecurityMaleBat" prob="0.9" />
-		<entity name="npcVaultSecurityMaleClub" prob="0.9" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.8" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.8" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultAllGroupGS50']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.3" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.3" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.2" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.3" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.3" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.2" />
-		<entity name="npcReconFemaleAK47" prob="0.5" />
-		<entity name="npcReconFemaleClub" prob="0.6" />
-		<entity name="npcReconFemaleM60" prob="0.5" />
-		<entity name="npcReconFemaleRocketL" prob="0.5" />
-		<entity name="npcReconFemaleTRifle" prob="0.5" />
-		<entity name="npcReconMaleAK47" prob="0.5" />
-		<entity name="npcReconMaleClub" prob="0.6" />
-		<entity name="npcReconMaleM60" prob="0.5" />
-		<entity name="npcReconMaleRocketL" prob="0.5" />
-		<entity name="npcReconMaleTRifle" prob="0.5" />
-		<entity name="npcVaultBossClub" prob="0.8" />
-		<entity name="npcVaultBossKnife" prob="0.8" />
-		<entity name="npcVaultBossPistol" prob="0.8" />
-		<entity name="npcVaultDoctorBat" prob="0.8" />
-		<entity name="npcVaultDoctorClub" prob="0.8" />
-		<entity name="npcVaultDoctorKnife" prob="0.8" />
-		<entity name="npcVaultDoctorPistol" prob="0.8" />
-		<entity name="npcVaultResidentFemaleAxe" prob="0.8" />
-		<entity name="npcVaultResidentFemaleClub" prob="0.8" />
-		<entity name="npcVaultResidentFemaleKnife" prob="0.8" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.8" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.8" />
-		<entity name="npcVaultResidentMaleAxe" prob="0.8" />
-		<entity name="npcVaultResidentMaleBat" prob="0.8" />
-		<entity name="npcVaultResidentMaleClub" prob="0.8" />
-		<entity name="npcVaultResidentMaleKnife" prob="0.8" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.8" />
-		<entity name="npcVaultResidentMalePistol" prob="0.8" />
-		<entity name="npcVaultSecurityFemaleAxe" prob="0.7" />
-		<entity name="npcVaultSecurityFemaleBat" prob="0.7" />
-		<entity name="npcVaultSecurityFemaleClub" prob="0.7" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.7" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.7" />
-		<entity name="npcVaultSecurityMaleAxe" prob="0.7" />
-		<entity name="npcVaultSecurityMaleBat" prob="0.7" />
-		<entity name="npcVaultSecurityMaleClub" prob="0.7" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.7" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.7" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultAllGroupGS100']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.4" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.4" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.4" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.4" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.4" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.4" />
-		<entity name="npcReconFemaleAK47" prob="0.5" />
-		<entity name="npcReconFemaleClub" prob="0.5" />
-		<entity name="npcReconFemaleM60" prob="0.5" />
-		<entity name="npcReconFemaleRocketL" prob="0.5" />
-		<entity name="npcReconFemaleTRifle" prob="0.5" />
-		<entity name="npcReconMaleAK47" prob="0.5" />
-		<entity name="npcReconMaleClub" prob="0.5" />
-		<entity name="npcReconMaleM60" prob="0.5" />
-		<entity name="npcReconMaleRocketL" prob="0.5" />
-		<entity name="npcReconMaleTRifle" prob="0.5" />
-		<entity name="npcVaultBossClub" prob="0.6" />
-		<entity name="npcVaultBossKnife" prob="0.6" />
-		<entity name="npcVaultBossPistol" prob="0.6" />
-		<entity name="npcVaultDoctorBat" prob="0.6" />
-		<entity name="npcVaultDoctorClub" prob="0.6" />
-		<entity name="npcVaultDoctorKnife" prob="0.6" />
-		<entity name="npcVaultDoctorPistol" prob="0.6" />
-		<entity name="npcVaultResidentFemaleAxe" prob="0.6" />
-		<entity name="npcVaultResidentFemaleClub" prob="0.6" />
-		<entity name="npcVaultResidentFemaleKnife" prob="0.6" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.6" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.6" />
-		<entity name="npcVaultResidentMaleAxe" prob="0.6" />
-		<entity name="npcVaultResidentMaleBat" prob="0.6" />
-		<entity name="npcVaultResidentMaleClub" prob="0.6" />
-		<entity name="npcVaultResidentMaleKnife" prob="0.6" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.6" />
-		<entity name="npcVaultResidentMalePistol" prob="0.6" />
-		<entity name="npcVaultSecurityFemaleAxe" prob="0.6" />
-		<entity name="npcVaultSecurityFemaleBat" prob="0.6" />
-		<entity name="npcVaultSecurityFemaleClub" prob="0.6" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.6" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.6" />
-		<entity name="npcVaultSecurityMaleAxe" prob="0.6" />
-		<entity name="npcVaultSecurityMaleBat" prob="0.6" />
-		<entity name="npcVaultSecurityMaleClub" prob="0.6" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.6" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.6" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultAllGroupGS200']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.6" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.6" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.6" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.6" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.6" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.6" />
-		<entity name="npcReconFemaleAK47" prob="0.5" />
-		<entity name="npcReconFemaleClub" prob="0.5" />
-		<entity name="npcReconFemaleM60" prob="0.5" />
-		<entity name="npcReconFemaleRocketL" prob="0.5" />
-		<entity name="npcReconFemaleTRifle" prob="0.5" />
-		<entity name="npcReconMaleAK47" prob="0.5" />
-		<entity name="npcReconMaleClub" prob="0.5" />
-		<entity name="npcReconMaleM60" prob="0.5" />
-		<entity name="npcReconMaleRocketL" prob="0.5" />
-		<entity name="npcReconMaleTRifle" prob="0.5" />
-		<entity name="npcVaultBossClub" prob="0.4" />
-		<entity name="npcVaultBossKnife" prob="0.4" />
-		<entity name="npcVaultBossPistol" prob="0.4" />
-		<entity name="npcVaultDoctorBat" prob="0.4" />
-		<entity name="npcVaultDoctorClub" prob="0.4" />
-		<entity name="npcVaultDoctorKnife" prob="0.4" />
-		<entity name="npcVaultDoctorPistol" prob="0.4" />
-		<entity name="npcVaultResidentFemaleAxe" prob="0.4" />
-		<entity name="npcVaultResidentFemaleClub" prob="0.4" />
-		<entity name="npcVaultResidentFemaleKnife" prob="0.4" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.4" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.4" />
-		<entity name="npcVaultResidentMaleAxe" prob="0.4" />
-		<entity name="npcVaultResidentMaleBat" prob="0.4" />
-		<entity name="npcVaultResidentMaleClub" prob="0.4" />
-		<entity name="npcVaultResidentMaleKnife" prob="0.4" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.4" />
-		<entity name="npcVaultResidentMalePistol" prob="0.4" />
-		<entity name="npcVaultSecurityFemaleAxe" prob="0.4" />
-		<entity name="npcVaultSecurityFemaleBat" prob="0.4" />
-		<entity name="npcVaultSecurityFemaleClub" prob="0.4" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.4" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.4" />
-		<entity name="npcVaultSecurityMaleAxe" prob="0.4" />
-		<entity name="npcVaultSecurityMaleBat" prob="0.4" />
-		<entity name="npcVaultSecurityMaleClub" prob="0.4" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.4" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.4" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultAllGroupGS400']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.7" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.7" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.8" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.7" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.7" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.8" />
-		<entity name="npcReconFemaleAK47" prob="0.5" />
-		<entity name="npcReconFemaleClub" prob="0.4" />
-		<entity name="npcReconFemaleM60" prob="0.5" />
-		<entity name="npcReconFemaleRocketL" prob="0.5" />
-		<entity name="npcReconFemaleTRifle" prob="0.5" />
-		<entity name="npcReconMaleAK47" prob="0.5" />
-		<entity name="npcReconMaleClub" prob="0.4" />
-		<entity name="npcReconMaleM60" prob="0.5" />
-		<entity name="npcReconMaleRocketL" prob="0.5" />
-		<entity name="npcReconMaleTRifle" prob="0.5" />
-		<entity name="npcVaultBossClub" prob="0.2" />
-		<entity name="npcVaultBossKnife" prob="0.2" />
-		<entity name="npcVaultBossPistol" prob="0.2" />
-		<entity name="npcVaultDoctorBat" prob="0.2" />
-		<entity name="npcVaultDoctorClub" prob="0.2" />
-		<entity name="npcVaultDoctorKnife" prob="0.2" />
-		<entity name="npcVaultDoctorPistol" prob="0.2" />
-		<entity name="npcVaultResidentFemaleAxe" prob="0.2" />
-		<entity name="npcVaultResidentFemaleClub" prob="0.2" />
-		<entity name="npcVaultResidentFemaleKnife" prob="0.2" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.2" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.2" />
-		<entity name="npcVaultResidentMaleAxe" prob="0.2" />
-		<entity name="npcVaultResidentMaleBat" prob="0.2" />
-		<entity name="npcVaultResidentMaleClub" prob="0.2" />
-		<entity name="npcVaultResidentMaleKnife" prob="0.2" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.2" />
-		<entity name="npcVaultResidentMalePistol" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleAxe" prob="0.3" />
-		<entity name="npcVaultSecurityFemaleBat" prob="0.3" />
-		<entity name="npcVaultSecurityFemaleClub" prob="0.3" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.3" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.3" />
-		<entity name="npcVaultSecurityMaleAxe" prob="0.3" />
-		<entity name="npcVaultSecurityMaleBat" prob="0.3" />
-		<entity name="npcVaultSecurityMaleClub" prob="0.3" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.3" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.3" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultAllGroupGS800']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.9" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.9" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="1" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.9" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.9" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="1" />
-		<entity name="npcReconFemaleAK47" prob="0.4" />
-		<entity name="npcReconFemaleClub" prob="0.3" />
-		<entity name="npcReconFemaleM60" prob="0.4" />
-		<entity name="npcReconFemaleRocketL" prob="0.5" />
-		<entity name="npcReconFemaleTRifle" prob="0.4" />
-		<entity name="npcReconMaleAK47" prob="0.4" />
-		<entity name="npcReconMaleClub" prob="0.3" />
-		<entity name="npcReconMaleM60" prob="0.4" />
-		<entity name="npcReconMaleRocketL" prob="0.5" />
-		<entity name="npcReconMaleTRifle" prob="0.4" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.2" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.2" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.2" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultMeleeGroupGS01']">
-		<entity name="npcReconFemaleClub" prob="0.6" />
-		<entity name="npcReconMaleClub" prob="0.6" />
-		<entity name="npcVaultBossClub" prob="1" />
-		<entity name="npcVaultBossKnife" prob="1" />
-		<entity name="npcVaultDoctorBat" prob="1" />
-		<entity name="npcVaultDoctorClub" prob="1" />
-		<entity name="npcVaultDoctorKnife" prob="1" />
-		<entity name="npcVaultResidentFemaleAxe" prob="1" />
-		<entity name="npcVaultResidentFemaleClub" prob="1" />
-		<entity name="npcVaultResidentFemaleKnife" prob="1" />
-		<entity name="npcVaultResidentMaleAxe" prob="1" />
-		<entity name="npcVaultResidentMaleBat" prob="1" />
-		<entity name="npcVaultResidentMaleClub" prob="1" />
-		<entity name="npcVaultResidentMaleKnife" prob="1" />
-		<entity name="npcVaultSecurityFemaleAxe" prob="0.8" />
-		<entity name="npcVaultSecurityFemaleBat" prob="0.8" />
-		<entity name="npcVaultSecurityFemaleClub" prob="0.8" />
-		<entity name="npcVaultSecurityMaleAxe" prob="0.8" />
-		<entity name="npcVaultSecurityMaleBat" prob="0.8" />
-		<entity name="npcVaultSecurityMaleClub" prob="0.8" />
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultMeleeGroupGS50']">
-		<entity name="npcReconFemaleClub" prob="0.6" />
-		<entity name="npcReconMaleClub" prob="0.6" />
-		<entity name="npcVaultBossClub" prob="0.8" />
-		<entity name="npcVaultBossKnife" prob="0.8" />
-		<entity name="npcVaultDoctorBat" prob="0.8" />
-		<entity name="npcVaultDoctorClub" prob="0.8" />
-		<entity name="npcVaultDoctorKnife" prob="0.8" />
-		<entity name="npcVaultResidentFemaleAxe" prob="0.8" />
-		<entity name="npcVaultResidentFemaleClub" prob="0.8" />
-		<entity name="npcVaultResidentFemaleKnife" prob="0.8" />
-		<entity name="npcVaultResidentMaleAxe" prob="0.8" />
-		<entity name="npcVaultResidentMaleBat" prob="0.8" />
-		<entity name="npcVaultResidentMaleClub" prob="0.8" />
-		<entity name="npcVaultResidentMaleKnife" prob="0.8" />
-		<entity name="npcVaultSecurityFemaleAxe" prob="0.7" />
-		<entity name="npcVaultSecurityFemaleBat" prob="0.7" />
-		<entity name="npcVaultSecurityFemaleClub" prob="0.7" />
-		<entity name="npcVaultSecurityMaleAxe" prob="0.7" />
-		<entity name="npcVaultSecurityMaleBat" prob="0.7" />
-		<entity name="npcVaultSecurityMaleClub" prob="0.7" />
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultMeleeGroupGS100']">
-		<entity name="npcReconFemaleClub" prob="0.5" />
-		<entity name="npcReconMaleClub" prob="0.5" />
-		<entity name="npcVaultBossClub" prob="0.6" />
-		<entity name="npcVaultBossKnife" prob="0.6" />
-		<entity name="npcVaultDoctorBat" prob="0.6" />
-		<entity name="npcVaultDoctorClub" prob="0.6" />
-		<entity name="npcVaultDoctorKnife" prob="0.6" />
-		<entity name="npcVaultResidentFemaleAxe" prob="0.6" />
-		<entity name="npcVaultResidentFemaleClub" prob="0.6" />
-		<entity name="npcVaultResidentFemaleKnife" prob="0.6" />
-		<entity name="npcVaultResidentMaleAxe" prob="0.6" />
-		<entity name="npcVaultResidentMaleBat" prob="0.6" />
-		<entity name="npcVaultResidentMaleClub" prob="0.6" />
-		<entity name="npcVaultResidentMaleKnife" prob="0.6" />
-		<entity name="npcVaultSecurityFemaleAxe" prob="0.6" />
-		<entity name="npcVaultSecurityFemaleBat" prob="0.6" />
-		<entity name="npcVaultSecurityFemaleClub" prob="0.6" />
-		<entity name="npcVaultSecurityMaleAxe" prob="0.6" />
-		<entity name="npcVaultSecurityMaleBat" prob="0.6" />
-		<entity name="npcVaultSecurityMaleClub" prob="0.6" />
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultMeleeGroupGS200']">
-		<entity name="npcReconFemaleClub" prob="0.5" />
-		<entity name="npcReconMaleClub" prob="0.5" />
-		<entity name="npcVaultBossClub" prob="0.4" />
-		<entity name="npcVaultBossKnife" prob="0.4" />
-		<entity name="npcVaultDoctorBat" prob="0.4" />
-		<entity name="npcVaultDoctorClub" prob="0.4" />
-		<entity name="npcVaultDoctorKnife" prob="0.4" />
-		<entity name="npcVaultResidentFemaleAxe" prob="0.4" />
-		<entity name="npcVaultResidentFemaleClub" prob="0.4" />
-		<entity name="npcVaultResidentFemaleKnife" prob="0.4" />
-		<entity name="npcVaultResidentMaleAxe" prob="0.4" />
-		<entity name="npcVaultResidentMaleBat" prob="0.4" />
-		<entity name="npcVaultResidentMaleClub" prob="0.4" />
-		<entity name="npcVaultResidentMaleKnife" prob="0.4" />
-		<entity name="npcVaultSecurityFemaleAxe" prob="0.4" />
-		<entity name="npcVaultSecurityFemaleBat" prob="0.4" />
-		<entity name="npcVaultSecurityFemaleClub" prob="0.4" />
-		<entity name="npcVaultSecurityMaleAxe" prob="0.4" />
-		<entity name="npcVaultSecurityMaleBat" prob="0.4" />
-		<entity name="npcVaultSecurityMaleClub" prob="0.4" />
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultMeleeGroupGS400']">
-		<entity name="npcReconFemaleClub" prob="0.5" />
-		<entity name="npcReconMaleClub" prob="0.5" />
-		<entity name="npcVaultBossClub" prob="0.2" />
-		<entity name="npcVaultBossKnife" prob="0.2" />
-		<entity name="npcVaultDoctorBat" prob="0.2" />
-		<entity name="npcVaultDoctorClub" prob="0.2" />
-		<entity name="npcVaultDoctorKnife" prob="0.2" />
-		<entity name="npcVaultResidentFemaleAxe" prob="0.2" />
-		<entity name="npcVaultResidentFemaleClub" prob="0.2" />
-		<entity name="npcVaultResidentFemaleKnife" prob="0.2" />
-		<entity name="npcVaultResidentMaleAxe" prob="0.2" />
-		<entity name="npcVaultResidentMaleBat" prob="0.2" />
-		<entity name="npcVaultResidentMaleClub" prob="0.2" />
-		<entity name="npcVaultResidentMaleKnife" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleAxe" prob="0.3" />
-		<entity name="npcVaultSecurityFemaleBat" prob="0.3" />
-		<entity name="npcVaultSecurityFemaleClub" prob="0.3" />
-		<entity name="npcVaultSecurityMaleAxe" prob="0.3" />
-		<entity name="npcVaultSecurityMaleBat" prob="0.3" />
-		<entity name="npcVaultSecurityMaleClub" prob="0.3" />
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultMeleeGroupGS800']">
-		<entity name="npcReconFemaleClub" prob="0.4" />
-		<entity name="npcReconMaleClub" prob="0.4" />
-		<entity name="npcVaultSecurityFemaleAxe" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleBat" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleClub" prob="0.2" />
-		<entity name="npcVaultSecurityMaleAxe" prob="0.2" />
-		<entity name="npcVaultSecurityMaleBat" prob="0.2" />
-		<entity name="npcVaultSecurityMaleClub" prob="0.2" />
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultRangedGroupGS01']">
-		<entity name="npcReconFemaleAK47" prob="0.6" />
-		<entity name="npcReconFemaleM60" prob="0.6" />
-		<entity name="npcReconFemaleRocketL" prob="0.5" />
-		<entity name="npcReconFemaleTRifle" prob="0.6" />
-		<entity name="npcReconMaleAK47" prob="0.6" />
-		<entity name="npcReconMaleM60" prob="0.6" />
-		<entity name="npcReconMaleRocketL" prob="0.5" />
-		<entity name="npcReconMaleTRifle" prob="0.6" />
-		<entity name="npcVaultBossPistol" prob="1" />
-		<entity name="npcVaultDoctorPistol" prob="1" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="1" />
-		<entity name="npcVaultResidentFemalePistol" prob="1" />
-		<entity name="npcVaultResidentMalePipeMG" prob="1" />
-		<entity name="npcVaultResidentMalePistol" prob="1" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.9" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.8" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.9" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.8" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultRangedGroupGS50']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.3" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.3" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.2" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.3" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.3" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.2" />
-		<entity name="npcReconFemaleAK47" prob="0.6" />
-		<entity name="npcReconFemaleM60" prob="0.6" />
-		<entity name="npcReconFemaleRocketL" prob="0.5" />
-		<entity name="npcReconFemaleTRifle" prob="0.6" />
-		<entity name="npcReconMaleAK47" prob="0.6" />
-		<entity name="npcReconMaleM60" prob="0.6" />
-		<entity name="npcReconMaleRocketL" prob="0.5" />
-		<entity name="npcReconMaleTRifle" prob="0.6" />
-		<entity name="npcVaultBossPistol" prob="0.8" />
-		<entity name="npcVaultDoctorPistol" prob="0.8" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.8" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.8" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.8" />
-		<entity name="npcVaultResidentMalePistol" prob="0.8" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.7" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.7" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.7" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.7" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultRangedGroupGS100']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.4" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.4" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.4" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.4" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.4" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.4" />
-		<entity name="npcReconFemaleAK47" prob="0.5" />
-		<entity name="npcReconFemaleM60" prob="0.5" />
-		<entity name="npcReconFemaleRocketL" prob="0.5" />
-		<entity name="npcReconFemaleTRifle" prob="0.5" />
-		<entity name="npcReconMaleAK47" prob="0.5" />
-		<entity name="npcReconMaleM60" prob="0.5" />
-		<entity name="npcReconMaleRocketL" prob="0.5" />
-		<entity name="npcReconMaleTRifle" prob="0.5" />
-		<entity name="npcVaultBossPistol" prob="0.6" />
-		<entity name="npcVaultDoctorPistol" prob="0.6" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.6" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.6" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.6" />
-		<entity name="npcVaultResidentMalePistol" prob="0.6" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.6" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.6" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.6" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.6" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultRangedGroupGS200']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.6" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.6" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.6" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.6" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.6" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.6" />
-		<entity name="npcReconFemaleAK47" prob="0.5" />
-		<entity name="npcReconFemaleM60" prob="0.5" />
-		<entity name="npcReconFemaleRocketL" prob="0.5" />
-		<entity name="npcReconFemaleTRifle" prob="0.5" />
-		<entity name="npcReconMaleAK47" prob="0.5" />
-		<entity name="npcReconMaleM60" prob="0.5" />
-		<entity name="npcReconMaleRocketL" prob="0.5" />
-		<entity name="npcReconMaleTRifle" prob="0.5" />
-		<entity name="npcVaultBossPistol" prob="0.4" />
-		<entity name="npcVaultDoctorPistol" prob="0.4" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.4" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.4" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.4" />
-		<entity name="npcVaultResidentMalePistol" prob="0.4" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.4" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.4" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.4" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.4" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultRangedGroupGS400']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.7" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.7" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.8" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.7" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.7" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.8" />
-		<entity name="npcReconFemaleAK47" prob="0.4" />
-		<entity name="npcReconFemaleM60" prob="0.4" />
-		<entity name="npcReconFemaleRocketL" prob="0.5" />
-		<entity name="npcReconFemaleTRifle" prob="0.4" />
-		<entity name="npcReconMaleAK47" prob="0.4" />
-		<entity name="npcReconMaleM60" prob="0.4" />
-		<entity name="npcReconMaleRocketL" prob="0.5" />
-		<entity name="npcReconMaleTRifle" prob="0.4" />
-		<entity name="npcVaultBossPistol" prob="0.2" />
-		<entity name="npcVaultDoctorPistol" prob="0.2" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.2" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.2" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.2" />
-		<entity name="npcVaultResidentMalePistol" prob="0.2" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.3" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.3" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.3" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.3" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultRangedGroupGS800']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.9" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.9" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="1" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.9" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.9" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="1" />
-		<entity name="npcReconFemaleAK47" prob="0.4" />
-		<entity name="npcReconFemaleM60" prob="0.4" />
-		<entity name="npcReconFemaleRocketL" prob="0.5" />
-		<entity name="npcReconFemaleTRifle" prob="0.4" />
-		<entity name="npcReconMaleAK47" prob="0.4" />
-		<entity name="npcReconMaleM60" prob="0.4" />
-		<entity name="npcReconMaleRocketL" prob="0.5" />
-		<entity name="npcReconMaleTRifle" prob="0.4" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.2" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.2" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultBossGroupGS01']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.3" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.3" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.2" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.3" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.3" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.2" />
-		<entity name="npcReconFemaleAK47" prob="0.6" />
-		<entity name="npcReconFemaleM60" prob="0.6" />
-		<entity name="npcReconFemaleRocketL" prob="0.5" />
-		<entity name="npcReconFemaleTRifle" prob="0.6" />
-		<entity name="npcReconMaleAK47" prob="0.6" />
-		<entity name="npcReconMaleM60" prob="0.6" />
-		<entity name="npcReconMaleRocketL" prob="0.5" />
-		<entity name="npcReconMaleTRifle" prob="0.6" />
-		<entity name="npcVaultBossPistol" prob="0.8" />
-		<entity name="npcVaultDoctorPistol" prob="0.8" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.8" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.8" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.8" />
-		<entity name="npcVaultResidentMalePistol" prob="0.8" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.7" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.7" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.7" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.7" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultBossGroupGS50']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.4" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.4" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.4" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.4" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.4" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.4" />
-		<entity name="npcReconFemaleAK47" prob="0.5" />
-		<entity name="npcReconFemaleM60" prob="0.5" />
-		<entity name="npcReconFemaleRocketL" prob="0.5" />
-		<entity name="npcReconFemaleTRifle" prob="0.5" />
-		<entity name="npcReconMaleAK47" prob="0.5" />
-		<entity name="npcReconMaleM60" prob="0.5" />
-		<entity name="npcReconMaleRocketL" prob="0.5" />
-		<entity name="npcReconMaleTRifle" prob="0.5" />
-		<entity name="npcVaultBossPistol" prob="0.6" />
-		<entity name="npcVaultDoctorPistol" prob="0.6" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.6" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.6" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.6" />
-		<entity name="npcVaultResidentMalePistol" prob="0.6" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.6" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.6" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.6" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.6" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultBossGroupGS100']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.6" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.6" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.6" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.6" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.6" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.6" />
-		<entity name="npcReconFemaleAK47" prob="0.5" />
-		<entity name="npcReconFemaleM60" prob="0.5" />
-		<entity name="npcReconFemaleRocketL" prob="0.5" />
-		<entity name="npcReconFemaleTRifle" prob="0.5" />
-		<entity name="npcReconMaleAK47" prob="0.5" />
-		<entity name="npcReconMaleM60" prob="0.5" />
-		<entity name="npcReconMaleRocketL" prob="0.5" />
-		<entity name="npcReconMaleTRifle" prob="0.5" />
-		<entity name="npcVaultBossPistol" prob="0.4" />
-		<entity name="npcVaultDoctorPistol" prob="0.4" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.4" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.4" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.4" />
-		<entity name="npcVaultResidentMalePistol" prob="0.4" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.4" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.4" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.4" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.4" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultBossGroupGS200']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.7" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.7" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.8" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.7" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.7" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.8" />
-		<entity name="npcReconFemaleAK47" prob="0.4" />
-		<entity name="npcReconFemaleM60" prob="0.4" />
-		<entity name="npcReconFemaleRocketL" prob="0.5" />
-		<entity name="npcReconFemaleTRifle" prob="0.4" />
-		<entity name="npcReconMaleAK47" prob="0.4" />
-		<entity name="npcReconMaleM60" prob="0.4" />
-		<entity name="npcReconMaleRocketL" prob="0.5" />
-		<entity name="npcReconMaleTRifle" prob="0.4" />
-		<entity name="npcVaultBossPistol" prob="0.2" />
-		<entity name="npcVaultDoctorPistol" prob="0.2" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.2" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.2" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.2" />
-		<entity name="npcVaultResidentMalePistol" prob="0.2" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.3" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.3" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.3" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.3" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultBossGroupGS400']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.9" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.9" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="1" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.9" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.9" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="1" />
-		<entity name="npcReconFemaleAK47" prob="0.4" />
-		<entity name="npcReconFemaleM60" prob="0.4" />
-		<entity name="npcReconFemaleRocketL" prob="0.5" />
-		<entity name="npcReconFemaleTRifle" prob="0.4" />
-		<entity name="npcReconMaleAK47" prob="0.4" />
-		<entity name="npcReconMaleM60" prob="0.4" />
-		<entity name="npcReconMaleRocketL" prob="0.5" />
-		<entity name="npcReconMaleTRifle" prob="0.4" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.2" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.2" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcVaultBossGroupGS800']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.8" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.8" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="1" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.8" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.8" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="1" />
-		<entity name="npcReconFemaleAK47" prob="0.2" />
-		<entity name="npcReconFemaleM60" prob="0.2" />
-		<entity name="npcReconFemaleRocketL" prob="0.3" />
-		<entity name="npcReconFemaleTRifle" prob="0.2" />
-		<entity name="npcReconMaleAK47" prob="0.3" />
-		<entity name="npcReconMaleM60" prob="0.2" />
-		<entity name="npcReconMaleRocketL" prob="0.3" />
-		<entity name="npcReconMaleTRifle" prob="0.2" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 
 	<!-- Friendly NPC entity groups -->
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS01']">
-		<entity name="npcReconFemaleAK47" prob="0.3" />
-		<entity name="npcReconFemaleClub" prob="0.7" />
-		<entity name="npcReconFemaleM60" prob="0.2" />
-		<entity name="npcReconFemaleTRifle" prob="0.3" />
-		<entity name="npcReconMaleAK47" prob="0.3" />
-		<entity name="npcReconMaleClub" prob="0.7" />
-		<entity name="npcReconMaleM60" prob="0.2" />
-		<entity name="npcReconMaleTRifle" prob="0.3" />
-		<entity name="npcVaultBossClub" prob="1" />
-		<entity name="npcVaultBossKnife" prob="1" />
-		<entity name="npcVaultBossPistol" prob="0.6" />
-		<entity name="npcVaultDoctorBat" prob="1" />
-		<entity name="npcVaultDoctorClub" prob="1" />
-		<entity name="npcVaultDoctorKnife" prob="1" />
-		<entity name="npcVaultDoctorPistol" prob="0.6" />
-		<entity name="npcVaultResidentFemaleAxe" prob="1" />
-		<entity name="npcVaultResidentFemaleClub" prob="1" />
-		<entity name="npcVaultResidentFemaleKnife" prob="1" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.6" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.6" />
-		<entity name="npcVaultResidentMaleAxe" prob="1" />
-		<entity name="npcVaultResidentMaleBat" prob="1" />
-		<entity name="npcVaultResidentMaleClub" prob="1" />
-		<entity name="npcVaultResidentMaleKnife" prob="1" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.6" />
-		<entity name="npcVaultResidentMalePistol" prob="0.6" />
-		<entity name="npcVaultSecurityFemaleAxe" prob="0.9" />
-		<entity name="npcVaultSecurityFemaleBat" prob="0.9" />
-		<entity name="npcVaultSecurityFemaleClub" prob="0.9" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.8" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.4" />
-		<entity name="npcVaultSecurityMaleAxe" prob="0.9" />
-		<entity name="npcVaultSecurityMaleBat" prob="0.9" />
-		<entity name="npcVaultSecurityMaleClub" prob="0.9" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.8" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.4" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS50']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.1" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.1" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.1" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.1" />
-		<entity name="npcReconFemaleAK47" prob="0.2" />
-		<entity name="npcReconFemaleClub" prob="0.5" />
-		<entity name="npcReconFemaleM60" prob="0.2" />
-		<entity name="npcReconFemaleRocketL" prob="0.1" />
-		<entity name="npcReconFemaleTRifle" prob="0.3" />
-		<entity name="npcReconMaleAK47" prob="0.2" />
-		<entity name="npcReconMaleClub" prob="0.5" />
-		<entity name="npcReconMaleM60" prob="0.2" />
-		<entity name="npcReconMaleRocketL" prob="0.1" />
-		<entity name="npcReconMaleTRifle" prob="0.3" />
-		<entity name="npcVaultBossClub" prob="0.6" />
-		<entity name="npcVaultBossKnife" prob="0.6" />
-		<entity name="npcVaultBossPistol" prob="0.4" />
-		<entity name="npcVaultDoctorBat" prob="0.8" />
-		<entity name="npcVaultDoctorClub" prob="0.6" />
-		<entity name="npcVaultDoctorKnife" prob="0.6" />
-		<entity name="npcVaultDoctorPistol" prob="0.4" />
-		<entity name="npcVaultResidentFemaleAxe" prob="0.8" />
-		<entity name="npcVaultResidentFemaleClub" prob="0.6" />
-		<entity name="npcVaultResidentFemaleKnife" prob="0.6" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.5" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.4" />
-		<entity name="npcVaultResidentMaleAxe" prob="0.8" />
-		<entity name="npcVaultResidentMaleBat" prob="0.8" />
-		<entity name="npcVaultResidentMaleClub" prob="0.6" />
-		<entity name="npcVaultResidentMaleKnife" prob="0.6" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.5" />
-		<entity name="npcVaultResidentMalePistol" prob="0.4" />
-		<entity name="npcVaultSecurityFemaleAxe" prob="0.7" />
-		<entity name="npcVaultSecurityFemaleBat" prob="0.7" />
-		<entity name="npcVaultSecurityFemaleClub" prob="0.7" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.3" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.4" />
-		<entity name="npcVaultSecurityMaleAxe" prob="0.7" />
-		<entity name="npcVaultSecurityMaleBat" prob="0.7" />
-		<entity name="npcVaultSecurityMaleClub" prob="0.7" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.3" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.4" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS100']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.2" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.2" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.2" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.2" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.2" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.2" />
-		<entity name="npcReconFemaleAK47" prob="0.3" />
-		<entity name="npcReconFemaleClub" prob="0.3" />
-		<entity name="npcReconFemaleM60" prob="0.3" />
-		<entity name="npcReconFemaleRocketL" prob="0.2" />
-		<entity name="npcReconFemaleTRifle" prob="0.3" />
-		<entity name="npcReconMaleAK47" prob="0.3" />
-		<entity name="npcReconMaleClub" prob="0.3" />
-		<entity name="npcReconMaleM60" prob="0.3" />
-		<entity name="npcReconMaleRocketL" prob="0.2" />
-		<entity name="npcReconMaleTRifle" prob="0.3" />
-		<entity name="npcVaultBossClub" prob="0.4" />
-		<entity name="npcVaultBossKnife" prob="0.4" />
-		<entity name="npcVaultBossPistol" prob="0.3" />
-		<entity name="npcVaultDoctorBat" prob="0.4" />
-		<entity name="npcVaultDoctorClub" prob="0.4" />
-		<entity name="npcVaultDoctorKnife" prob="0.4" />
-		<entity name="npcVaultDoctorPistol" prob="0.3" />
-		<entity name="npcVaultResidentFemaleAxe" prob="0.4" />
-		<entity name="npcVaultResidentFemaleClub" prob="0.4" />
-		<entity name="npcVaultResidentFemaleKnife" prob="0.4" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.3" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.3" />
-		<entity name="npcVaultResidentMaleAxe" prob="0.4" />
-		<entity name="npcVaultResidentMaleBat" prob="0.4" />
-		<entity name="npcVaultResidentMaleClub" prob="0.4" />
-		<entity name="npcVaultResidentMaleKnife" prob="0.4" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.3" />
-		<entity name="npcVaultResidentMalePistol" prob="0.3" />
-		<entity name="npcVaultSecurityFemaleAxe" prob="0.4" />
-		<entity name="npcVaultSecurityFemaleBat" prob="0.4" />
-		<entity name="npcVaultSecurityFemaleClub" prob="0.4" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.3" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.3" />
-		<entity name="npcVaultSecurityMaleAxe" prob="0.4" />
-		<entity name="npcVaultSecurityMaleBat" prob="0.4" />
-		<entity name="npcVaultSecurityMaleClub" prob="0.4" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.3" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.3" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS200']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.3" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.3" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.4" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.3" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.3" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.4" />
-		<entity name="npcReconFemaleAK47" prob="0.3" />
-		<entity name="npcReconFemaleClub" prob="0.2" />
-		<entity name="npcReconFemaleM60" prob="0.3" />
-		<entity name="npcReconFemaleRocketL" prob="0.3" />
-		<entity name="npcReconFemaleTRifle" prob="0.3" />
-		<entity name="npcReconMaleAK47" prob="0.3" />
-		<entity name="npcReconMaleClub" prob="0.2" />
-		<entity name="npcReconMaleM60" prob="0.3" />
-		<entity name="npcReconMaleRocketL" prob="0.3" />
-		<entity name="npcReconMaleTRifle" prob="0.3" />
-		<entity name="npcVaultBossClub" prob="0.2" />
-		<entity name="npcVaultBossKnife" prob="0.2" />
-		<entity name="npcVaultBossPistol" prob="0.2" />
-		<entity name="npcVaultDoctorBat" prob="0.2" />
-		<entity name="npcVaultDoctorClub" prob="0.2" />
-		<entity name="npcVaultDoctorKnife" prob="0.2" />
-		<entity name="npcVaultDoctorPistol" prob="0.2" />
-		<entity name="npcVaultResidentFemaleAxe" prob="0.2" />
-		<entity name="npcVaultResidentFemaleClub" prob="0.2" />
-		<entity name="npcVaultResidentFemaleKnife" prob="0.2" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.2" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.2" />
-		<entity name="npcVaultResidentMaleAxe" prob="0.2" />
-		<entity name="npcVaultResidentMaleBat" prob="0.2" />
-		<entity name="npcVaultResidentMaleClub" prob="0.2" />
-		<entity name="npcVaultResidentMaleKnife" prob="0.2" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.2" />
-		<entity name="npcVaultResidentMalePistol" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleAxe" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleBat" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleClub" prob="0.2" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.2" />
-		<entity name="npcVaultSecurityMaleAxe" prob="0.2" />
-		<entity name="npcVaultSecurityMaleBat" prob="0.2" />
-		<entity name="npcVaultSecurityMaleClub" prob="0.2" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.2" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.2" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS400']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.4" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.4" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.6" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.4" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.4" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.6" />
-		<entity name="npcReconFemaleAK47" prob="0.3" />
-		<entity name="npcReconFemaleClub" prob="0.1" />
-		<entity name="npcReconFemaleM60" prob="0.3" />
-		<entity name="npcReconFemaleRocketL" prob="0.4" />
-		<entity name="npcReconFemaleTRifle" prob="0.3" />
-		<entity name="npcReconMaleAK47" prob="0.3" />
-		<entity name="npcReconMaleClub" prob="0.1" />
-		<entity name="npcReconMaleM60" prob="0.3" />
-		<entity name="npcReconMaleRocketL" prob="0.4" />
-		<entity name="npcReconMaleTRifle" prob="0.3" />
-		<entity name="npcVaultBossPistol" prob="0.1" />
-		<entity name="npcVaultDoctorPistol" prob="0.1" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.1" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.1" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.1" />
-		<entity name="npcVaultResidentMalePistol" prob="0.1" />
-		<entity name="npcVaultSecurityFemaleAxe" prob="0.1" />
-		<entity name="npcVaultSecurityFemaleBat" prob="0.1" />
-		<entity name="npcVaultSecurityFemaleClub" prob="0.1" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.2" />
-		<entity name="npcVaultSecurityMaleAxe" prob="0.1" />
-		<entity name="npcVaultSecurityMaleBat" prob="0.1" />
-		<entity name="npcVaultSecurityMaleClub" prob="0.1" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.2" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.2" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS800']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.5" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.5" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="1" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.5" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.5" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="1" />
-		<entity name="npcReconFemaleAK47" prob="0.2" />
-		<entity name="npcReconFemaleM60" prob="0.2" />
-		<entity name="npcReconFemaleRocketL" prob="0.5" />
-		<entity name="npcReconFemaleTRifle" prob="0.2" />
-		<entity name="npcReconMaleAK47" prob="0.2" />
-		<entity name="npcReconMaleM60" prob="0.2" />
-		<entity name="npcReconMaleRocketL" prob="0.5" />
-		<entity name="npcReconMaleTRifle" prob="0.2" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.1" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.1" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.1" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.1" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS01']">
-		<entity name="npcReconFemaleClub" prob="0.5" />
-		<entity name="npcReconMaleClub" prob="0.5" />
-		<entity name="npcVaultBossClub" prob="0.8" />
-		<entity name="npcVaultBossKnife" prob="0.4" />
-		<entity name="npcVaultDoctorClub" prob="0.8" />
-		<entity name="npcVaultDoctorKnife" prob="0.4" />
-		<entity name="npcVaultResidentFemaleClub" prob="0.8" />
-		<entity name="npcVaultResidentFemaleKnife" prob="0.4" />
-		<entity name="npcVaultResidentMaleClub" prob="0.8" />
-		<entity name="npcVaultResidentMaleKnife" prob="0.4" />
-		<entity name="npcVaultSecurityFemaleClub" prob="0.8" />
-		<entity name="npcVaultSecurityMaleClub" prob="0.8" />
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS50']">
-		<entity name="npcReconFemaleClub" prob="0.4" />
-		<entity name="npcReconMaleClub" prob="0.4" />
-		<entity name="npcVaultBossClub" prob="0.6" />
-		<entity name="npcVaultBossKnife" prob="0.3" />
-		<entity name="npcVaultDoctorBat" prob="0.2" />
-		<entity name="npcVaultDoctorClub" prob="0.6" />
-		<entity name="npcVaultDoctorKnife" prob="0.3" />
-		<entity name="npcVaultResidentFemaleAxe" prob="0.2" />
-		<entity name="npcVaultResidentFemaleClub" prob="0.6" />
-		<entity name="npcVaultResidentFemaleKnife" prob="0.3" />
-		<entity name="npcVaultResidentMaleAxe" prob="0.2" />
-		<entity name="npcVaultResidentMaleBat" prob="0.2" />
-		<entity name="npcVaultResidentMaleClub" prob="0.6" />
-		<entity name="npcVaultResidentMaleKnife" prob="0.3" />
-		<entity name="npcVaultSecurityFemaleAxe" prob="0.1" />
-		<entity name="npcVaultSecurityFemaleBat" prob="0.1" />
-		<entity name="npcVaultSecurityFemaleClub" prob="0.4" />
-		<entity name="npcVaultSecurityMaleAxe" prob="0.1" />
-		<entity name="npcVaultSecurityMaleBat" prob="0.1" />
-		<entity name="npcVaultSecurityMaleClub" prob="0.4" />
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS100']">
-		<entity name="npcReconFemaleClub" prob="0.3" />
-		<entity name="npcReconMaleClub" prob="0.3" />
-		<entity name="npcVaultBossClub" prob="0.4" />
-		<entity name="npcVaultBossKnife" prob="0.3" />
-		<entity name="npcVaultDoctorBat" prob="0.2" />
-		<entity name="npcVaultDoctorClub" prob="0.4" />
-		<entity name="npcVaultDoctorKnife" prob="0.3" />
-		<entity name="npcVaultResidentFemaleAxe" prob="0.2" />
-		<entity name="npcVaultResidentFemaleClub" prob="0.4" />
-		<entity name="npcVaultResidentFemaleKnife" prob="0.3" />
-		<entity name="npcVaultResidentMaleAxe" prob="0.2" />
-		<entity name="npcVaultResidentMaleBat" prob="0.2" />
-		<entity name="npcVaultResidentMaleClub" prob="0.4" />
-		<entity name="npcVaultResidentMaleKnife" prob="0.3" />
-		<entity name="npcVaultSecurityFemaleAxe" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleBat" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleClub" prob="0.4" />
-		<entity name="npcVaultSecurityMaleAxe" prob="0.2" />
-		<entity name="npcVaultSecurityMaleBat" prob="0.2" />
-		<entity name="npcVaultSecurityMaleClub" prob="0.4" />
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS200']">
-		<entity name="npcReconFemaleClub" prob="0.2" />
-		<entity name="npcReconMaleClub" prob="0.2" />
-		<entity name="npcVaultBossClub" prob="0.2" />
-		<entity name="npcVaultBossKnife" prob="0.2" />
-		<entity name="npcVaultDoctorBat" prob="0.2" />
-		<entity name="npcVaultDoctorClub" prob="0.2" />
-		<entity name="npcVaultDoctorKnife" prob="0.2" />
-		<entity name="npcVaultResidentFemaleAxe" prob="0.2" />
-		<entity name="npcVaultResidentFemaleClub" prob="0.2" />
-		<entity name="npcVaultResidentFemaleKnife" prob="0.2" />
-		<entity name="npcVaultResidentMaleAxe" prob="0.2" />
-		<entity name="npcVaultResidentMaleBat" prob="0.2" />
-		<entity name="npcVaultResidentMaleClub" prob="0.2" />
-		<entity name="npcVaultResidentMaleKnife" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleAxe" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleBat" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleClub" prob="0.2" />
-		<entity name="npcVaultSecurityMaleAxe" prob="0.2" />
-		<entity name="npcVaultSecurityMaleBat" prob="0.2" />
-		<entity name="npcVaultSecurityMaleClub" prob="0.2" />
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS400']">
-		<entity name="npcReconFemaleClub" prob="0.2" />
-		<entity name="npcReconMaleClub" prob="0.2" />
-		<entity name="npcVaultBossClub" prob="0.1" />
-		<entity name="npcVaultBossKnife" prob="0.1" />
-		<entity name="npcVaultDoctorBat" prob="0.2" />
-		<entity name="npcVaultDoctorClub" prob="0.1" />
-		<entity name="npcVaultDoctorKnife" prob="0.1" />
-		<entity name="npcVaultResidentFemaleAxe" prob="0.2" />
-		<entity name="npcVaultResidentFemaleClub" prob="0.1" />
-		<entity name="npcVaultResidentFemaleKnife" prob="0.1" />
-		<entity name="npcVaultResidentMaleAxe" prob="0.2" />
-		<entity name="npcVaultResidentMaleBat" prob="0.2" />
-		<entity name="npcVaultResidentMaleClub" prob="0.1" />
-		<entity name="npcVaultResidentMaleKnife" prob="0.1" />
-		<entity name="npcVaultSecurityFemaleAxe" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleBat" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleClub" prob="0.1" />
-		<entity name="npcVaultSecurityMaleAxe" prob="0.2" />
-		<entity name="npcVaultSecurityMaleBat" prob="0.2" />
-		<entity name="npcVaultSecurityMaleClub" prob="0.1" />
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS800']">
-		<entity name="npcReconFemaleClub" prob="0.2" />
-		<entity name="npcReconMaleClub" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleAxe" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleBat" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleClub" prob="0.2" />
-		<entity name="npcVaultSecurityMaleAxe" prob="0.2" />
-		<entity name="npcVaultSecurityMaleBat" prob="0.2" />
-		<entity name="npcVaultSecurityMaleClub" prob="0.2" />
+		<entity name="npcReconFemaleClub"/>
+		<entity name="npcReconMaleClub"/>
+		<entity name="npcVaultBossClub"/>
+		<entity name="npcVaultBossKnife"/>
+		<entity name="npcVaultDoctorBat"/>
+		<entity name="npcVaultDoctorClub"/>
+		<entity name="npcVaultDoctorKnife"/>
+		<entity name="npcVaultResidentFemaleAxe"/>
+		<entity name="npcVaultResidentFemaleClub"/>
+		<entity name="npcVaultResidentFemaleKnife"/>
+		<entity name="npcVaultResidentMaleAxe"/>
+		<entity name="npcVaultResidentMaleBat"/>
+		<entity name="npcVaultResidentMaleClub"/>
+		<entity name="npcVaultResidentMaleKnife"/>
+		<entity name="npcVaultSecurityFemaleAxe"/>
+		<entity name="npcVaultSecurityFemaleBat"/>
+		<entity name="npcVaultSecurityFemaleClub"/>
+		<entity name="npcVaultSecurityMaleAxe"/>
+		<entity name="npcVaultSecurityMaleBat"/>
+		<entity name="npcVaultSecurityMaleClub"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS01']">
-		<entity name="npcReconFemaleAK47" prob="0.3" />
-		<entity name="npcReconFemaleM60" prob="0.2" />
-		<entity name="npcReconFemaleTRifle" prob="0.3" />
-		<entity name="npcReconMaleAK47" prob="0.3" />
-		<entity name="npcReconMaleM60" prob="0.2" />
-		<entity name="npcReconMaleTRifle" prob="0.3" />
-		<entity name="npcVaultBossPistol" prob="0.6" />
-		<entity name="npcVaultDoctorPistol" prob="0.6" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.6" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.6" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.6" />
-		<entity name="npcVaultResidentMalePistol" prob="0.6" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.8" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.4" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.8" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.4" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS50']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.1" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.1" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.1" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.1" />
-		<entity name="npcReconFemaleAK47" prob="0.2" />
-		<entity name="npcReconFemaleM60" prob="0.2" />
-		<entity name="npcReconFemaleRocketL" prob="0.1" />
-		<entity name="npcReconFemaleTRifle" prob="0.3" />
-		<entity name="npcReconMaleAK47" prob="0.2" />
-		<entity name="npcReconMaleM60" prob="0.2" />
-		<entity name="npcReconMaleRocketL" prob="0.1" />
-		<entity name="npcReconMaleTRifle" prob="0.3" />
-		<entity name="npcVaultBossPistol" prob="0.4" />
-		<entity name="npcVaultDoctorPistol" prob="0.4" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.5" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.4" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.5" />
-		<entity name="npcVaultResidentMalePistol" prob="0.4" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.3" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.4" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.3" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.4" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS100']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.2" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.2" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.2" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.2" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.2" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.2" />
-		<entity name="npcReconFemaleAK47" prob="0.3" />
-		<entity name="npcReconFemaleM60" prob="0.3" />
-		<entity name="npcReconFemaleRocketL" prob="0.2" />
-		<entity name="npcReconFemaleTRifle" prob="0.3" />
-		<entity name="npcReconMaleAK47" prob="0.3" />
-		<entity name="npcReconMaleM60" prob="0.3" />
-		<entity name="npcReconMaleRocketL" prob="0.2" />
-		<entity name="npcReconMaleTRifle" prob="0.3" />
-		<entity name="npcVaultBossPistol" prob="0.3" />
-		<entity name="npcVaultDoctorPistol" prob="0.3" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.3" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.3" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.3" />
-		<entity name="npcVaultResidentMalePistol" prob="0.3" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.3" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.3" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.3" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.3" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS200']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.3" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.3" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.4" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.3" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.3" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.4" />
-		<entity name="npcReconFemaleAK47" prob="0.3" />
-		<entity name="npcReconFemaleM60" prob="0.3" />
-		<entity name="npcReconFemaleRocketL" prob="0.3" />
-		<entity name="npcReconFemaleTRifle" prob="0.3" />
-		<entity name="npcReconMaleAK47" prob="0.3" />
-		<entity name="npcReconMaleM60" prob="0.3" />
-		<entity name="npcReconMaleRocketL" prob="0.3" />
-		<entity name="npcReconMaleTRifle" prob="0.3" />
-		<entity name="npcVaultBossPistol" prob="0.2" />
-		<entity name="npcVaultDoctorPistol" prob="0.2" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.2" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.2" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.2" />
-		<entity name="npcVaultResidentMalePistol" prob="0.2" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.2" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.2" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.2" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS400']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.4" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.4" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.6" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.4" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.4" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.6" />
-		<entity name="npcReconFemaleAK47" prob="0.3" />
-		<entity name="npcReconFemaleM60" prob="0.3" />
-		<entity name="npcReconFemaleRocketL" prob="0.4" />
-		<entity name="npcReconFemaleTRifle" prob="0.3" />
-		<entity name="npcReconMaleAK47" prob="0.3" />
-		<entity name="npcReconMaleM60" prob="0.3" />
-		<entity name="npcReconMaleRocketL" prob="0.4" />
-		<entity name="npcReconMaleTRifle" prob="0.3" />
-		<entity name="npcVaultBossPistol" prob="0.1" />
-		<entity name="npcVaultDoctorPistol" prob="0.1" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.1" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.1" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.1" />
-		<entity name="npcVaultResidentMalePistol" prob="0.1" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.2" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.2" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.2" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS800']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.5" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.5" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="1" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.5" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.5" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="1" />
-		<entity name="npcReconFemaleAK47" prob="0.2" />
-		<entity name="npcReconFemaleM60" prob="0.2" />
-		<entity name="npcReconFemaleRocketL" prob="0.5" />
-		<entity name="npcReconFemaleTRifle" prob="0.2" />
-		<entity name="npcReconMaleAK47" prob="0.2" />
-		<entity name="npcReconMaleM60" prob="0.2" />
-		<entity name="npcReconMaleRocketL" prob="0.5" />
-		<entity name="npcReconMaleTRifle" prob="0.2" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.1" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.1" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.1" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.1" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS01']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.1" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.1" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.1" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.1" />
-		<entity name="npcReconFemaleAK47" prob="0.2" />
-		<entity name="npcReconFemaleM60" prob="0.2" />
-		<entity name="npcReconFemaleRocketL" prob="0.1" />
-		<entity name="npcReconFemaleTRifle" prob="0.3" />
-		<entity name="npcReconMaleAK47" prob="0.2" />
-		<entity name="npcReconMaleM60" prob="0.2" />
-		<entity name="npcReconMaleRocketL" prob="0.1" />
-		<entity name="npcReconMaleTRifle" prob="0.3" />
-		<entity name="npcVaultBossPistol" prob="0.4" />
-		<entity name="npcVaultDoctorPistol" prob="0.4" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.5" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.4" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.5" />
-		<entity name="npcVaultResidentMalePistol" prob="0.4" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.3" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.4" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.3" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.4" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS50']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.2" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.2" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.2" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.2" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.2" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.2" />
-		<entity name="npcReconFemaleAK47" prob="0.3" />
-		<entity name="npcReconFemaleM60" prob="0.3" />
-		<entity name="npcReconFemaleRocketL" prob="0.2" />
-		<entity name="npcReconFemaleTRifle" prob="0.3" />
-		<entity name="npcReconMaleAK47" prob="0.3" />
-		<entity name="npcReconMaleM60" prob="0.3" />
-		<entity name="npcReconMaleRocketL" prob="0.2" />
-		<entity name="npcReconMaleTRifle" prob="0.3" />
-		<entity name="npcVaultBossPistol" prob="0.3" />
-		<entity name="npcVaultDoctorPistol" prob="0.3" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.3" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.3" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.3" />
-		<entity name="npcVaultResidentMalePistol" prob="0.3" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.3" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.3" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.3" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.3" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS100']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.3" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.3" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.4" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.3" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.3" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.4" />
-		<entity name="npcReconFemaleAK47" prob="0.3" />
-		<entity name="npcReconFemaleM60" prob="0.3" />
-		<entity name="npcReconFemaleRocketL" prob="0.3" />
-		<entity name="npcReconFemaleTRifle" prob="0.3" />
-		<entity name="npcReconMaleAK47" prob="0.3" />
-		<entity name="npcReconMaleM60" prob="0.3" />
-		<entity name="npcReconMaleRocketL" prob="0.3" />
-		<entity name="npcReconMaleTRifle" prob="0.3" />
-		<entity name="npcVaultBossPistol" prob="0.2" />
-		<entity name="npcVaultDoctorPistol" prob="0.2" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.2" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.2" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.2" />
-		<entity name="npcVaultResidentMalePistol" prob="0.2" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.2" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.2" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.2" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS200']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.4" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.4" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.6" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.4" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.4" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.6" />
-		<entity name="npcReconFemaleAK47" prob="0.3" />
-		<entity name="npcReconFemaleM60" prob="0.3" />
-		<entity name="npcReconFemaleRocketL" prob="0.4" />
-		<entity name="npcReconFemaleTRifle" prob="0.3" />
-		<entity name="npcReconMaleAK47" prob="0.3" />
-		<entity name="npcReconMaleM60" prob="0.3" />
-		<entity name="npcReconMaleRocketL" prob="0.4" />
-		<entity name="npcReconMaleTRifle" prob="0.3" />
-		<entity name="npcVaultBossPistol" prob="0.1" />
-		<entity name="npcVaultDoctorPistol" prob="0.1" />
-		<entity name="npcVaultResidentFemalePipeMG" prob="0.1" />
-		<entity name="npcVaultResidentFemalePistol" prob="0.1" />
-		<entity name="npcVaultResidentMalePipeMG" prob="0.1" />
-		<entity name="npcVaultResidentMalePistol" prob="0.1" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.2" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.2" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.2" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.2" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS400']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.5" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.5" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="1" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.5" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.5" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="1" />
-		<entity name="npcReconFemaleAK47" prob="0.2" />
-		<entity name="npcReconFemaleM60" prob="0.2" />
-		<entity name="npcReconFemaleRocketL" prob="0.5" />
-		<entity name="npcReconFemaleTRifle" prob="0.2" />
-		<entity name="npcReconMaleAK47" prob="0.2" />
-		<entity name="npcReconMaleM60" prob="0.2" />
-		<entity name="npcReconMaleRocketL" prob="0.5" />
-		<entity name="npcReconMaleTRifle" prob="0.2" />
-		<entity name="npcVaultSecurityFemalePistol" prob="0.1" />
-		<entity name="npcVaultSecurityFemaleSMG" prob="0.1" />
-		<entity name="npcVaultSecurityMalePistol" prob="0.1" />
-		<entity name="npcVaultSecurityMaleSMG" prob="0.1" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS800']">
-		<entity name="npcArmyPowerArmorFemaleAK47" prob="0.5" />
-		<entity name="npcArmyPowerArmorFemaleM60" prob="0.5" />
-		<entity name="npcArmyPowerArmorFemaleRocketL" prob="1" />
-		<entity name="npcArmyPowerArmorMaleAK47" prob="0.5" />
-		<entity name="npcArmyPowerArmorMaleM60" prob="0.5" />
-		<entity name="npcArmyPowerArmorMaleRocketL" prob="1" />
-		<entity name="npcReconFemaleAK47" prob="0.2" />
-		<entity name="npcReconFemaleM60" prob="0.2" />
-		<entity name="npcReconFemaleRocketL" prob="0.5" />
-		<entity name="npcReconFemaleTRifle" prob="0.2" />
-		<entity name="npcReconMaleAK47" prob="0.2" />
-		<entity name="npcReconMaleM60" prob="0.2" />
-		<entity name="npcReconMaleRocketL" prob="0.5" />
-		<entity name="npcReconMaleTRifle" prob="0.2" />
+		<entity name="npcArmyPowerArmorFemaleAK47"/>
+		<entity name="npcArmyPowerArmorFemaleM60"/>
+		<entity name="npcArmyPowerArmorFemaleRocketL" prob="0.025" />
+		<entity name="npcArmyPowerArmorMaleAK47"/>
+		<entity name="npcArmyPowerArmorMaleM60"/>
+		<entity name="npcArmyPowerArmorMaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleAK47"/>
+		<entity name="npcReconFemaleM60"/>
+		<entity name="npcReconFemaleRocketL" prob="0.025" />
+		<entity name="npcReconFemaleTRifle"/>
+		<entity name="npcReconMaleAK47"/>
+		<entity name="npcReconMaleM60"/>
+		<entity name="npcReconMaleRocketL" prob="0.025" />
+		<entity name="npcReconMaleTRifle"/>
+		<entity name="npcVaultBossPistol"/>
+		<entity name="npcVaultDoctorPistol"/>
+		<entity name="npcVaultResidentFemalePipeMG"/>
+		<entity name="npcVaultResidentFemalePistol"/>
+		<entity name="npcVaultResidentMalePipeMG"/>
+		<entity name="npcVaultResidentMalePistol"/>
+		<entity name="npcVaultSecurityFemalePistol"/>
+		<entity name="npcVaultSecurityFemaleSMG"/>
+		<entity name="npcVaultSecurityMalePistol"/>
+		<entity name="npcVaultSecurityMaleSMG"/>
 	</append>
 	
 </configs>

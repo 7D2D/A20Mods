@@ -1,239 +1,273 @@
 <configs>
 
-	
-          
- <append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
-	        <entity name="survivorOfficerDPistol" prob=".025" />
-                <entity name="survivorOfficerMachete" prob=".025" />
-		<entity name="survivorOfficerSMG" prob=".025" />
-		<entity name="survivorOfficerAK47" prob=".025" />
-		<entity name="survivorOfficerTRifle" prob=".025" />	
-		<entity name="survivorSoldier1Club" prob=".025" />
-		<entity name="survivorSoldier1SMG" prob=".025" />
-		<entity name="survivorSoldier1AK47" prob=".025" />
-		<entity name="survivorSoldier1TRifle" prob=".025" />
-		<entity name="survivorSoldier1RocketL" prob=".025" />
-                <entity name="survivorSoldier1M60" prob=".025" />
-                <entity name="survivorSoldier2Knife" prob=".025" />
-		<entity name="survivorSoldier2SMG" prob=".025" />
-		<entity name="survivorSoldier2AK47" prob=".025" />
-		<entity name="survivorSoldier2TRifle" prob=".025" />
-                <entity name="survivorSoldier3Bat" prob=".025" />
-		<entity name="survivorSoldier3SMG" prob=".025" />
-		<entity name="survivorSoldier3AK47" prob=".025" />
-		<entity name="survivorSoldier3TRifle" prob=".025" />
-                <entity name="survivorSoldier4Machete" prob=".025" />
-		<entity name="survivorSoldier4SMG" prob=".025" />
-		<entity name="survivorSoldier4AK47" prob=".025" />
-		<entity name="survivorSoldier4TRifle" prob=".025" />	
+<!-- Lowest Vanilla ZombiesAll is zombieJanitor prob=0.2 -->          
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
+	    <entity name="survivorOfficerDPistol" prob="0.1" />
+        <entity name="survivorOfficerMachete" prob="0.1" />
+		<entity name="survivorOfficerSMG" prob="0.1" />
+		<entity name="survivorOfficerAK47" prob="0.1" />
+		<entity name="survivorOfficerTRifle" prob="0.1" />	
+		<entity name="survivorSoldier1Club" prob="0.1" />
+		<entity name="survivorSoldier1SMG" prob="0.1" />
+		<entity name="survivorSoldier1AK47" prob="0.1" />
+		<entity name="survivorSoldier1TRifle" prob="0.1" />
+		<entity name="survivorSoldier1RocketL" prob="0.025" />
+        <entity name="survivorSoldier1M60" prob="0.1" />
+        <entity name="survivorSoldier2Knife" prob="0.1" />
+		<entity name="survivorSoldier2SMG" prob="0.1" />
+		<entity name="survivorSoldier2AK47" prob="0.1" />
+		<entity name="survivorSoldier2TRifle" prob="0.1" />
+        <entity name="survivorSoldier3Bat" prob="0.1" />
+		<entity name="survivorSoldier3SMG" prob="0.1" />
+		<entity name="survivorSoldier3AK47" prob="0.1" />
+		<entity name="survivorSoldier3TRifle" prob="0.1" />
+        <entity name="survivorSoldier4Machete" prob="0.1" />
+		<entity name="survivorSoldier4SMG" prob="0.1" />
+		<entity name="survivorSoldier4AK47" prob="0.1" />
+		<entity name="survivorSoldier4TRifle" prob="0.1" />	
 	</append>
-	
+
+<!-- Lowest Vanilla ZombiesNight is animalZombieDog prob=0.05 -->	
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
-		<entity name="survivorOfficerMachete" prob=".025" />
-		<entity name="survivorOfficerSMG" prob=".025" />
-		<entity name="survivorOfficerAK47" prob=".025" />
-		<entity name="survivorOfficerTRifle" prob=".025" />	
-		<entity name="survivorSoldier1Club" prob=".025" />
-		<entity name="survivorSoldier1SMG" prob=".025" />
-		<entity name="survivorSoldier1AK47" prob=".025" />
-		<entity name="survivorSoldier1TRifle" prob=".025" />
-		<entity name="survivorSoldier1RocketL" prob=".025" />
-                <entity name="survivorSoldier1M60" prob=".025" />
-                <entity name="survivorSoldier2Knife" prob=".025" />
-		<entity name="survivorSoldier2SMG" prob=".025" />
-		<entity name="survivorSoldier2AK47" prob=".025" />
-		<entity name="survivorSoldier2TRifle" prob=".025" />
-                <entity name="survivorSoldier3Bat" prob=".025" />
-		<entity name="survivorSoldier3SMG" prob=".025" />
-		<entity name="survivorSoldier3AK47" prob=".025" />
-		<entity name="survivorSoldier3TRifle" prob=".025" />
-                <entity name="survivorSoldier4Machete" prob=".025" />
-		<entity name="survivorSoldier4SMG" prob=".025" />
-		<entity name="survivorSoldier4AK47" prob=".025" />
-		<entity name="survivorSoldier4TRifle" prob=".025" />		
+	    <entity name="survivorOfficerDPistol" prob="0.025" />	
+		<entity name="survivorOfficerMachete" prob="0.025" />
+		<entity name="survivorOfficerSMG" prob="0.025" />
+		<entity name="survivorOfficerAK47" prob="0.025" />
+		<entity name="survivorOfficerTRifle" prob="0.025" />	
+		<entity name="survivorSoldier1Club" prob="0.025" />
+		<entity name="survivorSoldier1SMG" prob="0.025" />
+		<entity name="survivorSoldier1AK47" prob="0.025" />
+		<entity name="survivorSoldier1TRifle" prob="0.025" />
+		<entity name="survivorSoldier1RocketL" prob="0.00625" />
+        <entity name="survivorSoldier1M60" prob="0.025" />
+		<entity name="survivorSoldier2Knife" prob="0.025" />
+		<entity name="survivorSoldier2SMG" prob="0.025" />
+		<entity name="survivorSoldier2AK47" prob="0.025" />
+		<entity name="survivorSoldier2TRifle" prob="0.025" />
+        <entity name="survivorSoldier3Bat" prob="0.025" />
+		<entity name="survivorSoldier3SMG" prob="0.025" />
+		<entity name="survivorSoldier3AK47" prob="0.025" />
+		<entity name="survivorSoldier3TRifle" prob="0.025" />
+        <entity name="survivorSoldier4Machete" prob="0.025" />
+		<entity name="survivorSoldier4SMG" prob="0.025" />
+		<entity name="survivorSoldier4AK47" prob="0.025" />
+		<entity name="survivorSoldier4TRifle" prob="0.025" />		
 	</append>
-	
+
+<!-- Lowest Vanilla SnowZombies is zombieLumberjack prob=1.0 -->	
 	<append xpath="/entitygroups/entitygroup[@name='SnowZombies']">
-		 <entity name="survivorOfficerMachete" prob=".025" />
-		<entity name="survivorOfficerSMG" prob=".025" />
-		<entity name="survivorOfficerAK47" prob=".025" />
-		<entity name="survivorOfficerTRifle" prob=".025" />	
-		<entity name="survivorSoldier1Club" prob=".025" />
-		<entity name="survivorSoldier1SMG" prob=".025" />
-		<entity name="survivorSoldier1AK47" prob=".025" />
-		<entity name="survivorSoldier1TRifle" prob=".025" />
-		<entity name="survivorSoldier1RocketL" prob=".025" />
-                <entity name="survivorSoldier1M60" prob=".025" />
-                <entity name="survivorSoldier2Knife" prob=".025" />
-		<entity name="survivorSoldier2SMG" prob=".025" />
-		<entity name="survivorSoldier2AK47" prob=".025" />
-		<entity name="survivorSoldier2TRifle" prob=".025" />
-                <entity name="survivorSoldier3Bat" prob=".025" />
-		<entity name="survivorSoldier3SMG" prob=".025" />
-		<entity name="survivorSoldier3AK47" prob=".025" />
-		<entity name="survivorSoldier3TRifle" prob=".025" />
-                <entity name="survivorSoldier4Machete" prob=".025" />
-		<entity name="survivorSoldier4SMG" prob=".025" />
-		<entity name="survivorSoldier4AK47" prob=".025" />
-		<entity name="survivorSoldier4TRifle" prob=".025" />	
-		
+	    <entity name="survivorOfficerDPistol" prob="0.1" />	
+		<entity name="survivorOfficerMachete" prob="0.1" />
+		<entity name="survivorOfficerSMG" prob="0.1" />
+		<entity name="survivorOfficerAK47" prob="0.1" />
+		<entity name="survivorOfficerTRifle" prob="0.1" />	
+		<entity name="survivorSoldier1Club" prob="0.1" />
+		<entity name="survivorSoldier1SMG" prob="0.1" />
+		<entity name="survivorSoldier1AK47" prob="0.1" />
+		<entity name="survivorSoldier1TRifle" prob="0.1" />
+		<entity name="survivorSoldier1RocketL" prob="0.025" />
+        <entity name="survivorSoldier1M60" prob="0.1" />
+        <entity name="survivorSoldier2Knife" prob="0.1" />
+		<entity name="survivorSoldier2SMG" prob="0.1" />
+		<entity name="survivorSoldier2AK47" prob="0.1" />
+		<entity name="survivorSoldier2TRifle" prob="0.1" />
+        <entity name="survivorSoldier3Bat" prob="0.1" />
+		<entity name="survivorSoldier3SMG" prob="0.1" />
+		<entity name="survivorSoldier3AK47" prob="0.1" />
+		<entity name="survivorSoldier3TRifle" prob="0.1" />
+        <entity name="survivorSoldier4Machete" prob="0.1" />
+		<entity name="survivorSoldier4SMG" prob="0.1" />
+		<entity name="survivorSoldier4AK47" prob="0.1" />
+		<entity name="survivorSoldier4TRifle" prob="0.1" />		
 	</append>	
 
+<!-- Lowest Vanilla ZombiesWasteland is mixed prob=0.1 -->
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']">
-	        <entity name="survivorOfficerSMG" prob=".025" />
-		<entity name="survivorOfficerAK47" prob=".025" />
-		<entity name="survivorOfficerTRifle" prob=".025" />	
-		<entity name="survivorSoldier1SMG" prob=".025" />
-		<entity name="survivorSoldier1AK47" prob=".025" />
-		<entity name="survivorSoldier1TRifle" prob=".025" />
-		<entity name="survivorSoldier1RocketL" prob=".025" />
-                <entity name="survivorSoldier1M60" prob=".025" />
-		<entity name="survivorSoldier2SMG" prob=".025" />
-		<entity name="survivorSoldier2AK47" prob=".025" />
-		<entity name="survivorSoldier2TRifle" prob=".025" />
-		<entity name="survivorSoldier3SMG" prob=".025" />
-		<entity name="survivorSoldier3AK47" prob=".025" />
-		<entity name="survivorSoldier3TRifle" prob=".025" />
-		<entity name="survivorSoldier4SMG" prob=".025" />
-		<entity name="survivorSoldier4AK47" prob=".025" />
-		<entity name="survivorSoldier4TRifle" prob=".025" />		
+	    <entity name="survivorOfficerDPistol" prob="0.1" />
+        <entity name="survivorOfficerMachete" prob="0.1" />
+		<entity name="survivorOfficerSMG" prob="0.1" />
+		<entity name="survivorOfficerAK47" prob="0.1" />
+		<entity name="survivorOfficerTRifle" prob="0.1" />	
+		<entity name="survivorSoldier1Club" prob="0.1" />
+		<entity name="survivorSoldier1SMG" prob="0.1" />
+		<entity name="survivorSoldier1AK47" prob="0.1" />
+		<entity name="survivorSoldier1TRifle" prob="0.1" />
+		<entity name="survivorSoldier1RocketL" prob="0.025" />
+        <entity name="survivorSoldier1M60" prob="0.1" />
+        <entity name="survivorSoldier2Knife" prob="0.1" />
+		<entity name="survivorSoldier2SMG" prob="0.1" />
+		<entity name="survivorSoldier2AK47" prob="0.1" />
+		<entity name="survivorSoldier2TRifle" prob="0.1" />
+        <entity name="survivorSoldier3Bat" prob="0.1" />
+		<entity name="survivorSoldier3SMG" prob="0.1" />
+		<entity name="survivorSoldier3AK47" prob="0.1" />
+		<entity name="survivorSoldier3TRifle" prob="0.1" />
+        <entity name="survivorSoldier4Machete" prob="0.1" />
+		<entity name="survivorSoldier4SMG" prob="0.1" />
+		<entity name="survivorSoldier4AK47" prob="0.1" />
+		<entity name="survivorSoldier4TRifle" prob="0.1" />		
 	</append>
 
+<!-- Lowest Vanilla ZombiesWastelandNight is mixed prob=0.1 -->
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']">
-		<entity name="survivorOfficerSMG" prob=".025" />
-		<entity name="survivorOfficerAK47" prob=".025" />
-		<entity name="survivorOfficerTRifle" prob=".025" />	
-		<entity name="survivorSoldier1SMG" prob=".025" />
-		<entity name="survivorSoldier1AK47" prob=".025" />
-		<entity name="survivorSoldier1TRifle" prob=".025" />
-		<entity name="survivorSoldier1RocketL" prob=".025" />
-                <entity name="survivorSoldier1M60" prob=".025" />
-		<entity name="survivorSoldier2SMG" prob=".025" />
-		<entity name="survivorSoldier2AK47" prob=".025" />
-		<entity name="survivorSoldier2TRifle" prob=".025" />
-		<entity name="survivorSoldier3SMG" prob=".025" />
-		<entity name="survivorSoldier3AK47" prob=".025" />
-		<entity name="survivorSoldier3TRifle" prob=".025" />
-		<entity name="survivorSoldier4SMG" prob=".025" />
-		<entity name="survivorSoldier4AK47" prob=".025" />
-		<entity name="survivorSoldier4TRifle" prob=".025" />	
+	    <entity name="survivorOfficerDPistol" prob="0.1" />
+        <entity name="survivorOfficerMachete" prob="0.1" />
+		<entity name="survivorOfficerSMG" prob="0.1" />
+		<entity name="survivorOfficerAK47" prob="0.1" />
+		<entity name="survivorOfficerTRifle" prob="0.1" />	
+		<entity name="survivorSoldier1Club" prob="0.1" />
+		<entity name="survivorSoldier1SMG" prob="0.1" />
+		<entity name="survivorSoldier1AK47" prob="0.1" />
+		<entity name="survivorSoldier1TRifle" prob="0.1" />
+		<entity name="survivorSoldier1RocketL" prob="0.025" />
+        <entity name="survivorSoldier1M60" prob="0.1" />
+        <entity name="survivorSoldier2Knife" prob="0.1" />
+		<entity name="survivorSoldier2SMG" prob="0.1" />
+		<entity name="survivorSoldier2AK47" prob="0.1" />
+		<entity name="survivorSoldier2TRifle" prob="0.1" />
+        <entity name="survivorSoldier3Bat" prob="0.1" />
+		<entity name="survivorSoldier3SMG" prob="0.1" />
+		<entity name="survivorSoldier3AK47" prob="0.1" />
+		<entity name="survivorSoldier3TRifle" prob="0.1" />
+        <entity name="survivorSoldier4Machete" prob="0.1" />
+		<entity name="survivorSoldier4SMG" prob="0.1" />
+		<entity name="survivorSoldier4AK47" prob="0.1" />
+		<entity name="survivorSoldier4TRifle" prob="0.1" />
 	</append>
 
-        <append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
-	        <entity name="npcOfficerDPistol" prob=".025" />
-                <entity name="npcOfficerMachete" prob=".025" />
-		<entity name="npcOfficerSMG" prob=".025" />
-		<entity name="npcOfficerAK47" prob=".025" />
-		<entity name="npcOfficerTRifle" prob=".025" />	
-		<entity name="npcSoldier1Club" prob=".025" />
-		<entity name="npcSoldier1SMG" prob=".025" />
-		<entity name="npcSoldier1AK47" prob=".025" />
-		<entity name="npcSoldier1TRifle" prob=".025" />
-		<entity name="npcSoldier1RocketL" prob=".025" />
-                <entity name="npcSoldier1M60" prob=".025" />
-                <entity name="npcSoldier2Knife" prob=".025" />
-		<entity name="npcSoldier2SMG" prob=".025" />
-		<entity name="npcSoldier2AK47" prob=".025" />
-		<entity name="npcSoldier2TRifle" prob=".025" />
-                <entity name="npcSoldier3Bat" prob=".025" />
-		<entity name="npcSoldier3SMG" prob=".025" />
-		<entity name="npcSoldier3AK47" prob=".025" />
-		<entity name="npcSoldier3TRifle" prob=".025" />
-                <entity name="npcSoldier4Machete" prob=".025" />
-		<entity name="npcSoldier4SMG" prob=".025" />
-		<entity name="npcSoldier4AK47" prob=".025" />
-		<entity name="npcSoldier4TRifle" prob=".025" />	
+<!-- Lowest Vanilla ZombiesAll is zombieJanitor prob=0.2 -->
+    <append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
+	    <entity name="npcOfficerDPistol" prob="0.1" />
+        <entity name="npcOfficerMachete" prob="0.1" />
+		<entity name="npcOfficerSMG" prob="0.1" />
+		<entity name="npcOfficerAK47" prob="0.1" />
+		<entity name="npcOfficerTRifle" prob="0.1" />	
+		<entity name="npcSoldier1Club" prob="0.1" />
+		<entity name="npcSoldier1SMG" prob="0.1" />
+		<entity name="npcSoldier1AK47" prob="0.1" />
+		<entity name="npcSoldier1TRifle" prob="0.1" />
+		<entity name="npcSoldier1RocketL" prob="0.025" />
+        <entity name="npcSoldier1M60" prob="0.1" />
+        <entity name="npcSoldier2Knife" prob="0.1" />
+		<entity name="npcSoldier2SMG" prob="0.1" />
+		<entity name="npcSoldier2AK47" prob="0.1" />
+		<entity name="npcSoldier2TRifle" prob="0.1" />
+        <entity name="npcSoldier3Bat" prob="0.1" />
+		<entity name="npcSoldier3SMG" prob="0.1" />
+		<entity name="npcSoldier3AK47" prob="0.1" />
+		<entity name="npcSoldier3TRifle" prob="0.1" />
+        <entity name="npcSoldier4Machete" prob="0.1" />
+		<entity name="npcSoldier4SMG" prob="0.1" />
+		<entity name="npcSoldier4AK47" prob="0.1" />
+		<entity name="npcSoldier4TRifle" prob="0.1" />	
 	</append>
-	
+
+<!-- Lowest Vanilla ZombiesNight is animalZombieDog prob=0.05 -->	
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
-		<entity name="npcOfficerMachete" prob=".025" />
-		<entity name="npcOfficerSMG" prob=".025" />
-		<entity name="npcOfficerAK47" prob=".025" />
-		<entity name="npcOfficerTRifle" prob=".025" />	
-		<entity name="npcSoldier1Club" prob=".025" />
-		<entity name="npcSoldier1SMG" prob=".025" />
-		<entity name="npcSoldier1AK47" prob=".025" />
-		<entity name="npcSoldier1TRifle" prob=".025" />
-		<entity name="npcSoldier1RocketL" prob=".025" />
-                <entity name="npcSoldier1M60" prob=".025" />
-                <entity name="npcSoldier2Knife" prob=".025" />
-		<entity name="npcSoldier2SMG" prob=".025" />
-		<entity name="npcSoldier2AK47" prob=".025" />
-		<entity name="npcSoldier2TRifle" prob=".025" />
-                <entity name="npcSoldier3Bat" prob=".025" />
-		<entity name="npcSoldier3SMG" prob=".025" />
-		<entity name="npcSoldier3AK47" prob=".025" />
-		<entity name="npcSoldier3TRifle" prob=".025" />
-                <entity name="npcSoldier4Machete" prob=".025" />
-		<entity name="npcSoldier4SMG" prob=".025" />
-		<entity name="npcSoldier4AK47" prob=".025" />
-		<entity name="npcSoldier4TRifle" prob=".025" />		
+	    <entity name="npcOfficerDPistol" prob="0.025" />	
+		<entity name="npcOfficerMachete" prob="0.025" />
+		<entity name="npcOfficerSMG" prob="0.025" />
+		<entity name="npcOfficerAK47" prob="0.025" />
+		<entity name="npcOfficerTRifle" prob="0.025" />	
+		<entity name="npcSoldier1Club" prob="0.025" />
+		<entity name="npcSoldier1SMG" prob="0.025" />
+		<entity name="npcSoldier1AK47" prob="0.025" />
+		<entity name="npcSoldier1TRifle" prob="0.025" />
+		<entity name="npcSoldier1RocketL" prob="0.00625" />
+        <entity name="npcSoldier1M60" prob="0.025" />
+        <entity name="npcSoldier2Knife" prob="0.025" />
+		<entity name="npcSoldier2SMG" prob="0.025" />
+		<entity name="npcSoldier2AK47" prob="0.025" />
+		<entity name="npcSoldier2TRifle" prob="0.025" />
+        <entity name="npcSoldier3Bat" prob="0.025" />
+		<entity name="npcSoldier3SMG" prob="0.025" />
+		<entity name="npcSoldier3AK47" prob="0.025" />
+		<entity name="npcSoldier3TRifle" prob="0.025" />
+        <entity name="npcSoldier4Machete" prob="0.025" />
+		<entity name="npcSoldier4SMG" prob="0.025" />
+		<entity name="npcSoldier4AK47" prob="0.025" />
+		<entity name="npcSoldier4TRifle" prob="0.025" />	
 	</append>
-	
+
+<!-- Lowest Vanilla SnowZombies is zombieLumberjack prob=0.1 -->	
 	<append xpath="/entitygroups/entitygroup[@name='SnowZombies']">
-		 <entity name="npcOfficerMachete" prob=".025" />
-		<entity name="npcOfficerSMG" prob=".025" />
-		<entity name="npcOfficerAK47" prob=".025" />
-		<entity name="npcOfficerTRifle" prob=".025" />	
-		<entity name="npcSoldier1Club" prob=".025" />
-		<entity name="npcSoldier1SMG" prob=".025" />
-		<entity name="npcSoldier1AK47" prob=".025" />
-		<entity name="npcSoldier1TRifle" prob=".025" />
-		<entity name="npcSoldier1RocketL" prob=".025" />
-                <entity name="npcSoldier1M60" prob=".025" />
-                <entity name="npcSoldier2Knife" prob=".025" />
-		<entity name="npcSoldier2SMG" prob=".025" />
-		<entity name="npcSoldier2AK47" prob=".025" />
-		<entity name="npcSoldier2TRifle" prob=".025" />
-                <entity name="npcSoldier3Bat" prob=".025" />
-		<entity name="npcSoldier3SMG" prob=".025" />
-		<entity name="npcSoldier3AK47" prob=".025" />
-		<entity name="npcSoldier3TRifle" prob=".025" />
-                <entity name="npcSoldier4Machete" prob=".025" />
-		<entity name="npcSoldier4SMG" prob=".025" />
-		<entity name="npcSoldier4AK47" prob=".025" />
-		<entity name="npcSoldier4TRifle" prob=".025" />	
-		
+	    <entity name="npcOfficerDPistol" prob="0.1" />	
+		<entity name="npcOfficerMachete" prob="0.1" />
+		<entity name="npcOfficerSMG" prob="0.1" />
+		<entity name="npcOfficerAK47" prob="0.1" />
+		<entity name="npcOfficerTRifle" prob="0.1" />	
+		<entity name="npcSoldier1Club" prob="0.1" />
+		<entity name="npcSoldier1SMG" prob="0.1" />
+		<entity name="npcSoldier1AK47" prob="0.1" />
+		<entity name="npcSoldier1TRifle" prob="0.1" />
+		<entity name="npcSoldier1RocketL" prob="0.025" />
+        <entity name="npcSoldier1M60" prob="0.1" />
+        <entity name="npcSoldier2Knife" prob="0.1" />
+		<entity name="npcSoldier2SMG" prob="0.1" />
+		<entity name="npcSoldier2AK47" prob="0.1" />
+		<entity name="npcSoldier2TRifle" prob="0.1" />
+        <entity name="npcSoldier3Bat" prob="0.1" />
+		<entity name="npcSoldier3SMG" prob="0.1" />
+		<entity name="npcSoldier3AK47" prob="0.1" />
+		<entity name="npcSoldier3TRifle" prob="0.1" />
+        <entity name="npcSoldier4Machete" prob="0.1" />
+		<entity name="npcSoldier4SMG" prob="0.1" />
+		<entity name="npcSoldier4AK47" prob="0.1" />
+		<entity name="npcSoldier4TRifle" prob="0.1" />	
 	</append>	
 
+<!-- Lowest Vanilla ZombiesWasteland is mixed prob=0.1 -->
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']">
-	        <entity name="npcOfficerSMG" prob=".025" />
-		<entity name="npcOfficerAK47" prob=".025" />
-		<entity name="npcOfficerTRifle" prob=".025" />	
-		<entity name="npcSoldier1SMG" prob=".025" />
-		<entity name="npcSoldier1AK47" prob=".025" />
-		<entity name="npcSoldier1TRifle" prob=".025" />
-		<entity name="npcSoldier1RocketL" prob=".025" />
-                <entity name="npcSoldier1M60" prob=".025" />
-		<entity name="npcSoldier2SMG" prob=".025" />
-		<entity name="npcSoldier2AK47" prob=".025" />
-		<entity name="npcSoldier2TRifle" prob=".025" />
-		<entity name="npcSoldier3SMG" prob=".025" />
-		<entity name="npcSoldier3AK47" prob=".025" />
-		<entity name="npcSoldier3TRifle" prob=".025" />
-		<entity name="npcSoldier4SMG" prob=".025" />
-		<entity name="npcSoldier4AK47" prob=".025" />
-		<entity name="npcSoldier4TRifle" prob=".025" />		
+	    <entity name="npcOfficerDPistol" prob="0.1" />	
+		<entity name="npcOfficerMachete" prob="0.1" />
+		<entity name="npcOfficerSMG" prob="0.1" />
+		<entity name="npcOfficerAK47" prob="0.1" />
+		<entity name="npcOfficerTRifle" prob="0.1" />	
+		<entity name="npcSoldier1Club" prob="0.1" />
+		<entity name="npcSoldier1SMG" prob="0.1" />
+		<entity name="npcSoldier1AK47" prob="0.1" />
+		<entity name="npcSoldier1TRifle" prob="0.1" />
+		<entity name="npcSoldier1RocketL" prob="0.025" />
+        <entity name="npcSoldier1M60" prob="0.1" />
+        <entity name="npcSoldier2Knife" prob="0.1" />
+		<entity name="npcSoldier2SMG" prob="0.1" />
+		<entity name="npcSoldier2AK47" prob="0.1" />
+		<entity name="npcSoldier2TRifle" prob="0.1" />
+        <entity name="npcSoldier3Bat" prob="0.1" />
+		<entity name="npcSoldier3SMG" prob="0.1" />
+		<entity name="npcSoldier3AK47" prob="0.1" />
+		<entity name="npcSoldier3TRifle" prob="0.1" />
+        <entity name="npcSoldier4Machete" prob="0.1" />
+		<entity name="npcSoldier4SMG" prob="0.1" />
+		<entity name="npcSoldier4AK47" prob="0.1" />
+		<entity name="npcSoldier4TRifle" prob="0.1" />		
 	</append>
 
+<!-- Lowest Vanilla ZombiesWastelandNight is mixed prob=0.1 -->
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']">
-		<entity name="npcOfficerSMG" prob=".025" />
-		<entity name="npcOfficerAK47" prob=".025" />
-		<entity name="npcOfficerTRifle" prob=".025" />	
-		<entity name="npcSoldier1SMG" prob=".025" />
-		<entity name="npcSoldier1AK47" prob=".025" />
-		<entity name="npcSoldier1TRifle" prob=".025" />
-		<entity name="npcSoldier1RocketL" prob=".025" />
-                <entity name="npcSoldier1M60" prob=".025" />
-		<entity name="npcSoldier2SMG" prob=".025" />
-		<entity name="npcSoldier2AK47" prob=".025" />
-		<entity name="npcSoldier2TRifle" prob=".025" />
-		<entity name="npcSoldier3SMG" prob=".025" />
-		<entity name="npcSoldier3AK47" prob=".025" />
-		<entity name="npcSoldier3TRifle" prob=".025" />
-		<entity name="npcSoldier4SMG" prob=".025" />
-		<entity name="npcSoldier4AK47" prob=".025" />
-		<entity name="npcSoldier4TRifle" prob=".025" />	
+	    <entity name="npcOfficerDPistol" prob="0.1" />	
+		<entity name="npcOfficerMachete" prob="0.1" />
+		<entity name="npcOfficerSMG" prob="0.1" />
+		<entity name="npcOfficerAK47" prob="0.1" />
+		<entity name="npcOfficerTRifle" prob="0.1" />	
+		<entity name="npcSoldier1Club" prob="0.1" />
+		<entity name="npcSoldier1SMG" prob="0.1" />
+		<entity name="npcSoldier1AK47" prob="0.1" />
+		<entity name="npcSoldier1TRifle" prob="0.1" />
+		<entity name="npcSoldier1RocketL" prob="0.025" />
+        <entity name="npcSoldier1M60" prob="0.1" />
+        <entity name="npcSoldier2Knife" prob="0.1" />
+		<entity name="npcSoldier2SMG" prob="0.1" />
+		<entity name="npcSoldier2AK47" prob="0.1" />
+		<entity name="npcSoldier2TRifle" prob="0.1" />
+        <entity name="npcSoldier3Bat" prob="0.1" />
+		<entity name="npcSoldier3SMG" prob="0.1" />
+		<entity name="npcSoldier3AK47" prob="0.1" />
+		<entity name="npcSoldier3TRifle" prob="0.1" />
+        <entity name="npcSoldier4Machete" prob="0.1" />
+		<entity name="npcSoldier4SMG" prob="0.1" />
+		<entity name="npcSoldier4AK47" prob="0.1" />
+		<entity name="npcSoldier4TRifle" prob="0.1" />	
 	</append>
 
 	<!--
@@ -241,847 +275,863 @@
 	-->
 	<!-- Military NPC entity groups -->
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryAllGroupGS01']">
-		<entity name="npcOfficerDPistol" prob="0.5" />
-		<entity name="npcOfficerMachete" prob="1" />
-		<entity name="npcOfficerSMG" prob="0.5" />
-		<entity name="npcOfficerAK47" prob="0.5" />
-		<entity name="npcOfficerTRifle" prob="0.5" />
-		<entity name="npcSoldier1Club" prob="1" />
-		<entity name="npcSoldier1SMG" prob="0.5" />
-		<entity name="npcSoldier1AK47" prob="0.5" />
-		<entity name="npcSoldier1TRifle" prob="0.5" />
-		<entity name="npcSoldier1M60" prob="0.4" />
-		<entity name="npcSoldier2Knife" prob="1" />
-		<entity name="npcSoldier2SMG" prob="0.5" />
-		<entity name="npcSoldier2AK47" prob="0.5" />
-		<entity name="npcSoldier2TRifle" prob="0.5" />
-		<entity name="npcSoldier3Bat" prob="1" />
-		<entity name="npcSoldier3SMG" prob="0.5" />
-		<entity name="npcSoldier3AK47" prob="0.5" />
-		<entity name="npcSoldier3TRifle" prob="0.5" />
-		<entity name="npcSoldier4Machete" prob="1" />
-		<entity name="npcSoldier4SMG" prob="0.5" />
-		<entity name="npcSoldier4AK47" prob="0.5" />
-		<entity name="npcSoldier4TRifle" prob="0.5" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4Machete"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryAllGroupGS50']">
-		<entity name="npcOfficerDPistol" prob="0.5" />
-		<entity name="npcOfficerMachete" prob="0.8" />
-		<entity name="npcOfficerSMG" prob="0.5" />
-		<entity name="npcOfficerAK47" prob="0.5" />
-		<entity name="npcOfficerTRifle" prob="0.5" />
-		<entity name="npcSoldier1Club" prob="0.8" />
-		<entity name="npcSoldier1SMG" prob="0.5" />
-		<entity name="npcSoldier1AK47" prob="0.5" />
-		<entity name="npcSoldier1TRifle" prob="0.5" />
-		<entity name="npcSoldier1RocketL" prob="0.2" />
-		<entity name="npcSoldier1M60" prob="0.4" />
-		<entity name="npcSoldier2Knife" prob="0.8" />
-		<entity name="npcSoldier2SMG" prob="0.5" />
-		<entity name="npcSoldier2AK47" prob="0.5" />
-		<entity name="npcSoldier2TRifle" prob="0.5" />
-		<entity name="npcSoldier3Bat" prob="0.8" />
-		<entity name="npcSoldier3SMG" prob="0.5" />
-		<entity name="npcSoldier3AK47" prob="0.5" />
-		<entity name="npcSoldier3TRifle" prob="0.5" />
-		<entity name="npcSoldier4Machete" prob="0.8" />
-		<entity name="npcSoldier4SMG" prob="0.5" />
-		<entity name="npcSoldier4AK47" prob="0.5" />
-		<entity name="npcSoldier4TRifle" prob="0.5" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4Machete"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryAllGroupGS100']">
-		<entity name="npcOfficerDPistol" prob="0.5" />
-		<entity name="npcOfficerMachete" prob="0.6" />
-		<entity name="npcOfficerSMG" prob="0.5" />
-		<entity name="npcOfficerAK47" prob="0.5" />
-		<entity name="npcOfficerTRifle" prob="0.5" />
-		<entity name="npcSoldier1Club" prob="0.6" />
-		<entity name="npcSoldier1SMG" prob="0.5" />
-		<entity name="npcSoldier1AK47" prob="0.5" />
-		<entity name="npcSoldier1TRifle" prob="0.5" />
-		<entity name="npcSoldier1RocketL" prob="0.4" />
-		<entity name="npcSoldier1M60" prob="0.5" />
-		<entity name="npcSoldier2Knife" prob="0.6" />
-		<entity name="npcSoldier2SMG" prob="0.5" />
-		<entity name="npcSoldier2AK47" prob="0.5" />
-		<entity name="npcSoldier2TRifle" prob="0.5" />
-		<entity name="npcSoldier3Bat" prob="0.6" />
-		<entity name="npcSoldier3SMG" prob="0.5" />
-		<entity name="npcSoldier3AK47" prob="0.5" />
-		<entity name="npcSoldier3TRifle" prob="0.5" />
-		<entity name="npcSoldier4Machete" prob="0.6" />
-		<entity name="npcSoldier4SMG" prob="0.5" />
-		<entity name="npcSoldier4AK47" prob="0.5" />
-		<entity name="npcSoldier4TRifle" prob="0.5" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4Machete"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryAllGroupGS200']">
-		<entity name="npcOfficerDPistol" prob="0.5" />
-		<entity name="npcOfficerMachete" prob="0.4" />
-		<entity name="npcOfficerSMG" prob="0.5" />
-		<entity name="npcOfficerAK47" prob="0.5" />
-		<entity name="npcOfficerTRifle" prob="0.5" />
-		<entity name="npcSoldier1Club" prob="0.4" />
-		<entity name="npcSoldier1SMG" prob="0.5" />
-		<entity name="npcSoldier1AK47" prob="0.5" />
-		<entity name="npcSoldier1TRifle" prob="0.5" />
-		<entity name="npcSoldier1RocketL" prob="0.6" />
-		<entity name="npcSoldier1M60" prob="0.5" />
-		<entity name="npcSoldier2Knife" prob="0.4" />
-		<entity name="npcSoldier2SMG" prob="0.5" />
-		<entity name="npcSoldier2AK47" prob="0.5" />
-		<entity name="npcSoldier2TRifle" prob="0.5" />
-		<entity name="npcSoldier3Bat" prob="0.4" />
-		<entity name="npcSoldier3SMG" prob="0.5" />
-		<entity name="npcSoldier3AK47" prob="0.5" />
-		<entity name="npcSoldier3TRifle" prob="0.5" />
-		<entity name="npcSoldier4Machete" prob="0.4" />
-		<entity name="npcSoldier4SMG" prob="0.5" />
-		<entity name="npcSoldier4AK47" prob="0.5" />
-		<entity name="npcSoldier4TRifle" prob="0.5" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4Machete"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryAllGroupGS400']">
-		<entity name="npcOfficerDPistol" prob="0.5" />
-		<entity name="npcOfficerMachete" prob="0.2" />
-		<entity name="npcOfficerSMG" prob="0.5" />
-		<entity name="npcOfficerAK47" prob="0.5" />
-		<entity name="npcOfficerTRifle" prob="0.5" />
-		<entity name="npcSoldier1Club" prob="0.2" />
-		<entity name="npcSoldier1SMG" prob="0.5" />
-		<entity name="npcSoldier1AK47" prob="0.5" />
-		<entity name="npcSoldier1TRifle" prob="0.5" />
-		<entity name="npcSoldier1RocketL" prob="0.8" />
-		<entity name="npcSoldier1M60" prob="0.6" />
-		<entity name="npcSoldier2Knife" prob="0.2" />
-		<entity name="npcSoldier2SMG" prob="0.5" />
-		<entity name="npcSoldier2AK47" prob="0.5" />
-		<entity name="npcSoldier2TRifle" prob="0.5" />
-		<entity name="npcSoldier3Bat" prob="0.2" />
-		<entity name="npcSoldier3SMG" prob="0.5" />
-		<entity name="npcSoldier3AK47" prob="0.5" />
-		<entity name="npcSoldier3TRifle" prob="0.5" />
-		<entity name="npcSoldier4Machete" prob="0.2" />
-		<entity name="npcSoldier4SMG" prob="0.5" />
-		<entity name="npcSoldier4AK47" prob="0.5" />
-		<entity name="npcSoldier4TRifle" prob="0.5" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4Machete"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryAllGroupGS800']">
-		<entity name="npcOfficerDPistol" prob="0.5" />
-		<entity name="npcOfficerSMG" prob="0.5" />
-		<entity name="npcOfficerAK47" prob="0.5" />
-		<entity name="npcOfficerTRifle" prob="0.5" />
-		<entity name="npcSoldier1SMG" prob="0.5" />
-		<entity name="npcSoldier1AK47" prob="0.5" />
-		<entity name="npcSoldier1TRifle" prob="0.5" />
-		<entity name="npcSoldier1RocketL" prob="1" />
-		<entity name="npcSoldier1M60" prob="0.6" />
-		<entity name="npcSoldier2SMG" prob="0.5" />
-		<entity name="npcSoldier2AK47" prob="0.5" />
-		<entity name="npcSoldier2TRifle" prob="0.5" />
-		<entity name="npcSoldier3SMG" prob="0.5" />
-		<entity name="npcSoldier3AK47" prob="0.5" />
-		<entity name="npcSoldier3TRifle" prob="0.5" />
-		<entity name="npcSoldier4SMG" prob="0.5" />
-		<entity name="npcSoldier4AK47" prob="0.5" />
-		<entity name="npcSoldier4TRifle" prob="0.5" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4Machete"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryMeleeGroupGS01']">
-		<entity name="npcSoldier1Club" prob="0.8" />
-		<entity name="npcSoldier2Knife" prob="0.4" />
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier4Machete"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryMeleeGroupGS50']">
-		<entity name="npcOfficerMachete" prob="0.2" />
-		<entity name="npcSoldier1Club" prob="0.7" />
-		<entity name="npcSoldier2Knife" prob="0.4" />
-		<entity name="npcSoldier3Bat" prob="0.2" />
-		<entity name="npcSoldier4Machete" prob="0.2" />
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier4Machete"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryMeleeGroupGS100']">
-		<entity name="npcOfficerMachete" prob="0.4" />
-		<entity name="npcSoldier1Club" prob="0.6" />
-		<entity name="npcSoldier2Knife" prob="0.5" />
-		<entity name="npcSoldier3Bat" prob="0.4" />
-		<entity name="npcSoldier4Machete" prob="0.4" />
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier4Machete"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryMeleeGroupGS200']">
-		<entity name="npcOfficerMachete" prob="0.6" />
-		<entity name="npcSoldier1Club" prob="0.4" />
-		<entity name="npcSoldier2Knife" prob="0.5" />
-		<entity name="npcSoldier3Bat" prob="0.6" />
-		<entity name="npcSoldier4Machete" prob="0.6" />
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier4Machete"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryMeleeGroupGS400']">
-		<entity name="npcOfficerMachete" prob="0.8" />
-		<entity name="npcSoldier1Club" prob="0.3" />
-		<entity name="npcSoldier2Knife" prob="0.6" />
-		<entity name="npcSoldier3Bat" prob="0.8" />
-		<entity name="npcSoldier4Machete" prob="0.8" />
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier4Machete"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryMeleeGroupGS800']">
-		<entity name="npcOfficerMachete" prob="1" />
-		<entity name="npcSoldier1Club" prob="0.2" />
-		<entity name="npcSoldier2Knife" prob="0.6" />
-		<entity name="npcSoldier3Bat" prob="1" />
-		<entity name="npcSoldier4Machete" prob="1" />
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier4Machete"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryRangedGroupGS01']">
-		<entity name="npcOfficerDPistol" prob="0.6" />
-		<entity name="npcOfficerSMG" prob="0.6" />
-		<entity name="npcOfficerAK47" prob="0.6" />
-		<entity name="npcOfficerTRifle" prob="0.6" />
-		<entity name="npcSoldier1SMG" prob="0.6" />
-		<entity name="npcSoldier1AK47" prob="0.6" />
-		<entity name="npcSoldier1TRifle" prob="0.6" />
-		<entity name="npcSoldier1M60" prob="0.5" />
-		<entity name="npcSoldier2SMG" prob="0.6" />
-		<entity name="npcSoldier2AK47" prob="0.6" />
-		<entity name="npcSoldier2TRifle" prob="0.6" />
-		<entity name="npcSoldier3SMG" prob="0.6" />
-		<entity name="npcSoldier3AK47" prob="0.6" />
-		<entity name="npcSoldier3TRifle" prob="0.6" />
-		<entity name="npcSoldier4SMG" prob="0.6" />
-		<entity name="npcSoldier4AK47" prob="0.6" />
-		<entity name="npcSoldier4TRifle" prob="0.6" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryRangedGroupGS50']">
-		<entity name="npcOfficerDPistol" prob="0.5" />
-		<entity name="npcOfficerSMG" prob="0.5" />
-		<entity name="npcOfficerAK47" prob="0.6" />
-		<entity name="npcOfficerTRifle" prob="0.6" />
-		<entity name="npcSoldier1SMG" prob="0.5" />
-		<entity name="npcSoldier1AK47" prob="0.6" />
-		<entity name="npcSoldier1TRifle" prob="0.6" />
-		<entity name="npcSoldier1RocketL" prob="0.2" />
-		<entity name="npcSoldier1M60" prob="0.5" />
-		<entity name="npcSoldier2SMG" prob="0.5" />
-		<entity name="npcSoldier2AK47" prob="0.6" />
-		<entity name="npcSoldier2TRifle" prob="0.6" />
-		<entity name="npcSoldier3SMG" prob="0.5" />
-		<entity name="npcSoldier3AK47" prob="0.6" />
-		<entity name="npcSoldier3TRifle" prob="0.6" />
-		<entity name="npcSoldier4SMG" prob="0.5" />
-		<entity name="npcSoldier4AK47" prob="0.6" />
-		<entity name="npcSoldier4TRifle" prob="0.6" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryRangedGroupGS100']">
-		<entity name="npcOfficerDPistol" prob="0.5" />
-		<entity name="npcOfficerSMG" prob="0.5" />
-		<entity name="npcOfficerAK47" prob="0.5" />
-		<entity name="npcOfficerTRifle" prob="0.5" />
-		<entity name="npcSoldier1SMG" prob="0.5" />
-		<entity name="npcSoldier1AK47" prob="0.5" />
-		<entity name="npcSoldier1TRifle" prob="0.5" />
-		<entity name="npcSoldier1RocketL" prob="0.4" />
-		<entity name="npcSoldier1M60" prob="0.5" />
-		<entity name="npcSoldier2SMG" prob="0.5" />
-		<entity name="npcSoldier2AK47" prob="0.5" />
-		<entity name="npcSoldier2TRifle" prob="0.5" />
-		<entity name="npcSoldier3SMG" prob="0.5" />
-		<entity name="npcSoldier3AK47" prob="0.5" />
-		<entity name="npcSoldier3TRifle" prob="0.5" />
-		<entity name="npcSoldier4SMG" prob="0.5" />
-		<entity name="npcSoldier4AK47" prob="0.5" />
-		<entity name="npcSoldier4TRifle" prob="0.5" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryRangedGroupGS200']">
-		<entity name="npcOfficerDPistol" prob="0.5" />
-		<entity name="npcOfficerSMG" prob="0.5" />
-		<entity name="npcOfficerAK47" prob="0.5" />
-		<entity name="npcOfficerTRifle" prob="0.5" />
-		<entity name="npcSoldier1SMG" prob="0.5" />
-		<entity name="npcSoldier1AK47" prob="0.5" />
-		<entity name="npcSoldier1TRifle" prob="0.5" />
-		<entity name="npcSoldier1RocketL" prob="0.6" />
-		<entity name="npcSoldier1M60" prob="0.5" />
-		<entity name="npcSoldier2SMG" prob="0.5" />
-		<entity name="npcSoldier2AK47" prob="0.5" />
-		<entity name="npcSoldier2TRifle" prob="0.5" />
-		<entity name="npcSoldier3SMG" prob="0.5" />
-		<entity name="npcSoldier3AK47" prob="0.5" />
-		<entity name="npcSoldier3TRifle" prob="0.5" />
-		<entity name="npcSoldier4SMG" prob="0.5" />
-		<entity name="npcSoldier4AK47" prob="0.5" />
-		<entity name="npcSoldier4TRifle" prob="0.5" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryRangedGroupGS400']">
-		<entity name="npcOfficerDPistol" prob="0.5" />
-		<entity name="npcOfficerSMG" prob="0.5" />
-		<entity name="npcOfficerAK47" prob="0.4" />
-		<entity name="npcOfficerTRifle" prob="0.4" />
-		<entity name="npcSoldier1SMG" prob="0.5" />
-		<entity name="npcSoldier1AK47" prob="0.4" />
-		<entity name="npcSoldier1TRifle" prob="0.4" />
-		<entity name="npcSoldier1RocketL" prob="0.8" />
-		<entity name="npcSoldier1M60" prob="0.5" />
-		<entity name="npcSoldier2SMG" prob="0.5" />
-		<entity name="npcSoldier2AK47" prob="0.4" />
-		<entity name="npcSoldier2TRifle" prob="0.4" />
-		<entity name="npcSoldier3SMG" prob="0.5" />
-		<entity name="npcSoldier3AK47" prob="0.4" />
-		<entity name="npcSoldier3TRifle" prob="0.4" />
-		<entity name="npcSoldier4SMG" prob="0.5" />
-		<entity name="npcSoldier4AK47" prob="0.4" />
-		<entity name="npcSoldier4TRifle" prob="0.4" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryRangedGroupGS800']">
-		<entity name="npcOfficerDPistol" prob="0.4" />
-		<entity name="npcOfficerSMG" prob="0.4" />
-		<entity name="npcOfficerAK47" prob="0.4" />
-		<entity name="npcOfficerTRifle" prob="0.4" />
-		<entity name="npcSoldier1SMG" prob="0.4" />
-		<entity name="npcSoldier1AK47" prob="0.4" />
-		<entity name="npcSoldier1TRifle" prob="0.4" />
-		<entity name="npcSoldier1RocketL" prob="1" />
-		<entity name="npcSoldier1M60" prob="0.5" />
-		<entity name="npcSoldier2SMG" prob="0.4" />
-		<entity name="npcSoldier2AK47" prob="0.4" />
-		<entity name="npcSoldier2TRifle" prob="0.4" />
-		<entity name="npcSoldier3SMG" prob="0.4" />
-		<entity name="npcSoldier3AK47" prob="0.4" />
-		<entity name="npcSoldier3TRifle" prob="0.4" />
-		<entity name="npcSoldier4SMG" prob="0.4" />
-		<entity name="npcSoldier4AK47" prob="0.4" />
-		<entity name="npcSoldier4TRifle" prob="0.4" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryBossGroupGS01']">
-		<entity name="npcOfficerDPistol" prob="0.8" />
-		<entity name="npcOfficerSMG" prob="0.8" />
-		<entity name="npcOfficerAK47" prob="0.9" />
-		<entity name="npcOfficerTRifle" prob="0.9" />
-		<entity name="npcSoldier1SMG" prob="0.8" />
-		<entity name="npcSoldier1AK47" prob="0.9" />
-		<entity name="npcSoldier1TRifle" prob="0.9" />
-		<entity name="npcSoldier1M60" prob="0.7" />
-		<entity name="npcSoldier2SMG" prob="0.8" />
-		<entity name="npcSoldier2AK47" prob="0.9" />
-		<entity name="npcSoldier2TRifle" prob="0.9" />
-		<entity name="npcSoldier3SMG" prob="0.8" />
-		<entity name="npcSoldier3AK47" prob="0.9" />
-		<entity name="npcSoldier3TRifle" prob="0.9" />
-		<entity name="npcSoldier4SMG" prob="0.8" />
-		<entity name="npcSoldier4AK47" prob="0.9" />
-		<entity name="npcSoldier4TRifle" prob="0.9" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryBossGroupGS50']">
-		<entity name="npcOfficerDPistol" prob="0.7" />
-		<entity name="npcOfficerSMG" prob="0.7" />
-		<entity name="npcOfficerAK47" prob="0.7" />
-		<entity name="npcOfficerTRifle" prob="0.7" />
-		<entity name="npcSoldier1SMG" prob="0.7" />
-		<entity name="npcSoldier1AK47" prob="0.7" />
-		<entity name="npcSoldier1TRifle" prob="0.7" />
-		<entity name="npcSoldier1RocketL" prob="0.2" />
-		<entity name="npcSoldier1M60" prob="0.6" />
-		<entity name="npcSoldier2SMG" prob="0.7" />
-		<entity name="npcSoldier2AK47" prob="0.7" />
-		<entity name="npcSoldier2TRifle" prob="0.7" />
-		<entity name="npcSoldier3SMG" prob="0.7" />
-		<entity name="npcSoldier3AK47" prob="0.7" />
-		<entity name="npcSoldier3TRifle" prob="0.7" />
-		<entity name="npcSoldier4SMG" prob="0.7" />
-		<entity name="npcSoldier4AK47" prob="0.7" />
-		<entity name="npcSoldier4TRifle" prob="0.7" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryBossGroupGS100']">
-		<entity name="npcOfficerDPistol" prob="0.6" />
-		<entity name="npcOfficerSMG" prob="0.6" />
-		<entity name="npcOfficerAK47" prob="0.6" />
-		<entity name="npcOfficerTRifle" prob="0.6" />
-		<entity name="npcSoldier1SMG" prob="0.6" />
-		<entity name="npcSoldier1AK47" prob="0.6" />
-		<entity name="npcSoldier1TRifle" prob="0.6" />
-		<entity name="npcSoldier1RocketL" prob="0.4" />
-		<entity name="npcSoldier1M60" prob="0.5" />
-		<entity name="npcSoldier2SMG" prob="0.6" />
-		<entity name="npcSoldier2AK47" prob="0.6" />
-		<entity name="npcSoldier2TRifle" prob="0.6" />
-		<entity name="npcSoldier3SMG" prob="0.6" />
-		<entity name="npcSoldier3AK47" prob="0.6" />
-		<entity name="npcSoldier3TRifle" prob="0.6" />
-		<entity name="npcSoldier4SMG" prob="0.6" />
-		<entity name="npcSoldier4AK47" prob="0.6" />
-		<entity name="npcSoldier4TRifle" prob="0.6" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryBossGroupGS200']">
-		<entity name="npcOfficerDPistol" prob="0.4" />
-		<entity name="npcOfficerSMG" prob="0.4" />
-		<entity name="npcOfficerAK47" prob="0.4" />
-		<entity name="npcOfficerTRifle" prob="0.4" />
-		<entity name="npcSoldier1SMG" prob="0.4" />
-		<entity name="npcSoldier1AK47" prob="0.4" />
-		<entity name="npcSoldier1TRifle" prob="0.4" />
-		<entity name="npcSoldier1RocketL" prob="0.6" />
-		<entity name="npcSoldier1M60" prob="0.5" />
-		<entity name="npcSoldier2SMG" prob="0.4" />
-		<entity name="npcSoldier2AK47" prob="0.4" />
-		<entity name="npcSoldier2TRifle" prob="0.4" />
-		<entity name="npcSoldier3SMG" prob="0.4" />
-		<entity name="npcSoldier3AK47" prob="0.4" />
-		<entity name="npcSoldier3TRifle" prob="0.4" />
-		<entity name="npcSoldier4SMG" prob="0.4" />
-		<entity name="npcSoldier4AK47" prob="0.4" />
-		<entity name="npcSoldier4TRifle" prob="0.4" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryBossGroupGS400']">
-		<entity name="npcOfficerDPistol" prob="0.3" />
-		<entity name="npcOfficerSMG" prob="0.3" />
-		<entity name="npcOfficerAK47" prob="0.3" />
-		<entity name="npcOfficerTRifle" prob="0.3" />
-		<entity name="npcSoldier1SMG" prob="0.3" />
-		<entity name="npcSoldier1AK47" prob="0.3" />
-		<entity name="npcSoldier1TRifle" prob="0.3" />
-		<entity name="npcSoldier1RocketL" prob="0.8" />
-		<entity name="npcSoldier1M60" prob="0.4" />
-		<entity name="npcSoldier2SMG" prob="0.3" />
-		<entity name="npcSoldier2AK47" prob="0.3" />
-		<entity name="npcSoldier2TRifle" prob="0.3" />
-		<entity name="npcSoldier3SMG" prob="0.3" />
-		<entity name="npcSoldier3AK47" prob="0.3" />
-		<entity name="npcSoldier3TRifle" prob="0.3" />
-		<entity name="npcSoldier4SMG" prob="0.3" />
-		<entity name="npcSoldier4AK47" prob="0.3" />
-		<entity name="npcSoldier4TRifle" prob="0.3" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcMilitaryBossGroupGS800']">
-		<entity name="npcOfficerDPistol" prob="0.2" />
-		<entity name="npcOfficerSMG" prob="0.2" />
-		<entity name="npcOfficerAK47" prob="0.1" />
-		<entity name="npcOfficerTRifle" prob="0.1" />
-		<entity name="npcSoldier1SMG" prob="0.2" />
-		<entity name="npcSoldier1AK47" prob="0.1" />
-		<entity name="npcSoldier1TRifle" prob="0.1" />
-		<entity name="npcSoldier1RocketL" prob="1" />
-		<entity name="npcSoldier1M60" prob="0.3" />
-		<entity name="npcSoldier2SMG" prob="0.2" />
-		<entity name="npcSoldier2AK47" prob="0.1" />
-		<entity name="npcSoldier2TRifle" prob="0.1" />
-		<entity name="npcSoldier3SMG" prob="0.2" />
-		<entity name="npcSoldier3AK47" prob="0.1" />
-		<entity name="npcSoldier3TRifle" prob="0.1" />
-		<entity name="npcSoldier4SMG" prob="0.2" />
-		<entity name="npcSoldier4AK47" prob="0.1" />
-		<entity name="npcSoldier4TRifle" prob="0.1" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 
 	<!-- Friendly NPC entity groups -->
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS01']">
-		<entity name="npcOfficerDPistol" prob="0.5" />
-		<entity name="npcOfficerMachete" prob="1" />
-		<entity name="npcOfficerSMG" prob="0.5" />
-		<entity name="npcOfficerAK47" prob="0.5" />
-		<entity name="npcOfficerTRifle" prob="0.5" />
-		<entity name="npcSoldier1Club" prob="1" />
-		<entity name="npcSoldier1SMG" prob="0.5" />
-		<entity name="npcSoldier1AK47" prob="0.5" />
-		<entity name="npcSoldier1TRifle" prob="0.5" />
-		<entity name="npcSoldier1M60" prob="0.4" />
-		<entity name="npcSoldier2Knife" prob="1" />
-		<entity name="npcSoldier2SMG" prob="0.5" />
-		<entity name="npcSoldier2AK47" prob="0.5" />
-		<entity name="npcSoldier2TRifle" prob="0.5" />
-		<entity name="npcSoldier3Bat" prob="1" />
-		<entity name="npcSoldier3SMG" prob="0.5" />
-		<entity name="npcSoldier3AK47" prob="0.5" />
-		<entity name="npcSoldier3TRifle" prob="0.5" />
-		<entity name="npcSoldier4Machete" prob="1" />
-		<entity name="npcSoldier4SMG" prob="0.5" />
-		<entity name="npcSoldier4AK47" prob="0.5" />
-		<entity name="npcSoldier4TRifle" prob="0.5" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4Machete"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS50']">
-		<entity name="npcOfficerDPistol" prob="0.5" />
-		<entity name="npcOfficerMachete" prob="0.8" />
-		<entity name="npcOfficerSMG" prob="0.5" />
-		<entity name="npcOfficerAK47" prob="0.5" />
-		<entity name="npcOfficerTRifle" prob="0.5" />
-		<entity name="npcSoldier1Club" prob="0.8" />
-		<entity name="npcSoldier1SMG" prob="0.5" />
-		<entity name="npcSoldier1AK47" prob="0.5" />
-		<entity name="npcSoldier1TRifle" prob="0.5" />
-		<entity name="npcSoldier1RocketL" prob="0.2" />
-		<entity name="npcSoldier1M60" prob="0.4" />
-		<entity name="npcSoldier2Knife" prob="0.8" />
-		<entity name="npcSoldier2SMG" prob="0.5" />
-		<entity name="npcSoldier2AK47" prob="0.5" />
-		<entity name="npcSoldier2TRifle" prob="0.5" />
-		<entity name="npcSoldier3Bat" prob="0.8" />
-		<entity name="npcSoldier3SMG" prob="0.5" />
-		<entity name="npcSoldier3AK47" prob="0.5" />
-		<entity name="npcSoldier3TRifle" prob="0.5" />
-		<entity name="npcSoldier4Machete" prob="0.8" />
-		<entity name="npcSoldier4SMG" prob="0.5" />
-		<entity name="npcSoldier4AK47" prob="0.5" />
-		<entity name="npcSoldier4TRifle" prob="0.5" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4Machete"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS100']">
-		<entity name="npcOfficerDPistol" prob="0.5" />
-		<entity name="npcOfficerMachete" prob="0.6" />
-		<entity name="npcOfficerSMG" prob="0.5" />
-		<entity name="npcOfficerAK47" prob="0.5" />
-		<entity name="npcOfficerTRifle" prob="0.5" />
-		<entity name="npcSoldier1Club" prob="0.6" />
-		<entity name="npcSoldier1SMG" prob="0.5" />
-		<entity name="npcSoldier1AK47" prob="0.5" />
-		<entity name="npcSoldier1TRifle" prob="0.5" />
-		<entity name="npcSoldier1RocketL" prob="0.4" />
-		<entity name="npcSoldier1M60" prob="0.5" />
-		<entity name="npcSoldier2Knife" prob="0.6" />
-		<entity name="npcSoldier2SMG" prob="0.5" />
-		<entity name="npcSoldier2AK47" prob="0.5" />
-		<entity name="npcSoldier2TRifle" prob="0.5" />
-		<entity name="npcSoldier3Bat" prob="0.6" />
-		<entity name="npcSoldier3SMG" prob="0.5" />
-		<entity name="npcSoldier3AK47" prob="0.5" />
-		<entity name="npcSoldier3TRifle" prob="0.5" />
-		<entity name="npcSoldier4Machete" prob="0.6" />
-		<entity name="npcSoldier4SMG" prob="0.5" />
-		<entity name="npcSoldier4AK47" prob="0.5" />
-		<entity name="npcSoldier4TRifle" prob="0.5" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4Machete"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS200']">
-		<entity name="npcOfficerDPistol" prob="0.5" />
-		<entity name="npcOfficerMachete" prob="0.4" />
-		<entity name="npcOfficerSMG" prob="0.5" />
-		<entity name="npcOfficerAK47" prob="0.5" />
-		<entity name="npcOfficerTRifle" prob="0.5" />
-		<entity name="npcSoldier1Club" prob="0.4" />
-		<entity name="npcSoldier1SMG" prob="0.5" />
-		<entity name="npcSoldier1AK47" prob="0.5" />
-		<entity name="npcSoldier1TRifle" prob="0.5" />
-		<entity name="npcSoldier1RocketL" prob="0.6" />
-		<entity name="npcSoldier1M60" prob="0.5" />
-		<entity name="npcSoldier2Knife" prob="0.4" />
-		<entity name="npcSoldier2SMG" prob="0.5" />
-		<entity name="npcSoldier2AK47" prob="0.5" />
-		<entity name="npcSoldier2TRifle" prob="0.5" />
-		<entity name="npcSoldier3Bat" prob="0.4" />
-		<entity name="npcSoldier3SMG" prob="0.5" />
-		<entity name="npcSoldier3AK47" prob="0.5" />
-		<entity name="npcSoldier3TRifle" prob="0.5" />
-		<entity name="npcSoldier4Machete" prob="0.4" />
-		<entity name="npcSoldier4SMG" prob="0.5" />
-		<entity name="npcSoldier4AK47" prob="0.5" />
-		<entity name="npcSoldier4TRifle" prob="0.5" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4Machete"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS400']">
-		<entity name="npcOfficerDPistol" prob="0.5" />
-		<entity name="npcOfficerMachete" prob="0.2" />
-		<entity name="npcOfficerSMG" prob="0.5" />
-		<entity name="npcOfficerAK47" prob="0.5" />
-		<entity name="npcOfficerTRifle" prob="0.5" />
-		<entity name="npcSoldier1Club" prob="0.2" />
-		<entity name="npcSoldier1SMG" prob="0.5" />
-		<entity name="npcSoldier1AK47" prob="0.5" />
-		<entity name="npcSoldier1TRifle" prob="0.5" />
-		<entity name="npcSoldier1RocketL" prob="0.8" />
-		<entity name="npcSoldier1M60" prob="0.6" />
-		<entity name="npcSoldier2Knife" prob="0.2" />
-		<entity name="npcSoldier2SMG" prob="0.5" />
-		<entity name="npcSoldier2AK47" prob="0.5" />
-		<entity name="npcSoldier2TRifle" prob="0.5" />
-		<entity name="npcSoldier3Bat" prob="0.2" />
-		<entity name="npcSoldier3SMG" prob="0.5" />
-		<entity name="npcSoldier3AK47" prob="0.5" />
-		<entity name="npcSoldier3TRifle" prob="0.5" />
-		<entity name="npcSoldier4Machete" prob="0.2" />
-		<entity name="npcSoldier4SMG" prob="0.5" />
-		<entity name="npcSoldier4AK47" prob="0.5" />
-		<entity name="npcSoldier4TRifle" prob="0.5" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4Machete"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS800']">
-		<entity name="npcOfficerDPistol" prob="0.5" />
-		<entity name="npcOfficerSMG" prob="0.5" />
-		<entity name="npcOfficerAK47" prob="0.5" />
-		<entity name="npcOfficerTRifle" prob="0.5" />
-		<entity name="npcSoldier1SMG" prob="0.5" />
-		<entity name="npcSoldier1AK47" prob="0.5" />
-		<entity name="npcSoldier1TRifle" prob="0.5" />
-		<entity name="npcSoldier1RocketL" prob="1" />
-		<entity name="npcSoldier1M60" prob="0.6" />
-		<entity name="npcSoldier2SMG" prob="0.5" />
-		<entity name="npcSoldier2AK47" prob="0.5" />
-		<entity name="npcSoldier2TRifle" prob="0.5" />
-		<entity name="npcSoldier3SMG" prob="0.5" />
-		<entity name="npcSoldier3AK47" prob="0.5" />
-		<entity name="npcSoldier3TRifle" prob="0.5" />
-		<entity name="npcSoldier4SMG" prob="0.5" />
-		<entity name="npcSoldier4AK47" prob="0.5" />
-		<entity name="npcSoldier4TRifle" prob="0.5" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4Machete"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS01']">
-		<entity name="npcSoldier1Club" prob="0.8" />
-		<entity name="npcSoldier2Knife" prob="0.4" />
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier4Machete"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS50']">
-		<entity name="npcOfficerMachete" prob="0.2" />
-		<entity name="npcSoldier1Club" prob="0.7" />
-		<entity name="npcSoldier2Knife" prob="0.4" />
-		<entity name="npcSoldier3Bat" prob="0.2" />
-		<entity name="npcSoldier4Machete" prob="0.2" />
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier4Machete"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS100']">
-		<entity name="npcOfficerMachete" prob="0.4" />
-		<entity name="npcSoldier1Club" prob="0.6" />
-		<entity name="npcSoldier2Knife" prob="0.5" />
-		<entity name="npcSoldier3Bat" prob="0.4" />
-		<entity name="npcSoldier4Machete" prob="0.4" />
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier4Machete"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS200']">
-		<entity name="npcOfficerMachete" prob="0.6" />
-		<entity name="npcSoldier1Club" prob="0.4" />
-		<entity name="npcSoldier2Knife" prob="0.5" />
-		<entity name="npcSoldier3Bat" prob="0.6" />
-		<entity name="npcSoldier4Machete" prob="0.6" />
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier4Machete"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS400']">
-		<entity name="npcOfficerMachete" prob="0.8" />
-		<entity name="npcSoldier1Club" prob="0.3" />
-		<entity name="npcSoldier2Knife" prob="0.6" />
-		<entity name="npcSoldier3Bat" prob="0.8" />
-		<entity name="npcSoldier4Machete" prob="0.8" />
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier4Machete"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS800']">
-		<entity name="npcOfficerMachete" prob="1" />
-		<entity name="npcSoldier1Club" prob="0.2" />
-		<entity name="npcSoldier2Knife" prob="0.6" />
-		<entity name="npcSoldier3Bat" prob="1" />
-		<entity name="npcSoldier4Machete" prob="1" />
+		<entity name="npcOfficerMachete"/>
+		<entity name="npcSoldier1Club"/>
+		<entity name="npcSoldier2Knife"/>
+		<entity name="npcSoldier3Bat"/>
+		<entity name="npcSoldier4Machete"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS01']">
-		<entity name="npcOfficerDPistol" prob="0.6" />
-		<entity name="npcOfficerSMG" prob="0.6" />
-		<entity name="npcOfficerAK47" prob="0.6" />
-		<entity name="npcOfficerTRifle" prob="0.6" />
-		<entity name="npcSoldier1SMG" prob="0.6" />
-		<entity name="npcSoldier1AK47" prob="0.6" />
-		<entity name="npcSoldier1TRifle" prob="0.6" />
-		<entity name="npcSoldier1M60" prob="0.5" />
-		<entity name="npcSoldier2SMG" prob="0.6" />
-		<entity name="npcSoldier2AK47" prob="0.6" />
-		<entity name="npcSoldier2TRifle" prob="0.6" />
-		<entity name="npcSoldier3SMG" prob="0.6" />
-		<entity name="npcSoldier3AK47" prob="0.6" />
-		<entity name="npcSoldier3TRifle" prob="0.6" />
-		<entity name="npcSoldier4SMG" prob="0.6" />
-		<entity name="npcSoldier4AK47" prob="0.6" />
-		<entity name="npcSoldier4TRifle" prob="0.6" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS50']">
-		<entity name="npcOfficerDPistol" prob="0.5" />
-		<entity name="npcOfficerSMG" prob="0.5" />
-		<entity name="npcOfficerAK47" prob="0.6" />
-		<entity name="npcOfficerTRifle" prob="0.6" />
-		<entity name="npcSoldier1SMG" prob="0.5" />
-		<entity name="npcSoldier1AK47" prob="0.6" />
-		<entity name="npcSoldier1TRifle" prob="0.6" />
-		<entity name="npcSoldier1RocketL" prob="0.2" />
-		<entity name="npcSoldier1M60" prob="0.5" />
-		<entity name="npcSoldier2SMG" prob="0.5" />
-		<entity name="npcSoldier2AK47" prob="0.6" />
-		<entity name="npcSoldier2TRifle" prob="0.6" />
-		<entity name="npcSoldier3SMG" prob="0.5" />
-		<entity name="npcSoldier3AK47" prob="0.6" />
-		<entity name="npcSoldier3TRifle" prob="0.6" />
-		<entity name="npcSoldier4SMG" prob="0.5" />
-		<entity name="npcSoldier4AK47" prob="0.6" />
-		<entity name="npcSoldier4TRifle" prob="0.6" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS100']">
-		<entity name="npcOfficerDPistol" prob="0.5" />
-		<entity name="npcOfficerSMG" prob="0.5" />
-		<entity name="npcOfficerAK47" prob="0.5" />
-		<entity name="npcOfficerTRifle" prob="0.5" />
-		<entity name="npcSoldier1SMG" prob="0.5" />
-		<entity name="npcSoldier1AK47" prob="0.5" />
-		<entity name="npcSoldier1TRifle" prob="0.5" />
-		<entity name="npcSoldier1RocketL" prob="0.4" />
-		<entity name="npcSoldier1M60" prob="0.5" />
-		<entity name="npcSoldier2SMG" prob="0.5" />
-		<entity name="npcSoldier2AK47" prob="0.5" />
-		<entity name="npcSoldier2TRifle" prob="0.5" />
-		<entity name="npcSoldier3SMG" prob="0.5" />
-		<entity name="npcSoldier3AK47" prob="0.5" />
-		<entity name="npcSoldier3TRifle" prob="0.5" />
-		<entity name="npcSoldier4SMG" prob="0.5" />
-		<entity name="npcSoldier4AK47" prob="0.5" />
-		<entity name="npcSoldier4TRifle" prob="0.5" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS200']">
-		<entity name="npcOfficerDPistol" prob="0.5" />
-		<entity name="npcOfficerSMG" prob="0.5" />
-		<entity name="npcOfficerAK47" prob="0.5" />
-		<entity name="npcOfficerTRifle" prob="0.5" />
-		<entity name="npcSoldier1SMG" prob="0.5" />
-		<entity name="npcSoldier1AK47" prob="0.5" />
-		<entity name="npcSoldier1TRifle" prob="0.5" />
-		<entity name="npcSoldier1RocketL" prob="0.6" />
-		<entity name="npcSoldier1M60" prob="0.5" />
-		<entity name="npcSoldier2SMG" prob="0.5" />
-		<entity name="npcSoldier2AK47" prob="0.5" />
-		<entity name="npcSoldier2TRifle" prob="0.5" />
-		<entity name="npcSoldier3SMG" prob="0.5" />
-		<entity name="npcSoldier3AK47" prob="0.5" />
-		<entity name="npcSoldier3TRifle" prob="0.5" />
-		<entity name="npcSoldier4SMG" prob="0.5" />
-		<entity name="npcSoldier4AK47" prob="0.5" />
-		<entity name="npcSoldier4TRifle" prob="0.5" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS400']">
-		<entity name="npcOfficerDPistol" prob="0.5" />
-		<entity name="npcOfficerSMG" prob="0.5" />
-		<entity name="npcOfficerAK47" prob="0.4" />
-		<entity name="npcOfficerTRifle" prob="0.4" />
-		<entity name="npcSoldier1SMG" prob="0.5" />
-		<entity name="npcSoldier1AK47" prob="0.4" />
-		<entity name="npcSoldier1TRifle" prob="0.4" />
-		<entity name="npcSoldier1RocketL" prob="0.8" />
-		<entity name="npcSoldier1M60" prob="0.5" />
-		<entity name="npcSoldier2SMG" prob="0.5" />
-		<entity name="npcSoldier2AK47" prob="0.4" />
-		<entity name="npcSoldier2TRifle" prob="0.4" />
-		<entity name="npcSoldier3SMG" prob="0.5" />
-		<entity name="npcSoldier3AK47" prob="0.4" />
-		<entity name="npcSoldier3TRifle" prob="0.4" />
-		<entity name="npcSoldier4SMG" prob="0.5" />
-		<entity name="npcSoldier4AK47" prob="0.4" />
-		<entity name="npcSoldier4TRifle" prob="0.4" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS800']">
-		<entity name="npcOfficerDPistol" prob="0.4" />
-		<entity name="npcOfficerSMG" prob="0.4" />
-		<entity name="npcOfficerAK47" prob="0.4" />
-		<entity name="npcOfficerTRifle" prob="0.4" />
-		<entity name="npcSoldier1SMG" prob="0.4" />
-		<entity name="npcSoldier1AK47" prob="0.4" />
-		<entity name="npcSoldier1TRifle" prob="0.4" />
-		<entity name="npcSoldier1RocketL" prob="1" />
-		<entity name="npcSoldier1M60" prob="0.5" />
-		<entity name="npcSoldier2SMG" prob="0.4" />
-		<entity name="npcSoldier2AK47" prob="0.4" />
-		<entity name="npcSoldier2TRifle" prob="0.4" />
-		<entity name="npcSoldier3SMG" prob="0.4" />
-		<entity name="npcSoldier3AK47" prob="0.4" />
-		<entity name="npcSoldier3TRifle" prob="0.4" />
-		<entity name="npcSoldier4SMG" prob="0.4" />
-		<entity name="npcSoldier4AK47" prob="0.4" />
-		<entity name="npcSoldier4TRifle" prob="0.4" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS01']">
-		<entity name="npcOfficerDPistol" prob="0.8" />
-		<entity name="npcOfficerSMG" prob="0.8" />
-		<entity name="npcOfficerAK47" prob="0.9" />
-		<entity name="npcOfficerTRifle" prob="0.9" />
-		<entity name="npcSoldier1SMG" prob="0.8" />
-		<entity name="npcSoldier1AK47" prob="0.9" />
-		<entity name="npcSoldier1TRifle" prob="0.9" />
-		<entity name="npcSoldier1M60" prob="0.7" />
-		<entity name="npcSoldier2SMG" prob="0.8" />
-		<entity name="npcSoldier2AK47" prob="0.9" />
-		<entity name="npcSoldier2TRifle" prob="0.9" />
-		<entity name="npcSoldier3SMG" prob="0.8" />
-		<entity name="npcSoldier3AK47" prob="0.9" />
-		<entity name="npcSoldier3TRifle" prob="0.9" />
-		<entity name="npcSoldier4SMG" prob="0.8" />
-		<entity name="npcSoldier4AK47" prob="0.9" />
-		<entity name="npcSoldier4TRifle" prob="0.9" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS50']">
-		<entity name="npcOfficerDPistol" prob="0.7" />
-		<entity name="npcOfficerSMG" prob="0.7" />
-		<entity name="npcOfficerAK47" prob="0.7" />
-		<entity name="npcOfficerTRifle" prob="0.7" />
-		<entity name="npcSoldier1SMG" prob="0.7" />
-		<entity name="npcSoldier1AK47" prob="0.7" />
-		<entity name="npcSoldier1TRifle" prob="0.7" />
-		<entity name="npcSoldier1RocketL" prob="0.2" />
-		<entity name="npcSoldier1M60" prob="0.6" />
-		<entity name="npcSoldier2SMG" prob="0.7" />
-		<entity name="npcSoldier2AK47" prob="0.7" />
-		<entity name="npcSoldier2TRifle" prob="0.7" />
-		<entity name="npcSoldier3SMG" prob="0.7" />
-		<entity name="npcSoldier3AK47" prob="0.7" />
-		<entity name="npcSoldier3TRifle" prob="0.7" />
-		<entity name="npcSoldier4SMG" prob="0.7" />
-		<entity name="npcSoldier4AK47" prob="0.7" />
-		<entity name="npcSoldier4TRifle" prob="0.7" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS100']">
-		<entity name="npcOfficerDPistol" prob="0.6" />
-		<entity name="npcOfficerSMG" prob="0.6" />
-		<entity name="npcOfficerAK47" prob="0.6" />
-		<entity name="npcOfficerTRifle" prob="0.6" />
-		<entity name="npcSoldier1SMG" prob="0.6" />
-		<entity name="npcSoldier1AK47" prob="0.6" />
-		<entity name="npcSoldier1TRifle" prob="0.6" />
-		<entity name="npcSoldier1RocketL" prob="0.4" />
-		<entity name="npcSoldier1M60" prob="0.5" />
-		<entity name="npcSoldier2SMG" prob="0.6" />
-		<entity name="npcSoldier2AK47" prob="0.6" />
-		<entity name="npcSoldier2TRifle" prob="0.6" />
-		<entity name="npcSoldier3SMG" prob="0.6" />
-		<entity name="npcSoldier3AK47" prob="0.6" />
-		<entity name="npcSoldier3TRifle" prob="0.6" />
-		<entity name="npcSoldier4SMG" prob="0.6" />
-		<entity name="npcSoldier4AK47" prob="0.6" />
-		<entity name="npcSoldier4TRifle" prob="0.6" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS200']">
-		<entity name="npcOfficerDPistol" prob="0.4" />
-		<entity name="npcOfficerSMG" prob="0.4" />
-		<entity name="npcOfficerAK47" prob="0.4" />
-		<entity name="npcOfficerTRifle" prob="0.4" />
-		<entity name="npcSoldier1SMG" prob="0.4" />
-		<entity name="npcSoldier1AK47" prob="0.4" />
-		<entity name="npcSoldier1TRifle" prob="0.4" />
-		<entity name="npcSoldier1RocketL" prob="0.6" />
-		<entity name="npcSoldier1M60" prob="0.5" />
-		<entity name="npcSoldier2SMG" prob="0.4" />
-		<entity name="npcSoldier2AK47" prob="0.4" />
-		<entity name="npcSoldier2TRifle" prob="0.4" />
-		<entity name="npcSoldier3SMG" prob="0.4" />
-		<entity name="npcSoldier3AK47" prob="0.4" />
-		<entity name="npcSoldier3TRifle" prob="0.4" />
-		<entity name="npcSoldier4SMG" prob="0.4" />
-		<entity name="npcSoldier4AK47" prob="0.4" />
-		<entity name="npcSoldier4TRifle" prob="0.4" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS400']">
-		<entity name="npcOfficerDPistol" prob="0.3" />
-		<entity name="npcOfficerSMG" prob="0.3" />
-		<entity name="npcOfficerAK47" prob="0.3" />
-		<entity name="npcOfficerTRifle" prob="0.3" />
-		<entity name="npcSoldier1SMG" prob="0.3" />
-		<entity name="npcSoldier1AK47" prob="0.3" />
-		<entity name="npcSoldier1TRifle" prob="0.3" />
-		<entity name="npcSoldier1RocketL" prob="0.8" />
-		<entity name="npcSoldier1M60" prob="0.4" />
-		<entity name="npcSoldier2SMG" prob="0.3" />
-		<entity name="npcSoldier2AK47" prob="0.3" />
-		<entity name="npcSoldier2TRifle" prob="0.3" />
-		<entity name="npcSoldier3SMG" prob="0.3" />
-		<entity name="npcSoldier3AK47" prob="0.3" />
-		<entity name="npcSoldier3TRifle" prob="0.3" />
-		<entity name="npcSoldier4SMG" prob="0.3" />
-		<entity name="npcSoldier4AK47" prob="0.3" />
-		<entity name="npcSoldier4TRifle" prob="0.3" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS800']">
-		<entity name="npcOfficerDPistol" prob="0.2" />
-		<entity name="npcOfficerSMG" prob="0.2" />
-		<entity name="npcOfficerAK47" prob="0.1" />
-		<entity name="npcOfficerTRifle" prob="0.1" />
-		<entity name="npcSoldier1SMG" prob="0.2" />
-		<entity name="npcSoldier1AK47" prob="0.1" />
-		<entity name="npcSoldier1TRifle" prob="0.1" />
-		<entity name="npcSoldier1RocketL" prob="1" />
-		<entity name="npcSoldier1M60" prob="0.3" />
-		<entity name="npcSoldier2SMG" prob="0.2" />
-		<entity name="npcSoldier2AK47" prob="0.1" />
-		<entity name="npcSoldier2TRifle" prob="0.1" />
-		<entity name="npcSoldier3SMG" prob="0.2" />
-		<entity name="npcSoldier3AK47" prob="0.1" />
-		<entity name="npcSoldier3TRifle" prob="0.1" />
-		<entity name="npcSoldier4SMG" prob="0.2" />
-		<entity name="npcSoldier4AK47" prob="0.1" />
-		<entity name="npcSoldier4TRifle" prob="0.1" />
+		<entity name="npcOfficerDPistol"/>
+		<entity name="npcOfficerSMG"/>
+		<entity name="npcOfficerAK47"/>
+		<entity name="npcOfficerTRifle"/>
+		<entity name="npcSoldier1SMG"/>
+		<entity name="npcSoldier1AK47"/>
+		<entity name="npcSoldier1TRifle"/>
+		<entity name="npcSoldier1RocketL"/>
+		<entity name="npcSoldier1M60"/>
+		<entity name="npcSoldier2SMG"/>
+		<entity name="npcSoldier2AK47"/>
+		<entity name="npcSoldier2TRifle"/>
+		<entity name="npcSoldier3SMG"/>
+		<entity name="npcSoldier3AK47"/>
+		<entity name="npcSoldier3TRifle"/>
+		<entity name="npcSoldier4SMG"/>
+		<entity name="npcSoldier4AK47"/>
+		<entity name="npcSoldier4TRifle"/>
 	</append>
 </configs>

@@ -1,265 +1,330 @@
 <configs>
 
-	<insertBefore xpath="/entitygroups/entitygroup[starts-with(@name, 'WildGame')]/entity[@name='none']">
-                <entity name="npcAirForceTRifle" prob=".1" />
-                <entity name="npcTattooGurlTRifle" prob=".1" />
-                <entity name="npcCosplayerBow" prob=".1" />
-                <entity name="npcWrestlerEmptyHand" prob=".1" />
-                <entity name="npcMrFriendlyM60" prob=".1" />
-          </insertBefore> 	
+<!-- Lowest Vanilla ZombiesAll is zombieJanitor prob=0.2 -->
+	 <append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
+        <entity name="npcAirForceTRifle" prob="0.1" />
+        <entity name="npcTattooGurlTRifle" prob="0.1" />
+        <entity name="npcCosplayerBow" prob="0.1" />
+        <entity name="npcWrestlerEmptyHand" prob="0.1" />
+        <entity name="npcMrFriendlyM60" prob="0.1" />     
+	</append>
+
+<!-- Lowest Vanilla ZombiesNight is animalZombieDog prob=0.05 -->	
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
+		<entity name="npcAirForceTRifle" prob="0.025" />
+        <entity name="npcTattooGurlTRifle" prob="0.025" />
+		<entity name="npcCosplayerBow" prob="0.025" />
+		<entity name="npcWrestlerEmptyHand" prob="0.025" />
+		<entity name="npcMrFriendlyM60" prob="0.025" /> 		
+	</append>
+	
+<!-- Lowest Vanilla SnowZombies is zombieLumberjack prob=1.0 -->	
+	<append xpath="/entitygroups/entitygroup[@name='SnowZombies']">
+        <entity name="npcAirForceTRifle" prob="0.1" />
+        <entity name="npcTattooGurlTRifle" prob="0.1" />
+        <entity name="npcCosplayerBow" prob="0.1" />
+        <entity name="npcWrestlerEmptyHand" prob="0.1" />
+        <entity name="npcMrFriendlyM60" prob="0.1" /> 
+	</append>	
+
+<!-- Lowest Vanilla ZombiesWasteland is mixed prob=1.0 -->
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']">
+        <entity name="npcAirForceTRifle" prob="0.1" />
+        <entity name="npcTattooGurlTRifle" prob="0.1" />
+        <entity name="npcCosplayerBow" prob="0.1" />
+        <entity name="npcWrestlerEmptyHand" prob="0.1" />
+        <entity name="npcMrFriendlyM60" prob="0.1" /> 		
+	</append>
+
+<!-- Lowest Vanilla ZombiesWastelandNight is mixed prob=1.0 -->
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']">
+        <entity name="npcAirForceTRifle" prob="0.1" />
+        <entity name="npcTattooGurlTRifle" prob="0.1" />
+        <entity name="npcCosplayerBow" prob="0.1" />
+        <entity name="npcWrestlerEmptyHand" prob="0.1" />
+        <entity name="npcMrFriendlyM60" prob="0.1" />    	
+	</append>	
 	
       <!--
 		Entity groups used by spawners for sleeper volumes
 	-->
       <!-- Whiteriver NPC entity groups -->
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverAllGroupGS01']">
-            <entity name="npcAirForceTRifle" prob="0.5" />
-            <entity name="npcTattooGurlTRifle" prob="0.5" />
-            <entity name="npcCosplayerBow" prob="0.8" />
-            <entity name="npcWrestlerEmptyHand" prob="1" />
-            <entity name="npcMrFriendlyM60" prob="0.4" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcWrestlerEmptyHand"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverAllGroupGS50']">
-            <entity name="npcAirForceTRifle" prob="0.5" />
-            <entity name="npcTattooGurlTRifle" prob="0.5" />
-            <entity name="npcCosplayerBow" prob="0.7" />
-            <entity name="npcWrestlerEmptyHand" prob="0.8" />
-            <entity name="npcMrFriendlyM60" prob="0.4" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcWrestlerEmptyHand"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverAllGroupGS100']">
-            <entity name="npcAirForceTRifle" prob="0.5" />
-            <entity name="npcTattooGurlTRifle" prob="0.5" />
-            <entity name="npcCosplayerBow" prob="0.6" />
-            <entity name="npcWrestlerEmptyHand" prob="0.6" />
-            <entity name="npcMrFriendlyM60" prob="0.5" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcWrestlerEmptyHand"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverAllGroupGS200']">
-            <entity name="npcAirForceTRifle" prob="0.5" />
-            <entity name="npcTattooGurlTRifle" prob="0.5" />
-            <entity name="npcCosplayerBow" prob="0.5" />
-            <entity name="npcWrestlerEmptyHand" prob="0.4" />
-            <entity name="npcMrFriendlyM60" prob="0.5" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcWrestlerEmptyHand"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverAllGroupGS400']">
-            <entity name="npcAirForceTRifle" prob="0.5" />
-            <entity name="npcTattooGurlTRifle" prob="0.5" />
-            <entity name="npcCosplayerBow" prob="0.3" />
-            <entity name="npcWrestlerEmptyHand" prob="0.2" />
-            <entity name="npcMrFriendlyM60" prob="0.6" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcWrestlerEmptyHand" />
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverAllGroupGS800']">
-            <entity name="npcAirForceTRifle" prob="0.5" />
-            <entity name="npcTattooGurlTRifle" prob="0.5" />
-            <entity name="npcCosplayerBow" prob="0.3" />
-            <entity name="npcMrFriendlyM60" prob="0.6" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcWrestlerEmptyHand" />			
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverMeleeGroupGS01']">
-            <entity name="npcWrestlerEmptyHand" prob="1" />
+            <entity name="npcWrestlerEmptyHand"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverMeleeGroupGS50']">
-            <entity name="npcWrestlerEmptyHand" prob="0.8" />
+            <entity name="npcWrestlerEmptyHand"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverMeleeGroupGS100']">
-            <entity name="npcWrestlerEmptyHand" prob="0.6" />
+            <entity name="npcWrestlerEmptyHand"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverMeleeGroupGS200']">
-            <entity name="npcWrestlerEmptyHand" prob="0.4" />
+            <entity name="npcWrestlerEmptyHand"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverMeleeGroupGS400']">
-            <entity name="npcWrestlerEmptyHand" prob="0.2" />
+            <entity name="npcWrestlerEmptyHand"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverMeleeGroupGS800']">
-            <entity name="npcWrestlerEmptyHand" prob="0.1" />
+            <entity name="npcWrestlerEmptyHand"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverRangedGroupGS01']">
-            <entity name="npcAirForceTRifle" prob="0.6" />
-            <entity name="npcTattooGurlTRifle" prob="0.6" />
-            <entity name="npcCosplayerBow" prob="0.9" />
-            <entity name="npcMrFriendlyM60" prob="0.5" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverRangedGroupGS50']">
-            <entity name="npcAirForceTRifle" prob="0.6" />
-            <entity name="npcTattooGurlTRifle" prob="0.6" />
-            <entity name="npcCosplayerBow" prob="0.8" />
-            <entity name="npcMrFriendlyM60" prob="0.5" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverRangedGroupGS100']">
-            <entity name="npcAirForceTRifle" prob="0.5" />
-            <entity name="npcTattooGurlTRifle" prob="0.5" />
-            <entity name="npcCosplayerBow" prob="0.6" />
-            <entity name="npcMrFriendlyM60" prob="0.5" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverRangedGroupGS200']">
-            <entity name="npcAirForceTRifle" prob="0.5" />
-            <entity name="npcTattooGurlTRifle" prob="0.5" />
-            <entity name="npcCosplayerBow" prob="0.4" />
-            <entity name="npcMrFriendlyM60" prob="0.5" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverRangedGroupGS400']">
-            <entity name="npcAirForceTRifle" prob="0.4" />
-            <entity name="npcTattooGurlTRifle" prob="0.4" />
-            <entity name="npcCosplayerBow" prob="0.2" />
-            <entity name="npcMrFriendlyM60" prob="0.5" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverRangedGroupGS800']">
-            <entity name="npcAirForceTRifle" prob="0.4" />
-            <entity name="npcTattooGurlTRifle" prob="0.4" />
-            <entity name="npcMrFriendlyM60" prob="0.5" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>			
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverBossGroupGS01']">
-            <entity name="npcAirForceTRifle" prob="0.9" />
-            <entity name="npcTattooGurlTRifle" prob="0.9" />
-            <entity name="npcMrFriendlyM60" prob="0.7" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>			
+            <entity name="npcWrestlerEmptyHand"/>			
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverBossGroupGS50']">
-            <entity name="npcAirForceTRifle" prob="0.7" />
-            <entity name="npcTattooGurlTRifle" prob="0.7" />
-            <entity name="npcMrFriendlyM60" prob="0.6" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>			
+            <entity name="npcWrestlerEmptyHand"/>			
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverBossGroupGS100']">
-            <entity name="npcAirForceTRifle" prob="0.6" />
-            <entity name="npcTattooGurlTRifle" prob="0.6" />
-            <entity name="npcMrFriendlyM60" prob="0.5" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>			
+            <entity name="npcWrestlerEmptyHand"/>			
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverBossGroupGS200']">
-            <entity name="npcAirForceTRifle" prob="0.4" />
-            <entity name="npcTattooGurlTRifle" prob="0.4" />
-            <entity name="npcMrFriendlyM60" prob="0.5" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>			
+            <entity name="npcWrestlerEmptyHand"/>			
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverBossGroupGS400']">
-            <entity name="npcAirForceTRifle" prob="0.3" />
-            <entity name="npcTattooGurlTRifle" prob="0.3" />
-            <entity name="npcMrFriendlyM60" prob="0.4" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>			
+            <entity name="npcWrestlerEmptyHand"/>			
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcWhiteriverBossGroupGS800']">
-            <entity name="npcAirForceTRifle" prob="0.1" />
-            <entity name="npcTattooGurlTRifle" prob="0.1" />
-            <entity name="npcMrFriendlyM60" prob="0.3" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>			
+            <entity name="npcWrestlerEmptyHand"/>			
+            <entity name="npcMrFriendlyM60"/>
       </append>
 
       <!-- Friendly NPC entity groups -->
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS01']">
-            <entity name="npcAirForceTRifle" prob="0.5" />
-            <entity name="npcTattooGurlTRifle" prob="0.5" />
-            <entity name="npcCosplayerBow" prob="0.8" />
-            <entity name="npcWrestlerEmptyHand" prob="1" />
-            <entity name="npcMrFriendlyM60" prob="0.4" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcWrestlerEmptyHand"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS50']">
-            <entity name="npcAirForceTRifle" prob="0.5" />
-            <entity name="npcTattooGurlTRifle" prob="0.5" />
-            <entity name="npcCosplayerBow" prob="0.7" />
-            <entity name="npcWrestlerEmptyHand" prob="0.8" />
-            <entity name="npcMrFriendlyM60" prob="0.4" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcWrestlerEmptyHand"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS100']">
-            <entity name="npcAirForceTRifle" prob="0.5" />
-            <entity name="npcTattooGurlTRifle" prob="0.5" />
-            <entity name="npcCosplayerBow" prob="0.6" />
-            <entity name="npcWrestlerEmptyHand" prob="0.6" />
-            <entity name="npcMrFriendlyM60" prob="0.5" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcWrestlerEmptyHand"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS200']">
-            <entity name="npcAirForceTRifle" prob="0.5" />
-            <entity name="npcTattooGurlTRifle" prob="0.5" />
-            <entity name="npcCosplayerBow" prob="0.5" />
-            <entity name="npcWrestlerEmptyHand" prob="0.4" />
-            <entity name="npcMrFriendlyM60" prob="0.5" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcWrestlerEmptyHand"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS400']">
-            <entity name="npcAirForceTRifle" prob="0.5" />
-            <entity name="npcTattooGurlTRifle" prob="0.5" />
-            <entity name="npcCosplayerBow" prob="0.3" />
-            <entity name="npcWrestlerEmptyHand" prob="0.2" />
-            <entity name="npcMrFriendlyM60" prob="0.6" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcWrestlerEmptyHand"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS800']">
-            <entity name="npcAirForceTRifle" prob="0.5" />
-            <entity name="npcTattooGurlTRifle" prob="0.5" />
-            <entity name="npcCosplayerBow" prob="0.3" />
-            <entity name="npcMrFriendlyM60" prob="0.6" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcWrestlerEmptyHand"/>			
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS01']">
-            <entity name="npcWrestlerEmptyHand" prob="1" />
+            <entity name="npcWrestlerEmptyHand"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS50']">
-            <entity name="npcWrestlerEmptyHand" prob="0.8" />
+            <entity name="npcWrestlerEmptyHand"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS100']">
-            <entity name="npcWrestlerEmptyHand" prob="0.6" />
+            <entity name="npcWrestlerEmptyHand"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS200']">
-            <entity name="npcWrestlerEmptyHand" prob="0.4" />
+            <entity name="npcWrestlerEmptyHand"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS400']">
-            <entity name="npcWrestlerEmptyHand" prob="0.2" />
+            <entity name="npcWrestlerEmptyHand"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS800']">
-            <entity name="npcWrestlerEmptyHand" prob="0.1" />
+            <entity name="npcWrestlerEmptyHand"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS01']">
-            <entity name="npcAirForceTRifle" prob="0.6" />
-            <entity name="npcTattooGurlTRifle" prob="0.6" />
-            <entity name="npcCosplayerBow" prob="0.9" />
-            <entity name="npcMrFriendlyM60" prob="0.5" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS50']">
-            <entity name="npcAirForceTRifle" prob="0.6" />
-            <entity name="npcTattooGurlTRifle" prob="0.6" />
-            <entity name="npcCosplayerBow" prob="0.8" />
-            <entity name="npcMrFriendlyM60" prob="0.5" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS100']">
-            <entity name="npcAirForceTRifle" prob="0.5" />
-            <entity name="npcTattooGurlTRifle" prob="0.5" />
-            <entity name="npcCosplayerBow" prob="0.6" />
-            <entity name="npcMrFriendlyM60" prob="0.5" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS200']">
-            <entity name="npcAirForceTRifle" prob="0.5" />
-            <entity name="npcTattooGurlTRifle" prob="0.5" />
-            <entity name="npcCosplayerBow" prob="0.4" />
-            <entity name="npcMrFriendlyM60" prob="0.5" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS400']">
-            <entity name="npcAirForceTRifle" prob="0.4" />
-            <entity name="npcTattooGurlTRifle" prob="0.4" />
-            <entity name="npcCosplayerBow" prob="0.2" />
-            <entity name="npcMrFriendlyM60" prob="0.5" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS800']">
-            <entity name="npcAirForceTRifle" prob="0.4" />
-            <entity name="npcTattooGurlTRifle" prob="0.4" />
-            <entity name="npcMrFriendlyM60" prob="0.5" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS01']">
-            <entity name="npcAirForceTRifle" prob="0.9" />
-            <entity name="npcTattooGurlTRifle" prob="0.9" />
-            <entity name="npcMrFriendlyM60" prob="0.7" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcWrestlerEmptyHand"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS50']">
-            <entity name="npcAirForceTRifle" prob="0.7" />
-            <entity name="npcTattooGurlTRifle" prob="0.7" />
-            <entity name="npcMrFriendlyM60" prob="0.6" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcWrestlerEmptyHand"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS100']">
-            <entity name="npcAirForceTRifle" prob="0.6" />
-            <entity name="npcTattooGurlTRifle" prob="0.6" />
-            <entity name="npcMrFriendlyM60" prob="0.5" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcWrestlerEmptyHand"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS200']">
-            <entity name="npcAirForceTRifle" prob="0.4" />
-            <entity name="npcTattooGurlTRifle" prob="0.4" />
-            <entity name="npcMrFriendlyM60" prob="0.5" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcWrestlerEmptyHand"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS400']">
-            <entity name="npcAirForceTRifle" prob="0.3" />
-            <entity name="npcTattooGurlTRifle" prob="0.3" />
-            <entity name="npcMrFriendlyM60" prob="0.4" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcWrestlerEmptyHand"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
       <append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS800']">
-            <entity name="npcAirForceTRifle" prob="0.1" />
-            <entity name="npcTattooGurlTRifle" prob="0.1" />
-            <entity name="npcMrFriendlyM60" prob="0.3" />
+            <entity name="npcAirForceTRifle"/>
+            <entity name="npcTattooGurlTRifle"/>
+            <entity name="npcCosplayerBow"/>
+            <entity name="npcWrestlerEmptyHand"/>
+            <entity name="npcMrFriendlyM60"/>
       </append>
 </configs>
