@@ -3858,8 +3858,9 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bob,Billy,Beau,Ben,Brody,Byron,Brian,Bruce" />	
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
-		</entity_class> 	
-		
+		</entity_class> 
+
+	
 		<!-- Loot drop containers  -->
 		
 		<entity_class name="EntityLootContainerNPC"> 
