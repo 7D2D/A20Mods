@@ -1763,7 +1763,7 @@
 			<property name="RotateToGround" value="false"/>
 			<property name="Parent" value="Animals"/>
 			<property name="AvatarController" value="AvatarAnimalController"/> 			
-			<property name="Faction" value="animals"/>
+			<property name="Faction" value="aggressiveanimalslarge"/>
 			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="CompassIcon" value="ui_game_symbol_enemy_dot" />
 			<property name="CompassUpIcon" value="ui_game_symbol_enemy_dot_up" />
@@ -1792,14 +1792,14 @@
 			<property name="HandItem" value="meleeHandAnimalCoyote"/>
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="Territorial"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityPlayer,0,EntitySurvivor,0,EntityBandit,0,EntityAnimalRabbit,8"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityNPC,0,EntityPlayer,0,EntitySurvivor,0,EntityBandit,0,EntityAnimalRabbit,8"/>
 			<property name="AITask-4" value="ApproachSpot"/>
 			<property name="AITask-5" value="Look"/>
 			<property name="AITask-6" value="Wander"/>
 			<property name="AITask-7" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/> 
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,20,15,EntitySurvivor,20,15,EntityBandit,20,15,EntityZombie,20,15,EntityAnimalRabbit,0,18"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,20,15,EntityNPC,20,15,EntitySurvivor,20,15,EntityBandit,20,15,EntityZombie,20,15,EntityAnimalRabbit,0,18"/>
 			<property name="AITarget-4" value=""/>
 			<property name="SurfaceCategory" value="organic"/>
 			<property name="ParticleOnDeath" value="blood_death"/>
@@ -1813,7 +1813,7 @@
 			<property name="DismemberTag_L_RightUpperArmGore" value="Prefabs/UpperArmGore"/>
 			<property name="DismemberTag_L_RightLowerArmGore" value="Prefabs/UpperArmGore"/>
 			<!-- Stealth settings -->
-			<property name="MaxViewAngle" value="180"/>
+			<property name="MaxViewAngle" value="360"/>
 			<property name="SightRange" value="50"/> <!-- distance in m -->
 			<property name="SightLightThreshold" value="-2,150"/>
 			<property name="SleeperWakeupSightDetectionMin" value="-40,5"/> <!-- Indiv.Random. sight capability - "I see you" light value at point blank -->
