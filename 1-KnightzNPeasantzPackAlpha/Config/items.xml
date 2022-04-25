@@ -1,0 +1,254 @@
+<configs>
+	<append xpath="/items">
+	
+		<item name="NPCKnightsNPeasantsAlphaLoadHack01">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Knightz.unity3d?TemplarSwordDark"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/Knightz.unity3d?TemplarSwordDark"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> <!-- STK resource -->
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>
+
+                <item name="KnightSword">
+			<property name="Extends" value="meleeHandNPCMaster"/>
+			<property name="Canhold" value="true"/> 
+			<property name="HoldType" value="47"/>
+			<property name="Tags" value="machete,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkTheHuntsman,canHaveCosmetic"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Knives/machetePrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="FuelValue" value="1"/>
+			<property name="EconomicValue" value="1"/>
+			<property class="Action0">			
+				<property name="Class" value="MeleeSDX, SCore"/>
+				<property name="Delay" value=".8" /> 
+				<property name="Range" value="1.65" />
+				<property name="Sphere" value="1.2"/>
+				<property name="Sound_start" value="swoosh"/>
+				<property name="Block_range" value="1.65"/>
+				<property name="DamageEntity" value="20"/>
+				<property name="DamageBlock" value="50"/>
+				<property class="HitSounds">
+					<property name="Override0" value="organic" param1="metalstaborganic"/>
+				</property>
+			</property>
+			<property class="Action1">			
+				<property name="Class" value="MeleeSDX, SCore"/>
+				<property name="Delay" value=".8" /> 
+				<property name="Range" value="1.65" />
+				<property name="Sphere" value="1.2"/>
+				<property name="Sound_start" value="swoosh"/>
+				<property name="Block_range" value="1.65"/>
+				<property name="DamageEntity" value="25"/>
+				<property name="DamageBlock" value="50"/>
+				<property class="HitSounds">
+					<property name="Override0" value="organic" param1="metalstaborganic"/>
+				</property>
+			</property>
+			<effect_group name="meleeWpnBladeT3Machete">
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="55" tags="perkDeepCuts,perkFlurryOfBlows"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="19.2" tags="primary"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="288,673" tier="1,6" tags="perkDeepCuts"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkDeepCuts"/>
+				<passive_effect name="MaxRange" operation="base_set" value="2.3" tags="perkDeepCuts"/>
+				<passive_effect name="BlockRange" operation="base_set" value="1.65" tags="perkDeepCuts"/>
+
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+
+				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkDeepCuts"/> <!-- random EntityDmg -->
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkDeepCuts"/> <!-- tier bonus -->
+				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkDeepCuts"/> <!-- random BlockDmg -->
+				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkDeepCuts"/> <!-- tier bonus -->
+
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="metal"/>
+				<passive_effect name="HarvestCount" operation="base_set" value="1" tags="butcherHarvest"/>
+				
+			</effect_group>
+			<effect_group name="Power Attack">
+				<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="32.7" tags="secondary"/>
+			</effect_group>
+			<effect_group name="sneak damage bonus">
+				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
+					<passive_effect name="DamageBonus" operation="base_add" value="4"/>
+					<passive_effect name="EntityDamage" operation="perc_add" value="4" tags="perkDeepCuts"/>
+					<display_value name="dEntityDamageSneak" value="4"/>
+			</effect_group>
+                        <property name="HoldingItemHidden" value="true"/>
+		</item>	
+	
+                <item name="2HKnightSword"> 
+			<property name="Extends" value="meleeHandNPCMaster"/>
+			<property name="Canhold" value="true"/> 
+			<property name="HoldType" value="2"/>
+			<property name="Tags" value="axe,melee,grunting,weapon,meleeWeapon,medium,longShaft,attStrength,perkDeepCuts,canHaveCosmetic"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="DisplayType" value="melee"/>
+			<property name="Group" value="Ammo/Weapons,Basics"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Axe/fireaxe_ironPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Candrop" value="false"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="EconomicValue" value="1"/>
+			<property name="CustomIcon" value="meleeToolAxeT1IronFireaxe"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="ShowQuality" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="MeleeSDX, SCore"/>
+				<property name="Delay" value=".8" /> 
+				<property name="Range" value="1.65" />
+				<property name="Sphere" value="1.2"/>
+				<property name="Sound_start" value="swoosh"/>
+				<property name="Block_range" value="1.65"/>
+				<property name="DamageEntity" value="20"/>
+				<property name="DamageBlock" value="50"/>
+				<property class="HitSounds">
+					<property name="Override0" value="organic" param1="metalstaborganic"/>
+				</property>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="MeleeSDX, SCore"/>
+				<property name="Delay" value=".8" /> 
+				<property name="Range" value="1.65" />
+				<property name="Sphere" value="1.2"/>
+				<property name="Sound_start" value="swoosh"/>
+				<property name="Block_range" value="1.65"/>
+				<property name="DamageEntity" value="25"/>
+				<property name="DamageBlock" value="50"/>
+				<property class="HitSounds">
+					<property name="Override0" value="organic" param1="metalstaborganic"/>
+				</property>
+			</property>	
+				<effect_group name="meleeToolAxeT1IronFireaxe">
+					<passive_effect name="AttacksPerMinute" operation="base_set" value="60" tags="perkDeepCuts,axe"/>
+					<passive_effect name="StaminaLoss" operation="base_set" value="19.9" tags="primary"/>
+					<passive_effect name="DegradationMax" operation="base_set" value="188,641" tier="1,6" tags="perkDeepCuts"/>
+					<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkDeepCuts"/>
+					<passive_effect name="MaxRange" operation="base_set" value="2.6" tags="perkDeepCuts"/>
+					<passive_effect name="BlockRange" operation="base_set" value="1.65" tags="perkDeepCuts"/>
+
+					<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+					<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+					<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+
+					<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkDeepCuts"/> <!-- random EntityDmg -->
+					<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkDeepCuts"/> <!-- tier bonus -->
+					<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkDeepCuts"/> <!-- random rng -->
+					<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkDeepCuts"/> <!-- tier bonus -->
+					<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15" tags="perkDeepCuts"/> <!-- random DegMax -->
+					<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.05,.05" tags="perkDeepCuts"/> <!-- random APM -->
+					<passive_effect name="StaminaLoss" operation="perc_add" value="-.05,.05"/> <!-- random StamLoss -->
+
+					<passive_effect name="HarvestCount" operation="base_set" value=".7" tags="butcherHarvest"/>
+					<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+					<passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="stone"/>
+					<passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="metal"/>
+				</effect_group>
+				<effect_group name="Power Attack">
+					<passive_effect name="EntityDamage" operation="perc_add" value="1.25" tags="secondary"/>
+					<passive_effect name="BlockDamage" operation="perc_add" value="1.25" tags="secondary"/>
+					<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3" tags="secondary"/>
+					<passive_effect name="StaminaLoss" operation="base_set" value="39.9" tags="secondary"/>
+					<!-- Moaning and grunting sounds moved to buffs.xml, <effect_group name="Power Attack Grunt"> -->
+				</effect_group>
+                                <property name="HoldingItemHidden" value="true"/>
+		</item>		
+
+                <item name="KnightSpear"> 
+			<property name="Extends" value="meleeHandNPCMaster"/>
+			<property name="Canhold" value="true"/> 
+			<property name="HoldType" value="2"/>
+			<property name="Tags" value="melee,grunting,medium,weapon,meleeWeapon,longShaft,attPerception,perkJavelinMaster,canHaveCosmetic,thrownWeapon"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="DisplayType" value="melee"/>
+			<property name="Group" value="Ammo/Weapons,Basics"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Spear/spear_iron_Prefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Candrop" value="false"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="EconomicValue" value="1"/>
+			<property name="CustomIcon" value="meleeWpnSpearT1IronSpear"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="ShowQuality" value="false"/>
+
+			<property class="Action0">
+				<property name="Class" value="MeleeSDX, SCore"/>
+				<property name="Delay" value=".8" /> 
+				<property name="Range" value="1.65" />
+				<property name="Sphere" value="1.2"/>
+				<property name="Sound_start" value="swoosh"/>
+				<property name="Block_range" value="1.65"/>
+				<property name="DamageEntity" value="15"/>
+				<property name="DamageBlock" value="50"/>
+				<property class="HitSounds">
+					<property name="Override0" value="organic" param1="woodhitorganic"/>
+				</property>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="MeleeSDX, SCore"/>
+				<property name="Delay" value=".8" /> 
+				<property name="Range" value="1.65" />
+				<property name="Sphere" value="1.2"/>
+				<property name="Sound_start" value="swoosh"/>
+				<property name="Block_range" value="1.65"/>
+				<property name="DamageEntity" value="20"/>
+				<property name="DamageBlock" value="50"/>
+				<property class="HitSounds">
+					<property name="Override0" value="organic" param1="woodhitorganic"/>
+				</property>
+			</property>	
+			<effect_group name="meleeWpnSpearT1IronSpear">
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.4" tags="perkJavelinMaster"/><display_value name="dTargetArmor" value="-.4"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="55" tags="perkJavelinMaster"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="20.3" tags="primary"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="212,423" tier="1,6" tags="perkJavelinMaster"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkJavelinMaster"/>
+				<passive_effect name="MaxRange" operation="base_set" value="3.2" tags="perkJavelinMaster"/>
+				<passive_effect name="BlockRange" operation="base_set" value="1.65" tags="perkJavelinMaster"/>
+
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+
+				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkJavelinMaster"/> <!-- random EntityDmg -->
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkJavelinMaster"/> <!-- tier bonus -->
+
+				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkJavelinMaster"/> <!-- random BlockDmg -->
+				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkJavelinMaster"/> <!-- tier bonus -->
+
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="wood"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="metal"/>
+
+				<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+				<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+				<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
+			</effect_group>
+
+			<effect_group name="Throw">
+				<passive_effect name="EntityDamage" operation="perc_add" value="2.85" tags="secondary"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="2.85" tags="secondary"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="40.6" tags="secondary"/>
+			</effect_group>
+                        <property name="HoldingItemHidden" value="true"/>
+		</item>		
+
+	</append>
+</configs>

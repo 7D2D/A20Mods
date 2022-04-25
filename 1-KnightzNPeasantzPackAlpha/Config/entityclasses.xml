@@ -1,0 +1,1100 @@
+<configs>
+
+	<append xpath="/entity_classes">
+                
+                <!-- Fantasy Horde Knights/Villagers models by Polygonmaker, All Star Character Collection models by All * Star Charcters,
+                     Medieval Knights models by Virtualware, Purchased for use in NPC Mod  -->
+
+                <entity_class name="Templar" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/> 
+			<property name="Names" value="Reynfrey the Giant,Paladin Konrad,Karolus the Couteous,
+                        Rollant the Fearless,Ser Hamett,Barnard the Shield,Ser Rainier,Guillemot the Dragonslayer" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?TemplarSwordDark"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="KnightSword"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group>
+		</entity_class>
+              
+                <entity_class name="TemplarCrossbowman" extends="npcAdvancedXBowTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Adelard,Mannfred,Rolland,Ingram,Wymerus,Humphery,Odo,Barnabe" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?TemplarXBowDark"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group>
+		</entity_class> 
+
+                <entity_class name="TemplarBowman" extends="npcAdvancedLBowTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Renaud,Tebald,Drogo,Derric,Uwen,Byron,Alain,Bruce" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?TemplarBowDark"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group>
+		</entity_class> 
+
+                <entity_class name="ChaosMarauder" extends="npcClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="Vome Serphent,Voss Rathmore,Maggard,Blud for the Blud god, Bertram the Butcher
+                         ,Lucius Helion,Champion of Horn,Ser Mortis,Pandorum Heliot,Ihone the Jackal" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?ChaosKnightDark"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="KnightSword"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="400"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="90"/>
+	        </effect_group>
+		</entity_class>	
+
+                <entity_class name="Abbot" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/> 
+			<property name="Names" value="John,Robert,William,Alan,Bertram,Colin,Elias,Gerard" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?Monk1Dark"/>
+                        <property name="PhysicsBody" value="KnightStandard"/>
+                        <property name="LookAtAngle" value="0"/> 
+		</entity_class>
+
+                <entity_class name="Friar" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/> 
+			<property name="Names" value="Gilbert,Hamond,James,Hugh,Luke,Martin,Nigel,Osbert" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?Monk2Dark"/>
+                        <property name="PhysicsBody" value="KnightStandard"/>
+                        <property name="LookAtAngle" value="0"/> 
+		</entity_class>
+
+                <entity_class name="Monk" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/> 
+			<property name="Names" value="Roger,Philip,Simon,Thomas,Walter,Alard,Baldwin,Eustace" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?Monk3Dark"/>
+                        <property name="PhysicsBody" value="KnightStandard"/>
+                        <property name="LookAtAngle" value="0"/> 
+		</entity_class>
+
+                <entity_class name="TheKing" extends="npcAdvancedEmptyHandTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Arthur,Charles,David,Edward,Frederik,George,Henry,James" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?KingDark"/> 
+			<effect_group name="HasBackpack"> <!-- This activates the backpack -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+			</effect_group>	
+			<effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>	
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/> 
+		</entity_class>	
+
+                <entity_class name="MedievalTFP" extends="npcAdvancedEmptyHandTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Silent Bert,Riobard,Knuckles Wallach,Farly Four Fingers,Rawson the Mad,Myles,Sly Jarrett,Dob" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?MalePeasant9Dark"/> 
+			<effect_group name="HasBackpack"> <!-- This activates the backpack -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+			</effect_group>	
+			<effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>	
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="KnightStandard"/>
+		</entity_class>	
+
+                <entity_class name="MalePeasant1" extends="npcAdvancedEmptyHandTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Donald,Scot,Jack,Harold,Karl,Byron,Brian,Halsey" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?MalePeasant2Dark"/> 
+			<effect_group name="HasBackpack"> <!-- This activates the backpack -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+			</effect_group>	
+			<effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>	
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="KnightStandard"/>
+		</entity_class>	
+
+                <entity_class name="MalePeasant2" extends="npcAdvancedEmptyHandTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Wallas,Ransford,Renfrew,Reginald,Fred,Arley,Norris,Eldridge" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?MalePeasant16Dark"/> 
+			<effect_group name="HasBackpack"> <!-- This activates the backpack -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+			</effect_group>	
+			<effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>	
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="KnightStandard"/>
+		</entity_class>	
+
+                <entity_class name="GreenWitch" extends="npcAdvancedEmptyHandTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="DanceType" value="2" />
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?GreenWitchDark"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+		</entity_class>	
+
+                <entity_class name="TheQueen" extends="npcAdvancedEmptyHandTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="DanceType" value="2" />
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?QueenDark"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+		</entity_class>	
+
+                <entity_class name="Barmaid" extends="npcAdvancedEmptyHandTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="DanceType" value="2" />
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?Barmaid2Dark"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+		</entity_class>	
+
+                <entity_class name="FemaleCrusader" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="DanceType" value="2" />
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?FemaleCrusaderDark"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="KnightSword"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="KnightSword"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group>
+	        </entity_class>	
+
+                <entity_class name="ServingWench" extends="npcAdvancedEmptyHandTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="DanceType" value="2" />
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?Barmaid1Dark"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+		</entity_class>	
+
+                <entity_class name="PeasantGirl1" extends="npcAdvancedEmptyHandTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="DanceType" value="2" />
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?PeasantGurl1Dark"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+		</entity_class>	
+
+                <entity_class name="PeasantGirl2" extends="npcAdvancedEmptyHandTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="DanceType" value="2" />
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?PeasantGurl2Dark"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+		</entity_class>	
+
+                <entity_class name="PeasantGirl3" extends="npcAdvancedEmptyHandTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="DanceType" value="2" />
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?PeasantGurl3Dark"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+		</entity_class>	
+
+                <entity_class name="PeasantGirl4" extends="npcAdvancedEmptyHandTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="DanceType" value="2" />
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?FemalePeasant9Dark"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PhysicsBody" value="KnightStandard"/>	
+		</entity_class>	
+
+                <entity_class name="KingsKnight1Sword" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/> 
+			<property name="Names" value="Rannulfus,Richart,Thebaldus,Huchon,Hamond,Salemon,Godfree,Bertand" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?KingsKnightSword1Dark"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="KnightSword"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group>
+		</entity_class>
+
+                <entity_class name="KingsKnight2Sword" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/> 
+			<property name="Names" value="Rannulfus,Richart,Thebaldus,Huchon,Hamond,Salemon,Godfree,Bertand" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?KingsKnightSword2Dark"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="KnightSword"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group>
+		</entity_class>
+
+                <entity_class name="KingsKnight3Sword" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/> 
+			<property name="Names" value="Rannulfus,Richart,Thebaldus,Huchon,Hamond,Salemon,Godfree,Bertand" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?KingsKnightSword3Dark"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="KnightSword"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group>
+		</entity_class>
+
+                <entity_class name="KingsKnight1LBow" extends="npcAdvancedLBowTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Bronwen,Manley,Austin,Sherwin,Ty,Hallam,Lytton,Stewart" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?KingsKnightBow1Dark"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+	        </effect_group>
+		</entity_class> 
+
+                <entity_class name="KingsKnight2LBow" extends="npcAdvancedLBowTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="Names" value="Bronwen,Manley,Austin,Sherwin,Ty,Hallam,Lytton,Stewart" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?KingsKnightBow2Dark"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+	        </effect_group>
+		</entity_class> 
+
+		<entity_class name="KingsKnight1XBow" extends="npcAdvancedXBowTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="Names" value="Bronwen,Manley,Austin,Sherwin,Ty,Hallam,Lytton,Stewart" />			
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?KingsKnightXBow1Dark"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+	        </effect_group>
+		</entity_class> 
+
+                <entity_class name="KingsKnight2XBow" extends="npcAdvancedXBowTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="Names" value="Bronwen,Manley,Austin,Sherwin,Ty,Hallam,Lytton,Stewart" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?KingsKnightXBow2Dark"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+	        </effect_group>
+		</entity_class> 
+
+                <entity_class name="KingsChampion" extends="npcAdvancedBatTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="PhysicsBody" value="KnightStandard"/>
+			<property name="Names" value="Hue the Slayer,Ser Alard,Humphery the Hawk
+                         ,Hugin the Tough,Ysaac the Earnest,Ser Owin,Ser Gawayne,Ser Robion the Daring" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?KingsChampion1Dark"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="2HKnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="2HKnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="2HKnightSword"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="350"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="70"/>
+	        </effect_group>
+		</entity_class>	
+
+                <entity_class name="KingsAxeman" extends="npcAdvancedClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="PhysicsBody" value="KnightStandard"/>
+			<property name="Names" value="Hue the Slayer,Ser Alard,Humphery the Hawk
+                         ,Hugin the Tough,Ysaac the Earnest,Ser Owin,Ser Gawayne,Ser Robion the Daring" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?KingsChampion2Dark"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="KnightSword"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="350"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="70"/>
+	        </effect_group>
+		</entity_class>	
+
+                <entity_class name="KingsHalberdier" extends="npcAdvancedSpearTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="PhysicsBody" value="KnightStandard"/>
+			<property name="Names" value="Hue the Slayer,Ser Alard,Humphery the Hawk
+                         ,Hugin the Tough,Ysaac the Earnest,Ser Owin,Ser Gawayne,Ser Robion the Daring" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?KingsChampion3Dark"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="KnightSpear"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="KnightSpear"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="KnightSpear"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="350"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="70"/>
+	        </effect_group>
+		</entity_class>	
+
+                <!-- Survivor Non-Hireable Versions -->
+
+                <entity_class name="TemplarS" extends="npcClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/> 
+			<property name="Names" value="Reynfrey the Giant,Paladin Konrad,Karolus the Couteous,
+                        Rollant the Fearless,Ser Hamett,Barnard the Shield,Ser Rainier,Guillemot the Dragonslayer" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?TemplarSwordDark"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="KnightSword"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group>
+		</entity_class>
+              
+                <entity_class name="TemplarCrossbowmanS" extends="npcXBowTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Adelard,Mannfred,Rolland,Ingram,Wymerus,Humphery,Odo,Barnabe" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?TemplarXBowDark"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group>
+		</entity_class> 
+
+                <entity_class name="TemplarBowmanS" extends="npcLBowTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Renaud,Tebald,Drogo,Derric,Uwen,Byron,Alain,Bruce" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?TemplarBowDark"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group>
+		</entity_class> 
+
+                <entity_class name="AbbotS" extends="npcClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/> 
+			<property name="Names" value="John,Robert,William,Alan,Bertram,Colin,Elias,Gerard" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?Monk1Dark"/>
+                        <property name="PhysicsBody" value="KnightStandard"/>
+                        <property name="LookAtAngle" value="0"/> 
+		</entity_class>
+
+                <entity_class name="FriarS" extends="npcClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/> 
+			<property name="Names" value="Gilbert,Hamond,James,Hugh,Luke,Martin,Nigel,Osbert" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?Monk2Dark"/>
+                        <property name="PhysicsBody" value="KnightStandard"/>
+                        <property name="LookAtAngle" value="0"/> 
+		</entity_class>
+
+                <entity_class name="MonkS" extends="npcClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/> 
+			<property name="Names" value="Roger,Philip,Simon,Thomas,Walter,Alard,Baldwin,Eustace" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?Monk3Dark"/>
+                        <property name="PhysicsBody" value="KnightStandard"/>
+                        <property name="LookAtAngle" value="0"/> 
+		</entity_class>
+
+                <entity_class name="TheKingS" extends="npcEmptyHandTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Arthur,Charles,David,Edward,Frederik,George,Henry,James" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?KingDark"/> 
+			<effect_group name="HasBackpack"> <!-- This activates the backpack -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+			</effect_group>	
+			<effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>	
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/> 
+		</entity_class>	
+
+                <entity_class name="MedievalTFPS" extends="npcEmptyHandTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Silent Bert,Riobard,Knuckles Wallach,Farly Four Fingers,Rawson the Mad,Myles,Sly Jarrett,Dob" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?MalePeasant9Dark"/> 
+			<effect_group name="HasBackpack"> <!-- This activates the backpack -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+			</effect_group>	
+			<effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>	
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="KnightStandard"/>
+		</entity_class>	
+
+                <entity_class name="MalePeasant1S" extends="npcEmptyHandTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Donald,Scot,Jack,Harold,Karl,Byron,Brian,Halsey" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?MalePeasant2Dark"/> 
+			<effect_group name="HasBackpack"> <!-- This activates the backpack -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+			</effect_group>	
+			<effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>	
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="KnightStandard"/>
+		</entity_class>	
+
+                <entity_class name="MalePeasant2S" extends="npcEmptyHandTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Wallas,Ransford,Renfrew,Reginald,Fred,Arley,Norris,Eldridge" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?MalePeasant16Dark"/> 
+			<effect_group name="HasBackpack"> <!-- This activates the backpack -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+			</effect_group>	
+			<effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>	
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="KnightStandard"/>
+		</entity_class>	
+
+                <entity_class name="GreenWitchS" extends="npcEmptyHandTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="DanceType" value="2" />
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?GreenWitchDark"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+		</entity_class>	
+
+                <entity_class name="TheQueenS" extends="npcEmptyHandTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="DanceType" value="2" />
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?QueenDark"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+		</entity_class>	
+
+                <entity_class name="BarmaidS" extends="npcEmptyHandTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="DanceType" value="2" />
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?Barmaid2Dark"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+		</entity_class>	
+
+                <entity_class name="FemaleCrusaderS" extends="npcClubTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="DanceType" value="2" />
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?FemaleCrusaderDark"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="KnightSword"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="KnightSword"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group>
+	        </entity_class>	
+
+                <entity_class name="ServingWenchS" extends="npcEmptyHandTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="DanceType" value="2" />
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?Barmaid1Dark"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+		</entity_class>	
+
+                <entity_class name="PeasantGirl1S" extends="npcEmptyHandTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="DanceType" value="2" />
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?PeasantGurl1Dark"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+		</entity_class>	
+
+                <entity_class name="PeasantGirl2S" extends="npcEmptyHandTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="DanceType" value="2" />
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?PeasantGurl2Dark"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+		</entity_class>	
+
+                <entity_class name="PeasantGirl3S" extends="npcEmptyHandTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="DanceType" value="2" />
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?PeasantGurl3Dark"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+		</entity_class>	
+
+                <entity_class name="PeasantGirl4S" extends="npcEmptyHandTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="DanceType" value="2" />
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?FemalePeasant9Dark"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+                        <property name="LookAtAngle" value="0"/>
+                        <property name="PhysicsBody" value="KnightStandard"/>	
+		</entity_class>	
+
+                <entity_class name="KingsKnight1SwordS" extends="npcClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/> 
+			<property name="Names" value="Rannulfus,Richart,Thebaldus,Huchon,Hamond,Salemon,Godfree,Bertand" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?KingsKnightSword1Dark"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="KnightSword"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group>
+		</entity_class>
+
+                <entity_class name="KingsKnight2SwordS" extends="npcClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/> 
+			<property name="Names" value="Rannulfus,Richart,Thebaldus,Huchon,Hamond,Salemon,Godfree,Bertand" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?KingsKnightSword2Dark"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="KnightSword"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group>
+		</entity_class>
+
+                <entity_class name="KingsKnight3SwordS" extends="npcClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/> 
+			<property name="Names" value="Rannulfus,Richart,Thebaldus,Huchon,Hamond,Salemon,Godfree,Bertand" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?KingsKnightSword3Dark"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="KnightSword"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+	        </effect_group>
+		</entity_class>
+
+                <entity_class name="KingsKnight1SLBow" extends="npcLBowTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Names" value="Bronwen,Manley,Austin,Sherwin,Ty,Hallam,Lytton,Stewart" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?KingsKnightBow1Dark"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+	        </effect_group>
+		</entity_class> 
+
+                <entity_class name="KingsKnight2SLBow" extends="npcLBowTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="Names" value="Bronwen,Manley,Austin,Sherwin,Ty,Hallam,Lytton,Stewart" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?KingsKnightBow2Dark"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+	        </effect_group>
+		</entity_class> 
+
+		<entity_class name="KingsKnight1SXBow" extends="npcXBowTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="Names" value="Bronwen,Manley,Austin,Sherwin,Ty,Hallam,Lytton,Stewart" />			
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?KingsKnightXBow1Dark"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+	        </effect_group>
+		</entity_class> 
+
+                <entity_class name="KingsKnight2SXBow" extends="npcXBowTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="Names" value="Bronwen,Manley,Austin,Sherwin,Ty,Hallam,Lytton,Stewart" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?KingsKnightXBow2Dark"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="300"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
+	        </effect_group>
+		</entity_class> 
+
+                <entity_class name="KingsChampionS" extends="npcBatTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="PhysicsBody" value="KnightStandard"/>
+			<property name="Names" value="Hue the Slayer,Ser Alard,Humphery the Hawk
+                         ,Hugin the Tough,Ysaac the Earnest,Ser Owin,Ser Gawayne,Ser Robion the Daring" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?KingsChampion1Dark"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="2HKnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="2HKnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="2HKnightSword"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="350"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="70"/>
+	        </effect_group>
+		</entity_class>	
+
+                <entity_class name="KingsAxemanS" extends="npcClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="PhysicsBody" value="KnightStandard"/>
+			<property name="Names" value="Hue the Slayer,Ser Alard,Humphery the Hawk
+                         ,Hugin the Tough,Ysaac the Earnest,Ser Owin,Ser Gawayne,Ser Robion the Daring" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?KingsChampion2Dark"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="KnightSword"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="KnightSword"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="350"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="70"/>
+	        </effect_group>
+		</entity_class>	
+
+                <entity_class name="KingsHalberdierS" extends="npcSpearTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,DRMid"/>
+			<property name="Faction" value="whiteriver"/>
+                        <property name="PhysicsBody" value="KnightStandard"/>
+			<property name="Names" value="Hue the Slayer,Ser Alard,Humphery the Hawk
+                         ,Hugin the Tough,Ysaac the Earnest,Ser Owin,Ser Gawayne,Ser Robion the Daring" />				
+			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?KingsChampion3Dark"/> 
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="KnightSpear"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="KnightSpear"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="KnightSpear"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="350"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="70"/>
+	        </effect_group>
+		</entity_class>	
+
+		</append>	
+	
+</configs>
