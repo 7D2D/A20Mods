@@ -5,101 +5,98 @@
 	    <entity name="TemplarS" prob="0.1" />
 		<entity name="TemplarCrossbowmanS" prob="0.1" />
 		<entity name="TemplarBowmanS" prob="0.1" />
-                <entity name="ChaosMarauder" prob="0.1" />
-	        <entity name="AbbotS" prob="0.1" />
-                <entity name="FriarS" prob="0.1" />
+	    <entity name="AbbotS" prob="0.1" />
+        <entity name="FriarS" prob="0.1" />
 		<entity name="MonkS" prob="0.1" />
 		<entity name="TheKingS" prob="0.1" />
 		<entity name="MedievalTFPS" prob="0.1" />
-                <entity name="MalePeasant1S" prob="0.1" />
+        <entity name="MalePeasant1S" prob="0.1" />
 	 	<entity name="MalePeasant2S" prob="0.1" />
-                <entity name="GreenWitchS" prob="0.1" />
-                <entity name="TheQueenS" prob="0.1" />
-                <entity name="BarmaidS" prob="0.1" />
-                <entity name="FemaleCrusaderS" prob="0.1" />
-                <entity name="ServingWenchS" prob="0.1" />
+        <entity name="GreenWitchS" prob="0.1" />
+        <entity name="TheQueenS" prob="0.1" />
+        <entity name="BarmaidS" prob="0.1" />
+        <entity name="FemaleCrusaderS" prob="0.1" />
+        <entity name="ServingWenchS" prob="0.1" />
 		<entity name="PeasantGirl1S" prob="0.1" />
-                <entity name="PeasantGirl2S" prob="0.1" />
-                <entity name="PeasantGirl3S" prob="0.1" />
+        <entity name="PeasantGirl2S" prob="0.1" />
+        <entity name="PeasantGirl3S" prob="0.1" />
 		<entity name="PeasantGirl4S" prob="0.1" />
 		<entity name="KingsKnight1SwordS" prob="0.1" />
-                <entity name="KingsKnight2SwordS" prob="0.1" />
-                <entity name="KingsKnight3SwordS" prob="0.1" />
+        <entity name="KingsKnight2SwordS" prob="0.1" />
+        <entity name="KingsKnight3SwordS" prob="0.1" />
 		<entity name="KingsKnight1LBowS" prob="0.1" />
 		<entity name="KingsKnight2LBowS" prob="0.1" />
-                <entity name="KingsKnight1XBowS" prob="0.1" />
-                <entity name="KingsKnight2XBowS" prob="0.1" />
-                <entity name="KingsChampionS" prob="0.1" />
+        <entity name="KingsKnight1XBowS" prob="0.1" />
+        <entity name="KingsKnight2XBowS" prob="0.1" />
+        <entity name="KingsChampionS" prob="0.1" />
 		<entity name="KingsAxemanS" prob="0.1" />
-		<entity name="KingsHalberdierS" prob="0.1" />		
+		<entity name="KingsHalberdierS" prob="0.1" /> 	
 	</append>
 	
 <!-- Lowest Vanilla ZombiesNight is animalZombieDog prob=0.05 -->	
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
-	     <entity name="TemplarS" prob="0.1" />
-		<entity name="TemplarCrossbowmanS" prob="0.1" />
-		<entity name="TemplarBowmanS" prob="0.1" />
-                <entity name="ChaosMarauder" prob="0.1" />
-	        <entity name="AbbotS" prob="0.1" />
-                <entity name="FriarS" prob="0.1" />
-		<entity name="MonkS" prob="0.1" />
-		<entity name="TheKingS" prob="0.1" />
-		<entity name="MedievalTFPS" prob="0.1" />
-                <entity name="MalePeasant1S" prob="0.1" />
-	 	<entity name="MalePeasant2S" prob="0.1" />
-                <entity name="GreenWitchS" prob="0.1" />
-                <entity name="TheQueenS" prob="0.1" />
-                <entity name="BarmaidS" prob="0.1" />
-                <entity name="FemaleCrusaderS" prob="0.1" />
-                <entity name="ServingWenchS" prob="0.1" />
-		<entity name="PeasantGirl1S" prob="0.1" />
-                <entity name="PeasantGirl2S" prob="0.1" />
-                <entity name="PeasantGirl3S" prob="0.1" />
-		<entity name="PeasantGirl4S" prob="0.1" />
-		<entity name="KingsKnight1SwordS" prob="0.1" />
-                <entity name="KingsKnight2SwordS" prob="0.1" />
-                <entity name="KingsKnight3SwordS" prob="0.1" />
-		<entity name="KingsKnight1LBowS" prob="0.1" />
-		<entity name="KingsKnight2LBowS" prob="0.1" />
-                <entity name="KingsKnight1XBowS" prob="0.1" />
-                <entity name="KingsKnight2XBowS" prob="0.1" />
-                <entity name="KingsChampionS" prob="0.1" />
-		<entity name="KingsAxemanS" prob="0.1" />
-		<entity name="KingsHalberdierS" prob="0.1" />			
+	    <entity name="TemplarS" prob="0.025" />
+		<entity name="TemplarCrossbowmanS" prob="0.025" />
+		<entity name="TemplarBowmanS" prob="0.025" />
+	    <entity name="AbbotS" prob="0.025" />
+        <entity name="FriarS" prob="0.025" />
+		<entity name="MonkS" prob="0.025" />
+		<entity name="TheKingS" prob="0.025" />
+		<entity name="MedievalTFPS" prob="0.025" />
+        <entity name="MalePeasant1S" prob="0.025" />
+	 	<entity name="MalePeasant2S" prob="0.025" />
+        <entity name="GreenWitchS" prob="0.025" />
+        <entity name="TheQueenS" prob="0.025" />
+        <entity name="BarmaidS" prob="0.025" />
+        <entity name="FemaleCrusaderS" prob="0.025" />
+        <entity name="ServingWenchS" prob="0.025" />
+		<entity name="PeasantGirl1S" prob="0.025" />
+        <entity name="PeasantGirl2S" prob="0.025" />
+        <entity name="PeasantGirl3S" prob="0.025" />
+		<entity name="PeasantGirl4S" prob="0.025" />
+		<entity name="KingsKnight1SwordS" prob="0.025" />
+        <entity name="KingsKnight2SwordS" prob="0.025" />
+        <entity name="KingsKnight3SwordS" prob="0.025" />
+		<entity name="KingsKnight1LBowS" prob="0.025" />
+		<entity name="KingsKnight2LBowS" prob="0.025" />
+        <entity name="KingsKnight1XBowS" prob="0.025" />
+        <entity name="KingsKnight2XBowS" prob="0.025" />
+        <entity name="KingsChampionS" prob="0.025" />
+		<entity name="KingsAxemanS" prob="0.025" />
+		<entity name="KingsHalberdierS" prob="0.025" />		
 	</append>
 
 <!-- Lowest Vanilla SnowZombies is zombieLumberjack prob=1.0 -->	
 	<append xpath="/entitygroups/entitygroup[@name='SnowZombies']">
-	     <entity name="TemplarS" prob="0.1" />
+	    <entity name="TemplarS" prob="0.1" />
 		<entity name="TemplarCrossbowmanS" prob="0.1" />
 		<entity name="TemplarBowmanS" prob="0.1" />
-                <entity name="ChaosMarauder" prob="0.1" />
-	        <entity name="AbbotS" prob="0.1" />
-                <entity name="FriarS" prob="0.1" />
+	    <entity name="AbbotS" prob="0.1" />
+        <entity name="FriarS" prob="0.1" />
 		<entity name="MonkS" prob="0.1" />
 		<entity name="TheKingS" prob="0.1" />
 		<entity name="MedievalTFPS" prob="0.1" />
-                <entity name="MalePeasant1S" prob="0.1" />
+        <entity name="MalePeasant1S" prob="0.1" />
 	 	<entity name="MalePeasant2S" prob="0.1" />
-                <entity name="GreenWitchS" prob="0.1" />
-                <entity name="TheQueenS" prob="0.1" />
-                <entity name="BarmaidS" prob="0.1" />
-                <entity name="FemaleCrusaderS" prob="0.1" />
-                <entity name="ServingWenchS" prob="0.1" />
+        <entity name="GreenWitchS" prob="0.1" />
+        <entity name="TheQueenS" prob="0.1" />
+        <entity name="BarmaidS" prob="0.1" />
+        <entity name="FemaleCrusaderS" prob="0.1" />
+        <entity name="ServingWenchS" prob="0.1" />
 		<entity name="PeasantGirl1S" prob="0.1" />
-                <entity name="PeasantGirl2S" prob="0.1" />
-                <entity name="PeasantGirl3S" prob="0.1" />
+        <entity name="PeasantGirl2S" prob="0.1" />
+        <entity name="PeasantGirl3S" prob="0.1" />
 		<entity name="PeasantGirl4S" prob="0.1" />
 		<entity name="KingsKnight1SwordS" prob="0.1" />
-                <entity name="KingsKnight2SwordS" prob="0.1" />
-                <entity name="KingsKnight3SwordS" prob="0.1" />
+        <entity name="KingsKnight2SwordS" prob="0.1" />
+        <entity name="KingsKnight3SwordS" prob="0.1" />
 		<entity name="KingsKnight1LBowS" prob="0.1" />
 		<entity name="KingsKnight2LBowS" prob="0.1" />
-                <entity name="KingsKnight1XBowS" prob="0.1" />
-                <entity name="KingsKnight2XBowS" prob="0.1" />
-                <entity name="KingsChampionS" prob="0.1" />
+        <entity name="KingsKnight1XBowS" prob="0.1" />
+        <entity name="KingsKnight2XBowS" prob="0.1" />
+        <entity name="KingsChampionS" prob="0.1" />
 		<entity name="KingsAxemanS" prob="0.1" />
-		<entity name="KingsHalberdierS" prob="0.1" />	
+		<entity name="KingsHalberdierS" prob="0.1" />
 	</append>	
 
 <!-- Lowest Vanilla ZombiesWasteland is mixed prob=1.0 -->
@@ -107,242 +104,843 @@
 	    <entity name="TemplarS" prob="0.1" />
 		<entity name="TemplarCrossbowmanS" prob="0.1" />
 		<entity name="TemplarBowmanS" prob="0.1" />
-                <entity name="ChaosMarauder" prob="0.1" />
-	        <entity name="AbbotS" prob="0.1" />
-                <entity name="FriarS" prob="0.1" />
+	    <entity name="AbbotS" prob="0.1" />
+        <entity name="FriarS" prob="0.1" />
 		<entity name="MonkS" prob="0.1" />
 		<entity name="TheKingS" prob="0.1" />
 		<entity name="MedievalTFPS" prob="0.1" />
-                <entity name="MalePeasant1S" prob="0.1" />
+        <entity name="MalePeasant1S" prob="0.1" />
 	 	<entity name="MalePeasant2S" prob="0.1" />
-                <entity name="GreenWitchS" prob="0.1" />
-                <entity name="TheQueenS" prob="0.1" />
-                <entity name="BarmaidS" prob="0.1" />
-                <entity name="FemaleCrusaderS" prob="0.1" />
-                <entity name="ServingWenchS" prob="0.1" />
+        <entity name="GreenWitchS" prob="0.1" />
+        <entity name="TheQueenS" prob="0.1" />
+        <entity name="BarmaidS" prob="0.1" />
+        <entity name="FemaleCrusaderS" prob="0.1" />
+        <entity name="ServingWenchS" prob="0.1" />
 		<entity name="PeasantGirl1S" prob="0.1" />
-                <entity name="PeasantGirl2S" prob="0.1" />
-                <entity name="PeasantGirl3S" prob="0.1" />
+        <entity name="PeasantGirl2S" prob="0.1" />
+        <entity name="PeasantGirl3S" prob="0.1" />
 		<entity name="PeasantGirl4S" prob="0.1" />
 		<entity name="KingsKnight1SwordS" prob="0.1" />
-                <entity name="KingsKnight2SwordS" prob="0.1" />
-                <entity name="KingsKnight3SwordS" prob="0.1" />
+        <entity name="KingsKnight2SwordS" prob="0.1" />
+        <entity name="KingsKnight3SwordS" prob="0.1" />
 		<entity name="KingsKnight1LBowS" prob="0.1" />
 		<entity name="KingsKnight2LBowS" prob="0.1" />
-                <entity name="KingsKnight1XBowS" prob="0.1" />
-                <entity name="KingsKnight2XBowS" prob="0.1" />
-                <entity name="KingsChampionS" prob="0.1" />
+        <entity name="KingsKnight1XBowS" prob="0.1" />
+        <entity name="KingsKnight2XBowS" prob="0.1" />
+        <entity name="KingsChampionS" prob="0.1" />
 		<entity name="KingsAxemanS" prob="0.1" />
 		<entity name="KingsHalberdierS" prob="0.1" />	
 	</append>
 	
 <!-- Lowest Vanilla ZombiesWastelandNight is mixed prob=1.0 -->
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']">
-	     <entity name="TemplarS" prob="0.1" />
+	    <entity name="TemplarS" prob="0.1" />
 		<entity name="TemplarCrossbowmanS" prob="0.1" />
 		<entity name="TemplarBowmanS" prob="0.1" />
-                <entity name="ChaosMarauder" prob="0.1" />
-	        <entity name="AbbotS" prob="0.1" />
-                <entity name="FriarS" prob="0.1" />
+	    <entity name="AbbotS" prob="0.1" />
+        <entity name="FriarS" prob="0.1" />
 		<entity name="MonkS" prob="0.1" />
 		<entity name="TheKingS" prob="0.1" />
 		<entity name="MedievalTFPS" prob="0.1" />
-                <entity name="MalePeasant1S" prob="0.1" />
+        <entity name="MalePeasant1S" prob="0.1" />
 	 	<entity name="MalePeasant2S" prob="0.1" />
-                <entity name="GreenWitchS" prob="0.1" />
-                <entity name="TheQueenS" prob="0.1" />
-                <entity name="BarmaidS" prob="0.1" />
-                <entity name="FemaleCrusaderS" prob="0.1" />
-                <entity name="ServingWenchS" prob="0.1" />
+        <entity name="GreenWitchS" prob="0.1" />
+        <entity name="TheQueenS" prob="0.1" />
+        <entity name="BarmaidS" prob="0.1" />
+        <entity name="FemaleCrusaderS" prob="0.1" />
+        <entity name="ServingWenchS" prob="0.1" />
 		<entity name="PeasantGirl1S" prob="0.1" />
-                <entity name="PeasantGirl2S" prob="0.1" />
-                <entity name="PeasantGirl3S" prob="0.1" />
+        <entity name="PeasantGirl2S" prob="0.1" />
+        <entity name="PeasantGirl3S" prob="0.1" />
 		<entity name="PeasantGirl4S" prob="0.1" />
 		<entity name="KingsKnight1SwordS" prob="0.1" />
-                <entity name="KingsKnight2SwordS" prob="0.1" />
-                <entity name="KingsKnight3SwordS" prob="0.1" />
+        <entity name="KingsKnight2SwordS" prob="0.1" />
+        <entity name="KingsKnight3SwordS" prob="0.1" />
 		<entity name="KingsKnight1LBowS" prob="0.1" />
 		<entity name="KingsKnight2LBowS" prob="0.1" />
-                <entity name="KingsKnight1XBowS" prob="0.1" />
-                <entity name="KingsKnight2XBowS" prob="0.1" />
-                <entity name="KingsChampionS" prob="0.1" />
+        <entity name="KingsKnight1XBowS" prob="0.1" />
+        <entity name="KingsKnight2XBowS" prob="0.1" />
+        <entity name="KingsChampionS" prob="0.1" />
 		<entity name="KingsAxemanS" prob="0.1" />
-		<entity name="KingsHalberdierS" prob="0.1" />	
+		<entity name="KingsHalberdierS" prob="0.1" />
 	</append>
 
-<!-- Lowest Vanilla ZombiesAll is zombieJanitor prob=0.2 -->    
-   
+<!-- Lowest Vanilla ZombiesAll is zombieJanitor prob=0.2 -->       
 	 <append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
-                <entity name="Templar" prob="0.1" />
+        <entity name="Templar" prob="0.1" />
 		<entity name="TemplarCrossbowman" prob="0.1" />
 		<entity name="TemplarBowman" prob="0.1" />
-                <entity name="ChaosMarauder" prob="0.1" />
-	        <entity name="Abbot" prob="0.1" />
-                <entity name="Friar" prob="0.1" />
+        <entity name="ChaosMarauder" prob="0.1" />		
+	    <entity name="Abbot" prob="0.1" />
+        <entity name="Friar" prob="0.1" />
 		<entity name="Monk" prob="0.1" />
 		<entity name="TheKing" prob="0.1" />
 		<entity name="MedievalTFP" prob="0.1" />
-                <entity name="MalePeasant1" prob="0.1" />
+        <entity name="MalePeasant1" prob="0.1" />
 	 	<entity name="MalePeasant2" prob="0.1" />
-                <entity name="GreenWitch" prob="0.1" />
-                <entity name="TheQueen" prob="0.1" />
-                <entity name="Barmaid" prob="0.1" />
-                <entity name="FemaleCrusader" prob="0.1" />
-                <entity name="ServingWench" prob="0.1" />
+        <entity name="GreenWitch" prob="0.1" />
+        <entity name="TheQueen" prob="0.1" />
+        <entity name="Barmaid" prob="0.1" />
+        <entity name="FemaleCrusader" prob="0.1" />
+        <entity name="ServingWench" prob="0.1" />
 		<entity name="PeasantGirl1" prob="0.1" />
-                <entity name="PeasantGirl2" prob="0.1" />
-                <entity name="PeasantGirl3" prob="0.1" />
+        <entity name="PeasantGirl2" prob="0.1" />
+        <entity name="PeasantGirl3" prob="0.1" />
 		<entity name="PeasantGirl4" prob="0.1" />
 		<entity name="KingsKnight1Sword" prob="0.1" />
-                <entity name="KingsKnight2Sword" prob="0.1" />
-                <entity name="KingsKnight3Sword" prob="0.1" />
+        <entity name="KingsKnight2Sword" prob="0.1" />
+        <entity name="KingsKnight3Sword" prob="0.1" />
 		<entity name="KingsKnight1LBow" prob="0.1" />
 		<entity name="KingsKnight2LBow" prob="0.1" />
-                <entity name="KingsKnight1XBow" prob="0.1" />
-                <entity name="KingsKnight2XBow" prob="0.1" />
-                <entity name="KingsChampion" prob="0.1" />
+        <entity name="KingsKnight1XBow" prob="0.1" />
+        <entity name="KingsKnight2XBow" prob="0.1" />
+        <entity name="KingsChampion" prob="0.1" />
 		<entity name="KingsAxeman" prob="0.1" />
-		<entity name="KingsHalberdier" prob="0.1" />		
+		<entity name="KingsHalberdier" prob="0.1" /> 	
 	</append>
 	
 <!-- Lowest Vanilla ZombiesNight is animalZombieDog prob=0.05 -->	
-                <entity name="Templar" prob="0.1" />
-		<entity name="TemplarCrossbowman" prob="0.1" />
-		<entity name="TemplarBowman" prob="0.1" />
-                <entity name="ChaosMarauder" prob="0.1" />
-	        <entity name="Abbot" prob="0.1" />
-                <entity name="Friar" prob="0.1" />
-		<entity name="Monk" prob="0.1" />
-		<entity name="TheKing" prob="0.1" />
-		<entity name="MedievalTFP" prob="0.1" />
-                <entity name="MalePeasant1" prob="0.1" />
-	 	<entity name="MalePeasant2" prob="0.1" />
-                <entity name="GreenWitch" prob="0.1" />
-                <entity name="TheQueen" prob="0.1" />
-                <entity name="Barmaid" prob="0.1" />
-                <entity name="FemaleCrusader" prob="0.1" />
-                <entity name="ServingWench" prob="0.1" />
-		<entity name="PeasantGirl1" prob="0.1" />
-                <entity name="PeasantGirl2" prob="0.1" />
-                <entity name="PeasantGirl3" prob="0.1" />
-		<entity name="PeasantGirl4" prob="0.1" />
-		<entity name="KingsKnight1Sword" prob="0.1" />
-                <entity name="KingsKnight2Sword" prob="0.1" />
-                <entity name="KingsKnight3Sword" prob="0.1" />
-		<entity name="KingsKnight1LBow" prob="0.1" />
-		<entity name="KingsKnight2LBow" prob="0.1" />
-                <entity name="KingsKnight1XBow" prob="0.1" />
-                <entity name="KingsKnight2XBow" prob="0.1" />
-                <entity name="KingsChampion" prob="0.1" />
-		<entity name="KingsAxeman" prob="0.1" />
-		<entity name="KingsHalberdier" prob="0.1" />	
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
-	  	
+        <entity name="Templar" prob="0.025" />
+		<entity name="TemplarCrossbowman" prob="0.025" />
+		<entity name="TemplarBowman" prob="0.025" />
+        <entity name="ChaosMarauder" prob="0.025" />
+	    <entity name="Abbot" prob="0.025" />
+        <entity name="Friar" prob="0.025" />
+		<entity name="Monk" prob="0.025" />
+		<entity name="TheKing" prob="0.025" />
+		<entity name="MedievalTFP" prob="0.025" />
+        <entity name="MalePeasant1" prob="0.025" />
+	 	<entity name="MalePeasant2" prob="0.025" />
+        <entity name="GreenWitch" prob="0.025" />
+        <entity name="TheQueen" prob="0.025" />
+        <entity name="Barmaid" prob="0.025" />
+        <entity name="FemaleCrusader" prob="0.025" />
+        <entity name="ServingWench" prob="0.025" />
+		<entity name="PeasantGirl1" prob="0.025" />
+        <entity name="PeasantGirl2" prob="0.025" />
+        <entity name="PeasantGirl3" prob="0.025" />
+		<entity name="PeasantGirl4" prob="0.025" />
+		<entity name="KingsKnight1Sword" prob="0.025" />
+        <entity name="KingsKnight2Sword" prob="0.025" />
+        <entity name="KingsKnight3Sword" prob="0.025" />
+		<entity name="KingsKnight1LBow" prob="0.025" />
+		<entity name="KingsKnight2LBow" prob="0.025" />
+        <entity name="KingsKnight1XBow" prob="0.025" />
+        <entity name="KingsKnight2XBow" prob="0.025" />
+        <entity name="KingsChampion" prob="0.025" />
+		<entity name="KingsAxeman" prob="0.025" />
+		<entity name="KingsHalberdier" prob="0.025" />		
 	</append>
 
-<!-- Lowest Vanilla SnowZombies is zombieLumberjack prob=1.0 -->
-	
+<!-- Lowest Vanilla SnowZombies is zombieLumberjack prob=1.0 -->	
 	<append xpath="/entitygroups/entitygroup[@name='SnowZombies']">
-	        <entity name="Templar" prob="0.1" />
+        <entity name="Templar" prob="0.1" />
 		<entity name="TemplarCrossbowman" prob="0.1" />
 		<entity name="TemplarBowman" prob="0.1" />
-                <entity name="ChaosMarauder" prob="0.1" />
-	        <entity name="Abbot" prob="0.1" />
-                <entity name="Friar" prob="0.1" />
+        <entity name="ChaosMarauder" prob="0.1" />
+	    <entity name="Abbot" prob="0.1" />
+        <entity name="Friar" prob="0.1" />
 		<entity name="Monk" prob="0.1" />
 		<entity name="TheKing" prob="0.1" />
 		<entity name="MedievalTFP" prob="0.1" />
-                <entity name="MalePeasant1" prob="0.1" />
+        <entity name="MalePeasant1" prob="0.1" />
 	 	<entity name="MalePeasant2" prob="0.1" />
-                <entity name="GreenWitch" prob="0.1" />
-                <entity name="TheQueen" prob="0.1" />
-                <entity name="Barmaid" prob="0.1" />
-                <entity name="FemaleCrusader" prob="0.1" />
-                <entity name="ServingWench" prob="0.1" />
+        <entity name="GreenWitch" prob="0.1" />
+        <entity name="TheQueen" prob="0.1" />
+        <entity name="Barmaid" prob="0.1" />
+        <entity name="FemaleCrusader" prob="0.1" />
+        <entity name="ServingWench" prob="0.1" />
 		<entity name="PeasantGirl1" prob="0.1" />
-                <entity name="PeasantGirl2" prob="0.1" />
-                <entity name="PeasantGirl3" prob="0.1" />
+        <entity name="PeasantGirl2" prob="0.1" />
+        <entity name="PeasantGirl3" prob="0.1" />
 		<entity name="PeasantGirl4" prob="0.1" />
 		<entity name="KingsKnight1Sword" prob="0.1" />
-                <entity name="KingsKnight2Sword" prob="0.1" />
-                <entity name="KingsKnight3Sword" prob="0.1" />
+        <entity name="KingsKnight2Sword" prob="0.1" />
+        <entity name="KingsKnight3Sword" prob="0.1" />
 		<entity name="KingsKnight1LBow" prob="0.1" />
 		<entity name="KingsKnight2LBow" prob="0.1" />
-                <entity name="KingsKnight1XBow" prob="0.1" />
-                <entity name="KingsKnight2XBow" prob="0.1" />
-                <entity name="KingsChampion" prob="0.1" />
+        <entity name="KingsKnight1XBow" prob="0.1" />
+        <entity name="KingsKnight2XBow" prob="0.1" />
+        <entity name="KingsChampion" prob="0.1" />
 		<entity name="KingsAxeman" prob="0.1" />
-		<entity name="KingsHalberdier" prob="0.1" />	
+		<entity name="KingsHalberdier" prob="0.1" />
 	</append>	
 
 <!-- Lowest Vanilla ZombiesWasteland is mixed prob=1.0 -->
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']">
-	   	 <entity name="Templar" prob="0.1" />
+        <entity name="Templar" prob="0.1" />
 		<entity name="TemplarCrossbowman" prob="0.1" />
 		<entity name="TemplarBowman" prob="0.1" />
-                <entity name="ChaosMarauder" prob="0.1" />
-	        <entity name="Abbot" prob="0.1" />
-                <entity name="Friar" prob="0.1" />
+        <entity name="ChaosMarauder" prob="0.1" />
+	    <entity name="Abbot" prob="0.1" />
+        <entity name="Friar" prob="0.1" />
 		<entity name="Monk" prob="0.1" />
 		<entity name="TheKing" prob="0.1" />
 		<entity name="MedievalTFP" prob="0.1" />
-                <entity name="MalePeasant1" prob="0.1" />
+        <entity name="MalePeasant1" prob="0.1" />
 	 	<entity name="MalePeasant2" prob="0.1" />
-                <entity name="GreenWitch" prob="0.1" />
-                <entity name="TheQueen" prob="0.1" />
-                <entity name="Barmaid" prob="0.1" />
-                <entity name="FemaleCrusader" prob="0.1" />
-                <entity name="ServingWench" prob="0.1" />
+        <entity name="GreenWitch" prob="0.1" />
+        <entity name="TheQueen" prob="0.1" />
+        <entity name="Barmaid" prob="0.1" />
+        <entity name="FemaleCrusader" prob="0.1" />
+        <entity name="ServingWench" prob="0.1" />
 		<entity name="PeasantGirl1" prob="0.1" />
-                <entity name="PeasantGirl2" prob="0.1" />
-                <entity name="PeasantGirl3" prob="0.1" />
+        <entity name="PeasantGirl2" prob="0.1" />
+        <entity name="PeasantGirl3" prob="0.1" />
 		<entity name="PeasantGirl4" prob="0.1" />
 		<entity name="KingsKnight1Sword" prob="0.1" />
-                <entity name="KingsKnight2Sword" prob="0.1" />
-                <entity name="KingsKnight3Sword" prob="0.1" />
+        <entity name="KingsKnight2Sword" prob="0.1" />
+        <entity name="KingsKnight3Sword" prob="0.1" />
 		<entity name="KingsKnight1LBow" prob="0.1" />
 		<entity name="KingsKnight2LBow" prob="0.1" />
-                <entity name="KingsKnight1XBow" prob="0.1" />
-                <entity name="KingsKnight2XBow" prob="0.1" />
-                <entity name="KingsChampion" prob="0.1" />
+        <entity name="KingsKnight1XBow" prob="0.1" />
+        <entity name="KingsKnight2XBow" prob="0.1" />
+        <entity name="KingsChampion" prob="0.1" />
 		<entity name="KingsAxeman" prob="0.1" />
 		<entity name="KingsHalberdier" prob="0.1" />	
 	</append>
 
 <!-- Lowest Vanilla ZombiesWastelandNight is mixed prob=1.0 -->
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']">
-	     <entity name="Templar" prob="0.1" />
+        <entity name="Templar" prob="0.1" />
 		<entity name="TemplarCrossbowman" prob="0.1" />
 		<entity name="TemplarBowman" prob="0.1" />
-                <entity name="ChaosMarauder" prob="0.1" />
-	        <entity name="Abbot" prob="0.1" />
-                <entity name="Friar" prob="0.1" />
+        <entity name="ChaosMarauder" prob="0.1" />
+	    <entity name="Abbot" prob="0.1" />
+        <entity name="Friar" prob="0.1" />
 		<entity name="Monk" prob="0.1" />
 		<entity name="TheKing" prob="0.1" />
 		<entity name="MedievalTFP" prob="0.1" />
-                <entity name="MalePeasant1" prob="0.1" />
+        <entity name="MalePeasant1" prob="0.1" />
 	 	<entity name="MalePeasant2" prob="0.1" />
-                <entity name="GreenWitch" prob="0.1" />
-                <entity name="TheQueen" prob="0.1" />
-                <entity name="Barmaid" prob="0.1" />
-                <entity name="FemaleCrusader" prob="0.1" />
-                <entity name="ServingWench" prob="0.1" />
+        <entity name="GreenWitch" prob="0.1" />
+        <entity name="TheQueen" prob="0.1" />
+        <entity name="Barmaid" prob="0.1" />
+        <entity name="FemaleCrusader" prob="0.1" />
+        <entity name="ServingWench" prob="0.1" />
 		<entity name="PeasantGirl1" prob="0.1" />
-                <entity name="PeasantGirl2" prob="0.1" />
-                <entity name="PeasantGirl3" prob="0.1" />
+        <entity name="PeasantGirl2" prob="0.1" />
+        <entity name="PeasantGirl3" prob="0.1" />
 		<entity name="PeasantGirl4" prob="0.1" />
 		<entity name="KingsKnight1Sword" prob="0.1" />
-                <entity name="KingsKnight2Sword" prob="0.1" />
-                <entity name="KingsKnight3Sword" prob="0.1" />
+        <entity name="KingsKnight2Sword" prob="0.1" />
+        <entity name="KingsKnight3Sword" prob="0.1" />
 		<entity name="KingsKnight1LBow" prob="0.1" />
 		<entity name="KingsKnight2LBow" prob="0.1" />
-                <entity name="KingsKnight1XBow" prob="0.1" />
-                <entity name="KingsKnight2XBow" prob="0.1" />
-                <entity name="KingsChampion" prob="0.1" />
+        <entity name="KingsKnight1XBow" prob="0.1" />
+        <entity name="KingsKnight2XBow" prob="0.1" />
+        <entity name="KingsChampion" prob="0.1" />
 		<entity name="KingsAxeman" prob="0.1" />
-		<entity name="KingsHalberdier" prob="0.1" />	
+		<entity name="KingsHalberdier" prob="0.1" />
 	</append>
 
+	<!-- Entity groups used by spawners for sleeper volumes	-->
+	<!-- Friendly NPC entity groups -->
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS01']">
+        <entity name="Templar"/>
+		<entity name="TemplarCrossbowman"/>
+		<entity name="TemplarBowman"/>
+	    <entity name="Abbot"/>
+        <entity name="Friar"/>
+		<entity name="Monk"/>
+		<entity name="TheKing"/>
+		<entity name="MedievalTFP"/>
+        <entity name="MalePeasant1"/>
+	 	<entity name="MalePeasant2"/>
+        <entity name="GreenWitch"/>
+        <entity name="TheQueen"/>
+        <entity name="Barmaid"/>
+        <entity name="FemaleCrusader"/>
+        <entity name="ServingWench"/>
+		<entity name="PeasantGirl1"/>
+        <entity name="PeasantGirl2"/>
+        <entity name="PeasantGirl3"/>
+		<entity name="PeasantGirl4"/>
+		<entity name="KingsKnight1Sword"/>
+        <entity name="KingsKnight2Sword"/>
+        <entity name="KingsKnight3Sword"/>
+		<entity name="KingsKnight1LBow"/>
+		<entity name="KingsKnight2LBow"/>
+        <entity name="KingsKnight1XBow"/>
+        <entity name="KingsKnight2XBow"/>
+        <entity name="KingsChampion"/>
+		<entity name="KingsAxeman"/>
+		<entity name="KingsHalberdier"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS50']">
+        <entity name="Templar"/>
+		<entity name="TemplarCrossbowman"/>
+		<entity name="TemplarBowman"/>
+	    <entity name="Abbot"/>
+        <entity name="Friar"/>
+		<entity name="Monk"/>
+		<entity name="TheKing"/>
+		<entity name="MedievalTFP"/>
+        <entity name="MalePeasant1"/>
+	 	<entity name="MalePeasant2"/>
+        <entity name="GreenWitch"/>
+        <entity name="TheQueen"/>
+        <entity name="Barmaid"/>
+        <entity name="FemaleCrusader"/>
+        <entity name="ServingWench"/>
+		<entity name="PeasantGirl1"/>
+        <entity name="PeasantGirl2"/>
+        <entity name="PeasantGirl3"/>
+		<entity name="PeasantGirl4"/>
+		<entity name="KingsKnight1Sword"/>
+        <entity name="KingsKnight2Sword"/>
+        <entity name="KingsKnight3Sword"/>
+		<entity name="KingsKnight1LBow"/>
+		<entity name="KingsKnight2LBow"/>
+        <entity name="KingsKnight1XBow"/>
+        <entity name="KingsKnight2XBow"/>
+        <entity name="KingsChampion"/>
+		<entity name="KingsAxeman"/>
+		<entity name="KingsHalberdier"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS100']">
+        <entity name="Templar"/>
+		<entity name="TemplarCrossbowman"/>
+		<entity name="TemplarBowman"/>
+	    <entity name="Abbot"/>
+        <entity name="Friar"/>
+		<entity name="Monk"/>
+		<entity name="TheKing"/>
+		<entity name="MedievalTFP"/>
+        <entity name="MalePeasant1"/>
+	 	<entity name="MalePeasant2"/>
+        <entity name="GreenWitch"/>
+        <entity name="TheQueen"/>
+        <entity name="Barmaid"/>
+        <entity name="FemaleCrusader"/>
+        <entity name="ServingWench"/>
+		<entity name="PeasantGirl1"/>
+        <entity name="PeasantGirl2"/>
+        <entity name="PeasantGirl3"/>
+		<entity name="PeasantGirl4"/>
+		<entity name="KingsKnight1Sword"/>
+        <entity name="KingsKnight2Sword"/>
+        <entity name="KingsKnight3Sword"/>
+		<entity name="KingsKnight1LBow"/>
+		<entity name="KingsKnight2LBow"/>
+        <entity name="KingsKnight1XBow"/>
+        <entity name="KingsKnight2XBow"/>
+        <entity name="KingsChampion"/>
+		<entity name="KingsAxeman"/>
+		<entity name="KingsHalberdier"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS200']">
+        <entity name="Templar"/>
+		<entity name="TemplarCrossbowman"/>
+		<entity name="TemplarBowman"/>
+	    <entity name="Abbot"/>
+        <entity name="Friar"/>
+		<entity name="Monk"/>
+		<entity name="TheKing"/>
+		<entity name="MedievalTFP"/>
+        <entity name="MalePeasant1"/>
+	 	<entity name="MalePeasant2"/>
+        <entity name="GreenWitch"/>
+        <entity name="TheQueen"/>
+        <entity name="Barmaid"/>
+        <entity name="FemaleCrusader"/>
+        <entity name="ServingWench"/>
+		<entity name="PeasantGirl1"/>
+        <entity name="PeasantGirl2"/>
+        <entity name="PeasantGirl3"/>
+		<entity name="PeasantGirl4"/>
+		<entity name="KingsKnight1Sword"/>
+        <entity name="KingsKnight2Sword"/>
+        <entity name="KingsKnight3Sword"/>
+		<entity name="KingsKnight1LBow"/>
+		<entity name="KingsKnight2LBow"/>
+        <entity name="KingsKnight1XBow"/>
+        <entity name="KingsKnight2XBow"/>
+        <entity name="KingsChampion"/>
+		<entity name="KingsAxeman"/>
+		<entity name="KingsHalberdier"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS400']">
+        <entity name="Templar"/>
+		<entity name="TemplarCrossbowman"/>
+		<entity name="TemplarBowman"/>
+	    <entity name="Abbot"/>
+        <entity name="Friar"/>
+		<entity name="Monk"/>
+		<entity name="TheKing"/>
+		<entity name="MedievalTFP"/>
+        <entity name="MalePeasant1"/>
+	 	<entity name="MalePeasant2"/>
+        <entity name="GreenWitch"/>
+        <entity name="TheQueen"/>
+        <entity name="Barmaid"/>
+        <entity name="FemaleCrusader"/>
+        <entity name="ServingWench"/>
+		<entity name="PeasantGirl1"/>
+        <entity name="PeasantGirl2"/>
+        <entity name="PeasantGirl3"/>
+		<entity name="PeasantGirl4"/>
+		<entity name="KingsKnight1Sword"/>
+        <entity name="KingsKnight2Sword"/>
+        <entity name="KingsKnight3Sword"/>
+		<entity name="KingsKnight1LBow"/>
+		<entity name="KingsKnight2LBow"/>
+        <entity name="KingsKnight1XBow"/>
+        <entity name="KingsKnight2XBow"/>
+        <entity name="KingsChampion"/>
+		<entity name="KingsAxeman"/>
+		<entity name="KingsHalberdier"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyAllGroupGS800']">
+        <entity name="Templar"/>
+		<entity name="TemplarCrossbowman"/>
+		<entity name="TemplarBowman"/>
+	    <entity name="Abbot"/>
+        <entity name="Friar"/>
+		<entity name="Monk"/>
+		<entity name="TheKing"/>
+		<entity name="MedievalTFP"/>
+        <entity name="MalePeasant1"/>
+	 	<entity name="MalePeasant2"/>
+        <entity name="GreenWitch"/>
+        <entity name="TheQueen"/>
+        <entity name="Barmaid"/>
+        <entity name="FemaleCrusader"/>
+        <entity name="ServingWench"/>
+		<entity name="PeasantGirl1"/>
+        <entity name="PeasantGirl2"/>
+        <entity name="PeasantGirl3"/>
+		<entity name="PeasantGirl4"/>
+		<entity name="KingsKnight1Sword"/>
+        <entity name="KingsKnight2Sword"/>
+        <entity name="KingsKnight3Sword"/>
+		<entity name="KingsKnight1LBow"/>
+		<entity name="KingsKnight2LBow"/>
+        <entity name="KingsKnight1XBow"/>
+        <entity name="KingsKnight2XBow"/>
+        <entity name="KingsChampion"/>
+		<entity name="KingsAxeman"/>
+		<entity name="KingsHalberdier"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS01']">
+        <entity name="Templar"/>
+	    <entity name="Abbot"/>
+        <entity name="Friar"/>
+		<entity name="Monk"/>
+		<entity name="TheKing"/>
+		<entity name="MedievalTFP"/>
+        <entity name="MalePeasant1"/>
+	 	<entity name="MalePeasant2"/>
+        <entity name="GreenWitch"/>
+        <entity name="TheQueen"/>
+        <entity name="Barmaid"/>
+        <entity name="FemaleCrusader"/>
+        <entity name="ServingWench"/>
+		<entity name="PeasantGirl1"/>
+        <entity name="PeasantGirl2"/>
+        <entity name="PeasantGirl3"/>
+		<entity name="PeasantGirl4"/>
+		<entity name="KingsKnight1Sword"/>
+        <entity name="KingsKnight2Sword"/>
+        <entity name="KingsKnight3Sword"/>
+        <entity name="KingsChampion"/>
+		<entity name="KingsAxeman"/>
+		<entity name="KingsHalberdier"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS50']">
+        <entity name="Templar"/>
+	    <entity name="Abbot"/>
+        <entity name="Friar"/>
+		<entity name="Monk"/>
+		<entity name="TheKing"/>
+		<entity name="MedievalTFP"/>
+        <entity name="MalePeasant1"/>
+	 	<entity name="MalePeasant2"/>
+        <entity name="GreenWitch"/>
+        <entity name="TheQueen"/>
+        <entity name="Barmaid"/>
+        <entity name="FemaleCrusader"/>
+        <entity name="ServingWench"/>
+		<entity name="PeasantGirl1"/>
+        <entity name="PeasantGirl2"/>
+        <entity name="PeasantGirl3"/>
+		<entity name="PeasantGirl4"/>
+		<entity name="KingsKnight1Sword"/>
+        <entity name="KingsKnight2Sword"/>
+        <entity name="KingsKnight3Sword"/>
+        <entity name="KingsChampion"/>
+		<entity name="KingsAxeman"/>
+		<entity name="KingsHalberdier"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS100']">
+        <entity name="Templar"/>
+	    <entity name="Abbot"/>
+        <entity name="Friar"/>
+		<entity name="Monk"/>
+		<entity name="TheKing"/>
+		<entity name="MedievalTFP"/>
+        <entity name="MalePeasant1"/>
+	 	<entity name="MalePeasant2"/>
+        <entity name="GreenWitch"/>
+        <entity name="TheQueen"/>
+        <entity name="Barmaid"/>
+        <entity name="FemaleCrusader"/>
+        <entity name="ServingWench"/>
+		<entity name="PeasantGirl1"/>
+        <entity name="PeasantGirl2"/>
+        <entity name="PeasantGirl3"/>
+		<entity name="PeasantGirl4"/>
+		<entity name="KingsKnight1Sword"/>
+        <entity name="KingsKnight2Sword"/>
+        <entity name="KingsKnight3Sword"/>
+        <entity name="KingsChampion"/>
+		<entity name="KingsAxeman"/>
+		<entity name="KingsHalberdier"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS200']">
+        <entity name="Templar"/>
+	    <entity name="Abbot"/>
+        <entity name="Friar"/>
+		<entity name="Monk"/>
+		<entity name="TheKing"/>
+		<entity name="MedievalTFP"/>
+        <entity name="MalePeasant1"/>
+	 	<entity name="MalePeasant2"/>
+        <entity name="GreenWitch"/>
+        <entity name="TheQueen"/>
+        <entity name="Barmaid"/>
+        <entity name="FemaleCrusader"/>
+        <entity name="ServingWench"/>
+		<entity name="PeasantGirl1"/>
+        <entity name="PeasantGirl2"/>
+        <entity name="PeasantGirl3"/>
+		<entity name="PeasantGirl4"/>
+		<entity name="KingsKnight1Sword"/>
+        <entity name="KingsKnight2Sword"/>
+        <entity name="KingsKnight3Sword"/>
+        <entity name="KingsChampion"/>
+		<entity name="KingsAxeman"/>
+		<entity name="KingsHalberdier"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS400']">
+        <entity name="Templar"/>
+	    <entity name="Abbot"/>
+        <entity name="Friar"/>
+		<entity name="Monk"/>
+		<entity name="TheKing"/>
+		<entity name="MedievalTFP"/>
+        <entity name="MalePeasant1"/>
+	 	<entity name="MalePeasant2"/>
+        <entity name="GreenWitch"/>
+        <entity name="TheQueen"/>
+        <entity name="Barmaid"/>
+        <entity name="FemaleCrusader"/>
+        <entity name="ServingWench"/>
+		<entity name="PeasantGirl1"/>
+        <entity name="PeasantGirl2"/>
+        <entity name="PeasantGirl3"/>
+		<entity name="PeasantGirl4"/>
+		<entity name="KingsKnight1Sword"/>
+        <entity name="KingsKnight2Sword"/>
+        <entity name="KingsKnight3Sword"/>
+        <entity name="KingsChampion"/>
+		<entity name="KingsAxeman"/>
+		<entity name="KingsHalberdier"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyMeleeGroupGS800']">
+        <entity name="Templar"/>
+	    <entity name="Abbot"/>
+        <entity name="Friar"/>
+		<entity name="Monk"/>
+		<entity name="TheKing"/>
+		<entity name="MedievalTFP"/>
+        <entity name="MalePeasant1"/>
+	 	<entity name="MalePeasant2"/>
+        <entity name="GreenWitch"/>
+        <entity name="TheQueen"/>
+        <entity name="Barmaid"/>
+        <entity name="FemaleCrusader"/>
+        <entity name="ServingWench"/>
+		<entity name="PeasantGirl1"/>
+        <entity name="PeasantGirl2"/>
+        <entity name="PeasantGirl3"/>
+		<entity name="PeasantGirl4"/>
+		<entity name="KingsKnight1Sword"/>
+        <entity name="KingsKnight2Sword"/>
+        <entity name="KingsKnight3Sword"/>
+        <entity name="KingsChampion"/>
+		<entity name="KingsAxeman"/>
+		<entity name="KingsHalberdier"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS01']">
+		<entity name="TemplarCrossbowman"/>
+		<entity name="TemplarBowman"/>
+		<entity name="KingsKnight1LBow"/>
+		<entity name="KingsKnight2LBow"/>
+        <entity name="KingsKnight1XBow"/>
+        <entity name="KingsKnight2XBow"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS50']">
+		<entity name="TemplarCrossbowman"/>
+		<entity name="TemplarBowman"/>
+		<entity name="KingsKnight1LBow"/>
+		<entity name="KingsKnight2LBow"/>
+        <entity name="KingsKnight1XBow"/>
+        <entity name="KingsKnight2XBow"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS100']">
+		<entity name="TemplarCrossbowman"/>
+		<entity name="TemplarBowman"/>
+		<entity name="KingsKnight1LBow"/>
+		<entity name="KingsKnight2LBow"/>
+        <entity name="KingsKnight1XBow"/>
+        <entity name="KingsKnight2XBow"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS200']">
+		<entity name="TemplarCrossbowman"/>
+		<entity name="TemplarBowman"/>
+		<entity name="KingsKnight1LBow"/>
+		<entity name="KingsKnight2LBow"/>
+        <entity name="KingsKnight1XBow"/>
+        <entity name="KingsKnight2XBow"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS400']">
+		<entity name="TemplarCrossbowman"/>
+		<entity name="TemplarBowman"/>
+		<entity name="KingsKnight1LBow"/>
+		<entity name="KingsKnight2LBow"/>
+        <entity name="KingsKnight1XBow"/>
+        <entity name="KingsKnight2XBow"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyRangedGroupGS800']">
+		<entity name="TemplarCrossbowman"/>
+		<entity name="TemplarBowman"/>
+		<entity name="KingsKnight1LBow"/>
+		<entity name="KingsKnight2LBow"/>
+        <entity name="KingsKnight1XBow"/>
+        <entity name="KingsKnight2XBow"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS01']">
+        <entity name="Templar"/>
+		<entity name="TemplarCrossbowman"/>
+		<entity name="TemplarBowman"/>
+		<entity name="TheKing"/>
+        <entity name="TheQueen"/>
+        <entity name="FemaleCrusader"/>
+		<entity name="KingsKnight1Sword"/>
+        <entity name="KingsKnight2Sword"/>
+        <entity name="KingsKnight3Sword"/>
+		<entity name="KingsKnight1LBow"/>
+		<entity name="KingsKnight2LBow"/>
+        <entity name="KingsKnight1XBow"/>
+        <entity name="KingsKnight2XBow"/>
+        <entity name="KingsChampion"/>
+		<entity name="KingsAxeman"/>
+		<entity name="KingsHalberdier"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS50']">
+        <entity name="Templar"/>
+		<entity name="TemplarCrossbowman"/>
+		<entity name="TemplarBowman"/>
+		<entity name="TheKing"/>
+        <entity name="TheQueen"/>
+        <entity name="FemaleCrusader"/>
+		<entity name="KingsKnight1Sword"/>
+        <entity name="KingsKnight2Sword"/>
+        <entity name="KingsKnight3Sword"/>
+		<entity name="KingsKnight1LBow"/>
+		<entity name="KingsKnight2LBow"/>
+        <entity name="KingsKnight1XBow"/>
+        <entity name="KingsKnight2XBow"/>
+        <entity name="KingsChampion"/>
+		<entity name="KingsAxeman"/>
+		<entity name="KingsHalberdier"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS100']">
+        <entity name="Templar"/>
+		<entity name="TemplarCrossbowman"/>
+		<entity name="TemplarBowman"/>
+		<entity name="TheKing"/>
+        <entity name="TheQueen"/>
+        <entity name="FemaleCrusader"/>
+		<entity name="KingsKnight1Sword"/>
+        <entity name="KingsKnight2Sword"/>
+        <entity name="KingsKnight3Sword"/>
+		<entity name="KingsKnight1LBow"/>
+		<entity name="KingsKnight2LBow"/>
+        <entity name="KingsKnight1XBow"/>
+        <entity name="KingsKnight2XBow"/>
+        <entity name="KingsChampion"/>
+		<entity name="KingsAxeman"/>
+		<entity name="KingsHalberdier"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS200']">
+        <entity name="Templar"/>
+		<entity name="TemplarCrossbowman"/>
+		<entity name="TemplarBowman"/>
+		<entity name="TheKing"/>
+        <entity name="TheQueen"/>
+        <entity name="FemaleCrusader"/>
+		<entity name="KingsKnight1Sword"/>
+        <entity name="KingsKnight2Sword"/>
+        <entity name="KingsKnight3Sword"/>
+		<entity name="KingsKnight1LBow"/>
+		<entity name="KingsKnight2LBow"/>
+        <entity name="KingsKnight1XBow"/>
+        <entity name="KingsKnight2XBow"/>
+        <entity name="KingsChampion"/>
+		<entity name="KingsAxeman"/>
+		<entity name="KingsHalberdier"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS400']">
+        <entity name="Templar"/>
+		<entity name="TemplarCrossbowman"/>
+		<entity name="TemplarBowman"/>
+		<entity name="TheKing"/>
+        <entity name="TheQueen"/>
+        <entity name="FemaleCrusader"/>
+		<entity name="KingsKnight1Sword"/>
+        <entity name="KingsKnight2Sword"/>
+        <entity name="KingsKnight3Sword"/>
+		<entity name="KingsKnight1LBow"/>
+		<entity name="KingsKnight2LBow"/>
+        <entity name="KingsKnight1XBow"/>
+        <entity name="KingsKnight2XBow"/>
+        <entity name="KingsChampion"/>
+		<entity name="KingsAxeman"/>
+		<entity name="KingsHalberdier"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFriendlyBossGroupGS800']">
+        <entity name="Templar"/>
+		<entity name="TemplarCrossbowman"/>
+		<entity name="TemplarBowman"/>
+		<entity name="TheKing"/>
+        <entity name="TheQueen"/>
+        <entity name="FemaleCrusader"/>
+		<entity name="KingsKnight1Sword"/>
+        <entity name="KingsKnight2Sword"/>
+        <entity name="KingsKnight3Sword"/>
+		<entity name="KingsKnight1LBow"/>
+		<entity name="KingsKnight2LBow"/>
+        <entity name="KingsKnight1XBow"/>
+        <entity name="KingsKnight2XBow"/>
+        <entity name="KingsChampion"/>
+		<entity name="KingsAxeman"/>
+		<entity name="KingsHalberdier"/>
+	</append>
 	
+	<!-- Entity groups used by spawners for sleeper volumes	-->
+	<!-- Bandits NPC entity groups -->
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS01']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS50']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS100']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS200']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS400']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS800']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS01']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS50']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS100']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS200']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS400']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS800']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsBossGroupGS01']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsBossGroupGS50']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsBossGroupGS100']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsBossGroupGS200']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsBossGroupGS400']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsBossGroupGS800']">
+        <entity name="ChaosMarauder"/>
+	</append>
+
+	<!-- Enemy NPC entity groups -->
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAllGroupGS01']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAllGroupGS50']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAllGroupGS100']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAllGroupGS200']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAllGroupGS400']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAllGroupGS800']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyMeleeGroupGS01']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyMeleeGroupGS50']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyMeleeGroupGS100']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyMeleeGroupGS200']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyMeleeGroupGS400']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyMeleeGroupGS800']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyBossGroupGS01']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyBossGroupGS50']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyBossGroupGS100']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyBossGroupGS200']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyBossGroupGS400']">
+        <entity name="ChaosMarauder"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyBossGroupGS800']">
+        <entity name="ChaosMarauder"/>
+	</append>
 	
 </configs>

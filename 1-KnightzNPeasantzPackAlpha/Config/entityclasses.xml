@@ -996,7 +996,7 @@
 	        </effect_group>
 		</entity_class>
 
-                <entity_class name="KingsKnight1SLBow" extends="npcLBowTemplate"> 
+                <entity_class name="KingsKnight1LBowS" extends="npcLBowTemplate"> 
 			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Bronwen,Manley,Austin,Sherwin,Ty,Hallam,Lytton,Stewart" />				
@@ -1008,7 +1008,7 @@
 	        </effect_group>
 		</entity_class> 
 
-                <entity_class name="KingsKnight2SLBow" extends="npcLBowTemplate"> 
+                <entity_class name="KingsKnight2LBowS" extends="npcLBowTemplate"> 
 			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="Names" value="Bronwen,Manley,Austin,Sherwin,Ty,Hallam,Lytton,Stewart" />				
@@ -1020,7 +1020,7 @@
 	        </effect_group>
 		</entity_class> 
 
-		<entity_class name="KingsKnight1SXBow" extends="npcXBowTemplate"> 
+		<entity_class name="KingsKnight1XBowS" extends="npcXBowTemplate"> 
 			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="Names" value="Bronwen,Manley,Austin,Sherwin,Ty,Hallam,Lytton,Stewart" />			
@@ -1032,7 +1032,7 @@
 	        </effect_group>
 		</entity_class> 
 
-                <entity_class name="KingsKnight2SXBow" extends="npcXBowTemplate"> 
+                <entity_class name="KingsKnight2XBowS" extends="npcXBowTemplate"> 
 			<property name="Tags" value="entity,male,npc,ranged,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
                         <property name="Names" value="Bronwen,Manley,Austin,Sherwin,Ty,Hallam,Lytton,Stewart" />				
