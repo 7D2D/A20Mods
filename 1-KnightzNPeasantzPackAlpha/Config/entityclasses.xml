@@ -151,7 +151,7 @@
                 <entity_class name="GreenWitch" extends="npcAdvancedEmptyHandTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
 			<property name="Faction" value="whiteriver"/>
-			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+                        <property name="Names" value="Morgana,Camilla,Henriette,Helga,Morena,Hedvig" />		
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?GreenWitchDark"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
@@ -174,13 +174,16 @@
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
                         <property name="LookAtAngle" value="0"/>
-                        <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+                        <property name="PhysicsBody" value="ASCharacterStandard"/> 
+                        <effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>		
 		</entity_class>	
 
                 <entity_class name="TheQueen" extends="npcAdvancedEmptyHandTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
 			<property name="Faction" value="whiteriver"/>
-			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+                        <property name="Names" value="Circe,Anne,Margret,Matilda,Katerina,Philippa" />	
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?QueenDark"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
@@ -203,13 +206,16 @@
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
                         <property name="LookAtAngle" value="0"/>
-                        <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+                        <property name="PhysicsBody" value="ASCharacterStandard"/> 
+                        <effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>		
 		</entity_class>	
 
                 <entity_class name="Barmaid" extends="npcAdvancedEmptyHandTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
 			<property name="Faction" value="whiteriver"/>
-			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+                        <property name="Names" value="Giselle,Cristene,Marion,Johana,Emmeline,Elicia" />		
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?Barmaid2Dark"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
@@ -232,13 +238,16 @@
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
                         <property name="LookAtAngle" value="0"/>
-                        <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+                        <property name="PhysicsBody" value="ASCharacterStandard"/> 
+                        <effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>		
 		</entity_class>	
 
                 <entity_class name="FemaleCrusader" extends="npcAdvancedClubTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
 			<property name="Faction" value="whiteriver"/>
-			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+                        <property name="Names" value="Juliana,Alise,Emma,Angmar,Milicent,Sosanna" />	
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?FemaleCrusaderDark"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="KnightSword"/> 
@@ -271,7 +280,7 @@
                 <entity_class name="ServingWench" extends="npcAdvancedEmptyHandTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
 			<property name="Faction" value="whiteriver"/>
-			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+                        <property name="Names" value="Polly,Yvette,Jossy,Allie,Nancy,Simone" />		
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?Barmaid1Dark"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
@@ -295,12 +304,15 @@
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
                         <property name="LookAtAngle" value="0"/>
                         <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+                        <effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>	
 		</entity_class>	
 
                 <entity_class name="PeasantGirl1" extends="npcAdvancedEmptyHandTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
 			<property name="Faction" value="whiteriver"/>
-			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+                        <property name="Names" value="Eva,Marion,Ann,Liza,Cristina,May" />	
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?PeasantGurl1Dark"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
@@ -324,12 +336,15 @@
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
                         <property name="LookAtAngle" value="0"/>
                         <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+                        <effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>	
 		</entity_class>	
 
                 <entity_class name="PeasantGirl2" extends="npcAdvancedEmptyHandTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
 			<property name="Faction" value="whiteriver"/>
-			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+                        <property name="Names" value="Eva,Marion,Ann,Liza,Cristina,May" />	
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?PeasantGurl2Dark"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
@@ -353,12 +368,15 @@
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
                         <property name="LookAtAngle" value="0"/>
                         <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+                        <effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>	
 		</entity_class>	
 
                 <entity_class name="PeasantGirl3" extends="npcAdvancedEmptyHandTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
 			<property name="Faction" value="whiteriver"/>
-			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+                        <property name="Names" value="Eva,Marion,Ann,Liza,Cristina,May" />	
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?PeasantGurl3Dark"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
@@ -382,12 +400,15 @@
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
                         <property name="LookAtAngle" value="0"/>
                         <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+                        <effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>	
 		</entity_class>	
 
                 <entity_class name="PeasantGirl4" extends="npcAdvancedEmptyHandTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
 			<property name="Faction" value="whiteriver"/>
-			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+                        <property name="Names" value="Eva,Marion,Ann,Liza,Cristina,May" />
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?FemalePeasant9Dark"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
@@ -411,6 +432,9 @@
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
                         <property name="LookAtAngle" value="0"/>
                         <property name="PhysicsBody" value="KnightStandard"/>	
+                        <effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>	
 		</entity_class>	
 
                 <entity_class name="KingsKnight1Sword" extends="npcAdvancedClubTemplate"> 
@@ -689,7 +713,7 @@
                 <entity_class name="GreenWitchS" extends="npcEmptyHandTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
 			<property name="Faction" value="whiteriver"/>
-			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="Names" value="Morgana,Camilla,Henriette,Helga,Morena,Hedvig" />	
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?GreenWitchDark"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
@@ -713,12 +737,15 @@
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
                         <property name="LookAtAngle" value="0"/>
                         <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+                        <effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>	
 		</entity_class>	
 
                 <entity_class name="TheQueenS" extends="npcEmptyHandTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
 			<property name="Faction" value="whiteriver"/>
-			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="Names" value="Circe,Anne,Margret,Matilda,Katerina,Philippa" />	
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?QueenDark"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
@@ -742,12 +769,15 @@
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
                         <property name="LookAtAngle" value="0"/>
                         <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+                        <effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>	
 		</entity_class>	
 
                 <entity_class name="BarmaidS" extends="npcEmptyHandTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
 			<property name="Faction" value="whiteriver"/>
-			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="Names" value="Giselle,Cristene,Marion,Johana,Emmeline,Elicia" />	
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?Barmaid2Dark"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
@@ -771,12 +801,15 @@
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
                         <property name="LookAtAngle" value="0"/>
                         <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+                        <effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>	
 		</entity_class>	
 
                 <entity_class name="FemaleCrusaderS" extends="npcClubTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
 			<property name="Faction" value="whiteriver"/>
-			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="Names" value="Juliana,Alise,Emma,Angmar,Milicent,Sosanna" />	
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?FemaleCrusaderDark"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="KnightSword"/> 
@@ -809,7 +842,7 @@
                 <entity_class name="ServingWenchS" extends="npcEmptyHandTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
 			<property name="Faction" value="whiteriver"/>
-			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="Names" value="Polly,Yvette,Jossy,Allie,Nancy,Simone" />	
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?Barmaid1Dark"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
@@ -832,13 +865,16 @@
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
                         <property name="LookAtAngle" value="0"/>
-                        <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+                        <property name="PhysicsBody" value="ASCharacterStandard"/> 
+                        <effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>		
 		</entity_class>	
 
                 <entity_class name="PeasantGirl1S" extends="npcEmptyHandTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
 			<property name="Faction" value="whiteriver"/>
-			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+			<property name="Names" value="Eva,Marion,Ann,Liza,Cristina,May" />	
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?PeasantGurl1Dark"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
@@ -862,12 +898,15 @@
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
                         <property name="LookAtAngle" value="0"/>
                         <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+                        <effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>	
 		</entity_class>	
 
                 <entity_class name="PeasantGirl2S" extends="npcEmptyHandTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
 			<property name="Faction" value="whiteriver"/>
-			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+                        <property name="Names" value="Eva,Marion,Ann,Liza,Cristina,May" />
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?PeasantGurl2Dark"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
@@ -891,12 +930,15 @@
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
                         <property name="LookAtAngle" value="0"/>
                         <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+                        <effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>	
 		</entity_class>	
 
                 <entity_class name="PeasantGirl3S" extends="npcEmptyHandTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
 			<property name="Faction" value="whiteriver"/>
-			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+                        <property name="Names" value="Eva,Marion,Ann,Liza,Cristina,May" />
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?PeasantGurl3Dark"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
@@ -920,12 +962,15 @@
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
                         <property name="LookAtAngle" value="0"/>
                         <property name="PhysicsBody" value="ASCharacterStandard"/> 	
+                        <effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>	
 		</entity_class>	
 
                 <entity_class name="PeasantGirl4S" extends="npcEmptyHandTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,cp,DRMid"/> <!-- cp tag means use the bonebased fire particle  -->
 			<property name="Faction" value="whiteriver"/>
-			<property name="Names" value="Nancy,Nan,Nanny,Nanna,Ratchet,Nightingale" />	
+                        <property name="Names" value="Eva,Marion,Ann,Liza,Cristina,May" />
 			<property name="DanceType" value="2" />
 			<property name="Mesh" value="#@modfolder:Resources/Knightz.unity3d?FemalePeasant9Dark"/>
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
@@ -949,6 +994,9 @@
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
                         <property name="LookAtAngle" value="0"/>
                         <property name="PhysicsBody" value="KnightStandard"/>	
+                        <effect_group name="IsTimid"> <!-- This activates the Timid behavior -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Timid"/>		
+			</effect_group>	
 		</entity_class>	
 
                 <entity_class name="KingsKnight1SwordS" extends="npcClubTemplate"> 
