@@ -1,0 +1,234 @@
+<configs>
+
+	 <append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
+		<entity name="OrcShaman" prob="0.1" />
+        <entity name="OrcSlavemaster" prob="0.1" />
+		<entity name="OrcMatron" prob="0.1" />
+		<entity name="OrcSlaveBald" prob="0.1" />
+		<entity name="OrcSlaveBeard" prob="0.1" />     
+        <entity name="OrcBerzerker" prob="0.1" />
+		<entity name="OrcUruk" prob="0.1" />    
+	</append>
+	
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
+		<entity name="OrcShaman" prob="0.025" />
+        <entity name="OrcSlavemaster" prob="0.025" />
+		<entity name="OrcMatron" prob="0.025" />
+		<entity name="OrcSlaveBald" prob="0.025" />
+		<entity name="OrcSlaveBeard" prob="0.025" />  
+        <entity name="OrcBerzerker" prob="0.025" />
+		<entity name="OrcUruk" prob="0.025" />     		
+	</append>
+	
+	<append xpath="/entitygroups/entitygroup[@name='SnowZombies']">
+		<entity name="OrcShaman" prob="0.1" />
+        <entity name="OrcSlavemaster" prob="0.1" />
+		<entity name="OrcMatron" prob="0.1" />
+		<entity name="OrcSlaveBald" prob="0.1" />
+		<entity name="OrcSlaveBeard" prob="0.1" />  
+        <entity name="OrcBerzerker" prob="0.1" />
+		<entity name="OrcUruk" prob="0.1" />     
+	</append>	
+
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']">
+	    <entity name="OrcShaman" prob="0.1" />
+        <entity name="OrcSlavemaster" prob="0.1" />
+		<entity name="OrcMatron" prob="0.1" />
+		<entity name="OrcSlaveBald" prob="0.1" />
+		<entity name="OrcSlaveBeard" prob="0.1" /> 
+		<entity name="OrcBerzerker" prob="0.1" />
+		<entity name="OrcUruk" prob="0.1" />      
+	</append>
+
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']">
+		<entity name="OrcShaman" prob="0.1" />
+        <entity name="OrcSlavemaster" prob="0.1" />
+		<entity name="OrcMatron" prob="0.1" />
+		<entity name="OrcSlaveBald" prob="0.1" />
+		<entity name="OrcSlaveBeard" prob="0.1" />    
+		<entity name="OrcBerzerker" prob="0.1" />
+		<entity name="OrcUruk" prob="0.1" />    	
+	</append>
+	
+	<!-- Bandit Sleepers - ALL -->
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS01']">
+        <entity name="OrcShaman"/>
+        <entity name="OrcSlavemaster"/>
+        <entity name="OrcMatron"/>
+        <entity name="OrcSlaveBald"/>
+        <entity name="OrcSlaveBeard"/>	
+		<entity name="OrcBerzerker"/>
+		<entity name="OrcUruk"/>    		
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS50']">
+        <entity name="OrcShaman"/>
+        <entity name="OrcSlavemaster"/>
+        <entity name="OrcMatron"/>
+        <entity name="OrcSlaveBald"/>
+        <entity name="OrcSlaveBeard"/>	
+		<entity name="OrcBerzerker"/>
+		<entity name="OrcUruk"/>    		
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS100']">
+        <entity name="OrcShaman"/>
+        <entity name="OrcSlavemaster"/>
+        <entity name="OrcMatron"/>
+        <entity name="OrcSlaveBald"/>
+        <entity name="OrcSlaveBeard"/>		
+		<entity name="OrcBerzerker"/>
+		<entity name="OrcUruk"/>    
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS200']">
+		<entity name="OrcShaman"/>
+        <entity name="OrcSlavemaster"/>
+        <entity name="OrcMatron"/>
+        <entity name="OrcSlaveBald"/>
+        <entity name="OrcSlaveBeard"/>	
+		<entity name="OrcBerzerker"/>
+		<entity name="OrcUruk"/>    	
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS400']">
+        <entity name="OrcShaman"/>
+        <entity name="OrcSlavemaster"/>
+        <entity name="OrcMatron"/>
+        <entity name="OrcSlaveBald"/>
+        <entity name="OrcSlaveBeard"/>	
+		<entity name="OrcBerzerker"/>
+		<entity name="OrcUruk"/>    	
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS800']">
+        <entity name="OrcShaman"/>
+        <entity name="OrcSlavemaster"/>
+        <entity name="OrcMatron"/>
+        <entity name="OrcSlaveBald"/>
+        <entity name="OrcSlaveBeard"/>	
+		<entity name="OrcBerzerker"/>
+		<entity name="OrcUruk"/>    	
+	</append>
+	<!-- Bandit Sleepers - MELEE -->	
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS01']">
+        <entity name="OrcShaman"/>
+        <entity name="OrcSlavemaster"/>
+        <entity name="OrcSlaveBald"/>	
+        <entity name="OrcSlaveBeard"/>	
+		<entity name="OrcBerzerker"/>
+		<entity name="OrcUruk"/>    
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS50']">
+        <entity name="OrcShaman"/>
+        <entity name="OrcSlavemaster"/>
+        <entity name="OrcSlaveBald"/>	
+        <entity name="OrcSlaveBeard"/>	
+		<entity name="OrcBerzerker"/>
+		<entity name="OrcUruk"/>    
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS100']">
+        <entity name="OrcShaman"/>
+        <entity name="OrcSlavemaster"/>
+        <entity name="OrcSlaveBald"/>	
+        <entity name="OrcSlaveBeard"/>	
+		<entity name="OrcBerzerker"/>
+		<entity name="OrcUruk"/>    
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS200']">
+        <entity name="OrcShaman"/>
+        <entity name="OrcSlavemaster"/>
+        <entity name="OrcSlaveBald"/>	
+        <entity name="OrcSlaveBeard"/>	
+		<entity name="OrcBerzerker"/>
+		<entity name="OrcUruk"/>    
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS400']">
+        <entity name="OrcShaman"/>
+        <entity name="OrcSlavemaster"/>
+        <entity name="OrcSlaveBald"/>	
+        <entity name="OrcSlaveBeard"/>	
+		<entity name="OrcBerzerker"/>
+		<entity name="OrcUruk"/>    
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS800']">
+        <entity name="OrcShaman"/>
+        <entity name="OrcSlavemaster"/>
+        <entity name="OrcSlaveBald"/>	
+        <entity name="OrcSlaveBeard"/>	
+		<entity name="OrcBerzerker"/>
+		<entity name="OrcUruk"/>    
+	</append>
+	
+	<!-- Bandit Sleepers - RANGED -->	
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsRangedGroupGS01']">
+        <entity name="OrcMatron"/>       			
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsRangedGroupGS50']">
+        <entity name="OrcMatron"/>       			
+	</append>	
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsRangedGroupGS100']">
+        <entity name="OrcMatron"/>        				
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsRangedGroupGS200']">
+        <entity name="OrcMatron"/>        			
+	</append>	
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsRangedGroupGS400']">
+        <entity name="OrcMatron"/>        			
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsRangedGroupGS800']">
+        <entity name="OrcMatron"/>      			
+	</append>
+	
+	<!-- Bandit Sleepers - BOSS -->	
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsBossGroupGS01']">
+        <entity name="OrcShaman"/>
+        <entity name="OrcSlavemaster"/>
+        <entity name="OrcMatron"/>
+        <entity name="OrcSlaveBald"/>
+        <entity name="OrcSlaveBeard"/>	
+		<entity name="OrcBerzerker"/>
+		<entity name="OrcUruk"/>    				
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsBossGroupGS50']">
+        <entity name="OrcShaman"/>
+        <entity name="OrcSlavemaster"/>
+        <entity name="OrcMatron"/>
+        <entity name="OrcSlaveBald"/>
+        <entity name="OrcSlaveBeard"/>	
+		<entity name="OrcBerzerker"/>
+		<entity name="OrcUruk"/>    				
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsBossGroupGS100']">
+        <entity name="OrcShaman"/>
+        <entity name="OrcSlavemaster"/>
+        <entity name="OrcMatron"/>
+        <entity name="OrcSlaveBald"/>
+        <entity name="OrcSlaveBeard"/>	
+		<entity name="OrcBerzerker"/>
+		<entity name="OrcUruk"/>    				
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsBossGroupGS200']">
+        <entity name="OrcShaman"/>
+        <entity name="OrcSlavemaster"/>
+        <entity name="OrcMatron"/>
+        <entity name="OrcSlaveBald"/>
+        <entity name="OrcSlaveBeard"/>	
+		<entity name="OrcBerzerker"/>
+		<entity name="OrcUruk"/>    				
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsBossGroupGS400']">
+        <entity name="OrcShaman"/>
+        <entity name="OrcSlavemaster"/>
+        <entity name="OrcMatron"/>
+        <entity name="OrcSlaveBald"/>
+        <entity name="OrcSlaveBeard"/>	
+		<entity name="OrcBerzerker"/>
+		<entity name="OrcUruk"/>    				
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsBossGroupGS800']">
+        <entity name="OrcShaman"/>
+        <entity name="OrcSlavemaster"/>
+        <entity name="OrcMatron"/>
+        <entity name="OrcSlaveBald"/>
+        <entity name="OrcSlaveBeard"/>	
+		<entity name="OrcBerzerker"/>
+		<entity name="OrcUruk"/>    				
+	</append>	
+	
+</configs>
