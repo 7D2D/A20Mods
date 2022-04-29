@@ -3106,8 +3106,8 @@
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Class" value="EntityEnemySDX, SCore" />
 			<property name="IsEnemyEntity" value="true"/> 
-		</entity_class>			
-		
+		</entity_class>	
+
 		<entity_class name="npcHarleyClub" extends="npcClubTemplate"> 
 			<property name="Tags" value="entity,female,npc,melee,voiceharley,bandit"/>
 			<property name="Faction" value="bandits"/>
@@ -3682,7 +3682,27 @@
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+		</entity_class>	
+		<entity_class name="npcHarleyVomitHand" extends="npcHarleyEmptyHand"> <!-- testing -->
+			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
+			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
+			<property name="AIPackages" value="NPCModBasicMeleeNoChat, NPCModNPCShortRangedVomit"/>
+			<property name="HandItem" value="meleeHandVomit"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeHandVomit"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeHandVomit"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeHandVomit"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="750" />
+			<property name="ExperienceGain" value="600"/> 
+			<property name="RightHandJointName" value="Head" />
+			<effect_group name="WeaponType"> 
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="EmptyHandUser"/>
+			</effect_group>
 		</entity_class>			
+
+		
 		
 		<!--  Baker  -->
 

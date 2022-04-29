@@ -887,6 +887,32 @@
 				</action>
 			</ai_package>	
 			
+			<ai_package name="NPCModNPCShortRangedVomit" entity_filter="IsEnemy" > <!-- props to the team, especially Ramsey, for this upgraded code  -->
+				<action name="MoveToEnemyShortRanged" weight="4">
+					<task class="MoveToAttackTargetSDX, SCore" run="true" action_index="1" />
+					<consideration class="TargetDistance" flip_x="true" min="15" curve="threshold" /> <!-- this means move to target if within 15 to max range  -->
+					<consideration class="FailOnDistanceToLeader, Score" max_distance="30" />
+					<consideration class="CanSeeTarget, SCore" />
+					<consideration class="NotHasOrder, SCore" order="Stay" />
+				</action>
+				<action name="VomitAttackClose" weight="5">
+					<task class="AttackTargetEntitySDX, SCore" action_index="2" />
+					<consideration class="FailOnDistanceToLeader, Score" max_distance="30" />
+					<consideration class="CanSeeTarget, SCore" />
+					<!-- <consideration class="InWeaponRange, SCore" action_index="2" /> -->
+					<consideration class="SelfNotHasBuff, SCore" buffs="IsHealing,RandomIdle,buffHitStun" />
+				</action>
+				<action name="MeleeRangedAttack" weight="6">
+					<task class="AttackTargetEntitySDX, SCore" action_index="0"/>
+					<consideration class="FailOnDistanceToLeader, Score" max_distance="30"/>
+					<consideration class="InWeaponRange, SCore"  action_index="0"  /> 
+					<consideration class="CanSeeTarget, SCore"/>
+					<consideration class="SelfNotHasBuff, SCore" buffs="IsHealing,buffHitStun"/>	
+				</action>
+			</ai_package>	
+			
+	
+			
 			<ai_package name="NPCModNPCMediumRangedBasic" entity_filter="IsEnemy" > <!-- props to the team, especially Ramsay, for this upgraded code  -->
 				<action name="MoveToEnemyMediumRanged" weight="4">
 					<task class="MoveToAttackTargetSDX, SCore" run="true" action_index="1" />
