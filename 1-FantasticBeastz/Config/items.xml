@@ -1,0 +1,87 @@
+<configs>
+	<append xpath="/items">
+	
+		<item name="NPCFantasticBeastzLoadHack01">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/FantasticBeastz.unity3d?HarpyDark"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/FantasticBeastz.unity3d?HarpyDark"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> <!-- STK resource -->
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>
+		
+		<item name="meleeHandanimalHostileDragon">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="Delay" value=".7"/>
+				<!-- obsolete if rounds per minute exists -->
+				<property name="DamageEntity" value="5"/>
+				<property name="DamageBlock" value="5"/>
+				<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch,buffBurningZombie"/></property>
+			<property class="Action1">
+				<property name="Class" value="Vomit"/>
+				<property name="Hitmask_override" value="Arrow"/>
+				<property name="Delay" value=".5"/>
+				<property name="Infinite_ammo" value="true"/>
+				<property name="Magazine_items" value="ammoProjectileanimalHostileDragon"/>
+				<property name="Range" value="1.75"/> <!-- Testers 1.65 default for parent -->
+				<property name="Sphere" value=".1"/> <!--Testers -->
+				<property name="Sound_warning" value=""/>
+				<property name="Sound_start" value=""/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value=""/>
+				<property name="Sound_reload" value=""/>
+				<property name="Buff" value="buffBurningZombie"/></property>
+			<effect_group name="meleeHandArchon" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="1"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="6"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="5"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="5"/>
+				<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
+				<passive_effect name="MaxRange" operation="base_set" value="50"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value="0.90" tags="buffBurningZombie"/>
+			</effect_group>
+		</item>
+		<item name="ammoProjectileanimalHostileDragon">
+			<!--property name="Meshfile" value="particleeffects/p_onFire"/-->
+			<property name="Meshfile" value="particleeffects/p_fire_small"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action1">
+				<property name="Class" value="Projectile"/>
+				<property name="DamageEntity" value="20"/>
+				<property name="DamageBlock" value="20"/>
+				<property name="Explosion.ParticleIndex" value="12"/>
+				<property name="Explosion.RadiusEntities" value="2"/>
+				<property name="Velocity" value="13"/>
+				<property name="FlyTime" value="6"/>
+				<property name="LifeTime" value="8"/>
+				<property name="CollisionRadius" value=".5"/>
+				<property name="Buff" value="buffBurningZombie"/></property>
+			<effect_group name="ammoProjectileanimalHostileDragon" tiered="false">
+				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".20" tags="buffInfectionCatch"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value="0.90" tags="buffBurningZombie"/>
+				
+				<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="selfAOE" range="12" buff="buffArchon">
+					<requirement name="EntityTagCompare" target="other" tags="zombie"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="infectionZombieHit" operation="set" value="60"/>
+				<!--InfectionRadiated-->
+			</effect_group>
+		</item>
+              
+	</append>
+</configs>

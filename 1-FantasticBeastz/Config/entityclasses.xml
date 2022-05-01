@@ -1,0 +1,396 @@
+<configs>
+
+	<append xpath="/entity_classes">
+                
+                <!-- models by Protofactor Inc Purchased for use in NPC Mod  -->
+
+             
+	        <entity_class name="Harpy" extends="animalTemplateTimidFlying">
+			<property name="Class" value="EntityVulture"/>
+			<property name="Mesh" value="#@modfolder:Resources/FantasticBeastz.unity3d?HarpyDark" />
+			<property name="Tags" value="entity,animal,hostile,template"/>
+			<property name="Faction" value="aggressiveanimalslarge"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="HandItem" value="meleeHandAnimalBear"/>
+			<property name="IsEnemyEntity" value="true"/>
+			<property name="MaxViewAngle" value="240"/>
+			<property name="SightRange" value="90"/>
+			<property name="MoveSpeed" value="1"/>
+			<property name="MoveSpeedAggro" value="2.1, 2.1"/> 
+			<property name="MaxTurnSpeed" value="190"/>
+                        <property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam"/>
+			<property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert"/>
+			<property name="SoundAttack" value="Enemies/Base_Zombie_Female2/zombiefemale2attack"/>
+			<property name="SoundHurt" value="Enemies/Base_Zombie_Female2/zombiefemale2pain"/>
+			<property name="SoundDeath" value="Enemies/Base_Zombie_Female2/zombiefemale2death"/>
+			<property name="SoundSense" value="Enemies/Base_Zombie_Female2/zombiefemale2sense"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+                        <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		</entity_class> 
+
+                <entity_class name="Griffon" extends="animalTemplateTimidFlying">
+			<property name="Class" value="EntityVulture"/>
+			<property name="Mesh" value="#@modfolder:Resources/FantasticBeastz.unity3d?GriffonDark" />
+			<property name="Tags" value="entity,animal,hostile,template"/>
+			<property name="Faction" value="aggressiveanimalslarge"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="HandItem" value="meleeHandAnimalBear"/>
+			<property name="IsEnemyEntity" value="true"/>
+			<property name="MaxViewAngle" value="240"/>
+			<property name="SightRange" value="90"/>
+			<property name="MoveSpeed" value="1"/>
+			<property name="MoveSpeedAggro" value="2.1, 2.1"/> 
+			<property name="MaxTurnSpeed" value="190"/>
+                        <property name="SoundRandom" value="Animals/Vulture/vultureroam"/>
+	                <property name="SoundAlert" value="Animals/Vulture/vulturealert"/>
+	                <property name="SoundHurt" value="Animals/Vulture/vulturepain"/>
+	                <property name="SoundDeath" value="Animals/Vulture/vulturedeath"/>
+	                <property name="SoundAttack" value="Animals/Vulture/vultureattack"/>
+	                <property name="SoundSense" value="Animals/Vulture/vulturesense"/>
+	                <property name="SoundGiveUp" value="Animals/Vulture/vulturegiveup"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+                                <passive_effect name="PhysicalDamageResist" operation="base_set" value="30" />
+			</effect_group>
+                <property class="Boundary" >
+                        <property name="BoundaryBox" value="3.0,3.0,2.0" />
+                        <property name="Center" value="0.0,1.5,0.0"/>
+                </property> 
+                        <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		</entity_class> 
+
+                <entity_class name="FireBreathingDragon" extends="animalTemplateHostileFlying">
+			<property name="Class" value="EntityVulture"/>
+			<property name="Mesh" value="#@modfolder:Resources/FantasticBeastz.unity3d?DragonDark" />
+			<property name="Tags" value="entity,animal,hostile,template"/>
+			<property name="Faction" value="aggressiveanimalslarge"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="HandItem" value="meleeHandanimalHostileDragon"/>
+			<property name="IsEnemyEntity" value="true"/>
+			<property name="MaxViewAngle" value="240"/>
+			<property name="SightRange" value="90"/>
+			<property name="MoveSpeed" value="1"/>
+			<property name="MoveSpeedAggro" value="2.1, 2.1"/> 
+			<property name="MaxTurnSpeed" value="190"/>
+                        <property name="RightHandJointName" value="Jaw"/>
+                        <property name="SoundHurt" value="Animals/Bear/bearpain"/>
+	                <property name="SoundDeath" value="Animals/Bear/beardeath"/>
+	                <property name="SoundRandom" value="Animals/Bear/bearroam"/>
+	                <property name="SoundSense" value="Animals/Bear/bearsense"/>
+	                <property name="SoundAlert" value="Animals/Bear/bearalert"/>
+	                <property name="SoundAttack" value="Animals/Bear/bearattack"/>
+	                <property name="SoundGiveUp" value="Animals/Bear/beargiveup"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="5000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+                                <passive_effect name="PhysicalDamageResist" operation="base_set" value="90" />
+			</effect_group>
+                <property class="Boundary" >
+                        <property name="BoundaryBox" value="3.0,3.0,2.0" />
+                        <property name="Center" value="0.0,1.5,0.0"/>
+                </property> 
+                        <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		</entity_class>
+		
+               <entity_class name="AcidBreathingDragon" extends="animalTemplateTimidFlying">
+			<property name="Class" value="EntityVulture"/>
+			<property name="Mesh" value="#@modfolder:Resources/FantasticBeastz.unity3d?DragonDark" />
+			<property name="Tags" value="entity,animal,hostile,template"/>
+			<property name="Faction" value="aggressiveanimalslarge"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="HandItem" value="meleeHandZombieCopRadiated"/>
+			<property name="IsEnemyEntity" value="true"/>
+			<property name="MaxViewAngle" value="240"/>
+			<property name="SightRange" value="90"/>
+			<property name="MoveSpeed" value="1"/>
+			<property name="MoveSpeedAggro" value="2.1, 2.1"/> 
+			<property name="MaxTurnSpeed" value="190"/>
+                        <property name="RightHandJointName" value="Jaw"/>
+                        <property name="SoundHurt" value="Animals/Bear/bearpain"/>
+	                <property name="SoundDeath" value="Animals/Bear/beardeath"/>
+	                <property name="SoundRandom" value="Animals/Bear/bearroam"/>
+	                <property name="SoundSense" value="Animals/Bear/bearsense"/>
+	                <property name="SoundAlert" value="Animals/Bear/bearalert"/>
+	                <property name="SoundAttack" value="Animals/Bear/bearattack"/>
+	                <property name="SoundGiveUp" value="Animals/Bear/beargiveup"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="5000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+                                <passive_effect name="PhysicalDamageResist" operation="base_set" value="90" />
+			</effect_group>
+                <property class="Boundary" >
+                        <property name="BoundaryBox" value="3.0,3.0,2.0" />
+                        <property name="Center" value="0.0,1.5,0.0"/>
+                </property> 
+                        <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		</entity_class> 		
+
+                <entity_class name="Pegasus" >
+			<property name="Class" value="EntityHornet"/>
+			<property name="LookAtAngle" value="0"/> <!-- A19 , add if you dont want animals to head track  -->			
+			<property name="Mesh" value="#@modfolder:Resources/FantasticBeastz.unity3d?PegasusDark" />
+			<property name="Tags" value="entity,animal,timid,template"/>
+			<property name="Faction" value="animals"/>
+			<property name="SurfaceCategory" value="organic"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="ModelType" value="Standard"/>
+			<property name="HandItem" value="meleeHandAnimalBear"/>
+			<property name="MaxViewAngle" value="1"/> <!-- Reduce sight and angle to blind this actually hostile animal, can see you, wont attack you -->
+			<property name="SightRange" value="1"/>
+			<property name="MoveSpeed" value="1"/>
+			<property name="MoveSpeedAggro" value="2.1, 2.1"/> 
+			<property name="MaxTurnSpeed" value="190"/>
+			<property name="DeadBodyHitPoints" value="100"/>
+			<property name="HasRagdoll" value="true"/> <!-- No actual ragdoll but needed for dedi, but make sure you dont have a E_Bipded_Root tag on the entity though or boom! -->
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="Weight" value="30"/>
+			<property name="Mass" value="50"/>
+			<property name="Parent" value="Animals"/>
+			<property name="Prefab" value="NPC"/>
+			<property name="EntityType" value="Animal"/>
+			<property name="IsEntityAnimal" value="true"/>
+			<property name="IsEnemyEntity" value="false"/> <!-- Set this if you want this entity to be spawned when user chooses 'enemy entities off' -->
+			<property name="Faction" value="animals"/>
+			<property name="SoundRandomTime" value="10.0"/>
+			<property name="SoundRandom" value="" />
+			<property name="SoundAlert" value=""/>
+                        <property name="SoundHurt" value="Animals/stagpain"/>
+	                <property name="SoundDeath" value="Animals/stagdeath"/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="AIPathCostScale" value=".8, 1"/>
+			<property name="AITask-1" value="Wander"/>
+			<property name="AITask-2" value=""/>
+			<property name="Immunity" value="sickness;disease;wellness"/> 
+			<property name="DismemberMultiplierLegs" value="0"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+			</effect_group>
+		</entity_class> 
+
+                <entity_class name="GiantBat" extends="animalTemplateTimidFlying">
+			<property name="Class" value="EntityVulture"/>
+			<property name="Mesh" value="#@modfolder:Resources/FantasticBeastz.unity3d?GiantBatDark" />
+			<property name="Tags" value="entity,animal,hostile,template"/>
+			<property name="Faction" value="aggressiveanimalslarge"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="HandItem" value="meleeHandAnimalBear"/>
+			<property name="IsEnemyEntity" value="true"/>
+			<property name="MaxViewAngle" value="240"/>
+			<property name="SightRange" value="90"/>
+			<property name="MoveSpeed" value="1"/>
+			<property name="MoveSpeedAggro" value="2.1, 2.1"/> 
+			<property name="MaxTurnSpeed" value="190"/>
+                        <property name="SoundRandom" value="Animals/Vulture/vultureroam"/>
+	                <property name="SoundAlert" value="Animals/Vulture/vulturealert"/>
+	                <property name="SoundHurt" value="Animals/Vulture/vulturepain"/>
+	                <property name="SoundDeath" value="Animals/Vulture/vulturedeath"/>
+	                <property name="SoundAttack" value="Animals/Vulture/vultureattack"/>
+	                <property name="SoundSense" value="Animals/Vulture/vulturesense"/>
+	                <property name="SoundGiveUp" value="Animals/Vulture/vulturegiveup"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="500"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+                <property class="Boundary" >
+                        <property name="BoundaryBox" value="3.0,3.0,2.0" />
+                        <property name="Center" value="0.0,1.5,0.0"/>
+                </property> 
+                        <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		</entity_class> 
+
+                <entity_class name="Gargoyle" extends="animalTemplateTimidFlying">
+			<property name="Class" value="EntityVulture"/>
+                        <property name="Mesh" value="#@modfolder:Resources/FantasticBeastz.unity3d?GargoyleDark" />
+			<property name="Tags" value="entity,animal,hostile,template"/>
+			<property name="Faction" value="aggressiveanimalslarge"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="HandItem" value="meleeHandAnimalBear"/>
+			<property name="IsEnemyEntity" value="true"/>
+			<property name="MaxViewAngle" value="240"/>
+			<property name="SightRange" value="90"/>
+			<property name="MoveSpeed" value="1"/>
+			<property name="MoveSpeedAggro" value="2.1, 2.1"/> 
+			<property name="MaxTurnSpeed" value="190"/>
+                        <property name="SoundRandom" value="Animals/Vulture/vultureroam"/>
+	                <property name="SoundAlert" value="Animals/Vulture/vulturealert"/>
+	                <property name="SoundHurt" value="Animals/Vulture/vulturepain"/>
+	                <property name="SoundDeath" value="Animals/Vulture/vulturedeath"/>
+	                <property name="SoundAttack" value="Animals/Vulture/vultureattack"/>
+	                <property name="SoundSense" value="Animals/Vulture/vulturesense"/>
+	                <property name="SoundGiveUp" value="Animals/Vulture/vulturegiveup"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="600"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+                                <passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
+			</effect_group>
+                        <property name="SurfaceCategory" value="stone"/>
+		</entity_class> 
+
+                <entity_class name="Manticore" >	
+			<property name="Tags" value="entity,animal,hostile,template"/>
+			<property name="LookAtAngle" value="0"/> <!-- A19 , add if you dont want animals to head track  -->
+			<property name="ModelType" value="Standard"/>
+			<property name="Prefab" value="NPC"/>
+			<property name="Class" value="EntityEnemyAnimal"/>
+			<property name="RotateToGround" value="false"/>
+			<property name="Parent" value="Animals"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 			
+			<property name="Faction" value="aggressiveanimalslarge"/>
+			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
+			<property name="CompassIcon" value="ui_game_symbol_enemy_dot" />
+			<property name="CompassUpIcon" value="ui_game_symbol_enemy_dot_up" />
+			<property name="CompassDownIcon" value="ui_game_symbol_enemy_dot_down" />
+			<property name="TrackerIcon" value="ui_game_symbol_animal_tracker"/>
+			<property name="Weight" value="100"/>
+			<property name="HasRagdoll" value="true"/> 
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value=".1"/>
+			<property name="PhysicsBody" value="ArcticFox"/>
+			<property name="AIGroupCircle" value="1"/>
+			<property name="AINoiseSeekDist" value="3"/>
+			<property name="AIPathCostScale" value=".4, .6"/>
+			<property name="Immunity" value="sickness;disease;wellness"/>			
+			<property name="Mass" value="40"/>
+			<property name="IsEntityAnimal" value="true"/>
+			<property name="IsEnemyEntity" value="true"/> 			
+			<property name="Mesh" value="#@modfolder:Resources/FantasticBeastz.unity3d?ManticoreDark"/>
+			<property name="MoveSpeed" value=".3"/>
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedRand" value="-.2, .2"/>
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="SwimSpeed" value="1.2"/>
+			<property name="SwimStrokeRate" value="1.1,1.5"/>
+			<property name="HandItem" value="meleeHandAnimalBear"/>
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="Territorial"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityNPC,0,EntityPlayer,0,EntitySurvivor,0,EntityBandit,0,EntityAnimalRabbit,8"/>
+			<property name="AITask-4" value="ApproachSpot"/>
+			<property name="AITask-5" value="Look"/>
+			<property name="AITask-6" value="Wander"/>
+			<property name="AITask-7" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,20,15,EntityNPC,20,15,EntitySurvivor,20,15,EntityBandit,20,15,EntityZombie,20,15,EntityAnimalRabbit,0,18"/>
+			<property name="AITarget-4" value=""/>
+			<property name="SurfaceCategory" value="organic"/>
+			<property name="ParticleOnDeath" value="blood_death"/>
+			<property name="DismemberTag_L_HeadGore" value="Prefabs/HeadGore" data ="rot=90,0,0"/>
+			<property name="DismemberTag_L_LeftUpperLegGore" value="Prefabs/UpperLegGore"/>
+			<property name="DismemberTag_L_LeftLowerLegGore" value="Prefabs/UpperLegGore"/>
+			<property name="DismemberTag_L_RightUpperLegGore" value="Prefabs/UpperLegGore"/>
+			<property name="DismemberTag_L_RightLowerLegGore" value="Prefabs/UpperLegGore"/>
+			<property name="DismemberTag_L_LeftUpperArmGore" value="Prefabs/UpperArmGore"/>
+			<property name="DismemberTag_L_LeftLowerArmGore" value="Prefabs/UpperArmGore"/>
+			<property name="DismemberTag_L_RightUpperArmGore" value="Prefabs/UpperArmGore"/>
+			<property name="DismemberTag_L_RightLowerArmGore" value="Prefabs/UpperArmGore"/>
+			<!-- Stealth settings -->
+			<property name="MaxViewAngle" value="360"/>
+			<property name="SightRange" value="50"/> <!-- distance in m -->
+			<property name="SightLightThreshold" value="-2,150"/>
+			<property name="SleeperWakeupSightDetectionMin" value="-40,5"/> <!-- Indiv.Random. sight capability - "I see you" light value at point blank -->
+			<property name="SleeperWakeupSightDetectionMax" value="340,480"/> <!-- Indiv.Random. "I see you" light value at "SightRange" -->
+			<property name="SleeperSenseSightDetectionMin" value="-10,0"/> <!-- same for groaning, not waking -->
+			<property name="SleeperSenseSightDetectionMax" value="200,300"/>
+			<property name="SleeperNoiseSenseThreshold" value="3,8"/> <!-- Indiv.Random. hearing capability - "I hear something" noise value -->
+			<property name="SleeperNoiseWakeThreshold" value="9,12"/>
+			<property name="SleeperSmellSenseThreshold" value="20,50"/> <!-- Indiv.Random. smell capability - "I smell something" player smell value -->
+			<property name="SoundSleeperSenseChance" value=".5"/> <!-- the chance to play "SoundSleeperSense" when "SleeperSmellSenseThreshold" is triggered -->
+			<property name="NavObject" value="twitch_spawn,twitch_spawn_other,animaltracking_hostile,clear_sleeper" />
+			<!-- Gameplay -->
+			<property name="MaxTurnSpeed" value="280"/>
+			<property name="AttackTimeoutDay" value="1.5"/>
+			<property name="AttackTimeoutNight" value="1.4"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="DeadBodyHitPoints" value="200"/>
+			<property name="SoundRandom" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="ExperienceGain" value="200"/>
+                <property class="Boundary" >
+                        <property name="BoundaryBox" value="3.0,3.0,2.0" />
+                        <property name="Center" value="0.0,1.5,0.0"/>
+                </property> 
+			<effect_group name="Base Effects">
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="1500"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="40" />
+				<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>	
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		</entity_class>	
+		
+              
+		</append>	
+	
+</configs>

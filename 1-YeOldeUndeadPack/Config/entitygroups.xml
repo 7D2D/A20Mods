@@ -1,0 +1,30 @@
+<configs>
+	
+	<append xpath="/entitygroups/entitygroup[descendant::entity[@name='zombieMoe']]">	
+		<entity name="MedievalZombie" prob=".3" />
+                <entity name="AxeZombie" prob=".3" />
+                <entity name="MaceZombie" prob=".3" />
+                <entity name="SwordZombie" prob=".3" />
+                <entity name="HelmetZombie" prob=".3" />
+                <entity name="ArmorZombie" prob=".3" />
+                <entity name="DeathKnight" prob=".3" />
+                <entity name="Skeleton" prob=".3" />
+                <entity name="SkeletonMonk" prob=".3" />
+                <entity name="SkeletonAxe" prob=".3" />
+	</append>
+	
+	
+	<append xpath="/entitygroups/entitygroup[descendant::entity[@name='zombieMoeFeral']]">	
+		<entity name="MedievalZombieFeral" prob=".15" />
+                <entity name="AxeZombieFeral" prob=".15" />
+                <entity name="MaceZombieFeral" prob=".15" />
+                <entity name="SwordZombieFeral" prob=".15" />
+                <entity name="HelmetZombieFeral" prob=".15" />
+                <entity name="ArmorZombieFeral" prob=".15" />
+                <entity name="DeathKnightFeral" prob=".15" />
+                <entity name="SkeletonFeral" prob=".15" />
+                <entity name="SkeletonMonkFeral" prob=".15" />
+                <entity name="SkeletonAxeFeral" prob=".15" />
+	</append>
+	
+</configs>

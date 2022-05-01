@@ -1,0 +1,206 @@
+<configs>
+
+	<!-- BIOME Spawning -->
+
+    <append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']">
+		<entity name="Harpy" prob="0.5" />
+        <entity name="Griffon" prob="1.0" />
+		<entity name="FireBreathingDragon" prob="0.5" />
+		<entity name="AcidBreathingDragon" prob="0.5" />
+		<entity name="Pegasus" prob="0.5" />
+		<entity name="GiantBat" prob="0.5" />
+		<entity name="Gargoyle" prob="0.5" />
+ 		<entity name="Manticore" prob="0.5" />		
+	</append>
+	
+    <append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsForest']">
+		<entity name="Harpy" prob="0.5" />
+        <entity name="Griffon" prob="1.0" />
+		<entity name="FireBreathingDragon" prob="0.5" />
+		<entity name="AcidBreathingDragon" prob="0.5" />
+		<entity name="Pegasus" prob="0.5" />
+		<entity name="GiantBat" prob="0.5" />
+		<entity name="Gargoyle" prob="0.5" />
+ 		<entity name="Manticore" prob="0.5" />		
+	</append>
+	
+    <append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsSnow']">
+		<entity name="Harpy" prob="0.5" />
+        <entity name="Griffon" prob="1.0" />
+		<entity name="FireBreathingDragon" prob="0.5" />
+		<entity name="AcidBreathingDragon" prob="0.5" />
+		<entity name="Pegasus" prob="0.5" />
+		<entity name="GiantBat" prob="0.5" />
+		<entity name="Gargoyle" prob="0.5" />
+ 		<entity name="Manticore" prob="0.5" />		
+	</append>
+
+    <append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesert']">
+		<entity name="Harpy" prob="0.5" />
+        <entity name="Griffon" prob="1.0" />
+		<entity name="FireBreathingDragon" prob="0.5" />
+		<entity name="AcidBreathingDragon" prob="0.5" />
+		<entity name="Pegasus" prob="0.5" />
+		<entity name="GiantBat" prob="0.5" />
+		<entity name="Gargoyle" prob="0.5" />
+ 		<entity name="Manticore" prob="0.5" />		
+	</append>
+	
+	<!-- Sleeper Volume Groups -->
+	<!-- npc Enemy Animals All -->
+
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsAllGroupGS01']">
+		<entity name="Manticore"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsAllGroupGS50']">
+		<entity name="Manticore"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsAllGroupGS100']">
+		<entity name="Manticore"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsAllGroupGS200']">
+		<entity name="Manticore"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsAllGroupGS400']">
+		<entity name="Manticore"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsAllGroupGS800']">
+		<entity name="Manticore"/>
+	</append>
+
+	<!-- npc Enemy Animals Boss -->
+	
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsBossGroupGS01']">
+		<entity name="Manticore"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsBossGroupGS50']">
+		<entity name="Manticore"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsBossGroupGS100']">
+		<entity name="Manticore"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsBossGroupGS200']">
+		<entity name="Manticore"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsBossGroupGS400']">
+		<entity name="Manticore"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcEnemyAnimalsBossGroupGS800']">
+		<entity name="Manticore"/>
+	</append>
+	
+	<!-- npc Flyers All -->
+
+	<append xpath="/entitygroups/entitygroup[@name='npcFlyersAllGroupGS01']">
+		<entity name="Harpy"/>
+		<entity name="Griffon"/>
+		<entity name="FireBreathingDragon"/>
+		<entity name="AcidBreathingDragon"/>
+		<entity name="Pegasus"/>
+		<entity name="GiantBat"/>
+		<entity name="Gargoyle"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFlyersAllGroupGS50']">
+		<entity name="Harpy"/>
+		<entity name="Griffon"/>
+		<entity name="FireBreathingDragon"/>
+		<entity name="AcidBreathingDragon"/>
+		<entity name="Pegasus"/>
+		<entity name="GiantBat"/>
+		<entity name="Gargoyle"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFlyersAllGroupGS100']">
+		<entity name="Harpy"/>
+		<entity name="Griffon"/>
+		<entity name="FireBreathingDragon"/>
+		<entity name="AcidBreathingDragon"/>
+		<entity name="Pegasus"/>
+		<entity name="GiantBat"/>
+		<entity name="Gargoyle"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFlyersAllGroupGS200']">
+		<entity name="Harpy"/>
+		<entity name="Griffon"/>
+		<entity name="FireBreathingDragon"/>
+		<entity name="AcidBreathingDragon"/>
+		<entity name="Pegasus"/>
+		<entity name="GiantBat"/>
+		<entity name="Gargoyle"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFlyersAllGroupGS400']">
+		<entity name="Harpy"/>
+		<entity name="Griffon"/>
+		<entity name="FireBreathingDragon"/>
+		<entity name="AcidBreathingDragon"/>
+		<entity name="Pegasus"/>
+		<entity name="GiantBat"/>
+		<entity name="Gargoyle"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFlyersAllGroupGS800']">
+		<entity name="Harpy"/>
+		<entity name="Griffon"/>
+		<entity name="FireBreathingDragon"/>
+		<entity name="AcidBreathingDragon"/>
+		<entity name="Pegasus"/>
+		<entity name="GiantBat"/>
+		<entity name="Gargoyle"/>
+	</append>
+	
+	<!-- npc Flyers Boss -->	
+
+	<append xpath="/entitygroups/entitygroup[@name='npcFlyersBossGroupGS01']">
+		<entity name="Harpy"/>
+		<entity name="Griffon"/>
+		<entity name="FireBreathingDragon"/>
+		<entity name="AcidBreathingDragon"/>
+		<entity name="Pegasus"/>
+		<entity name="GiantBat"/>
+		<entity name="Gargoyle"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFlyersBossGroupGS50']">
+		<entity name="Harpy"/>
+		<entity name="Griffon"/>
+		<entity name="FireBreathingDragon"/>
+		<entity name="AcidBreathingDragon"/>
+		<entity name="Pegasus"/>
+		<entity name="GiantBat"/>
+		<entity name="Gargoyle"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFlyersBossGroupGS100']">
+		<entity name="Harpy"/>
+		<entity name="Griffon"/>
+		<entity name="FireBreathingDragon"/>
+		<entity name="AcidBreathingDragon"/>
+		<entity name="Pegasus"/>
+		<entity name="GiantBat"/>
+		<entity name="Gargoyle"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFlyersBossGroupGS200']">
+		<entity name="Harpy"/>
+		<entity name="Griffon"/>
+		<entity name="FireBreathingDragon"/>
+		<entity name="AcidBreathingDragon"/>
+		<entity name="Pegasus"/>
+		<entity name="GiantBat"/>
+		<entity name="Gargoyle"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFlyersBossGroupGS400']">
+		<entity name="Harpy"/>
+		<entity name="Griffon"/>
+		<entity name="FireBreathingDragon"/>
+		<entity name="AcidBreathingDragon"/>
+		<entity name="Pegasus"/>
+		<entity name="GiantBat"/>
+		<entity name="Gargoyle"/>
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcFlyersBossGroupGS800']">
+		<entity name="Harpy"/>
+		<entity name="Griffon"/>
+		<entity name="FireBreathingDragon"/>
+		<entity name="AcidBreathingDragon"/>
+		<entity name="Pegasus"/>
+		<entity name="GiantBat"/>
+		<entity name="Gargoyle"/>
+	</append>
+
+</configs>
