@@ -1,0 +1,17 @@
+<configs>
+
+	<append xpath="/buffs">
+	
+		
+		<!-- 2-GoblinzPack -->		
+
+		<buff name="GoblinShamanDeco" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock_small" local_offset="0,0,0" local_rotation="262,25,0" parent_transform="RightHand"/>
+			</effect_group>
+		</buff>
+		
+		
+	</append>
+
+</configs>

@@ -1,0 +1,217 @@
+<configs>
+
+	<append xpath="/entity_classes">
+                
+        <!-- Goblin models by Polygonmaker Purchased for use in NPC Mod  -->
+	
+		
+
+        <entity_class name="GoblinClub" extends="npcClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/> 
+                        <property name="PhysicsBody" value="GoblinStandard"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="Grug,Urug,Lumdum,Lorzub,Snaglak,Shamob,Purbag,Orgug" />				
+			<property name="Mesh" value="#@modfolder:Resources/Goblinz.unity3d?GoblinClubDark"/>
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="OrcClub"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="OrcClub"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="OrcClub"/> 
+            <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="150"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	        </effect_group>
+		</entity_class>
+
+            <entity_class name="GoblinShaman" extends="npcClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/> 
+            <property name="PhysicsBody" value="GoblinStandard"/>
+            <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="Grug,Urug,Lumdum,Lorzub,Snaglak,Shamob,Purbag,Orgug" />				
+			<property name="Mesh" value="#@modfolder:Resources/Goblinz.unity3d?GoblinShamanDark"/>
+            <property name="ItemsOnEnterGame.GameModeSurvival" value="GoblinShamanClub"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="GoblinShamanClub"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="GoblinShamanClub"/> 
+            <effect_group name="Base Effects">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="GoblinShamanDeco"/>
+		        <passive_effect name="HealthMax" operation="base_set" value="200"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="30"/>
+	        </effect_group>
+		</entity_class>
+
+            <entity_class name="GoblinChief" extends="npcClubTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/> 
+                        <property name="PhysicsBody" value="GoblinStandard"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="Grug,Urug,Lumdum,Lorzub,Snaglak,Shamob,Purbag,Orgug" />				
+			<property name="Mesh" value="#@modfolder:Resources/Goblinz.unity3d?GoblinChiefDark"/>
+            <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="250"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+	        </effect_group>
+		</entity_class>
+
+       <entity_class name="GoblinSpear" extends="npcSpearTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/> 
+                        <property name="PhysicsBody" value="GoblinStandard"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="Grug,Urug,Lumdum,Lorzub,Snaglak,Shamob,Purbag,Orgug" />				
+			<property name="Mesh" value="#@modfolder:Resources/Goblinz.unity3d?GoblinSpearDark"/>
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="KnightSpear"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="KnightSpear"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="KnightSpear"/> 
+            <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="150"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+	        </effect_group>
+		</entity_class>
+
+           <entity_class name="GoblinKnife" extends="npcKnifeTemplate"> 
+			<property name="Tags" value="entity,male,npc,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/> 
+                        <property name="PhysicsBody" value="GoblinStandard"/>
+                        <property name="LookAtAngle" value="0"/> 
+			<property name="Names" value="Grug,Urug,Lumdum,Lorzub,Snaglak,Shamob,Purbag,Orgug" />				
+			<property name="Mesh" value="#@modfolder:Resources/Goblinz.unity3d?GoblinKnifeDark"/>
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="GoblinKnife"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="GoblinKnife"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="GoblinKnife"/> 
+            <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="150"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+	        </effect_group>
+		</entity_class>
+
+                <entity_class name="GoblinArcher" extends="npcLBowTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="PhysicsBody" value="GoblinStandard"/>
+                        <property name="Names" value="Grug,Urug,Lumdum,Lorzub,Snaglak,Shamob,Purbag,Orgug" />
+		        <property name="LookAtAngle" value="0"/> 			
+			<property name="Mesh" value="#@modfolder:Resources/Goblinz.unity3d?GoblinBowDark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="150"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+	        </effect_group>
+		</entity_class> 		
+		
+		<entity_class name="GoblinCrossbowman" extends="npcXBowTemplate"> 
+			<property name="Tags" value="entity,male,npc,ranged,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+                        <property name="PhysicsBody" value="GoblinStandard"/>
+                        <property name="Names" value="Grug,Urug,Lumdum,Lorzub,Snaglak,Shamob,Purbag,Orgug" />
+			<property name="LookAtAngle" value="0"/> 				
+			<property name="Mesh" value="#@modfolder:Resources/Goblinz.unity3d?GoblinXbowDark"/> 
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="150"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+	        </effect_group>
+		</entity_class>	 
+
+                <entity_class name="GoblinGurl" extends="npcClubTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="Ghak,Bogdub,Nargol,Ghorza,Dura,Atub,Rogbut,Oghash" />
+			<property name="Mesh" value="#@modfolder:Resources/Goblinz.unity3d?GoblinCrookDark"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="GoblinStandard"/>
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="OrcClub"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="OrcClub"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="OrcClub"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="150"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+	        </effect_group>			
+		</entity_class>	
+
+                <entity_class name="GoblinCook" extends="npcClubTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="Ghak,Bogdub,Nargol,Ghorza,Dura,Atub,Rogbut,Oghash" />
+			<property name="Mesh" value="#@modfolder:Resources/Goblinz.unity3d?GoblinPanDark"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="GoblinStandard"/>
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="OrcClub"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="OrcClub"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="OrcClub"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="150"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+	        </effect_group>			
+		</entity_class>	
+
+                <entity_class name="GoblinBaker" extends="npcClubTemplate"> 
+			<property name="Tags" value="entity,female,npc,melee,bandit,DRMid"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Names" value="Ghak,Bogdub,Nargol,Ghorza,Dura,Atub,Rogbut,Oghash" />
+			<property name="Mesh" value="#@modfolder:Resources/Goblinz.unity3d?GoblinPinDark"/>
+                        <property name="LookAtAngle" value="0"/> 
+                        <property name="PhysicsBody" value="GoblinStandard"/>
+                        <property name="ItemsOnEnterGame.GameModeSurvival" value="OrcClub"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="OrcClub"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="OrcClub"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="LootDropProb" value="0.2"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+                <effect_group name="Base Effects">
+		        <passive_effect name="HealthMax" operation="base_set" value="150"/>
+		        <passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+	        </effect_group>			
+		</entity_class>	
+
+	</append>	
+	
+</configs>

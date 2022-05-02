@@ -1,0 +1,183 @@
+<configs>
+	<append xpath="/items">
+	
+		<item name="NPCGoblinzLoadHack01">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Goblinz.unity3d?GoblinSpearDark"/>
+			<property name="DropMeshfile"  value="#@modfolder:Resources/Goblinz.unity3d?GoblinSpearDark"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> <!-- STK resource -->
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item>
+
+               <item name="GoblinKnife"> 
+			<property name="Extends" value="meleeHandNPCMaster"/>
+			<property name="Canhold" value="true"/> 
+			<property name="HoldType" value="36"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Tags" value="knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkTheHuntsman,canHaveCosmetic"/>
+			<property name="DisplayType" value="melee"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Knives/hunting_knifePrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="FuelValue" value="1"/>
+			<property name="EconomicValue" value="1"/>
+			<property class="Action0">			
+				<property name="Class" value="MeleeSDX, SCore"/>
+				<property name="Delay" value=".8" /> 
+				<property name="Range" value="1.65" /> <!-- Too small or large will miss  -->
+				<property name="Sphere" value="1.2"/> <!-- effects attack angle, too small will miss  -->  
+				<property name="Sound_start" value="swoosh"/>
+				<property name="Block_range" value="1"/> <!-- needs testing  -->
+				<property name="DamageEntity" value="15"/>
+				<property name="DamageBlock" value="50"/> 
+				<property class="HitSounds">
+					<property name="Override0" value="organic" param1="metalstaborganic"/>
+				</property>
+			</property>
+			<property class="Action1">			
+				<property name="Class" value="MeleeSDX, SCore"/>
+				<property name="Delay" value=".8" /> 
+				<property name="Range" value="1.65" />
+				<property name="Sphere" value="1.2"/>
+				<property name="Sound_start" value="swoosh"/>
+				<property name="Block_range" value="1"/>
+				<property name="DamageEntity" value="20"/>
+				<property name="DamageBlock" value="50"/> 
+				<property class="HitSounds">
+					<property name="Override0" value="organic" param1="metalstaborganic"/>
+				</property>
+			</property>
+			<effect_group name="meleeWpnBladeT1HuntingKnife">
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="120" tags="perkDeepCuts,perkFlurryOfBlows"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="8.2" tags="primary"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="462,1154" tier="1,6" tags="perkDeepCuts"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkDeepCuts"/>
+				<passive_effect name="MaxRange" operation="base_set" value="2.0" tags="perkDeepCuts"/>
+				<passive_effect name="BlockRange" operation="base_set" value="1" tags="perkDeepCuts"/>
+
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+
+				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkDeepCuts"/> <!-- random EntityDmg -->
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkDeepCuts"/> <!-- tier bonus -->
+				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkDeepCuts"/> <!-- random BlockDmg -->
+				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkDeepCuts"/> <!-- tier bonus -->
+
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="metal"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value=".6" tags="organic"/>
+				<passive_effect name="HarvestCount" operation="base_set" value="1" tags="butcherHarvest"/>
+			</effect_group>
+			<effect_group name="Power Attack">
+				<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+				<passive_effect name="AttacksPerMinute" operation="base_add" value="-60" tags="secondary"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="12.3" tags="secondary"/>
+			</effect_group>
+			<effect_group name="sneak damage bonus">
+				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
+					<passive_effect name="DamageBonus" operation="base_add" value="4"/>
+					<passive_effect name="EntityDamage" operation="perc_add" value="4" tags="perkDeepCuts"/>
+					<display_value name="dEntityDamageSneak" value="4"/>
+			</effect_group>
+			<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+			<property name="RepairExpMultiplier" value="5.5"/>
+                        <property name="HoldingItemHidden" value="true"/>
+		</item>
+
+                <item name="GoblinShamanClub"> 
+			<property name="Extends" value="meleeHandNPCMaster"/>
+			<property name="Canhold" value="true"/> 
+			<property name="HoldType" value="36"/>
+			<property name="Tags" value="blunt,club,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="DisplayType" value="melee"/>
+			<property name="Group" value="Ammo/Weapons,Basics"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Melee/ClubWood/ClubWoodPrefab.prefab"/>
+			<property name="Candrop" value="false"/>
+			<property name="Material" value="Mwood"/>
+			<property name="RepairTools" value="resourceWood"/>
+			<property name="SoundDestroy" value="wooddestroy1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="EconomicValue" value="1"/>
+			<property name="FuelValue" value="25"/>
+			<property name="CustomIcon" value="meleeClubWood"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="ShowQuality" value="false"/>
+			
+			<property class="Action0">
+				<property name="Class" value="MeleeSDX, SCore"/>
+				<property name="Delay" value=".8" /> 
+				<property name="Range" value="1.65" />
+				<property name="Sphere" value="1.2"/>
+				<property name="Sound_start" value="swoosh"/>
+				<property name="Block_range" value="1.65"/>
+				<property name="DamageEntity" value="10"/>
+				<property name="DamageBlock" value="50"/>
+				<property name="Buff" value="buffShocked"/>
+				<property class="HitSounds">
+					<property name="Override0" value="organic" param1="woodhitorganic"/>
+				</property>
+			</property> 
+			<property class="Action1">
+				<property name="Class" value="MeleeSDX, SCore"/>
+				<property name="Delay" value=".8" /> 
+				<property name="Range" value="1.65" />
+				<property name="Sphere" value="1.2"/>
+				<property name="Sound_start" value="swoosh"/>
+				<property name="Block_range" value="1.65"/>
+				<property name="DamageEntity" value="10"/>
+				<property name="DamageBlock" value="50"/>
+				<property class="HitSounds">
+					<property name="Override0" value="organic" param1="woodhitorganic"/>
+				</property>
+			</property> 
+				
+				<effect_group name="meleeWpnClubT0WoodenClub">
+					<passive_effect name="EntityDamage" operation="base_add" value="10" tags="perkPummelPete"/> <!-- base_add adds to the indexX damage property, base_set replaces it  -->
+					<passive_effect name="BlockDamage" operation="base_add" value="10.6" tags="perkPummelPete"/>
+					<passive_effect name="AttacksPerMinute" operation="base_set" value="55" tags="perkPummelPete,perkFlurryOfBlows"/>
+					<passive_effect name="StaminaLoss" operation="base_set" value="17.4" tags="primary"/>
+					<passive_effect name="DegradationMax" operation="base_set" value="60,110" tier="1,6" tags="perkPummelPete"/>
+					<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkPummelPete"/>
+					<passive_effect name="MaxRange" operation="base_set" value="2.4" tags="perkPummelPete"/>
+					<passive_effect name="BlockRange" operation="base_set" value="1.65" tags="perkPummelPete"/>
+
+					<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+					<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+					<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+
+					<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkPummelPete"/> <!-- tier bonus -->
+					<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkPummelPete"/> <!-- tier bonus -->
+
+					<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+					<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+					<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+
+					<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
+					<passive_effect name="BuffProcChance" operation="base_set" value="0.20" tags="buffShocked"/>
+				</effect_group>
+				<effect_group name="Power Attack">
+					<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+					<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+					<passive_effect name="StaminaLoss" operation="base_set" value="26.1" tags="secondary"/>
+				</effect_group>
+                <property name="HoldingItemHidden" value="true"/>
+		</item>		
+
+	</append>
+</configs>

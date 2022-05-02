@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <ModInfo>
+    <Name value="2-GoblinzPack" />
+    <Description value="NPC Core Addon Pack, requires also loading 1-KnightsandPeasants AND 1-OrcspackAlpha" />
+    <Author value="Darkstardragon" />
+    	<Version value="20.3.01.03" />
+    <Website value="" />
+  </ModInfo>
+</xml>

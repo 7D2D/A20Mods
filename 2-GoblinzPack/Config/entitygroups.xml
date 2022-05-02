@@ -1,0 +1,303 @@
+<configs>
+
+	 <append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
+		<entity name="GoblinClub" prob="0.1" />
+        <entity name="GoblinShaman" prob="0.1" />
+		<entity name="GoblinChief" prob="0.1" />
+		<entity name="GoblinSpear" prob="0.1" />
+		<entity name="GoblinKnife" prob="0.1" />     
+        <entity name="GoblinArcher" prob="0.1" />
+		<entity name="GoblinCrossbowman" prob="0.1" />    
+        <entity name="GoblinGurl" prob="0.1" />     
+        <entity name="GoblinCook" prob="0.1" />
+		<entity name="GoblinBaker" prob="0.1" />    
+	</append>
+	
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
+		<entity name="GoblinClub" prob="0.025" />
+        <entity name="GoblinShaman" prob="0.025" />
+		<entity name="GoblinChief" prob="0.025" />
+		<entity name="GoblinSpear" prob="0.025" />
+		<entity name="GoblinKnife" prob="0.025" />  
+        <entity name="GoblinArcher" prob="0.025" />
+		<entity name="GoblinCrossbowman" prob="0.025" /> 
+        <entity name="GoblinGurl" prob="0.025" />     
+        <entity name="GoblinCook" prob="0.025" />
+		<entity name="GoblinBaker" prob="0.025" />       		
+	</append>
+	
+	<append xpath="/entitygroups/entitygroup[@name='SnowZombies']">
+	<entity name="GoblinClub" prob="0.1" />
+        <entity name="GoblinShaman" prob="0.1" />
+		<entity name="GoblinChief" prob="0.1" />
+		<entity name="GoblinSpear" prob="0.1" />
+		<entity name="GoblinKnife" prob="0.1" />     
+        <entity name="GoblinArcher" prob="0.1" />
+		<entity name="GoblinCrossbowman" prob="0.1" />    
+        <entity name="GoblinGurl" prob="0.1" />     
+        <entity name="GoblinCook" prob="0.1" />
+		<entity name="GoblinBaker" prob="0.1" />  	  
+	</append>	
+
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']">
+	 <entity name="GoblinClub" prob="0.1" />
+        <entity name="GoblinShaman" prob="0.1" />
+		<entity name="GoblinChief" prob="0.1" />
+		<entity name="GoblinSpear" prob="0.1" />
+		<entity name="GoblinKnife" prob="0.1" />     
+        <entity name="GoblinArcher" prob="0.1" />
+		<entity name="GoblinCrossbowman" prob="0.1" />    
+        <entity name="GoblinGurl" prob="0.1" />     
+        <entity name="GoblinCook" prob="0.1" />
+		<entity name="GoblinBaker" prob="0.1" />        
+	</append>
+
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']">
+	<entity name="GoblinClub" prob="0.1" />
+        <entity name="GoblinShaman" prob="0.1" />
+		<entity name="GoblinChief" prob="0.1" />
+		<entity name="GoblinSpear" prob="0.1" />
+		<entity name="GoblinKnife" prob="0.1" />     
+        <entity name="GoblinArcher" prob="0.1" />
+		<entity name="GoblinCrossbowman" prob="0.1" />    
+        <entity name="GoblinGurl" prob="0.1" />     
+        <entity name="GoblinCook" prob="0.1" />
+		<entity name="GoblinBaker" prob="0.1" />  	   	
+	</append>
+	
+	<!-- Bandit Sleepers - ALL -->
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS01']">
+        <entity name="GoblinClub"/>
+        <entity name="GoblinShaman"/>
+        <entity name="GoblinChief"/>
+        <entity name="GoblinSpear"/>
+        <entity name="GoblinKnife"/>	
+		<entity name="GoblinArcher"/>
+		<entity name="GoblinCrossbowman"/> 
+        <entity name="GoblinGurl"/>	
+		<entity name="GoblinCook"/>
+		<entity name="GoblinBaker"/>     		
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS50']">
+         <entity name="GoblinClub"/>
+        <entity name="GoblinShaman"/>
+        <entity name="GoblinChief"/>
+        <entity name="GoblinSpear"/>
+        <entity name="GoblinKnife"/>	
+		<entity name="GoblinArcher"/>
+		<entity name="GoblinCrossbowman"/> 
+        <entity name="GoblinGurl"/>	
+		<entity name="GoblinCook"/>
+		<entity name="GoblinBaker"/>     		
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS100']">
+       <entity name="GoblinClub"/>
+        <entity name="GoblinShaman"/>
+        <entity name="GoblinChief"/>
+        <entity name="GoblinSpear"/>
+        <entity name="GoblinKnife"/>	
+		<entity name="GoblinArcher"/>
+		<entity name="GoblinCrossbowman"/> 
+        <entity name="GoblinGurl"/>	
+		<entity name="GoblinCook"/>
+		<entity name="GoblinBaker"/>     
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS200']">
+	<entity name="GoblinClub"/>
+        <entity name="GoblinShaman"/>
+        <entity name="GoblinChief"/>
+        <entity name="GoblinSpear"/>
+        <entity name="GoblinKnife"/>	
+		<entity name="GoblinArcher"/>
+		<entity name="GoblinCrossbowman"/> 
+        <entity name="GoblinGurl"/>	
+		<entity name="GoblinCook"/>
+		<entity name="GoblinBaker"/>     		
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS400']">
+       	<entity name="GoblinClub"/>
+        <entity name="GoblinShaman"/>
+        <entity name="GoblinChief"/>
+        <entity name="GoblinSpear"/>
+        <entity name="GoblinKnife"/>	
+		<entity name="GoblinArcher"/>
+		<entity name="GoblinCrossbowman"/> 
+        <entity name="GoblinGurl"/>	
+		<entity name="GoblinCook"/>
+		<entity name="GoblinBaker"/>     
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsAllGroupGS800']">
+       	<entity name="GoblinClub"/>
+        <entity name="GoblinShaman"/>
+        <entity name="GoblinChief"/>
+        <entity name="GoblinSpear"/>
+        <entity name="GoblinKnife"/>	
+		<entity name="GoblinArcher"/>
+		<entity name="GoblinCrossbowman"/> 
+        <entity name="GoblinGurl"/>	
+		<entity name="GoblinCook"/>
+		<entity name="GoblinBaker"/>     
+	</append>
+	<!-- Bandit Sleepers - MELEE -->	
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS01']">
+        <entity name="GoblinClub"/>
+        <entity name="GoblinShaman"/>
+        <entity name="GoblinChief"/>	
+        <entity name="GoblinSpear"/>	
+		<entity name="GoblinKnife"/>
+		<entity name="GoblinGurl"/>
+        <entity name="GoblinCook"/>	
+        <entity name="GoblinBaker"/>   
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS50']">
+        <entity name="GoblinClub"/>
+        <entity name="GoblinShaman"/>
+        <entity name="GoblinChief"/>	
+        <entity name="GoblinSpear"/>	
+		<entity name="GoblinKnife"/>
+		<entity name="GoblinGurl"/>
+        <entity name="GoblinCook"/>	
+        <entity name="GoblinBaker"/>   
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS100']">
+         <entity name="GoblinClub"/>
+        <entity name="GoblinShaman"/>
+        <entity name="GoblinChief"/>	
+        <entity name="GoblinSpear"/>	
+		<entity name="GoblinKnife"/>
+		<entity name="GoblinGurl"/>
+        <entity name="GoblinCook"/>	
+        <entity name="GoblinBaker"/>   
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS200']">
+          <entity name="GoblinClub"/>
+        <entity name="GoblinShaman"/>
+        <entity name="GoblinChief"/>	
+        <entity name="GoblinSpear"/>	
+		<entity name="GoblinKnife"/>
+		<entity name="GoblinGurl"/>
+        <entity name="GoblinCook"/>	
+        <entity name="GoblinBaker"/>    
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS400']">
+         <entity name="GoblinClub"/>
+        <entity name="GoblinShaman"/>
+        <entity name="GoblinChief"/>	
+        <entity name="GoblinSpear"/>	
+		<entity name="GoblinKnife"/>
+		<entity name="GoblinGurl"/>
+        <entity name="GoblinCook"/>	
+        <entity name="GoblinBaker"/>   
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsMeleeGroupGS800']">
+          <entity name="GoblinClub"/>
+        <entity name="GoblinShaman"/>
+        <entity name="GoblinChief"/>	
+        <entity name="GoblinSpear"/>	
+		<entity name="GoblinKnife"/>
+		<entity name="GoblinGurl"/>
+        <entity name="GoblinCook"/>	
+        <entity name="GoblinBaker"/>   
+	</append>
+	
+	<!-- Bandit Sleepers - RANGED -->	
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsRangedGroupGS01']">
+        <entity name="GoblinArcher"/>   
+        <entity name="GoblinCrossbowman"/>     			
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsRangedGroupGS50']">
+          <entity name="GoblinArcher"/>   
+        <entity name="GoblinCrossbowman"/>       			
+	</append>	
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsRangedGroupGS100']">
+           <entity name="GoblinArcher"/>   
+        <entity name="GoblinCrossbowman"/>      				
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsRangedGroupGS200']">
+            <entity name="GoblinArcher"/>   
+        <entity name="GoblinCrossbowman"/>     			
+	</append>	
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsRangedGroupGS400']">
+           <entity name="GoblinArcher"/>   
+        <entity name="GoblinCrossbowman"/>      			
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsRangedGroupGS800']">
+            <entity name="GoblinArcher"/>   
+        <entity name="GoblinCrossbowman"/> 			
+	</append>
+	
+	<!-- Bandit Sleepers - BOSS -->	
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsBossGroupGS01']">
+        <entity name="GoblinClub"/>
+        <entity name="GoblinShaman"/>
+        <entity name="GoblinChief"/>
+        <entity name="GoblinSpear"/>
+        <entity name="GoblinKnife"/>	
+		<entity name="GoblinArcher"/>
+		<entity name="GoblinCrossbowman"/> 
+        <entity name="GoblinGurl"/>	
+		<entity name="GoblinCook"/>
+		<entity name="GoblinBaker"/>       				
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsBossGroupGS50']">
+         <entity name="GoblinClub"/>
+        <entity name="GoblinShaman"/>
+        <entity name="GoblinChief"/>
+        <entity name="GoblinSpear"/>
+        <entity name="GoblinKnife"/>	
+		<entity name="GoblinArcher"/>
+		<entity name="GoblinCrossbowman"/> 
+        <entity name="GoblinGurl"/>	
+		<entity name="GoblinCook"/>
+		<entity name="GoblinBaker"/>   				
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsBossGroupGS100']">
+         <entity name="GoblinClub"/>
+        <entity name="GoblinShaman"/>
+        <entity name="GoblinChief"/>
+        <entity name="GoblinSpear"/>
+        <entity name="GoblinKnife"/>	
+		<entity name="GoblinArcher"/>
+		<entity name="GoblinCrossbowman"/> 
+        <entity name="GoblinGurl"/>	
+		<entity name="GoblinCook"/>
+		<entity name="GoblinBaker"/>  				
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsBossGroupGS200']">
+         <entity name="GoblinClub"/>
+        <entity name="GoblinShaman"/>
+        <entity name="GoblinChief"/>
+        <entity name="GoblinSpear"/>
+        <entity name="GoblinKnife"/>	
+		<entity name="GoblinArcher"/>
+		<entity name="GoblinCrossbowman"/> 
+        <entity name="GoblinGurl"/>	
+		<entity name="GoblinCook"/>
+		<entity name="GoblinBaker"/>  				
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsBossGroupGS400']">
+         <entity name="GoblinClub"/>
+        <entity name="GoblinShaman"/>
+        <entity name="GoblinChief"/>
+        <entity name="GoblinSpear"/>
+        <entity name="GoblinKnife"/>	
+		<entity name="GoblinArcher"/>
+		<entity name="GoblinCrossbowman"/> 
+        <entity name="GoblinGurl"/>	
+		<entity name="GoblinCook"/>
+		<entity name="GoblinBaker"/>  				
+	</append>
+	<append xpath="/entitygroups/entitygroup[@name='npcBanditsBossGroupGS800']">
+         <entity name="GoblinClub"/>
+        <entity name="GoblinShaman"/>
+        <entity name="GoblinChief"/>
+        <entity name="GoblinSpear"/>
+        <entity name="GoblinKnife"/>	
+		<entity name="GoblinArcher"/>
+		<entity name="GoblinCrossbowman"/> 
+        <entity name="GoblinGurl"/>	
+		<entity name="GoblinCook"/>
+		<entity name="GoblinBaker"/>  				
+	</append>	
+	
+</configs>
