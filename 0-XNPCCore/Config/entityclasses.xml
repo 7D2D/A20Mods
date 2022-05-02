@@ -139,6 +139,7 @@
 		<effect_group name="Startup Things">
 			<triggered_effect trigger="onSelfEnteredGame" action="ClearStaleHires, SCore" />
 			<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="buffNPCModSlowStatusCheck"/>
+			<!-- <triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="PlayerAttacks"/> -->
 		</effect_group>	
 		<!--  This effect group sets a cvar on the player called "DamageRelationship" which is the faction relationship at which the player can damage NPCs. 1001 means "everyone." 400 is the default, and what is in effect when this effect group is commented out.  This is only for faction targeting - it doesn't affect allies (hired NPCs), and other players and their NPCs are governed by the server's "Player Killing" setting. If you want to adjust the value: 800+ is "Love", 600+ is "Like", 400+ is "Neutral", 200+ is "Dislike", and 0+ is "Hate". -->
 			<!--<effect_group name="Damage All NPCs">
@@ -3206,7 +3207,11 @@
 			<property name="SoundAttack" value="HarleyAttack"/>
 			<property name="SoundSense" value="HarleySense"/>
 			<property name="LootDropProb" value="0.2"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+			<effect_group name="Blocktest"> 
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Blocking"/> 
+			</effect_group>	
+			
 		</entity_class>		
 
 
@@ -3683,26 +3688,56 @@
 			<property name="LootDropProb" value="0.2"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>	
-		<entity_class name="npcHarleyVomitHand" extends="npcHarleyEmptyHand"> <!-- testing -->
+		<entity_class name="npcHarleyVomitHand" extends="npcMeleeTemplate"> <!-- testing -->
 			<property name="Tags" value="entity,female,npc,ranged,voiceharley,bandit,DRMid"/>
 			<property name="Faction" value="bandits"/>
+			<!--<property name="Class" value="EntityBandit" /> -->
 			<property name="Names" value="Harley, Quinn, HarleyQuinn" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Quinn_X"/>
-			<property name="AIPackages" value="NPCModBasicMeleeNoChat, NPCModNPCShortRangedVomit"/>
+			<property name="SoundHurt" value="HarleyHurt"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="HarleyDie"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="HarleyRandom" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="HarleyAlert"/>
+			<property name="SoundAttack" value="HarleyAttack"/>
+			<property name="SoundSense" value="HarleySense"/>
+			<property name="SoundExplodeWarn" value="HarleyInfected"/>
+			<!--<property name="AIPackages" value="NPCModBasicMeleeNoChat, NPCModNPCShortRangedVomit"/>-->
 			<property name="HandItem" value="meleeHandVomit"/> 
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeHandVomit"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeHandVomit"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeHandVomit"/> 
+<!--			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeHandVomit,ammoProjectileZombieVomit"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeHandVomit,ammoProjectileZombieVomit"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeHandVomit,ammoProjectileZombieVomit"/> -->
 			<property name="HireCurrency" value="casinoCoin" />
 			<property name="HireCost" value="750" />
 			<property name="ExperienceGain" value="600"/> 
 			<property name="RightHandJointName" value="Head" />
+			<property name="AllEntitiesUseFactionTargeting" value="true" />
 			<effect_group name="WeaponType"> 
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="EmptyHandUser"/>
 			</effect_group>
+				<property name="AITask-1" value="Territorial"/>
+				<property name="AITask-2" value="ApproachDistraction"/>
+				<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityAlive,0,EntityZombie,0"/>
+				<property name="AITask-4" value="RangedAttackTarget" data="itemType=1;cooldown=4;duration=3;minRange=1;maxRange=15"/>
+				<!--<property name="AITask-5" value="ApproachSpot"/>
+				<property name="AITask-6" value="Look"/> -->
+				<property name="AITask-5" value="Wander"/>
+				<property name="AITask-6" value=""/>
+				<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+				<property name="AITarget-2" value="BlockingTargetTask"/>
+				<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAlive,0,0,EntityZombie,0,0"/> 
+				<property name="AITarget-4" value=""/>
 		</entity_class>			
-
-		
+						
 		
 		<!--  Baker  -->
 

@@ -853,6 +853,7 @@
 					<consideration class="InWeaponRange, SCore" action_index="0" /> 
 					<consideration class="CanSeeTarget, SCore"/> 
 					<consideration class="SelfNotHasBuff, SCore" buffs="buffNPCModFullControlMode,IsHealing,buffHitStun"/>	
+					<!-- add BlockAttack to list above when testing block/parry -->
 				</action>
 			</ai_package>	
 

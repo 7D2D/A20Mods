@@ -3203,7 +3203,7 @@
 			<property name="Extends" value="meleeNPCEmptyHand"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="Degradation" value="99999" param1="true"/>
-			<property class="Action2"> <!-- UseAction -->
+			<property class="Action1"> <!-- UseAction -->
 				<property name="Class" value="Vomit"/>
 				<property name="Hitmask_override" value="Arrow"/>
 				<property name="Delay" value=".3"/> <!-- obsolete if rounds per minute exists -->

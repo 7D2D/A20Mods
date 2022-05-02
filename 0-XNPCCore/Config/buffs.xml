@@ -2009,5 +2009,29 @@
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NPCModHealingCooldown" operation="set" value="20"/>
 		</effect_group>
 	</set>
-
+	
+	<!--  Testing Blocing  -->
+	
+	<append xpath="/buffs">
+		
+		
+		<buff name="BlockAttack" icon="ui_game_symbol_radiation" icon_color="125,0,0" hidden="false"><stack_type value="ignore"/><duration value="1"/>
+			<effect_group name="Block Attack Buff">
+				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetBool" property="IsBlocking" value="true"/> 
+				<triggered_effect trigger="onSelfBuffFinish" action="AnimatorSetBool" property="IsBlocking" value="false"/> 
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="100"/>
+			</effect_group>
+		</buff> 
+		
+		<buff name="PlayerAttacks" icon="ui_game_symbol_radiation" icon_color="125,0,0" hidden="false"><stack_type value="ignore"/><duration value="0"/>
+			<effect_group name="Block Attack Buff">
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" target="other" buff="BlockAttack"/>
+			</effect_group>
+		</buff> 	
+		
+		
+		
+		
+	</append>
+	
 </configs>
