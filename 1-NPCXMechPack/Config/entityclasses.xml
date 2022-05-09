@@ -11,6 +11,12 @@
 			<property name="LookAtAngle" value="0"/> 
 			<property name="HireCurrency" value="carBattery" />
 			<property name="HireCost" value="2" />
+			<property name="LootListAlive" value=""/> 
+			<property name="NPCID" value=""/> 
+			<property name="Hirable" value="false" /> 
+			<property name="IsQuestGiver" value="false" />
+			<property name="TimeStayAfterDeath" value="30"/>
+			<property name="DeadBodyHitPoints" value="400"/>			
 			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
 			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
@@ -43,6 +49,12 @@
 			<property name="LookAtAngle" value="0"/> 
 			<property name="Faction" value="mechs"/>
 			<property name="HandItem" value="handRobot"/>
+			<property name="LootListAlive" value=""/> 
+			<property name="NPCID" value=""/> 
+			<property name="Hirable" value="false" /> 
+			<property name="TimeStayAfterDeath" value="30"/>
+			<property name="DeadBodyHitPoints" value="300"/>			
+			<property name="IsQuestGiver" value="false" />
 			<property name="SoundRandomTime" value="20.0"/>
 			<property name="SoundRandom" value="RobotRandom" />
 			<property name="SoundAlert" value="RobotAlert" />
@@ -70,10 +82,17 @@
 			<property name="Faction" value="mechs"/>
 			<property name="HandItem" value="gunNPCPistol"/>
 			<property name="RightHandJointName" value="Gunjoint" />
-			<property name="LookAtAngle" value="0"/> 
+			<property name="LookAtAngle" value="0"/>
+			<property name="LootListAlive" value=""/> 
+			<property name="NPCID" value=""/> 
+			<property name="Hirable" value="false" /> 
+			<property name="IsQuestGiver" value="false" />
+			<property name="TimeStayAfterDeath" value="30"/>
+			<property name="DeadBodyHitPoints" value="300"/>			
 			<!--<property name="AvatarController" value="AvatarAnimalControllerSDX, SCore"/> -->
 			<!--<property name='Class' value='EntityAliveSDX, SCore' /> -->
 			<property name="RootMotion" value="false"/> 
+			<property name="SurfaceCategory" value="metal"/>
 			<property name="ParticleOnDeath" value="blood_death"/>
 			<property name="SurfaceCategory" value="metal"/> 
 			<property name="AIPackages" value="NPCMechBasic, NPCMechRangedBasic"/> 
@@ -118,13 +137,18 @@
 		</entity_class>					
 		<entity_class name="NPCMechSphereI" extends="NPCMechMeleeTemplate" >
 			<property name="Mesh" value="#@modfolder:Resources/XythMechs.unity3d?SphereI_X" />	<!-- Free CC model by 3DHaupt -->
-			<property name="DeadBodyHitPoints" value="1000"/> 
 			<property name="HandItem" value="handSphereII"/> 
 			<property name="Tags" value="entity,cp,mech,knockdown"/>
 			<property name="Faction" value="mechs"/>	
 			<property name="LookAtAngle" value="0"/> 
 			<property name="HireCurrency" value="carBattery" />
 			<property name="HireCost" value="2" />
+			<property name="LootListAlive" value=""/> 
+			<property name="NPCID" value=""/> 
+			<property name="Hirable" value="false" /> 
+			<property name="IsQuestGiver" value="false" />
+			<property name="TimeStayAfterDeath" value="30"/>
+			<property name="DeadBodyHitPoints" value="500"/>			
 			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
 			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
@@ -141,7 +165,6 @@
 		
 		<entity_class name="NPCMechSphereII" extends="NPCMechSphereI" >
 			<property name="Mesh" value="#@modfolder:Resources/XythMechs.unity3d?SphereII_X" />
-			<property name="DeadBodyHitPoints" value="1000"/> 
 			<property name="Tags" value="entity,cp,mech,npc,knockdown"/>	
 			<property name="Faction" value="mechs"/>		
 			<effect_group name="Base Effects">
@@ -175,7 +198,7 @@
 			<property name="MaxTurnSpeed" value="190"/>
 			<property name="DeadBodyHitPoints" value="100"/>
 			<property name="SizeScale" value="1.0"/>
-			<property name="LootListAlive" value=""/> <!-- removing these two properties removes the E when alive and on death but disables the inventory  -->	
+			<property name="LootListAlive" value=""/> 
 			<property name="NPCID" value=""/> 
 			<property name="TimeStayAfterDeath" value="5"/>
 			<!--<property name="AIPackages" value="NPCMechBasic, NPCMeleeBasic"/> -->
@@ -226,6 +249,13 @@
 			<property name="RightHandJointName" value="Gunjoint" /> 
 			<property name="HireCurrency" value="carBattery" />
 			<property name="HireCost" value="3" />
+			<property name="LootListAlive" value=""/> 
+			<property name="NPCID" value=""/> 
+			<property name="Hirable" value="false" /> 
+			<property name="IsQuestGiver" value="false" />
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="TimeStayAfterDeath" value="30"/>
+			<property name="DeadBodyHitPoints" value="500"/>			
 			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
 			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
@@ -281,7 +311,11 @@
 			<property name="AttackTimeoutDay" value=".25"/>
 			<property name="AttackTimeoutNight" value=".25"/>
 			<property name="RightHandJointName" value="WristRight" /> 
-			<property name="HandItem" value="gunNPCPistolHiddenFlying"/> 
+			<property name="HandItem" value="gunNPCPistolHiddenFlying"/>
+			<property name="LootListAlive" value=""/> 
+			<property name="NPCID" value=""/> 
+			<property name="Hirable" value="false" /> 
+			<property name="IsQuestGiver" value="false" />
 			<property name="AITask-1" value="RangedAttackTargetSDX, SCore" data="itemType=1;attackPeriod=10"/>
 			<property name="AITask-2" value="RangedAttackTargetSDX, SCore" data="itemType=0;attackPeriod=10"/>
 			<property name="AITask-3" value="" />
