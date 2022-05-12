@@ -139,7 +139,7 @@
 		<effect_group name="Startup Things">
 			<triggered_effect trigger="onSelfEnteredGame" action="ClearStaleHires, SCore" />
 			<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="buffNPCModSlowStatusCheck"/>
-			<!-- <triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="PlayerAttacks"/> -->
+			<!--<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="PlayerAttacks"/>-->
 		</effect_group>	
 		<!--  This effect group sets a cvar on the player called "DamageRelationship" which is the faction relationship at which the player can damage NPCs. 1001 means "everyone." 400 is the default, and what is in effect when this effect group is commented out.  This is only for faction targeting - it doesn't affect allies (hired NPCs), and other players and their NPCs are governed by the server's "Player Killing" setting. If you want to adjust the value: 800+ is "Love", 600+ is "Like", 400+ is "Neutral", 200+ is "Dislike", and 0+ is "Hate". -->
 			<!--<effect_group name="Damage All NPCs">
@@ -569,7 +569,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>
 		
@@ -579,7 +578,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>		
 		
@@ -638,7 +636,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/> 
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>
 		
@@ -656,7 +653,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="Names" value="Tester" />	
 			<property name="LookAtAngle" value="60"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 			<property name="Mesh" value="#@modfolder:Resources/XythNPCs.unity3d?Baker_X"/> 
 		</entity_class>			
@@ -702,7 +698,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>
 		
@@ -743,7 +738,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" />
 			<property name="Hirable" value="true" />
 		</entity_class>
 		
@@ -782,7 +776,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>
 		
@@ -823,7 +816,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>
 
@@ -862,7 +854,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>
 		
@@ -900,7 +891,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>
 		
@@ -945,7 +935,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>
 		
@@ -989,7 +978,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>
 		
@@ -1034,7 +1022,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>
 
@@ -1080,7 +1067,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>		
 		
@@ -1126,7 +1112,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>		
 	
@@ -1171,7 +1156,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>		
 		
@@ -1215,7 +1199,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>		
 		
@@ -1260,7 +1243,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>		
 		
@@ -1305,7 +1287,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>		
 		
@@ -1349,7 +1330,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>  		
 		
@@ -1393,7 +1373,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>		
 
@@ -1437,7 +1416,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class> 		
 	
@@ -1481,7 +1459,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>		
 		
@@ -1525,7 +1502,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>		
 
@@ -1569,7 +1545,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>		
 		
@@ -1617,7 +1592,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>		
 		
@@ -1664,7 +1638,6 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="traderNPC"/>
 			<property name="NPCID" value="spheretest"/> 
-			<property name="Class" value="EntityAliveSDX, SCore" /> 
 			<property name="Hirable" value="true" />
 		</entity_class>		
 		
@@ -2143,7 +2116,7 @@
 			<property name="DeadBodyHitPoints" value="1000"/> <!-- For harvesting or resisting corpse destruction --> <!-- to adjust corpse destruction speed for the non-harvest zombie corpses. This property does not extend. -->
 
 			<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper" />
-			
+			<property name="Buffs" value="zombieBuffStatusCheck01"/>
 			<effect_group name="Base Effects"> 
 				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
 				<passive_effect name="HealthMax" operation="base_set" value="150"/>
@@ -2161,6 +2134,7 @@
 		<entity_class name="zombieRegularFemaleTemplate" extends="zombieRegularTemplate">
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Tags" value="entity,female,zombie,walker,template"/> 
+			<property name="Faction" value="undead"/>
 			<property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam"/>
 			<property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert"/>
 			<property name="SoundAttack" value="Enemies/Base_Zombie_Female2/zombiefemale2attack"/>
@@ -2172,6 +2146,7 @@
 		
 		<entity_class name="zombieRegularAltTemplate" extends="zombieRegularTemplate">
 			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Faction" value="undead"/>
 			<property name="Tags" value="entity,male,zombie,walker,template,alt"/> <!-- Zombies will attack other zombies if hit by them  -->
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityAlive"/>
 		</entity_class> 
@@ -2179,6 +2154,7 @@
 		<entity_class name="zombieBruteTemplate" extends="zombieRegularTemplate">
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Tags" value="entity,male,zombie,walker,template"/>
+			<property name="Faction" value="undead"/>
 			<property name="Mesh" value="Zombies/zombieStandardHawaiianRagdoll"/>
 			<property name="SoundRandom" value="Enemies/Acid_Puking_Hulk/hulkroam"/>
 			<property name="SoundAlert" value="Enemies/Acid_Puking_Hulk/hulkalert"/>
@@ -2207,6 +2183,7 @@
 		<entity_class name="zombieBossTemplate" extends="zombieRegularTemplate">
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Tags" value="entity,male,zombie,walker,feral,template"/>
+			<property name="Faction" value="undead"/>
 			<property name="Mesh" value="Zombies/zombieStandardFeralRagdoll"/>
 			<property name="SoundRandom" value="Enemies/Feral_Zombie/zombieferalroam"/>
 			<property name="SoundAlert" value="Enemies/Feral_Zombie/zombieferalalert"/>
@@ -2235,6 +2212,7 @@
 		<entity_class name="zombieCopTemplate" extends="zombieRegularTemplate">
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Tags" value="entity,male,zombie,walker,template"/>
+			<property name="Faction" value="undead"/>
 			<property name="Mesh" value="Zombies/zombieStandardCopRagdoll"/>
 			<property name="Class" value="EntityZombieCop"/>
 			<property name="WalkType" value="1"/>
@@ -2293,6 +2271,7 @@
 		<entity_class name="zombieTestBMTemplate" extends="zombieRegularTemplate">
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Tags" value="entity,male,zombie,walker,template,bm"/> 
+			<property name="Faction" value="undead"/>
 		</entity_class> 		
 		
 		<entity_class name="zombieAnimalTemplate" >
@@ -2396,7 +2375,6 @@
 			<property name="PushFactor" value="30"/>				
 			<property name="Tags" value="entity,npc,mech"/>			
 			<property name="Prefab" value="NPC"/>
-			<property name='Class' value='EntityAliveSDX, SCore' />
 			<property name="Parent" value="Enemies"/>
 			<property name="AvatarController" value="AvatarAnimalController"/> 
 			<property name="RotateToGround" value="false"/>
