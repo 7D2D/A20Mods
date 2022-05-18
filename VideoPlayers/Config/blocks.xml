@@ -203,7 +203,8 @@
 			<property name="CreativeMode" value="Player"/>
 			<property name="Shape" value="ModelEntity" />
 			<property name="Model" value="#@modfolder:Resources/VideoTVs.unity3d?VideoTheaterScreen_X" /> 
-			<property name="Class" value="Switch"/>		
+			<property name="Class" value="Switch"/>
+			<property name="ActivationDistance" value="30"/>
             <property name="DisplayType" value="blockElectrical" />
             <property name="RequiredPower" value="0"/>
             <property name="CreativeMode" value="Player"/>
