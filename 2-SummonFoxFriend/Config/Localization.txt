@@ -1,0 +1,4 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+
+noteqc_2-SummonFoxFriend,items,item,,,Summon - Fox Friend,,,,,,,,,,,,,
+noteqc_2-SummonFoxFriendDesc,items,item,,," This quest allows a player to summon a Fox Friend and also receive 20 meat to hire the new companion.",,,,,,,,,,,,,

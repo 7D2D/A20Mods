@@ -1121,10 +1121,10 @@
 				<!--<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="=== looting or gathering"/> -->
 				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetBool" property="IsGathering" value="true"/>
 			</effect_group>	
-			<effect_group name="LootHighorLow" >
+			<!-- <effect_group name="LootHighorLow" >
 				<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetBool" property="IsCrouching" value="true"/> 
-				<requirement name="CVarCompare" cvar="focusBlockLocation" operation="LTE" value="0"/> <!-- Sets a cvar (Default is: focusBlockLocation, overridable by attribute cvar="" ) based on position. -1 below your feet. 0 at your feet, 1 at your eye level, and 2 over your head. 0 is default.  -->
-			</effect_group>
+				<requirement name="CVarCompare" cvar="focusBlockLocation" operation="LTE" value="0"/> -->  <!-- Sets a cvar (Default is: focusBlockLocation, overridable by attribute cvar="" ) based on position. -1 below your feet. 0 at your feet, 1 at your eye level, and 2 over your head. 0 is default.  
+			</effect_group> -->
 			<effect_group name="Finish">
 				<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="ActivityCoolDown"/> 
 				<!--<triggered_effect trigger="onSelfBuffFinish" action="LogMessage" message="=== Finished my activity"/>-->

@@ -1,0 +1,14 @@
+<configs>
+
+	<!-- Summon Fox Friend Note - Secret Stash Area -->
+	
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='stashOnlyItemsLow']">
+		<item name="noteqc_2-SummonFoxFriend" count="1" prob="0.8"/>	
+	</append>
+	
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='stashOnlyItemsHigh']">
+		<item name="noteqc_2-SummonFoxFriend" count="1" prob="0.8"/>	
+	</append>
+
+</configs>
+

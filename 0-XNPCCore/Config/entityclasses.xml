@@ -3926,6 +3926,7 @@
 		
 		<!--  NPC and Dumb animals  -->	
 		<entity_class name="npcAnimalFox" extends="npcAnimalMeleeTemplate">
+			<property name="AIPackages" value="NPCAnimalCompanion, NPCModNPCMeleeBasic, NPCHired, NPCLoot "/>
 			<property name="Tags" value="entity,animal,npc,npcAnimalFox,perkAT03,DRMid"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>

@@ -1,0 +1,24 @@
+<configs>
+
+ 	<append xpath="/quests">
+	
+		<quest id="challenge_2-SummonFoxFriend">
+			<property name="offer_key" value="Accept this quest to take responsibility of a Fox Friend. Move to an open area to allow a Fox Friend to be summoned."/>
+			<property name="name_key" value="Summon - Fox Friend"/>
+			<property name="subtitle_key" value="Summon - Fox Friend"/>
+			<property name="description_key" value="Move to an open area to allow a Fox Friend to be summoned."/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="easy"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="login_rally_reset" value="true"/>
+				
+		<reward type="Exp" value="1500"/>
+		<action type="SpawnEnemy" id="npcAnimalFox" value="1"/>
+		<reward type="Item" id="foodRawMeat" value="20"/>		
+		</quest>		
+	
+	</append>
+	
+</configs>

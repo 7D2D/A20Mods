@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <ModInfo>
+    <Name value="2-SummonFoxFriend" />
+    <Description value="Provides players a way to summon a fox to compensate for loss or otherwise." />
+    <Author value="Xyth for base and arramus for summon tool." />
+    <Version value="A20" />
+    <Website value="https://community.7daystodie.com/topic/26974-npcmod-a-community-project/" />
+  </ModInfo>
+</xml>
