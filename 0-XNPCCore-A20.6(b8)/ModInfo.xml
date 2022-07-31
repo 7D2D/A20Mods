@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <ModInfo>
+    <Name value="0-XNPCCore-A20.6(b8)" />
+    <Description value="Patch to support A20.6(b8) for stable version of the NPC Core Community Modlet, required for NPC Addon Packs" />
+    <Author value="Xyth for base and NPCMod Team for patch" />
+    <Version value="20.6.01.01" />
+    <Website value="" />
+  </ModInfo>
+</xml>

@@ -1,0 +1,148 @@
+<configs>
+
+	<remove xpath="/items/item[@name='gunNPCPistolHidden']"></remove>
+	<remove xpath="/items/item[@name='gunNPCPistolHiddenFlying']"></remove>
+
+	<append xpath="/items">	
+
+		<item name="gunNPCPistolHidden"> <!-- Using as default for ranged mechs  -->
+			<property name="Extends" value="gunNPCPistol"/> 
+			<property name="Tags" value="weapon,ranged,gun,pistol,reloadPenalty1,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attAgility,perkGunslinger"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property class="Action0">
+				<property name="Class" value="Melee"/>
+				<property name="DamageEntity" value="25"/>
+				<property name="DamageBlock" value="25"/>
+				<property name="Range" value="1.65"/>
+				<property name="Sphere" value="1.2"/>
+				<property name="Delay" value=".8" /> 
+				<property name="Sound_start" value="swoosh"/>
+				<property name="Block_range" value="1.65"/>
+			</property>
+			<effect_group name="gunHandgunT1Pistol">
+				<passive_effect name="MaxRange" operation="base_set" value="35" tags="perkGunslinger,9mmGun"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="23.3" tags="perkGunslinger,9mmGun"/>
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkGunslinger,9mmGun"/> 
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="180" tags="perkGunslinger"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkGunslinger"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkGunslinger"/> 
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> 
+				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkGunslinger"/> 
+				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> 
+				<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkGunslinger"/> 
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkGunslinger"/>  
+				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkGunslinger"/> 
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3" tags="perkGunslinger"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3" tags="perkGunslinger"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".4" tags="perkGunslinger"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkGunslinger"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkGunslinger"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value=".7" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".8" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.25" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".25" tags="perkGunslinger"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2.0" tags="perkGunslinger,9mmGun"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value=".95" tags="perkGunslinger"/>  
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/> 
+				<passive_effect name="DegradationMax" operation="base_set" value="250,450" tier="1,6" tags="perkGunslinger,9mmGun"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkGunslinger,9mmGun"/>
+			</effect_group> 
+			<effect_group name="MuzzleFlash">
+				<triggered_effect trigger="onSelfRangedBurstShotStart" action="AttachParticleEffectToEntity" particle="p_gunfire_pistol" local_offset="0,0,0" parent_transform="Gunjoint" />
+				<triggered_effect trigger="onSelfRangedBurstShotStart" action="AttachParticleEffectToEntity" particle="p_nozzlesmokeuzi" local_offset="0,.1,0" parent_transform="Gunjoint" />
+			</effect_group>
+		</item>	
+		
+		<item name="gunNPCPistolHiddenFlying"> <!-- Using as default for ranged mechs  -->
+			<property name="Extends" value="gunNPCPistol"/> 
+			<property name="Tags" value="weapon,ranged,gun,pistol,reloadPenalty1,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attAgility,perkGunslinger"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property class="Action0">
+				<property name="Class" value="Ranged" />
+				<property name="Range" value="40"/>
+				<property name="Magazine_items" value="ammoNPC9mmBulletBall" />
+				<property name="Delay" value=".1" />
+				<property name="Auto_fire" value="true" />
+				<property name="Crosshair_min_distance" value="5" />
+				<property name="Crosshair_max_distance" value="30" />
+				<property name="Reload_time" value="0" />
+				<property name="Infinite_ammo" value="true" />
+				<property name="Sound_start" value="Pistol_Fire"/>
+				<property name="Sound_loop" value="Pistol_Fire"/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value="dryfire"/>
+				<property name="Sound_reload" value="pistol_reload"/>
+				<property name="AutoReload" value="true"/>
+				<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
+				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
+				<property name="DamageEntity" value="12"/> 
+				<property name="DamageBlock" value="5"/> 				
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Ranged" />
+				<property name="Range" value="40"/>
+				<property name="Magazine_items" value="ammoNPC9mmBulletBall" />
+				<property name="Delay" value=".1" />
+				<property name="Auto_fire" value="true" />
+				<property name="Crosshair_min_distance" value="5" />
+				<property name="Crosshair_max_distance" value="30" />
+				<property name="Reload_time" value="0" />
+				<property name="Infinite_ammo" value="true" />
+				<property name="Sound_start" value="Pistol_Fire"/>
+				<property name="Sound_loop" value="Pistol_Fire"/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value="dryfire"/>
+				<property name="Sound_reload" value="pistol_reload"/>
+				<property name="AutoReload" value="true"/>
+				<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
+				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
+				<property name="DamageEntity" value="12"/> 
+				<property name="DamageBlock" value="5"/> 				
+			</property>
+			<effect_group name="gunHandgunT1Pistol">
+				<passive_effect name="MaxRange" operation="base_set" value="40" />
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="40.3" tags="perkGunslinger,9mmGun"/>
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.1,.1" tags="perkGunslinger,9mmGun"/> 
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="400" tags="perkGunslinger"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkGunslinger"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkGunslinger"/> 
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> 
+				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkGunslinger"/> 
+				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkGunslinger"/> 
+				<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkGunslinger"/> 
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkGunslinger"/>  
+				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkGunslinger"/> 
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2" tags="perkGunslinger"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2" tags="perkGunslinger"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".4" tags="perkGunslinger"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkGunslinger"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkGunslinger"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value=".7" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".8" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.25" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".25" tags="perkGunslinger"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2.0" tags="perkGunslinger,9mmGun"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value=".95" tags="perkGunslinger"/>  
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/> 
+				<passive_effect name="DegradationMax" operation="base_set" value="250,450" tier="1,6" tags="perkGunslinger,9mmGun"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkGunslinger,9mmGun"/>
+			</effect_group> 
+			<effect_group name="MuzzleFlash">
+				<triggered_effect trigger="onSelfRangedBurstShotStart" action="AttachParticleEffectToEntity" particle="p_gunfire_pistol" local_offset="0,0,0" parent_transform="Gunjoint" />
+				<triggered_effect trigger="onSelfRangedBurstShotStart" action="AttachParticleEffectToEntity" particle="p_nozzlesmokeuzi" local_offset="0,.1,0" parent_transform="Gunjoint" />
+			</effect_group>
+		</item>
+		
+	</append>
+	
+</configs>
