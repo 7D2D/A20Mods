@@ -1602,7 +1602,7 @@
 			<stack_type value="ignore"/><duration value="0"/><update_rate value=".1"/> 
 				<effect_group>
 					<requirement name="CVarCompare" cvar="$burstrate" operation="GTE" value="1"/> <!-- Still bursting -->
-					<triggered_effect trigger="onSelfRangedBurstShot" action="ModifyCVar" cvar="$burstrate" operation="add" value="-1"/> <!-- use burstshot to decrement so bursts of >1 will be counted  -->
+					<triggered_effect trigger="onSelfRangedBurstShotStart" action="ModifyCVar" cvar="$burstrate" operation="add" value="-1"/> <!-- use burstshot to decrement so bursts of >1 will be counted  -->
 				</effect_group> 
 				<effect_group>
 					<requirement name="CVarCompare" cvar="$burstrate" operation="LTE" value="0"/> <!-- done bursting? -->
@@ -1625,15 +1625,15 @@
 			<stack_type value="ignore"/><duration value="0"/><update_rate value=".1"/> 
 				<effect_group>
 					<requirement name="CVarCompare" cvar="$roundsinmag" operation="GT" value="0"/> <!-- Still got bullets? -->
-					<triggered_effect trigger="onSelfRangedBurstShot" action="ModifyCVar" cvar="$roundsinmag" operation="add" value="-1"/> <!-- use burstshot to decrement rounds so bursts of >1 will be counted  -->
-					<!--<triggered_effect trigger="onSelfRangedBurstShot" action="CVarLogValue" cvar="$roundsinmag"/>--> 
+					<triggered_effect trigger="onSelfRangedBurstShotStart" action="ModifyCVar" cvar="$roundsinmag" operation="add" value="-1"/> <!-- use burstshot to decrement rounds so bursts of >1 will be counted  -->
+					<!--<triggered_effect trigger="onSelfRangedBurstShotStart" action="CVarLogValue" cvar="$roundsinmag"/>--> 
 				</effect_group> 
 				<effect_group>
 					<requirement name="CVarCompare" cvar="$roundsinmag" operation="LTE" value="0"/> <!-- Magazine empty? -->
 				<!--<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="   Reloading Anim Start"/>-->
 					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffReloadDelay" /> 
 				</effect_group>	
-		</buff>	
+		</buff>
 		<buff name="buffReloadDelay" hidden="true">
 			<stack_type value="ignore"/><duration value=".5"/> <!-- provides a delay for the firing to end before setting the AnimatorsetBool   -->
 				<effect_group> 

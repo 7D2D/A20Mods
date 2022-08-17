@@ -417,7 +417,7 @@
 			<effect_group name="EntityDamageInBiomeSnow">
 				<requirement name="CVarCompare" cvar="$varFactionBandit" operation="Equals" value="1"/>
 				<requirement name="InBiome" biome="1"/>
-					<passive_effect name="DamageModifier" operation="perc_add" value=".25"/>
+					<passive_effect name="DamageModifier" operation="perc_add" value="-.25"/>
 			</effect_group> 
 			<effect_group name="EntityDamageInBiomeBurntForest">
 				<requirement name="CVarCompare" cvar="$varFactionBandit" operation="Equals" value="1"/>

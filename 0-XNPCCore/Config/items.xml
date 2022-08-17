@@ -1420,8 +1420,8 @@
 				<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkGunslinger,9mmGun"/>
 			</effect_group> 
 			<effect_group name="MuzzleFlash">
-				<triggered_effect trigger="onSelfRangedBurstShot" action="AttachParticleEffectToEntity" particle="p_gunfire_pistol" local_offset="0,0,0" parent_transform="Gunjoint" />
-				<triggered_effect trigger="onSelfRangedBurstShot" action="AttachParticleEffectToEntity" particle="p_nozzlesmokeuzi" local_offset="0,.1,0" parent_transform="Gunjoint" />
+				<triggered_effect trigger="onSelfRangedBurstShotStart" action="AttachParticleEffectToEntity" particle="p_gunfire_pistol" local_offset="0,0,0" parent_transform="Gunjoint" />
+				<triggered_effect trigger="onSelfRangedBurstShotStart" action="AttachParticleEffectToEntity" particle="p_nozzlesmokeuzi" local_offset="0,.1,0" parent_transform="Gunjoint" />
 			</effect_group>
 		</item>	
 		
@@ -1505,33 +1505,10 @@
 				<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="perkGunslinger,9mmGun"/>
 			</effect_group> 
 			<effect_group name="MuzzleFlash">
-				<triggered_effect trigger="onSelfRangedBurstShot" action="AttachParticleEffectToEntity" particle="p_gunfire_pistol" local_offset="0,0,0" parent_transform="Gunjoint" />
-				<triggered_effect trigger="onSelfRangedBurstShot" action="AttachParticleEffectToEntity" particle="p_nozzlesmokeuzi" local_offset="0,.1,0" parent_transform="Gunjoint" />
+				<triggered_effect trigger="onSelfRangedBurstShotStart" action="AttachParticleEffectToEntity" particle="p_gunfire_pistol" local_offset="0,0,0" parent_transform="Gunjoint" />
+				<triggered_effect trigger="onSelfRangedBurstShotStart" action="AttachParticleEffectToEntity" particle="p_nozzlesmokeuzi" local_offset="0,.1,0" parent_transform="Gunjoint" />
 			</effect_group>
-		</item>			
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		</item>
 
 		<item name="gunNPCDPistol">
 			<property name="Extends" value="gunNPCSMG5"/> 
