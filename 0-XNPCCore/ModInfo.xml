@@ -4,7 +4,7 @@
     <Name value="0-XNPCCore" />
     <Description value="Stable version of the NPC Core Community Modlet, required for NPC Addon Packs" />
     <Author value="Xyth" />
-    <Version value="20.6.01.01" />
+    <Version value="20.6.01.02" />
     <Website value="" />
   </ModInfo>
 </xml>
