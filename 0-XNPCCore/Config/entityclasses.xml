@@ -24,6 +24,7 @@
 		<!--  Edits to add NPCs to targeting  -->	
 
 		<set xpath="//entity_class[starts-with(@name, 'zombieMutated')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityEnemyAnimal,0,EntityPlayer,0,EntityNPC,0</set> 
+		<set xpath="//entity_class[starts-with(@name, 'zombieFatCop')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityEnemyAnimal,0,EntityPlayer,0,EntityNPC,0</set>
 	
 		<set xpath="//entity_class[starts-with(@name, 'animalTemplateTimid')]/property[@value='RunawayFromEntity']/@data">class=EntityPlayer,EntityZombie,EntityEnemyAnimal,EntityNPC</set> 
 		
