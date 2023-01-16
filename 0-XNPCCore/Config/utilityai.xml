@@ -41,6 +41,10 @@
                     <consideration class="EnemyNotNear, SCore" />
                     <consideration class="HasOrder, SCore" order="Stay"/>
                 </action> 
+				<action name="Guard" weight="2" entity_filter="IsSelf">
+					<task class="Guard, SCore" />
+					<consideration class="HasOrder, SCore" order="Guard" />
+				</action>
 				<action name="Flee" weight="6" entity_filter="IsEnemy">
 					<task class="FleeFromTarget" max_distance="30"/>
 					<consideration class="SelfHasCVar, SCore" cvar="$Timid" value="1"/>
@@ -59,6 +63,10 @@
                     <task class="IdleSDX, SCore" OnStartAddBuffs="RandomIdle" OnStopRemoveBuffs="RandomIdle" /> 
 						<consideration class="HasOrder, SCore" order="Stay"/>
 				</action> 
+				<action name="Guard" weight="2" entity_filter="IsSelf">
+					<task class="Guard, SCore" />
+					<consideration class="HasOrder, SCore" order="Guard" />
+				</action>
 				<action name="OnReload" weight="3" entity_filter="IsSelf" >
                     <task class="IdleSDX, SCore"  /> 
                     <consideration class="SelfHasBuff, SCore" buffs="buffReload2,buffReloadDelay,buffReload3"/> 
@@ -626,6 +634,10 @@
 					<consideration class="EnemyNotNear, SCore"/>
 					<consideration class="HasOrder, SCore" order="Stay"/>
 				</action>  
+				<action name="Guard" weight="2" entity_filter="IsSelf">
+					<task class="Guard, SCore" />
+					<consideration class="HasOrder, SCore" order="Guard" />
+				</action>
 				<action name="Flee" weight="6">
 					<task class="FleeFromTarget" max_distance="30"/>
 					<consideration class="SelfHasCVar, SCore" cvar="Timid" value="1"/>
@@ -650,6 +662,10 @@
                     <consideration class="EnemyNotNear, SCore" />
                     <consideration class="HasOrder, SCore" order="Stay"/>
                 </action> 
+				<action name="Guard" weight="2" entity_filter="IsSelf">
+					<task class="Guard, SCore" />
+					<consideration class="HasOrder, SCore" order="Guard" />
+				</action>
             </ai_package>
 			
 			<ai_package name="NPCAnimalHiredCompanion" entity_filter="IsLeader" >
@@ -718,6 +734,10 @@
                     <consideration class="EnemyNotNear, SCore" />
                     <consideration class="HasOrder, SCore" order="Stay"/>
                 </action> 
+				<action name="Guard" weight="2" entity_filter="IsSelf">
+					<task class="Guard, SCore" />
+					<consideration class="HasOrder, SCore" order="Guard" />
+				</action>
 				<action name="HealSelf" weight="6" entity_filter="IsSelf">
 					<task class="HealSDX, SCore" OnStartAddBuffs="IsHealing" OnStopAddBuffs="buffProcessConsumables"/>
 					<consideration class="SelfHealthSDX, SCore" min="0.01" max="0.60"/>
@@ -783,6 +803,10 @@
                     <consideration class="EnemyNotNear, SCore" />
                     <consideration class="HasOrder, SCore" order="Stay"/>
                 </action> 
+				<action name="Guard" weight="2" entity_filter="IsSelf">
+					<task class="Guard, SCore" />
+					<consideration class="HasOrder, SCore" order="Guard" />
+				</action>
 			</ai_package>
 
 			<ai_package name="NPCModBasicRanged" >
@@ -810,6 +834,10 @@
                     <consideration class="EnemyNotNear, SCore" />
                     <consideration class="HasOrder, SCore" order="Stay"/>
                 </action> 
+				<action name="Guard" weight="2" entity_filter="IsSelf">
+					<task class="Guard, SCore" />
+					<consideration class="HasOrder, SCore" order="Guard" />
+				</action>
 			</ai_package>
 
 			<ai_package name="NPCModBasicMeleeNoChat" >
@@ -817,6 +845,10 @@
 					<task class="WanderSDX, SCore"/>
                     <consideration class="NotHasOrder, SCore" order="Stay"/>
 					<task class="IdleSDX, SCore" OnStartAddBuffs="RandomWanderIdle" OnStopRemoveBuffs="RandomWanderIdle" timeout="50" />
+				</action>
+				<action name="Guard" weight="2" entity_filter="IsSelf">
+					<task class="Guard, SCore" />
+					<consideration class="HasOrder, SCore" order="Guard" />
 				</action>
 				<action name="OnReload" weight="3" entity_filter="IsSelf" >
                     <task class="IdleSDX, SCore"  /> 
@@ -829,6 +861,10 @@
 					<task class="WanderSDX, SCore"/>
                     <consideration class="NotHasOrder, SCore" order="Stay"/>
 					<task class="IdleSDX, SCore" OnStartAddBuffs="RandomWanderIdle" OnStopRemoveBuffs="RandomWanderIdle" timeout="50" /><!-- fires an Idle buff on start, removes same on exit  -->
+				</action>
+				<action name="Guard" weight="2" entity_filter="IsSelf">
+					<task class="Guard, SCore" />
+					<consideration class="HasOrder, SCore" order="Guard" />
 				</action>
 				<action name="OnReload" weight="3" entity_filter="IsSelf" >
                     <task class="IdleSDX, SCore"  /> 
