@@ -12,6 +12,7 @@
         <response_entry id="ShowMe" />
         <response_entry id="StayHere" />
         <response_entry id="GuardHere" />
+        <response_entry id="GuardReturnHere" />
         <response_entry id="Wander" />
         <response_entry id="SetPatrol" />
         <response_entry id="SetCode" />
@@ -63,6 +64,12 @@
         <requirement type="Leader, SCore" requirementtype="Hide" />
         <requirement type="HasTask, SCore" requirementtype="Hide" value="Stay" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuardHere" />
+      </response>
+
+    <response id="GuardReturnHere" text="Guard and return to where I am standing" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="Guard" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuard" />
       </response>
 
     <!-- <response id="SetCode" text="Here is your Patrol Code" >
@@ -123,6 +130,7 @@
         <response_entry id="ShowMe" />
         <response_entry id="StayHere" />
         <response_entry id="GuardHere" />
+        <response_entry id="GuardReturnHere" />
         <response_entry id="Wander" />
         <response_entry id="SetPatrol" />
         <response_entry id="Patrol" />
@@ -198,6 +206,12 @@
         <requirement type="Leader, SCore" requirementtype="Hide" />
         <requirement type="HasTask, SCore" requirementtype="Hide" value="Stay" />
         <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuardHere" /> 
+      </response>
+    
+    <response id="GuardReturnHere" text="Guard and return here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="Guard" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuard" /> 
       </response>
   
 	  <response id="Dismiss" text="Abandon" >
