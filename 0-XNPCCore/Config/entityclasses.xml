@@ -18,44 +18,57 @@
 		</append> -->
 
 		<!--  Edits to convert zombies to Faction based targeting for whisperers -->
+		<!--  and also so vanilla entities will fight back when hurt by EntityEnemySDX NPCs -->
 
 		<set xpath="//entity_class[starts-with(@name, 'zombieTemplate')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,0,0,EntityNPC,0,0</set> 
+		<append xpath="//entity_class[starts-with(@name, 'zombieTemplate')]/property[@value='ApproachAndAttackTarget']/@data">,EntityEnemy,0</append>
+		<append xpath="//entity_class[starts-with(@name, 'zombieTemplate')]/property[@value='SetAsTargetIfHurt']/@data">,EntityEnemy</append>
+		<append xpath="//entity_class[starts-with(@name, 'zombieSpider')]/property[@value='ApproachAndAttackTarget']/@data">,EntityEnemy,0</append>
+		<append xpath="//entity_class[starts-with(@name, 'zombieDemolition')]/property[@value='ApproachAndAttackTarget']/@data">,EntityEnemy,0</append>
+		<append xpath="//entity_class[starts-with(@name, 'animalZombieDog')]/property[@value='ApproachAndAttackTarget']/@data">,EntityEnemy,20</append>
+		<append xpath="//entity_class[starts-with(@name, 'animalZombieDog')]/property[@value='SetAsTargetIfHurt']/@data">,EntityEnemy</append>
 		
 		<!--  Edits to add NPCs to targeting  -->	
 
-		<set xpath="//entity_class[starts-with(@name, 'zombieMutated')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityEnemyAnimal,0,EntityPlayer,0,EntityNPC,0</set> 
-		<set xpath="//entity_class[starts-with(@name, 'zombieFatCop')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityEnemyAnimal,0,EntityPlayer,0,EntityNPC,0</set>
+		<set xpath="//entity_class[starts-with(@name, 'zombieMutated')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityEnemyAnimal,0,EntityPlayer,0,EntityNPC,0,EntityEnemy,0</set> 
+		<set xpath="//entity_class[starts-with(@name, 'zombieFatCop')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityEnemyAnimal,0,EntityPlayer,0,EntityNPC,0,EntityEnemy,0</set>
 	
-		<set xpath="//entity_class[starts-with(@name, 'animalTemplateTimid')]/property[@value='RunawayFromEntity']/@data">class=EntityPlayer,EntityZombie,EntityEnemyAnimal,EntityNPC</set> 
+		<set xpath="//entity_class[starts-with(@name, 'animalTemplateTimid')]/property[@value='RunawayFromEntity']/@data">class=EntityPlayer,EntityZombie,EntityEnemyAnimal,EntityNPC,EntityEnemy</set> 
 		
-		<set xpath="//entity_class[starts-with(@name, 'animalTemplateHostile')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,20,15,EntityZombie,15,10,EntityNPC,15,10</set> 
+		<set xpath="//entity_class[starts-with(@name, 'animalTemplateHostile')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,20,15,EntityZombie,15,10,EntityNPC,15,10</set>
+		<append xpath="//entity_class[starts-with(@name, 'animalTemplateHostile')]/property[@value='ApproachAndAttackTarget']/@data">,EntityEnemy,20</append>
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalRabbit')]/property[@value='RunawayFromEntity']/@data">class=EntityPlayer,EntityZombie,EntityEnemyAnimal,EntityNPC;safeDistance=20</set> 
 		
-		<set xpath="//entity_class[starts-with(@name, 'animalBear')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalStag,40,EntityPlayer,25,EntityZombie,30,EntityNPC,25</set> 
+		<set xpath="//entity_class[starts-with(@name, 'animalBear')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalStag,40,EntityPlayer,25,EntityZombie,30,EntityNPC,25,EntityEnemy,25</set> 
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalBear')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,13,8,EntityAnimalStag,0,0,EntityZombie,0,0,EntityNPC,13,8</set> 
 		
-		<set xpath="//entity_class[starts-with(@name, 'animalZombieBear')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,18,13,EntityAnimalStag,0,0,EntityNPC,18,13</set> 
+		<set xpath="//entity_class[starts-with(@name, 'animalZombieBear')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,18,13,EntityAnimalStag,0,0,EntityNPC,18,13</set>
+		<append xpath="//entity_class[starts-with(@name, 'animalZombieBear')]/property[@value='ApproachAndAttackTarget']/@data">,EntityEnemy,0</append>
 		
-		<set xpath="//entity_class[starts-with(@name, 'animalWolf')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalStag,20,EntityPlayer,15,EntityZombie,20,EntityNPC,15</set> 
+		<set xpath="//entity_class[starts-with(@name, 'animalWolf')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalStag,20,EntityPlayer,15,EntityZombie,20,EntityNPC,15,EntityEnemy,15</set> 
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalWolf')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,14,8,EntityAnimalStag,0,0,EntityZombie,0,0,EntityNPC,14,8</set> 
 		
-		<set xpath="//entity_class[starts-with(@name, 'animalCoyote')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalRabbit,8,EntityPlayer,10,EntityNPC,10</set> 
+		<set xpath="//entity_class[starts-with(@name, 'animalCoyote')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalRabbit,8,EntityPlayer,10,EntityNPC,10,EntityEnemy,10</set> 
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalCoyote')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,15,10,EntityAnimalRabbit,0,18,EntityNPC,15,10</set> 		
 		
-		<set xpath="//entity_class[starts-with(@name, 'animalDireWolf')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalStag,30,EntityPlayer,30,EntityZombie,20,EntityNPC,30</set> 
+		<set xpath="//entity_class[starts-with(@name, 'animalDireWolf')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalStag,30,EntityPlayer,30,EntityZombie,20,EntityNPC,30,EntityEnemy,30</set> 
 		
-		<set xpath="//entity_class[starts-with(@name, 'animalDireWolf')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,29,24,EntityAnimalStag,0,0,EntityZombie,0,0,EntityNPC,29,24</set> 		
-		
-		<set xpath="//entity_class[starts-with(@name, 'animalMountainLion')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalStag,30,EntityPlayer,15,EntityZombie,20,EntityNPC,30</set> 
+		<set xpath="//entity_class[starts-with(@name, 'animalDireWolf')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,29,24,EntityAnimalStag,0,0,EntityZombie,0,0,EntityNPC,29,24</set>
+
+		<set xpath="//entity_class[starts-with(@name, 'animalMountainLion')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityAnimalStag,30,EntityPlayer,15,EntityZombie,20,EntityNPC,30,EntityEnemy,20</set> 
 		
 		<set xpath="//entity_class[starts-with(@name, 'animalMountainLion')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,14,9,EntityAnimalStag,0,0,EntityZombie,0,5,EntityNPC,14,9</set> 				
-		<set xpath="//entity_class[starts-with(@name, 'animalBossGrace')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityPlayer,30,EntityZombie,10,EntityNPC,30</set> 
 		
-		<set xpath="//entity_class[starts-with(@name, 'animalBossGrace')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,0,0,EntityZombie,0,3,EntityNPC,0,0</set> 	
+		<append xpath="//entity_class[starts-with(@name, 'animalSnake')]/property[@value='ApproachAndAttackTarget']/@data">,EntityEnemy,15</append>
+		<append xpath="//entity_class[starts-with(@name, 'animalSnake')]/property[@value='SetAsTargetIfHurt']/@data">,EntityEnemy</append>
+
+		<set xpath="//entity_class[starts-with(@name, 'animalBossGrace')]/property[@value='ApproachAndAttackTarget']/@data">class=EntityPlayer,30,EntityZombie,10,EntityNPC,30,EntityEnemy,30</set> 
+		
+		<set xpath="//entity_class[starts-with(@name, 'animalBossGrace')]/property[@value='SetNearestEntityAsTarget']/@data">class=EntityPlayer,0,0,EntityZombie,0,3,EntityNPC,0,0</set>
 
 
 		<!--  Edits to add factions to animals	-->
@@ -1767,7 +1780,7 @@
 			<property name="HandItem" value="meleeHandAnimalCoyote"/>
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="Territorial"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityNPC,0,EntityPlayer,0,EntitySurvivor,0,EntityBandit,0,EntityAnimalRabbit,8"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityNPC,0,EntityPlayer,0,EntitySurvivor,0,EntityBandit,0,EntityEnemy,0,EntityAnimalRabbit,8" />
 			<property name="AITask-4" value="ApproachSpot"/>
 			<property name="AITask-5" value="Look"/>
 			<property name="AITask-6" value="Wander"/>
@@ -1843,7 +1856,7 @@
 			<property name="MaxViewAngle" value="230"/>
 			<property name="NavObject" value="twitch_spawn,twitch_spawn_other,animaltracking_boar,clear_sleeper" />
 			<property name="AITask-1" value="BreakBlock"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityPlayer,0,EntitySurvivor,0,EntityBandit,0"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityPlayer,0,EntitySurvivor,0,EntityBandit,0,EntityEnemy,0" />
 			<property name="AITask-3" value="RunawayFromEntity" data="EntityZombie,EntityZombieDog,EntityZombieCop,EntityZombieCrawl"/>
 			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.3;healthPer=.3;healthPerMax=0.6"/>
 			<property name="AITask-5" value="Look"/>
@@ -2007,11 +2020,11 @@
 			<property name="AITask-2" value="DestroyArea"/>
 			<property name="AITask-3" value="Territorial"/>
 			<property name="AITask-4" value="ApproachDistraction"/>
-			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/> 
+			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0,EntityEnemy,0"/> 
 			<property name="AITask-6" value="ApproachSpot"/>
 			<property name="AITask-7" value="Look"/>
 			<property name="AITask-8" value="Wander"/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityNPC,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityNPC,EntityEnemyAnimal,EntityPlayer,EntityEnemy"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 			<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityNPC,0,0"/> 
@@ -2229,7 +2242,7 @@
 			<property name="PushFactor" value="20"/>
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=4;duration=5"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,0,EntityPlayer"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,0,EntityPlayer,0,EntityEnemy,0" />
 			<property name="AITask-4" value="ApproachSpot"/>
 			<property name="AITask-5" value="Look"/>
 			<property name="AITask-6" value="Wander"/>
@@ -2310,11 +2323,11 @@
 			<property name="HandItem" value="meleeHandZombie01"/>
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="Territorial"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityPlayer,2,EntityNPC,2"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityPlayer,2,EntityNPC,2,EntityEnemy,2" />
 			<property name="AITask-4" value="ApproachSpot"/>
 			<property name="AITask-5" value="Look"/>
 			<property name="AITask-6" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityNPC,EntityPlayer"/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityNPC,EntityPlayer,EntityEnemy"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
 			<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,2,3,EntityNPC,2,3"/>
@@ -3997,7 +4010,7 @@
 			<property name="SizeScale" value="1.3"/> 
 			<property name="Weight" value="5"/> 
 			<property name="Mass" value="30"/> 
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityAnimalRabbit,18"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityAnimalRabbit,18,EntityEnemy,18" />
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAnimalRabbit,0,0"/>
@@ -4141,7 +4154,7 @@
 			<property name="AITask-3" value="DestroyArea"/>
 			<property name="AITask-4" value="Territorial"/>
 			<property name="AITask-5" value="ApproachDistraction"/>
-			<property name="AITask-6" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
+			<property name="AITask-6" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0,EntityEnemy,0" />
 			<property name="AITask-7" value="ApproachSpot"/>
 			<property name="AITask-8" value="Look"/>
 			<property name="AITask-9" value="Wander"/>
